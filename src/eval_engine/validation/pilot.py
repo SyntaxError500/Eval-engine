@@ -36,7 +36,8 @@ from eval_engine.validation.labels import (
 )
 
 PILOT_DIR = REPO_ROOT / "experiments" / "2_judge_pilot"
-SOURCES = (("SciEntsBank", "test_ua"), ("Beetle", "test_ua"))
+DATASETS = ("SciEntsBank", "Beetle")
+SOURCES = tuple((d, "test_ua") for d in DATASETS)  # the held-out test set
 LENIENCY_TARGET = 0.1
 MAX_CONSECUTIVE_FAILURES = 5
 
@@ -46,6 +47,11 @@ class PilotConfig:
     answers_per_dataset: int = 150
     max_per_question: int = 5  # capped at the median answers-per-question of each dataset
     seed: int = 13
+    split: str = "test_ua"  # "train" for the prompt-development (dev) set
+    # Manifest of another sample whose QUESTIONS must not appear here. SciEntsBank's test and
+    # train answers share questions, so a dev set must exclude the test sample's questions.
+    exclude_from: str | None = None
+    rubric_prompt: str = "dataset_rubric"  # prompt file that builds the rubrics
 
 
 def plan_sample(items: list[GradedAnswer], cfg: PilotConfig) -> tuple[int, int]:
@@ -78,12 +84,25 @@ def rubric_id_for(item: GradedAnswer, prompt_hash: str = "") -> str:
     return "ds-" + sha256_hex(f"{item.question_key}::{prompt_hash}")[:16]
 
 
-def _load_items(directory: Path) -> dict[str, GradedAnswer]:
+def _load_items(directory: Path, split: str = "test_ua") -> dict[str, GradedAnswer]:
     out: dict[str, GradedAnswer] = {}
-    for dataset, split in SOURCES:
+    for dataset in DATASETS:
         for it in load_split(dataset, split, directory):
             out[it.item_id] = it
     return out
+
+
+def _manifest_split(out_dir: Path) -> str:
+    data = json.loads((out_dir / "sample.json").read_text(encoding="utf-8"))
+    return str(data.get("config", {}).get("split", "test_ua"))
+
+
+def _excluded_questions(manifest_dir: Path, data_dir: Path) -> set[tuple[str, str]]:
+    split = _manifest_split(manifest_dir)
+    items = _load_items(data_dir, split)
+    return {
+        (items[e["item_id"]].dataset, items[e["item_id"]].question) for e in _manifest(manifest_dir)
+    }
 
 
 def prepare(
@@ -99,10 +118,13 @@ def prepare(
     On a quota stop the manifest is still written, so judges can start on the items whose
     rubrics exist; `stopped` in the result says why rubrics are missing."""
     cfg = cfg or PilotConfig()
-    prompt_hash = client.prompts.get("dataset_rubric").file_hash
-    items = list(_load_items(data_dir).values())
+    prompt_hash = client.prompts.get(cfg.rubric_prompt).file_hash
+    items = list(_load_items(data_dir, cfg.split).values())
+    if cfg.exclude_from:
+        excluded = _excluded_questions(Path(cfg.exclude_from), data_dir)
+        items = [i for i in items if (i.dataset, i.question) not in excluded]
     sample: list[GradedAnswer] = []
-    for dataset, _split in SOURCES:
+    for dataset in DATASETS:
         subset = [i for i in items if i.dataset == dataset]
         n_q, per_q = plan_sample(subset, cfg)
         sample += sample_by_question(subset, n_q, per_q, cfg.seed)
@@ -123,7 +145,7 @@ def prepare(
         try:
             res = client.complete(
                 "generator",
-                "dataset_rubric",
+                cfg.rubric_prompt,
                 {"question": it.question, "reference_answer": it.reference_answer},
                 RubricDraft,
             )
@@ -142,7 +164,7 @@ def prepare(
     manifest = {
         "config": asdict(cfg),
         "rubric_prompt_hash": prompt_hash,
-        "sources": [list(s) for s in SOURCES],
+        "sources": [[d, cfg.split] for d in DATASETS],
         "items": [
             {"item_id": i.item_id, "rubric_id": rubric_id_for(i, prompt_hash)} for i in sample
         ],
@@ -224,7 +246,7 @@ def run(
 ) -> tuple[list[ResultRow], str | None]:
     """Grades all sampled items. Returns (rows, stop_reason); stop_reason is set when a quota
     or provider failure ends the run early. Rerunning resumes from the cache."""
-    items = _load_items(data_dir)
+    items = _load_items(data_dir, _manifest_split(out_dir))
     rows: list[ResultRow] = []
     stop: str | None = None
     consecutive_failures = 0
@@ -279,7 +301,7 @@ def stability(
 ) -> dict[str, Any]:
     """Reruns the first n_items `repeats` times without the cache. Uses 1 cached + (repeats-1)
     fresh calls per item, so `run` should be complete for this role first."""
-    items = _load_items(data_dir)
+    items = _load_items(data_dir, _manifest_split(out_dir))
     runs_per_item: list[list[list[bool]]] = []
     label_flips = 0
     for entry in _manifest(out_dir)[:n_items]:
@@ -408,7 +430,7 @@ def report(
             continue
         rows = load_rows(path)
         results.append(compute_metrics(role, rows, n_resamples=n_resamples))
-        for ds, _ in SOURCES:
+        for ds in DATASETS:
             subset = [r for r in rows if r.dataset == ds]
             per_dataset.append(compute_metrics(role, subset, ds, n_resamples))
         sp = out_dir / "results" / f"{role}.stability.json"

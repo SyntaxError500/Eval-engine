@@ -19,7 +19,9 @@ from tests.conftest import make_config
 LABEL_CYCLE = [0, 2, 1, 3, 0, 2]  # correct, partial, contradictory, irrelevant, ...
 
 
-def write_corpus(root: Path, dataset: str, n_questions: int = 4, per_q: int = 6) -> None:
+def write_corpus(
+    root: Path, dataset: str, n_questions: int = 4, per_q: int = 6, split: str = "test_ua"
+) -> None:
     rows = []
     for q in range(n_questions):
         for a in range(per_q):
@@ -33,8 +35,8 @@ def write_corpus(root: Path, dataset: str, n_questions: int = 4, per_q: int = 6)
                     "label": label,
                 }
             )
-    (root / dataset).mkdir(parents=True)
-    pq.write_table(pa.Table.from_pylist(rows), root / dataset / "test_ua.parquet")
+    (root / dataset).mkdir(parents=True, exist_ok=True)
+    pq.write_table(pa.Table.from_pylist(rows), root / dataset / f"{split}.parquet")
 
 
 def fake_rubric(req: CompletionRequest) -> str:
@@ -99,7 +101,7 @@ def fake_judge(req: CompletionRequest) -> str:
 @pytest.fixture
 def corpus(tmp_path: Path) -> Path:
     root = tmp_path / "datasets"
-    for ds, _ in pilot.SOURCES:
+    for ds in pilot.DATASETS:
         write_corpus(root, ds)
     return root
 
@@ -261,3 +263,31 @@ def test_groq_failed_generation_is_handed_to_repair() -> None:
     assert _failed_generation(body) == '{"a": }]}]'
     assert _failed_generation({"error": {"code": "rate_limit"}}) is None
     assert _failed_generation("not a dict") is None
+
+
+def test_dev_set_excludes_test_questions(
+    pilot_client: Any, conn: sqlite3.Connection, corpus: Path, tmp_path: Path
+) -> None:
+    # Same questions in train and test, like SciEntsBank (unseen answers, seen questions).
+    for ds in pilot.DATASETS:
+        write_corpus(corpus, ds, n_questions=4, split="train")
+    store = RubricStore(conn)
+    test_dir, dev_dir = tmp_path / "test", tmp_path / "dev"
+    pilot.prepare(
+        pilot_client, store, pilot.PilotConfig(8, 4, 3), data_dir=corpus, out_dir=test_dir
+    )
+    dev_cfg = pilot.PilotConfig(8, 4, 3, split="train", exclude_from=str(test_dir))
+    summary = pilot.prepare(pilot_client, store, dev_cfg, data_dir=corpus, out_dir=dev_dir)
+    test_items = pilot._load_items(corpus, "test_ua")
+    dev_items = pilot._load_items(corpus, "train")
+    test_q = {
+        (test_items[e["item_id"]].dataset, test_items[e["item_id"]].question)
+        for e in pilot._manifest(test_dir)
+    }
+    dev_q = {
+        (dev_items[e["item_id"]].dataset, dev_items[e["item_id"]].question)
+        for e in pilot._manifest(dev_dir)
+    }
+    assert summary["items"] > 0 and dev_q and not (dev_q & test_q)
+    rows, stop = pilot.run(pilot_client, store, "judge", data_dir=corpus, out_dir=dev_dir)
+    assert stop is None and all(r.item_id.split("/")[1] == "train" for r in rows)
