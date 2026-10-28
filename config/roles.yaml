@@ -73,10 +73,15 @@ roles:
     max_output_tokens: 4096
   verifier:
     provider: groq
-    model: qwen/qwen3.8-27b         # ID from Groq's rate-limits page; confirm with `smoke`
+    model: qwen/qwen3.8-27b
     family: qwen
     temperature: 0.0
-    max_output_tokens: 3000
+    # Groq free tier caps this model at 1,000 OUTPUT tokens/min (not shown on the limits
+    # page; returned as a 429). A larger max_tokens is rejected outright.
+    max_output_tokens: 900
+    # Groq's constrained decoding breaks on our schemas with this model (malformed
+    # `"errors\": []`, then a `}]}]...` loop; 12/22 failed). Plain JSON mode: 6/6 fixed.
+    json_mode: object
   # Phase 2 judge candidates, compared against `judge` on the human-graded corpora.
   # gpt-oss-120b is deliberately absent: it is the generator, so it can't judge.
   judge_candidate_qwen:
@@ -84,7 +89,8 @@ roles:
     model: qwen/qwen3.8-27b
     family: qwen
     temperature: 0.0
-    max_output_tokens: 3000
+    max_output_tokens: 900          # see verifier: 1,000 output tokens/min cap
+    json_mode: object               # see verifier: constrained decoding breaks
   judge_candidate_local:
     provider: ollama
     model: qwen3:8b

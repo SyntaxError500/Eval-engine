@@ -99,6 +99,7 @@ class LLMClient:
             temperature=rcfg.temperature,
             max_output_tokens=rcfg.max_output_tokens,
             reasoning_effort=rcfg.reasoning_effort,
+            json_mode=rcfg.json_mode,
         )
         key = hash_data(
             {
@@ -107,6 +108,7 @@ class LLMClient:
                 "temperature": rcfg.temperature,
                 "max_output_tokens": rcfg.max_output_tokens,
                 "reasoning_effort": rcfg.reasoning_effort,
+                "json_mode": rcfg.json_mode,
                 "system": req.system,
                 "user": req.user,
                 "schema": json_schema,

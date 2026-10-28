@@ -1,3 +1,4 @@
+import json
 from typing import Any
 
 import groq
@@ -19,7 +20,12 @@ class GroqProvider:
 
     def complete(self, req: CompletionRequest) -> Completion:
         kwargs: dict[str, Any] = {}
-        if req.json_schema is not None:
+        system = req.system
+        if req.json_schema is not None and req.json_mode == "object":
+            kwargs["response_format"] = {"type": "json_object"}
+            system += "\n\nThe reply must be one JSON object matching this JSON Schema:\n"
+            system += json.dumps(req.json_schema)
+        elif req.json_schema is not None:
             kwargs["response_format"] = {
                 "type": "json_schema",
                 "json_schema": {
@@ -34,7 +40,7 @@ class GroqProvider:
             resp = self._client.chat.completions.create(
                 model=req.model,
                 messages=[
-                    {"role": "system", "content": req.system},
+                    {"role": "system", "content": system},
                     {"role": "user", "content": req.user},
                 ],
                 temperature=req.temperature,

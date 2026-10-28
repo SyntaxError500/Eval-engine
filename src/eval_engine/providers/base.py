@@ -14,6 +14,10 @@ class CompletionRequest:
     temperature: float
     max_output_tokens: int
     reasoning_effort: str | None = None
+    # "schema": provider-side constrained decoding against json_schema.
+    # "object": plain JSON mode; the schema goes into the system prompt instead. Some
+    # provider/model pairs break under constrained decoding (Groq + Qwen, 2026-10-28).
+    json_mode: str = "schema"
 
 
 @dataclass(frozen=True)
