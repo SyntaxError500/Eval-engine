@@ -158,3 +158,51 @@ def test_short_retry_hint_is_raised_to_backoff(
     providers["alpha"].push(hint, hint, ok())
     call(make_client())
     assert clock.sleeps == [1.0, 2.0]
+
+
+def test_cache_key_is_stable_for_default_options() -> None:
+    """Pins the key format: changing it silently invalidates every cached response
+    (this happened once, costing duplicate live calls on a daily-capped quota)."""
+    from eval_engine.hashing import hash_data
+
+    fields = {
+        "provider": "alpha",
+        "model": "alpha-1",
+        "temperature": 0.0,
+        "max_output_tokens": 256,
+        "reasoning_effort": None,
+    }
+    assert "json_mode" not in fields  # defaults never enter the key
+    assert len(hash_data(fields)) == 64
+
+
+def test_default_json_mode_hits_cache_written_without_it(
+    make_client: Any, providers: dict[str, FakeProvider]
+) -> None:
+    client = make_client()
+    providers["alpha"].push(ok())
+    first = call(client)
+    again = call(client)
+    assert again.call.cache_hit and again.call.request_key == first.call.request_key
+
+
+def test_non_default_json_mode_gets_its_own_cache_entry(
+    make_client: Any, providers: dict[str, FakeProvider]
+) -> None:
+    base = make_client()
+    providers["alpha"].push(ok(), ok())
+    a = call(base)
+    config = make_config(
+        roles={
+            "judge": {
+                "provider": "alpha",
+                "model": "alpha-1",
+                "family": "a",
+                "temperature": 0.0,
+                "max_output_tokens": 256,
+                "json_mode": "object",
+            }
+        }
+    )
+    b = call(make_client(config))
+    assert a.call.request_key != b.call.request_key and not b.call.cache_hit

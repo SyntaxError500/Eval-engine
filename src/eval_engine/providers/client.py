@@ -101,19 +101,21 @@ class LLMClient:
             reasoning_effort=rcfg.reasoning_effort,
             json_mode=rcfg.json_mode,
         )
-        key = hash_data(
-            {
-                "provider": rcfg.provider,
-                "model": rcfg.model,
-                "temperature": rcfg.temperature,
-                "max_output_tokens": rcfg.max_output_tokens,
-                "reasoning_effort": rcfg.reasoning_effort,
-                "json_mode": rcfg.json_mode,
-                "system": req.system,
-                "user": req.user,
-                "schema": json_schema,
-            }
-        )
+        key_fields: dict[str, Any] = {
+            "provider": rcfg.provider,
+            "model": rcfg.model,
+            "temperature": rcfg.temperature,
+            "max_output_tokens": rcfg.max_output_tokens,
+            "reasoning_effort": rcfg.reasoning_effort,
+            "system": req.system,
+            "user": req.user,
+            "schema": json_schema,
+        }
+        # New request options join the key only when set away from their default, so adding
+        # an option never invalidates responses cached before it existed.
+        if rcfg.json_mode != "schema":
+            key_fields["json_mode"] = rcfg.json_mode
+        key = hash_data(key_fields)
         record = _CallRecorder(role, rcfg, rendered, key, evaluation_id)
 
         if self._use_cache and not fresh:
