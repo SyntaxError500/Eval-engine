@@ -203,7 +203,7 @@ class LLMClient:
             self._limiters[k] = RateLimiter(
                 provider,
                 model,
-                pcfg.limits,
+                pcfg.limits_for(model),
                 self._usage,
                 pcfg.rpd_reset_tz,
                 clock=self._clock,

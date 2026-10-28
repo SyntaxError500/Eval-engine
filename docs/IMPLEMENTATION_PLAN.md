@@ -33,7 +33,7 @@ Companion to [`Evaluation_Feedback_Engine_Design.pdf`](Evaluation_Feedback_Engin
 | Generator (question, task type, rubric, obvious answers) | gpt-oss-120b on Groq | OpenAI open-weight | One call per question; cached in the rubric store, so Groq's small daily token cap is enough |
 | Reference answer | gpt-oss-120b on Groq | OpenAI open-weight | Written after the rubric is frozen; not used in scoring |
 | Amendment proposer | gpt-oss-120b on Groq | OpenAI open-weight | Sees question + answer only |
-| Path identification + scoring judge | **Gemini Flash** | Google | Runs on every answer, so it gets the largest free daily budget |
+| Path identification + scoring judge | **Gemini 3.5 Flash Lite** | Google | Runs on every answer, so it needs the largest free daily request budget (500/day; Flash models allow only 20/day) |
 | Verifier | Qwen on Groq | Qwen | Different family from proposer, judge and generator; runs only when an amendment fires |
 | Feedback phrasing, perturbation generation, offline dev | Ollama local (Qwen3 4B–8B, Q4) | Qwen | Never decides a grade |
 
@@ -41,7 +41,7 @@ Mistral was dropped because its API is not free. Every role is now on Gemini, Gr
 
 The judge choice is **provisional until the Phase 2 gate**.
 
-**Daily budget is the binding constraint.** Groq's free tier gives about 200K tokens per model per day (about 65 scoring-sized calls), and Gemini Flash gives somewhere between 250 and 1,500 requests per day depending on the account. The rate limiter enforces requests per day *and* tokens per day, so a long experiment stops cleanly with `QuotaExhausted` and resumes from the cache the next day.
+**Daily budget is the binding constraint** (limits read from both consoles on 2026-10-28). Groq: 30 RPM, 1K RPD, 8K TPM and 200K tokens/day *per model*, which is about 140 rubric generations or 100–130 judge calls a day. Gemini free tier: Flash models 5 RPM and **20 requests/day**; 3.5 Flash Lite 15 RPM and 500/day. The rate limiter enforces requests per day *and* tokens per day, with per-model overrides, so a long experiment stops cleanly with `QuotaExhausted` and resumes from the cache the next day.
 
 ### Stack
 
@@ -83,8 +83,8 @@ These came out of reviewing the design text against the pipeline diagram. Each o
 | D1 | Path ID on every answer or on demand? | **Every non-creative answer, merged into the scoring call.** One call returns the identified path, its confidence and per-criterion verdicts. Only on low confidence do we run amendment → verification → re-score. This halves calls in the common case | Phase 4 gate |
 | D2 | Show the LLM reference answer to the user? | **Hidden by default.** Optional reveal *after* feedback, labelled "one possible answer". Feedback never quotes it | Phase 8 |
 | D3 | Where does originality count for creative tasks? | Under expression (G5) | Phase 4 gate |
-| D4 | Single judge or ensemble? | Single (Gemini Flash). An ensemble (Gemini + Qwen on Groq + local Qwen, majority vote) is tested in Phase 7 only if leniency or correlation is borderline. Its cost is bounded by Groq's daily token cap | Phase 2 and Phase 7 gates |
-| D5 | Which model phrases feedback? | Local Qwen. Fall back to Gemini Flash if quality is poor in Phase 6 review | Phase 6 gate |
+| D4 | Single judge or ensemble? | Single (Gemini 3.5 Flash Lite). An ensemble (Gemini + Qwen on Groq + local Qwen, majority vote) is tested in Phase 7 only if leniency or correlation is borderline. Its cost is bounded by Groq's daily token cap | Phase 2 and Phase 7 gates |
+| D5 | Which model phrases feedback? | Local Qwen. Fall back to Gemini Flash (20/day is enough for phrasing review) if quality is poor in Phase 6 review | Phase 6 gate |
 
 ---
 
@@ -253,7 +253,7 @@ The goal is to confirm the judge before anything is built on it.
 1. **Dataset**: SemEval-2013 Task 7, SciEntsBank and Beetle. They have reference answers and human labels (5-way: correct / partially correct / contradictory / irrelevant / non-domain; also 3-way and 2-way). Check licence terms before downloading. ASAP-SAS (Kaggle) is a second corpus if time allows.
 2. **Rubric adapter**: convert each dataset question's reference answer into a checklist rubric (one pass with the generator, gpt-oss-120b, then **manually spot-check 20**). This tests the judge on rubrics like the ones it will see in production.
 3. **Sample**: about 300 answers, stratified by label and question.
-4. **Run** the scoring prompt with three judges: Gemini Flash, Qwen on Groq and local Qwen. All responses are cached. gpt-oss-120b is not a judge candidate, because it generated the rubrics. Groq's daily token cap means the Qwen run takes several days; let it resume from the cache.
+4. **Run** the scoring prompt with three judges: Gemini 3.5 Flash Lite, Qwen on Groq and local Qwen. All responses are cached. gpt-oss-120b is not a judge candidate, because it generated the rubrics. Groq's daily token cap means the Qwen run takes several days; let it resume from the cache.
 5. **Map** judge output to the dataset's label scale. Primary metric: 2-way and 3-way, where binary grading is known to be reliable.
 6. **Metrics** (`validation/metrics.py`):
    - **Leniency** = mean normalised signed error vs. human score (Pathak et al.), target `|leniency| ≤ 0.1`.
@@ -423,7 +423,7 @@ The goal is to confirm the judge before anything is built on it.
 | Phase 5 verifier set | 100 × 2 framings | Groq (Qwen) |
 | Phase 7 perturbation | ≈30 × 4 perturbations × 1 judge | Gemini |
 
-At about 200K tokens/day per Groq model, a 300-item Qwen judge run (~3K tokens each) takes about 5 days, and the verifier set takes about 3. Start those runs early and let them resume from the cache. Gemini's daily request cap decides how fast the Gemini runs go; check the real number in AI Studio in Phase 0. The cache makes every rerun free.
+At about 200K tokens/day per Groq model, a 300-item Qwen judge run (~3K tokens each) takes about 5 days, and the verifier set takes about 3. Start those runs early and let them resume from the cache. The Gemini judge (500 requests/day) finishes the 302-item pilot in one day. Full Gemini Flash (20/day) is too slow to be a candidate. The cache makes every rerun free.
 
 ---
 

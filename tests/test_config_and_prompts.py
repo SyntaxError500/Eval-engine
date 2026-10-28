@@ -57,3 +57,18 @@ def test_prompt_name_must_match_file(tmp_path: Path) -> None:
     (tmp_path / "a.yaml").write_text("name: b\nversion: 1\nsystem: s\nuser: u\n")
     with pytest.raises(ValueError, match="declares name"):
         PromptRegistry(tmp_path).get("a")
+
+
+def test_model_limit_overrides() -> None:
+    config = make_config(
+        providers={
+            "alpha": {
+                "api_key_env": None,
+                "limits": {"rpd": 20},
+                "model_limits": {"lite": {"rpd": 500}},
+            }
+        }
+    )
+    p = config.providers["alpha"]
+    assert p.limits_for("lite").rpd == 500
+    assert p.limits_for("anything-else").rpd == 20

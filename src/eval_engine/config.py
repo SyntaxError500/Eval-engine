@@ -26,7 +26,12 @@ class Limits(BaseModel):
 class ProviderConfig(BaseModel):
     api_key_env: str | None
     limits: Limits = Field(default_factory=Limits)
+    # Per-model overrides; free tiers differ a lot by model (Gemini Flash 20/day vs Lite 500).
+    model_limits: dict[str, Limits] = Field(default_factory=dict)
     rpd_reset_tz: str = "UTC"
+
+    def limits_for(self, model: str) -> Limits:
+        return self.model_limits.get(model, self.limits)
 
 
 class RoleConfig(BaseModel):

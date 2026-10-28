@@ -5,20 +5,24 @@
 # amendment proposer; tests/test_config_and_prompts.py enforces this.
 #
 # Why this layout (no paid APIs; Mistral's API is not free):
-#   - The judge runs on EVERY answer, so it sits on the largest free daily budget (Gemini).
+#   - The judge runs on EVERY answer, so it sits on the largest free daily request budget:
+#     Gemini 3.5 Flash Lite (500/day). Gemini Flash models allow only 20/day on the free tier.
 #   - Generation runs once per question, so it fits Groq's small daily token cap.
 #   - Groq limits are per model, so gpt-oss-120b and Qwen have separate budgets.
 #
-# Rate limits are PLACEHOLDERS from third-party trackers (Oct 2026). Replace them with the
-# numbers in each console (Phase 0):
+# Limits below were read from each console on 2026-10-28:
 #   Gemini: https://aistudio.google.com/rate-limit
 #   Groq:   https://console.groq.com/settings/limits
-# Limits apply per provider+model. A null limit means "not enforced".
+# Limits apply per provider+model; `model_limits` overrides the provider default for one
+# model. A null limit means "not enforced".
 
 providers:
   gemini:
     api_key_env: GEMINI_API_KEY
-    limits: {rpm: 10, tpm: 250000, rpd: 250, tpd: null}
+    # Default = Gemini Flash models (3.6 / 3.8 / 2.5 Flash all show 5 RPM, 20 RPD).
+    limits: {rpm: 5, tpm: 250000, rpd: 20, tpd: null}
+    model_limits:
+      gemini-3.5-flash-lite: {rpm: 15, tpm: 250000, rpd: 500, tpd: null}
     rpd_reset_tz: America/Los_Angeles     # Gemini daily quota resets at midnight Pacific
   groq:
     api_key_env: GROQ_API_KEY
@@ -60,9 +64,10 @@ roles:
     reasoning_effort: medium
   judge:
     provider: gemini
-    # Pinned. On 2026-10-28 the newest Flash models (3.7, 3.8, which `gemini-flash-latest`
-    # points to) returned 503/504 on the free tier; 3.5 answered in ~2-3 s.
-    model: gemini-3.5-flash
+    # Pinned. Free-tier Flash models allow only 20 requests/day (the 302-item pilot alone
+    # would take 15 days), and on 2026-10-28 the newest ones returned 503/504 under load.
+    # Flash Lite allows 500/day. Whether its grading is good enough is the Phase 2 question.
+    model: gemini-3.5-flash-lite
     family: google
     temperature: 0.0
     max_output_tokens: 4096
