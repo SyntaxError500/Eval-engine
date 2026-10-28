@@ -189,3 +189,30 @@ def test_distinct_reference_answers_get_distinct_rubrics() -> None:
     a = GradedAnswer("1", "B", "s", "Why?", "ref one", "x", "correct")
     b = GradedAnswer("2", "B", "s", "Why?", "ref two", "y", "correct")
     assert pilot.rubric_id_for(a) != pilot.rubric_id_for(b)
+
+
+def test_quota_stop_in_prepare_still_lets_judges_run(
+    make_client: Any,
+    providers: dict[str, FakeProvider],
+    conn: sqlite3.Connection,
+    corpus: Path,
+    tmp_path: Path,
+) -> None:
+    providers["alpha"].push(fake_rubric, fake_rubric, fake_rubric, QuotaExhausted("tpd"))
+    providers["beta"].push(*[fake_judge] * 50)
+    role = {"temperature": 0.0, "max_output_tokens": 512}
+    client = make_client(
+        make_config(
+            roles={
+                "generator": {"provider": "alpha", "model": "gen", "family": "a", **role},
+                "judge": {"provider": "beta", "model": "jdg", "family": "b", **role},
+            }
+        )
+    )
+    out, store = tmp_path / "out", RubricStore(conn)
+    summary = pilot.prepare(client, store, pilot.PilotConfig(8, 4, 3), data_dir=corpus, out_dir=out)
+    assert summary["missing"] == 1 and summary["stopped"]
+    rows, stop = pilot.run(client, store, "judge", data_dir=corpus, out_dir=out)
+    assert stop is None
+    assert sum(r.error == "rubric_missing" for r in rows) == 4
+    assert sum(r.error is None for r in rows) == 12

@@ -93,7 +93,10 @@ def prepare(
     data_dir: Path = DATASET_DIR,
     out_dir: Path = PILOT_DIR,
 ) -> dict[str, Any]:
-    """Idempotent: rubrics already in the store are reused, so a quota stop can resume."""
+    """Idempotent: rubrics already in the store are reused, so a quota stop can resume.
+
+    On a quota stop the manifest is still written, so judges can start on the items whose
+    rubrics exist; `stopped` in the result says why rubrics are missing."""
     cfg = cfg or PilotConfig()
     prompt_hash = client.prompts.get("dataset_rubric").file_hash
     items = list(_load_items(data_dir).values())
@@ -108,6 +111,7 @@ def prepare(
         first_per_q.setdefault(rubric_id_for(it, prompt_hash), it)
 
     built = reused = 0
+    stopped: str | None = None
     for rid, it in first_per_q.items():
         try:
             store.latest(rid)
@@ -115,12 +119,16 @@ def prepare(
             continue
         except KeyError:
             pass
-        res = client.complete(
-            "generator",
-            "dataset_rubric",
-            {"question": it.question, "reference_answer": it.reference_answer},
-            RubricDraft,
-        )
+        try:
+            res = client.complete(
+                "generator",
+                "dataset_rubric",
+                {"question": it.question, "reference_answer": it.reference_answer},
+                RubricDraft,
+            )
+        except QuotaExhausted as e:
+            stopped = str(e)
+            break
         draft = res.value.model_dump()
         draft["question"] = it.question  # keep the corpus text exactly
         rubric = Rubric.model_validate(
@@ -145,6 +153,8 @@ def prepare(
         "questions": len(first_per_q),
         "built": built,
         "reused": reused,
+        "missing": len(first_per_q) - built - reused,
+        "stopped": stopped,
         "labels": dict(Counter(i.label for i in sample)),
     }
 
@@ -218,7 +228,14 @@ def run(
     stop: str | None = None
     for entry in _manifest(out_dir):
         item = items[entry["item_id"]]
-        rubric = store.latest(entry["rubric_id"])
+        try:
+            rubric = store.latest(entry["rubric_id"])
+        except KeyError:
+            # Rubric not built yet (generator quota). Unscored now; a later run picks it up.
+            rows.append(
+                ResultRow(item.item_id, item.dataset, item.label, "", error="rubric_missing")
+            )
+            continue
         try:
             row, _ = _grade(client, role, item, rubric)
         except QuotaExhausted as e:

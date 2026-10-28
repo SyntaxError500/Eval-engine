@@ -8,7 +8,7 @@ import typer
 from pydantic import BaseModel
 
 from eval_engine.config import ConfigError, db_path, load_config, load_env
-from eval_engine.providers.base import ProviderError, QuotaExhausted
+from eval_engine.providers.base import ProviderError
 from eval_engine.providers.client import LLMClient, StructuredOutputError
 from eval_engine.providers.factory import build_client
 from eval_engine.storage import RubricStore, UsageCounter, connect
@@ -103,13 +103,16 @@ def pilot_prepare(
     """Sample items and build one rubric per question with the generator role."""
     client, store = _pilot_deps()
     cfg = pilot.PilotConfig(answers, max_per_question, seed)
-    try:
-        summary = pilot.prepare(client, store, cfg)
-    except QuotaExhausted as e:
-        typer.secho(f"Stopped: {e}\nRubrics built so far are saved; rerun later.", fg="yellow")
-        raise typer.Exit(2) from e
+    summary = pilot.prepare(client, store, cfg)
     typer.echo(json.dumps(summary, indent=1))
     typer.echo(f"Review rubrics in {pilot.PILOT_DIR / 'rubrics_review.md'}")
+    if summary["stopped"]:
+        typer.secho(
+            f"Stopped with {summary['missing']} rubric(s) missing: {summary['stopped']}\n"
+            "Judges can run now on the rest; rerun `pilot prepare` after the quota resets.",
+            fg="yellow",
+        )
+        raise typer.Exit(2)
 
 
 @pilot_app.command("run")
