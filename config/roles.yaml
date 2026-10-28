@@ -29,6 +29,9 @@ providers:
     # Confirmed in console.groq.com/settings/limits on 2026-10-28, for both gpt-oss-120b and
     # qwen/qwen3.8-27b (limits are per model).
     limits: {rpm: 30, tpm: 8000, rpd: 1000, tpd: 200000}
+    model_limits:
+      # Not on the limits page; Groq's 429 reports "output tokens per minute (OTPM): 1000".
+      qwen/qwen3.8-27b: {rpm: 30, tpm: 8000, rpd: 1000, tpd: 200000, otpm: 1000}
     rpd_reset_tz: UTC
   ollama:
     api_key_env: null

@@ -171,24 +171,27 @@ class LLMClient:
     ) -> Completion:
         provider = self._provider(rcfg.provider)
         limiter = self._limiter(rcfg.provider, rcfg.model)
-        estimate = (len(req.system) + len(req.user)) // 4 + req.max_output_tokens // 4
+        est_output = req.max_output_tokens // 2
+        estimate = (len(req.system) + len(req.user)) // 4 + est_output
         retry = self._config.retry
         for attempt in range(1, retry.max_attempts + 1):
-            slot = limiter.acquire(estimate)
+            slot = limiter.acquire(estimate, est_output)
             record.attempts += 1
             try:
                 completion = provider.complete(req)
             except ProviderError as e:
-                limiter.settle(slot, 0)
+                limiter.settle(slot, 0, 0)
                 record.retry_errors.append(str(e)[:300])
                 if not e.retryable or attempt == retry.max_attempts:
                     raise
                 backoff = min(retry.max_delay_s, retry.base_delay_s * 2 ** (attempt - 1))
-                delay = e.retry_after if e.retry_after is not None else backoff
+                # A provider's retry hint is a floor, not the whole wait: Groq says "retry in
+                # 0.54 s" for per-minute token caps, and four such retries all fail.
+                delay = max(e.retry_after or 0.0, backoff)
                 self._sleep(delay * (0.5 + 0.5 * self._rng()))
                 continue
             used = (completion.input_tokens or 0) + (completion.output_tokens or 0)
-            limiter.settle(slot, used or None)
+            limiter.settle(slot, used or None, completion.output_tokens)
             record.add_tokens(completion)
             return completion
         raise AssertionError("unreachable")

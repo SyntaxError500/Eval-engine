@@ -21,6 +21,7 @@ class Limits(BaseModel):
     tpm: int | None = Field(default=None, gt=0)
     rpd: int | None = Field(default=None, gt=0)
     tpd: int | None = Field(default=None, gt=0)
+    otpm: int | None = Field(default=None, gt=0)  # output tokens per minute
 
 
 class ProviderConfig(BaseModel):

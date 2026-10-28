@@ -85,3 +85,13 @@ def test_daily_token_cap(conn: sqlite3.Connection, clock: FakeClock) -> None:
     rl.settle(slot, 900)
     with pytest.raises(QuotaExhausted, match="tokens"):
         rl.acquire(200)
+
+
+def test_output_tokens_per_minute(conn: sqlite3.Connection, clock: FakeClock) -> None:
+    rl = limiter(conn, clock, otpm=1000)
+    slot = rl.acquire(100, estimated_output=450)
+    rl.settle(slot, 600, actual_output=500)
+    rl.acquire(100, estimated_output=450)
+    assert clock.sleeps == []
+    rl.acquire(100, estimated_output=450)  # 500 + 450 + 450 > 1000
+    assert len(clock.sleeps) == 1

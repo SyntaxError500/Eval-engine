@@ -149,3 +149,12 @@ def test_retry_errors_are_logged_even_on_success(
     res = call(make_client(), evaluation_id="ev2")
     assert res.call.retry_errors == ["gemini 503: high demand"]
     assert CallLog(conn).for_evaluation("ev2")[0].retry_errors == ["gemini 503: high demand"]
+
+
+def test_short_retry_hint_is_raised_to_backoff(
+    make_client: Any, providers: dict[str, FakeProvider], clock: FakeClock
+) -> None:
+    hint = ProviderError("otpm", retryable=True, status=429, retry_after=0.5)
+    providers["alpha"].push(hint, hint, ok())
+    call(make_client())
+    assert clock.sleeps == [1.0, 2.0]
