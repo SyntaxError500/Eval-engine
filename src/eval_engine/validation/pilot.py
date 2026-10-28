@@ -38,6 +38,7 @@ from eval_engine.validation.labels import (
 PILOT_DIR = REPO_ROOT / "experiments" / "2_judge_pilot"
 SOURCES = (("SciEntsBank", "test_ua"), ("Beetle", "test_ua"))
 LENIENCY_TARGET = 0.1
+MAX_CONSECUTIVE_FAILURES = 5
 
 
 @dataclass(frozen=True)
@@ -226,6 +227,7 @@ def run(
     items = _load_items(data_dir)
     rows: list[ResultRow] = []
     stop: str | None = None
+    consecutive_failures = 0
     for entry in _manifest(out_dir):
         item = items[entry["item_id"]]
         try:
@@ -242,8 +244,24 @@ def run(
             stop = f"quota: {e}"
             break
         except ProviderError as e:
-            stop = f"provider: {e}"
-            break
+            # Retryable errors already exhausted their retries: the provider is down, stop.
+            # A non-retryable error is usually about this one request: record it, move on,
+            # but stop if it keeps happening (e.g. a revoked key would fail every item).
+            consecutive_failures += 1
+            if e.retryable or consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                stop = f"provider: {str(e)[:500]}"
+                break
+            rows.append(
+                ResultRow(
+                    item.item_id,
+                    item.dataset,
+                    item.label,
+                    rubric.hash or "",
+                    error=f"provider: {str(e)[:300]}",
+                )
+            )
+            continue
+        consecutive_failures = 0
         rows.append(row)
     _write_rows(out_dir / "results" / f"{role}.jsonl", rows)
     return rows, stop

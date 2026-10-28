@@ -216,3 +216,48 @@ def test_quota_stop_in_prepare_still_lets_judges_run(
     assert stop is None
     assert sum(r.error == "rubric_missing" for r in rows) == 4
     assert sum(r.error is None for r in rows) == 12
+
+
+def test_single_bad_request_does_not_stop_run(
+    pilot_client: Any,
+    providers: dict[str, FakeProvider],
+    conn: sqlite3.Connection,
+    corpus: Path,
+    tmp_path: Path,
+) -> None:
+    from eval_engine.providers.base import ProviderError
+
+    out, store = tmp_path / "out", RubricStore(conn)
+    pilot.prepare(pilot_client, store, pilot.PilotConfig(8, 4, 3), data_dir=corpus, out_dir=out)
+    bad = ProviderError("400 bad request", retryable=False, status=400)
+    providers["beta"]._script = [bad, *[fake_judge] * 20]
+    rows, stop = pilot.run(pilot_client, store, "judge", data_dir=corpus, out_dir=out)
+    assert stop is None and len(rows) == 16
+    assert sum(r.error is not None for r in rows) == 1
+
+
+def test_repeated_failures_stop_run(
+    pilot_client: Any,
+    providers: dict[str, FakeProvider],
+    conn: sqlite3.Connection,
+    corpus: Path,
+    tmp_path: Path,
+) -> None:
+    from eval_engine.providers.base import ProviderError
+
+    out, store = tmp_path / "out", RubricStore(conn)
+    pilot.prepare(pilot_client, store, pilot.PilotConfig(8, 4, 3), data_dir=corpus, out_dir=out)
+    providers["beta"]._script = [
+        ProviderError("401 bad key", retryable=False, status=401) for _ in range(10)
+    ]
+    rows, stop = pilot.run(pilot_client, store, "judge", data_dir=corpus, out_dir=out)
+    assert stop is not None and "401" in stop and len(rows) == 4
+
+
+def test_groq_failed_generation_is_handed_to_repair() -> None:
+    from eval_engine.providers.groq_cloud import _failed_generation
+
+    body = {"error": {"code": "json_validate_failed", "failed_generation": '{"a": }]}]'}}
+    assert _failed_generation(body) == '{"a": }]}]'
+    assert _failed_generation({"error": {"code": "rate_limit"}}) is None
+    assert _failed_generation("not a dict") is None

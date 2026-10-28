@@ -49,6 +49,12 @@ class GroqProvider:
                 retry_after=_retry_after(e.response.headers.get("retry-after")),
             ) from e
         except groq.APIStatusError as e:
+            failed = _failed_generation(e.body)
+            if failed is not None:
+                # Groq validates JSON server-side and rejects malformed output with a 400.
+                # Hand the bad text back so LLMClient's schema repair can retry it, exactly as
+                # if the model had returned it to us.
+                return Completion(text=failed)
             raise ProviderError(
                 f"groq {e.status_code}: {e.message}",
                 retryable=is_retryable_status(e.status_code),
@@ -65,6 +71,17 @@ class GroqProvider:
             input_tokens=usage.prompt_tokens if usage else None,
             output_tokens=usage.completion_tokens if usage else None,
         )
+
+
+def _failed_generation(body: object) -> str | None:
+    """The model's rejected output, if this is Groq's json_validate_failed error."""
+    if not isinstance(body, dict):
+        return None
+    err = body.get("error", body)
+    if not isinstance(err, dict) or err.get("code") != "json_validate_failed":
+        return None
+    text = err.get("failed_generation")
+    return text if isinstance(text, str) else ""
 
 
 def _retry_after(value: str | None) -> float | None:
