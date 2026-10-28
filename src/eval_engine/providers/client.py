@@ -70,6 +70,10 @@ class LLMClient:
         self._providers: dict[str, Provider] = {}
         self._limiters: dict[tuple[str, str], RateLimiter] = {}
 
+    @property
+    def prompts(self) -> PromptRegistry:
+        return self._prompts
+
     def complete[T: BaseModel](
         self,
         role: str,

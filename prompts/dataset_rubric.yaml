@@ -1,5 +1,8 @@
 name: dataset_rubric
-version: 1
+version: 2
+# v2: v1 rubrics added core requirements the reference never states (e.g. "explain that
+# current can't flow" when the reference only says "not a closed path"). Human labels were
+# assigned against the reference alone, so that made the rubric, not the judge, the variable.
 description: >
   Phase 2. Turns a borrowed corpus question + its reference answer into a checklist rubric,
   so the judge is tested on rubrics shaped like the ones it will see in production.
@@ -9,17 +12,26 @@ system: |
   reference answer a teacher wrote. Produce a checklist rubric: the key ideas a fully correct
   answer must contain.
 
+  The rubric must ask for exactly what the reference answer says, nothing more. Teachers
+  graded students against this reference, so an answer that states the reference's idea and
+  nothing else is fully correct and must meet every core criterion.
+
   Rules for criteria:
-  - One key idea per criterion. Use 1 to 4 criteria; most questions need 1 or 2.
+  - Every criterion must come from the reference answer. Do not add explanations, reasons,
+    mechanisms or details the reference does not contain, even if they would make a better
+    answer.
+  - One key idea per criterion. If the reference states a single idea, write a single
+    criterion. Use more only when the reference itself states several distinct ideas.
   - Each criterion is a binary, observable statement about the answer ("States that ...",
     "Explains that ... because ..."). Never use vague words like "good", "clear", "adequate".
   - Describe the idea, not the reference wording: a student who expresses the same idea in
     different words must meet the criterion.
-  - core: true for ideas required for the answer to be fully correct; false for anything
-    that is merely nice to have. At least one criterion must be core.
+  - core: true for every idea in the reference answer. Use core: false only for a part the
+    reference itself marks as optional (e.g. "for example ..."). At least one criterion must
+    be core.
   - weight: 1.0 for core criteria, 0.5 for non-core.
-  - dimension: "correctness" for a factual claim, "reasoning" for a causal or explanatory
-    link, "completeness" for a required second part of the answer.
+  - dimension: "correctness" for a factual claim, "reasoning" for a causal link the
+    reference states, "completeness" for a required second part. Never use "expression".
   - evidence_hint: what in a student answer would show the criterion is met.
   - Do not add criteria about spelling, grammar or length.
 

@@ -71,8 +71,10 @@ class ResultRow:
     error: str | None = None
 
 
-def rubric_id_for(item: GradedAnswer) -> str:
-    return "ds-" + sha256_hex(item.question_key)[:16]
+def rubric_id_for(item: GradedAnswer, prompt_hash: str = "") -> str:
+    """The rubric prompt's hash is part of the id, so editing the prompt yields fresh rubrics
+    instead of silently reusing ones built by an older version."""
+    return "ds-" + sha256_hex(f"{item.question_key}::{prompt_hash}")[:16]
 
 
 def _load_items(directory: Path) -> dict[str, GradedAnswer]:
@@ -93,6 +95,7 @@ def prepare(
 ) -> dict[str, Any]:
     """Idempotent: rubrics already in the store are reused, so a quota stop can resume."""
     cfg = cfg or PilotConfig()
+    prompt_hash = client.prompts.get("dataset_rubric").file_hash
     items = list(_load_items(data_dir).values())
     sample: list[GradedAnswer] = []
     for dataset, _split in SOURCES:
@@ -102,7 +105,7 @@ def prepare(
 
     first_per_q: dict[str, GradedAnswer] = {}
     for it in sample:
-        first_per_q.setdefault(rubric_id_for(it), it)
+        first_per_q.setdefault(rubric_id_for(it, prompt_hash), it)
 
     built = reused = 0
     for rid, it in first_per_q.items():
@@ -129,8 +132,11 @@ def prepare(
     out_dir.mkdir(parents=True, exist_ok=True)
     manifest = {
         "config": asdict(cfg),
+        "rubric_prompt_hash": prompt_hash,
         "sources": [list(s) for s in SOURCES],
-        "items": [{"item_id": i.item_id, "rubric_id": rubric_id_for(i)} for i in sample],
+        "items": [
+            {"item_id": i.item_id, "rubric_id": rubric_id_for(i, prompt_hash)} for i in sample
+        ],
     }
     (out_dir / "sample.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
     _write_rubric_review(store, first_per_q, out_dir / "rubrics_review.md")
