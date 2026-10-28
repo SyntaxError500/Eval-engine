@@ -1,0 +1,10 @@
+# Internal dimension score (0..1) -> user-facing band. Lower bound inclusive.
+# Calibrated against the human-graded set in Phase 7.
+bands:
+  - {label: Not yet,    min: 0.00}
+  - {label: Developing, min: 0.40}
+  - {label: Proficient, min: 0.65}
+  - {label: Strong,     min: 0.85}
+
+# Max path confidence below this triggers the amendment stage (calibrated in Phase 5).
+amendment_confidence_threshold: 0.5

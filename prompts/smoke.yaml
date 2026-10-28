@@ -1,0 +1,7 @@
+name: smoke
+version: 1
+description: Phase 0 connectivity check. Confirms the provider answers and returns schema-valid JSON.
+system: |
+  You are a connectivity test. Reply with JSON only, matching the given schema exactly.
+user: |
+  Return a JSON object with "status" set to "ok" and "echo" set to exactly this token: {{ token }}

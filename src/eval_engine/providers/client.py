@@ -1,0 +1,270 @@
+"""LLMClient: the single entry point for every model call.
+
+role -> provider/model (config) -> render prompt -> cache lookup -> rate limit -> call with
+retries -> validate against the Pydantic schema (one repair attempt) -> cache -> log.
+"""
+
+import random
+import time
+import uuid
+from collections.abc import Callable
+from dataclasses import dataclass, replace
+from datetime import UTC, datetime
+from typing import Any
+
+from pydantic import BaseModel, ValidationError
+
+from eval_engine.config import AppConfig, RoleConfig
+from eval_engine.hashing import hash_data
+from eval_engine.prompts import PromptRegistry, RenderedPrompt
+from eval_engine.providers.base import Completion, CompletionRequest, Provider, ProviderError
+from eval_engine.providers.jsonutil import extract_json, inline_schema
+from eval_engine.providers.ratelimit import RateLimiter
+from eval_engine.schemas.trace import LLMCall
+from eval_engine.storage.calls import CallLog, ResponseCache, UsageCounter
+
+ProviderFactory = Callable[[str], Provider]
+
+REPAIR_SUFFIX = (
+    "\n\n---\nYour previous reply could not be used because it did not match the required "
+    "JSON schema.\nError: {error}\nPrevious reply:\n{reply}\n\n"
+    "Reply again with only the corrected JSON object."
+)
+
+
+class StructuredOutputError(Exception):
+    """The model's reply failed schema validation even after one repair attempt."""
+
+
+@dataclass(frozen=True)
+class LLMResult[T: BaseModel]:
+    value: T
+    call: LLMCall
+
+
+class LLMClient:
+    def __init__(
+        self,
+        config: AppConfig,
+        prompts: PromptRegistry,
+        provider_factory: ProviderFactory,
+        *,
+        cache: ResponseCache,
+        call_log: CallLog,
+        usage: UsageCounter,
+        use_cache: bool = True,
+        clock: Callable[[], float] = time.monotonic,
+        sleep: Callable[[float], None] = time.sleep,
+        rng: Callable[[], float] = random.random,
+    ) -> None:
+        self._config = config
+        self._prompts = prompts
+        self._factory = provider_factory
+        self._cache = cache
+        self._log = call_log
+        self._usage = usage
+        self._use_cache = use_cache
+        self._clock = clock
+        self._sleep = sleep
+        self._rng = rng
+        self._providers: dict[str, Provider] = {}
+        self._limiters: dict[tuple[str, str], RateLimiter] = {}
+
+    def complete[T: BaseModel](
+        self,
+        role: str,
+        prompt: str,
+        variables: dict[str, Any],
+        schema: type[T],
+        *,
+        evaluation_id: str | None = None,
+        fresh: bool = False,
+    ) -> LLMResult[T]:
+        rcfg = self._config.role(role)
+        rendered = self._prompts.render(prompt, variables)
+        json_schema = inline_schema(schema.model_json_schema())
+        req = CompletionRequest(
+            model=rcfg.model,
+            system=rendered.system,
+            user=rendered.user,
+            json_schema=json_schema,
+            schema_name=schema.__name__,
+            temperature=rcfg.temperature,
+            max_output_tokens=rcfg.max_output_tokens,
+            reasoning_effort=rcfg.reasoning_effort,
+        )
+        key = hash_data(
+            {
+                "provider": rcfg.provider,
+                "model": rcfg.model,
+                "temperature": rcfg.temperature,
+                "max_output_tokens": rcfg.max_output_tokens,
+                "reasoning_effort": rcfg.reasoning_effort,
+                "system": req.system,
+                "user": req.user,
+                "schema": json_schema,
+            }
+        )
+        record = _CallRecorder(role, rcfg, rendered, key, evaluation_id)
+
+        if self._use_cache and not fresh:
+            hit = self._cache.get(key)
+            if hit is not None:
+                try:
+                    value = _parse(hit.text, schema)
+                except (ValueError, ValidationError):
+                    pass  # stale or corrupt entry: fall through to a live call
+                else:
+                    record.cache_hit = True
+                    record.input_tokens, record.output_tokens = hit.input_tokens, hit.output_tokens
+                    return LLMResult(value, self._write(record))
+
+        t0 = self._clock()
+        try:
+            completion = self._send(rcfg, req, record)
+            try:
+                value = _parse(completion.text, schema)
+            except (ValueError, ValidationError) as first_error:
+                record.repaired = True
+                repair_req = replace(
+                    req,
+                    user=req.user
+                    + REPAIR_SUFFIX.format(error=_short(first_error), reply=completion.text[:4000]),
+                )
+                completion = self._send(rcfg, repair_req, record)
+                try:
+                    value = _parse(completion.text, schema)
+                except (ValueError, ValidationError) as second_error:
+                    raise StructuredOutputError(
+                        f"{role}/{prompt}: invalid {schema.__name__} after repair: "
+                        f"{_short(second_error)}"
+                    ) from second_error
+        except Exception as e:
+            record.error = f"{type(e).__name__}: {e}"
+            record.latency_ms = int((self._clock() - t0) * 1000)
+            self._write(record)
+            raise
+
+        record.latency_ms = int((self._clock() - t0) * 1000)
+        self._cache.put(
+            key,
+            rcfg.provider,
+            rcfg.model,
+            completion.text,
+            record.input_tokens,
+            record.output_tokens,
+        )
+        return LLMResult(value, self._write(record))
+
+    def _send(
+        self, rcfg: RoleConfig, req: CompletionRequest, record: "_CallRecorder"
+    ) -> Completion:
+        provider = self._provider(rcfg.provider)
+        limiter = self._limiter(rcfg.provider, rcfg.model)
+        estimate = (len(req.system) + len(req.user)) // 4 + req.max_output_tokens // 4
+        retry = self._config.retry
+        for attempt in range(1, retry.max_attempts + 1):
+            slot = limiter.acquire(estimate)
+            record.attempts += 1
+            try:
+                completion = provider.complete(req)
+            except ProviderError as e:
+                limiter.settle(slot, 0)
+                record.retry_errors.append(str(e)[:300])
+                if not e.retryable or attempt == retry.max_attempts:
+                    raise
+                backoff = min(retry.max_delay_s, retry.base_delay_s * 2 ** (attempt - 1))
+                delay = e.retry_after if e.retry_after is not None else backoff
+                self._sleep(delay * (0.5 + 0.5 * self._rng()))
+                continue
+            used = (completion.input_tokens or 0) + (completion.output_tokens or 0)
+            limiter.settle(slot, used or None)
+            record.add_tokens(completion)
+            return completion
+        raise AssertionError("unreachable")
+
+    def _provider(self, name: str) -> Provider:
+        if name not in self._providers:
+            self._providers[name] = self._factory(name)
+        return self._providers[name]
+
+    def _limiter(self, provider: str, model: str) -> RateLimiter:
+        k = (provider, model)
+        if k not in self._limiters:
+            pcfg = self._config.providers[provider]
+            self._limiters[k] = RateLimiter(
+                provider,
+                model,
+                pcfg.limits,
+                self._usage,
+                pcfg.rpd_reset_tz,
+                clock=self._clock,
+                sleep=self._sleep,
+            )
+        return self._limiters[k]
+
+    def _write(self, record: "_CallRecorder") -> LLMCall:
+        call = record.build()
+        self._log.record(call)
+        return call
+
+
+class _CallRecorder:
+    def __init__(
+        self,
+        role: str,
+        rcfg: RoleConfig,
+        rendered: RenderedPrompt,
+        key: str,
+        evaluation_id: str | None,
+    ) -> None:
+        self.role = role
+        self.rcfg = rcfg
+        self.rendered = rendered
+        self.key = key
+        self.evaluation_id = evaluation_id
+        self.cache_hit = False
+        self.repaired = False
+        self.attempts = 0
+        self.input_tokens: int | None = None
+        self.output_tokens: int | None = None
+        self.latency_ms: int | None = None
+        self.error: str | None = None
+        self.retry_errors: list[str] = []
+
+    def add_tokens(self, c: Completion) -> None:
+        if c.input_tokens is not None:
+            self.input_tokens = (self.input_tokens or 0) + c.input_tokens
+        if c.output_tokens is not None:
+            self.output_tokens = (self.output_tokens or 0) + c.output_tokens
+
+    def build(self) -> LLMCall:
+        return LLMCall(
+            call_id=uuid.uuid4().hex,
+            timestamp=datetime.now(UTC),
+            role=self.role,
+            provider=self.rcfg.provider,
+            model=self.rcfg.model,
+            prompt_name=self.rendered.name,
+            prompt_version=self.rendered.version,
+            prompt_hash=self.rendered.template_hash,
+            request_key=self.key,
+            retry_errors=self.retry_errors,
+            cache_hit=self.cache_hit,
+            repaired=self.repaired,
+            attempts=self.attempts,
+            input_tokens=self.input_tokens,
+            output_tokens=self.output_tokens,
+            latency_ms=self.latency_ms,
+            error=self.error,
+            evaluation_id=self.evaluation_id,
+        )
+
+
+def _parse[T: BaseModel](text: str, schema: type[T]) -> T:
+    return schema.model_validate(extract_json(text))
+
+
+def _short(e: Exception, limit: int = 1500) -> str:
+    s = str(e)
+    return s if len(s) <= limit else s[:limit] + "..."

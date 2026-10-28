@@ -1,0 +1,91 @@
+# Role -> provider/model routing. Swapping a model for a role is a one-line change here.
+#
+# `family` is the model family (who trained it). The design requires the judge and verifier
+# to come from a different family than the generator, and the verifier to differ from the
+# amendment proposer; tests/test_config_and_prompts.py enforces this.
+#
+# Why this layout (no paid APIs; Mistral's API is not free):
+#   - The judge runs on EVERY answer, so it sits on the largest free daily budget (Gemini).
+#   - Generation runs once per question, so it fits Groq's small daily token cap.
+#   - Groq limits are per model, so gpt-oss-120b and Qwen have separate budgets.
+#
+# Rate limits are PLACEHOLDERS from third-party trackers (Oct 2026). Replace them with the
+# numbers in each console (Phase 0):
+#   Gemini: https://aistudio.google.com/rate-limit
+#   Groq:   https://console.groq.com/settings/limits
+# Limits apply per provider+model. A null limit means "not enforced".
+
+providers:
+  gemini:
+    api_key_env: GEMINI_API_KEY
+    limits: {rpm: 10, tpm: 250000, rpd: 250, tpd: null}
+    rpd_reset_tz: America/Los_Angeles     # Gemini daily quota resets at midnight Pacific
+  groq:
+    api_key_env: GROQ_API_KEY
+    limits: {rpm: 30, tpm: 8000, rpd: 1000, tpd: 200000}
+    rpd_reset_tz: UTC
+  ollama:
+    api_key_env: null
+    limits: {rpm: null, tpm: null, rpd: null, tpd: null}
+    rpd_reset_tz: UTC
+  # Adapter kept for a possible paid upgrade; no role uses it.
+  mistral:
+    api_key_env: MISTRAL_API_KEY
+    limits: {rpm: null, tpm: null, rpd: null, tpd: null}
+    rpd_reset_tz: UTC
+
+roles:
+  generator:
+    provider: groq
+    model: openai/gpt-oss-120b
+    family: openai-oss
+    temperature: 0.7
+    max_output_tokens: 6000
+    reasoning_effort: medium
+  reference_answer:
+    provider: groq
+    model: openai/gpt-oss-120b
+    family: openai-oss
+    temperature: 0.7
+    max_output_tokens: 3000
+    reasoning_effort: low
+  amendment_proposer:
+    provider: groq
+    model: openai/gpt-oss-120b
+    family: openai-oss
+    temperature: 0.3
+    max_output_tokens: 3000
+    reasoning_effort: medium
+  judge:
+    provider: gemini
+    # Pinned. On 2026-10-28 the newest Flash models (3.7, 3.8, which `gemini-flash-latest`
+    # points to) returned 503/504 on the free tier; 3.5 answered in ~2-3 s.
+    model: gemini-3.5-flash
+    family: google
+    temperature: 0.0
+    max_output_tokens: 4096
+  verifier:
+    provider: groq
+    model: qwen/qwen3.8-27b         # ID from Groq's rate-limits page; confirm with `smoke`
+    family: qwen
+    temperature: 0.0
+    max_output_tokens: 3000
+  feedback_phraser:
+    provider: ollama
+    model: qwen3:8b
+    family: qwen
+    temperature: 0.3
+    max_output_tokens: 1024
+    reasoning_effort: none          # Ollama: disables Qwen3 "thinking" (slow on a 6 GB GPU)
+  perturber:
+    provider: ollama
+    model: qwen3:8b
+    family: qwen
+    temperature: 0.7
+    max_output_tokens: 2048
+    reasoning_effort: none
+
+retry:
+  max_attempts: 4          # total attempts for retryable errors (429, 5xx, timeouts)
+  base_delay_s: 2.0
+  max_delay_s: 60.0

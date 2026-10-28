@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eval-engine"
+version = "0.1.0"
+description = "Rubric-based evaluation and feedback engine for human answers"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.14,<3",
+    "pyyaml>=6.0",
+    "jinja2>=3.1",
+    "python-dotenv>=1.2",
+    "typer>=0.27",
+    "tzdata>=2025.1",
+    "google-genai>=2.33,<3",
+    "mistralai>=3.6,<4",
+    "groq>=1.7,<2",
+    "ollama>=0.6,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.2", "ruff>=0.17", "mypy>=2.4", "types-PyYAML"]
+
+[project.scripts]
+eval-engine = "eval_engine.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/eval_engine"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["eval_engine"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["ollama.*", "groq.*", "mistralai.*", "google.*"]
+ignore_missing_imports = true
