@@ -72,6 +72,7 @@ These came out of reviewing the design text against the pipeline diagram. Each o
 | G5 | Creative is "dominated by originality", but originality is not one of the four dimensions | Originality tests (obvious-answer overlap, cliché checks) count under **expression**. Constraint satisfaction counts under **correctness**. See D3 | 3–4 |
 | G6 | "Only the aggregate is reported" (creative) vs "no single aggregate" (output) | Individual craft-test results are hidden. They aggregate into per-dimension bands like every other task type. Neither contradicts the other once stated | 6 |
 | G7 | Weight values, band cut-offs and confidence threshold are unspecified | Start with defaults in config (§6) and calibrate in Phases 5 and 7 | 4, 5, 7 |
+| G8 | Rubric criteria are positive ("states X"), so an answer containing the right idea *plus* a false claim passes every criterion. Phase 7's "insert a factual error" perturbation would go undetected | The judge also returns `errors` (verbatim wrong statements). Any error counts against correctness. In Phase 2 it maps to SemEval's "contradictory" label, so it is validated against human grades | 2, 4 |
 
 ---
 

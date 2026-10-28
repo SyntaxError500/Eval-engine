@@ -79,7 +79,10 @@ class LLMClient:
         *,
         evaluation_id: str | None = None,
         fresh: bool = False,
+        write_cache: bool = True,
     ) -> LLMResult[T]:
+        """`fresh` skips the cache lookup. `write_cache=False` keeps a call (e.g. a stability
+        rerun) from replacing the cached answer that earlier results were computed from."""
         rcfg = self._config.role(role)
         rendered = self._prompts.render(prompt, variables)
         json_schema = inline_schema(schema.model_json_schema())
@@ -146,14 +149,15 @@ class LLMClient:
             raise
 
         record.latency_ms = int((self._clock() - t0) * 1000)
-        self._cache.put(
-            key,
-            rcfg.provider,
-            rcfg.model,
-            completion.text,
-            record.input_tokens,
-            record.output_tokens,
-        )
+        if write_cache:
+            self._cache.put(
+                key,
+                rcfg.provider,
+                rcfg.model,
+                completion.text,
+                record.input_tokens,
+                record.output_tokens,
+            )
         return LLMResult(value, self._write(record))
 
     def _send(

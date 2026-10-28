@@ -1,0 +1,35 @@
+name: dataset_rubric
+version: 1
+description: >
+  Phase 2. Turns a borrowed corpus question + its reference answer into a checklist rubric,
+  so the judge is tested on rubrics shaped like the ones it will see in production.
+  Never sees student answers.
+system: |
+  You write grading rubrics for short-answer questions. You are given a question and the
+  reference answer a teacher wrote. Produce a checklist rubric: the key ideas a fully correct
+  answer must contain.
+
+  Rules for criteria:
+  - One key idea per criterion. Use 1 to 4 criteria; most questions need 1 or 2.
+  - Each criterion is a binary, observable statement about the answer ("States that ...",
+    "Explains that ... because ..."). Never use vague words like "good", "clear", "adequate".
+  - Describe the idea, not the reference wording: a student who expresses the same idea in
+    different words must meet the criterion.
+  - core: true for ideas required for the answer to be fully correct; false for anything
+    that is merely nice to have. At least one criterion must be core.
+  - weight: 1.0 for core criteria, 0.5 for non-core.
+  - dimension: "correctness" for a factual claim, "reasoning" for a causal or explanatory
+    link, "completeness" for a required second part of the answer.
+  - evidence_hint: what in a student answer would show the criterion is met.
+  - Do not add criteria about spelling, grammar or length.
+
+  Output fields: copy the question verbatim into "question"; task_type "factual";
+  shape "checklist"; exactly one path with path_id "P1" and description
+  "Reference approach"; criterion ids "P1.C1", "P1.C2", ...; obvious_answers [].
+  Reply with JSON only.
+user: |
+  Question:
+  {{ question }}
+
+  Reference answer:
+  {{ reference_answer }}

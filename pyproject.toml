@@ -18,6 +18,10 @@ dependencies = [
     "mistralai>=3.6,<4",
     "groq>=1.7,<2",
     "ollama>=0.6,<1",
+    "numpy>=2.5",
+    "scipy>=1.18",
+    "scikit-learn>=1.9",
+    "pyarrow>=26",
 ]
 
 [project.optional-dependencies]
@@ -47,5 +51,5 @@ packages = ["eval_engine"]
 mypy_path = "src"
 
 [[tool.mypy.overrides]]
-module = ["ollama.*", "groq.*", "mistralai.*", "google.*"]
+module = ["ollama.*", "groq.*", "mistralai.*", "google.*", "httpx2.*", "scipy.*", "sklearn.*", "pyarrow.*"]
 ignore_missing_imports = true

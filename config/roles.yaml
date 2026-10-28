@@ -70,6 +70,21 @@ roles:
     family: qwen
     temperature: 0.0
     max_output_tokens: 3000
+  # Phase 2 judge candidates, compared against `judge` on the human-graded corpora.
+  # gpt-oss-120b is deliberately absent: it is the generator, so it can't judge.
+  judge_candidate_qwen:
+    provider: groq
+    model: qwen/qwen3.8-27b
+    family: qwen
+    temperature: 0.0
+    max_output_tokens: 3000
+  judge_candidate_local:
+    provider: ollama
+    model: qwen3:8b
+    family: qwen
+    temperature: 0.0
+    max_output_tokens: 2048
+    reasoning_effort: none
   feedback_phraser:
     provider: ollama
     model: qwen3:8b
