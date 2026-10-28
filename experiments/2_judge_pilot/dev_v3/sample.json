@@ -1,0 +1,483 @@
+{
+ "config": {
+  "answers_per_dataset": 60,
+  "max_per_question": 5,
+  "seed": 13,
+  "split": "train",
+  "exclude_from": "experiments\\2_judge_pilot",
+  "rubric_prompt": "dataset_rubric_v3"
+ },
+ "rubric_prompt_hash": "1895e29c4e2f616400954675632cff2bc47fa9a5c8423f1f716792356179d5ee",
+ "sources": [
+  [
+   "SciEntsBank",
+   "train"
+  ],
+  [
+   "Beetle",
+   "train"
+  ]
+ ],
+ "items": [
+  {
+   "item_id": "SciEntsBank/train/SE.16b2.164.1",
+   "rubric_id": "ds-328820a7fccd1c4f"
+  },
+  {
+   "item_id": "SciEntsBank/train/SE.16b2.394.1",
+   "rubric_id": "ds-328820a7fccd1c4f"
+  },
+  {
+   "item_id": "SciEntsBank/train/SE.16b2.124.1",
+   "rubric_id": "ds-328820a7fccd1c4f"
+  },
+  {
+   "item_id": "SciEntsBank/train/SE.16b2.132.1",
+   "rubric_id": "ds-328820a7fccd1c4f"
+  },
+  {
+   "item_id": "SciEntsBank/train/SE.16b2.403.1",
+   "rubric_id": "ds-328820a7fccd1c4f"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.4ap.332.1",
+   "rubric_id": "ds-aa36b5ac6be105d8"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.4ap.263.1",
+   "rubric_id": "ds-aa36b5ac6be105d8"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.4ap.495.1",
+   "rubric_id": "ds-aa36b5ac6be105d8"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.4ap.172.1",
+   "rubric_id": "ds-aa36b5ac6be105d8"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.4ap.328.1",
+   "rubric_id": "ds-aa36b5ac6be105d8"
+  },
+  {
+   "item_id": "SciEntsBank/train/II.38.144.1",
+   "rubric_id": "ds-517cba9853c04103"
+  },
+  {
+   "item_id": "SciEntsBank/train/II.38.457.1",
+   "rubric_id": "ds-517cba9853c04103"
+  },
+  {
+   "item_id": "SciEntsBank/train/II.38.360.1",
+   "rubric_id": "ds-517cba9853c04103"
+  },
+  {
+   "item_id": "SciEntsBank/train/II.38.114.1",
+   "rubric_id": "ds-517cba9853c04103"
+  },
+  {
+   "item_id": "SciEntsBank/train/II.38.540.1",
+   "rubric_id": "ds-517cba9853c04103"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.59.422.1",
+   "rubric_id": "ds-6f4802ac140579b4"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.59.492.1",
+   "rubric_id": "ds-6f4802ac140579b4"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.59.641.1",
+   "rubric_id": "ds-6f4802ac140579b4"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.59.402.1",
+   "rubric_id": "ds-6f4802ac140579b4"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.59.497.1",
+   "rubric_id": "ds-6f4802ac140579b4"
+  },
+  {
+   "item_id": "SciEntsBank/train/EM.48b.557.1",
+   "rubric_id": "ds-c023b097ad9cc8a2"
+  },
+  {
+   "item_id": "SciEntsBank/train/EM.48b.112.1",
+   "rubric_id": "ds-c023b097ad9cc8a2"
+  },
+  {
+   "item_id": "SciEntsBank/train/EM.48b.105.1",
+   "rubric_id": "ds-c023b097ad9cc8a2"
+  },
+  {
+   "item_id": "SciEntsBank/train/EM.48b.647.1",
+   "rubric_id": "ds-c023b097ad9cc8a2"
+  },
+  {
+   "item_id": "SciEntsBank/train/EM.48b.121.1",
+   "rubric_id": "ds-c023b097ad9cc8a2"
+  },
+  {
+   "item_id": "SciEntsBank/train/MX.1.500.1",
+   "rubric_id": "ds-f03b4f9b9a4ae257"
+  },
+  {
+   "item_id": "SciEntsBank/train/MX.1.426.1",
+   "rubric_id": "ds-f03b4f9b9a4ae257"
+  },
+  {
+   "item_id": "SciEntsBank/train/MX.1.430.1",
+   "rubric_id": "ds-f03b4f9b9a4ae257"
+  },
+  {
+   "item_id": "SciEntsBank/train/MX.1.567.1",
+   "rubric_id": "ds-f03b4f9b9a4ae257"
+  },
+  {
+   "item_id": "SciEntsBank/train/MX.1.649.1",
+   "rubric_id": "ds-f03b4f9b9a4ae257"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.27b.147.1",
+   "rubric_id": "ds-b7370f46e21c623e"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.27b.105.1",
+   "rubric_id": "ds-b7370f46e21c623e"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.27b.159.1",
+   "rubric_id": "ds-b7370f46e21c623e"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.27b.255.1",
+   "rubric_id": "ds-b7370f46e21c623e"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.27b.176.1",
+   "rubric_id": "ds-b7370f46e21c623e"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.54b3.397.1",
+   "rubric_id": "ds-566a80b984eaed22"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.54b3.599.1",
+   "rubric_id": "ds-566a80b984eaed22"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.54b3.391.1",
+   "rubric_id": "ds-566a80b984eaed22"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.54b3.401.1",
+   "rubric_id": "ds-566a80b984eaed22"
+  },
+  {
+   "item_id": "SciEntsBank/train/ST.54b3.388.1",
+   "rubric_id": "ds-566a80b984eaed22"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.10.226.1",
+   "rubric_id": "ds-0051938ea747a47d"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.10.123.1",
+   "rubric_id": "ds-0051938ea747a47d"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.10.180.1",
+   "rubric_id": "ds-0051938ea747a47d"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.10.293.1",
+   "rubric_id": "ds-0051938ea747a47d"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.10.155.1",
+   "rubric_id": "ds-0051938ea747a47d"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.38a.102.1",
+   "rubric_id": "ds-9f52c4f27ecd58c2"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.38a.324.1",
+   "rubric_id": "ds-9f52c4f27ecd58c2"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.38a.327.1",
+   "rubric_id": "ds-9f52c4f27ecd58c2"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.38a.206.1",
+   "rubric_id": "ds-9f52c4f27ecd58c2"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.38a.144.1",
+   "rubric_id": "ds-9f52c4f27ecd58c2"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.73.207.1",
+   "rubric_id": "ds-f9e86615988429e5"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.73.159.1",
+   "rubric_id": "ds-f9e86615988429e5"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.73.105.1",
+   "rubric_id": "ds-f9e86615988429e5"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.73.328.1",
+   "rubric_id": "ds-f9e86615988429e5"
+  },
+  {
+   "item_id": "SciEntsBank/train/ME.73.142.1",
+   "rubric_id": "ds-f9e86615988429e5"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.2a.526.1",
+   "rubric_id": "ds-1951a93ef07b7536"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.2a.629.1",
+   "rubric_id": "ds-1951a93ef07b7536"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.2a.600.1",
+   "rubric_id": "ds-1951a93ef07b7536"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.2a.195.1",
+   "rubric_id": "ds-1951a93ef07b7536"
+  },
+  {
+   "item_id": "SciEntsBank/train/PS.2a.572.1",
+   "rubric_id": "ds-1951a93ef07b7536"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q15.SBJB27.L2.SA112",
+   "rubric_id": "ds-d913e5998515de07"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q15.SBJ47.L2.SA137",
+   "rubric_id": "ds-d913e5998515de07"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q15.SBJ19.L2.SA153",
+   "rubric_id": "ds-d913e5998515de07"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q15.SBJ8.L2.SA135",
+   "rubric_id": "ds-d913e5998515de07"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q15.SBJB25.L2.SA113",
+   "rubric_id": "ds-d913e5998515de07"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q9.SBJ15.L1.SA78",
+   "rubric_id": "ds-38d709c8643c6067"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q9.SBJ26.L1.SA68",
+   "rubric_id": "ds-38d709c8643c6067"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q9.SBJ10.L1.SA63",
+   "rubric_id": "ds-38d709c8643c6067"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q9.SBJ39.L1.SA65",
+   "rubric_id": "ds-38d709c8643c6067"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q9.SBJ13.L1.SA60",
+   "rubric_id": "ds-38d709c8643c6067"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q10.SBJ22.L1.SA68",
+   "rubric_id": "ds-b23f436503da9d70"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q10.SBJ47.L1.SA73",
+   "rubric_id": "ds-b23f436503da9d70"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q10.SBJ7.L1.SA55",
+   "rubric_id": "ds-b23f436503da9d70"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q10.SBJ13.L1.SA63",
+   "rubric_id": "ds-b23f436503da9d70"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q10.SBJ19.L1.SA72",
+   "rubric_id": "ds-b23f436503da9d70"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q6.SBJ46.L1.SA225",
+   "rubric_id": "ds-2868625329479b65"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q6.SBJ15.L1.SA249",
+   "rubric_id": "ds-2868625329479b65"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q6.SBJ39.L1.SA247",
+   "rubric_id": "ds-2868625329479b65"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q6.SBJ28.L1.SA223",
+   "rubric_id": "ds-2868625329479b65"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q6.SBJ42.L1.SA234",
+   "rubric_id": "ds-2868625329479b65"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q20.SBJ13.L1.SA186",
+   "rubric_id": "ds-8d375cc92b1e6138"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q20.SBJ43.L1.SA171",
+   "rubric_id": "ds-8d375cc92b1e6138"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q20.SBJ8.L1.SA191",
+   "rubric_id": "ds-8d375cc92b1e6138"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q20.SBJB6.L1.SA141",
+   "rubric_id": "ds-8d375cc92b1e6138"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q20.SBJ24.L1.SA181",
+   "rubric_id": "ds-8d375cc92b1e6138"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q21.SBJB21.L1.SA139",
+   "rubric_id": "ds-d0953dd99ffb9754"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q21.SBJB6.L1.SA142",
+   "rubric_id": "ds-d0953dd99ffb9754"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q21.SBJ28.L1.SA177",
+   "rubric_id": "ds-d0953dd99ffb9754"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q21.SBJB24.L1.SA147",
+   "rubric_id": "ds-d0953dd99ffb9754"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q21.SBJB34.L1.SA139",
+   "rubric_id": "ds-d0953dd99ffb9754"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q19.SBJB10.L1.SA137",
+   "rubric_id": "ds-d446a2c255b4e5e1"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q19.SBJ35.L1.SA174",
+   "rubric_id": "ds-d446a2c255b4e5e1"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q19.SBJ46.L1.SA177",
+   "rubric_id": "ds-d446a2c255b4e5e1"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q19.SBJB18.L1.SA149",
+   "rubric_id": "ds-d446a2c255b4e5e1"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q19.SBJB7.L1.SA137",
+   "rubric_id": "ds-d446a2c255b4e5e1"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q21.SBJ19.L2.SA83",
+   "rubric_id": "ds-b43a230a7e5ec294"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q21.SBJ23.L2.SA68",
+   "rubric_id": "ds-b43a230a7e5ec294"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q21.SBJB3.L2.SA60",
+   "rubric_id": "ds-b43a230a7e5ec294"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q21.SBJ22.L2.SA67",
+   "rubric_id": "ds-b43a230a7e5ec294"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q21.SBJB22.L2.SA56",
+   "rubric_id": "ds-b43a230a7e5ec294"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q13.SBJ14.L1.SA231",
+   "rubric_id": "ds-40929723723fc92b"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q13.SBJ8.L1.SA250",
+   "rubric_id": "ds-40929723723fc92b"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q13.SBJ26.L1.SA255",
+   "rubric_id": "ds-40929723723fc92b"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q13.SBJ45.L1.SA213",
+   "rubric_id": "ds-40929723723fc92b"
+  },
+  {
+   "item_id": "Beetle/train/FF.Q13.SBJB36.L1.SA177",
+   "rubric_id": "ds-40929723723fc92b"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q20.SBJB3.L2.SA59",
+   "rubric_id": "ds-e29eeeb7a1ca2de9"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q20.SBJB7.L2.SA56",
+   "rubric_id": "ds-e29eeeb7a1ca2de9"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q20.SBJ33.L2.SA70",
+   "rubric_id": "ds-e29eeeb7a1ca2de9"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q20.SBJB32.L2.SA55",
+   "rubric_id": "ds-e29eeeb7a1ca2de9"
+  },
+  {
+   "item_id": "Beetle/train/PC.Q20.SBJB24.L2.SA59",
+   "rubric_id": "ds-e29eeeb7a1ca2de9"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q12.SBJ46.L1.SA86",
+   "rubric_id": "ds-9f306fd4673f8673"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q12.SBJB25.L1.SA65",
+   "rubric_id": "ds-9f306fd4673f8673"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q12.SBJ27.L1.SA86",
+   "rubric_id": "ds-9f306fd4673f8673"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q12.SBJ15.L1.SA107",
+   "rubric_id": "ds-9f306fd4673f8673"
+  },
+  {
+   "item_id": "Beetle/train/SC.Q12.SBJ13.L1.SA90",
+   "rubric_id": "ds-9f306fd4673f8673"
+  }
+ ]
+}

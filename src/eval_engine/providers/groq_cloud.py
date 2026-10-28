@@ -7,6 +7,7 @@ from eval_engine.providers.base import (
     Completion,
     CompletionRequest,
     ProviderError,
+    QuotaExhausted,
     is_retryable_status,
 )
 
@@ -48,6 +49,10 @@ class GroqProvider:
                 **kwargs,
             )
         except groq.RateLimitError as e:
+            if _is_daily_limit(e.message):
+                # Groq's own daily count can run ahead of ours (it counted 199K tokens when we
+                # had logged 167K), so its "per day" 429 is authoritative: stop, don't retry.
+                raise QuotaExhausted(f"groq daily limit: {e.message[:300]}") from e
             raise ProviderError(
                 f"groq 429: {e.message}",
                 retryable=True,
@@ -77,6 +82,11 @@ class GroqProvider:
             input_tokens=usage.prompt_tokens if usage else None,
             output_tokens=usage.completion_tokens if usage else None,
         )
+
+
+def _is_daily_limit(message: str) -> bool:
+    m = message.lower()
+    return "tokens per day" in m or "requests per day" in m or "(tpd)" in m or "(rpd)" in m
 
 
 def _failed_generation(body: object) -> str | None:

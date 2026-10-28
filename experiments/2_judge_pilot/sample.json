@@ -1,0 +1,1228 @@
+{
+ "config": {
+  "answers_per_dataset": 150,
+  "max_per_question": 5,
+  "seed": 13
+ },
+ "rubric_prompt_hash": "2bd9721a9fc39224dd2fe938c04fc7844d6eb3b6262cf6ce2bb4c6d3ae0f3043",
+ "sources": [
+  [
+   "SciEntsBank",
+   "test_ua"
+  ],
+  [
+   "Beetle",
+   "test_ua"
+  ]
+ ],
+ "items": [
+  {
+   "item_id": "SciEntsBank/test_ua/MS.43b.532.1",
+   "rubric_id": "ds-05318f6979f607fa"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MS.43b.417.1",
+   "rubric_id": "ds-05318f6979f607fa"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MS.43b.174.1",
+   "rubric_id": "ds-05318f6979f607fa"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MS.43b.143.1",
+   "rubric_id": "ds-05318f6979f607fa"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.15c.429.1",
+   "rubric_id": "ds-2a62c23790b61935"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.15c.632.1",
+   "rubric_id": "ds-2a62c23790b61935"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.15c.384.1",
+   "rubric_id": "ds-2a62c23790b61935"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.15c.628.1",
+   "rubric_id": "ds-2a62c23790b61935"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.53.575.1",
+   "rubric_id": "ds-30ff2cc147bba4dd"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.53.528.1",
+   "rubric_id": "ds-30ff2cc147bba4dd"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.53.473.1",
+   "rubric_id": "ds-30ff2cc147bba4dd"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.53.425.1",
+   "rubric_id": "ds-30ff2cc147bba4dd"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.46.605.1",
+   "rubric_id": "ds-f4a40360336fc61b"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.46.499.1",
+   "rubric_id": "ds-f4a40360336fc61b"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.46.603.1",
+   "rubric_id": "ds-f4a40360336fc61b"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.46.501.1",
+   "rubric_id": "ds-f4a40360336fc61b"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.5b.318.1",
+   "rubric_id": "ds-2a17ebbe808b3426"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.5b.141.1",
+   "rubric_id": "ds-2a17ebbe808b3426"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.5b.311.1",
+   "rubric_id": "ds-2a17ebbe808b3426"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.5b.225.1",
+   "rubric_id": "ds-2a17ebbe808b3426"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/PS.15b.393.1",
+   "rubric_id": "ds-a86e1b630dbafe9e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/PS.15b.230.1",
+   "rubric_id": "ds-a86e1b630dbafe9e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/PS.15b.644.1",
+   "rubric_id": "ds-a86e1b630dbafe9e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/PS.15b.602.1",
+   "rubric_id": "ds-a86e1b630dbafe9e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.33b.732.1",
+   "rubric_id": "ds-d19232e0203ee894"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.33b.855.1",
+   "rubric_id": "ds-d19232e0203ee894"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.33b.278.1",
+   "rubric_id": "ds-d19232e0203ee894"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.33b.670.1",
+   "rubric_id": "ds-d19232e0203ee894"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17d.313.1",
+   "rubric_id": "ds-38cde9f2cf368dce"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17d.254.1",
+   "rubric_id": "ds-38cde9f2cf368dce"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17d.111.1",
+   "rubric_id": "ds-38cde9f2cf368dce"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17d.253.1",
+   "rubric_id": "ds-38cde9f2cf368dce"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17a.324.1",
+   "rubric_id": "ds-a9cfa9e1dcfbfffb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17a.323.1",
+   "rubric_id": "ds-a9cfa9e1dcfbfffb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17a.311.1",
+   "rubric_id": "ds-a9cfa9e1dcfbfffb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.17a.155.1",
+   "rubric_id": "ds-a9cfa9e1dcfbfffb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.12d.394.1",
+   "rubric_id": "ds-954dbc1580ad7cdb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.12d.440.1",
+   "rubric_id": "ds-954dbc1580ad7cdb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.12d.636.1",
+   "rubric_id": "ds-954dbc1580ad7cdb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.12d.397.1",
+   "rubric_id": "ds-954dbc1580ad7cdb"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.22c.431.1",
+   "rubric_id": "ds-035815c170992d7d"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.22c.477.1",
+   "rubric_id": "ds-035815c170992d7d"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.22c.452.1",
+   "rubric_id": "ds-035815c170992d7d"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.22c.639.1",
+   "rubric_id": "ds-035815c170992d7d"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.24b.405.1",
+   "rubric_id": "ds-0bd806c32ba06266"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.24b.430.1",
+   "rubric_id": "ds-0bd806c32ba06266"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.24b.529.1",
+   "rubric_id": "ds-0bd806c32ba06266"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.24b.527.1",
+   "rubric_id": "ds-0bd806c32ba06266"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.24c.466.1",
+   "rubric_id": "ds-c5b998646ba697db"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.24c.386.1",
+   "rubric_id": "ds-c5b998646ba697db"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.24c.339.1",
+   "rubric_id": "ds-c5b998646ba697db"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.24c.293.1",
+   "rubric_id": "ds-c5b998646ba697db"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.5b.636.1",
+   "rubric_id": "ds-f8f0eeec3e724262"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.5b.481.1",
+   "rubric_id": "ds-f8f0eeec3e724262"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.5b.483.1",
+   "rubric_id": "ds-f8f0eeec3e724262"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.5b.423.1",
+   "rubric_id": "ds-f8f0eeec3e724262"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.21b.645.1",
+   "rubric_id": "ds-2e73bf28563a2f45"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.21b.252.1",
+   "rubric_id": "ds-2e73bf28563a2f45"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.21b.401.1",
+   "rubric_id": "ds-2e73bf28563a2f45"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.21b.357.1",
+   "rubric_id": "ds-2e73bf28563a2f45"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.18a.912.1",
+   "rubric_id": "ds-e1f4e9af76660c7a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.18a.696.1",
+   "rubric_id": "ds-e1f4e9af76660c7a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.18a.754.1",
+   "rubric_id": "ds-e1f4e9af76660c7a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.18a.115.1",
+   "rubric_id": "ds-e1f4e9af76660c7a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.40a.249.1",
+   "rubric_id": "ds-bcaa629bea7d9650"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.40a.120.1",
+   "rubric_id": "ds-bcaa629bea7d9650"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.40a.417.1",
+   "rubric_id": "ds-bcaa629bea7d9650"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.40a.138.1",
+   "rubric_id": "ds-bcaa629bea7d9650"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.27b.297.1",
+   "rubric_id": "ds-ec6930c085537512"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.27b.117.1",
+   "rubric_id": "ds-ec6930c085537512"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.27b.243.1",
+   "rubric_id": "ds-ec6930c085537512"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.27b.267.1",
+   "rubric_id": "ds-ec6930c085537512"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.11a.500.1",
+   "rubric_id": "ds-ddec20bde0ed7490"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.11a.641.1",
+   "rubric_id": "ds-ddec20bde0ed7490"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.11a.392.1",
+   "rubric_id": "ds-ddec20bde0ed7490"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.11a.464.1",
+   "rubric_id": "ds-ddec20bde0ed7490"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.42a.500.1",
+   "rubric_id": "ds-78ab188b7491d8b1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.42a.601.1",
+   "rubric_id": "ds-78ab188b7491d8b1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.42a.416.1",
+   "rubric_id": "ds-78ab188b7491d8b1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.42a.460.1",
+   "rubric_id": "ds-78ab188b7491d8b1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.31b.246.1",
+   "rubric_id": "ds-bc9b5da2f6d9a9ff"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.31b.507.1",
+   "rubric_id": "ds-bc9b5da2f6d9a9ff"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.31b.530.1",
+   "rubric_id": "ds-bc9b5da2f6d9a9ff"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.31b.313.1",
+   "rubric_id": "ds-bc9b5da2f6d9a9ff"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.7b.147.1",
+   "rubric_id": "ds-f9db30f8d76d62f3"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.7b.101.1",
+   "rubric_id": "ds-f9db30f8d76d62f3"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.7b.191.1",
+   "rubric_id": "ds-f9db30f8d76d62f3"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.7b.180.1",
+   "rubric_id": "ds-f9db30f8d76d62f3"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.66a.329.1",
+   "rubric_id": "ds-7409629e3eb59056"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.66a.146.1",
+   "rubric_id": "ds-7409629e3eb59056"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.66a.313.1",
+   "rubric_id": "ds-7409629e3eb59056"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.66a.147.1",
+   "rubric_id": "ds-7409629e3eb59056"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.26.395.1",
+   "rubric_id": "ds-b8f7b6737ae21185"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.26.579.1",
+   "rubric_id": "ds-b8f7b6737ae21185"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.26.434.1",
+   "rubric_id": "ds-b8f7b6737ae21185"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/II.26.577.1",
+   "rubric_id": "ds-b8f7b6737ae21185"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.16b.645.1",
+   "rubric_id": "ds-82eef81ed781b4f4"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.16b.439.1",
+   "rubric_id": "ds-82eef81ed781b4f4"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.16b.593.1",
+   "rubric_id": "ds-82eef81ed781b4f4"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.16b.456.1",
+   "rubric_id": "ds-82eef81ed781b4f4"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.26a2.493.1",
+   "rubric_id": "ds-1d5d4216d8bd24f2"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.26a2.481.1",
+   "rubric_id": "ds-1d5d4216d8bd24f2"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.26a2.507.1",
+   "rubric_id": "ds-1d5d4216d8bd24f2"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.26a2.387.1",
+   "rubric_id": "ds-1d5d4216d8bd24f2"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.17a.143.1",
+   "rubric_id": "ds-be58b7ec6bb71465"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.17a.210.1",
+   "rubric_id": "ds-be58b7ec6bb71465"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.17a.313.1",
+   "rubric_id": "ds-be58b7ec6bb71465"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.17a.495.1",
+   "rubric_id": "ds-be58b7ec6bb71465"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.30.146.1",
+   "rubric_id": "ds-a4c3ef76fc53dcd7"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.30.227.1",
+   "rubric_id": "ds-a4c3ef76fc53dcd7"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.30.247.1",
+   "rubric_id": "ds-a4c3ef76fc53dcd7"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ME.30.291.1",
+   "rubric_id": "ds-a4c3ef76fc53dcd7"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.47b.538.1",
+   "rubric_id": "ds-456d52ae948b5fd1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.47b.532.1",
+   "rubric_id": "ds-456d52ae948b5fd1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.47b.490.1",
+   "rubric_id": "ds-456d52ae948b5fd1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.47b.132.1",
+   "rubric_id": "ds-456d52ae948b5fd1"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.19b.514.1",
+   "rubric_id": "ds-c3d8da0d5de1b094"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.19b.216.1",
+   "rubric_id": "ds-c3d8da0d5de1b094"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.19b.424.1",
+   "rubric_id": "ds-c3d8da0d5de1b094"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/FN.19b.532.1",
+   "rubric_id": "ds-c3d8da0d5de1b094"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.47b.528.1",
+   "rubric_id": "ds-1d1f191e06662d5f"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.47b.575.1",
+   "rubric_id": "ds-1d1f191e06662d5f"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.47b.493.1",
+   "rubric_id": "ds-1d1f191e06662d5f"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.47b.456.1",
+   "rubric_id": "ds-1d1f191e06662d5f"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.13a.493.1",
+   "rubric_id": "ds-eeab0ffd6f9c8b0e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.13a.673.1",
+   "rubric_id": "ds-eeab0ffd6f9c8b0e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.13a.804.1",
+   "rubric_id": "ds-eeab0ffd6f9c8b0e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/LF.13a.494.1",
+   "rubric_id": "ds-eeab0ffd6f9c8b0e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ST.58.417.1",
+   "rubric_id": "ds-fd34819527bfa55a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ST.58.637.1",
+   "rubric_id": "ds-fd34819527bfa55a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ST.58.533.1",
+   "rubric_id": "ds-fd34819527bfa55a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/ST.58.595.1",
+   "rubric_id": "ds-fd34819527bfa55a"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.19.396.1",
+   "rubric_id": "ds-881e554c29c0b999"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.19.540.1",
+   "rubric_id": "ds-881e554c29c0b999"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.19.381.1",
+   "rubric_id": "ds-881e554c29c0b999"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MX.19.504.1",
+   "rubric_id": "ds-881e554c29c0b999"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.29.429.1",
+   "rubric_id": "ds-c0736707286d8c68"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.29.462.1",
+   "rubric_id": "ds-c0736707286d8c68"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.29.511.1",
+   "rubric_id": "ds-c0736707286d8c68"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/VB.29.432.1",
+   "rubric_id": "ds-c0736707286d8c68"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.3c.154.1",
+   "rubric_id": "ds-a8be71e243e3664e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.3c.314.1",
+   "rubric_id": "ds-a8be71e243e3664e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.3c.134.1",
+   "rubric_id": "ds-a8be71e243e3664e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/SE.3c.501.1",
+   "rubric_id": "ds-a8be71e243e3664e"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MS.39.600.1",
+   "rubric_id": "ds-720df86e480fa0c8"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MS.39.598.1",
+   "rubric_id": "ds-720df86e480fa0c8"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MS.39.115.1",
+   "rubric_id": "ds-720df86e480fa0c8"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/MS.39.569.1",
+   "rubric_id": "ds-720df86e480fa0c8"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.27b.601.1",
+   "rubric_id": "ds-f86b9c115625e2ac"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.27b.638.1",
+   "rubric_id": "ds-f86b9c115625e2ac"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.27b.437.1",
+   "rubric_id": "ds-f86b9c115625e2ac"
+  },
+  {
+   "item_id": "SciEntsBank/test_ua/EM.27b.420.1",
+   "rubric_id": "ds-f86b9c115625e2ac"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q12.SBJB1.L1.SA153",
+   "rubric_id": "ds-ec1f751fb4f2a539"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q12.SBJ30.L1.SA178",
+   "rubric_id": "ds-ec1f751fb4f2a539"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q12.SBJ14.L1.SA195",
+   "rubric_id": "ds-ec1f751fb4f2a539"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q12.SBJB19.L1.SA151",
+   "rubric_id": "ds-ec1f751fb4f2a539"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q12.SBJ24.L1.SA204",
+   "rubric_id": "ds-ec1f751fb4f2a539"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q8.SBJB34.L1.SA41",
+   "rubric_id": "ds-dd5e452a6eb7f5e5"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q8.SBJ9.L1.SA52",
+   "rubric_id": "ds-dd5e452a6eb7f5e5"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q8.SBJ24.L1.SA61",
+   "rubric_id": "ds-dd5e452a6eb7f5e5"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q8.SBJ39.L1.SA58",
+   "rubric_id": "ds-dd5e452a6eb7f5e5"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q8.SBJ37.L1.SA46",
+   "rubric_id": "ds-dd5e452a6eb7f5e5"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q5.SBJB29.L1.SA177",
+   "rubric_id": "ds-1fe8046d7bacd121"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q5.SBJ29.L1.SA217",
+   "rubric_id": "ds-1fe8046d7bacd121"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q5.SBJB31.L1.SA173",
+   "rubric_id": "ds-1fe8046d7bacd121"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q5.SBJ10.L1.SA228",
+   "rubric_id": "ds-1fe8046d7bacd121"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q5.SBJ30.L1.SA210",
+   "rubric_id": "ds-1fe8046d7bacd121"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q4.SBJ39.L1.SA233",
+   "rubric_id": "ds-ed8af64875b2da5a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q4.SBJB28.L1.SA167",
+   "rubric_id": "ds-ed8af64875b2da5a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q4.SBJB18.L1.SA174",
+   "rubric_id": "ds-ed8af64875b2da5a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q4.SBJ24.L1.SA229",
+   "rubric_id": "ds-ed8af64875b2da5a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q22.SBJB4.L1.SA141",
+   "rubric_id": "ds-ed8af64875b2da5a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q7.SBJB20.L1.SA188",
+   "rubric_id": "ds-347ead0063fdeb9a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q7.SBJB34.L1.SA175",
+   "rubric_id": "ds-347ead0063fdeb9a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q7.SBJ22.L1.SA234",
+   "rubric_id": "ds-347ead0063fdeb9a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q7.SBJ39.L1.SA249",
+   "rubric_id": "ds-347ead0063fdeb9a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q7.SBJB15.L1.SA177",
+   "rubric_id": "ds-347ead0063fdeb9a"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q17.SBJB35.L1.SA136",
+   "rubric_id": "ds-4d5d1651c5459e0e"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q1.SBJ48.L1.SA188",
+   "rubric_id": "ds-4d5d1651c5459e0e"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q17.SBJ45.L1.SA160",
+   "rubric_id": "ds-4d5d1651c5459e0e"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q1.SBJ27.L1.SA205",
+   "rubric_id": "ds-4d5d1651c5459e0e"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q1.SBJB3.L1.SA182",
+   "rubric_id": "ds-4d5d1651c5459e0e"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q2.SBJ13.L1.SA223",
+   "rubric_id": "ds-ebfe0e06b70960aa"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q2.SBJ3.L1.SA194",
+   "rubric_id": "ds-ebfe0e06b70960aa"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q2.SBJB16.L1.SA162",
+   "rubric_id": "ds-ebfe0e06b70960aa"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q2.SBJ18.L1.SA183",
+   "rubric_id": "ds-ebfe0e06b70960aa"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q2.SBJB22.L1.SA171",
+   "rubric_id": "ds-ebfe0e06b70960aa"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q7.SBJB41.L2.SA117",
+   "rubric_id": "ds-2c6d3d49e02c09e6"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q7.SBJ39.L2.SA153",
+   "rubric_id": "ds-2c6d3d49e02c09e6"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q7.SBJ38.L2.SA130",
+   "rubric_id": "ds-2c6d3d49e02c09e6"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q7.SBJ40.L2.SA143",
+   "rubric_id": "ds-2c6d3d49e02c09e6"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q7.SBJ34.L2.SA144",
+   "rubric_id": "ds-2c6d3d49e02c09e6"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q2.SBJ19.L2.SA110",
+   "rubric_id": "ds-c8406322fe59da3b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q2.SBJB5.L2.SA78",
+   "rubric_id": "ds-c8406322fe59da3b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q2.SBJB22.L2.SA78",
+   "rubric_id": "ds-c8406322fe59da3b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q2.SBJB38.L2.SA78",
+   "rubric_id": "ds-c8406322fe59da3b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q2.SBJ23.L2.SA91",
+   "rubric_id": "ds-c8406322fe59da3b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q10.SBJB21.L2.SA94",
+   "rubric_id": "ds-63a291e563a6f67c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q10.SBJB41.L2.SA95",
+   "rubric_id": "ds-63a291e563a6f67c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q10.SBJB18.L2.SA94",
+   "rubric_id": "ds-63a291e563a6f67c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q10.SBJ38.L2.SA106",
+   "rubric_id": "ds-63a291e563a6f67c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q10.SBJB16.L2.SA95",
+   "rubric_id": "ds-63a291e563a6f67c"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q4.SBJB24.L1.SA77",
+   "rubric_id": "ds-cb744351c9d5f15f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q4.SBJB20.L1.SA82",
+   "rubric_id": "ds-cb744351c9d5f15f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q4.SBJB35.L1.SA71",
+   "rubric_id": "ds-cb744351c9d5f15f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q4.SBJB41.L1.SA72",
+   "rubric_id": "ds-cb744351c9d5f15f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q4.SBJ40.L1.SA98",
+   "rubric_id": "ds-cb744351c9d5f15f"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q3.SBJ15.L2.SA110",
+   "rubric_id": "ds-6c1a64615596627c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q3.SBJ38.L2.SA89",
+   "rubric_id": "ds-6c1a64615596627c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q3.SBJ36.L2.SA90",
+   "rubric_id": "ds-6c1a64615596627c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q3.SBJB31.L2.SA80",
+   "rubric_id": "ds-6c1a64615596627c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q3.SBJB29.L2.SA81",
+   "rubric_id": "ds-6c1a64615596627c"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q1.SBJB6.L2.SA76",
+   "rubric_id": "ds-48b97413f7d32f6d"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q1.SBJB30.L2.SA76",
+   "rubric_id": "ds-48b97413f7d32f6d"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q1.SBJB37.L2.SA77",
+   "rubric_id": "ds-48b97413f7d32f6d"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q1.SBJ13.L2.SA96",
+   "rubric_id": "ds-48b97413f7d32f6d"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q1.SBJB10.L2.SA76",
+   "rubric_id": "ds-48b97413f7d32f6d"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q13.SBJ15.L2.SA145",
+   "rubric_id": "ds-484496498762b08f"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q13.SBJ28.L2.SA120",
+   "rubric_id": "ds-484496498762b08f"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q13.SBJB2.L2.SA106",
+   "rubric_id": "ds-484496498762b08f"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q13.SBJB24.L2.SA107",
+   "rubric_id": "ds-484496498762b08f"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q13.SBJ27.L2.SA128",
+   "rubric_id": "ds-484496498762b08f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q3.SBJB2.L1.SA33",
+   "rubric_id": "ds-4cd29f314fbc888d"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q3.SBJ33.L1.SA44",
+   "rubric_id": "ds-4cd29f314fbc888d"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q3.SBJ7.L1.SA39",
+   "rubric_id": "ds-4cd29f314fbc888d"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q3.SBJB35.L1.SA32",
+   "rubric_id": "ds-4cd29f314fbc888d"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q3.SBJ29.L1.SA48",
+   "rubric_id": "ds-4cd29f314fbc888d"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q11.SBJ39.L1.SA53",
+   "rubric_id": "ds-7fb8517eb4d5cef3"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q11.SBJB21.L1.SA37",
+   "rubric_id": "ds-7fb8517eb4d5cef3"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q11.SBJ8.L1.SA59",
+   "rubric_id": "ds-7fb8517eb4d5cef3"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q11.SBJ33.L1.SA49",
+   "rubric_id": "ds-7fb8517eb4d5cef3"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q11.SBJ35.L1.SA49",
+   "rubric_id": "ds-7fb8517eb4d5cef3"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q14.SBJ12.L1.SA166",
+   "rubric_id": "ds-e3fa5502d699b75b"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q14.SBJB15.L1.SA146",
+   "rubric_id": "ds-e3fa5502d699b75b"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q14.SBJ33.L1.SA177",
+   "rubric_id": "ds-e3fa5502d699b75b"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q14.SBJB11.L1.SA147",
+   "rubric_id": "ds-e3fa5502d699b75b"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q14.SBJ29.L1.SA185",
+   "rubric_id": "ds-e3fa5502d699b75b"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q15.SBJB24.L1.SA153",
+   "rubric_id": "ds-8b4a716a5e1518fd"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q15.SBJ7.L1.SA169",
+   "rubric_id": "ds-8b4a716a5e1518fd"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q15.SBJ13.L1.SA203",
+   "rubric_id": "ds-8b4a716a5e1518fd"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q15.SBJ39.L1.SA206",
+   "rubric_id": "ds-8b4a716a5e1518fd"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q15.SBJ48.L1.SA172",
+   "rubric_id": "ds-8b4a716a5e1518fd"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q18.SBJ45.L2.SA49",
+   "rubric_id": "ds-cd2927f5f06a480a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q18.SBJ38.L2.SA46",
+   "rubric_id": "ds-cd2927f5f06a480a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q18.SBJ34.L2.SA55",
+   "rubric_id": "ds-cd2927f5f06a480a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q18.SBJ24.L2.SA50",
+   "rubric_id": "ds-cd2927f5f06a480a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q18.SBJB17.L2.SA44",
+   "rubric_id": "ds-cd2927f5f06a480a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q19.SBJ12.L2.SA62",
+   "rubric_id": "ds-61edde11a82298cd"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q19.SBJ14.L2.SA61",
+   "rubric_id": "ds-61edde11a82298cd"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q19.SBJ15.L2.SA68",
+   "rubric_id": "ds-61edde11a82298cd"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q19.SBJ37.L2.SA59",
+   "rubric_id": "ds-61edde11a82298cd"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q19.SBJB34.L2.SA55",
+   "rubric_id": "ds-61edde11a82298cd"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q4.SBJB19.L2.SA87",
+   "rubric_id": "ds-07b8dd03a7bbdf24"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q4.SBJ15.L2.SA119",
+   "rubric_id": "ds-07b8dd03a7bbdf24"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q4.SBJB40.L2.SA87",
+   "rubric_id": "ds-07b8dd03a7bbdf24"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q4.SBJ31.L2.SA109",
+   "rubric_id": "ds-07b8dd03a7bbdf24"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q4.SBJ29.L2.SA107",
+   "rubric_id": "ds-07b8dd03a7bbdf24"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q12.SBJ37.L2.SA111",
+   "rubric_id": "ds-2ac84069e7857c71"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q12.SBJB1.L2.SA103",
+   "rubric_id": "ds-2ac84069e7857c71"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q12.SBJ19.L2.SA139",
+   "rubric_id": "ds-2ac84069e7857c71"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q12.SBJB2.L2.SA105",
+   "rubric_id": "ds-2ac84069e7857c71"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q12.SBJ26.L2.SA129",
+   "rubric_id": "ds-2ac84069e7857c71"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q10.SBJB12.L1.SA123",
+   "rubric_id": "ds-a5206d9d3cb8bb33"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q10.SBJ3.L1.SA144",
+   "rubric_id": "ds-a5206d9d3cb8bb33"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q10.SBJ26.L1.SA169",
+   "rubric_id": "ds-a5206d9d3cb8bb33"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q10.SBJB40.L1.SA119",
+   "rubric_id": "ds-a5206d9d3cb8bb33"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q10.SBJB35.L1.SA119",
+   "rubric_id": "ds-a5206d9d3cb8bb33"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q11.SBJ9.L1.SA134",
+   "rubric_id": "ds-0fb06fb83e7423e0"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q11.SBJ8.L1.SA162",
+   "rubric_id": "ds-0fb06fb83e7423e0"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q11.SBJ24.L1.SA148",
+   "rubric_id": "ds-0fb06fb83e7423e0"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q11.SBJ46.L1.SA151",
+   "rubric_id": "ds-0fb06fb83e7423e0"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q11.SBJ42.L1.SA149",
+   "rubric_id": "ds-0fb06fb83e7423e0"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q5.SBJ10.L1.SA112",
+   "rubric_id": "ds-5b752e555292f85f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q5.SBJB24.L1.SA85",
+   "rubric_id": "ds-5b752e555292f85f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q5.SBJB37.L1.SA79",
+   "rubric_id": "ds-5b752e555292f85f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q5.SBJ46.L1.SA105",
+   "rubric_id": "ds-5b752e555292f85f"
+  },
+  {
+   "item_id": "Beetle/test_ua/SC.Q5.SBJ3.L1.SA98",
+   "rubric_id": "ds-5b752e555292f85f"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q8.SBJ36.L1.SA243",
+   "rubric_id": "ds-2c9ce1416ebf8406"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q8.SBJ10.L1.SA247",
+   "rubric_id": "ds-2c9ce1416ebf8406"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q8.SBJB9.L1.SA196",
+   "rubric_id": "ds-2c9ce1416ebf8406"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q8.SBJB11.L1.SA186",
+   "rubric_id": "ds-2c9ce1416ebf8406"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q8.SBJ26.L1.SA260",
+   "rubric_id": "ds-2c9ce1416ebf8406"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q14.SBJ23.L2.SA80",
+   "rubric_id": "ds-41bb8e6ee5420d8a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q14.SBJ38.L2.SA74",
+   "rubric_id": "ds-41bb8e6ee5420d8a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q14.SBJ39.L2.SA90",
+   "rubric_id": "ds-41bb8e6ee5420d8a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q14.SBJ40.L2.SA85",
+   "rubric_id": "ds-41bb8e6ee5420d8a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q14.SBJ8.L2.SA79",
+   "rubric_id": "ds-41bb8e6ee5420d8a"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q16.SBJB31.L2.SA42",
+   "rubric_id": "ds-def6a431d99dd087"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q16.SBJB42.L2.SA42",
+   "rubric_id": "ds-def6a431d99dd087"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q16.SBJ35.L2.SA49",
+   "rubric_id": "ds-def6a431d99dd087"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q16.SBJ8.L2.SA42",
+   "rubric_id": "ds-def6a431d99dd087"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q16.SBJ30.L2.SA50",
+   "rubric_id": "ds-def6a431d99dd087"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q17.SBJ24.L2.SA47",
+   "rubric_id": "ds-bfa3cd4e7b625c0b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q17.SBJB16.L2.SA43",
+   "rubric_id": "ds-bfa3cd4e7b625c0b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q17.SBJB18.L2.SA43",
+   "rubric_id": "ds-bfa3cd4e7b625c0b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q17.SBJ46.L2.SA54",
+   "rubric_id": "ds-bfa3cd4e7b625c0b"
+  },
+  {
+   "item_id": "Beetle/test_ua/PC.Q17.SBJ29.L2.SA49",
+   "rubric_id": "ds-bfa3cd4e7b625c0b"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q23.SBJ13.L1.SA251",
+   "rubric_id": "ds-9e769d13b8c3c72f"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q23.SBJ12.L1.SA207",
+   "rubric_id": "ds-9e769d13b8c3c72f"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q23.SBJ24.L1.SA258",
+   "rubric_id": "ds-9e769d13b8c3c72f"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q23.SBJ15.L1.SA257",
+   "rubric_id": "ds-9e769d13b8c3c72f"
+  },
+  {
+   "item_id": "Beetle/test_ua/FF.Q23.SBJ43.L1.SA224",
+   "rubric_id": "ds-9e769d13b8c3c72f"
+  }
+ ]
+}

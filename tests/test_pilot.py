@@ -291,3 +291,10 @@ def test_dev_set_excludes_test_questions(
     assert summary["items"] > 0 and dev_q and not (dev_q & test_q)
     rows, stop = pilot.run(pilot_client, store, "judge", data_dir=corpus, out_dir=dev_dir)
     assert stop is None and all(r.item_id.split("/")[1] == "train" for r in rows)
+
+
+def test_groq_daily_limit_message_detected() -> None:
+    from eval_engine.providers.groq_cloud import _is_daily_limit
+
+    assert _is_daily_limit("Rate limit reached ... on tokens per day (TPD): Limit 200000")
+    assert not _is_daily_limit("on output tokens per minute (OTPM): Limit 1000")
