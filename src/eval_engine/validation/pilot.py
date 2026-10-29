@@ -8,7 +8,9 @@ report  -> metrics with bootstrap CIs for every judge that has results, plus the
 
 import json
 import math
+import threading
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
@@ -241,52 +243,72 @@ def run(
     store: RubricStore,
     role: str,
     *,
+    workers: int = 1,
     data_dir: Path = DATASET_DIR,
     out_dir: Path = PILOT_DIR,
 ) -> tuple[list[ResultRow], str | None]:
-    """Grades all sampled items. Returns (rows, stop_reason); stop_reason is set when a quota
-    or provider failure ends the run early. Rerunning resumes from the cache."""
+    """Grades all sampled items, `workers` at a time (the rate limiter still applies).
+    Returns (rows, stop_reason); stop_reason is set when a quota or provider failure ends
+    the run early. Rows keep manifest order. Rerunning resumes from the cache."""
     items = _load_items(data_dir, _manifest_split(out_dir))
-    rows: list[ResultRow] = []
-    stop: str | None = None
-    consecutive_failures = 0
-    for entry in _manifest(out_dir):
+    entries = _manifest(out_dir)
+    rows: list[ResultRow | None] = [None] * len(entries)
+    jobs: list[tuple[int, GradedAnswer, Rubric]] = []
+    for i, entry in enumerate(entries):
         item = items[entry["item_id"]]
         try:
-            rubric = store.latest(entry["rubric_id"])
+            jobs.append((i, item, store.latest(entry["rubric_id"])))
         except KeyError:
             # Rubric not built yet (generator quota). Unscored now; a later run picks it up.
-            rows.append(
-                ResultRow(item.item_id, item.dataset, item.label, "", error="rubric_missing")
-            )
-            continue
+            rows[i] = ResultRow(item.item_id, item.dataset, item.label, "", error="rubric_missing")
+
+    stop = threading.Event()
+    state_lock = threading.Lock()
+    stop_reason: list[str] = []
+    consecutive_failures = 0
+
+    def halt(reason: str) -> None:
+        if not stop.is_set():
+            stop_reason.append(reason)
+            stop.set()
+
+    def work(job: tuple[int, GradedAnswer, Rubric]) -> None:
+        nonlocal consecutive_failures
+        i, item, rubric = job
+        if stop.is_set():
+            return
         try:
             row, _ = _grade(client, role, item, rubric)
         except QuotaExhausted as e:
-            stop = f"quota: {e}"
-            break
+            halt(f"quota: {e}")
+            return
         except ProviderError as e:
             # Retryable errors already exhausted their retries: the provider is down, stop.
             # A non-retryable error is usually about this one request: record it, move on,
             # but stop if it keeps happening (e.g. a revoked key would fail every item).
-            consecutive_failures += 1
-            if e.retryable or consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
-                stop = f"provider: {str(e)[:500]}"
-                break
-            rows.append(
-                ResultRow(
+            with state_lock:
+                consecutive_failures += 1
+                if e.retryable or consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                    halt(f"provider: {str(e)[:500]}")
+                    return
+                rows[i] = ResultRow(
                     item.item_id,
                     item.dataset,
                     item.label,
                     rubric.hash or "",
                     error=f"provider: {str(e)[:300]}",
                 )
-            )
-            continue
-        consecutive_failures = 0
-        rows.append(row)
-    _write_rows(out_dir / "results" / f"{role}.jsonl", rows)
-    return rows, stop
+            return
+        with state_lock:
+            consecutive_failures = 0
+            rows[i] = row
+
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        list(pool.map(work, jobs))
+
+    done = [r for r in rows if r is not None]
+    _write_rows(out_dir / "results" / f"{role}.jsonl", done)
+    return done, (stop_reason[0] if stop_reason else None)
 
 
 def stability(

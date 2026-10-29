@@ -5,6 +5,7 @@ tightest), and some models also cap output tokens per minute (Groq qwen3.8-27b: 
 so all three are tracked. Token use is estimated before the call and corrected after.
 """
 
+import threading
 import time
 from collections import deque
 from collections.abc import Callable
@@ -49,6 +50,8 @@ class RateLimiter:
         self._sleep = sleep
         self._today = today or (lambda tz: datetime.now(tz).date().isoformat())
         self._window: deque[_Slot] = deque()
+        # Guards the window across threads; never held while sleeping.
+        self._lock = threading.Lock()
 
     def day(self) -> str:
         return self._today(self._tz)
@@ -73,33 +76,36 @@ class RateLimiter:
                 f"exceeded ({day})"
             )
         while True:
-            now = self._clock()
-            while self._window and now - self._window[0].ts >= WINDOW_S:
-                self._window.popleft()
-            rpm_ok = lim.rpm is None or len(self._window) < lim.rpm
-            used = sum(s.tokens for s in self._window)
-            # A single request larger than the TPM budget is allowed once the window is empty;
-            # otherwise it could never be sent.
-            tpm_ok = lim.tpm is None or used + estimated_tokens <= lim.tpm or not self._window
-            used_out = sum(s.out_tokens for s in self._window)
-            otpm_ok = (
-                lim.otpm is None or used_out + estimated_output <= lim.otpm or not self._window
-            )
-            if rpm_ok and tpm_ok and otpm_ok:
-                slot = _Slot(now, estimated_tokens, estimated_output)
-                self._window.append(slot)
-                self._usage.increment(self.provider, self.model, day)
-                return slot
-            wait = WINDOW_S - (now - self._window[0].ts) + 0.05
+            with self._lock:
+                now = self._clock()
+                while self._window and now - self._window[0].ts >= WINDOW_S:
+                    self._window.popleft()
+                rpm_ok = lim.rpm is None or len(self._window) < lim.rpm
+                used = sum(s.tokens for s in self._window)
+                # A single request larger than the TPM budget is allowed once the window is
+                # empty; otherwise it could never be sent.
+                tpm_ok = lim.tpm is None or used + estimated_tokens <= lim.tpm or not self._window
+                used_out = sum(s.out_tokens for s in self._window)
+                otpm_ok = (
+                    lim.otpm is None or used_out + estimated_output <= lim.otpm or not self._window
+                )
+                if rpm_ok and tpm_ok and otpm_ok:
+                    slot = _Slot(now, estimated_tokens, estimated_output)
+                    self._window.append(slot)
+                    self._usage.increment(self.provider, self.model, day)
+                    return slot
+                wait = WINDOW_S - (now - self._window[0].ts) + 0.05
             self._sleep(max(wait, 0.05))
 
     def settle(
         self, slot: _Slot, actual_tokens: int | None, actual_output: int | None = None
     ) -> None:
         """Replace the estimates with real usage once the provider reports it."""
-        if actual_output is not None:
-            slot.out_tokens = actual_output
+        with self._lock:
+            if actual_output is not None:
+                slot.out_tokens = actual_output
+            if actual_tokens is not None:
+                slot.tokens = actual_tokens
         if actual_tokens is None:
             return
-        slot.tokens = actual_tokens
         self._usage.add_tokens(self.provider, self.model, self.day(), actual_tokens)

@@ -298,3 +298,14 @@ def test_groq_daily_limit_message_detected() -> None:
 
     assert _is_daily_limit("Rate limit reached ... on tokens per day (TPD): Limit 200000")
     assert not _is_daily_limit("on output tokens per minute (OTPM): Limit 1000")
+
+
+def test_parallel_run_matches_sequential(
+    pilot_client: Any, conn: sqlite3.Connection, corpus: Path, tmp_path: Path
+) -> None:
+    out, store = tmp_path / "out", RubricStore(conn)
+    pilot.prepare(pilot_client, store, pilot.PilotConfig(8, 4, 3), data_dir=corpus, out_dir=out)
+    seq, _ = pilot.run(pilot_client, store, "judge", workers=1, data_dir=corpus, out_dir=out)
+    par, stop = pilot.run(pilot_client, store, "judge", workers=4, data_dir=corpus, out_dir=out)
+    assert stop is None
+    assert [(r.item_id, r.engine_3way) for r in par] == [(r.item_id, r.engine_3way) for r in seq]

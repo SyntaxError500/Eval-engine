@@ -1,8 +1,11 @@
 """SQLite storage. One file holds rubrics, questions, traces, the call log, cache and usage."""
 
 import sqlite3
+import threading
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Any, Concatenate, Protocol
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS rubrics (
@@ -72,7 +75,7 @@ def connect(path: Path | str) -> sqlite3.Connection:
     if str(path) != ":memory:":
         Path(path).parent.mkdir(parents=True, exist_ok=True)
     # Generous lock timeout: several judge runs may write to the same file concurrently.
-    conn = sqlite3.connect(path, timeout=30.0)
+    conn = sqlite3.connect(path, timeout=30.0, check_same_thread=False, factory=LockedConnection)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     conn.execute("PRAGMA journal_mode = WAL")
@@ -91,3 +94,34 @@ def _migrate(conn: sqlite3.Connection) -> None:
 
 def utc_now() -> str:
     return datetime.now(UTC).isoformat()
+
+
+class LockedConnection(sqlite3.Connection):
+    """A connection that carries its own lock. A sqlite3 connection may be shared across
+    threads only if access is serialised; every storage class takes this lock."""
+
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+        self.lock = threading.RLock()
+
+
+def lock_for(conn: sqlite3.Connection) -> threading.RLock:
+    if not isinstance(conn, LockedConnection):
+        raise TypeError("open connections with storage.db.connect()")
+    return conn.lock
+
+
+class _HasLock(Protocol):
+    _lock: threading.RLock
+
+
+def locked[S: _HasLock, **P, R](
+    fn: Callable[Concatenate[S, P], R],
+) -> Callable[Concatenate[S, P], R]:
+    """Method decorator: run under the instance's connection lock."""
+
+    def wrapper(self: S, /, *args: P.args, **kwargs: P.kwargs) -> R:
+        with self._lock:
+            return fn(self, *args, **kwargs)
+
+    return wrapper

@@ -5,6 +5,7 @@ retries -> validate against the Pydantic schema (one repair attempt) -> cache ->
 """
 
 import random
+import threading
 import time
 import uuid
 from collections.abc import Callable
@@ -69,6 +70,7 @@ class LLMClient:
         self._rng = rng
         self._providers: dict[str, Provider] = {}
         self._limiters: dict[tuple[str, str], RateLimiter] = {}
+        self._registry_lock = threading.Lock()  # complete() may be called from several threads
 
     @property
     def prompts(self) -> PromptRegistry:
@@ -199,11 +201,17 @@ class LLMClient:
         raise AssertionError("unreachable")
 
     def _provider(self, name: str) -> Provider:
-        if name not in self._providers:
-            self._providers[name] = self._factory(name)
-        return self._providers[name]
+        with self._registry_lock:
+            if name not in self._providers:
+                self._providers[name] = self._factory(name)
+            return self._providers[name]
 
     def _limiter(self, provider: str, model: str) -> RateLimiter:
+        k = (provider, model)
+        with self._registry_lock:
+            return self._limiters.get(k) or self._new_limiter(provider, model)
+
+    def _new_limiter(self, provider: str, model: str) -> RateLimiter:
         k = (provider, model)
         if k not in self._limiters:
             pcfg = self._config.providers[provider]

@@ -5,13 +5,15 @@ import sqlite3
 from dataclasses import dataclass
 
 from eval_engine.schemas.trace import LLMCall
-from eval_engine.storage.db import utc_now
+from eval_engine.storage.db import lock_for, locked, utc_now
 
 
 class CallLog:
     def __init__(self, conn: sqlite3.Connection) -> None:
         self._conn = conn
+        self._lock = lock_for(conn)
 
+    @locked
     def record(self, call: LLMCall) -> None:
         d = call.model_dump(mode="json")
         d["retry_errors"] = json.dumps(d["retry_errors"])
@@ -22,6 +24,7 @@ class CallLog:
                 f"INSERT INTO llm_calls ({cols}) VALUES ({marks})", tuple(d.values())
             )
 
+    @locked
     def for_evaluation(self, evaluation_id: str) -> list[LLMCall]:
         rows = self._conn.execute(
             "SELECT * FROM llm_calls WHERE evaluation_id = ? ORDER BY timestamp", (evaluation_id,)
@@ -31,6 +34,7 @@ class CallLog:
             for r in rows
         ]
 
+    @locked
     def count(self) -> int:
         return int(self._conn.execute("SELECT COUNT(*) FROM llm_calls").fetchone()[0])
 
@@ -45,7 +49,9 @@ class CachedResponse:
 class ResponseCache:
     def __init__(self, conn: sqlite3.Connection) -> None:
         self._conn = conn
+        self._lock = lock_for(conn)
 
+    @locked
     def get(self, key: str) -> CachedResponse | None:
         row = self._conn.execute(
             "SELECT text, input_tokens, output_tokens FROM response_cache WHERE request_key = ?",
@@ -53,6 +59,7 @@ class ResponseCache:
         ).fetchone()
         return CachedResponse(row[0], row[1], row[2]) if row else None
 
+    @locked
     def put(
         self,
         key: str,
@@ -75,7 +82,9 @@ class UsageCounter:
 
     def __init__(self, conn: sqlite3.Connection) -> None:
         self._conn = conn
+        self._lock = lock_for(conn)
 
+    @locked
     def increment(self, provider: str, model: str, day: str, tokens: int = 0) -> None:
         with self._conn:
             self._conn.execute(
@@ -85,6 +94,7 @@ class UsageCounter:
                 (provider, model, day, tokens),
             )
 
+    @locked
     def add_tokens(self, provider: str, model: str, day: str, tokens: int) -> None:
         with self._conn:
             self._conn.execute(
@@ -92,6 +102,7 @@ class UsageCounter:
                 (tokens, provider, model, day),
             )
 
+    @locked
     def requests_on(self, provider: str, model: str, day: str) -> int:
         row = self._conn.execute(
             "SELECT requests FROM usage WHERE provider = ? AND model = ? AND day = ?",
@@ -99,6 +110,7 @@ class UsageCounter:
         ).fetchone()
         return int(row[0]) if row else 0
 
+    @locked
     def tokens_on(self, provider: str, model: str, day: str) -> int:
         row = self._conn.execute(
             "SELECT tokens FROM usage WHERE provider = ? AND model = ? AND day = ?",
@@ -106,6 +118,7 @@ class UsageCounter:
         ).fetchone()
         return int(row[0]) if row else 0
 
+    @locked
     def summary(self, day: str | None = None) -> list[sqlite3.Row]:
         if day is None:
             return self._conn.execute(

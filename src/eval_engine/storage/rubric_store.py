@@ -3,7 +3,7 @@
 import sqlite3
 
 from eval_engine.schemas.rubric import Rubric
-from eval_engine.storage.db import utc_now
+from eval_engine.storage.db import lock_for, locked, utc_now
 
 
 class RubricStoreError(Exception):
@@ -13,7 +13,9 @@ class RubricStoreError(Exception):
 class RubricStore:
     def __init__(self, conn: sqlite3.Connection) -> None:
         self._conn = conn
+        self._lock = lock_for(conn)
 
+    @locked
     def save(self, rubric: Rubric) -> None:
         if not rubric.is_frozen:
             raise RubricStoreError("rubric must be frozen (hash set and matching) before saving")
@@ -38,6 +40,7 @@ class RubricStore:
                 f"rubric {rubric.rubric_id} v{rubric.version} already exists"
             ) from e
 
+    @locked
     def get(self, rubric_hash: str) -> Rubric:
         row = self._conn.execute(
             "SELECT body FROM rubrics WHERE hash = ?", (rubric_hash,)
@@ -46,6 +49,7 @@ class RubricStore:
             raise KeyError(rubric_hash)
         return self._load(row["body"])
 
+    @locked
     def latest(self, rubric_id: str) -> Rubric:
         row = self._conn.execute(
             "SELECT body FROM rubrics WHERE rubric_id = ? ORDER BY version DESC LIMIT 1",
@@ -55,12 +59,14 @@ class RubricStore:
             raise KeyError(rubric_id)
         return self._load(row["body"])
 
+    @locked
     def history(self, rubric_id: str) -> list[Rubric]:
         rows = self._conn.execute(
             "SELECT body FROM rubrics WHERE rubric_id = ? ORDER BY version", (rubric_id,)
         ).fetchall()
         return [self._load(r["body"]) for r in rows]
 
+    @locked
     def _check_lineage(self, rubric: Rubric) -> None:
         if rubric.version == 1:
             if rubric.parent_hash is not None:

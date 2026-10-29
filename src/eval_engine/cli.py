@@ -136,11 +136,12 @@ def pilot_prepare(
 @pilot_app.command("run")
 def pilot_run(
     role: Annotated[str, typer.Option(help="Judge role from roles.yaml")] = "judge",
+    workers: Annotated[int, typer.Option(help="Calls in flight at once")] = 4,
     out: OutDir = pilot.PILOT_DIR,
 ) -> None:
     """Grade every sampled answer with one judge. Safe to rerun: finished items come from cache."""
     client, store = _pilot_deps()
-    rows, stop = pilot.run(client, store, role, out_dir=out)
+    rows, stop = pilot.run(client, store, role, workers=workers, out_dir=out)
     errors = sum(r.error is not None for r in rows)
     total = len(pilot._manifest(out))
     typer.echo(f"{role}: {len(rows)}/{total} items processed, {errors} with errors")
