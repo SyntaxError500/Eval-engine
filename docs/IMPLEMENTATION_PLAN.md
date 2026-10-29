@@ -284,6 +284,8 @@ The goal is to confirm the judge before anything is built on it.
    - Every criterion is binary and observable (simple lint: no "good", "well", "appropriately" without an observable anchor).
    - Every dimension has at least one criterion. Each path has at least one `core` criterion.
    - Creative has exactly 5 obvious answers.
+   - **Granularity (from Phase 2):** each core idea is split into the smallest observable parts, so a partial answer can meet some criteria. In the Phase 2 dev set, single-criterion rubrics made partial credit impossible: all 10 partially-correct SciEntsBank answers scored 0. At least 2 criteria per path unless the question has exactly one atomic fact.
+   - **No requirements beyond the stated idea (from Phase 2):** the v1 dataset rubrics added explanations the reference never asked for, which made the rubric, not the answer, the variable. Every criterion must be something a fully correct answer necessarily contains.
 4. **Freeze**: canonical JSON → SHA-256 → store as version 1.
 5. **Reference answer**: separate call, given the frozen rubric. Stored, but not passed to any scoring prompt.
 
@@ -298,6 +300,7 @@ The goal is to confirm the judge before anything is built on it.
 **Tasks**
 1. **Merged path ID + scoring call** (D1): the judge sees the question and the full rubric (all paths) plus the answer. It returns the identified path, per-path confidences and per-criterion verdicts with evidence quotes. It is **never** shown the reference answer.
 2. **Evidence check** in code: each `met: true` verdict must quote a substring that actually appears in the answer (fuzzy match). If not, the verdict is downgraded and flagged in the trace. This is a cheap guard against hallucinated passes.
+   - **Watch literalness (from Phase 2):** the Phase 2 judge (Gemini 3.5 Flash Lite) leaned harsh, mostly by refusing paraphrases ("baby plant" for "the embryo contains the tiny leaves and root"). Golden tests must include paraphrased-but-correct answers, so any change in that behaviour shows up.
 3. **Creative route** (G1, G2): skip path ID; separate creative scoring prompt with craft tests plus the obvious-answers list ("does the answer substantially reuse any of these?"). Amendment is disabled.
 4. **Aggregation** in code: dimension scores per §6, then bands. Weights are read from config.
 5. **Pipeline orchestrator** `evaluate(question_id, answer) -> Evaluation`: loads the latest rubric version, routes by task type, applies the confidence-threshold branch (amendment stub until Phase 5), aggregates and writes the trace.
