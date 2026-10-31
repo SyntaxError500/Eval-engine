@@ -100,7 +100,12 @@ def check_rubric(
         if missing:
             problems.append(f"{where} has no criterion for dimension(s) {missing}")
         for c in path.criteria:
-            if _LENGTH.search(c.statement):
+            # In a creative brief, length is a real constraint ("120-150 words") and is
+            # graded under correctness; elsewhere a length criterion measures no content.
+            length_is_constraint = (
+                draft.task_type == TaskType.CREATIVE and c.dimension == Dimension.CORRECTNESS
+            )
+            if not length_is_constraint and _LENGTH.search(c.statement):
                 problems.append(
                     f"{c.criterion_id} grades length or sentence count; criteria must be "
                     "about content"

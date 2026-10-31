@@ -183,7 +183,8 @@ def test_failing_twice_raises_and_stores_nothing(
     bad = draft("factual")
     bad["paths"][0]["criteria"] = [crit("P1.C1", "correctness")]
     bad2 = {**bad, "question": "Another?"}  # differs so it isn't a cache hit
-    providers["alpha"].push(json.dumps(bad), json.dumps(bad2))
+    bad3 = {**bad, "question": "A third?"}
+    providers["alpha"].push(json.dumps(bad), json.dumps(bad2), json.dumps(bad3))
     with pytest.raises(GenerationError):
         generate_question(client, rubrics, questions, "science", TaskType.FACTUAL)
     assert questions.all() == []
@@ -286,3 +287,11 @@ def test_questions_asking_for_several_alternatives_rejected(question: str) -> No
 )
 def test_single_answer_questions_allowed(question: str) -> None:
     assert not [p for p in problems_for(draft("analytical", question=question)) if "several" in p]
+
+
+def test_creative_length_constraint_is_allowed() -> None:
+    d = draft("creative")
+    d["paths"][0]["criteria"][0]["statement"] = "The scene is between 120 and 150 words"
+    d["paths"][0]["criteria"][0]["dimension"] = "correctness"
+    d["paths"][0]["criteria"][0]["statement"] = "Keeps the scene to 3 to 5 sentences"
+    assert not [p for p in problems_for(d) if "length" in p]

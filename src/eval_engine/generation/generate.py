@@ -14,11 +14,14 @@ from eval_engine.schemas.rubric import Rubric, RubricDraft
 from eval_engine.storage.question_store import QuestionStore
 from eval_engine.storage.rubric_store import RubricStore
 
-MAX_AVOID = 20  # most recent questions on the topic passed as "write something different"
+MAX_AVOID = 20
+# First attempt plus two retries carrying the check problems. One retry left judgement words
+# and missing core reasoning in 2 of 40 slots on the first v3 batch.
+GENERATION_ATTEMPTS = 3  # most recent questions on the topic passed as "write something different"
 
 
 class GenerationError(Exception):
-    """The generator could not produce a rubric that passes the checks in two attempts."""
+    """The generator could not produce a rubric that passes the checks."""
 
     def __init__(self, message: str, problems: list[str]) -> None:
         super().__init__(message)
@@ -56,17 +59,19 @@ def generate_question(
 
     first_problems: list[str] = []
     draft: RubricDraft | None = None
-    for attempt in (1, 2):
+    for attempt in range(1, GENERATION_ATTEMPTS + 1):
         draft = client.complete("generator", "generate", variables, RubricDraft).value
         problems = check_rubric(draft, weights, task_type)
         if not problems:
             break
         if attempt == 1:
             first_problems = problems
+        if attempt < GENERATION_ATTEMPTS:
             variables = {**variables, "problems": problems}
         else:
             raise GenerationError(
-                f"rubric for {topic}/{task_type.value} failed checks twice", problems
+                f"rubric for {topic}/{task_type.value} failed checks {GENERATION_ATTEMPTS} times",
+                problems,
             )
     assert draft is not None
 
@@ -93,7 +98,7 @@ def generate_question(
     )
     questions.save(question)
     question = write_reference(client, questions, question, rubric)
-    return GeneratedQuestion(question, rubric, 2 if first_problems else 1, first_problems)
+    return GeneratedQuestion(question, rubric, attempt, first_problems)
 
 
 def write_reference(
