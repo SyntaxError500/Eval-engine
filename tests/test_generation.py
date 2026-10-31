@@ -222,3 +222,20 @@ def test_batch_covers_slots_and_resumes(
 def test_slots_are_distinct() -> None:
     s = slots(10, [f"t{i}" for i in range(10)])
     assert len(s) == 40 and len(set(s)) == 40
+
+
+def test_batch_ignores_questions_from_older_prompt_versions(
+    gen_env: Any, providers: dict[str, FakeProvider], tmp_path: Path
+) -> None:
+    client, rubrics, questions = gen_env
+
+    def gen(req: CompletionRequest) -> str:
+        task_type = req.user.split("Task type:", 1)[1].split()[0]
+        return json.dumps(draft(task_type, question=f"{len(providers['alpha'].requests)}?"))
+
+    providers["alpha"].push(*[gen, reference] * 8)
+    build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    for q in questions.all():  # pretend they came from an older prompt
+        questions.save(q.model_copy(update={"generator_prompt_hash": "old"}))
+    again = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    assert again["built"] == 4 and again["skipped"] == 0

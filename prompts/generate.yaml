@@ -1,5 +1,7 @@
 name: generate
-version: 1
+version: 2
+# v2: v1 wrote "list three causes" questions whose criteria demanded three particular
+# causes, failing answers that named other valid ones. Open-set rule added.
 description: >
   Stage 1. One call produces the question, its declared task type and the rubric (and, for
   creative tasks, the five most obvious answers). Generated before any answer exists.
@@ -43,6 +45,11 @@ system: |
     part of it right can meet some criteria. Every path needs at least 2 criteria.
   - Necessary: only ask for what a fully correct answer to THIS question must contain. Do
     not add requirements the question doesn't ask for.
+  - Open sets: if the question allows several valid answers ("name three causes", "give an
+    example"), a criterion must accept ANY valid one ("Names a valid cause of ... (e.g.
+    fiscal crisis, food shortages, Enlightenment ideas)"), never one particular member of
+    the set. Put examples in the statement or evidence_hint as examples, not requirements.
+    Count requirements ("three distinct causes") go in their own criterion.
   - Not answer-leaking: describe what must be shown, not a model sentence to copy.
   - core: true for what the answer cannot be correct without; false for things that make it
     better but aren't required. Every path needs at least one core criterion.

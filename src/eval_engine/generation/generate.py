@@ -89,6 +89,7 @@ def generate_question(
         task_type=draft.task_type,
         rubric_id=rubric.rubric_id,
         rubric_hash=rubric.hash,
+        generator_prompt_hash=client.prompts.get("generate").file_hash,
     )
     questions.save(question)
     question = write_reference(client, questions, question, rubric)

@@ -13,6 +13,8 @@ class Question(BaseModel):
     # Written after the rubric is frozen; never passed to scoring or feedback prompts.
     reference_answer: str | None = None
     reference_path_id: str | None = None
+    # Hash of the generator prompt file, so a batch can tell which prompt version made it.
+    generator_prompt_hash: str | None = None
 
 
 class ReferenceAnswer(BaseModel):

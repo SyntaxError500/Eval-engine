@@ -199,6 +199,9 @@ def gen_question(
     except GenerationError as e:
         typer.secho("Failed checks twice:\n- " + "\n- ".join(e.problems), fg="red")
         raise typer.Exit(1) from e
+    except (StructuredOutputError, ProviderError) as e:
+        typer.secho(f"Generation failed: {str(e)[:800]}", fg="red")
+        raise typer.Exit(1) from e
     typer.echo("\n".join(_question_block(1, g.question, g.rubric)))
     if g.first_attempt_problems:
         typer.secho(

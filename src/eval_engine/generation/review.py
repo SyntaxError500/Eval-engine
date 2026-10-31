@@ -46,7 +46,12 @@ def build_batch(
     out_dir: Path = REVIEW_DIR,
 ) -> dict[str, Any]:
     weights = load_weights()
-    existing = {(q.task_type, q.topic): q for q in questions.all()}
+    # Only questions made by the current generator prompt count; a prompt fix means the
+    # batch is regenerated rather than mixing versions in one review.
+    prompt_hash = client.prompts.get("generate").file_hash
+    existing = {
+        (q.task_type, q.topic): q for q in questions.all() if q.generator_prompt_hash == prompt_hash
+    }
     built = skipped = 0
     failed: list[dict[str, Any]] = []
     retried: list[str] = []
