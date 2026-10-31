@@ -18,6 +18,7 @@ def test_repo_config_is_valid() -> None:
     assert family["verifier"] != family["generator"]
     assert family["verifier"] != family["amendment_proposer"]
     assert family["verifier"] != family["judge"]
+    assert family["fact_checker"] != family["generator"]
 
 
 def test_unknown_provider_in_role_rejected() -> None:

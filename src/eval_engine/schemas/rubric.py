@@ -29,6 +29,14 @@ class Criterion(BaseModel):
     evidence_hint: str = Field(description="What in an answer would show this is met")
     core: bool = Field(description="Core criteria outrank stylistic ones in feedback")
     weight: float = Field(gt=0, le=10)
+    # Exact words of the question that ask for this criterion (traceability, review 1 cause A).
+    # Left out of dumps when None, so rubrics stored before this field keep their hashes.
+    requires: str | None = Field(
+        default=None,
+        exclude_if=lambda v: v is None,
+        description="Exact words quoted from the question that ask for this; null only for "
+        "creative craft tests (turn, show-don't-tell, clichés)",
+    )
 
 
 class SolutionPath(BaseModel):

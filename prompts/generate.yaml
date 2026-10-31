@@ -1,11 +1,16 @@
 name: generate
-version: 3
+version: 4
 # v2: v1 wrote "list three causes" questions whose criteria demanded three particular
 # causes, failing answers that named other valid ones. Open-set rule added.
 # v3 (review of 27 v2 questions): questions asked for "two explanations" and the rubric made
 # each one a path, but the judge grades against ONE identified path, so half the required
 # answer went unchecked. Paths are now explicitly alternatives. Also: no length/format
 # criteria, one criterion per item instead of "for each", factually correct premises.
+# v4 (external review 1, 7/39 passed): every criterion quotes the question words that ask for
+# it ("requires"); non-core means asked-for-but-secondary, never an unasked extra; reasons
+# and arguments accept any valid one; every path covers everything the question asks;
+# explanatory may have one path when only one valid explanation exists; creative cliché
+# checks name a finite list; no unverifiable precise statistics.
 description: >
   Stage 1. One call produces the question, its declared task type and the rubric (and, for
   creative tasks, the five most obvious answers). Generated before any answer exists.
@@ -44,14 +49,27 @@ system: |
     causes, or opposite positions that can both be argued well). Each path lists the claims
     and the evidence or reasoning that support them, with at least one core reasoning
     criterion.
-  - explanatory: the answer explains how or why something works. At least two paths, each a
-    genuinely different valid explanation (for example, a mechanism-level explanation and an
-    analogy-based or historical one).
+  - explanatory: the answer explains how or why something works. One path per genuinely
+    different VALID explanation. If science or scholarship gives only one correct basic
+    explanation, write ONE path; never invent a second, weaker or wrong, explanation just to
+    have two.
   - creative: the answer is a short original piece (a scene, a description, a pitch). One
-    path of binary tests: the brief's constraints (were they met?) and craft tests (is there
-    a turn or development, does it show rather than tell, does it avoid cliché). Also list
-    the five most obvious ways to answer the prompt in obvious_answers. These are used later
-    to detect unoriginal answers.
+    path of binary tests: one criterion per constraint the brief states (each quoting it),
+    plus craft tests in the expression dimension (is there a turn or development, does it
+    show rather than tell, does it avoid cliché). A cliché test must name the exact banned
+    phrases ("Does not use any of: \"x\", \"y\", \"z\"") — never "clichés such as".
+    Craft tests must not contradict the brief (if the brief asks for internal thoughts, don't
+    penalise stating them). Also list the five most obvious ways to answer the prompt in
+    obvious_answers; state no false facts in them.
+
+  TRACEABILITY: EVERY CRITERION QUOTES WHAT ASKS FOR IT
+  Each criterion has a "requires" field: the exact words copied from the question that ask
+  for this criterion (for example "give one concrete policy example", "support it with at
+  least two distinct reasons"). If no words in the question ask for something, do not write
+  a criterion for it. That rules out unrequested extras: a named theory, a citation, a
+  numeric example, a rebuttal, a real-world case, a specific textual passage, a
+  measurement. If you think such a thing is needed, ask for it in the question.
+  Only creative craft tests (expression dimension) may set "requires" to null.
 
   RULES FOR EVERY CRITERION
   - Binary and observable: a statement a grader can check in the text ("Names at least one
@@ -73,8 +91,16 @@ system: |
     the set. Put examples in the statement or evidence_hint as examples, not requirements.
     Count requirements ("three distinct causes") go in their own criterion.
   - Not answer-leaking: describe what must be shown, not a model sentence to copy.
-  - core: true for what the answer cannot be correct without; false for things that make it
-    better but aren't required. Every path needs at least one core criterion.
+  - Any valid reason: when the question asks for reasons, arguments, examples or evidence,
+    write "Gives a first distinct reason that supports the position", "Gives a second ...",
+    and accept ANY valid one. Never require a particular reason or argument.
+  - Every path covers the whole question: if the question asks for evidence for each of two
+    hypotheses, or a counterargument, every path checks it.
+  - No unverifiable precision: avoid exact statistics, dates or figures in criteria and
+    examples unless they are textbook-standard; prefer the underlying fact.
+  - core: true for what the answer cannot be correct without. false for something the
+    question asks for that is secondary. Never use non-core for something the question
+    doesn't ask for. Every path needs at least one core criterion.
   - weight: 1.0 for core, 0.5 for non-core (use up to 2.0 for a criterion that is clearly
     the heart of the question).
   - dimension: correctness (accurate claims; for creative, the brief's constraints),

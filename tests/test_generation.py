@@ -55,6 +55,9 @@ def draft(task_type: str = "analytical", **overrides: Any) -> dict[str, Any]:
         "obvious_answers": [f"obvious {i}" for i in range(5)] if task_type == "creative" else [],
     }
     data.update(overrides)
+    for path in data["paths"]:
+        for c in path["criteria"]:
+            c.setdefault("requires", data["question"])
     return data
 
 
@@ -112,9 +115,13 @@ def test_analytical_needs_core_reasoning() -> None:
 
 
 def test_multi_path_types_need_two_distinct_paths() -> None:
-    one = draft("explanatory")
+    one = draft("analytical")
     one["paths"] = one["paths"][:1]
     assert any("at least 2" in p for p in problems_for(one))
+    # Explanatory may have one path when only one valid explanation exists (review 1, Q29).
+    single = draft("explanatory")
+    single["paths"] = single["paths"][:1]
+    assert not [p for p in problems_for(single) if "at least 2" in p]
     same = draft("analytical")
     same["paths"][1]["description"] = same["paths"][0]["description"]
     assert any("same description" in p for p in problems_for(same))
@@ -145,9 +152,14 @@ def gen_env(
         roles={
             "generator": {"provider": "alpha", "model": "gen", "family": "a", **role},
             "reference_answer": {"provider": "alpha", "model": "gen", "family": "a", **role},
+            "fact_checker": {"provider": "beta", "model": "chk", "family": "b", **role},
         }
     )
+    providers["beta"].push(*[CLEAN_CHECK] * 200)
     return make_client(config), RubricStore(conn), QuestionStore(conn)
+
+
+CLEAN_CHECK = '{"issues": []}'
 
 
 def test_generate_freezes_stores_and_writes_reference(
@@ -210,7 +222,9 @@ def test_batch_covers_slots_and_resumes(
 
     def gen(req: CompletionRequest) -> str:
         task_type = req.user.split("Task type:", 1)[1].split()[0]
-        return json.dumps(draft(task_type, question=f"{len(providers['alpha'].requests)}?"))
+        return json.dumps(
+            draft(task_type, question=f"Question number {len(providers['alpha'].requests)}?")
+        )
 
     providers["alpha"].push(*[gen, reference] * 4)
     summary = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
@@ -232,7 +246,9 @@ def test_batch_ignores_questions_from_older_prompt_versions(
 
     def gen(req: CompletionRequest) -> str:
         task_type = req.user.split("Task type:", 1)[1].split()[0]
-        return json.dumps(draft(task_type, question=f"{len(providers['alpha'].requests)}?"))
+        return json.dumps(
+            draft(task_type, question=f"Question number {len(providers['alpha'].requests)}?")
+        )
 
     providers["alpha"].push(*[gen, reference] * 8)
     build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
@@ -323,7 +339,9 @@ def test_batch_regenerates_reused_questions_that_fail_current_checks(
 
     def gen(req: CompletionRequest) -> str:
         task_type = req.user.split("Task type:", 1)[1].split()[0]
-        return json.dumps(draft(task_type, question=f"{len(providers['alpha'].requests)}?"))
+        return json.dumps(
+            draft(task_type, question=f"Question number {len(providers['alpha'].requests)}?")
+        )
 
     providers["alpha"].push(*[gen, reference] * 8)
     build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
@@ -340,3 +358,75 @@ def test_batch_regenerates_reused_questions_that_fail_current_checks(
     questions.save(factual.model_copy(update={"rubric_id": "q-old", "rubric_hash": r.hash}))
     again = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
     assert again["built"] == 1 and again["skipped"] == 3
+
+
+def test_missing_or_invented_requires_quote_rejected() -> None:
+    d = draft("factual", question="Name two causes of the war.")
+    d["paths"][0]["criteria"][0]["requires"] = None
+    d["paths"][0]["criteria"][1]["requires"] = "give a numeric example"
+    found = [p for p in problems_for(d) if "requires" in p]
+    assert len(found) == 2 and "not in the question" in found[1]
+
+
+def test_requires_quote_matches_despite_case_and_punctuation() -> None:
+    d = draft("factual", question="Name two causes of the war, with one example each.")
+    d["paths"][0]["criteria"][0]["requires"] = "Name two causes of the war"
+    assert not [p for p in problems_for(d) if "requires" in p]
+
+
+def test_creative_craft_tests_need_no_quote_but_constraints_do() -> None:
+    d = draft("creative")
+    for c in d["paths"][0]["criteria"]:
+        c["requires"] = None
+    found = [p for p in problems_for(d) if "requires" in p]
+    assert found and all("expression" not in p for p in found)
+    assert not any(
+        c["dimension"] == "expression" and c["criterion_id"] in p
+        for p in found
+        for c in d["paths"][0]["criteria"]
+    )
+
+
+def test_open_ended_cliche_list_rejected() -> None:
+    d = draft("creative")
+    d["paths"][0]["criteria"][3]["statement"] = "Avoids common clichés such as 'dark and stormy'"
+    assert any("open-ended set of clichés" in p for p in problems_for(d))
+    d["paths"][0]["criteria"][3]["statement"] = 'Does not use any of: "dark and stormy"'
+    assert not [p for p in problems_for(d) if "clichés" in p]
+
+
+def test_exactly_only_when_question_says_so() -> None:
+    d = draft("factual", question="Describe one innovative feature.")
+    d["paths"][0]["criteria"][0]["statement"] = "Describes exactly one innovative feature"
+    assert any("exactly" in p for p in problems_for(d))
+
+
+def test_fact_check_errors_send_rubric_back(
+    gen_env: Any, providers: dict[str, FakeProvider]
+) -> None:
+    client, rubrics, questions = gen_env
+    providers["beta"]._script = [
+        json.dumps(
+            {
+                "issues": [
+                    {
+                        "location": "P2",
+                        "severity": "error",
+                        "problem": "candle yellow is soot, not hot gases",
+                    }
+                ]
+            }
+        ),
+        json.dumps(
+            {"issues": [{"location": "P1.C2", "severity": "doubt", "problem": "date contested"}]}
+        ),
+    ]
+    providers["alpha"].push(
+        json.dumps(draft("explanatory")),
+        json.dumps(draft("explanatory", question="Explain the second thing?")),
+        reference,
+    )
+    g = generate_question(client, rubrics, questions, "science", TaskType.EXPLANATORY)
+    assert g.attempts == 2 and "soot" in g.first_attempt_problems[0]
+    assert "candle yellow is soot" in providers["alpha"].requests[1].user
+    assert g.question.rubric_doubts == ["P1.C2: date contested"]

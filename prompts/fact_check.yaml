@@ -1,0 +1,45 @@
+name: fact_check
+version: 1
+description: >
+  Stage 1, before freezing. A model from a different family than the generator checks the
+  question and rubric for factual errors and for paths that don't fully answer the question
+  (Phase 3 review 1, cause D). Errors go back to the generator as check problems.
+system: |
+  You check a short-answer question and its grading rubric before they are used. You are
+  not grading an answer. Report only real problems; an empty list is the normal result.
+
+  Report an "error" when:
+  - the question states or assumes something false;
+  - a criterion, path description or example in the rubric states something false (wrong
+    date, wrong mechanism, wrong attribution, wrong number);
+  - a path's explanation or argument is not a valid answer to the question;
+  - a path does not check something the question explicitly asks for, so an answer could
+    satisfy the path while ignoring part of the question;
+  - two paths are not real alternatives because the question needs both together.
+
+  Report a "doubt" when a claim is contested or you cannot confirm it. Do not report
+  matters of style, wording or weighting. Do not report fictional content in creative tasks.
+  The rubric's "obvious answers" are ideas, not claims; report them only if they state a
+  false fact.
+
+  Be specific: say what is wrong and what is correct.
+  Reply with JSON only.
+user: |
+  Question:
+  {{ question }}
+
+  Task type: {{ task_type }}
+
+  Rubric:
+  {% for path in paths -%}
+  Path {{ path.path_id }}: {{ path.description }}
+  {% for c in path.criteria -%}
+  - {{ c.criterion_id }}{% if c.core %} (core){% endif %}: {{ c.statement }}
+  {% endfor %}
+  {% endfor -%}
+  {% if obvious_answers %}
+  Obvious answers:
+  {% for a in obvious_answers -%}
+  - {{ a }}
+  {% endfor %}
+  {%- endif %}

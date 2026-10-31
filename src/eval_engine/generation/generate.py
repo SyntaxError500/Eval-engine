@@ -7,6 +7,7 @@ from typing import Any
 
 from eval_engine.config import load_weights
 from eval_engine.generation.consistency import check_rubric, required_dimensions
+from eval_engine.generation.fact_check import as_problems, fact_check
 from eval_engine.providers.client import LLMClient
 from eval_engine.schemas.common import TaskType
 from eval_engine.schemas.question import Question, ReferenceAnswer
@@ -58,10 +59,16 @@ def generate_question(
     }
 
     first_problems: list[str] = []
+    doubts: list[str] = []
     draft: RubricDraft | None = None
     for attempt in range(1, GENERATION_ATTEMPTS + 1):
         draft = client.complete("generator", "generate", variables, RubricDraft).value
         problems = check_rubric(draft, weights, task_type)
+        if not problems:
+            # Only rubrics that pass the cheap code checks get the fact-check call.
+            check = fact_check(client, draft)
+            problems = as_problems(check)
+            doubts = [f"{i.location}: {i.problem}" for i in check.issues if i.severity == "doubt"]
         if not problems:
             break
         if attempt == 1:
@@ -95,6 +102,7 @@ def generate_question(
         rubric_id=rubric.rubric_id,
         rubric_hash=rubric.hash,
         generator_prompt_hash=client.prompts.get("generate").file_hash,
+        rubric_doubts=doubts,
     )
     questions.save(question)
     question = write_reference(client, questions, question, rubric)

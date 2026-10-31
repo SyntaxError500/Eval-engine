@@ -15,6 +15,8 @@ class Question(BaseModel):
     reference_path_id: str | None = None
     # Hash of the generator prompt file, so a batch can tell which prompt version made it.
     generator_prompt_hash: str | None = None
+    # Contested or unconfirmed claims the fact-check raised but did not count as errors.
+    rubric_doubts: list[str] = Field(default_factory=list)
 
 
 class ReferenceAnswer(BaseModel):

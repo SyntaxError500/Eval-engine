@@ -146,16 +146,21 @@ def _question_block(n: int, q: Question, r: Rubric) -> list[str]:
         out.append("")
         for c in p.criteria:
             tag = "core" if c.core else "non-core"
+            asked = f' ← asked by: "{c.requires}"' if c.requires else " ← craft test (by design)"
             out.append(
-                f"- `{c.criterion_id}` {c.dimension.value}, {tag}, w={c.weight:g}: {c.statement}"
+                f"- `{c.criterion_id}` {c.dimension.value}, {tag}, w={c.weight:g}: "
+                f"{c.statement}{asked}"
             )
         out.append("")
     if r.obvious_answers:
         out += ["**Obvious answers (originality check):**", ""]
         out += [f"- {a}" for a in r.obvious_answers]
         out.append("")
-    if q.reference_answer:
-        ref_path = q.reference_path_id or "?"
-        out += [f"**Reference answer** (path {ref_path}):", "", f"> {q.reference_answer}", ""]
+    if q.rubric_doubts:
+        out += ["**Fact-check doubts (not counted as errors; please judge):**", ""]
+        out += [f"- {d}" for d in q.rubric_doubts]
+        out.append("")
+    # Reference answers are not shown: they are display-only, never used in grading, and
+    # review 1 found factual errors in about a third of them (decision D2).
     out += ["Review: " + " ".join(f"[ ] {i}" for i in range(1, len(CHECKLIST) + 1)), ""]
     return out

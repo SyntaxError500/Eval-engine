@@ -9,7 +9,7 @@ import re
 from collections import Counter
 
 from eval_engine.schemas.common import Dimension, TaskType
-from eval_engine.schemas.rubric import RubricDraft
+from eval_engine.schemas.rubric import Criterion, RubricDraft
 
 # Dimensions with at least this weight for the task type must be covered by every path.
 # Lower-weight dimensions are optional: forcing a criterion into them would make the rubric
@@ -125,6 +125,17 @@ def check_rubric(
                     f"{c.criterion_id} uses judgement word(s) {vague}; state what the answer "
                     "contains instead"
                 )
+            problems += _traceability_problems(draft, c)
+            if "clich" in c.statement.lower() and _OPEN_LIST.search(c.statement):
+                problems.append(
+                    f"{c.criterion_id} bans an open-ended set of clichés ('such as'); list the "
+                    'exact phrases it bans (\'Does not use any of: "x", "y"\')'
+                )
+            if _EXACTLY.search(c.statement) and not _EXACTLY.search(draft.question):
+                problems.append(
+                    f"{c.criterion_id} demands 'exactly' something the question doesn't; "
+                    "accept at least what the question asks for"
+                )
         if draft.task_type == TaskType.ANALYTICAL and not any(
             c.core and c.dimension == Dimension.REASONING for c in path.criteria
         ):
@@ -140,10 +151,12 @@ def check_rubric(
                 "argument or explanation; the different valid ways to answer belong in the "
                 "rubric's paths, and a learner only needs one of them"
             )
-        if len(draft.paths) < 2:
+        # Analytical: positions can always be argued more than one way. Explanatory may have a
+        # single valid explanation; forcing two made the generator invent a wrong one (review
+        # 1, Q29: candle yellow from "hot gases").
+        if draft.task_type == TaskType.ANALYTICAL and len(draft.paths) < 2:
             problems.append(
-                f"{draft.task_type.value} rubrics need at least 2 genuinely different "
-                "solution paths"
+                "analytical rubrics need at least 2 genuinely different lines of argument"
             )
         descriptions = Counter(p.description.strip().lower() for p in draft.paths)
         if any(n > 1 for n in descriptions.values()):
@@ -159,3 +172,38 @@ def check_rubric(
         if len(set(obvious)) < len(obvious):
             problems.append("obvious_answers contains duplicates")
     return problems
+
+
+# ---------------------------------------------------------------- traceability (review 1, A)
+
+# Creative craft tests (turn, show-don't-tell, clichés) are graded by design (design doc §9)
+# even though a brief rarely spells them out; they are the only criteria allowed no quote.
+_CRAFT_EXEMPT = frozenset({Dimension.EXPRESSION})
+_OPEN_LIST = re.compile(r"such as|e\.g\.|for example|common|overused|typical", re.IGNORECASE)
+_EXACTLY = re.compile(r"\bexactly\b", re.IGNORECASE)
+_NON_WORD = re.compile(r"[^a-z0-9]+")
+MIN_QUOTE_CHARS = 4
+
+
+def _normalise(text: str) -> str:
+    return " " + _NON_WORD.sub(" ", text.lower()).strip() + " "
+
+
+def _traceability_problems(draft: RubricDraft, c: Criterion) -> list[str]:
+    """Each criterion must quote the words of the question that ask for it, so a rubric can't
+    quietly demand things (a numeric example, a named theory, a rebuttal) nobody asked for."""
+    exempt = draft.task_type == TaskType.CREATIVE and c.dimension in _CRAFT_EXEMPT
+    if exempt:
+        return []
+    quote = (c.requires or "").strip()
+    if len(quote) < MIN_QUOTE_CHARS:
+        return [
+            f"{c.criterion_id} has no 'requires' quote; quote the exact words of the question "
+            "that ask for it, or drop the criterion if the question doesn't ask for it"
+        ]
+    if _normalise(quote) not in _normalise(draft.question):
+        return [
+            f"{c.criterion_id} 'requires' quote \"{quote[:80]}\" is not in the question; quote "
+            "the question's own words, or drop the criterion if the question doesn't ask for it"
+        ]
+    return []

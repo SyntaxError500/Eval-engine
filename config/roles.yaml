@@ -77,6 +77,15 @@ roles:
     family: google
     temperature: 0.0
     max_output_tokens: 4096
+  fact_checker:
+    # Checks generated rubrics before freezing (Phase 3 review 1). Must differ in family from
+    # the generator, like the judge; a rubric check isn't grading, so sharing the judge's
+    # model is fine.
+    provider: gemini
+    model: gemini-3.5-flash-lite
+    family: google
+    temperature: 0.0
+    max_output_tokens: 2048
   verifier:
     provider: groq
     model: qwen/qwen3.8-27b
