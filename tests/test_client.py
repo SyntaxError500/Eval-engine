@@ -206,3 +206,40 @@ def test_non_default_json_mode_gets_its_own_cache_entry(
     )
     b = call(make_client(config))
     assert a.call.request_key != b.call.request_key and not b.call.cache_hit
+
+
+def test_gemini_rate_limit_message_parsing() -> None:
+    from eval_engine.providers.gemini import _is_daily_limit, _retry_after
+
+    msg = (
+        "Quota exceeded for metric: generate_content_free_tier_requests, limit: 15, "
+        "description: Generate content requests per minute limit exceeded on Free Tier.\n"
+        "Please retry in 34.501586764s."
+    )
+    assert _retry_after(msg) == pytest.approx(35.5, abs=0.01)
+    assert not _is_daily_limit(msg)
+    assert _is_daily_limit("Generate content requests per day limit exceeded on Free Tier.")
+    assert _retry_after("no hint here") is None
+
+
+def test_jitter_never_shortens_provider_wait(
+    make_client: Any, providers: dict[str, FakeProvider], clock: FakeClock, conn: Any
+) -> None:
+    from eval_engine.prompts import PromptRegistry
+    from eval_engine.providers.client import LLMClient
+    from eval_engine.storage import CallLog, ResponseCache, UsageCounter
+
+    client = LLMClient(
+        make_config(),
+        PromptRegistry(),
+        lambda n: providers[n],
+        cache=ResponseCache(conn),
+        call_log=CallLog(conn),
+        usage=UsageCounter(conn),
+        clock=clock.now,
+        sleep=clock.sleep,
+        rng=lambda: 0.0,  # worst-case jitter
+    )
+    providers["alpha"].push(ProviderError("429", retryable=True, status=429, retry_after=35), ok())
+    call(client)
+    assert clock.sleeps == [35]

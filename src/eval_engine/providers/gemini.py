@@ -1,3 +1,5 @@
+import re
+
 import httpx
 from google import genai
 from google.genai import errors, types
@@ -6,6 +8,7 @@ from eval_engine.providers.base import (
     Completion,
     CompletionRequest,
     ProviderError,
+    QuotaExhausted,
     is_retryable_status,
 )
 
@@ -32,10 +35,16 @@ class GeminiProvider:
                 model=req.model, contents=req.user, config=config
             )
         except errors.APIError as e:
+            message = str(e.message or "")
+            if e.code == 429 and _is_daily_limit(message):
+                raise QuotaExhausted(f"gemini daily limit: {message[:300]}") from e
             raise ProviderError(
-                f"gemini {e.code}: {e.message}",
+                f"gemini {e.code}: {message}",
                 retryable=is_retryable_status(e.code),
                 status=e.code,
+                # Google says how long the per-minute window needs; another process may have
+                # used it, which our in-process limiter cannot see.
+                retry_after=_retry_after(message) if e.code == 429 else None,
             ) from e
         except (httpx.TransportError, OSError) as e:
             raise ProviderError(f"gemini network error: {e}", retryable=True) from e
@@ -52,3 +61,16 @@ class GeminiProvider:
             input_tokens=usage.prompt_token_count if usage else None,
             output_tokens=usage.candidates_token_count if usage else None,
         )
+
+
+_RETRY_IN = re.compile(r"retry in ([\d.]+)\s*s", re.IGNORECASE)
+
+
+def _retry_after(message: str) -> float | None:
+    m = _RETRY_IN.search(message)
+    return float(m.group(1)) + 1.0 if m else None
+
+
+def _is_daily_limit(message: str) -> bool:
+    m = message.lower()
+    return "per day" in m or "perday" in m

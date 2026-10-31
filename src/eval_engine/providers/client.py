@@ -191,8 +191,12 @@ class LLMClient:
                 backoff = min(retry.max_delay_s, retry.base_delay_s * 2 ** (attempt - 1))
                 # A provider's retry hint is a floor, not the whole wait: Groq says "retry in
                 # 0.54 s" for per-minute token caps, and four such retries all fail.
-                delay = max(e.retry_after or 0.0, backoff)
-                self._sleep(delay * (0.5 + 0.5 * self._rng()))
+                # Jitter only our own backoff; never shorten a provider's stated wait.
+                if e.retry_after is not None:
+                    delay = max(e.retry_after, backoff)
+                else:
+                    delay = backoff * (0.5 + 0.5 * self._rng())
+                self._sleep(delay)
                 continue
             used = (completion.input_tokens or 0) + (completion.output_tokens or 0)
             limiter.settle(slot, used or None, completion.output_tokens)
