@@ -295,3 +295,48 @@ def test_creative_length_constraint_is_allowed() -> None:
     d["paths"][0]["criteria"][0]["dimension"] = "correctness"
     d["paths"][0]["criteria"][0]["statement"] = "Keeps the scene to 3 to 5 sentences"
     assert not [p for p in problems_for(d) if "length" in p]
+
+
+@pytest.mark.parametrize(
+    "statement",
+    [
+        "Gives a correct capacity factor for each of the three sources",
+        "Provides a defining characteristic for each market structure named",
+    ],
+)
+def test_bundled_criteria(statement: str) -> None:
+    d = draft("factual")
+    d["paths"][0]["criteria"][0]["statement"] = statement
+    assert any("several items" in p for p in problems_for(d))
+
+
+def test_single_item_criterion_is_not_bundling() -> None:
+    d = draft("factual")
+    d["paths"][0]["criteria"][0]["statement"] = "Names the first cause listed in the question"
+    assert not [p for p in problems_for(d) if "several items" in p]
+
+
+def test_batch_regenerates_reused_questions_that_fail_current_checks(
+    gen_env: Any, providers: dict[str, FakeProvider], tmp_path: Path
+) -> None:
+    client, rubrics, questions = gen_env
+
+    def gen(req: CompletionRequest) -> str:
+        task_type = req.user.split("Task type:", 1)[1].split()[0]
+        return json.dumps(draft(task_type, question=f"{len(providers['alpha'].requests)}?"))
+
+    providers["alpha"].push(*[gen, reference] * 8)
+    build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    # Plant a stored question whose rubric breaks a current rule (bundled criterion).
+    bad = draft("factual", question="Old?")
+    bad["paths"][0]["criteria"][0]["statement"] = "Gives an example for each of the three"
+    from eval_engine.schemas import Rubric
+
+    r = Rubric.model_validate(
+        {**bad, "rubric_id": "q-old", "topic": "x", "version": 1, "source": "generated"}
+    ).freeze()
+    rubrics.save(r)
+    factual = next(q for q in questions.all() if q.task_type == TaskType.FACTUAL)
+    questions.save(factual.model_copy(update={"rubric_id": "q-old", "rubric_hash": r.hash}))
+    again = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    assert again["built"] == 1 and again["skipped"] == 3

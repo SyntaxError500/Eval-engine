@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from eval_engine.config import REPO_ROOT, load_topics, load_weights
+from eval_engine.generation.consistency import check_rubric
 from eval_engine.generation.generate import GenerationError, generate_question, write_reference
 from eval_engine.providers.base import QuotaExhausted
 from eval_engine.providers.client import LLMClient, StructuredOutputError
@@ -51,8 +52,13 @@ def build_batch(
     # Only questions made by the current generator prompt count; a prompt fix means the
     # batch is regenerated rather than mixing versions in one review.
     prompt_hash = client.prompts.get("generate").file_hash
+    # A reused question must also pass the CURRENT checks: checks added after it was made
+    # (e.g. the several-alternatives rule) would otherwise let it through unexamined.
     existing = {
-        (q.task_type, q.topic): q for q in questions.all() if q.generator_prompt_hash == prompt_hash
+        (q.task_type, q.topic): q
+        for q in questions.all()
+        if q.generator_prompt_hash == prompt_hash
+        and not check_rubric(rubrics.get(q.rubric_hash), weights, q.task_type)
     }
     built = skipped = 0
     failed: list[dict[str, Any]] = []

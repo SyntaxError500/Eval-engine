@@ -54,6 +54,10 @@ _LENGTH = re.compile(
 )
 MULTI_PATH_TYPES = frozenset({TaskType.ANALYTICAL, TaskType.EXPLANATORY})
 
+# One criterion covering several items is all-or-nothing across them, so a partial answer
+# earns nothing (Phase 2 lesson). Still produced under v3 in ~5/28 questions.
+_BUNDLED = re.compile(r"\b(?:for each|each of the|each (?:listed|named))\b", re.IGNORECASE)
+
 # Questions that ask for several explanations/perspectives get each one turned into a
 # "path", but the judge grades a single identified path, so the rest go unchecked. Seen in
 # ~8/27 v2 questions and still produced under v3's prompt rule, hence a hard check.
@@ -109,6 +113,11 @@ def check_rubric(
                 problems.append(
                     f"{c.criterion_id} grades length or sentence count; criteria must be "
                     "about content"
+                )
+            if _BUNDLED.search(c.statement):
+                problems.append(
+                    f"{c.criterion_id} covers several items at once ('for each'); write one "
+                    "criterion per item so a partial answer can earn some of them"
                 )
             vague = sorted({m.lower() for m in _VAGUE.findall(c.statement)})
             if vague:
