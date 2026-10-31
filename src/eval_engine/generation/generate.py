@@ -14,10 +14,10 @@ from eval_engine.schemas.rubric import Rubric, RubricDraft
 from eval_engine.storage.question_store import QuestionStore
 from eval_engine.storage.rubric_store import RubricStore
 
-MAX_AVOID = 20
+MAX_AVOID = 20  # most recent questions on the topic passed as "write something different"
 # First attempt plus two retries carrying the check problems. One retry left judgement words
 # and missing core reasoning in 2 of 40 slots on the first v3 batch.
-GENERATION_ATTEMPTS = 3  # most recent questions on the topic passed as "write something different"
+GENERATION_ATTEMPTS = 3
 
 
 class GenerationError(Exception):
