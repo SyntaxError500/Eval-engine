@@ -430,3 +430,13 @@ def test_fact_check_errors_send_rubric_back(
     assert g.attempts == 2 and "soot" in g.first_attempt_problems[0]
     assert "candle yellow is soot" in providers["alpha"].requests[1].user
     assert g.question.rubric_doubts == ["P1.C2: date contested"]
+
+
+def test_judgement_word_in_question_rejected() -> None:
+    d = draft("analytical", question="Argue whether X. State a clear position.")
+    assert any("the question uses judgement word" in p for p in problems_for(d))
+
+
+def test_subject_matter_effectiveness_in_question_is_fine() -> None:
+    d = draft("analytical", question="Argue whether a carbon tax effectively reduces emissions.")
+    assert not [p for p in problems_for(d) if "the question uses" in p]

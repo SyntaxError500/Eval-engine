@@ -54,6 +54,14 @@ _LENGTH = re.compile(
 )
 MULTI_PATH_TYPES = frozenset({TaskType.ANALYTICAL, TaskType.EXPLANATORY})
 
+# Words that judge the ANSWER's quality. A narrower list than VAGUE_WORDS for question text:
+# "is a carbon tax effective" or "a strong economy" are subject matter, not answer quality.
+_ANSWER_QUALITY = re.compile(
+    r"\b(clear|clearly|well|good|adequate|adequately|appropriate|appropriately|sufficient|"
+    r"sufficiently|proper|properly|thoughtful|insightful|compelling)\b",
+    re.IGNORECASE,
+)
+
 # One criterion covering several items is all-or-nothing across them, so a partial answer
 # earns nothing (Phase 2 lesson). Still produced under v3 in ~5/28 questions.
 _BUNDLED = re.compile(r"\b(?:for each|each of the|each (?:listed|named))\b", re.IGNORECASE)
@@ -90,6 +98,14 @@ def check_rubric(
         )
 
     required = required_dimensions(draft.task_type, weights)
+    # Criteria quote the question (traceability), so a judgement word in the question ("state
+    # a clear position") gets copied into a criterion; keep it out of the question itself.
+    q_vague = sorted({m.lower() for m in _ANSWER_QUALITY.findall(draft.question)})
+    if q_vague:
+        problems.append(
+            f"the question uses judgement word(s) {q_vague}; ask for what is observable "
+            "(e.g. 'State a clear position' -> 'State a position (for or against)')"
+        )
     for path in draft.paths:
         where = f"path {path.path_id}"
         if len(path.criteria) < MIN_CRITERIA_PER_PATH:
@@ -123,7 +139,8 @@ def check_rubric(
             if vague:
                 problems.append(
                     f"{c.criterion_id} uses judgement word(s) {vague}; state what the answer "
-                    "contains instead"
+                    "contains instead (e.g. 'States a clear position' -> 'States a position "
+                    "(for or against)')"
                 )
             problems += _traceability_problems(draft, c)
             if "clich" in c.statement.lower() and _OPEN_LIST.search(c.statement):
@@ -141,7 +158,11 @@ def check_rubric(
         ):
             # The design's "free consistency check": analytical rubrics made only of factual
             # checkboxes mean something went wrong.
-            problems.append(f"{where}: an analytical path needs a core reasoning criterion")
+            problems.append(
+                f"{where}: an analytical path needs a core reasoning criterion, e.g. "
+                "'Explains how the first reason supports the position' (dimension "
+                '"reasoning", core true, requires quoting the question\'s request for support)'
+            )
 
     if draft.task_type in MULTI_PATH_TYPES:
         m = _ASKS_FOR_SEVERAL.search(draft.question)

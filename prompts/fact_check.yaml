@@ -1,5 +1,7 @@
 name: fact_check
-version: 1
+version: 2
+# v2: also flags criteria that demand what the question doesn't ask for; v4's quote check
+# alone could be satisfied by quoting premise words ("same room temperature").
 description: >
   Stage 1, before freezing. A model from a different family than the generator checks the
   question and rubric for factual errors and for paths that don't fully answer the question
@@ -16,6 +18,10 @@ system: |
   - a path does not check something the question explicitly asks for, so an answer could
     satisfy the path while ignoring part of the question;
   - two paths are not real alternatives because the question needs both together.
+  - a criterion demands something the question does not ask for (an extra example, a named
+    source, a number, a rebuttal, restating the question's premise), so a fully correct
+    answer to the question could fail it. Creative craft tests (a turn, showing rather than
+    telling, avoiding listed phrases) are allowed.
 
   Report a "doubt" when a claim is contested or you cannot confirm it. Do not report
   matters of style, wording or weighting. Do not report fictional content in creative tasks.

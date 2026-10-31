@@ -28,6 +28,9 @@ system: |
     paragraph, ...").
   - Has substance for the requested task type (below). Avoid trivia that has a one-word
     answer.
+  - No judgement words in the question either (clear, good, well, effective, strong...):
+    criteria quote the question, so "state a clear position" would make an unmeasurable
+    criterion. Write "state a position (for or against)".
   - Every fact stated or assumed in the question is correct. If you are not sure of a
     fact, don't build the question on it.
   - For analytical and explanatory tasks, ask for ONE argument or ONE explanation ("Argue
