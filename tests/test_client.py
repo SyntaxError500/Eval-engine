@@ -260,3 +260,15 @@ def test_three_parse_attempts_before_giving_up(
 ) -> None:
     providers["alpha"].push("{broken", "{broken again", ok())
     assert call(make_client()).value.echo == "t1"
+
+
+def test_usage_is_counted_per_api_key(monkeypatch: pytest.MonkeyPatch) -> None:
+    from eval_engine.providers.client import usage_label
+
+    monkeypatch.setenv("TEST_KEY", "key-one")
+    one = usage_label("groq", "TEST_KEY")
+    monkeypatch.setenv("TEST_KEY", "key-two")
+    two = usage_label("groq", "TEST_KEY")
+    assert one.startswith("groq#") and one != two
+    assert "key-one" not in one  # only a fingerprint, never the key
+    assert usage_label("ollama", None) == "ollama"

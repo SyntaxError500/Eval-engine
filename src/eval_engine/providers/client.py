@@ -5,6 +5,7 @@ retries -> validate against the Pydantic schema (one repair attempt) -> cache ->
 """
 
 import json
+import os
 import random
 import threading
 import time
@@ -17,7 +18,7 @@ from typing import Any
 from pydantic import BaseModel, ValidationError
 
 from eval_engine.config import AppConfig, RoleConfig
-from eval_engine.hashing import hash_data
+from eval_engine.hashing import hash_data, sha256_hex
 from eval_engine.prompts import PromptRegistry, RenderedPrompt
 from eval_engine.providers.base import Completion, CompletionRequest, Provider, ProviderError
 from eval_engine.providers.jsonutil import extract_json, inline_schema
@@ -37,6 +38,14 @@ REPAIR_SUFFIX = (
 # Parse attempts per call: the first, then a fresh resend (syntax errors) or a repair
 # prompt (schema errors). Groq gpt-oss broke JSON syntax on about a third of first replies.
 MAX_PARSE_ATTEMPTS = 3
+
+
+def usage_label(provider: str, api_key_env: str | None) -> str:
+    """Name under which daily usage is counted: the provider plus a short fingerprint of the
+    API key in use. Free-tier quotas belong to the key's account, so a different key starts
+    its own count. The key itself is never stored."""
+    key = os.environ.get(api_key_env, "").strip() if api_key_env else ""
+    return f"{provider}#{sha256_hex(key)[:8]}" if key else provider
 
 
 class StructuredOutputError(Exception):
@@ -232,7 +241,7 @@ class LLMClient:
         if k not in self._limiters:
             pcfg = self._config.providers[provider]
             self._limiters[k] = RateLimiter(
-                provider,
+                usage_label(provider, pcfg.api_key_env),
                 model,
                 pcfg.limits_for(model),
                 self._usage,
