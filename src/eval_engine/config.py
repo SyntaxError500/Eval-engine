@@ -84,3 +84,21 @@ def db_path() -> Path:
     raw = os.environ.get("EVAL_ENGINE_DB", "data/eval_engine.db")
     p = Path(raw)
     return p if p.is_absolute() else REPO_ROOT / p
+
+
+def load_weights(path: Path | None = None) -> dict[str, dict[str, float]]:
+    """Dimension weights per task type (config/weights.yaml); each row sums to 1."""
+    path = path or REPO_ROOT / "config" / "weights.yaml"
+    with path.open(encoding="utf-8") as f:
+        data: dict[str, dict[str, float]] = yaml.safe_load(f)
+    for task_type, row in data.items():
+        if abs(sum(row.values()) - 1.0) > 1e-9:
+            raise ConfigError(f"weights for {task_type!r} sum to {sum(row.values())}, not 1")
+    return data
+
+
+def load_topics(path: Path | None = None) -> list[str]:
+    path = path or REPO_ROOT / "config" / "topics.yaml"
+    with path.open(encoding="utf-8") as f:
+        topics: list[str] = yaml.safe_load(f)["topics"]
+    return topics

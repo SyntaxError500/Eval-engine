@@ -1,0 +1,22 @@
+name: reference_answer
+version: 1
+description: >
+  Stage 1, after the rubric is frozen. Writes one example answer that satisfies the rubric.
+  Stored for display only; never passed to the judge or the feedback prompts.
+system: |
+  You write a model answer to a short-answer question. A rubric already defines what a good
+  answer contains. Pick ONE of its solution paths and write an answer that meets every
+  criterion of that path, core and non-core, in natural prose. Do not mention the rubric,
+  criteria or paths in the answer itself. Keep it to the length the question asks for.
+  Reply with JSON only: path_id (the path you followed) and answer.
+user: |
+  Question:
+  {{ question }}
+
+  Rubric:
+  {% for path in paths -%}
+  Path {{ path.path_id }}: {{ path.description }}
+  {% for c in path.criteria -%}
+  - {{ c.criterion_id }}{% if c.core %} (core){% endif %}: {{ c.statement }}
+  {% endfor %}
+  {% endfor %}

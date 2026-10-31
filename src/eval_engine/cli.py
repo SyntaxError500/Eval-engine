@@ -9,10 +9,14 @@ import typer
 from pydantic import BaseModel
 
 from eval_engine.config import ConfigError, db_path, load_config, load_env
+from eval_engine.generation.generate import GenerationError, generate_question
+from eval_engine.generation.review import REVIEW_DIR, _question_block, build_batch
 from eval_engine.providers.base import ProviderError
 from eval_engine.providers.client import LLMClient, StructuredOutputError
 from eval_engine.providers.factory import build_client
+from eval_engine.schemas.common import TaskType
 from eval_engine.storage import RubricStore, UsageCounter, connect
+from eval_engine.storage.question_store import QuestionStore
 from eval_engine.validation import pilot
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
@@ -171,6 +175,49 @@ def pilot_report(
     """Compute metrics and the gate verdict; writes REPORT.md in the experiment folder."""
     text, _ = pilot.report(role or DEFAULT_JUDGES, out_dir=out)
     typer.echo(text)
+
+
+gen_app = typer.Typer(no_args_is_help=True, help="Phase 3: question and rubric generation.")
+app.add_typer(gen_app, name="gen")
+
+
+def _gen_deps() -> tuple[LLMClient, RubricStore, QuestionStore]:
+    load_env()
+    conn = connect(db_path())
+    return build_client(load_config(), conn), RubricStore(conn), QuestionStore(conn)
+
+
+@gen_app.command("question")
+def gen_question(
+    topic: Annotated[str, typer.Option(help="Topic from config/topics.yaml")],
+    task_type: Annotated[TaskType, typer.Option(help="Task type to generate")],
+) -> None:
+    """Generate one question + frozen rubric + reference answer, and print it."""
+    client, rubrics, questions = _gen_deps()
+    try:
+        g = generate_question(client, rubrics, questions, topic, task_type)
+    except GenerationError as e:
+        typer.secho("Failed checks twice:\n- " + "\n- ".join(e.problems), fg="red")
+        raise typer.Exit(1) from e
+    typer.echo("\n".join(_question_block(1, g.question, g.rubric)))
+    if g.first_attempt_problems:
+        typer.secho(
+            "First attempt was rejected for: " + "; ".join(g.first_attempt_problems), fg="yellow"
+        )
+
+
+@gen_app.command("batch")
+def gen_batch(
+    per_type: Annotated[int, typer.Option(help="Questions per task type")] = 10,
+) -> None:
+    """Phase 3 gate batch (task types x topics). Resumable; writes the review sheet."""
+    client, rubrics, questions = _gen_deps()
+    summary = build_batch(client, rubrics, questions, per_type=per_type)
+    typer.echo(json.dumps(summary, indent=1))
+    typer.echo(f"Review sheet: {REVIEW_DIR / 'review.md'}")
+    if summary["stopped"]:
+        typer.secho(f"Stopped: {summary['stopped']}. Rerun later to continue.", fg="yellow")
+        raise typer.Exit(2)
 
 
 if __name__ == "__main__":

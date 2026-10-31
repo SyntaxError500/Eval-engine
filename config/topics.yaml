@@ -1,0 +1,13 @@
+# Topics the user can pick. A topic makes a question interesting; it does not decide how it
+# is graded (design doc §2): that is the task type, declared by the generator.
+topics:
+  - history
+  - science
+  - technology
+  - ethics
+  - economics
+  - environment
+  - health
+  - literature
+  - geography
+  - everyday life
