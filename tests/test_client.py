@@ -49,7 +49,7 @@ def test_invalid_reply_gets_one_repair(
 def test_invalid_twice_raises_and_logs_error(
     make_client: Any, providers: dict[str, FakeProvider], conn: Any
 ) -> None:
-    providers["alpha"].push("not json", '{"status": 1}')
+    providers["alpha"].push("not json", "still not json", '{"status": 1}')
     with pytest.raises(StructuredOutputError):
         call(make_client())
     rows = conn.execute("SELECT error FROM llm_calls").fetchall()
@@ -243,3 +243,20 @@ def test_jitter_never_shortens_provider_wait(
     providers["alpha"].push(ProviderError("429", retryable=True, status=429, retry_after=35), ok())
     call(client)
     assert clock.sleeps == [35]
+
+
+def test_syntax_error_gets_fresh_resend_not_repair(
+    make_client: Any, providers: dict[str, FakeProvider]
+) -> None:
+    providers["alpha"].push('{"status": "ok", "echo": ', ok())
+    res = call(make_client())
+    assert res.call.repaired and res.call.attempts == 2
+    first, second = providers["alpha"].requests
+    assert second.user == first.user  # resent as-is, no repair suffix
+
+
+def test_three_parse_attempts_before_giving_up(
+    make_client: Any, providers: dict[str, FakeProvider]
+) -> None:
+    providers["alpha"].push("{broken", "{broken again", ok())
+    assert call(make_client()).value.echo == "t1"

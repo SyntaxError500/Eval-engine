@@ -4,6 +4,7 @@ role -> provider/model (config) -> render prompt -> cache lookup -> rate limit -
 retries -> validate against the Pydantic schema (one repair attempt) -> cache -> log.
 """
 
+import json
 import random
 import threading
 import time
@@ -31,6 +32,11 @@ REPAIR_SUFFIX = (
     "JSON schema.\nError: {error}\nPrevious reply:\n{reply}\n\n"
     "Reply again with only the corrected JSON object."
 )
+
+
+# Parse attempts per call: the first, then a fresh resend (syntax errors) or a repair
+# prompt (schema errors). Groq gpt-oss broke JSON syntax on about a third of first replies.
+MAX_PARSE_ATTEMPTS = 3
 
 
 class StructuredOutputError(Exception):
@@ -134,24 +140,30 @@ class LLMClient:
 
         t0 = self._clock()
         try:
-            completion = self._send(rcfg, req, record)
-            try:
-                value = _parse(completion.text, schema)
-            except (ValueError, ValidationError) as first_error:
-                record.repaired = True
-                repair_req = replace(
-                    req,
-                    user=req.user
-                    + REPAIR_SUFFIX.format(error=_short(first_error), reply=completion.text[:4000]),
-                )
-                completion = self._send(rcfg, repair_req, record)
+            next_req = req
+            for parse_attempt in range(1, MAX_PARSE_ATTEMPTS + 1):
+                completion = self._send(rcfg, next_req, record)
                 try:
                     value = _parse(completion.text, schema)
-                except (ValueError, ValidationError) as second_error:
-                    raise StructuredOutputError(
-                        f"{role}/{prompt}: invalid {schema.__name__} after repair: "
-                        f"{_short(second_error)}"
-                    ) from second_error
+                    break
+                except (ValueError, ValidationError) as e:
+                    if parse_attempt == MAX_PARSE_ATTEMPTS:
+                        raise StructuredOutputError(
+                            f"{role}/{prompt}: invalid {schema.__name__} after "
+                            f"{MAX_PARSE_ATTEMPTS} attempts: {_short(e)}"
+                        ) from e
+                    record.repaired = True
+                    if isinstance(e, json.JSONDecodeError):
+                        # Broken syntax: a fresh sample usually comes out whole, while
+                        # echoing the long broken reply back tends to get it broken again.
+                        next_req = req
+                    else:
+                        # Valid JSON, wrong content: the model needs to see what was wrong.
+                        next_req = replace(
+                            req,
+                            user=req.user
+                            + REPAIR_SUFFIX.format(error=_short(e), reply=completion.text[:4000]),
+                        )
         except Exception as e:
             record.error = f"{type(e).__name__}: {e}"
             record.latency_ms = int((self._clock() - t0) * 1000)
