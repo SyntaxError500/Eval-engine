@@ -4,22 +4,58 @@
   "647b3337f666",
   "5a492c637640",
   "886e0fcd1e3d",
-  "e82fb3602421"
+  "476bdbe5578d",
+  "17b9d268178a",
+  "2e67ba664d8f",
+  "c555e910c2cb",
+  "3d813378c122",
+  "46b076f456cf",
+  "082591e7ec4e",
+  "e82fb3602421",
+  "5d564b58c11c",
+  "80b5228e62c0",
+  "595e6e0cc0b2",
+  "e4a2b3b2341d",
+  "bb2a1833528d",
+  "17c1b10632b5",
+  "e9829aabdcd6",
+  "91798e725180",
+  "669bce9c85fb",
+  "1e9d95d9130f",
+  "f3c88f16262f",
+  "c08ec38ec72f",
+  "3f8052a62a58",
+  "610c46d48e48",
+  "3dadfd69ad7c",
+  "23575fb39cfd",
+  "4881228365fa"
  ],
  "retried_after_checks": [
-  "647b3337f666",
-  "5a492c637640",
-  "886e0fcd1e3d"
+  "476bdbe5578d",
+  "17b9d268178a",
+  "2e67ba664d8f",
+  "c555e910c2cb",
+  "e4a2b3b2341d",
+  "bb2a1833528d",
+  "669bce9c85fb",
+  "c08ec38ec72f",
+  "3f8052a62a58",
+  "3dadfd69ad7c",
+  "4881228365fa"
  ],
  "failed_checks_twice": [
   {
    "task_type": "factual",
    "topic": "history",
    "problems": [
-    "P1.C1 demands 'exactly' something the question doesn't; accept at least what the question asks for",
-    "P1.C2 'requires' quote \"name three distinct battles and give the year each occurred\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it",
-    "P1.C3 'requires' quote \"name three distinct battles and give the year each occurred\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it",
-    "P1.C4 'requires' quote \"name three distinct battles and give the year each occurred\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it"
+    "P1.C1 demands 'exactly' something the question doesn't; accept at least what the question asks for"
+   ]
+  },
+  {
+   "task_type": "analytical",
+   "topic": "science",
+   "problems": [
+    "the question asks for several alternatives (\"two scientific explanations\"). Ask for ONE argument or explanation; the different valid ways to answer belong in the rubric's paths, and a learner only needs one of them"
    ]
   }
  ]
