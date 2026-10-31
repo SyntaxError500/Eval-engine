@@ -85,6 +85,7 @@ These came out of reviewing the design text against the pipeline diagram. Each o
 | D3 | Where does originality count for creative tasks? | Under expression (G5) | Phase 4 gate |
 | D4 | Single judge or ensemble? | Single (Gemini 3.5 Flash Lite). An ensemble (Gemini + Qwen on Groq + local Qwen, majority vote) is tested in Phase 7 only if leniency or correlation is borderline. Its cost is bounded by Groq's daily token cap | Phase 2 and Phase 7 gates |
 | D5 | Which model phrases feedback? | Local Qwen. Fall back to Gemini Flash (20/day is enough for phrasing review) if quality is poor in Phase 6 review | Phase 6 gate |
+| D6 | The judge changes its label on 12% of answers across identical runs (Phase 2). How do we keep grades stable? | An identical resubmission is answered from the cache, so it gets the same grade. In Phase 4, test a majority of 3 calls only for borderline verdicts (low path confidence or a single unmet core criterion), and report its cost and effect | Phase 4 gate |
 
 ---
 
@@ -247,6 +248,8 @@ Rough effort assumes one intern working part-time on other things. Adjust as you
 
 ### Phase 2 — Judge pilot on a human-graded corpus (≈1 week) ⚠️ critical gate
 
+> **Done (2026-10-31).** Judge confirmed: Gemini 3.5 Flash Lite (leniency −0.066, QWK 0.577, 2-way 78.1% on 302 held-out answers). Qwen on Groq is rejected as a judge (−0.229, QWK 0.457), and its verifier role must be proven in Phase 5. Full results, decisions and known weaknesses: [`experiments/2_judge_pilot/FINDINGS.md`](../experiments/2_judge_pilot/FINDINGS.md).
+
 The goal is to confirm the judge before anything is built on it.
 
 **Tasks**
@@ -318,7 +321,7 @@ The goal is to confirm the judge before anything is built on it.
 **Tasks**
 1. **Trigger**: max path confidence `< threshold` (§6) on a non-creative task.
 2. **Proposer** (gpt-oss-120b on Groq): sees **only** the question and the answer, not the rubric scores. Narrow question: "Does this answer contain a valid approach not covered by these paths?" Returns `{is_new_valid_approach, proposed_path (criteria in rubric schema), justification}`. It does see the existing path descriptions, so it doesn't re-propose them.
-3. **Verifier** (Qwen on Groq), with adversarial framing: "Try to break this proposed path: find the factual error, the invalid inference, the missing step, or show it duplicates an existing path." Returns `{accept, reasons, failure_type}`. The framing is a config flag (`adversarial | neutral`) so the experiment in step 6 can isolate it.
+3. **Verifier** (Qwen on Groq; Phase 2 found it a weak *judge*, so its verifier role must pass the step 6 test on its own merits, otherwise swap the model before building on it), with adversarial framing: "Try to break this proposed path: find the factual error, the invalid inference, the missing step, or show it duplicates an existing path." Returns `{accept, reasons, failure_type}`. The framing is a config flag (`adversarial | neutral`) so the experiment in step 6 can isolate it.
 4. **Accept** → create rubric version n+1 (`parent_hash` set, `source: amendment`), re-score against the amended path, and log both hashes.
    **Reject** → score against the original rubric; record `divergence_reason` for feedback.
 5. **Rubric store reuse** (G3): later evaluations of the same question load the latest version, so an accepted path is matched by path ID instead of being re-derived.

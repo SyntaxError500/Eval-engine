@@ -8,14 +8,14 @@ Scales and mapping rules are defined in `src/eval_engine/validation/labels.py` a
 
 | Judge | Scored | Leniency (target ±0.1) | QWK | Spearman | 2-way acc | 3-way macro-F1 |
 |---|---|---|---|---|---|---|
-| judge | 258/258 | -0.076 [-0.130, -0.025] | 0.611 [0.520, 0.696] | 0.623 [0.534, 0.707] | 0.802 [0.752, 0.849] | 0.612 [0.544, 0.674] |
+| judge | 302/302 | -0.066 [-0.113, -0.018] | 0.577 [0.485, 0.662] | 0.587 [0.494, 0.671] | 0.781 [0.732, 0.825] | 0.595 [0.533, 0.652] |
 
 ## By dataset
 
 | Judge | Dataset | Scored | Leniency | QWK | 2-way acc |
 |---|---|---|---|---|---|
 | judge | SciEntsBank | 152/152 | -0.132 [-0.188, -0.076] | 0.698 [0.600, 0.788] | 0.842 [0.783, 0.895] |
-| judge | Beetle | 106/106 | 0.005 [-0.085, 0.099] | 0.490 [0.325, 0.653] | 0.745 [0.670, 0.830] |
+| judge | Beetle | 150/150 | 0.000 [-0.073, 0.077] | 0.457 [0.311, 0.582] | 0.720 [0.647, 0.787] |
 
 ## 3-way confusion (rows: human, columns: engine)
 
@@ -23,10 +23,16 @@ Scales and mapping rules are defined in `src/eval_engine/validation/labels.py` a
 
 | human \ engine | correct | contradictory | incorrect |
 |---|---|---|---|
-| correct | 81 | 2 | 22 |
-| contradictory | 10 | 17 | 24 |
-| incorrect | 17 | 12 | 73 |
+| correct | 89 | 3 | 26 |
+| contradictory | 14 | 21 | 30 |
+| incorrect | 23 | 13 | 83 |
+
+## Run-to-run stability
+
+| Judge | Items | Repeats | Criterion flip rate | Label flip rate |
+|---|---|---|---|---|
+| judge | 50 | 3 | 0.047 | 0.120 |
 
 ## Gate
 
-PASS: |leniency| 0.076 <= 0.1 and no candidate has a QWK confidence interval entirely above the primary judge's.
+PASS: |leniency| 0.066 <= 0.1 and no candidate has a QWK confidence interval entirely above the primary judge's.

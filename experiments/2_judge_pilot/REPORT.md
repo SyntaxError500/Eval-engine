@@ -9,7 +9,7 @@ Scales and mapping rules are defined in `src/eval_engine/validation/labels.py` a
 | Judge | Scored | Leniency (target ±0.1) | QWK | Spearman | 2-way acc | 3-way macro-F1 |
 |---|---|---|---|---|---|---|
 | judge | 297/302 | -0.088 [-0.135, -0.044] | 0.591 [0.500, 0.667] | 0.610 [0.522, 0.689] | 0.778 [0.727, 0.822] | 0.587 [0.526, 0.640] |
-| judge_candidate_qwen | 137/137 | -0.270 [-0.332, -0.208] | 0.506 [0.399, 0.612] | 0.645 [0.552, 0.731] | 0.701 [0.620, 0.774] | 0.569 [0.472, 0.652] |
+| judge_candidate_qwen | 297/302 | -0.229 [-0.278, -0.185] | 0.457 [0.364, 0.545] | 0.542 [0.443, 0.629] | 0.751 [0.700, 0.801] | 0.587 [0.527, 0.644] |
 | judge_candidate_local | 284/302 | -0.081 [-0.136, -0.028] | 0.518 [0.421, 0.604] | 0.532 [0.439, 0.621] | 0.743 [0.694, 0.796] | 0.547 [0.484, 0.602] |
 
 ## By dataset
@@ -18,8 +18,8 @@ Scales and mapping rules are defined in `src/eval_engine/validation/labels.py` a
 |---|---|---|---|---|---|
 | judge | SciEntsBank | 152/152 | -0.168 [-0.220, -0.118] | 0.669 [0.567, 0.752] | 0.796 [0.724, 0.855] |
 | judge | Beetle | 145/150 | -0.003 [-0.076, 0.076] | 0.522 [0.383, 0.649] | 0.759 [0.690, 0.828] |
-| judge_candidate_qwen | SciEntsBank | 137/137 | -0.270 [-0.332, -0.208] | 0.506 [0.399, 0.612] | 0.701 [0.620, 0.774] |
-| judge_candidate_qwen | Beetle | 0/0 | n/a | n/a | n/a |
+| judge_candidate_qwen | SciEntsBank | 152/152 | -0.286 [-0.349, -0.227] | 0.471 [0.372, 0.579] | 0.704 [0.632, 0.770] |
+| judge_candidate_qwen | Beetle | 145/150 | -0.169 [-0.248, -0.093] | 0.446 [0.298, 0.578] | 0.800 [0.731, 0.855] |
 | judge_candidate_local | SciEntsBank | 146/152 | -0.175 [-0.236, -0.113] | 0.579 [0.460, 0.689] | 0.760 [0.692, 0.829] |
 | judge_candidate_local | Beetle | 138/150 | 0.018 [-0.065, 0.098] | 0.465 [0.324, 0.611] | 0.725 [0.645, 0.797] |
 
@@ -37,9 +37,9 @@ Scales and mapping rules are defined in `src/eval_engine/validation/labels.py` a
 
 | human \ engine | correct | contradictory | incorrect |
 |---|---|---|---|
-| correct | 23 | 8 | 31 |
-| contradictory | 0 | 16 | 3 |
-| incorrect | 2 | 14 | 40 |
+| correct | 56 | 9 | 53 |
+| contradictory | 8 | 31 | 24 |
+| incorrect | 4 | 19 | 93 |
 
 **judge_candidate_local**
 

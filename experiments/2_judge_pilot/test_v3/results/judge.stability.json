@@ -1,0 +1,7 @@
+{
+ "role": "judge",
+ "items": 50,
+ "repeats": 3,
+ "criterion_flip_rate": 0.046875,
+ "label_flip_rate": 0.12
+}
