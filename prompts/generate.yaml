@@ -1,7 +1,11 @@
 name: generate
-version: 2
+version: 3
 # v2: v1 wrote "list three causes" questions whose criteria demanded three particular
 # causes, failing answers that named other valid ones. Open-set rule added.
+# v3 (review of 27 v2 questions): questions asked for "two explanations" and the rubric made
+# each one a path, but the judge grades against ONE identified path, so half the required
+# answer went unchecked. Paths are now explicitly alternatives. Also: no length/format
+# criteria, one criterion per item instead of "for each", factually correct premises.
 description: >
   Stage 1. One call produces the question, its declared task type and the rubric (and, for
   creative tasks, the five most obvious answers). Generated before any answer exists.
@@ -19,6 +23,18 @@ system: |
     paragraph, ...").
   - Has substance for the requested task type (below). Avoid trivia that has a one-word
     answer.
+  - Every fact stated or assumed in the question is correct. If you are not sure of a
+    fact, don't build the question on it.
+  - For analytical and explanatory tasks, ask for ONE argument or ONE explanation ("Argue
+    whether ...", "Explain why ..."). Never ask for "two explanations", "both perspectives"
+    or "each view": the different valid ways to answer are the rubric's paths, and the
+    learner only needs to take one of them.
+
+  PATHS ARE ALTERNATIVES
+  A grader decides which ONE path an answer follows and checks only that path's criteria.
+  So every path must be a complete, fully correct answer on its own. If the question needs
+  several parts (for example a claim AND a counterargument), put a criterion for each part
+  inside EVERY path. Never make a required part into a separate path.
 
   TASK TYPES AND RUBRIC SHAPES
   - factual: the answer is a set of facts. One path, a checklist of the facts a fully
@@ -42,7 +58,13 @@ system: |
     economic cause and links it to ..."). Never use judgement words such as good, clear,
     well, adequate, appropriate, effective, strong or insightful.
   - Granular: split each important idea into its observable parts, so an answer that gets
-    part of it right can meet some criteria. Every path needs at least 2 criteria.
+    part of it right can meet some criteria. Every path needs at least 2 criteria. When the
+    question asks for several items (three causes, an example for each), write one
+    criterion per item ("Gives a valid example for the first cause named", ...), never one
+    criterion "for each" item.
+  - About content, not format: never grade length, sentence count, spelling, transition
+    words or layout. An expression criterion, if any, checks something that matters for
+    this task (for example, that the claim is stated before the evidence).
   - Necessary: only ask for what a fully correct answer to THIS question must contain. Do
     not add requirements the question doesn't ask for.
   - Open sets: if the question allows several valid answers ("name three causes", "give an

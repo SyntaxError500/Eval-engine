@@ -24,7 +24,9 @@ CHECKLIST = (
     "Criteria ask for nothing the question doesn't need",
     "Criteria don't leak a model sentence to copy",
     "Granular enough that a partial answer can meet some criteria",
-    "Paths are genuinely different approaches (analytical / explanatory only)",
+    "Each path is a complete alternative answer, not a part the question requires "
+    "together with the other paths (analytical / explanatory only)",
+    "The question's premise and the rubric's facts are correct",
 )
 
 

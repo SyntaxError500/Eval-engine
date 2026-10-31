@@ -239,3 +239,24 @@ def test_batch_ignores_questions_from_older_prompt_versions(
         questions.save(q.model_copy(update={"generator_prompt_hash": "old"}))
     again = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
     assert again["built"] == 4 and again["skipped"] == 0
+
+
+@pytest.mark.parametrize(
+    "statement",
+    [
+        "Uses between three and five sentences",
+        "Answers in 3 to 8 sentences",
+        "Presents the argument in a single sentence",
+        "Keeps the answer under 100 words",
+    ],
+)
+def test_length_criteria_rejected(statement: str) -> None:
+    d = draft("factual")
+    d["paths"][0]["criteria"][0]["statement"] = statement
+    assert any("length" in p for p in problems_for(d))
+
+
+def test_content_mentioning_sentence_is_fine() -> None:
+    d = draft("factual")
+    d["paths"][0]["criteria"][0]["statement"] = "Quotes the opening sentence of the speech"
+    assert not [p for p in problems_for(d) if "length" in p]

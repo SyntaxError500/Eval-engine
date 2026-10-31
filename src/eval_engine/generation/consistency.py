@@ -43,6 +43,15 @@ VAGUE_WORDS = (
 _VAGUE = re.compile(r"\b(" + "|".join(re.escape(w) for w in VAGUE_WORDS) + r")\b", re.I)
 
 MIN_CRITERIA_PER_PATH = 2  # partial credit needs at least two (Phase 2 lesson)
+
+# Criteria that grade length or sentence count measure nothing about the answer's content
+# (seen in Phase 3 review: "Uses between three and five sentences", "in a single sentence").
+_NUM = r"(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|single)"
+_LENGTH = re.compile(
+    rf"\b{_NUM}\s*(?:(?:to|-|\u2013|\u2011|and)\s*{_NUM}\s*)?sentences?\b|\bsentence count\b|"
+    r"\bword count\b|\b\d+\s*words\b",
+    re.IGNORECASE,
+)
 MULTI_PATH_TYPES = frozenset({TaskType.ANALYTICAL, TaskType.EXPLANATORY})
 
 
@@ -77,6 +86,11 @@ def check_rubric(
         if missing:
             problems.append(f"{where} has no criterion for dimension(s) {missing}")
         for c in path.criteria:
+            if _LENGTH.search(c.statement):
+                problems.append(
+                    f"{c.criterion_id} grades length or sentence count; criteria must be "
+                    "about content"
+                )
             vague = sorted({m.lower() for m in _VAGUE.findall(c.statement)})
             if vague:
                 problems.append(
