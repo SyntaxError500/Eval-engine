@@ -210,6 +210,18 @@ def _normalise(text: str) -> str:
     return " " + _NON_WORD.sub(" ", text.lower()).strip() + " "
 
 
+def _quote_in_question(quote: str, question: str) -> bool:
+    """Exact (normalised) substring, or every content word of the quote appears in the
+    question. The model often quotes with small paraphrases; demanding a verbatim match
+    cost a full retry each time, while the safeguard only needs the words to come from the
+    question."""
+    if _normalise(quote) in _normalise(question):
+        return True
+    q_words = set(_normalise(question).split())
+    content = [w for w in _normalise(quote).split() if len(w) > 3]
+    return len(content) >= 2 and all(w in q_words for w in content)
+
+
 def _traceability_problems(draft: RubricDraft, c: Criterion) -> list[str]:
     """Each criterion must quote the words of the question that ask for it, so a rubric can't
     quietly demand things (a numeric example, a named theory, a rebuttal) nobody asked for."""
@@ -222,7 +234,7 @@ def _traceability_problems(draft: RubricDraft, c: Criterion) -> list[str]:
             f"{c.criterion_id} has no 'requires' quote; quote the exact words of the question "
             "that ask for it, or drop the criterion if the question doesn't ask for it"
         ]
-    if _normalise(quote) not in _normalise(draft.question):
+    if not _quote_in_question(quote, draft.question):
         return [
             f"{c.criterion_id} 'requires' quote \"{quote[:80]}\" is not in the question; quote "
             "the question's own words, or drop the criterion if the question doesn't ask for it"

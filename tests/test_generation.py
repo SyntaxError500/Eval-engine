@@ -440,3 +440,12 @@ def test_judgement_word_in_question_rejected() -> None:
 def test_subject_matter_effectiveness_in_question_is_fine() -> None:
     d = draft("analytical", question="Argue whether a carbon tax effectively reduces emissions.")
     assert not [p for p in problems_for(d) if "the question uses" in p]
+
+
+def test_lightly_paraphrased_quote_accepted_but_invented_one_not() -> None:
+    q = "In a short paragraph, name three distinct battles of the war and give the year of each."
+    d = draft("factual", question=q)
+    d["paths"][0]["criteria"][0]["requires"] = "name three distinct battles and give the year each"
+    d["paths"][0]["criteria"][1]["requires"] = "cite a primary source for each battle"
+    found = [p for p in problems_for(d) if "requires" in p]
+    assert len(found) == 1 and "P1.C2" in found[0]

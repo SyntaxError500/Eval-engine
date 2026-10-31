@@ -1,53 +1,25 @@
 {
  "question_ids": [
-  "1dadecc3b4e0",
-  "e35f2e5583c8",
-  "6a51026e61ee",
-  "741aaa7901e4",
-  "01b534762e93",
-  "290925ed94ab",
-  "a4fd29244a3c",
-  "4567a84d2516",
-  "f6fbe2ae1f26",
-  "e78b792f3c20",
-  "845c66360021",
-  "98c16d5d0dc4",
-  "edc42079d733",
-  "77d217aac87c",
-  "2b6545d8938b",
-  "e41a8cc6154f",
-  "c6f36e0e94db",
-  "e6459e7e28e7",
-  "5f18b45daf59",
-  "ce296f896745",
-  "35283af8f248",
-  "35a750dadfc7",
-  "a14f56512e37",
-  "e19a2d15a2c7",
-  "262d87e0feea",
-  "99dceeec35ba",
-  "9bd22f1114b3",
-  "c4d9f13d146f",
-  "4f27da923721",
-  "a96665be80bf",
-  "8480128da972",
-  "c063fe7120b3",
-  "ad7accec3945",
-  "1680e241cc2e",
-  "f96f805a4666",
-  "9260f788d0be",
-  "744452debae8",
-  "9894231ecaff",
-  "6db333efcd45"
+  "512f892a6afa",
+  "647b3337f666",
+  "5a492c637640",
+  "886e0fcd1e3d",
+  "e82fb3602421"
  ],
- "retried_after_checks": [],
+ "retried_after_checks": [
+  "647b3337f666",
+  "5a492c637640",
+  "886e0fcd1e3d"
+ ],
  "failed_checks_twice": [
   {
-   "task_type": "analytical",
-   "topic": "environment",
+   "task_type": "factual",
+   "topic": "history",
    "problems": [
-    "P1.C4 covers several items at once ('for each'); write one criterion per item so a partial answer can earn some of them",
-    "P2.C4 covers several items at once ('for each'); write one criterion per item so a partial answer can earn some of them"
+    "P1.C1 demands 'exactly' something the question doesn't; accept at least what the question asks for",
+    "P1.C2 'requires' quote \"name three distinct battles and give the year each occurred\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it",
+    "P1.C3 'requires' quote \"name three distinct battles and give the year each occurred\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it",
+    "P1.C4 'requires' quote \"name three distinct battles and give the year each occurred\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it"
    ]
   }
  ]
