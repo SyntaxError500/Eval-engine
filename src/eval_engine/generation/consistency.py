@@ -54,6 +54,20 @@ _LENGTH = re.compile(
 )
 MULTI_PATH_TYPES = frozenset({TaskType.ANALYTICAL, TaskType.EXPLANATORY})
 
+# Questions that ask for several explanations/perspectives get each one turned into a
+# "path", but the judge grades a single identified path, so the rest go unchecked. Seen in
+# ~8/27 v2 questions and still produced under v3's prompt rule, hence a hard check.
+# "two reasons"/"two arguments" for one position are parts of one answer and stay allowed.
+_ALTERNATIVES = (
+    r"(?:explanations?|mechanisms?|perspectives?|viewpoints?|views|ways|theories|"
+    r"accounts|interpretations|approaches|models)"
+)
+_ASKS_FOR_SEVERAL = re.compile(
+    rf"\b(?:two|three|both|each|multiple|several|different|distinct|contrasting)\b"
+    rf"[^.?!]{{0,40}}?\b{_ALTERNATIVES}\b|\bone that\b[^.?!]*\banother\b",
+    re.IGNORECASE,
+)
+
 
 def required_dimensions(task_type: TaskType, weights: dict[str, dict[str, float]]) -> set[str]:
     row = weights[task_type.value]
@@ -105,6 +119,13 @@ def check_rubric(
             problems.append(f"{where}: an analytical path needs a core reasoning criterion")
 
     if draft.task_type in MULTI_PATH_TYPES:
+        m = _ASKS_FOR_SEVERAL.search(draft.question)
+        if m:
+            problems.append(
+                f'the question asks for several alternatives ("{m.group(0)}"). Ask for ONE '
+                "argument or explanation; the different valid ways to answer belong in the "
+                "rubric's paths, and a learner only needs one of them"
+            )
         if len(draft.paths) < 2:
             problems.append(
                 f"{draft.task_type.value} rubrics need at least 2 genuinely different "

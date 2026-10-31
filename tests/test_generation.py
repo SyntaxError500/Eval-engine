@@ -260,3 +260,29 @@ def test_content_mentioning_sentence_is_fine() -> None:
     d = draft("factual")
     d["paths"][0]["criteria"][0]["statement"] = "Quotes the opening sentence of the speech"
     assert not [p for p in problems_for(d) if "length" in p]
+
+
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Evaluate two different scientific explanations for why water expands when it freezes.",
+        "Explain two distinct ways that wetlands help lessen flooding.",
+        "Give two explanations: one that emphasizes energy use, and another on contrast.",
+        "Evaluate two contrasting perspectives on how AI will affect employment.",
+    ],
+)
+def test_questions_asking_for_several_alternatives_rejected(question: str) -> None:
+    assert any(
+        "several alternatives" in p for p in problems_for(draft("explanatory", question=question))
+    )
+
+
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Argue whether a basic income would reduce inequality, with two distinct arguments.",
+        "Explain why smartphones use OLED rather than LCD displays.",
+    ],
+)
+def test_single_answer_questions_allowed(question: str) -> None:
+    assert not [p for p in problems_for(draft("analytical", question=question)) if "several" in p]
