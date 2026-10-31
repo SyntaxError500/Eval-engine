@@ -42,7 +42,7 @@ class RoleConfig(BaseModel):
     temperature: float = Field(ge=0.0, le=2.0)
     max_output_tokens: int = Field(gt=0)
     reasoning_effort: str | None = None
-    json_mode: Literal["schema", "object"] = "schema"
+    json_mode: Literal["schema", "object", "strict"] = "schema"
 
 
 class RetryConfig(BaseModel):

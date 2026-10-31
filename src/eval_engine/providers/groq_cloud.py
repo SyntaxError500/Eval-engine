@@ -10,6 +10,7 @@ from eval_engine.providers.base import (
     QuotaExhausted,
     is_retryable_status,
 )
+from eval_engine.providers.jsonutil import strict_schema
 
 
 class GroqProvider:
@@ -27,12 +28,13 @@ class GroqProvider:
             system += "\n\nThe reply must be one JSON object matching this JSON Schema:\n"
             system += json.dumps(req.json_schema)
         elif req.json_schema is not None:
+            strict = req.json_mode == "strict"
             kwargs["response_format"] = {
                 "type": "json_schema",
                 "json_schema": {
                     "name": req.schema_name,
-                    "schema": req.json_schema,
-                    "strict": False,
+                    "schema": strict_schema(req.json_schema) if strict else req.json_schema,
+                    "strict": strict,
                 },
             }
         if req.reasoning_effort is not None:

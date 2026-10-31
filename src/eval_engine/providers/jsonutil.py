@@ -45,3 +45,42 @@ def extract_json(text: str) -> Any:
         if start == -1 or end <= start:
             raise
         return json.loads(s[start : end + 1])
+
+
+# Validation keywords strict structured-output modes typically reject. Our own Pydantic
+# validation still enforces them after the reply arrives.
+_STRICT_DROP = frozenset(
+    {
+        "minLength",
+        "maxLength",
+        "minItems",
+        "maxItems",
+        "minimum",
+        "maximum",
+        "exclusiveMinimum",
+        "exclusiveMaximum",
+        "pattern",
+        "format",
+        "default",
+    }
+)
+
+
+def strict_schema(schema: dict[str, Any]) -> dict[str, Any]:
+    """Form required by strict constrained decoding: every object closed
+    (additionalProperties false) with every property required, constraint keywords removed.
+    Optional fields stay nullable through their anyOf/null type."""
+
+    def walk(node: Any) -> Any:
+        if isinstance(node, dict):
+            out = {k: walk(v) for k, v in node.items() if k not in _STRICT_DROP}
+            if out.get("type") == "object" and "properties" in out:
+                out["additionalProperties"] = False
+                out["required"] = list(out["properties"])
+            return out
+        if isinstance(node, list):
+            return [walk(v) for v in node]
+        return node
+
+    result: dict[str, Any] = walk(schema)
+    return result

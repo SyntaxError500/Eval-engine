@@ -8,7 +8,7 @@ from typing import Any
 from eval_engine.config import REPO_ROOT, load_topics, load_weights
 from eval_engine.generation.generate import GenerationError, generate_question, write_reference
 from eval_engine.providers.base import QuotaExhausted
-from eval_engine.providers.client import LLMClient
+from eval_engine.providers.client import LLMClient, StructuredOutputError
 from eval_engine.schemas.common import TaskType
 from eval_engine.schemas.question import Question
 from eval_engine.schemas.rubric import Rubric
@@ -69,6 +69,12 @@ def build_batch(
             except GenerationError as e:
                 failed.append(
                     {"task_type": task_type.value, "topic": topic, "problems": e.problems}
+                )
+                continue
+            except StructuredOutputError as e:
+                # One malformed reply must not end the batch; the slot is retried next run.
+                failed.append(
+                    {"task_type": task_type.value, "topic": topic, "problems": [str(e)[:300]]}
                 )
                 continue
             built += 1

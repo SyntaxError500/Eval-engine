@@ -51,7 +51,7 @@ roles:
     temperature: 0.3              # 0.7 intermittently broke long nested JSON; variety comes from the avoid list
     max_output_tokens: 6000
     reasoning_effort: medium
-    json_mode: object               # Groq constrained decoding garbles nested schemas
+    json_mode: strict               # non-strict schema mode garbled nested JSON; plain JSON mode degenerated into string lists
   reference_answer:
     provider: groq
     model: openai/gpt-oss-120b
@@ -59,7 +59,7 @@ roles:
     temperature: 0.7
     max_output_tokens: 3000
     reasoning_effort: low
-    json_mode: object               # Groq constrained decoding garbles nested schemas
+    json_mode: strict               # non-strict schema mode garbled nested JSON; plain JSON mode degenerated into string lists
   amendment_proposer:
     provider: groq
     model: openai/gpt-oss-120b
@@ -67,7 +67,7 @@ roles:
     temperature: 0.3
     max_output_tokens: 3000
     reasoning_effort: medium
-    json_mode: object               # Groq constrained decoding garbles nested schemas
+    json_mode: strict               # non-strict schema mode garbled nested JSON; plain JSON mode degenerated into string lists
   judge:
     provider: gemini
     # Pinned. Free-tier Flash models allow only 20 requests/day (the 302-item pilot alone
