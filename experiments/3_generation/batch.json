@@ -27,11 +27,15 @@
   "c08ec38ec72f",
   "3f8052a62a58",
   "610c46d48e48",
-  "89443fe631e8",
   "23575fb39cfd",
   "4881228365fa",
-  "f894ae76980e",
+  "33f285706f47",
+  "b687c2df5103",
+  "a93e1782531b",
   "30cfecdb54df",
+  "b54dae9759d1",
+  "1a636015a193",
+  "9e4b003116e1",
   "6878445611ca"
  ],
  "retried_after_checks": [],
@@ -40,7 +44,22 @@
    "task_type": "factual",
    "topic": "ethics",
    "problems": [
-    "path P1 has no criterion for dimension(s) ['completeness']"
+    "path P1 has no criterion for dimension(s) ['completeness']: set dimension \"completeness\" on the criterion that checks a second part the question asks for (e.g. the example, the effect, the second item), quoting those words"
+   ]
+  },
+  {
+   "task_type": "explanatory",
+   "topic": "history",
+   "problems": [
+    "P1.C1 uses judgement word(s) ['clear']; state what the answer contains instead (e.g. 'States a clear position' -> 'States a position (for or against)')",
+    "P2.C1 uses judgement word(s) ['clear']; state what the answer contains instead (e.g. 'States a clear position' -> 'States a position (for or against)')"
+   ]
+  },
+  {
+   "task_type": "creative",
+   "topic": "geography",
+   "problems": [
+    "P1.C4 has no 'requires' quote; quote the exact words of the question that ask for it, or drop the criterion if the question doesn't ask for it"
    ]
   }
  ]

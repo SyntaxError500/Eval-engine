@@ -1,6 +1,6 @@
 # Phase 3: generated question review
 
-33 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
+37 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
 
 Checklist per question:
 
@@ -475,31 +475,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 28. explanatory · history · `89443fe631e8`
-
-**Q:** In a short paragraph (3–8 sentences), explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union. Identify one key factor that contributed to this outcome.
-
-**Path P1:** Explanation that the Bolshevik seizure of power in October 1917 directly led to the establishment of the Soviet Union.
-
-- `P1.C1` correctness, core, w=1: Explains that the Bolshevik seizure of power in October 1917 directly led to the establishment of the Soviet Union. ← asked by: "explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union"
-- `P1.C2` completeness, core, w=1: Identifies Lenin's leadership as a key factor that contributed to this outcome. ← asked by: "Identify one key factor that contributed to this outcome"
-- `P1.C3` reasoning, non-core, w=0.5: Shows that Lenin's leadership enabled the Bolsheviks to consolidate power, linking the factor to the creation of the Soviet Union. ← asked by: "Identify one key factor that contributed to this outcome"
-
-**Path P2:** Explanation that the Russian Civil War allowed the Bolsheviks to eliminate rivals and form a centralized Soviet state.
-
-- `P2.C1` correctness, core, w=1: Explains that the Russian Civil War (1917‑1922) allowed the Bolsheviks to eliminate rival forces and thereby create the Soviet Union. ← asked by: "explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union"
-- `P2.C2` completeness, core, w=1: Identifies the Red Army's victory as a key factor that contributed to this outcome. ← asked by: "Identify one key factor that contributed to this outcome"
-- `P2.C3` reasoning, non-core, w=0.5: Links the Red Army's victory to the consolidation of Bolshevik power and the formation of the Soviet state. ← asked by: "Identify one key factor that contributed to this outcome"
-
-**Path P3:** Explanation that Marxist‑Leninist ideology guided the creation of a new socialist state, leading to the Soviet Union.
-
-- `P3.C1` correctness, core, w=1: Explains that the adoption of Marxist‑Leninist ideology after the 1917 Revolution provided the guiding framework for establishing the Soviet Union. ← asked by: "explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union"
-- `P3.C2` completeness, core, w=1: Identifies the 1918 Constitution (or similar foundational document) as a key factor that contributed to this outcome. ← asked by: "Identify one key factor that contributed to this outcome"
-- `P3.C3` reasoning, non-core, w=0.5: Shows how the identified document institutionalized Marxist‑Leninist principles, linking it to the creation of the Soviet Union. ← asked by: "Identify one key factor that contributed to this outcome"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 29. explanatory · science · `23575fb39cfd`
+## 28. explanatory · science · `23575fb39cfd`
 
 **Q:** Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).
 
@@ -511,7 +487,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 30. creative · ethics · `4881228365fa`
+## 29. creative · ethics · `4881228365fa`
 
 **Q:** Write a brief scene of 3‑8 sentences in which a journalist must choose whether to publish a leaked report about a corporation's harmful practices or keep it hidden to protect sources. The scene must include at least one line of dialogue that reveals the journalist's internal conflict, a turning point where the decision is made, must not contain the phrase “ethical dilemma”, and must avoid the clichés “the world will never be the same”, “the stakes are high”, and “moral crossroads”.
 
@@ -534,28 +510,71 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 31. creative · economics · `f894ae76980e`
+## 30. creative · economics · `33f285706f47`
 
-**Q:** Write a short dialogue (3–5 sentences) between a small‑business owner and a bank loan officer about rising interest rates. The dialogue must (1) mention the rise in interest rates, (2) show the owner's concern about higher borrowing costs, and (3) include the loan officer offering one possible strategy to mitigate the impact.
+**Q:** Write a short scene (3–5 sentences) in which a recent college graduate, Alex, discovers that the monthly rent for their first apartment has increased. The scene must (1) mention the new rent amount, (2) show Alex's internal thought about whether to stay or move, and (3) include a brief reference to a roommate offering to share a cheaper place. Write the scene using present‑tense narration and do not use any of the clichés: "money talks", "price is what you pay", "cost of living".
 
-**Path P1:** Answer follows the required dialogue constraints.
+**Path P1:** All required constraints satisfied.
 
-- `P1.C1` correctness, core, w=1: Mentions the rise in interest rates. ← asked by: "mention the rise in interest rates"
-- `P1.C2` correctness, core, w=1: Shows the owner's concern about higher borrowing costs. ← asked by: "show the owner's concern about higher borrowing costs"
-- `P1.C3` correctness, core, w=1: Includes the loan officer offering one possible strategy to mitigate the impact. ← asked by: "include the loan officer offering one possible strategy to mitigate the impact"
-- `P1.C4` expression, core, w=1: Presented as a dialogue with speaker labels. ← asked by: "dialogue"
+- `P1.C1` correctness, core, w=1: Mentions the new rent amount ← asked by: "mention the new rent amount"
+- `P1.C2` correctness, core, w=1: Shows Alex's internal thought about whether to stay or move ← asked by: "show Alex's internal thought about whether to stay or move"
+- `P1.C3` correctness, core, w=1: Includes a brief reference to a roommate offering to share a cheaper place ← asked by: "include a brief reference to a roommate offering to share a cheaper place"
+- `P1.C4` expression, core, w=1: Uses present‑tense narration ← asked by: "Write the scene using present‑tense narration"
+- `P1.C5` expression, core, w=1: Does not use any of the clichés: "money talks", "price is what you pay", "cost of living" ← asked by: "do not use any of the clichés: "money talks", "price is what you pay", "cost of living""
 
 **Obvious answers (originality check):**
 
-- Owner: "I just heard interest rates have risen again, and I'm worried about the higher borrowing costs for my expansion." Officer: "One option is to lock in a fixed‑rate loan to protect against further hikes."
-- Owner: "The recent increase in interest rates makes my loan payments look scary." Officer: "You might refinance now before rates go even higher."
-- Owner: "Higher interest rates mean my project could become unprofitable." Officer: "Consider a rate‑cap product that limits how much your rate can rise."
-- Owner: "I'm concerned the rise in interest rates will squeeze my cash flow." Officer: "A possible strategy is to switch to a variable‑rate loan with a built‑in ceiling."
-- Owner: "With interest rates climbing, I'm not sure I can afford the loan." Officer: "You could explore a short‑term bridge loan until rates stabilize."
+- Alex reads a notice that the rent is now $1,200, thinks about the budget squeeze, and the roommate suggests a cheaper $900 apartment they could share.
+- Alex gets an email saying the rent jumps to $1,500, worries about affording it, and the roommate offers to split a smaller place nearby.
+- Alex sees a text: "Rent is $1,100 now," feels anxious about staying, and the roommate mentions a sublet at a lower price.
+- Alex discovers the landlord raised rent to $1,300, debates moving out, and the roommate proposes moving in together to cut costs.
+- Alex learns the new rent is $1,250, considers looking for a new place, and the roommate suggests sharing a studio for $800.
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 32. creative · literature · `30cfecdb54df`
+## 31. creative · environment · `b687c2df5103`
+
+**Q:** Write a short scene (3 to 8 sentences) that depicts a forest clearing after a wildfire, showing the first signs of ecological recovery as the first shoots emerge. Use vivid sensory details, include a character who observes the changes, and avoid the clichés 'phoenix rising' and 'silver lining'.
+
+**Path P1:** Scene meets all brief constraints
+
+- `P1.C1` correctness, core, w=1: Contains between three and eight sentences ← asked by: "3 to 8 sentences"
+- `P1.C2` expression, core, w=1: Includes vivid sensory details describing sights, sounds, smells, or textures ← asked by: "vivid sensory details"
+- `P1.C3` correctness, core, w=1: Features a character who observes the environmental changes ← asked by: "include a character who observes the changes"
+- `P1.C4` correctness, core, w=1: Shows the first signs of ecological recovery, such as the emergence of new shoots ← asked by: "first signs of ecological recovery"
+- `P1.C5` expression, core, w=1: Does not use any of: "phoenix rising", "silver lining" ← asked by: "avoid the clichés 'phoenix rising' and 'silver lining'"
+
+**Obvious answers (originality check):**
+
+- A ranger watches tiny green shoots push through blackened soil, hears the faint rustle of recovering birds, and notes the smell of wet earth.
+- A local resident steps into the clearing, feels the cool dampness on their boots, sees the first saplings, and reflects on the forest’s resilience.
+- A firefighter surveys the charred ground, describes the crackling of cooling ash, spots a lone fern unfurling, and comments on nature’s slow return.
+- A scientist records the emergence of moss on burnt rocks, notes the scent of pine resin after rain, and observes a child pointing out the new growth.
+- An artist sketches the scarred landscape, captures the glint of sunlight on fresh leaves, hears distant wildlife, and mentions the first sprouts breaking through.
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 32. creative · health · `a93e1782531b`
+
+**Q:** Write a short scene (3–8 sentences) in which a pharmacist explains to an elderly customer how to use a new inhaler for asthma. The scene must (1) describe the inhaler's key mechanism of delivering medication, (2) show the customer's reaction using a physical cue instead of naming the feeling, and (3) end with the pharmacist providing a follow‑up instruction.
+
+**Path P1:** Scene that meets all three constraints
+
+- `P1.C1` correctness, core, w=1: Describes the inhaler's key mechanism of delivering medication. ← asked by: "describe the inhaler's key mechanism of delivering medication"
+- `P1.C2` expression, core, w=1: Shows the customer's reaction using a physical cue instead of naming the feeling. ← asked by: "show the customer's reaction using a physical cue instead of naming the feeling"
+- `P1.C3` correctness, core, w=1: Ends with the pharmacist providing a follow‑up instruction. ← asked by: "end with the pharmacist providing a follow‑up instruction"
+
+**Obvious answers (originality check):**
+
+- The pharmacist says the inhaler sprays a mist of medicine when pressed, the elderly customer tightens his grip on the counter, and the pharmacist tells him to use it twice daily and schedule a follow‑up.
+- The pharmacist explains the device releases medication via a propellant, the customer nods slowly and leans forward, and the pharmacist advises a check‑up in a month.
+- The pharmacist notes the inhaler delivers a fine aerosol when the trigger is pulled, the customer sighs and rubs his temples, and the pharmacist instructs to rinse his mouth after each dose and return for a refill.
+- The pharmacist describes the inhaler’s mechanism as a breath‑activated mist, the customer frowns and taps his foot, and the pharmacist ends by saying to keep a usage log and come back in two weeks.
+- The pharmacist points out the inhaler uses a spring‑loaded cartridge to aerosolize the drug, the customer raises his eyebrows and clutches his chest, and the pharmacist finishes with a reminder to clean the mouthpiece and schedule a follow‑up appointment.
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 33. creative · literature · `30cfecdb54df`
 
 **Q:** In a short scene of three to eight sentences, write a narrative where a character discovers a forgotten poetry anthology in a rooftop garden. The scene must include vivid sensory description, a twist at the end, show rather than tell, and must avoid the clichés: “the wind whispered”, “the pages fluttered”, “a secret message”.
 
@@ -576,7 +595,69 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 33. creative · technology · `6878445611ca`
+## 34. creative · everyday life · `b54dae9759d1`
+
+**Q:** Write a brief (3–6 sentences) scene describing a person waiting in line at a coffee shop, focusing on the protagonist’s internal thoughts, include at least one tactile detail, and end with a subtle hint of an upcoming decision.
+
+**Path P1:** The answer meets all constraints of the brief.
+
+- `P1.C1` correctness, core, w=1: Provides a narrative scene describing a person waiting in line at a coffee shop ← asked by: "scene describing a person waiting in line at a coffee shop"
+- `P1.C2` expression, core, w=1: Includes internal thoughts of the protagonist ← asked by: "protagonist’s internal thoughts"
+- `P1.C3` correctness, core, w=1: Provides at least one tactile detail ← asked by: "include at least one tactile detail"
+- `P1.C4` expression, core, w=1: Ends with a subtle hint of an upcoming decision ← asked by: "end with a subtle hint of an upcoming decision"
+
+**Obvious answers (originality check):**
+
+- The protagonist taps their foot, feels the cold metal rail, thinks about the overdue project, and the last line hints they might quit their job.
+- She watches steam rise, feels the warm mug in her hand, wonders if she should ask the barista out, ending with a quiet resolve to speak later.
+- He feels the sticky sugar on his fingers, worries about the meeting later, and the final sentence hints at deciding to change careers.
+- She notices the gritty texture of the napkin, worries about a text she received, and ends with a hint that she may finally call her estranged sister.
+- He feels the vibration of his phone, contemplates whether to order a pastry, and the closing line subtly suggests he will take a different route home.
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 35. creative · history · `1a636015a193`
+
+**Q:** Write a short diary entry (3–8 sentences) from the perspective of a merchant in Constantinople during the fall of the city in 1453. The entry should (a) describe the atmosphere of the siege, (b) mention one specific item the merchant hoped to protect, and (c) convey a personal feeling of loss without using the phrase “I feel sad.”
+
+**Path P1:** Diary entry satisfying all three constraints
+
+- `P1.C1` correctness, core, w=1: Describes the atmosphere of the siege ← asked by: "describe the atmosphere of the siege"
+- `P1.C2` correctness, core, w=1: Mentions a specific item the merchant hoped to protect ← asked by: "mention one specific item the merchant hoped to protect"
+- `P1.C3` expression, core, w=1: Conveys a personal feeling of loss without using the phrase “I feel sad.” ← asked by: "convey a personal feeling of loss without using the phrase “I feel sad.”"
+
+**Obvious answers (originality check):**
+
+- Describes smoky, noisy siege; mentions a chest of spices; expresses grief with phrases like “my heart aches.”
+- Notes darkness and cannon fire; mentions a silk rug; conveys loss using “a hollow emptiness settles over me.”
+- Writes about panic and fire; mentions a ledger of trade; shows heartbreak without saying “I feel sad.”
+- Talks about the roar of cannons and smoke; mentions a family heirloom; expresses emptiness and sorrow indirectly.
+- Describes flames and chaos; mentions gold coins in a chest; conveys sorrow with “the city feels empty” and avoids the banned phrase.
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 36. creative · science · `9e4b003116e1`
+
+**Q:** Write a short sci‑fi scene (3‑8 sentences) set on a basaltic moon orbiting a gas giant. The scene must (1) introduce the moon’s harsh, low‑gravity landscape, (2) describe the moment a lone astronaut discovers a glowing crystal that emits a low hum, and (3) include a development that forces the astronaut to reconsider the mission’s objective. Do not use any of the words: "dark", "silent", "mysterious", "unexpected".
+
+**Path P1:** Creative sci‑fi scene meeting all constraints
+
+- `P1.C1` correctness, core, w=1: Introduces the moon’s harsh, low‑gravity landscape ← asked by: "introduce the moon’s harsh, low‑gravity landscape"
+- `P1.C2` correctness, core, w=1: Describes the moment a lone astronaut discovers a glowing crystal that emits a low hum ← asked by: "describe the moment a lone astronaut discovers a glowing crystal that emits a low hum"
+- `P1.C3` correctness, core, w=1: Includes a development that forces the astronaut to reconsider the mission’s objective ← asked by: "include a development that forces the astronaut to reconsider the mission’s objective"
+- `P1.C4` expression, core, w=1: Does not use any of the prohibited words ← asked by: "Do not use any of the words: "dark", "silent", "mysterious", "unexpected""
+
+**Obvious answers (originality check):**
+
+- The astronaut steps onto the cratered, low‑gravity surface, notes the thin air, then finds a crystal glowing in a fissure, and later realizes its energy could power the colony, changing the mission.
+- The scene opens with a description of jagged rocks and low gravity, the astronaut spots a humming crystal, and then discovers it contradicts the mission to collect only geological samples.
+- The writer describes the moon’s barren plains, the astronaut uncovers a crystal that sings, and then must decide whether to abandon the original survey to study the crystal.
+- The narrative sets the moon’s harsh environment, the astronaut finds a crystal emitting a low hum, and then the mission is jeopardized because the crystal signals an unknown phenomenon.
+- The scene paints the low‑gravity landscape, the astronaut discovers a glowing crystal, and then faces a choice between reporting it or continuing the planned scientific objectives.
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 37. creative · technology · `6878445611ca`
 
 **Q:** In a short scene of 3‑8 sentences, imagine a product launch at a future technology conference where a new AI‑powered personal assistant called "EchoMate" is unveiled. Write the scene using present‑tense narration. The scene must (1) name the product, (2) describe one unique capability of the assistant, (3) include a reaction from an audience member, and (4) end with a tagline of exactly six words.
 
