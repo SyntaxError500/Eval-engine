@@ -1,6 +1,6 @@
 # Phase 3: generated question review
 
-33 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
+40 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
 
 Checklist per question:
 
@@ -181,7 +181,25 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 12. analytical · ethics · `082591e7ec4e`
+## 12. analytical · technology · `d757eca4528c`
+
+**Q:** In a short paragraph (3‑8 sentences), present one position on whether governments should require mandatory data‑privacy standards for consumer Internet‑of‑Things (IoT) devices, and support it with at least one specific reason or piece of evidence.
+
+**Path P1:** Supports the position that governments should require mandatory data‑privacy standards for consumer IoT devices.
+
+- `P1.C1` completeness, core, w=1: States the position that governments should require mandatory data‑privacy standards for consumer IoT devices. ← asked by: "present one position"
+- `P1.C2` reasoning, core, w=1: Provides at least one specific reason or piece of evidence supporting the stated position. ← asked by: "support it with at least one specific reason or piece of evidence"
+- `P1.C3` correctness, core, w=1: The answer does not contradict the stated position elsewhere in the paragraph. ← asked by: "present one position"
+
+**Path P2:** Supports the position that governments should not require mandatory data‑privacy standards for consumer IoT devices.
+
+- `P2.C1` completeness, core, w=1: States the position that governments should not require mandatory data‑privacy standards for consumer IoT devices. ← asked by: "present one position"
+- `P2.C2` reasoning, core, w=1: Provides at least one specific reason or piece of evidence supporting the stated position. ← asked by: "support it with at least one specific reason or piece of evidence"
+- `P2.C3` correctness, core, w=1: The answer does not contradict the stated position elsewhere in the paragraph. ← asked by: "present one position"
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 13. analytical · ethics · `082591e7ec4e`
 
 **Q:** In a short paragraph (3‑8 sentences), argue whether utilitarianism provides a better foundation for public policy than deontological ethics. State your position, give one concrete policy area where your chosen approach offers an advantage, and explain how it supports your claim.
 
@@ -199,7 +217,27 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 13. analytical · environment · `5d564b58c11c`
+## 14. analytical · economics · `d92e0ad73cb8`
+
+**Q:** In a short paragraph of 3–6 sentences, argue whether implementing a progressive wealth tax on the richest households would reduce economic inequality in a market economy. State a position (for or against) and support it with at least two distinct arguments.
+
+**Path P1:** Argument in favor of a wealth tax
+
+- `P1.C1` correctness, core, w=1: States a position (for) as required ← asked by: "State a position (for or against)"
+- `P1.C2` reasoning, core, w=1: Provides a first distinct argument that supports the stated position ← asked by: "support it with at least two distinct arguments"
+- `P1.C3` reasoning, core, w=1: Provides a second distinct argument that supports the stated position ← asked by: "support it with at least two distinct arguments"
+- `P1.C4` completeness, non-core, w=0.5: Mentions economic inequality and links it to the wealth tax ← asked by: "reduce economic inequality"
+
+**Path P2:** Argument against a wealth tax
+
+- `P2.C1` correctness, core, w=1: States a position (against) as required ← asked by: "State a position (for or against)"
+- `P2.C2` reasoning, core, w=1: Provides a first distinct argument that supports the stated position ← asked by: "support it with at least two distinct arguments"
+- `P2.C3` reasoning, core, w=1: Provides a second distinct argument that supports the stated position ← asked by: "support it with at least two distinct arguments"
+- `P2.C4` completeness, non-core, w=0.5: Mentions economic inequality and links it to the wealth tax ← asked by: "reduce economic inequality"
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 15. analytical · environment · `5d564b58c11c`
 
 **Q:** In a short paragraph (3 to 8 sentences), argue for either (a) implementing a nationwide ban on the use of chemical pesticides in agriculture, or (b) promoting integrated pest management (IPM) as a sustainable alternative. Choose one position, state at least two distinct supporting reasons, and provide a specific factual example, statistic, or case study for each reason.
 
@@ -221,7 +259,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 14. analytical · health · `80b5228e62c0`
+## 16. analytical · health · `80b5228e62c0`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether implementing a tax on sugar‑sweetened beverages is an effective public‑health strategy to reduce obesity. Choose one side, present at least two supporting points, and acknowledge a counterargument from the opposite side.
 
@@ -241,7 +279,61 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 15. analytical · history · `17c1b10632b5`
+## 17. analytical · literature · `7ef66d20c834`
+
+**Q:** In a short paragraph (3–8 sentences), argue whether Nathaniel Hawthorne’s *The Scarlet Letter* should be read primarily as a critique of Puritan moral hypocrisy or as an exploration of individual psychological trauma, and support your view with at least two distinct pieces of textual evidence.
+
+**Path P1:** Argument that the novel critiques Puritan moral hypocrisy
+
+- `P1.C1` completeness, core, w=1: States that the novel should be read primarily as a critique of Puritan moral hypocrisy ← asked by: "should be read primarily as a critique of Puritan moral hypocrisy"
+- `P1.C2` correctness, core, w=1: Provides a first distinct piece of textual evidence that supports the critique ← asked by: "at least two distinct pieces of textual evidence"
+- `P1.C3` correctness, non-core, w=0.5: Provides a second distinct piece of textual evidence that supports the critique ← asked by: "at least two distinct pieces of textual evidence"
+- `P1.C4` reasoning, core, w=1: Explains how the provided evidence demonstrates the critique of Puritan moral hypocrisy ← asked by: "support your view"
+
+**Path P2:** Argument that the novel explores individual psychological trauma
+
+- `P2.C1` completeness, core, w=1: States that the novel should be read primarily as an exploration of individual psychological trauma ← asked by: "as an exploration of individual psychological trauma"
+- `P2.C2` correctness, core, w=1: Provides a first distinct piece of textual evidence that supports the trauma interpretation ← asked by: "at least two distinct pieces of textual evidence"
+- `P2.C3` correctness, non-core, w=0.5: Provides a second distinct piece of textual evidence that supports the trauma interpretation ← asked by: "at least two distinct pieces of textual evidence"
+- `P2.C4` reasoning, core, w=1: Explains how the provided evidence demonstrates the exploration of individual psychological trauma ← asked by: "support your view"
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 18. analytical · geography · `7d174cce75df`
+
+**Q:** In a short paragraph of 3–8 sentences, argue whether the primary cause of the recent intensification of urban heat islands in megacities is (1) reduced vegetation cover or (2) increased anthropogenic heat emissions. Choose one factor, state the claim, and provide at least one piece of supporting evidence that links the chosen factor to stronger urban heat islands.
+
+**Path P1:** Argument that reduced vegetation cover is the primary cause of recent urban heat‑island intensification.
+
+- `P1.C1` correctness, core, w=1: States the claim that reduced vegetation cover is the primary cause of recent intensification of urban heat islands in megacities. ← asked by: "state the claim"
+- `P1.C2` reasoning, core, w=1: Provides at least one piece of supporting evidence that links reduced vegetation cover to stronger urban heat islands. ← asked by: "provide at least one piece of supporting evidence"
+
+**Path P2:** Argument that increased anthropogenic heat emissions are the primary cause of recent urban heat‑island intensification.
+
+- `P2.C1` correctness, core, w=1: States the claim that increased anthropogenic heat emissions are the primary cause of recent intensification of urban heat islands in megacities. ← asked by: "state the claim"
+- `P2.C2` reasoning, core, w=1: Provides at least one piece of supporting evidence that links increased anthropogenic heat emissions to stronger urban heat islands. ← asked by: "provide at least one piece of supporting evidence"
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 19. analytical · everyday life · `78d7767e5351`
+
+**Q:** In a short paragraph (3–8 sentences), argue whether working from home increases overall work‑life balance, and support your argument with at least two distinct reasons.
+
+**Path P1:** Argument that working from home increases overall work‑life balance
+
+- `P1.C1` correctness, core, w=1: States a position that working from home increases overall work‑life balance ← asked by: "argue whether working from home increases overall work‑life balance"
+- `P1.C2` reasoning, core, w=1: Provides a first distinct reason that supports the position ← asked by: "support your argument with at least two distinct reasons"
+- `P1.C3` reasoning, core, w=1: Provides a second distinct reason that supports the position ← asked by: "support your argument with at least two distinct reasons"
+
+**Path P2:** Argument that working from home does not increase overall work‑life balance
+
+- `P2.C1` correctness, core, w=1: States a position that working from home does not increase overall work‑life balance ← asked by: "argue whether working from home increases overall work‑life balance"
+- `P2.C2` reasoning, core, w=1: Provides a first distinct reason that supports the position ← asked by: "support your argument with at least two distinct reasons"
+- `P2.C3` reasoning, core, w=1: Provides a second distinct reason that supports the position ← asked by: "support your argument with at least two distinct reasons"
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 20. analytical · history · `17c1b10632b5`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries, and support your position with specific historical evidence.
 
@@ -259,7 +351,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 16. explanatory · technology · `e9829aabdcd6`
+## 21. explanatory · technology · `e9829aabdcd6`
 
 **Q:** In a short paragraph (3‑8 sentences), explain how cloud computing enables small businesses to scale their IT resources on demand.
 
@@ -271,7 +363,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 17. explanatory · ethics · `91798e725180`
+## 22. explanatory · ethics · `91798e725180`
 
 **Q:** In a short paragraph (3‑8 sentences), explain why individuals often follow social norms even when those norms conflict with their personal moral convictions.
 
@@ -289,7 +381,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 18. explanatory · economics · `669bce9c85fb`
+## 23. explanatory · economics · `669bce9c85fb`
 
 **Q:** In a short paragraph of 3–6 sentences, explain how a depreciation of a country's currency influences its export competitiveness. Provide one mechanism that connects the change in exchange rate to export volumes.
 
@@ -301,7 +393,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 19. explanatory · environment · `1e9d95d9130f`
+## 24. explanatory · environment · `1e9d95d9130f`
 
 **Q:** In a short paragraph (3 to 8 sentences), explain one mechanism by which adding biochar to agricultural soil enhances carbon sequestration, and give a concrete example of a farm or region where this mechanism has been applied.
 
@@ -319,7 +411,31 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 20. explanatory · literature · `c08ec38ec72f`
+## 25. explanatory · health · `b850a615f22e`
+
+**Q:** In a short paragraph (3–8 sentences), explain one mechanism by which regular physical activity improves mental health.
+
+**Path P1:** Neurochemical explanation via endorphin release
+
+- `P1.C1` completeness, core, w=1: Names a valid mechanism by which regular physical activity improves mental health (e.g., increased endorphin release, enhanced neurogenesis, improved self‑efficacy) ← asked by: "one mechanism"
+- `P1.C2` correctness, core, w=1: Describes the mechanism accurately (e.g., states that exercise triggers endorphin release from the pituitary) ← asked by: "explain"
+- `P1.C3` reasoning, core, w=1: Explains how this mechanism leads to improved mental health (e.g., endorphins reduce perceived stress or elevate mood) ← asked by: "improves mental health"
+
+**Path P2:** Neurobiological explanation via increased BDNF and neurogenesis
+
+- `P2.C1` completeness, core, w=1: Names a valid mechanism by which regular physical activity improves mental health (e.g., increased endorphin release, enhanced neurogenesis, improved self‑efficacy) ← asked by: "one mechanism"
+- `P2.C2` correctness, core, w=1: Describes the mechanism accurately (e.g., explains that exercise raises brain‑derived neurotrophic factor, promoting neurogenesis in the hippocampus) ← asked by: "explain"
+- `P2.C3` reasoning, core, w=1: Explains how this mechanism leads to improved mental health (e.g., neurogenesis improves mood regulation and reduces depressive symptoms) ← asked by: "improves mental health"
+
+**Path P3:** Psychosocial explanation via enhanced self‑efficacy and social interaction
+
+- `P3.C1` completeness, core, w=1: Names a valid mechanism by which regular physical activity improves mental health (e.g., increased endorphin release, enhanced neurogenesis, improved self‑efficacy) ← asked by: "one mechanism"
+- `P3.C2` correctness, core, w=1: Describes the mechanism accurately (e.g., notes that regular exercise builds confidence and provides opportunities for social engagement) ← asked by: "explain"
+- `P3.C3` reasoning, core, w=1: Explains how this mechanism leads to improved mental health (e.g., higher self‑efficacy reduces anxiety and social interaction alleviates loneliness) ← asked by: "improves mental health"
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 26. explanatory · literature · `c08ec38ec72f`
 
 **Q:** In a short paragraph (3–8 sentences), explain how the use of an unreliable narrator in F. Scott Fitzgerald’s *The Great Gatsby* influences the reader’s understanding of the American Dream.
 
@@ -337,7 +453,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 21. explanatory · geography · `3f8052a62a58`
+## 27. explanatory · geography · `3f8052a62a58`
 
 **Q:** Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.
 
@@ -349,7 +465,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 22. explanatory · everyday life · `610c46d48e48`
+## 28. explanatory · everyday life · `610c46d48e48`
 
 **Q:** Explain why many people frequently misplace their keys, offering one plausible explanation in a short paragraph (3–8 sentences).
 
@@ -373,7 +489,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 23. explanatory · history · `3dadfd69ad7c`
+## 29. explanatory · history · `3dadfd69ad7c`
 
 **Q:** In a short paragraph (3–8 sentences), explain how the Haitian Revolution resulted in the abolition of slavery in Haiti. Identify one key factor that contributed to this outcome.
 
@@ -397,7 +513,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 24. explanatory · science · `23575fb39cfd`
+## 30. explanatory · science · `23575fb39cfd`
 
 **Q:** Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).
 
@@ -409,7 +525,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 25. creative · ethics · `4881228365fa`
+## 31. creative · ethics · `4881228365fa`
 
 **Q:** Write a brief scene of 3‑8 sentences in which a journalist must choose whether to publish a leaked report about a corporation's harmful practices or keep it hidden to protect sources. The scene must include at least one line of dialogue that reveals the journalist's internal conflict, a turning point where the decision is made, must not contain the phrase “ethical dilemma”, and must avoid the clichés “the world will never be the same”, “the stakes are high”, and “moral crossroads”.
 
@@ -432,7 +548,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 26. creative · economics · `14f014e48366`
+## 32. creative · economics · `14f014e48366`
 
 **Q:** Write a short scene (3–5 sentences) in which a college student learns that the price of their favorite coffee has increased. The scene must (1) mention the price increase, (2) show the student's internal thought about whether to keep buying it, and (3) include a brief reference to an alternative beverage they could choose instead.
 
@@ -454,7 +570,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 27. creative · environment · `2b28e1af770f`
+## 33. creative · environment · `2b28e1af770f`
 
 **Q:** Write a short scene (3 to 8 sentences) that depicts a coastal mangrove forest after a storm surge, showing the first signs of ecological recovery. Use vivid sensory details and include a turn where a character reflects on resilience.
 
@@ -476,7 +592,29 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 28. creative · literature · `30cfecdb54df`
+## 34. creative · health · `337e07342987`
+
+**Q:** Write a short scene (3–8 sentences) in which a nurse explains to a patient how a wearable fitness tracker can help manage stress. The scene must (1) describe the device’s key feature that monitors physiological signals, (2) show the patient’s reaction using a physical cue instead of naming the feeling, and (3) end with the nurse offering a specific next step for the patient.
+
+**Path P1:** All required constraints are met
+
+- `P1.C1` correctness, core, w=1: Describes the device’s key feature that monitors physiological signals ← asked by: "describe the device’s key feature that monitors physiological signals"
+- `P1.C2` correctness, core, w=1: Shows the patient’s reaction using a physical cue and does not name the feeling ← asked by: "show the patient’s reaction using a physical cue instead of naming the feeling"
+- `P1.C3` correctness, core, w=1: Ends with the nurse offering a specific next step for the patient ← asked by: "end with the nurse offering a specific next step for the patient"
+- `P1.C4` expression, non-core, w=0.5: Does not use any of: "once upon a time", "in a faraway land", "magically" ← craft test (by design)
+- `P1.C5` expression, non-core, w=0.5: Shows a turn or development in the scene (the nurse’s suggestion changes the direction) ← craft test (by design)
+
+**Obvious answers (originality check):**
+
+- The nurse describes the tracker’s heart‑rate monitor, the patient smiles, and the nurse says “Let’s set a reminder to check your stress levels each evening.”
+- The nurse mentions the device tracks breathing patterns, the patient’s eyes widen, and the nurse suggests “Schedule a short walk after work to use the data.”
+- The nurse explains the tracker alerts when cortisol spikes, the patient’s shoulders relax, and the nurse offers “I’ll email you a guide on using the app.”
+- The nurse points out the step‑count and stress score feature, the patient nods slowly, and the nurse says “Come back tomorrow for a personalized plan.”
+- The nurse highlights the sleep‑quality monitoring, the patient bites their lip, and the nurse proposes “Let’s book a follow‑up to review your progress.”
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 35. creative · literature · `30cfecdb54df`
 
 **Q:** In a short scene of three to eight sentences, write a narrative where a character discovers a forgotten poetry anthology in a rooftop garden. The scene must include vivid sensory description, a twist at the end, show rather than tell, and must avoid the clichés: “the wind whispered”, “the pages fluttered”, “a secret message”.
 
@@ -497,7 +635,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 29. creative · geography · `05c2f2ca70a4`
+## 36. creative · geography · `05c2f2ca70a4`
 
 **Q:** Write a short radio news script (3–8 sentences) announcing the discovery of a floating island in the middle of the Great Lakes. Include the island’s geographic location, a vivid description of its appearance, and one surprising ecological feature.
 
@@ -518,7 +656,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 30. creative · everyday life · `7cb37a949c50`
+## 37. creative · everyday life · `7cb37a949c50`
 
 **Q:** Write a brief scene of 3–6 sentences describing a person cooking dinner alone, focusing on the protagonist’s internal thoughts, include at least one auditory detail of the kitchen, and end with a subtle hint of an upcoming surprise.
 
@@ -540,7 +678,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 31. creative · history · `b687bcd90776`
+## 38. creative · history · `b687bcd90776`
 
 **Q:** Write a short speech (3–8 sentences) that a women’s suffrage activist might deliver at a 1910 rally in London. The speech must (a) call for women’s right to vote, (b) reference the recent 1910 women’s suffrage march, and (c) convey the speaker’s personal conviction. Do not use the cliché phrase “the time is now.” Ensure the speech shows the speaker’s emotions rather than simply stating them.
 
@@ -562,7 +700,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 32. creative · science · `13360f60b1fe`
+## 39. creative · science · `13360f60b1fe`
 
 **Q:** Write a short sci‑fi scene (3‑8 sentences) set aboard a generation starship where an artificial intelligence caretaker discovers a concealed garden of Earth plants. The scene should introduce the setting, describe the discovery, and include a development that creates a moral dilemma among the crew.
 
@@ -585,7 +723,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 33. creative · technology · `6878445611ca`
+## 40. creative · technology · `6878445611ca`
 
 **Q:** In a short scene of 3‑8 sentences, imagine a product launch at a future technology conference where a new AI‑powered personal assistant called "EchoMate" is unveiled. Write the scene using present‑tense narration. The scene must (1) name the product, (2) describe one unique capability of the assistant, (3) include a reaction from an audience member, and (4) end with a tagline of exactly six words.
 
