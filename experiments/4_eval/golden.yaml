@@ -1,0 +1,411 @@
+# Phase 4 golden answers: hand-written, 5 per question, 2 questions per task type.
+# kinds: good | paraphrase (correct, no rubric wording) | partial | wrong | off_topic (answers a
+# different question). Creative uses obvious / constraint-breaking variants instead.
+# expect: dimension -> [min, max] score (inclusive). Written BEFORE any judge run; a miss is a
+# finding about the judge or the rubric, not a reason to edit the range.
+# path: expected solution path (non-creative). overlap: creative piece reuses an obvious answer.
+
+items:
+# ---------------------------------------------------------------- factual: cell cycle
+- id: cell-good
+  question: 512f892a6afa
+  kind: good
+  answer: >-
+    The cell cycle includes G1, S phase and M phase. In G1 the cell grows and produces the
+    proteins and organelles it will need. During S phase the entire genome is replicated, so
+    each chromosome ends up as two sister chromatids. In M phase (mitosis) the sister
+    chromatids are pulled to opposite poles and the cell divides into two daughter cells.
+  path: P1
+  expect: {correctness: [0.85, 1], completeness: [1, 1]}
+
+- id: cell-paraphrase
+  question: 512f892a6afa
+  kind: paraphrase
+  answer: >-
+    First comes the growth gap, where the cell simply gets bigger and builds up supplies. Next
+    is the synthesis stage, when it makes a full copy of its genetic material. Last is the
+    division stage, where the copies are split up and the cell pinches into two new cells.
+  path: P1
+  expect: {correctness: [0.85, 1], completeness: [1, 1]}
+
+- id: cell-partial
+  question: 512f892a6afa
+  kind: partial
+  answer: >-
+    In G1 the cell grows and makes proteins. In S phase the DNA is copied so there are two
+    complete sets. After that the cell gets ready to divide.
+  path: P1
+  expect: {correctness: [0.55, 0.8], completeness: [0, 0.5]}
+
+- id: cell-wrong
+  question: 512f892a6afa
+  kind: wrong
+  answer: >-
+    In G1 the cell copies all of its DNA. In S phase the cell splits into two daughter cells.
+    In M phase the cell rests and grows larger before the next round.
+  path: P1
+  expect: {correctness: [0.15, 0.6]}
+
+- id: cell-off
+  question: 512f892a6afa
+  kind: off_topic
+  answer: >-
+    Photosynthesis has two stages. In the light-dependent reactions, light energy splits water
+    and makes ATP. In the Calvin cycle, carbon dioxide is fixed into sugar.
+  expect: {correctness: [0, 0.3], completeness: [0, 0]}
+
+# ---------------------------------------------------------------- factual: macronutrients
+- id: macro-good
+  question: 17b9d268178a
+  kind: good
+  answer: >-
+    The three macronutrients are carbohydrates, proteins and fats. Carbohydrates are the body's
+    main source of quick energy, especially for the brain and muscles. Proteins supply amino
+    acids used to build and repair tissues such as muscle. Fats store energy long term and help
+    the body absorb fat-soluble vitamins.
+  path: P1
+  expect: {correctness: [0.85, 1], completeness: [1, 1]}
+
+- id: macro-paraphrase
+  question: 17b9d268178a
+  kind: paraphrase
+  answer: >-
+    Sugars and starches from bread or rice are what fuel you through the day. The protein in
+    meat, beans and eggs is what your body uses to build and fix muscle. Fats like oil and
+    butter are your body's energy reserve and help keep you warm.
+  path: P1
+  expect: {correctness: [0.85, 1], completeness: [1, 1]}
+
+- id: macro-partial
+  question: 17b9d268178a
+  kind: partial
+  answer: >-
+    Carbohydrates give the body energy. Proteins build and repair muscle. Vitamins are the
+    third macronutrient and they keep the immune system strong.
+  path: P1
+  expect: {correctness: [0.3, 0.8], completeness: [0, 0]}
+
+- id: macro-wrong
+  question: 17b9d268178a
+  kind: wrong
+  answer: >-
+    The three macronutrients are carbohydrates, proteins and fats. Carbohydrates are mainly
+    used to build bones. Proteins are the body's fastest source of energy. Fats carry oxygen
+    around in the blood.
+  path: P1
+  expect: {correctness: [0, 0.4]}
+
+- id: macro-off
+  question: 17b9d268178a
+  kind: off_topic
+  answer: >-
+    Calcium keeps bones strong, iron helps carry oxygen in the blood, and potassium helps the
+    heart and muscles work properly.
+  expect: {correctness: [0, 0.4], completeness: [0, 0]}
+
+# ---------------------------------------------------------------- explanatory: hot-air balloon
+- id: balloon-good
+  question: 23575fb39cfd
+  kind: good
+  answer: >-
+    Heating the air inside the envelope makes its molecules move faster and spread out, so the
+    hot air is less dense than the cooler air surrounding the balloon. Because the balloon
+    displaces outside air that is heavier than the air it contains, the surrounding air pushes
+    up on it with a buoyant force. When that upward force exceeds the weight of the balloon,
+    basket and hot air, the balloon rises.
+  path: P1
+  expect: {correctness: [0.85, 1], reasoning: [1, 1], completeness: [1, 1]}
+
+- id: balloon-paraphrase
+  question: 23575fb39cfd
+  kind: paraphrase
+  answer: >-
+    Warm air weighs less than the same amount of cold air. The air outside the balloon stays
+    cold, so the balloon full of warm air is lighter than the air around it. The heavier outside
+    air pushes it upward, the same way water pushes a cork up to the surface.
+  path: P1
+  expect: {correctness: [0.85, 1], reasoning: [1, 1], completeness: [1, 1]}
+
+- id: balloon-partial
+  question: 23575fb39cfd
+  kind: partial
+  answer: >-
+    Hot air rises, so when the burner heats the air inside the balloon, the balloon goes up
+    with it. Turning the burner off makes it come back down.
+  path: P1
+  expect: {correctness: [0.3, 0.6], reasoning: [0, 0.5], completeness: [0, 0]}
+
+- id: balloon-wrong
+  question: 23575fb39cfd
+  kind: wrong
+  answer: >-
+    Heating air makes it denser and heavier, but the expanding gas pushes down hard on the
+    basket like a rocket, which drives the balloon upward. Heat itself is a gas lighter than
+    air, so it also carries the balloon up.
+  path: P1
+  expect: {correctness: [0, 0.5], reasoning: [0, 0.5]}
+
+- id: balloon-off
+  question: 23575fb39cfd
+  kind: off_topic
+  answer: >-
+    An airplane flies because its wings are shaped so that air moves faster over the top than
+    the bottom. This creates lower pressure above the wing, producing lift.
+  expect: {correctness: [0, 0.5], reasoning: [0, 0], completeness: [0, 0]}
+
+# ---------------------------------------------------------------- explanatory: rain shadow
+- id: rain-good
+  question: 3f8052a62a58
+  kind: good
+  answer: >-
+    The main mechanism is orographic lift: moist air blown against a mountain range is forced
+    upward, cools as it rises, and its water vapour condenses and falls as rain or snow on the
+    windward slopes. After crossing the crest, the now-drier air descends the leeward side and
+    warms by compression, which lowers its relative humidity so clouds evaporate and little
+    precipitation falls. For example, the western Cascades receive over 2,000 mm of rain a year
+    while parts of eastern Washington get under 250 mm.
+  path: P1
+  expect: {correctness: [0.85, 1], reasoning: [1, 1], completeness: [1, 1]}
+
+- id: rain-paraphrase
+  question: 3f8052a62a58
+  kind: paraphrase
+  answer: >-
+    Wet wind from the sea hits the mountains and has to climb over them. As it climbs it gets
+    colder and can't hold its water, so it dumps it as rain on the side facing the wind. When
+    the air comes down the far side it heats up again and is now very dry, so it soaks up
+    moisture instead of dropping any. That's why Death Valley, just east of the Sierra Nevada,
+    is one of the driest places in North America.
+  path: P1
+  expect: {correctness: [0.85, 1], reasoning: [1, 1], completeness: [1, 1]}
+
+- id: rain-partial
+  question: 3f8052a62a58
+  kind: partial
+  answer: >-
+    Rain shadows are caused by orographic lift. Moist air is pushed up the windward side of the
+    mountains, where it cools and drops most of its moisture as rain.
+  path: P1
+  expect: {correctness: [0.85, 1], reasoning: [0, 0.5], completeness: [0, 0]}
+
+- id: rain-wrong
+  question: 3f8052a62a58
+  kind: wrong
+  answer: >-
+    The leeward side is dry because the mountains block the sunlight, so less water evaporates
+    there and fewer clouds can form. The Himalayas are dry on their southern side for this
+    reason.
+  path: P1
+  expect: {correctness: [0, 0.5], reasoning: [0, 0.5]}
+
+- id: rain-off
+  question: 3f8052a62a58
+  kind: off_topic
+  answer: >-
+    Monsoons happen because land heats up faster than the ocean in summer. The warm land draws
+    in moist ocean air, which brings months of heavy rain to places like India.
+  expect: {correctness: [0, 0.5], reasoning: [0, 0.5], completeness: [0, 0]}
+
+# ---------------------------------------------------------------- analytical: work from home
+- id: wfh-good
+  question: 78d7767e5351
+  kind: good
+  answer: >-
+    Working from home does increase overall work-life balance for most people. First, it
+    removes the daily commute, giving many workers an extra hour or more each day for family,
+    exercise or rest. Second, flexible hours let people fit work around school runs and
+    appointments instead of choosing between them. Some find the boundaries harder to keep, but
+    those costs are usually smaller than the time and control they gain.
+  path: P1
+  expect: {correctness: [0.85, 1], reasoning: [1, 1]}
+
+- id: wfh-paraphrase
+  question: 78d7767e5351
+  kind: paraphrase
+  answer: >-
+    I don't think it does. When your kitchen table is also your desk, there's no moment when
+    the working day clearly ends, so many people end up answering emails late into the evening.
+    On top of that, losing the office means losing casual contact with colleagues, and that
+    loneliness spills over into how people feel outside work too.
+  path: P2
+  expect: {correctness: [0.85, 1], reasoning: [1, 1]}
+
+- id: wfh-partial
+  question: 78d7767e5351
+  kind: partial
+  answer: >-
+    Working from home improves work-life balance because people no longer waste time
+    commuting. That time can be spent with family instead.
+  path: P1
+  expect: {correctness: [0.85, 1], reasoning: [0.4, 0.6]}
+
+- id: wfh-wrong
+  question: 78d7767e5351
+  kind: wrong
+  answer: >-
+    Working from home has advantages and disadvantages. Some people like skipping the commute,
+    while others miss their colleagues. In the end it really depends on the person and their
+    job.
+  expect: {correctness: [0, 0.6], reasoning: [0, 0.5]}
+
+- id: wfh-off
+  question: 78d7767e5351
+  kind: off_topic
+  answer: >-
+    Working from home makes companies more productive. Employees face fewer interruptions from
+    co-workers, and firms save money on office space, which they can invest elsewhere.
+  expect: {correctness: [0, 0.6], reasoning: [0, 0.5]}
+
+# ---------------------------------------------------------------- analytical: WWI causes
+- id: wwi-alliances
+  question: 17c1b10632b5
+  kind: good
+  answer: >-
+    The alliance system was the primary cause of the war. After Austria-Hungary declared war on
+    Serbia in July 1914, Russia mobilised to protect Serbia, Germany declared war on Russia and
+    on Russia's ally France, and Germany's invasion of Belgium brought in Britain under the 1839
+    Treaty of London. A local Balkan crisis became a continental war within a week only because
+    each power was bound to join its partners; without those commitments the conflict would
+    likely have stayed between Austria-Hungary and Serbia.
+  path: P1
+  expect: {correctness: [0.85, 1], completeness: [1, 1], reasoning: [1, 1]}
+
+- id: wwi-nationalism
+  question: 17c1b10632b5
+  kind: paraphrase
+  answer: >-
+    Nationalist rivalry, not the treaties, was what really started the war. Gavrilo Princip, a
+    Bosnian Serb tied to the Black Hand group that wanted South Slavs freed from Habsburg rule,
+    shot Archduke Franz Ferdinand in Sarajevo on 28 June 1914. Austria-Hungary was determined to
+    crush Serbian nationalism, which it saw as a threat to its multi-ethnic empire, and Russia
+    backed Serbia out of Pan-Slav feeling. The alliances only spread a fire that national hatreds
+    had lit.
+  path: P2
+  expect: {correctness: [0.85, 1], completeness: [1, 1], reasoning: [1, 1]}
+
+- id: wwi-partial
+  question: 17c1b10632b5
+  kind: partial
+  answer: >-
+    I think the alliances were the main cause. The countries had promised to help each other,
+    so once one country went to war the others had to as well.
+  path: P1
+  expect: {correctness: [0.3, 0.6], completeness: [1, 1], reasoning: [0, 1]}
+
+- id: wwi-wrong
+  question: 17c1b10632b5
+  kind: wrong
+  answer: >-
+    The alliance system was the main cause. In 1914 a Russian student assassinated Archduke
+    Franz Ferdinand in Vienna, and because Italy and Germany were allied they immediately
+    invaded France together. Britain then joined to defend its ally Russia.
+  path: P1
+  expect: {correctness: [0, 0.5]}
+
+- id: wwi-off
+  question: 17c1b10632b5
+  kind: off_topic
+  answer: >-
+    The Second World War was caused mainly by the harsh Treaty of Versailles and the Great
+    Depression, which let Hitler rise to power and invade Poland in 1939.
+  expect: {correctness: [0, 0.5], completeness: [0, 0], reasoning: [0, 0]}
+
+# ---------------------------------------------------------------- creative: coffee-shop queue
+- id: coffee-good
+  question: b54dae9759d1
+  kind: good
+  answer: >-
+    Maya counted the tiles between her shoes and the counter, eleven, and decided that if the
+    man ahead ordered something complicated it was a sign. The paper cup sleeve she had been
+    twisting had gone soft and fibrous under her thumb. She rehearsed the line again in her
+    head: I'm sorry, I can't sign it. When the barista called "next," she folded the contract in
+    her bag one more time, as if it might fit in a smaller pocket.
+  expect: {correctness: [1, 1], expression: [1, 1]}
+
+- id: coffee-obvious
+  question: b54dae9759d1
+  kind: obvious
+  answer: >-
+    She watched the steam curl above the espresso machine while the queue crept forward. The
+    warm mug of the woman in front brushed her hand, and she thought about the barista she had
+    a crush on. Should she finally ask him out? She smiled to herself and decided she would
+    speak to him later.
+  overlap: true
+  expect: {correctness: [1, 1], expression: [0.5, 1]}
+
+- id: coffee-partial
+  question: b54dae9759d1
+  kind: partial
+  answer: >-
+    Tom stood in the long line at the coffee shop. He wondered whether they still had blueberry
+    muffins and thought about how late he would be for work. The line moved slowly. Finally he
+    reached the front and ordered a latte.
+  expect: {correctness: [0.5, 0.5], expression: [0.5, 0.5]}
+
+- id: coffee-wrong
+  question: b54dae9759d1
+  kind: wrong
+  answer: >-
+    Rain dripped from the shelter roof as Priya waited for the number 12 bus. The cold metal
+    bench pressed through her coat, and she wondered if the interview had gone as badly as she
+    feared. When the bus finally appeared, she hesitated, her phone already open to the
+    recruiter's number.
+  expect: {correctness: [0, 0.5]}
+
+- id: coffee-off
+  question: b54dae9759d1
+  kind: off_topic
+  answer: >-
+    Coffee was first cultivated in Ethiopia and spread through Yemen to the rest of the world.
+    Coffee houses became important meeting places in seventeenth-century Europe.
+  expect: {correctness: [0, 0.5], expression: [0, 0]}
+
+# ---------------------------------------------------------------- creative: after the wildfire
+- id: fire-good
+  question: b687c2df5103
+  kind: good
+  answer: >-
+    Ines knelt where the old cedar had stood, and the ash gave under her knee like cold flour.
+    The air still smelled of wet charcoal, but under it was something sharp and green. Between
+    two blackened roots, a fern no taller than her thumb had uncurled its first frond. A beetle
+    ticked across the bark beside it, the only sound in the clearing. She took out her notebook
+    and wrote the date, then sat back to count the others.
+  expect: {correctness: [1, 1], expression: [1, 1]}
+
+- id: fire-cliche
+  question: b687c2df5103
+  kind: cliche
+  answer: >-
+    Old Tomas walked into the clearing where the pines had burned. Black stumps poked from the
+    grey ash, and the smell of smoke still hung in the cool morning air. Then he saw it: a green
+    shoot pushing through the cinders, like a phoenix rising from the flames. He crouched and
+    touched its soft tip, amazed.
+  expect: {correctness: [1, 1], expression: [0.5, 0.5]}
+
+- id: fire-too-long
+  question: b687c2df5103
+  kind: constraint
+  answer: >-
+    Ana stepped into the clearing at dawn. The ground was black. Ash drifted in the breeze. It
+    smelled of smoke and rain. A crow called from a dead pine. She walked to the centre. The
+    soil crunched under her boots. Then she saw a green shoot. It was no bigger than a match.
+    She smiled and knelt beside it.
+  expect: {correctness: [0.5, 0.8], expression: [1, 1]}
+
+- id: fire-no-character
+  question: b687c2df5103
+  kind: constraint
+  answer: >-
+    The clearing is a field of grey ash and charcoal stumps, still faintly warm. Rain has left
+    a smell of wet smoke in the air. Here and there, thin green blades of fireweed are pushing
+    through the crust, and a woodpecker drums on a scorched trunk.
+  expect: {correctness: [0.5, 0.8], expression: [1, 1]}
+
+- id: fire-off
+  question: b687c2df5103
+  kind: off_topic
+  answer: >-
+    The fire roared through the forest, crackling as it leapt from tree to tree. Smoke turned
+    the sky orange, and the heat drove every animal toward the river. By nightfall the whole
+    valley was burning.
+  expect: {correctness: [0, 0.4]}

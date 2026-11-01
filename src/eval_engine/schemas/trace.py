@@ -5,7 +5,7 @@ from datetime import datetime
 from pydantic import BaseModel, Field
 
 from eval_engine.schemas.common import Dimension, TaskType
-from eval_engine.schemas.judge import PathConfidence, Verdict
+from eval_engine.schemas.judge import ClaimError, PathConfidence, Verdict
 
 
 class LLMCall(BaseModel):
@@ -49,7 +49,24 @@ class EvaluationTrace(BaseModel):
     verifier_framing: str | None = None
     final_rubric_source: str
     verdicts: list[Verdict] = Field(default_factory=list)
+    errors: list[ClaimError] = Field(default_factory=list)
+    # Criteria the judge marked met whose evidence quote isn't in the answer; downgraded.
+    evidence_downgrades: list[str] = Field(default_factory=list)
+    # Criteria the judge marked met on a statement its own errors list calls wrong; downgraded.
+    contradiction_downgrades: list[str] = Field(default_factory=list)
+    # Sentence-count criteria decided in code, overriding the judge (LLMs miscount).
+    count_overrides: list[str] = Field(default_factory=list)
+    # Max path confidence below the threshold (non-creative); Phase 5 runs amendment on it.
+    low_confidence: bool = False
+    # Creative only: obvious answers the response substantially reuses. Feedback signal,
+    # never scored, because briefs don't state originality as a requirement (Phase 3 rule).
+    obvious_overlap: list[str] = Field(default_factory=list)
+    # Judge calls whose verdicts were combined (1, or 3 under the D6 majority vote).
+    judge_votes: int = 1
     dimension_scores: dict[Dimension, float] = Field(default_factory=dict)
+    # Weighted over the dimensions the path covers. Internal only (validation metrics);
+    # never shown to a learner as a single score (design doc §12).
+    overall_score: float | None = None
     bands: dict[Dimension, str] = Field(default_factory=dict)
     feedback_items: list[str] = Field(default_factory=list)
     call_ids: list[str] = Field(default_factory=list)

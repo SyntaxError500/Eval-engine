@@ -82,7 +82,7 @@ These came out of reviewing the design text against the pipeline diagram. Each o
 |---|---|---|---|
 | D1 | Path ID on every answer or on demand? | **Every non-creative answer, merged into the scoring call.** One call returns the identified path, its confidence and per-criterion verdicts. Only on low confidence do we run amendment → verification → re-score. This halves calls in the common case | Phase 4 gate |
 | D2 | Show the LLM reference answer to the user? | **Hidden by default.** Optional reveal *after* feedback, labelled "one possible answer". Feedback never quotes it | Phase 8 |
-| D3 | Where does originality count for creative tasks? | Under expression (G5) | Phase 4 gate |
+| D3 | Where does originality count for creative tasks? | ~~Under expression (G5)~~ **Revised in Phase 4: feedback only, never scored.** Briefs don't state originality as a requirement (Phase 3), so obvious-answer overlap is reported in the trace but not marked. Cliché bans the brief asks for are ordinary criteria | Phase 4 gate |
 | D4 | Single judge or ensemble? | Single (Gemini 3.5 Flash Lite). An ensemble (Gemini + Qwen on Groq + local Qwen, majority vote) is tested in Phase 7 only if leniency or correlation is borderline. Its cost is bounded by Groq's daily token cap | Phase 2 and Phase 7 gates |
 | D5 | Which model phrases feedback? | Local Qwen. Fall back to Gemini Flash (20/day is enough for phrasing review) if quality is poor in Phase 6 review | Phase 6 gate |
 | D6 | The judge changes its label on 12% of answers across identical runs (Phase 2). How do we keep grades stable? | An identical resubmission is answered from the cache, so it gets the same grade. In Phase 4, test a majority of 3 calls only for borderline verdicts (low path confidence or a single unmet core criterion), and report its cost and effect | Phase 4 gate |
@@ -311,10 +311,10 @@ The goal is to confirm the judge before anything is built on it.
 5. **Pipeline orchestrator** `evaluate(question_id, answer) -> Evaluation`: loads the latest rubric version, routes by task type, applies the confidence-threshold branch (amendment stub until Phase 5), aggregates and writes the trace.
 
 **Exit gate**
-- [ ] End-to-end CLI: `eval-engine evaluate --question <id> --answer-file a.txt` prints verdicts, dimension scores and bands.
-- [ ] Golden tests: 10 hand-written answers per task type (good / partial / wrong / off-path) with expected band ranges, run against cached responses.
-- [ ] Evidence-check catch rate measured on 20 deliberately unsupported verdicts.
-- [ ] D1 and D3 confirmed or revised.
+- [x] End-to-end CLI: `eval-engine evaluate --question <id> --answer-file a.txt` prints verdicts, dimension scores and bands.
+- [x] Golden tests: 10 hand-written answers per task type (good / partial / wrong / off-path) with expected band ranges, run against cached responses. **39/40 in range** (experiments/4_eval).
+- [x] Evidence-check catch rate measured on 20 deliberately unsupported verdicts. **20/20**, 0 false downgrades on the golden answers.
+- [x] D1 and D3 confirmed or revised. D1 confirmed; D3 revised (originality is feedback only); D6 not adopted (0 scores changed for 75% more calls).
 
 ---
 

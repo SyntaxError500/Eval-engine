@@ -1,0 +1,1019 @@
+{
+ "questions": {
+  "512f892a6afa": {
+   "question": {
+    "question_id": "512f892a6afa",
+    "topic": "science",
+    "text": "Name three distinct phases of the cell cycle and give one key event that occurs in each phase. Answer in a short paragraph (3‑8 sentences).",
+    "task_type": "factual",
+    "rubric_id": "q-512f892a6afa",
+    "rubric_hash": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+    "reference_answer": "During G1, the cell grows and synthesizes proteins needed for DNA replication, such as cyclins that prepare the cell for S phase. In S phase, each chromosome is duplicated so that sister chromatids are formed, ensuring that each daughter cell will receive a complete set of genetic material. G2 is a checkpoint period where the cell checks for DNA damage and accumulates the proteins required for mitosis, such as mitotic cyclins, before entering M phase.",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "f76f7c3f9898ed9ab7c9cdb33c0558c045e0cdca2c9d31b97371c4b6b72623b1",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "Name three distinct phases of the cell cycle and give one key event that occurs in each phase. Answer in a short paragraph (3‑8 sentences).",
+    "task_type": "factual",
+    "shape": "checklist",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "Provides three distinct cell‑cycle phases each paired with a correct key event.",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "correctness",
+        "statement": "Names a valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+        "evidence_hint": "The answer includes the name of a phase such as G1, S, G2, or M.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "Name three distinct phases of the cell cycle"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "correctness",
+        "statement": "Provides a correct key event that occurs in the phase named in C1.",
+        "evidence_hint": "The answer mentions an event such as DNA synthesis for S phase, chromosome alignment for M phase, cell growth for G1, etc.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "give one key event that occurs in each phase"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "correctness",
+        "statement": "Names a second valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+        "evidence_hint": "The answer includes another phase name distinct from the first, such as G1, S, G2, or M.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "Name three distinct phases of the cell cycle"
+       },
+       {
+        "criterion_id": "P1.C4",
+        "dimension": "correctness",
+        "statement": "Provides a correct key event that occurs in the phase named in C3.",
+        "evidence_hint": "The answer mentions an appropriate event for that phase, e.g., DNA replication for S phase, mitotic spindle formation for M phase, etc.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "give one key event that occurs in each phase"
+       },
+       {
+        "criterion_id": "P1.C5",
+        "dimension": "correctness",
+        "statement": "Names a third valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+        "evidence_hint": "The answer includes a third phase name distinct from the first two, such as G1, S, G2, or M.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "Name three distinct phases of the cell cycle"
+       },
+       {
+        "criterion_id": "P1.C6",
+        "dimension": "correctness",
+        "statement": "Provides a correct key event that occurs in the phase named in C5.",
+        "evidence_hint": "The answer mentions an appropriate event for that phase, e.g., preparation for mitosis in G2, etc.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "give one key event that occurs in each phase"
+       },
+       {
+        "criterion_id": "P1.C7",
+        "dimension": "completeness",
+        "statement": "The three phases named are all different from each other.",
+        "evidence_hint": "The answer lists three phase names with no repeats.",
+        "core": true,
+        "weight": 0.5,
+        "requires": "Name three distinct phases of the cell cycle"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [],
+    "rubric_id": "q-512f892a6afa",
+    "topic": "science",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71"
+   }
+  },
+  "17b9d268178a": {
+   "question": {
+    "question_id": "17b9d268178a",
+    "topic": "health",
+    "text": "In a short paragraph (3-8 sentences), name the three main macronutrients required by the human body and state one primary function of each.",
+    "task_type": "factual",
+    "rubric_id": "q-17b9d268178a",
+    "rubric_hash": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+    "reference_answer": "The three main macronutrients needed by the human body are carbohydrates, proteins, and fats. Carbohydrates provide the primary source of energy for cells, especially the brain and muscles. Proteins supply the building blocks—amino acids—required for the growth, repair, and maintenance of tissues. Fats serve as a dense energy reserve, help absorb fat‑soluble vitamins, and are essential for constructing cell membranes.",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "f76f7c3f9898ed9ab7c9cdb33c0558c045e0cdca2c9d31b97371c4b6b72623b1",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "In a short paragraph (3-8 sentences), name the three main macronutrients required by the human body and state one primary function of each.",
+    "task_type": "factual",
+    "shape": "checklist",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "Correctly identifies three macronutrients and gives a primary function for each.",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "completeness",
+        "statement": "Names three distinct macronutrients required by the human body",
+        "evidence_hint": "Lists three valid macronutrients such as carbohydrates, proteins, and fats (order can vary)",
+        "core": true,
+        "weight": 1.0,
+        "requires": "name the three main macronutrients"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "correctness",
+        "statement": "States a primary function of the first macronutrient named",
+        "evidence_hint": "Provides a correct function, e.g., carbohydrates supply quick energy",
+        "core": true,
+        "weight": 1.0,
+        "requires": "state one primary function of each"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "correctness",
+        "statement": "States a primary function of the second macronutrient named",
+        "evidence_hint": "Provides a correct function, e.g., proteins are used for tissue repair and enzyme synthesis",
+        "core": true,
+        "weight": 1.0,
+        "requires": "state one primary function of each"
+       },
+       {
+        "criterion_id": "P1.C4",
+        "dimension": "correctness",
+        "statement": "States a primary function of the third macronutrient named",
+        "evidence_hint": "Provides a correct function, e.g., fats store energy and support cell membrane structure",
+        "core": true,
+        "weight": 1.0,
+        "requires": "state one primary function of each"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [],
+    "rubric_id": "q-17b9d268178a",
+    "topic": "health",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c"
+   }
+  },
+  "23575fb39cfd": {
+   "question": {
+    "question_id": "23575fb39cfd",
+    "topic": "science",
+    "text": "Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).",
+    "task_type": "explanatory",
+    "rubric_id": "q-23575fb39cfd",
+    "rubric_hash": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+    "reference_answer": "When the air inside a hot‑air balloon is heated, its temperature rises and the air expands, which lowers its density compared to the cooler surrounding atmosphere. Because the heated air is less dense, the weight of the air displaced by the balloon is greater than the weight of the air inside it. This difference creates a net upward buoyant force, as described by Archimedes' principle. The surrounding air, being at ambient temperature, remains denser and thus exerts a greater downward pressure on the balloon than the lighter air inside can counteract, causing the balloon to rise.",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "f76f7c3f9898ed9ab7c9cdb33c0558c045e0cdca2c9d31b97371c4b6b72623b1",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).",
+    "task_type": "explanatory",
+    "shape": "multi_path",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "The balloon rises because heating the air inside reduces its density, creating a buoyant upward force.",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "correctness",
+        "statement": "States that heating the air inside the balloon reduces its density compared to the surrounding cooler air",
+        "evidence_hint": "Mentions that heated air is less dense than the ambient air",
+        "core": true,
+        "weight": 1.0,
+        "requires": "Explain why a hot‑air balloon rises when the air inside it is heated"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "reasoning",
+        "statement": "Links the lower density of the heated air to a net upward buoyant force that lifts the balloon",
+        "evidence_hint": "References buoyancy or Archimedes' principle causing upward lift",
+        "core": true,
+        "weight": 1.0,
+        "requires": "Explain why a hot‑air balloon rises when the air inside it is heated"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "completeness",
+        "statement": "Mentions that the surrounding air is cooler (or at ambient temperature) providing the contrast needed for lift",
+        "evidence_hint": "Notes the temperature difference between inside and outside air",
+        "core": true,
+        "weight": 1.0,
+        "requires": "Explain why a hot‑air balloon rises when the air inside it is heated"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [],
+    "rubric_id": "q-23575fb39cfd",
+    "topic": "science",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d"
+   }
+  },
+  "3f8052a62a58": {
+   "question": {
+    "question_id": "3f8052a62a58",
+    "topic": "geography",
+    "text": "Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.",
+    "task_type": "explanatory",
+    "rubric_id": "q-3f8052a62a58",
+    "rubric_hash": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+    "reference_answer": "When moist air is forced up a mountain range, it undergoes orographic lift: the ascent causes the air to expand and cool, reaching its dew point and releasing precipitation on the windward side. After shedding much of its moisture, the air then descends on the leeward side, where compression warms it and lowers its relative humidity, inhibiting further cloud formation and rain. This descending, now drier and warmer air creates a rain‑shadow region with markedly reduced precipitation. A classic example is the dry interior of Washington State east of the Cascade Range, which receives only about one‑quarter of the rainfall that falls on the western slopes.",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "f76f7c3f9898ed9ab7c9cdb33c0558c045e0cdca2c9d31b97371c4b6b72623b1",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.",
+    "task_type": "explanatory",
+    "shape": "multi_path",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "Explain the orographic precipitation mechanism that produces a rain shadow.",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "correctness",
+        "statement": "States the main atmospheric mechanism responsible for rain shadows (orographic lift causing precipitation on the windward side and descending dry air on the leeward side).",
+        "evidence_hint": "Mentions orographic lift, air rising, cooling, condensing on the windward side and descending air on the leeward side.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "state the main atmospheric mechanism responsible"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "reasoning",
+        "statement": "Describes how the mechanism leads to reduced precipitation on the leeward side (descending air warms, its relative humidity drops, and precipitation decreases).",
+        "evidence_hint": "Explains that descending air warms adiabatically, increasing its moisture‑holding capacity and thus inhibiting rain.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "describe how it leads to reduced precipitation on the leeward side"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "completeness",
+        "statement": "Gives one supporting fact that illustrates the process (e.g., temperature drops ~6 °C per km of ascent, or cites a known rain‑shadow region such as the leeward side of the Cascades).",
+        "evidence_hint": "Provides a quantitative lapse‑rate fact or names a real‑world rain‑shadow example.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "give one supporting fact that illustrates this process"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [],
+    "rubric_id": "q-3f8052a62a58",
+    "topic": "geography",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9"
+   }
+  },
+  "78d7767e5351": {
+   "question": {
+    "question_id": "78d7767e5351",
+    "topic": "everyday life",
+    "text": "In a short paragraph (3–8 sentences), argue whether working from home increases overall work‑life balance, and support your argument with at least two distinct reasons.",
+    "task_type": "analytical",
+    "rubric_id": "q-78d7767e5351",
+    "rubric_hash": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+    "reference_answer": "Working from home generally improves overall work‑life balance because it eliminates the time and stress associated with commuting, allowing employees to allocate that saved time to personal activities or family. Additionally, the flexibility of setting one's own schedule enables better alignment of work tasks with peak productivity periods and personal responsibilities, reducing the need to sacrifice one for the other. These factors together create a more harmonious integration of professional and personal life.",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "f76f7c3f9898ed9ab7c9cdb33c0558c045e0cdca2c9d31b97371c4b6b72623b1",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "In a short paragraph (3–8 sentences), argue whether working from home increases overall work‑life balance, and support your argument with at least two distinct reasons.",
+    "task_type": "analytical",
+    "shape": "multi_path_claim_evidence",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "Argument that working from home increases overall work‑life balance",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "correctness",
+        "statement": "States a position that working from home increases overall work‑life balance",
+        "evidence_hint": "The answer explicitly says that working from home improves or increases work‑life balance.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "argue whether working from home increases overall work‑life balance"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "reasoning",
+        "statement": "Provides a first distinct reason that supports the position",
+        "evidence_hint": "Mentions a reason such as reduced commuting time, flexible scheduling, or fewer office distractions that is different from the second reason.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your argument with at least two distinct reasons"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "reasoning",
+        "statement": "Provides a second distinct reason that supports the position",
+        "evidence_hint": "Mentions another reason distinct from the first, e.g., ability to integrate personal tasks, or improved mental health from a comfortable home environment.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your argument with at least two distinct reasons"
+       }
+      ]
+     },
+     {
+      "path_id": "P2",
+      "description": "Argument that working from home does not increase overall work‑life balance",
+      "criteria": [
+       {
+        "criterion_id": "P2.C1",
+        "dimension": "correctness",
+        "statement": "States a position that working from home does not increase overall work‑life balance",
+        "evidence_hint": "The answer explicitly says that working from home fails to improve or actually worsens work‑life balance.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "argue whether working from home increases overall work‑life balance"
+       },
+       {
+        "criterion_id": "P2.C2",
+        "dimension": "reasoning",
+        "statement": "Provides a first distinct reason that supports the position",
+        "evidence_hint": "Mentions a reason such as blurred boundaries between work and personal time, or increased isolation from colleagues, that differs from the second reason.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your argument with at least two distinct reasons"
+       },
+       {
+        "criterion_id": "P2.C3",
+        "dimension": "reasoning",
+        "statement": "Provides a second distinct reason that supports the position",
+        "evidence_hint": "Mentions another distinct reason, e.g., difficulty disconnecting after work hours, or inadequate home office setup leading to stress.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your argument with at least two distinct reasons"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [],
+    "rubric_id": "q-78d7767e5351",
+    "topic": "everyday life",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e"
+   }
+  },
+  "17c1b10632b5": {
+   "question": {
+    "question_id": "17c1b10632b5",
+    "topic": "history",
+    "text": "In a short paragraph (3–8 sentences), argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries, and support your position with specific historical evidence.",
+    "task_type": "analytical",
+    "rubric_id": "q-17c1b10632b5",
+    "rubric_hash": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+    "reference_answer": "The primary cause of World War I was the rigid system of alliances that bound the great powers to each other. When Archduke Franz Ferdinand was assassinated in June 1914, Austria‑Hungary's declaration of war on Serbia triggered Russia's mobilization to protect its Slavic ally, which in turn forced Germany to honor its alliance with Austria‑Hungary and declare war on Russia. France, bound by the Franco‑Russian alliance, was then compelled to support Russia, while Britain entered the conflict due to its entente with France and its agreement to protect Belgian neutrality, which Germany violated. This cascade of obligations turned a regional dispute into a continental war, illustrating how the alliance network transformed a localized crisis into a full‑scale global conflict.",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "f76f7c3f9898ed9ab7c9cdb33c0558c045e0cdca2c9d31b97371c4b6b72623b1",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "In a short paragraph (3–8 sentences), argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries, and support your position with specific historical evidence.",
+    "task_type": "analytical",
+    "shape": "multi_path_claim_evidence",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "Argument that the system of alliances was the primary cause",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "completeness",
+        "statement": "States a position that the primary cause was the system of alliances",
+        "evidence_hint": "The answer begins with a claim such as \"The system of alliances was the main cause...\"",
+        "core": true,
+        "weight": 1.0,
+        "requires": "argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "correctness",
+        "statement": "Provides a specific historical example that supports the alliance system as the primary cause",
+        "evidence_hint": "Mentions an event like the activation of the Triple Alliance or the July Crisis where alliance obligations led to broader mobilization",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your position with specific historical evidence"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "reasoning",
+        "statement": "Explains how the example demonstrates that the alliance system caused the war",
+        "evidence_hint": "Shows a link, e.g., \"Because the alliances forced Germany to declare war on Russia, the conflict expanded\"",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your position with specific historical evidence"
+       }
+      ]
+     },
+     {
+      "path_id": "P2",
+      "description": "Argument that nationalist rivalries were the primary cause",
+      "criteria": [
+       {
+        "criterion_id": "P2.C1",
+        "dimension": "completeness",
+        "statement": "States a position that the primary cause was nationalist rivalries",
+        "evidence_hint": "The answer begins with a claim such as \"Nationalist rivalries were the main cause...\"",
+        "core": true,
+        "weight": 1.0,
+        "requires": "argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries"
+       },
+       {
+        "criterion_id": "P2.C2",
+        "dimension": "correctness",
+        "statement": "Provides a specific historical example that supports nationalist rivalries as the primary cause",
+        "evidence_hint": "Mentions an event like the Serbian nationalist assassination of Archduke Franz Ferdinand or Franco‑German rivalry over Alsace‑Lorraine",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your position with specific historical evidence"
+       },
+       {
+        "criterion_id": "P2.C3",
+        "dimension": "reasoning",
+        "statement": "Explains how the example shows nationalist rivalries led to the war",
+        "evidence_hint": "Shows a link, e.g., \"The assassination sparked a wave of nationalist mobilization that escalated into a continental war\"",
+        "core": true,
+        "weight": 1.0,
+        "requires": "support your position with specific historical evidence"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [],
+    "rubric_id": "q-17c1b10632b5",
+    "topic": "history",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d"
+   }
+  },
+  "b54dae9759d1": {
+   "question": {
+    "question_id": "b54dae9759d1",
+    "topic": "everyday life",
+    "text": "Write a brief (3–6 sentences) scene describing a person waiting in line at a coffee shop, focusing on the protagonist’s internal thoughts, include at least one tactile detail, and end with a subtle hint of an upcoming decision.",
+    "task_type": "creative",
+    "rubric_id": "q-b54dae9759d1",
+    "rubric_hash": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58",
+    "reference_answer": "She stood in the coffee shop line, the cold metal of the countertop pressing against her palm as she adjusted her grip on the worn notebook. While the espresso machine hissed, her mind replayed the email she’d just read, weighing whether to quit her job or stay for the safety net it provided. The scent of roasted beans mingled with the faint buzz of conversation, making her stomach knot with nervous anticipation. She watched the barista’s steady hands and wondered if she should finally ask for the promotion she’d been eyeing. As she reached the front, she felt the weight of the decision settle like the warm cup she was about to receive.",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "45878fbf6facd9254c7c9492d2d771aa3a9b40adee8831996d1ad735d6612794",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "Write a brief (3–6 sentences) scene describing a person waiting in line at a coffee shop, focusing on the protagonist’s internal thoughts, include at least one tactile detail, and end with a subtle hint of an upcoming decision.",
+    "task_type": "creative",
+    "shape": "craft_tests",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "The answer meets all constraints of the brief.",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "correctness",
+        "statement": "Provides a narrative scene describing a person waiting in line at a coffee shop",
+        "evidence_hint": "Mentions the coffee shop setting, the line, and the protagonist as they wait",
+        "core": true,
+        "weight": 1.0,
+        "requires": "scene describing a person waiting in line at a coffee shop"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "expression",
+        "statement": "Includes internal thoughts of the protagonist",
+        "evidence_hint": "Contains a sentence that conveys what the protagonist is thinking, e.g., \"She wondered...\"",
+        "core": true,
+        "weight": 1.0,
+        "requires": "protagonist’s internal thoughts"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "correctness",
+        "statement": "Provides at least one tactile detail",
+        "evidence_hint": "Mentions a sense of touch, such as the cold metal of the rail, the warmth of a coffee cup, or the texture of a napkin",
+        "core": true,
+        "weight": 1.0,
+        "requires": "include at least one tactile detail"
+       },
+       {
+        "criterion_id": "P1.C4",
+        "dimension": "expression",
+        "statement": "Ends with a subtle hint of an upcoming decision",
+        "evidence_hint": "The final sentence suggests a future choice, e.g., \"She wondered whether she should finally ask for a promotion.\"",
+        "core": true,
+        "weight": 1.0,
+        "requires": "end with a subtle hint of an upcoming decision"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [
+     "The protagonist taps their foot, feels the cold metal rail, thinks about the overdue project, and the last line hints they might quit their job.",
+     "She watches steam rise, feels the warm mug in her hand, wonders if she should ask the barista out, ending with a quiet resolve to speak later.",
+     "He feels the sticky sugar on his fingers, worries about the meeting later, and the final sentence hints at deciding to change careers.",
+     "She notices the gritty texture of the napkin, worries about a text she received, and ends with a hint that she may finally call her estranged sister.",
+     "He feels the vibration of his phone, contemplates whether to order a pastry, and the closing line subtly suggests he will take a different route home."
+    ],
+    "rubric_id": "q-b54dae9759d1",
+    "topic": "everyday life",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58"
+   }
+  },
+  "b687c2df5103": {
+   "question": {
+    "question_id": "b687c2df5103",
+    "topic": "environment",
+    "text": "Write a short scene (3 to 8 sentences) that depicts a forest clearing after a wildfire, showing the first signs of ecological recovery as the first shoots emerge. Use vivid sensory details, include a character who observes the changes, and avoid the clichés 'phoenix rising' and 'silver lining'.",
+    "task_type": "creative",
+    "rubric_id": "q-b687c2df5103",
+    "rubric_hash": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+    "reference_answer": "Mara knelt among the blackened stumps, feeling the warm ash crumble beneath her fingertips as a faint wind carried the scent of char and pine resin. In the hush, the crackle of distant fireflies was replaced by the soft rustle of green buds pushing through the soot‑black soil. A pale shoot unfurled, its tender leaves glistening with dew, and the air filled with the sharp, hopeful perfume of new sap.\n",
+    "reference_path_id": "P1",
+    "generator_prompt_hash": "45878fbf6facd9254c7c9492d2d771aa3a9b40adee8831996d1ad735d6612794",
+    "rubric_doubts": []
+   },
+   "rubric": {
+    "question": "Write a short scene (3 to 8 sentences) that depicts a forest clearing after a wildfire, showing the first signs of ecological recovery as the first shoots emerge. Use vivid sensory details, include a character who observes the changes, and avoid the clichés 'phoenix rising' and 'silver lining'.",
+    "task_type": "creative",
+    "shape": "craft_tests",
+    "paths": [
+     {
+      "path_id": "P1",
+      "description": "Scene meets all brief constraints",
+      "criteria": [
+       {
+        "criterion_id": "P1.C1",
+        "dimension": "correctness",
+        "statement": "Contains between three and eight sentences",
+        "evidence_hint": "The answer has three, four, five, six, seven, or eight sentences.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "3 to 8 sentences"
+       },
+       {
+        "criterion_id": "P1.C2",
+        "dimension": "expression",
+        "statement": "Includes vivid sensory details describing sights, sounds, smells, or textures",
+        "evidence_hint": "Mentions sensory details such as the crackle of cooling ash, the scent of pine resin, the feel of damp soil, the sight of green shoots.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "vivid sensory details"
+       },
+       {
+        "criterion_id": "P1.C3",
+        "dimension": "correctness",
+        "statement": "Features a character who observes the environmental changes",
+        "evidence_hint": "A named or described person (e.g., a forester, a local resident) comments on the changes.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "include a character who observes the changes"
+       },
+       {
+        "criterion_id": "P1.C4",
+        "dimension": "correctness",
+        "statement": "Shows the first signs of ecological recovery, such as the emergence of new shoots",
+        "evidence_hint": "Describes new shoots, sprouting leaves, or other early vegetation emerging in the clearing.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "first signs of ecological recovery"
+       },
+       {
+        "criterion_id": "P1.C5",
+        "dimension": "expression",
+        "statement": "Does not use any of: \"phoenix rising\", \"silver lining\"",
+        "evidence_hint": "The text contains none of the prohibited phrases.",
+        "core": true,
+        "weight": 1.0,
+        "requires": "avoid the clichés 'phoenix rising' and 'silver lining'"
+       }
+      ]
+     }
+    ],
+    "obvious_answers": [
+     "A ranger watches tiny green shoots push through blackened soil, hears the faint rustle of recovering birds, and notes the smell of wet earth.",
+     "A local resident steps into the clearing, feels the cool dampness on their boots, sees the first saplings, and reflects on the forest’s resilience.",
+     "A firefighter surveys the charred ground, describes the crackling of cooling ash, spots a lone fern unfurling, and comments on nature’s slow return.",
+     "A scientist records the emergence of moss on burnt rocks, notes the scent of pine resin after rain, and observes a child pointing out the new growth.",
+     "An artist sketches the scarred landscape, captures the glint of sunlight on fresh leaves, hears distant wildlife, and mentions the first sprouts breaking through."
+    ],
+    "rubric_id": "q-b687c2df5103",
+    "topic": "environment",
+    "version": 1,
+    "parent_hash": null,
+    "source": "generated",
+    "hash": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f"
+   }
+  }
+ },
+ "items": {
+  "cell-good": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names G1 as a cell cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell grows and produces the proteins and organelles it will need\",\n      \"justification\": \"The answer provides a correct key event for G1 phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names S phase as a second valid phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"the entire genome is replicated\",\n      \"justification\": \"The answer provides a correct key event for S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"M phase\",\n      \"justification\": \"The answer names M phase as a third valid phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": true,\n      \"evidence\": \"the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells\",\n      \"justification\": \"The answer provides a correct key event for M phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"G1, S phase and M phase\",\n      \"justification\": \"The three named phases are all distinct with no repeats.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "cell-paraphrase": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"growth gap\",\n      \"justification\": \"The answer names the G1 phase using the descriptive term 'growth gap'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell simply gets bigger and builds up supplies\",\n      \"justification\": \"The answer provides a correct key event for G1 phase, cell growth.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"synthesis stage\",\n      \"justification\": \"The answer names a second distinct phase, the S phase, referred to as the 'synthesis stage'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"makes a full copy of its genetic material\",\n      \"justification\": \"The answer provides a correct key event for the synthesis phase, DNA replication.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"division stage\",\n      \"justification\": \"The answer names a third distinct phase, the M phase, referred to as the 'division stage'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": true,\n      \"evidence\": \"the copies are split up and the cell pinches into two new cells\",\n      \"justification\": \"The answer provides a correct key event for the M phase, cell division/cytokinesis.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"growth gap, where the cell simply gets bigger and builds up supplies. Next is the synthesis stage, when it makes a full copy of its genetic material. Last is the division stage\",\n      \"justification\": \"The three named phases (growth gap/G1, synthesis stage/S, division stage/M) are all distinct from one another.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "cell-partial": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names G1 as a cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell grows and makes proteins.\",\n      \"justification\": \"The answer provides a correct key event for G1 phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names S phase as a second distinct cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"the DNA is copied\",\n      \"justification\": \"The answer provides a correct key event for S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not explicitly name a third distinct phase by standard designation, as it only refers vaguely to 'After that the cell gets ready to divide' rather than naming G2 or M.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Since a third phase was not clearly named, a corresponding key event for a third named phase is not provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Only two distinct phases (G1 and S) are explicitly named.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 0.7142857142857143,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "cell-wrong": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names the G1 phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event given for G1 (copies all of its DNA) is actually what happens in S phase, not G1.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names the S phase as a second phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event given for S phase (splits into two daughter cells) describes cytokinesis/M phase, not S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"M phase\",\n      \"justification\": \"The answer names M phase as a third phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event given for M phase (rests and grows larger) describes G1/interphase, not M phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"G1 ... S phase ... M phase\",\n      \"justification\": \"The three named phases (G1, S phase, M phase) are all distinct.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"In G1 the cell copies all of its DNA.\",\n      \"explanation\": \"DNA replication occurs during S phase, not G1.\"\n    },\n    {\n      \"quote\": \"In S phase the cell splits into two daughter cells.\",\n      \"explanation\": \"Cell division occurs during M phase, not S phase.\"\n    },\n    {\n      \"quote\": \"In M phase the cell rests and grows larger before the next round.\",\n      \"explanation\": \"Resting and growing larger describes interphase or G1/G2 phases, not M phase.\"\n    }\n  ]\n}",
+   "scores": {
+    "correctness": 0.42857142857142855,
+    "completeness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "cell-off": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses photosynthesis instead of the cell cycle and does not name a cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No phase was named, so no corresponding event for a cell-cycle phase is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not name a second cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No second phase was named, so no corresponding event is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not name a third cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No third phase was named, so no corresponding event is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not list three different cell-cycle phases.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Photosynthesis has two stages. In the light-dependent reactions, light energy splits water and makes ATP. In the Calvin cycle, carbon dioxide is fixed into sugar.\",\n      \"explanation\": \"The answer describes photosynthesis stages instead of cell cycle phases as requested by the question.\"\n    }\n  ]\n}",
+   "scores": {
+    "correctness": 0.0,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "macro-good": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"carbohydrates, proteins and fats\",\n      \"justification\": \"The answer correctly lists the three main macronutrients: carbohydrates, proteins, and fats.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates are the body's main source of quick energy\",\n      \"justification\": \"A correct primary function of carbohydrates is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins supply amino acids used to build and repair tissues\",\n      \"justification\": \"A correct primary function of proteins is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Fats store energy long term\",\n      \"justification\": \"A correct primary function of fats is provided.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "macro-paraphrase": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Sugars and starches ... protein ... Fats\",\n      \"justification\": \"The answer names carbohydrates (as sugars and starches), protein, and fats as the three macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"fuel you through the day\",\n      \"justification\": \"The answer correctly states that carbohydrates (sugars and starches) provide energy.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"build and fix muscle\",\n      \"justification\": \"The answer correctly states a primary function of protein for building and fixing tissue.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"energy reserve\",\n      \"justification\": \"The answer correctly states that fats serve as an energy reserve.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "macro-partial": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates, Proteins, Vitamins\",\n      \"justification\": \"The student names three substances, though vitamins are micronutrients rather than macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates give the body energy.\",\n      \"justification\": \"Provides a correct primary function for carbohydrates.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins build and repair muscle.\",\n      \"justification\": \"Provides a correct primary function for proteins.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The third item listed is vitamins, which are not a macronutrient, so a valid third macronutrient function is not stated.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Vitamins are the third macronutrient\",\n      \"explanation\": \"Vitamins are micronutrients, not macronutrients.\"\n    }\n  ]\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.5
+   },
+   "path": "P1",
+   "passed": false
+  },
+  "macro-wrong": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"carbohydrates, proteins and fats\",\n      \"justification\": \"The answer lists carbohydrates, proteins, and fats, which are the three main macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates are mainly used to build bones.\",\n      \"justification\": \"The answer states a function for carbohydrates (even though factually incorrect).\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins are the body's fastest source of energy.\",\n      \"justification\": \"The answer states a function for proteins.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Fats carry oxygen around in the blood.\",\n      \"justification\": \"The answer states a function for fats.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Carbohydrates are mainly used to build bones.\",\n      \"explanation\": \"Carbohydrates do not build bones; minerals like calcium and structural proteins like collagen do.\"\n    },\n    {\n      \"quote\": \"Proteins are the body's fastest source of energy.\",\n      \"explanation\": \"Carbohydrates are the body's fastest source of energy, not proteins.\"\n    },\n    {\n      \"quote\": \"Fats carry oxygen around in the blood.\",\n      \"explanation\": \"Hemoglobin in red blood cells carries oxygen around in the blood, not fats.\"\n    }\n  ]\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "macro-off": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.2\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The learner lists micronutrients and minerals (calcium, iron, potassium) rather than the three main macronutrients (carbohydrates, proteins, fats).\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Calcium is not a macronutrient.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Iron is not a macronutrient.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Potassium is not a macronutrient.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Calcium keeps bones strong, iron helps carry oxygen in the blood, and potassium helps the heart and muscles work properly.\",\n      \"explanation\": \"Calcium, iron, and potassium are minerals/micronutrients, not macronutrients.\"\n    }\n  ]\n}",
+   "scores": {
+    "completeness": 0.0,
+    "correctness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "balloon-good": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"the hot air is less dense than the cooler air surrounding the balloon\",\n      \"justification\": \"The student correctly states that the heated air inside is less dense than the cooler surrounding air.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the surrounding air pushes up on it with a buoyant force\",\n      \"justification\": \"The student references a buoyant force causing the upward lift.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"cooler air surrounding the balloon\",\n      \"justification\": \"The student notes the presence of cooler surrounding air to provide the contrast.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "balloon-paraphrase": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Warm air weighs less than the same amount of cold air.\",\n      \"justification\": \"The answer states that warm air weighs less than cold air for the same volume, which is equivalent to lower density.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"The heavier outside air pushes it upward, the same way water pushes a cork up to the surface.\",\n      \"justification\": \"The answer explains the upward lift using the concept of buoyant force akin to a cork in water.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The air outside the balloon stays cold\",\n      \"justification\": \"The answer notes the contrast with the colder outside air.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "balloon-partial": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.3\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention that heating the air reduces its density.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not reference buoyancy or Archimedes' principle.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention the surrounding cooler air or temperature difference.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 0.5,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "balloon-wrong": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer incorrectly states that heating air makes it denser and heavier.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention buoyancy or Archimedes' principle.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention that the surrounding air is cooler or provide a temperature contrast.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Heating air makes it denser and heavier\",\n      \"explanation\": \"Heating air actually makes it less dense, not denser.\"\n    },\n    {\n      \"quote\": \"Heat itself is a gas lighter than air\",\n      \"explanation\": \"Heat is a form of energy, not a gas.\"\n    }\n  ]\n}",
+   "scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "balloon-off": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses airplane wings and does not mention the density of air inside a hot-air balloon.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer mentions lift for an airplane wing, but does not reference buoyancy or Archimedes' principle for a balloon.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer contains no mention of the temperature difference between inside and outside air.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"An airplane flies because its wings are shaped so that air moves faster over the top than the bottom.\",\n      \"explanation\": \"The question asked about a hot-air balloon, but the student answered about an airplane.\"\n    }\n  ]\n}",
+   "scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "rain-good": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"moist air blown against a mountain range is forced upward, cools as it rises, and its water vapour condenses and falls as rain or snow on the windward slopes. After crossing the crest, the now-drier air descends the leeward side\",\n      \"justification\": \"The answer correctly identifies orographic lift, the windward precipitation, and the descending air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"descends the leeward side and warms by compression, which lowers its relative humidity so clouds evaporate and little precipitation falls.\",\n      \"justification\": \"The answer explains that the descending air warms, reducing relative humidity and inhibiting precipitation.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"the western Cascades receive over 2,000 mm of rain a year while parts of eastern Washington get under 250 mm.\",\n      \"justification\": \"The answer provides a real-world rain-shadow example (the Cascades).\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "rain-paraphrase": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Wet wind from the sea hits the mountains and has to climb over them. As it climbs it gets colder and can't hold its water, so it dumps it as rain on the side facing the wind. When the air comes down the far side it heats up again and is now very dry\",\n      \"justification\": \"The answer correctly describes orographic lift, cooling and raining on the windward side, and descending dry air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"When the air comes down the far side it heats up again and is now very dry, so it soaks up moisture instead of dropping any.\",\n      \"justification\": \"It explains that the descending air warms up and decreases in relative humidity/moisture-holding capacity, inhibiting precipitation.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Death Valley, just east of the Sierra Nevada\",\n      \"justification\": \"It cites a well-known real-world rain-shadow region as an example.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "rain-partial": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.8\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Moist air is pushed up the windward side of the mountains, where it cools and drops most of its moisture as rain.\",\n      \"justification\": \"The answer mentions orographic lift, air rising, and cooling on the windward side, although it omits the descending air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not describe the descending air warming or its relative humidity dropping on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a quantitative lapse-rate fact or name a real-world rain-shadow example.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "rain-wrong": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer attributes the dryness to the mountains blocking sunlight rather than orographic lift and descending dry air.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not describe descending air warming and losing relative humidity.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer names the Himalayas, but misidentifies which side is dry in a rain-shadow context and gets the geography/fact wrong.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"The leeward side is dry because the mountains block the sunlight, so less water evaporates there and fewer clouds can form.\",\n      \"explanation\": \"Rain shadows are caused by atmospheric moisture loss and adiabatic warming of descending air, not by mountains blocking sunlight.\"\n    },\n    {\n      \"quote\": \"The Himalayas are dry on their southern side for this reason.\",\n      \"explanation\": \"The southern side of the Himalayas is the windward side and receives very high precipitation from the monsoon, whereas the northern side (leeward) is the dry region.\"\n    }\n  ]\n}",
+   "scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "rain-off": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses monsoons instead of mountain rain shadows and orographic lift.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not describe descending air warming and losing relative humidity on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a supporting fact like a lapse rate or a rain-shadow region.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Monsoons happen because land heats up faster than the ocean in summer.\",\n      \"explanation\": \"The question asks about mountain rain shadows, not monsoons.\"\n    }\n  ]\n}",
+   "scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wfh-good": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Working from home does increase overall work-life balance for most people.\",\n      \"justification\": \"The text explicitly states that working from home increases overall work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"First, it removes the daily commute, giving many workers an extra hour or more each day for family, exercise or rest.\",\n      \"justification\": \"It provides the removal of the daily commute as the first distinct supporting reason.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Second, flexible hours let people fit work around school runs and appointments instead of choosing between them.\",\n      \"justification\": \"It provides flexible hours allowing integration of personal tasks as a second distinct supporting reason.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wfh-paraphrase": {
+   "judge_reply": "{\n  \"identified_path\": \"P2\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.0\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P2.C1\",\n      \"met\": true,\n      \"evidence\": \"I don't think it does.\",\n      \"justification\": \"The answer explicitly states the position that working from home does not increase work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P2.C2\",\n      \"met\": true,\n      \"evidence\": \"there's no moment when the working day clearly ends, so many people end up answering emails late into the evening.\",\n      \"justification\": \"Provides the first distinct reason that blurred boundaries and difficulty disconnecting worsen work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P2.C3\",\n      \"met\": true,\n      \"evidence\": \"losing the office means losing casual contact with colleagues, and that loneliness spills over into how people feel outside work too.\",\n      \"justification\": \"Provides a second distinct reason regarding increased isolation/loneliness from colleagues.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "path": "P2",
+   "passed": true
+  },
+  "wfh-partial": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Working from home improves work-life balance\",\n      \"justification\": \"The answer explicitly states that working from home improves work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"people no longer waste time commuting\",\n      \"justification\": \"The answer provides a first distinct reason, which is reduced commuting time.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a second distinct reason supporting the position.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 0.5
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wfh-wrong": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.2\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.2\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not state a definitive position that working from home increases work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer mentions skipping the commute as an advantage, but does not use it to support a position that work-life balance increases.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No second distinct supporting reason is provided.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 0.5,
+    "reasoning": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wfh-off": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.2\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not state that working from home increases overall work-life balance, focusing instead on company productivity and cost savings.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Employees face fewer interruptions from co-workers\",\n      \"justification\": \"The answer mentions fewer interruptions from co-workers as a reason related to the working from home context.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The second reason provided is about firms saving money on office space, which is not a personal work-life balance support reason.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "correctness": 0.5,
+    "reasoning": 0.5
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wwi-alliances": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The alliance system was the primary cause of the war.\",\n      \"justification\": \"The answer begins with a clear statement that the alliance system was the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"After Austria-Hungary declared war on Serbia in July 1914, Russia mobilised to protect Serbia, Germany declared war on Russia and on Russia's ally France, and Germany's invasion of Belgium brought in Britain under the 1839 Treaty of London.\",\n      \"justification\": \"The answer provides specific historical examples of how countries mobilized due to treaty and alliance obligations.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"A local Balkan crisis became a continental war within a week only because each power was bound to join its partners; without those commitments the conflict would likely have stayed between Austria-Hungary and Serbia.\",\n      \"justification\": \"The answer explains that the alliance commitments transformed a local crisis into a broader war.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wwi-nationalism": {
+   "judge_reply": "{\n  \"identified_path\": \"P2\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P2.C1\",\n      \"met\": true,\n      \"evidence\": \"Nationalist rivalry, not the treaties, was what really started the war.\",\n      \"justification\": \"The answer clearly states an initial position that nationalist rivalries were the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P2.C2\",\n      \"met\": true,\n      \"evidence\": \"Gavrilo Princip, a Bosnian Serb tied to the Black Hand group that wanted South Slavs freed from Habsburg rule, shot Archduke Franz Ferdinand in Sarajevo on 28 June 1914.\",\n      \"justification\": \"The student provides the specific historical example of the assassination of Archduke Franz Ferdinand by a nationalist.\"\n    },\n    {\n      \"criterion_id\": \"P2.C3\",\n      \"met\": true,\n      \"evidence\": \"The alliances only spread a fire that national hatreds had lit.\",\n      \"justification\": \"The student explains how nationalist hatreds created the conflict, with alliances merely fueling it.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "path": "P2",
+   "passed": true
+  },
+  "wwi-partial": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"I think the alliances were the main cause.\",\n      \"justification\": \"The learner explicitly states that the alliances were the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The learner gives a general description of how alliances work rather than a specific historical event or example like the July Crisis.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Without a specific historical example, the reasoning is general and does not explain how a specific event demonstrates the alliance system's effect.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.5,
+    "reasoning": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wwi-wrong": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.9\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The alliance system was the main cause.\",\n      \"justification\": \"The student explicitly states that the alliance system was the main cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"because Italy and Germany were allied they immediately invaded France together.\",\n      \"justification\": \"The student provides a historical event involving alliance obligations.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"because Italy and Germany were allied they immediately invaded France together. Britain then joined to defend its ally Russia.\",\n      \"justification\": \"The student explains how the alliance obligations supposedly caused the broader expansion of the war.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"a Russian student assassinated Archduke Franz Ferdinand in Vienna\",\n      \"explanation\": \"Gavrilo Princip was a Serbian nationalist, not a Russian student, and the assassination took place in Sarajevo, not Vienna.\"\n    },\n    {\n      \"quote\": \"because Italy and Germany were allied they immediately invaded France together. Britain then joined to defend its ally Russia.\",\n      \"explanation\": \"This heavily misrepresents the actual historical details of how the alliance system and the July Crisis unfolded.\"\n    }\n  ]\n}",
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.0,
+    "reasoning": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "wwi-off": {
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The learner argues about the Second World War rather than the system of alliances causing World War I.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No historical example related to the alliance system is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There is no explanation linking the alliance system to the outbreak of the war.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"The Second World War was caused mainly by the harsh Treaty of Versailles and the Great Depression, which let Hitler rise to power and invade Poland in 1939.\",\n      \"explanation\": \"The question asks about the causes of World War I, but the answer discusses the causes of World War II.\"\n    }\n  ]\n}",
+   "scores": {
+    "completeness": 0.0,
+    "correctness": 0.0,
+    "reasoning": 0.0
+   },
+   "path": "P1",
+   "passed": true
+  },
+  "coffee-good": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Maya counted the tiles between her shoes and the counter, eleven, and decided that if the man ahead ordered something complicated it was a sign.\",\n      \"justification\": \"The piece clearly depicts a person waiting in line at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"She rehearsed the line again in her head: I'm sorry, I can't sign it.\",\n      \"justification\": \"The narrative explicitly includes the internal thoughts and rehearsals of the protagonist.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The paper cup sleeve she had been twisting had gone soft and fibrous under her thumb.\",\n      \"justification\": \"The tactile sensation of the soft and fibrous cup sleeve under her thumb provides the required physical detail.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"When the barista called \\\"next,\\\" she folded the contract in her bag one more time, as if it might fit in a smaller pocket.\",\n      \"justification\": \"The ending subtly hints at the looming decision regarding the contract she is about to face.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
+   "scores": {
+    "correctness": 1.0,
+    "expression": 1.0
+   },
+   "path": null,
+   "passed": true
+  },
+  "coffee-obvious": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"She watched the steam curl above the espresso machine while the queue crept forward.\",\n      \"justification\": \"The piece clearly describes a person waiting in line at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"she thought about the barista she had a crush on.\",\n      \"justification\": \"The text explicitly incorporates the internal thoughts of the protagonist.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The warm mug of the woman in front brushed her hand\",\n      \"justification\": \"A tactile detail is provided through the sensation of the warm mug brushing her hand.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"She smiled to herself and decided she would speak to him later.\",\n      \"justification\": \"The ending subtly hints at an upcoming decision regarding speaking to her crush.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    2\n  ]\n}",
+   "scores": {
+    "correctness": 1.0,
+    "expression": 1.0
+   },
+   "path": null,
+   "passed": true
+  },
+  "coffee-partial": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Tom stood in the long line at the coffee shop.\",\n      \"justification\": \"The piece clearly describes a person waiting in line at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"He wondered whether they still had blueberry muffins and thought about how late he would be for work.\",\n      \"justification\": \"The protagonist's internal thoughts are explicitly included.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There are no tactile details such as feeling textures, temperatures, or physical sensations included in the piece.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The piece ends with a direct action rather than a subtle hint of an upcoming decision.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
+   "scores": {
+    "correctness": 0.5,
+    "expression": 0.5
+   },
+   "path": null,
+   "passed": true
+  },
+  "coffee-wrong": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The scene describes waiting at a bus stop rather than at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"she wondered if the interview had gone as badly as she feared\",\n      \"justification\": \"The protagonist's internal thoughts regarding the interview are included.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The cold metal bench pressed through her coat\",\n      \"justification\": \"A tactile detail is provided by feeling the cold metal bench.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"she hesitated, her phone already open to the recruiter's number\",\n      \"justification\": \"The ending subtly hints at a decision regarding whether to contact the recruiter.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
+   "scores": {
+    "correctness": 0.5,
+    "expression": 1.0
+   },
+   "path": null,
+   "passed": true
+  },
+  "coffee-off": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The piece provides historical facts about coffee rather than a narrative scene of a person waiting in line.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There are no internal thoughts of a protagonist included in the historical text.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The piece lacks any tactile detail.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The text does not end with a subtle hint of an upcoming decision.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
+   "scores": {
+    "correctness": 0.0,
+    "expression": 0.0
+   },
+   "path": null,
+   "passed": true
+  },
+  "fire-good": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Ines knelt where the old cedar had stood, and the ash gave under her knee like cold flour. The air still smelled of wet charcoal, but under it was something sharp and green. Between two blackened roots, a fern no taller than her thumb had uncurled its first frond. A beetle ticked across the bark beside it, the only sound in the clearing. She took out her notebook and wrote the date, then sat back to count the others.\",\n      \"justification\": \"The text contains exactly five sentences, which is within the required range of three to eight.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the ash gave under her knee like cold flour. The air still smelled of wet charcoal, but under it was something sharp and green.\",\n      \"justification\": \"The piece uses vivid sensory details involving touch (cold flour), smell (wet charcoal), and sight (sharp and green).\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Ines knelt where the old cedar had stood... She took out her notebook and wrote the date...\",\n      \"justification\": \"Ines is clearly presented as a character who observes the environmental changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Between two blackened roots, a fern no taller than her thumb had uncurled its first frond.\",\n      \"justification\": \"The text explicitly shows the emergence of new plant growth as a sign of ecological recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"Neither 'phoenix rising' nor 'silver lining' appears anywhere in the text.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    1\n  ]\n}",
+   "scores": {
+    "correctness": 1.0,
+    "expression": 1.0
+   },
+   "path": null,
+   "passed": true
+  },
+  "fire-cliche": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Old Tomas walked into the clearing where the pines had burned. Black stumps poked from the grey ash, and the smell of smoke still hung in the cool morning air. Then he saw it: a green shoot pushing through the cinders, like a phoenix rising from the flames. He crouched and touched its soft tip, amazed.\",\n      \"justification\": \"The piece contains exactly four sentences, which falls within the required range of three to eight sentences.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Black stumps poked from the grey ash, and the smell of smoke still hung in the cool morning air... touched its soft tip\",\n      \"justification\": \"The text includes vivid sensory details like the smell of smoke, the grey ash, and the soft texture of the shoot.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Old Tomas walked into the clearing... He crouched and touched its soft tip, amazed.\",\n      \"justification\": \"A character named Tomas is featured observing the changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"a green shoot pushing through the cinders\",\n      \"justification\": \"The text depicts the first signs of ecological recovery with the emergence of a new green shoot.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"like a phoenix rising from the flames.\",\n      \"justification\": \"The piece explicitly uses the banned phrase 'phoenix rising'.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    1\n  ]\n}",
+   "scores": {
+    "correctness": 1.0,
+    "expression": 0.5
+   },
+   "path": null,
+   "passed": true
+  },
+  "fire-too-long": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Ana stepped into the clearing at dawn. The ground was black. Ash drifted in the breeze. It smelled of smoke and rain. A crow called from a dead pine. She walked to the centre. The soil crunched under her boots. Then she saw a green shoot. It was no bigger than a match. She smiled and knelt beside it.\",\n      \"justification\": \"Counting the sentences yields a total of ten, wait let me recount: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Ah, let me re-evaluate. The text has ten sentences. Wait, let me list them: 1. Ana stepped into the clearing at dawn. 2. The ground was black. 3. Ash drifted in the breeze. 4. It smelled of smoke and rain. 5. A crow called from a dead pine. 6. She walked to the centre. 7. The soil crunched under her boots. 8. Then she saw a green shoot. 9. It was no bigger than a match. 10. She smiled and knelt beside it. That is 10 sentences. Therefore P1.C1 is false.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"It smelled of smoke and rain. The soil crunched under her boots.\",\n      \"justification\": \"The text includes vivid sensory details of smell and sound.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Ana stepped into the clearing at dawn.\",\n      \"justification\": \"Ana is a character who observes the changes in the forest.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Then she saw a green shoot.\",\n      \"justification\": \"The text clearly shows the emergence of a new shoot as a sign of recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"Neither of the banned phrases appears anywhere in the text.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    1\n  ]\n}",
+   "scores": {
+    "correctness": 0.6666666666666666,
+    "expression": 1.0
+   },
+   "path": null,
+   "passed": true
+  },
+  "fire-no-character": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The clearing is a field of grey ash and charcoal stumps, still faintly warm. Rain has left a smell of wet smoke in the air. Here and there, thin green blades of fireweed are pushing through the crust, and a woodpecker drums on a scorched trunk.\",\n      \"justification\": \"The piece consists of exactly three sentences, which fits the three to eight sentence requirement.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"grey ash and charcoal stumps, still faintly warm. Rain has left a smell of wet smoke\",\n      \"justification\": \"The text includes vivid sensory details of sight, touch, smell, and sound.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There is no character present in the scene observing the changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"thin green blades of fireweed are pushing through the crust\",\n      \"justification\": \"The text shows new shoots emerging as a sign of ecological recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"Neither 'phoenix rising' nor 'silver lining' appears in the text.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
+   "scores": {
+    "correctness": 0.6666666666666666,
+    "expression": 1.0
+   },
+   "path": null,
+   "passed": true
+  },
+  "fire-off": {
+   "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The fire roared through the forest, crackling as it leapt from tree to tree. Smoke turned the sky orange, and the heat drove every animal toward the river. By nightfall the whole valley was burning.\",\n      \"justification\": \"The piece contains exactly three sentences, which fits the three to eight sentence requirement.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"crackling as it leapt from tree to tree. Smoke turned the sky orange, and the heat drove\",\n      \"justification\": \"The piece includes vivid sensory details of sound, sight, and heat.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There is no character present in the scene observing the changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The scene depicts an active fire rather than the aftermath and recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"The banned phrases do not appear in the text.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
+   "scores": {
+    "correctness": 0.3333333333333333,
+    "expression": 1.0
+   },
+   "path": null,
+   "passed": true
+  }
+ }
+}

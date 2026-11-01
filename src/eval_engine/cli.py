@@ -9,6 +9,7 @@ import typer
 from pydantic import BaseModel
 
 from eval_engine.config import ConfigError, db_path, load_config, load_env
+from eval_engine.evaluation.pipeline import evaluate
 from eval_engine.generation.generate import GenerationError, generate_question
 from eval_engine.generation.review import REVIEW_DIR, _question_block, build_batch
 from eval_engine.providers.base import ProviderError
@@ -16,8 +17,9 @@ from eval_engine.providers.client import LLMClient, StructuredOutputError
 from eval_engine.providers.factory import build_client
 from eval_engine.schemas.common import TaskType
 from eval_engine.storage import RubricStore, UsageCounter, connect
+from eval_engine.storage.evaluation_store import EvaluationStore
 from eval_engine.storage.question_store import QuestionStore
-from eval_engine.validation import pilot
+from eval_engine.validation import golden, pilot
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -221,6 +223,70 @@ def gen_batch(
     if summary["stopped"]:
         typer.secho(f"Stopped: {summary['stopped']}. Rerun later to continue.", fg="yellow")
         raise typer.Exit(2)
+
+
+@app.command("evaluate")
+def evaluate_cmd(
+    question: Annotated[str, typer.Option(help="Question id")],
+    answer_file: Annotated[Path | None, typer.Option(help="File with the answer")] = None,
+    answer: Annotated[str | None, typer.Option(help="Answer text (instead of a file)")] = None,
+    votes: Annotated[int, typer.Option(help="Judge votes on borderline answers (D6)")] = 1,
+) -> None:
+    """Grade one answer against its question's frozen rubric and print the result."""
+    if (answer_file is None) == (answer is None):
+        raise typer.BadParameter("give exactly one of --answer-file or --answer")
+    text = answer_file.read_text(encoding="utf-8") if answer_file else str(answer)
+    load_env()
+    conn = connect(db_path())
+    client = build_client(load_config(), conn)
+    rubrics, questions = RubricStore(conn), QuestionStore(conn)
+    t = evaluate(client, rubrics, questions, EvaluationStore(conn), question, text, votes=votes)
+    q = questions.get(question)
+    typer.echo(f"Question ({q.task_type.value}): {q.text}\n")
+    if t.identified_path:
+        conf = ", ".join(f"{p.path_id}={p.confidence:.2f}" for p in t.path_confidences)
+        flag = "  [LOW CONFIDENCE: amendment would run]" if t.low_confidence else ""
+        typer.echo(f"Path: {t.identified_path}  ({conf}){flag}")
+    for v in t.verdicts:
+        mark = "MET " if v.met else "    "
+        typer.echo(f"  {mark} {v.criterion_id}: {v.justification}")
+    for e in t.errors:
+        typer.secho(f'  error: "{e.quote}": {e.explanation}', fg="red")
+    if t.evidence_downgrades:
+        typer.secho(f"  evidence not found, downgraded: {t.evidence_downgrades}", fg="yellow")
+    if t.contradiction_downgrades:
+        typer.secho(
+            f"  met on a flagged error, downgraded: {t.contradiction_downgrades}", fg="yellow"
+        )
+    if t.count_overrides:
+        typer.secho(f"  sentence count decided in code: {t.count_overrides}", fg="yellow")
+    if t.obvious_overlap:
+        typer.echo(f"  reuses obvious ideas: {t.obvious_overlap}")
+    typer.echo("")
+    for d, sc in t.dimension_scores.items():
+        typer.echo(f"  {d.value:<13} {t.bands[d]:<11} ({sc:.2f})")
+    typer.echo(f"\nevaluation {t.evaluation_id}, votes {t.judge_votes}")
+
+
+@app.command("golden")
+def golden_cmd(
+    votes: Annotated[
+        int, typer.Option(help=">1: D6 study against the recorded single votes (no fixture write)")
+    ] = 1,
+) -> None:
+    """Phase 4: grade the golden answers live, record the replay fixture, print the report."""
+    load_env()
+    conn = connect(db_path())
+    client = build_client(load_config(), conn)
+    if votes > 1:
+        study = golden.vote_study(client, conn, golden.load_items(), votes)
+        (golden.GOLDEN_DIR / "d6_votes.md").write_text(study + "\n", encoding="utf-8")
+        typer.echo(study)
+        return
+    outcomes = golden.run(client, conn, golden.load_items())
+    text = golden.report(outcomes)
+    (golden.GOLDEN_DIR / "golden_report.md").write_text(text + "\n", encoding="utf-8")
+    typer.echo(text)
 
 
 if __name__ == "__main__":

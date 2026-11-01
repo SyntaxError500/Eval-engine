@@ -34,3 +34,12 @@ class JudgeOutput(BaseModel):
 
     def max_confidence(self) -> float:
         return max((p.confidence for p in self.path_confidences), default=0.0)
+
+
+class CreativeJudgeOutput(BaseModel):
+    """Creative route: no path identification, no factual errors; originality is reported."""
+
+    verdicts: list[Verdict]
+    obvious_overlap: list[int] = Field(
+        description="1-based numbers of the obvious answers this response substantially reuses"
+    )
