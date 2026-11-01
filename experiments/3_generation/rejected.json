@@ -88,5 +88,17 @@
   "sheet_number_v4": 39,
   "reason": "Unrequested style requirements and phrase bans.",
   "by": "external review 2"
+ },
+ {
+  "question_id": "89443fe631e8",
+  "sheet_number_v5": 28,
+  "reason": "P3 credits the 1918 (RSFSR) Constitution for the USSR, formed in 1922; P1 jumps from October 1917 to the USSR.",
+  "by": "pre-filter 2026-11-01"
+ },
+ {
+  "question_id": "f894ae76980e",
+  "sheet_number_v5": 31,
+  "reason": "C4 narrows 'dialogue' to 'with speaker labels'.",
+  "by": "pre-filter 2026-11-01"
  }
 ]

@@ -1,6 +1,6 @@
 # Phase 3: generated question review
 
-40 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
+33 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
 
 Checklist per question:
 
@@ -60,19 +60,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 4. factual · ethics · `5a492c637640`
-
-**Q:** In a short paragraph (3‑8 sentences), name the two conditions of the principle of double effect and give one distinct example that illustrates each condition.
-
-**Path P1:** Correct answer lists both conditions and supplies an example for each.
-
-- `P1.C1` completeness, core, w=1: Names both conditions of the principle of double effect ← asked by: "name the two conditions of the principle of double effect"
-- `P1.C2` correctness, core, w=1: Provides a valid example that illustrates the first condition ← asked by: "give one distinct example that illustrates each condition"
-- `P1.C3` correctness, core, w=1: Provides a valid example that illustrates the second condition ← asked by: "give one distinct example that illustrates each condition"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 5. factual · economics · `886e0fcd1e3d`
+## 4. factual · economics · `886e0fcd1e3d`
 
 **Q:** In a short paragraph of 3–6 sentences, list three distinct types of unemployment and give one concrete example for each type.
 
@@ -85,7 +73,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 6. factual · environment · `476bdbe5578d`
+## 5. factual · environment · `476bdbe5578d`
 
 **Q:** In a short paragraph (3 to 8 sentences), list three major sources of water pollution, give one pollutant each source typically releases, and name one ecological impact of that pollutant.
 
@@ -103,7 +91,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 7. factual · health · `17b9d268178a`
+## 6. factual · health · `17b9d268178a`
 
 **Q:** In a short paragraph (3-8 sentences), name the three main macronutrients required by the human body and state one primary function of each.
 
@@ -116,7 +104,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 8. factual · literature · `b0affe8aae1b`
+## 7. factual · literature · `b0affe8aae1b`
 
 **Q:** In a short paragraph (3–8 sentences), name three distinct literary movements of the 19th century and give one characteristic work (title and author) associated with each.
 
@@ -131,22 +119,20 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 9. factual · geography · `c555e910c2cb`
+## 8. factual · geography · `dae71517a495`
 
-**Q:** In a short paragraph of 3–8 sentences, name five of the world’s longest rivers and, for each, state the continent on which it primarily flows.
+**Q:** List the three primary types of plate boundaries—divergent, convergent, and transform—and state one key geological feature or process associated with each. Answer in a short paragraph of 3–8 sentences.
 
-**Path P1:** Provides five distinct longest rivers and correctly identifies their primary continents.
+**Path P1:** All three plate‑boundary types are identified and each is linked to a correct geological feature or process.
 
-- `P1.C1` completeness, core, w=1: Provides five distinct river names that are among the five longest rivers globally ← asked by: "name five ... longest rivers"
-- `P1.C2` correctness, core, w=1: For the first river named, states the correct continent on which it primarily flows ← asked by: "state the continent"
-- `P1.C3` correctness, core, w=1: For the second river named, states the correct continent on which it primarily flows ← asked by: "state the continent"
-- `P1.C4` correctness, core, w=1: For the third river named, states the correct continent on which it primarily flows ← asked by: "state the continent"
-- `P1.C5` correctness, core, w=1: For the fourth river named, states the correct continent on which it primarily flows ← asked by: "state the continent"
-- `P1.C6` correctness, core, w=1: For the fifth river named, states the correct continent on which it primarily flows ← asked by: "state the continent"
+- `P1.C1` completeness, core, w=1: Names all three primary types of plate boundaries (divergent, convergent, transform). ← asked by: "List the three primary types of plate boundaries"
+- `P1.C2` correctness, core, w=1: Provides a valid key geological feature or process for divergent boundaries (e.g., mid‑ocean ridge formation, seafloor spreading). ← asked by: "state one key geological feature or process associated with each"
+- `P1.C3` correctness, core, w=1: Provides a valid key geological feature or process for convergent boundaries (e.g., subduction zones, mountain building). ← asked by: "state one key geological feature or process associated with each"
+- `P1.C4` correctness, core, w=1: Provides a valid key geological feature or process for transform boundaries (e.g., strike‑slip faulting, earthquakes along a transform fault). ← asked by: "state one key geological feature or process associated with each"
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 10. factual · everyday life · `3d813378c122`
+## 9. factual · everyday life · `3d813378c122`
 
 **Q:** In a short paragraph (3–8 sentences), list three distinct bedtime routines that many adults follow and state the usual order of steps for each routine (e.g., brush teeth → change into pajamas → read a book).
 
@@ -161,7 +147,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 11. analytical · science · `4cb875e3c8cc`
+## 10. analytical · science · `4cb875e3c8cc`
 
 **Q:** Two main hypotheses explain why some planets possess prominent ring systems while others do not: (1) the remnants of a destroyed moon that was torn apart by tidal forces within the planet's Roche limit, and (2) the accumulation of leftover material from the planet's formation that never coalesced into a moon. In a short paragraph (3‑8 sentences), evaluate these two hypotheses and argue which one you find more convincing, providing supporting evidence for each.
 
@@ -181,7 +167,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 12. analytical · technology · `d757eca4528c`
+## 11. analytical · technology · `d757eca4528c`
 
 **Q:** In a short paragraph (3‑8 sentences), present one position on whether governments should require mandatory data‑privacy standards for consumer Internet‑of‑Things (IoT) devices, and support it with at least one specific reason or piece of evidence.
 
@@ -199,7 +185,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 13. analytical · ethics · `082591e7ec4e`
+## 12. analytical · ethics · `082591e7ec4e`
 
 **Q:** In a short paragraph (3‑8 sentences), argue whether utilitarianism provides a better foundation for public policy than deontological ethics. State your position, give one concrete policy area where your chosen approach offers an advantage, and explain how it supports your claim.
 
@@ -217,7 +203,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 14. analytical · economics · `d92e0ad73cb8`
+## 13. analytical · economics · `d92e0ad73cb8`
 
 **Q:** In a short paragraph of 3–6 sentences, argue whether implementing a progressive wealth tax on the richest households would reduce economic inequality in a market economy. State a position (for or against) and support it with at least two distinct arguments.
 
@@ -237,7 +223,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 15. analytical · environment · `5d564b58c11c`
+## 14. analytical · environment · `5d564b58c11c`
 
 **Q:** In a short paragraph (3 to 8 sentences), argue for either (a) implementing a nationwide ban on the use of chemical pesticides in agriculture, or (b) promoting integrated pest management (IPM) as a sustainable alternative. Choose one position, state at least two distinct supporting reasons, and provide a specific factual example, statistic, or case study for each reason.
 
@@ -259,27 +245,27 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 16. analytical · health · `80b5228e62c0`
+## 15. analytical · health · `632df277470d`
 
-**Q:** In a short paragraph (3–8 sentences), argue whether implementing a tax on sugar‑sweetened beverages is an effective public‑health strategy to reduce obesity. Choose one side, present at least two supporting points, and acknowledge a counterargument from the opposite side.
+**Q:** In a short paragraph (3–8 sentences), argue whether mandatory fortification of staple foods with vitamin D should be implemented as a public‑health measure. Choose one side, present at least two supporting points, and acknowledge a counterargument from the opposite side.
 
-**Path P1:** Path supporting the implementation of a sugar‑sweetened beverage tax
+**Path P1:** Argument in favor of mandatory vitamin D fortification
 
-- `P1.C1` completeness, core, w=1: States the position that a tax on sugar‑sweetened beverages should be implemented ← asked by: "argue whether implementing a tax on sugar‑sweetened beverages is an effective public‑health strategy to reduce obesity. Choose one side"
-- `P1.C2` reasoning, core, w=0.5: Provides a first distinct supporting point that includes a reason linking it to the claim ← asked by: "present at least two supporting points"
-- `P1.C3` correctness, core, w=0.5: Provides a second distinct supporting point that includes a reason linking it to the claim ← asked by: "present at least two supporting points"
-- `P1.C4` completeness, core, w=0.5: Acknowledges a counterargument from the opposite side ← asked by: "acknowledge a counterargument from the opposite side"
+- `P1.C1` correctness, core, w=1: States a position that mandatory fortification of staple foods with vitamin D should be implemented ← asked by: "Choose one side"
+- `P1.C2` reasoning, core, w=1: Provides a first supporting point that backs the pro‑fortification position ← asked by: "present at least two supporting points"
+- `P1.C3` reasoning, core, w=1: Provides a second supporting point that backs the pro‑fortification position ← asked by: "present at least two supporting points"
+- `P1.C4` completeness, core, w=1: Acknowledges a counterargument from the opposite side ← asked by: "acknowledge a counterargument from the opposite side"
 
-**Path P2:** Path opposing the implementation of a sugar‑sweetened beverage tax
+**Path P2:** Argument against mandatory vitamin D fortification
 
-- `P2.C1` completeness, core, w=1: States the position that a tax on sugar‑sweetened beverages should not be implemented ← asked by: "argue whether implementing a tax on sugar‑sweetened beverages is an effective public‑health strategy to reduce obesity. Choose one side"
-- `P2.C2` reasoning, core, w=0.5: Provides a first distinct supporting point that includes a reason linking it to the claim ← asked by: "present at least two supporting points"
-- `P2.C3` correctness, core, w=0.5: Provides a second distinct supporting point that includes a reason linking it to the claim ← asked by: "present at least two supporting points"
-- `P2.C4` completeness, core, w=0.5: Acknowledges a counterargument from the opposite side ← asked by: "acknowledge a counterargument from the opposite side"
+- `P2.C1` correctness, core, w=1: States a position that mandatory fortification of staple foods with vitamin D should not be implemented ← asked by: "Choose one side"
+- `P2.C2` reasoning, core, w=1: Provides a first supporting point that backs the anti‑fortification position ← asked by: "present at least two supporting points"
+- `P2.C3` reasoning, core, w=1: Provides a second supporting point that backs the anti‑fortification position ← asked by: "present at least two supporting points"
+- `P2.C4` completeness, core, w=1: Acknowledges a counterargument from the opposite side ← asked by: "acknowledge a counterargument from the opposite side"
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 17. analytical · literature · `7ef66d20c834`
+## 16. analytical · literature · `7ef66d20c834`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether Nathaniel Hawthorne’s *The Scarlet Letter* should be read primarily as a critique of Puritan moral hypocrisy or as an exploration of individual psychological trauma, and support your view with at least two distinct pieces of textual evidence.
 
@@ -299,7 +285,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 18. analytical · geography · `7d174cce75df`
+## 17. analytical · geography · `7d174cce75df`
 
 **Q:** In a short paragraph of 3–8 sentences, argue whether the primary cause of the recent intensification of urban heat islands in megacities is (1) reduced vegetation cover or (2) increased anthropogenic heat emissions. Choose one factor, state the claim, and provide at least one piece of supporting evidence that links the chosen factor to stronger urban heat islands.
 
@@ -315,7 +301,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 19. analytical · everyday life · `78d7767e5351`
+## 18. analytical · everyday life · `78d7767e5351`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether working from home increases overall work‑life balance, and support your argument with at least two distinct reasons.
 
@@ -333,7 +319,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 20. analytical · history · `17c1b10632b5`
+## 19. analytical · history · `17c1b10632b5`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries, and support your position with specific historical evidence.
 
@@ -351,19 +337,19 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 21. explanatory · technology · `e9829aabdcd6`
+## 20. explanatory · technology · `a5cd0a155f64`
 
-**Q:** In a short paragraph (3‑8 sentences), explain how cloud computing enables small businesses to scale their IT resources on demand.
+**Q:** Explain how 5G wireless networks achieve lower latency than previous 4G LTE networks. In a short paragraph (3‑8 sentences), describe one primary technical mechanism that enables this reduction.
 
-**Path P1:** Explanation of cloud‑based scaling for small businesses
+**Path P1:** Provides a correct explanation of a single technical mechanism that lowers latency in 5G compared to 4G and links it to the latency improvement.
 
-- `P1.C1` completeness, core, w=1: States that cloud computing offers a shared pool of computing resources (such as servers, storage, and networking) that can be provisioned dynamically ← asked by: "explain how cloud computing enables small businesses to scale their IT resources on demand"
-- `P1.C2` correctness, core, w=1: Accurately explains that this dynamic provisioning lets small businesses increase or decrease resource usage quickly in response to demand ← asked by: "explain how cloud computing enables small businesses to scale their IT resources on demand"
-- `P1.C3` reasoning, non-core, w=0.5: Provides a reason why this flexibility reduces the need for upfront hardware investment, for example by using a pay‑as‑you‑go pricing model ← asked by: "explain how cloud computing enables small businesses to scale their IT resources on demand"
+- `P1.C1` completeness, core, w=1: Identifies a primary technical mechanism that reduces latency in 5G compared to 4G. ← asked by: "describe one primary technical mechanism that enables this reduction"
+- `P1.C2` correctness, core, w=1: The identified mechanism is described accurately and is indeed a factor that lowers latency in 5G. ← asked by: "describe one primary technical mechanism that enables this reduction"
+- `P1.C3` reasoning, core, w=1: Explains how the mechanism leads to lower latency in 5G compared to 4G. ← asked by: "Explain how 5G wireless networks achieve lower latency than previous 4G LTE networks"
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 22. explanatory · ethics · `91798e725180`
+## 21. explanatory · ethics · `91798e725180`
 
 **Q:** In a short paragraph (3‑8 sentences), explain why individuals often follow social norms even when those norms conflict with their personal moral convictions.
 
@@ -381,7 +367,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 23. explanatory · economics · `669bce9c85fb`
+## 22. explanatory · economics · `669bce9c85fb`
 
 **Q:** In a short paragraph of 3–6 sentences, explain how a depreciation of a country's currency influences its export competitiveness. Provide one mechanism that connects the change in exchange rate to export volumes.
 
@@ -393,7 +379,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 24. explanatory · environment · `1e9d95d9130f`
+## 23. explanatory · environment · `1e9d95d9130f`
 
 **Q:** In a short paragraph (3 to 8 sentences), explain one mechanism by which adding biochar to agricultural soil enhances carbon sequestration, and give a concrete example of a farm or region where this mechanism has been applied.
 
@@ -411,7 +397,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 25. explanatory · health · `b850a615f22e`
+## 24. explanatory · health · `b850a615f22e`
 
 **Q:** In a short paragraph (3–8 sentences), explain one mechanism by which regular physical activity improves mental health.
 
@@ -435,7 +421,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 26. explanatory · literature · `c08ec38ec72f`
+## 25. explanatory · literature · `c08ec38ec72f`
 
 **Q:** In a short paragraph (3–8 sentences), explain how the use of an unreliable narrator in F. Scott Fitzgerald’s *The Great Gatsby* influences the reader’s understanding of the American Dream.
 
@@ -453,7 +439,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 27. explanatory · geography · `3f8052a62a58`
+## 26. explanatory · geography · `3f8052a62a58`
 
 **Q:** Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.
 
@@ -465,7 +451,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 28. explanatory · everyday life · `610c46d48e48`
+## 27. explanatory · everyday life · `610c46d48e48`
 
 **Q:** Explain why many people frequently misplace their keys, offering one plausible explanation in a short paragraph (3–8 sentences).
 
@@ -489,31 +475,31 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 29. explanatory · history · `3dadfd69ad7c`
+## 28. explanatory · history · `89443fe631e8`
 
-**Q:** In a short paragraph (3–8 sentences), explain how the Haitian Revolution resulted in the abolition of slavery in Haiti. Identify one key factor that contributed to this outcome.
+**Q:** In a short paragraph (3–8 sentences), explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union. Identify one key factor that contributed to this outcome.
 
-**Path P1:** Explanation that the revolution’s military victory of formerly enslaved people forced abolition.
+**Path P1:** Explanation that the Bolshevik seizure of power in October 1917 directly led to the establishment of the Soviet Union.
 
-- `P1.C1` completeness, core, w=1: Provides an explanation that the Haitian Revolution directly caused the abolition of slavery by overthrowing colonial rule and establishing a government that outlawed slavery. ← asked by: "explain how the Haitian Revolution resulted in the abolition of slavery"
-- `P1.C2` correctness, core, w=1: Identifies the military success of the formerly enslaved rebels as the key factor. ← asked by: "Identify one key factor"
-- `P1.C3` reasoning, non-core, w=0.5: Shows reasoning that the rebels' control of territory made abolition possible. ← asked by: "Identify one key factor"
+- `P1.C1` correctness, core, w=1: Explains that the Bolshevik seizure of power in October 1917 directly led to the establishment of the Soviet Union. ← asked by: "explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union"
+- `P1.C2` completeness, core, w=1: Identifies Lenin's leadership as a key factor that contributed to this outcome. ← asked by: "Identify one key factor that contributed to this outcome"
+- `P1.C3` reasoning, non-core, w=0.5: Shows that Lenin's leadership enabled the Bolsheviks to consolidate power, linking the factor to the creation of the Soviet Union. ← asked by: "Identify one key factor that contributed to this outcome"
 
-**Path P2:** Explanation that Enlightenment and French revolutionary ideas inspired abolition.
+**Path P2:** Explanation that the Russian Civil War allowed the Bolsheviks to eliminate rivals and form a centralized Soviet state.
 
-- `P2.C1` completeness, core, w=1: Provides an explanation that the Haitian Revolution led to abolition because revolutionary Enlightenment ideas inspired leaders to declare freedom for all. ← asked by: "explain how the Haitian Revolution resulted in the abolition of slavery"
-- `P2.C2` correctness, core, w=1: Identifies the influence of Enlightenment and French revolutionary ideals as the key factor. ← asked by: "Identify one key factor"
-- `P2.C3` reasoning, non-core, w=0.5: Shows reasoning that these ideas motivated the revolutionary assembly to pass abolition laws. ← asked by: "Identify one key factor"
+- `P2.C1` correctness, core, w=1: Explains that the Russian Civil War (1917‑1922) allowed the Bolsheviks to eliminate rival forces and thereby create the Soviet Union. ← asked by: "explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union"
+- `P2.C2` completeness, core, w=1: Identifies the Red Army's victory as a key factor that contributed to this outcome. ← asked by: "Identify one key factor that contributed to this outcome"
+- `P2.C3` reasoning, non-core, w=0.5: Links the Red Army's victory to the consolidation of Bolshevik power and the formation of the Soviet state. ← asked by: "Identify one key factor that contributed to this outcome"
 
-**Path P3:** Explanation that external French policy changes forced Haitian abolition.
+**Path P3:** Explanation that Marxist‑Leninist ideology guided the creation of a new socialist state, leading to the Soviet Union.
 
-- `P3.C1` completeness, core, w=1: Provides an explanation that the Haitian Revolution resulted in abolition because the French Republic’s 1794 decree abolishing slavery was adopted and reinforced by Haitian leaders. ← asked by: "explain how the Haitian Revolution resulted in the abolition of slavery"
-- `P3.C2` correctness, core, w=1: Identifies the French revolutionary decree of 1794 abolishing slavery as the key factor. ← asked by: "Identify one key factor"
-- `P3.C3` reasoning, non-core, w=0.5: Shows reasoning that the decree provided legal legitimacy for Haitian leaders to end slavery. ← asked by: "Identify one key factor"
+- `P3.C1` correctness, core, w=1: Explains that the adoption of Marxist‑Leninist ideology after the 1917 Revolution provided the guiding framework for establishing the Soviet Union. ← asked by: "explain how the 1917 Russian Revolution resulted in the creation of the Soviet Union"
+- `P3.C2` completeness, core, w=1: Identifies the 1918 Constitution (or similar foundational document) as a key factor that contributed to this outcome. ← asked by: "Identify one key factor that contributed to this outcome"
+- `P3.C3` reasoning, non-core, w=0.5: Shows how the identified document institutionalized Marxist‑Leninist principles, linking it to the creation of the Soviet Union. ← asked by: "Identify one key factor that contributed to this outcome"
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 30. explanatory · science · `23575fb39cfd`
+## 29. explanatory · science · `23575fb39cfd`
 
 **Q:** Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).
 
@@ -525,7 +511,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 31. creative · ethics · `4881228365fa`
+## 30. creative · ethics · `4881228365fa`
 
 **Q:** Write a brief scene of 3‑8 sentences in which a journalist must choose whether to publish a leaked report about a corporation's harmful practices or keep it hidden to protect sources. The scene must include at least one line of dialogue that reveals the journalist's internal conflict, a turning point where the decision is made, must not contain the phrase “ethical dilemma”, and must avoid the clichés “the world will never be the same”, “the stakes are high”, and “moral crossroads”.
 
@@ -536,7 +522,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 - `P1.C3` correctness, core, w=1: Contains a turning point where the decision is made ← asked by: "a turning point where the decision is made"
 - `P1.C4` correctness, core, w=1: Does not contain the phrase "ethical dilemma" ← asked by: "must not contain the phrase “ethical dilemma”"
 - `P1.C5` correctness, core, w=1: Does not use any of the banned clichés: "the world will never be the same", "the stakes are high", "moral crossroads" ← asked by: "must avoid the clichés “the world will never be the same”, “the stakes are high”, and “moral crossroads”"
-- `P1.C6` expression, core, w=1: Shows the conflict through dialogue or action rather than stating it directly ← craft test (by design)
+- `P1.C6` expression, core, w=1: Shows the conflict through dialogue or action rather than stating it directly ← (no quote)
 
 **Obvious answers (originality check):**
 
@@ -548,73 +534,28 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 32. creative · economics · `14f014e48366`
+## 31. creative · economics · `f894ae76980e`
 
-**Q:** Write a short scene (3–5 sentences) in which a college student learns that the price of their favorite coffee has increased. The scene must (1) mention the price increase, (2) show the student's internal thought about whether to keep buying it, and (3) include a brief reference to an alternative beverage they could choose instead.
+**Q:** Write a short dialogue (3–5 sentences) between a small‑business owner and a bank loan officer about rising interest rates. The dialogue must (1) mention the rise in interest rates, (2) show the owner's concern about higher borrowing costs, and (3) include the loan officer offering one possible strategy to mitigate the impact.
 
-**Path P1:** The answer is a short scene that satisfies all brief constraints.
+**Path P1:** Answer follows the required dialogue constraints.
 
-- `P1.C1` correctness, core, w=1: Mentions the price increase ← asked by: "mention the price increase"
-- `P1.C2` correctness, core, w=1: Shows the student's internal thought about whether to keep buying it ← asked by: "show the student's internal thought"
-- `P1.C3` correctness, core, w=1: Includes a brief reference to an alternative beverage ← asked by: "include a brief reference to an alternative beverage"
-- `P1.C4` expression, non-core, w=0.5: Contains a turn or development where the scene moves from noticing the price increase to the student's decision ← craft test (by design)
-- `P1.C5` expression, non-core, w=0.5: Does not use any of: "price is too high", "I can't afford it", "cheaper alternative" ← craft test (by design)
-
-**Obvious answers (originality check):**
-
-- Student sighs about the coffee price hike, thinks about budget, and mentions switching to tea.
-- Student notes the coffee now costs $5, worries about cost, and considers buying a cheaper iced latte.
-- Student reacts to the price increase, internally debates, and mentions buying a generic brand instead.
-- Student hears about the coffee price rise, reflects on spending, and suggests trying a bottled water.
-- Student sees the coffee price go up, thinks about saving money, and mentions ordering a cheaper instant coffee.
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 33. creative · environment · `2b28e1af770f`
-
-**Q:** Write a short scene (3 to 8 sentences) that depicts a coastal mangrove forest after a storm surge, showing the first signs of ecological recovery. Use vivid sensory details and include a turn where a character reflects on resilience.
-
-**Path P1:** All required elements are present
-
-- `P1.C1` correctness, core, w=1: Shows a coastal mangrove forest setting that has experienced a storm surge ← asked by: "depicts a coastal mangrove forest after a storm surge"
-- `P1.C2` correctness, core, w=1: Describes the first signs of ecological recovery ← asked by: "showing the first signs of ecological recovery"
-- `P1.C3` correctness, core, w=1: Includes at least one vivid sensory detail ← asked by: "Use vivid sensory details"
-- `P1.C4` expression, core, w=1: Contains a turn where a character reflects on resilience ← asked by: "include a turn where a character reflects on resilience"
-- `P1.C5` expression, non-core, w=0.5: Does not use any of: "peaceful", "serene", "calm" ← craft test (by design)
+- `P1.C1` correctness, core, w=1: Mentions the rise in interest rates. ← asked by: "mention the rise in interest rates"
+- `P1.C2` correctness, core, w=1: Shows the owner's concern about higher borrowing costs. ← asked by: "show the owner's concern about higher borrowing costs"
+- `P1.C3` correctness, core, w=1: Includes the loan officer offering one possible strategy to mitigate the impact. ← asked by: "include the loan officer offering one possible strategy to mitigate the impact"
+- `P1.C4` expression, core, w=1: Presented as a dialogue with speaker labels. ← asked by: "dialogue"
 
 **Obvious answers (originality check):**
 
-- The water recedes, the mud glistens, a child spots a new sprout and thinks the forest will thrive again.
-- Rain drips from mangrove roots, the salty air smells fresh, a fisherman watches seedlings emerge and feels hopeful.
-- Waves pull back, birds return, a teenager notes the green leaves and whispers that nature heals.
-- The storm's aftermath shows mud drying, a turtle crawls onto a new shoot, and a guide remarks on the forest's resilience.
-- Leaves glisten with remaining droplets, a scientist observes new growth and concludes the ecosystem is recovering.
+- Owner: "I just heard interest rates have risen again, and I'm worried about the higher borrowing costs for my expansion." Officer: "One option is to lock in a fixed‑rate loan to protect against further hikes."
+- Owner: "The recent increase in interest rates makes my loan payments look scary." Officer: "You might refinance now before rates go even higher."
+- Owner: "Higher interest rates mean my project could become unprofitable." Officer: "Consider a rate‑cap product that limits how much your rate can rise."
+- Owner: "I'm concerned the rise in interest rates will squeeze my cash flow." Officer: "A possible strategy is to switch to a variable‑rate loan with a built‑in ceiling."
+- Owner: "With interest rates climbing, I'm not sure I can afford the loan." Officer: "You could explore a short‑term bridge loan until rates stabilize."
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 34. creative · health · `337e07342987`
-
-**Q:** Write a short scene (3–8 sentences) in which a nurse explains to a patient how a wearable fitness tracker can help manage stress. The scene must (1) describe the device’s key feature that monitors physiological signals, (2) show the patient’s reaction using a physical cue instead of naming the feeling, and (3) end with the nurse offering a specific next step for the patient.
-
-**Path P1:** All required constraints are met
-
-- `P1.C1` correctness, core, w=1: Describes the device’s key feature that monitors physiological signals ← asked by: "describe the device’s key feature that monitors physiological signals"
-- `P1.C2` correctness, core, w=1: Shows the patient’s reaction using a physical cue and does not name the feeling ← asked by: "show the patient’s reaction using a physical cue instead of naming the feeling"
-- `P1.C3` correctness, core, w=1: Ends with the nurse offering a specific next step for the patient ← asked by: "end with the nurse offering a specific next step for the patient"
-- `P1.C4` expression, non-core, w=0.5: Does not use any of: "once upon a time", "in a faraway land", "magically" ← craft test (by design)
-- `P1.C5` expression, non-core, w=0.5: Shows a turn or development in the scene (the nurse’s suggestion changes the direction) ← craft test (by design)
-
-**Obvious answers (originality check):**
-
-- The nurse describes the tracker’s heart‑rate monitor, the patient smiles, and the nurse says “Let’s set a reminder to check your stress levels each evening.”
-- The nurse mentions the device tracks breathing patterns, the patient’s eyes widen, and the nurse suggests “Schedule a short walk after work to use the data.”
-- The nurse explains the tracker alerts when cortisol spikes, the patient’s shoulders relax, and the nurse offers “I’ll email you a guide on using the app.”
-- The nurse points out the step‑count and stress score feature, the patient nods slowly, and the nurse says “Come back tomorrow for a personalized plan.”
-- The nurse highlights the sleep‑quality monitoring, the patient bites their lip, and the nurse proposes “Let’s book a follow‑up to review your progress.”
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 35. creative · literature · `30cfecdb54df`
+## 32. creative · literature · `30cfecdb54df`
 
 **Q:** In a short scene of three to eight sentences, write a narrative where a character discovers a forgotten poetry anthology in a rooftop garden. The scene must include vivid sensory description, a twist at the end, show rather than tell, and must avoid the clichés: “the wind whispered”, “the pages fluttered”, “a secret message”.
 
@@ -635,95 +576,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 36. creative · geography · `05c2f2ca70a4`
-
-**Q:** Write a short radio news script (3–8 sentences) announcing the discovery of a floating island in the middle of the Great Lakes. Include the island’s geographic location, a vivid description of its appearance, and one surprising ecological feature.
-
-**Path P1:** Answer follows the required content and avoids prohibited clichés.
-
-- `P1.C1` correctness, core, w=1: States the island’s geographic location (e.g., which Great Lake and approximate position). ← asked by: "geographic location"
-- `P1.C2` correctness, core, w=1: Provides a vivid description of the island’s appearance. ← asked by: "vivid description of its appearance"
-- `P1.C3` correctness, core, w=1: Mentions one surprising ecological feature of the island. ← asked by: "one surprising ecological feature"
-- `P1.C4` expression, non-core, w=0.5: Does not use any of: "once upon a time", "magical", "mysterious". ← craft test (by design)
-
-**Obvious answers (originality check):**
-
-- The island is located in Lake Superior near its center, described as a grassy mound with scattered birch trees, and it hosts a colony of rare salamanders.
-- The island sits in Lake Michigan, appears as a rocky outcrop with cascading waterfalls, and contains a small geothermal hot spring supporting unique algae.
-- The island drifts in Lake Erie, looks like a floating mat of reeds and cattails, and provides a breeding ground for thousands of migratory birds.
-- The island is in Lake Huron, shrouded in mist with a surface covered in luminous bioluminescent algae, creating a glowing shoreline at night.
-- The island lies in Lake Ontario, is a sandy speck with remnants of an ancient petrified forest, and contains fossils of extinct fish species.
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 37. creative · everyday life · `7cb37a949c50`
-
-**Q:** Write a brief scene of 3–6 sentences describing a person cooking dinner alone, focusing on the protagonist’s internal thoughts, include at least one auditory detail of the kitchen, and end with a subtle hint of an upcoming surprise.
-
-**Path P1:** Meets all creative constraints.
-
-- `P1.C1` correctness, core, w=1: Includes the internal thoughts of the protagonist. ← asked by: "focusing on the protagonist’s internal thoughts"
-- `P1.C2` correctness, core, w=1: Provides at least one auditory detail of the kitchen. ← asked by: "include at least one auditory detail of the kitchen"
-- `P1.C3` correctness, core, w=1: Ends with a subtle hint of an upcoming surprise. ← asked by: "end with a subtle hint of an upcoming surprise"
-- `P1.C4` expression, non-core, w=0.5: Shows rather than tells the scene (uses descriptive language). ← craft test (by design)
-- `P1.C5` expression, non-core, w=0.5: Does not use any of the following cliché phrases: "home‑cooked meal", "food for the soul", "sizzle of the pan", "taste of nostalgia". ← craft test (by design)
-
-**Obvious answers (originality check):**
-
-- The cook thinks about a recent argument while chopping onions, hears the timer beep, and the scene ends with a sudden knock suggesting a visitor.
-- The protagonist reflects on the day’s fatigue as the pot boils, hears the hiss of steam, and the final line hints at an unexpected delivery.
-- Internal monologue about loneliness accompanies the clatter of dishes, the oven timer dings, and the ending mentions a mysterious text arriving.
-- The narrator worries about tomorrow while the skillet sizzles, hears a distant radio song, and the last sentence hints at a surprise phone call.
-- The chef muses on missed opportunities as the knife hits the cutting board, hears the faucet drip, and the scene closes with a subtle hint of an unannounced guest.
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 38. creative · history · `b687bcd90776`
-
-**Q:** Write a short speech (3–8 sentences) that a women’s suffrage activist might deliver at a 1910 rally in London. The speech must (a) call for women’s right to vote, (b) reference the recent 1910 women’s suffrage march, and (c) convey the speaker’s personal conviction. Do not use the cliché phrase “the time is now.” Ensure the speech shows the speaker’s emotions rather than simply stating them.
-
-**Path P1:** A short rally speech meeting all constraints.
-
-- `P1.C1` correctness, core, w=1: Includes a direct call for women’s right to vote. ← asked by: "call for women’s right to vote"
-- `P1.C2` correctness, core, w=1: Mentions the 1910 women’s suffrage march. ← asked by: "reference the recent 1910 women’s suffrage march"
-- `P1.C3` expression, core, w=1: Conveys personal conviction using first‑person language. ← asked by: "convey the speaker’s personal conviction"
-- `P1.C4` expression, non-core, w=0.5: Shows emotions through vivid description rather than merely stating feelings. ← asked by: "show the speaker’s emotions rather than simply stating them"
-- `P1.C5` correctness, non-core, w=0.5: Does not contain the exact phrase “the time is now.” ← asked by: "Do not use the cliché phrase “the time is now.”"
-
-**Obvious answers (originality check):**
-
-- A speech that repeats a simple call for the vote, mentions the 1910 march, and says “I believe we must win the vote.”
-- A short rally address that states “Women deserve the vote,” cites the march, and uses personal language like “my heart is with the cause.”
-- An emotional speech that declares “Grant us the vote,” references the recent march, and includes a line such as “I will fight for this right.”
-- A brief speech that calls for voting rights, notes the 1910 march, and expresses conviction with phrases like “I am determined to see this happen.”
-- A rally speech that urges women’s suffrage, mentions the march, avoids the banned phrase, and shows feeling through vivid words such as “the fire of hope burns within me.”
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 39. creative · science · `13360f60b1fe`
-
-**Q:** Write a short sci‑fi scene (3‑8 sentences) set aboard a generation starship where an artificial intelligence caretaker discovers a concealed garden of Earth plants. The scene should introduce the setting, describe the discovery, and include a development that creates a moral dilemma among the crew.
-
-**Path P1:** Meets all brief constraints for the sci‑fi scene
-
-- `P1.C1` correctness, core, w=1: Contains between 3 and 8 sentences. ← asked by: "3‑8 sentences"
-- `P1.C2` correctness, core, w=1: Introduces the setting (mentions the generation starship, deep‑space environment, or similar). ← asked by: "introduce the setting"
-- `P1.C3` correctness, core, w=1: Describes the discovery of a concealed garden of Earth plants by the AI caretaker. ← asked by: "describe the discovery"
-- `P1.C4` correctness, core, w=1: Includes a development that creates a moral dilemma among the crew. ← asked by: "include a development that creates a moral dilemma among the crew"
-- `P1.C5` expression, non-core, w=0.5: Shows the scene through sensory details or actions rather than merely stating facts. ← craft test (by design)
-- `P1.C6` expression, non-core, w=0.5: Does not use any of the following clichés: "out of this world", "the sky was the limit", "cutting edge", "beyond imagination", "reach for the stars". ← craft test (by design)
-
-**Obvious answers (originality check):**
-
-- A straightforward description that mentions the starship, the AI, the hidden garden, and the crew's ethical debate.
-- A scene that opens with the ship’s corridors, then the AI discovers a greenhouse, followed by crew arguing about preserving the plants.
-- A narrative from the AI’s perspective describing the scent of Earth flowers and ending with a moral choice for the crew.
-- A brief scene that includes the setting, the concealed garden, and a sudden conflict over resource allocation.
-- A simple plot where the AI reveals the garden, the crew reacts, and a moral dilemma is presented.
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 40. creative · technology · `6878445611ca`
+## 33. creative · technology · `6878445611ca`
 
 **Q:** In a short scene of 3‑8 sentences, imagine a product launch at a future technology conference where a new AI‑powered personal assistant called "EchoMate" is unveiled. Write the scene using present‑tense narration. The scene must (1) name the product, (2) describe one unique capability of the assistant, (3) include a reaction from an audience member, and (4) end with a tagline of exactly six words.
 
