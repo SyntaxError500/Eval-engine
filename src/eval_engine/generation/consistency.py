@@ -124,7 +124,17 @@ def check_rubric(
         covered = {c.dimension.value for c in path.criteria}
         missing = sorted(required - covered)
         if missing:
-            problems.append(f"{where} has no criterion for dimension(s) {missing}")
+            hints = {
+                "completeness": 'set dimension "completeness" on the criterion that checks a '
+                "second part the question asks for (e.g. the example, the effect, the second "
+                "item), quoting those words",
+                "correctness": 'set dimension "correctness" on the criterion that checks a '
+                "fact the answer must state accurately",
+                "reasoning": 'add a criterion in dimension "reasoning" that checks the '
+                "explanation or link the question asks for",
+            }
+            fix = "; ".join(hints.get(m, "") for m in missing if hints.get(m))
+            problems.append(f"{where} has no criterion for dimension(s) {missing}: {fix}")
         for c in path.criteria:
             # In a creative brief, length is a real constraint ("120-150 words") and is
             # graded under correctness; elsewhere a length criterion measures no content.
