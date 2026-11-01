@@ -1,5 +1,6 @@
 name: fact_check
-version: 4
+version: 5
+# v5: creative craft tests no longer exempt (matches generator prompt v5).
 # v4 (external review 2): criteria that narrow or change the question's meaning; definite
 # counts ("the two conditions") that aren't standard; blurred historical events.
 # v3: false balance and settled science (v4 batch Q11 framed human vs natural causes of
@@ -35,8 +36,9 @@ system: |
   - a history question or path merges distinct events, dates or stages;
   - a criterion demands something the question does not ask for (an extra example, a named
     source, a number, a rebuttal, restating the question's premise), so a fully correct
-    answer to the question could fail it. Creative craft tests (a turn, showing rather than
-    telling, avoiding listed phrases) are allowed.
+    answer to the question could fail it. This includes creative craft tests: a turn,
+    showing rather than telling, or banned phrases are allowed only if the brief asks for
+    them in words.
 
   Report a "doubt" when a claim is contested or you cannot confirm it. Do not report
   matters of style, wording or weighting. Do not report fictional content in creative tasks.
