@@ -15,7 +15,9 @@ from eval_engine.schemas.rubric import Criterion, RubricDraft
 # Lower-weight dimensions are optional: forcing a criterion into them would make the rubric
 # ask for things the question doesn't need (a Phase 2 lesson). Aggregation re-normalises
 # over the dimensions a path actually covers.
-REQUIRED_WEIGHT = 0.2
+REQUIRED_WEIGHT = 0.2  # strictly above: a 0.2 dimension is optional
+# (Was >= until v4: with traceability, forcing analytical's 0.2 'completeness' made the
+# generator invent a requirement the question didn't state, failing 2/40 slots repeatedly.)
 
 # Non-observable judgement words. A criterion must say what is in the answer, not how good
 # it is. Matched as whole words in criterion statements.
@@ -87,7 +89,7 @@ _ASKS_FOR_SEVERAL = re.compile(
 
 def required_dimensions(task_type: TaskType, weights: dict[str, dict[str, float]]) -> set[str]:
     row = weights[task_type.value]
-    return {dim for dim, w in row.items() if w >= REQUIRED_WEIGHT}
+    return {dim for dim, w in row.items() if w > REQUIRED_WEIGHT}
 
 
 def check_rubric(

@@ -76,7 +76,7 @@ def test_well_formed_drafts_pass(task_type: str) -> None:
 
 def test_required_dimensions_follow_weights() -> None:
     assert required_dimensions(TaskType.FACTUAL, WEIGHTS) == {"correctness", "completeness"}
-    assert "reasoning" in required_dimensions(TaskType.ANALYTICAL, WEIGHTS)
+    assert required_dimensions(TaskType.ANALYTICAL, WEIGHTS) == {"reasoning"}
     assert required_dimensions(TaskType.CREATIVE, WEIGHTS) == {"correctness", "expression"}
 
 
