@@ -1,6 +1,6 @@
 # Phase 3: generated question review
 
-39 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
+33 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
 
 Checklist per question:
 
@@ -116,14 +116,18 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 8. factual · literature · `2e67ba664d8f`
+## 8. factual · literature · `b0affe8aae1b`
 
-**Q:** In a short paragraph (3–8 sentences), name three distinct poems by Emily Dickinson and give the year each was first published (or first appeared in a collection).
+**Q:** In a short paragraph (3–8 sentences), name three distinct literary movements of the 19th century and give one characteristic work (title and author) associated with each.
 
-**Path P1:** Provides three poems by Emily Dickinson and the year each was first published or first appeared in a collection.
+**Path P1:** Provide three 19th‑century literary movements and a characteristic work for each.
 
-- `P1.C1` completeness, core, w=1: Names three distinct poems by Emily Dickinson ← asked by: "name three distinct poems by Emily Dickinson"
-- `P1.C2` correctness, core, w=1: Provides the year each poem was first published or first appeared in a collection ← asked by: "give the year each was first published (or first appeared in a collection)"
+- `P1.C1` completeness, core, w=1: Names a distinct 19th‑century literary movement (first of three) ← asked by: "name three distinct literary movements of the 19th century"
+- `P1.C2` correctness, core, w=1: Gives a valid characteristic work (title and author) associated with the first named movement ← asked by: "give one characteristic work (title and author) associated with each"
+- `P1.C3` completeness, core, w=1: Names a distinct 19th‑century literary movement (second of three) ← asked by: "name three distinct literary movements of the 19th century"
+- `P1.C4` correctness, core, w=1: Gives a valid characteristic work (title and author) associated with the second named movement ← asked by: "give one characteristic work (title and author) associated with each"
+- `P1.C5` completeness, core, w=1: Names a distinct 19th‑century literary movement (third of three) ← asked by: "name three distinct literary movements of the 19th century"
+- `P1.C6` correctness, core, w=1: Gives a valid characteristic work (title and author) associated with the third named movement ← asked by: "give one characteristic work (title and author) associated with each"
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
@@ -157,47 +161,27 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 11. analytical · science · `56c2e4694628`
+## 11. analytical · science · `4cb875e3c8cc`
 
-**Q:** Some scientists argue that recent global climate change is primarily driven by human activities, while others claim it is mainly due to natural variability. In a short paragraph (3‑8 sentences), argue for the position you find more convincing, providing at least two supporting reasons.
+**Q:** Two main hypotheses explain why some planets possess prominent ring systems while others do not: (1) the remnants of a destroyed moon that was torn apart by tidal forces within the planet's Roche limit, and (2) the accumulation of leftover material from the planet's formation that never coalesced into a moon. In a short paragraph (3‑8 sentences), evaluate these two hypotheses and argue which one you find more convincing, providing supporting evidence for each.
 
-**Path P1:** Position: climate change is primarily caused by human activities
+**Path P1:** Argue that the destroyed‑moon hypothesis is more convincing.
 
-- `P1.C1` completeness, core, w=1: States the position that climate change is primarily caused by human activities ← asked by: "argue for the position you find more convincing"
-- `P1.C2` reasoning, core, w=1: Provides a first distinct reason supporting the claim ← asked by: "providing at least two supporting reasons"
-- `P1.C3` reasoning, core, w=1: Provides a second distinct reason supporting the claim ← asked by: "providing at least two supporting reasons"
-- `P1.C4` correctness, core, w=1: All reasons given are factually accurate ← asked by: "providing at least two supporting reasons"
+- `P1.C1` completeness, core, w=1: States that the destroyed‑moon hypothesis is more convincing. ← asked by: "argue which one you find more convincing"
+- `P1.C2` correctness, core, w=1: Provides at least one distinct piece of evidence supporting the destroyed‑moon hypothesis (e.g., observations of ring particles matching moon composition or calculations showing tidal disruption within the Roche limit). ← asked by: "providing supporting evidence for each"
+- `P1.C3` correctness, core, w=1: Provides at least one distinct piece of evidence supporting the leftover‑material hypothesis (e.g., models of planet formation that leave a residual disk of dust and ice). ← asked by: "providing supporting evidence for each"
+- `P1.C4` reasoning, core, w=1: Explains why the evidence makes the destroyed‑moon hypothesis more convincing than the leftover‑material hypothesis. ← asked by: "argue which one you find more convincing"
 
-**Path P2:** Position: climate change is primarily driven by natural variability
+**Path P2:** Argue that the leftover‑material hypothesis is more convincing.
 
-- `P2.C1` completeness, core, w=1: States the position that climate change is primarily driven by natural variability ← asked by: "argue for the position you find more convincing"
-- `P2.C2` reasoning, core, w=1: Provides a first distinct reason supporting the claim ← asked by: "providing at least two supporting reasons"
-- `P2.C3` reasoning, core, w=1: Provides a second distinct reason supporting the claim ← asked by: "providing at least two supporting reasons"
-- `P2.C4` correctness, core, w=1: All reasons given are factually accurate ← asked by: "providing at least two supporting reasons"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 12. analytical · technology · `46b076f456cf`
-
-**Q:** Argue whether the tech industry should prioritize developing quantum computing over advancing artificial intelligence. In a short paragraph (3‑8 sentences), present one position and support it with at least two distinct reasons.
-
-**Path P1:** Position: quantum computing should be prioritized over AI
-
-- `P1.C1` completeness, core, w=1: States the position that quantum computing should be prioritized over AI ← asked by: "present one position"
-- `P1.C2` reasoning, core, w=1: Provides a first distinct reason that supports the position ← asked by: "support it with at least two distinct reasons"
-- `P1.C3` reasoning, non-core, w=0.5: Provides a second distinct reason that supports the position ← asked by: "support it with at least two distinct reasons"
-- `P1.C4` correctness, core, w=1: Each reason given is factually accurate ← asked by: "support it with at least two distinct reasons"
-
-**Path P2:** Position: AI should be prioritized over quantum computing
-
-- `P2.C1` completeness, core, w=1: States the position that artificial intelligence should be prioritized over quantum computing ← asked by: "present one position"
-- `P2.C2` reasoning, core, w=1: Provides a first distinct reason that supports the position ← asked by: "support it with at least two distinct reasons"
-- `P2.C3` reasoning, non-core, w=0.5: Provides a second distinct reason that supports the position ← asked by: "support it with at least two distinct reasons"
-- `P2.C4` correctness, core, w=1: Each reason given is factually accurate ← asked by: "support it with at least two distinct reasons"
+- `P2.C1` completeness, core, w=1: States that the leftover‑material hypothesis is more convincing. ← asked by: "argue which one you find more convincing"
+- `P2.C2` correctness, core, w=1: Provides at least one distinct piece of evidence supporting the destroyed‑moon hypothesis (e.g., observations of ring particles matching moon composition or calculations showing tidal disruption within the Roche limit). ← asked by: "providing supporting evidence for each"
+- `P2.C3` correctness, core, w=1: Provides at least one distinct piece of evidence supporting the leftover‑material hypothesis (e.g., models of planet formation that leave a residual disk of dust and ice). ← asked by: "providing supporting evidence for each"
+- `P2.C4` reasoning, core, w=1: Explains why the evidence makes the leftover‑material hypothesis more convincing than the destroyed‑moon hypothesis. ← asked by: "argue which one you find more convincing"
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 13. analytical · ethics · `082591e7ec4e`
+## 12. analytical · ethics · `082591e7ec4e`
 
 **Q:** In a short paragraph (3‑8 sentences), argue whether utilitarianism provides a better foundation for public policy than deontological ethics. State your position, give one concrete policy area where your chosen approach offers an advantage, and explain how it supports your claim.
 
@@ -215,27 +199,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 14. analytical · economics · `e82fb3602421`
-
-**Q:** In a short paragraph of 3-6 sentences, argue whether a government-imposed carbon tax effectively reduces greenhouse gas emissions. State a position (for or against) and support it with at least two distinct arguments.
-
-**Path P1:** Argument in favor of a carbon tax
-
-- `P1.C1` correctness, core, w=1: States a position (for) ← asked by: "State a position (for or against)"
-- `P1.C2` completeness, core, w=1: Provides at least two distinct arguments supporting the position ← asked by: "support it with at least two distinct arguments"
-- `P1.C3` reasoning, core, w=1: Gives a first distinct argument that supports the position ← asked by: "support it with at least two distinct arguments"
-- `P1.C4` reasoning, core, w=1: Gives a second distinct argument that supports the position ← asked by: "support it with at least two distinct arguments"
-
-**Path P2:** Argument against a carbon tax
-
-- `P2.C1` correctness, core, w=1: States a position (against) ← asked by: "State a position (for or against)"
-- `P2.C2` completeness, core, w=1: Provides at least two distinct arguments supporting the position ← asked by: "support it with at least two distinct arguments"
-- `P2.C3` reasoning, core, w=1: Gives a first distinct argument that supports the position ← asked by: "support it with at least two distinct arguments"
-- `P2.C4` reasoning, core, w=1: Gives a second distinct argument that supports the position ← asked by: "support it with at least two distinct arguments"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 15. analytical · environment · `5d564b58c11c`
+## 13. analytical · environment · `5d564b58c11c`
 
 **Q:** In a short paragraph (3 to 8 sentences), argue for either (a) implementing a nationwide ban on the use of chemical pesticides in agriculture, or (b) promoting integrated pest management (IPM) as a sustainable alternative. Choose one position, state at least two distinct supporting reasons, and provide a specific factual example, statistic, or case study for each reason.
 
@@ -257,7 +221,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 16. analytical · health · `80b5228e62c0`
+## 14. analytical · health · `80b5228e62c0`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether implementing a tax on sugar‑sweetened beverages is an effective public‑health strategy to reduce obesity. Choose one side, present at least two supporting points, and acknowledge a counterargument from the opposite side.
 
@@ -277,61 +241,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 17. analytical · literature · `595e6e0cc0b2`
-
-**Q:** In a short paragraph (3–8 sentences), argue whether James Joyce’s *Ulysses* should be understood primarily as a modernist experiment in narrative technique or as a commentary on Irish nationalism, and support your view with at least two distinct pieces of textual or historical evidence.
-
-**Path P1:** Position: *Ulysses* is primarily a modernist experiment in narrative technique
-
-- `P1.C1` correctness, core, w=1: States the position that *Ulysses* should be understood primarily as a modernist experiment in narrative technique ← asked by: "should be understood primarily as a modernist experiment in narrative technique"
-- `P1.C2` completeness, core, w=0.5: Provides at least two distinct pieces of textual or historical evidence that support the modernist experiment position ← asked by: "support your view with at least two distinct pieces of textual or historical evidence"
-- `P1.C3` reasoning, core, w=1: Explains how the provided evidence demonstrates that *Ulysses* functions primarily as a modernist experiment in narrative technique ← asked by: "support your view with at least two distinct pieces of textual or historical evidence"
-
-**Path P2:** Position: *Ulysses* is primarily a commentary on Irish nationalism
-
-- `P2.C1` correctness, core, w=1: States the position that *Ulysses* should be understood primarily as a commentary on Irish nationalism ← asked by: "should be understood primarily as a commentary on Irish nationalism"
-- `P2.C2` completeness, core, w=0.5: Provides at least two distinct pieces of textual or historical evidence that support the Irish nationalism commentary position ← asked by: "support your view with at least two distinct pieces of textual or historical evidence"
-- `P2.C3` reasoning, core, w=1: Explains how the provided evidence shows that *Ulysses* functions primarily as a commentary on Irish nationalism ← asked by: "support your view with at least two distinct pieces of textual or historical evidence"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 18. analytical · geography · `e4a2b3b2341d`
-
-**Q:** In a short paragraph of 3–8 sentences, argue whether plate tectonics or climate change is the primary driver of the recent increase in coastal erosion along the Pacific Northwest coast. Choose one factor, state the claim, and provide at least one piece of supporting evidence linking that factor to the erosion.
-
-**Path P1:** Plate tectonics is the primary driver of recent coastal erosion in the Pacific Northwest
-
-- `P1.C1` completeness, core, w=1: States the claim that plate tectonics is the primary driver of recent coastal erosion in the Pacific Northwest ← asked by: "state the claim"
-- `P1.C2` correctness, non-core, w=0.5: Provides at least one piece of supporting evidence linking plate tectonics to the increased coastal erosion ← asked by: "provide at least one piece of supporting evidence"
-- `P1.C3` reasoning, core, w=1: Explains how the provided evidence supports the claim that plate tectonics is the primary driver ← asked by: "provide at least one piece of supporting evidence"
-
-**Path P2:** Climate change is the primary driver of recent coastal erosion in the Pacific Northwest
-
-- `P2.C1` completeness, core, w=1: States the claim that climate change is the primary driver of recent coastal erosion in the Pacific Northwest ← asked by: "state the claim"
-- `P2.C2` correctness, non-core, w=0.5: Provides at least one piece of supporting evidence linking climate change to the increased coastal erosion ← asked by: "provide at least one piece of supporting evidence"
-- `P2.C3` reasoning, core, w=1: Explains how the provided evidence supports the claim that climate change is the primary driver ← asked by: "provide at least one piece of supporting evidence"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 19. analytical · everyday life · `bb2a1833528d`
-
-**Q:** In a short paragraph (3–8 sentences), argue whether checking social media before bedtime improves or harms sleep quality, and support your argument with at least two distinct reasons.
-
-**Path P1:** Position that checking social media before bedtime harms sleep quality
-
-- `P1.C1` correctness, core, w=1: States the position that checking social media before bedtime harms sleep quality ← asked by: "argue whether checking social media before bedtime improves or harms sleep quality"
-- `P1.C2` completeness, core, w=1: Provides at least two distinct reasons supporting the claim ← asked by: "support your argument with at least two distinct reasons"
-- `P1.C3` reasoning, core, w=1: Explains how each reason leads to the claimed effect on sleep quality ← asked by: "support your argument with at least two distinct reasons"
-
-**Path P2:** Position that checking social media before bedtime improves sleep quality
-
-- `P2.C1` correctness, core, w=1: States the position that checking social media before bedtime improves sleep quality ← asked by: "argue whether checking social media before bedtime improves or harms sleep quality"
-- `P2.C2` completeness, core, w=1: Provides at least two distinct reasons supporting the claim ← asked by: "support your argument with at least two distinct reasons"
-- `P2.C3` reasoning, core, w=1: Explains how each reason leads to the claimed effect on sleep quality ← asked by: "support your argument with at least two distinct reasons"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 20. analytical · history · `17c1b10632b5`
+## 15. analytical · history · `17c1b10632b5`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries, and support your position with specific historical evidence.
 
@@ -349,7 +259,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 21. explanatory · technology · `e9829aabdcd6`
+## 16. explanatory · technology · `e9829aabdcd6`
 
 **Q:** In a short paragraph (3‑8 sentences), explain how cloud computing enables small businesses to scale their IT resources on demand.
 
@@ -361,7 +271,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 22. explanatory · ethics · `91798e725180`
+## 17. explanatory · ethics · `91798e725180`
 
 **Q:** In a short paragraph (3‑8 sentences), explain why individuals often follow social norms even when those norms conflict with their personal moral convictions.
 
@@ -379,7 +289,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 23. explanatory · economics · `669bce9c85fb`
+## 18. explanatory · economics · `669bce9c85fb`
 
 **Q:** In a short paragraph of 3–6 sentences, explain how a depreciation of a country's currency influences its export competitiveness. Provide one mechanism that connects the change in exchange rate to export volumes.
 
@@ -391,7 +301,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 24. explanatory · environment · `1e9d95d9130f`
+## 19. explanatory · environment · `1e9d95d9130f`
 
 **Q:** In a short paragraph (3 to 8 sentences), explain one mechanism by which adding biochar to agricultural soil enhances carbon sequestration, and give a concrete example of a farm or region where this mechanism has been applied.
 
@@ -409,20 +319,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 25. explanatory · health · `f3c88f16262f`
-
-**Q:** In a short paragraph (3–8 sentences), explain how the body initiates the blood clotting cascade after a vascular injury.
-
-**Path P1:** Explanation of the physiological sequence that starts the clotting cascade following injury to a blood vessel.
-
-- `P1.C1` completeness, core, w=1: Identifies that vascular injury exposes tissue factor (TF) to blood, triggering the cascade ← asked by: "explain how the body initiates the blood clotting cascade after a vascular injury"
-- `P1.C2` correctness, core, w=1: Describes activation of the extrinsic pathway leading to generation of thrombin ← asked by: "explain how the body initiates the blood clotting cascade after a vascular injury"
-- `P1.C3` reasoning, core, w=1: Explains that thrombin converts fibrinogen to fibrin, forming a stable clot ← asked by: "explain how the body initiates the blood clotting cascade after a vascular injury"
-- `P1.C4` completeness, core, w=1: Mentions that platelets adhere to the injury site and aggregate to form a primary plug ← asked by: "explain how the body initiates the blood clotting cascade after a vascular injury"
-
-Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
-
-## 26. explanatory · literature · `c08ec38ec72f`
+## 20. explanatory · literature · `c08ec38ec72f`
 
 **Q:** In a short paragraph (3–8 sentences), explain how the use of an unreliable narrator in F. Scott Fitzgerald’s *The Great Gatsby* influences the reader’s understanding of the American Dream.
 
@@ -440,7 +337,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 27. explanatory · geography · `3f8052a62a58`
+## 21. explanatory · geography · `3f8052a62a58`
 
 **Q:** Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.
 
@@ -452,7 +349,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 28. explanatory · everyday life · `610c46d48e48`
+## 22. explanatory · everyday life · `610c46d48e48`
 
 **Q:** Explain why many people frequently misplace their keys, offering one plausible explanation in a short paragraph (3–8 sentences).
 
@@ -476,7 +373,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 29. explanatory · history · `3dadfd69ad7c`
+## 23. explanatory · history · `3dadfd69ad7c`
 
 **Q:** In a short paragraph (3–8 sentences), explain how the Haitian Revolution resulted in the abolition of slavery in Haiti. Identify one key factor that contributed to this outcome.
 
@@ -500,7 +397,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 30. explanatory · science · `23575fb39cfd`
+## 24. explanatory · science · `23575fb39cfd`
 
 **Q:** Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).
 
@@ -512,7 +409,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 31. creative · ethics · `4881228365fa`
+## 25. creative · ethics · `4881228365fa`
 
 **Q:** Write a brief scene of 3‑8 sentences in which a journalist must choose whether to publish a leaked report about a corporation's harmful practices or keep it hidden to protect sources. The scene must include at least one line of dialogue that reveals the journalist's internal conflict, a turning point where the decision is made, must not contain the phrase “ethical dilemma”, and must avoid the clichés “the world will never be the same”, “the stakes are high”, and “moral crossroads”.
 
@@ -535,7 +432,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 32. creative · economics · `14f014e48366`
+## 26. creative · economics · `14f014e48366`
 
 **Q:** Write a short scene (3–5 sentences) in which a college student learns that the price of their favorite coffee has increased. The scene must (1) mention the price increase, (2) show the student's internal thought about whether to keep buying it, and (3) include a brief reference to an alternative beverage they could choose instead.
 
@@ -557,7 +454,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 33. creative · environment · `2b28e1af770f`
+## 27. creative · environment · `2b28e1af770f`
 
 **Q:** Write a short scene (3 to 8 sentences) that depicts a coastal mangrove forest after a storm surge, showing the first signs of ecological recovery. Use vivid sensory details and include a turn where a character reflects on resilience.
 
@@ -579,7 +476,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 34. creative · literature · `30cfecdb54df`
+## 28. creative · literature · `30cfecdb54df`
 
 **Q:** In a short scene of three to eight sentences, write a narrative where a character discovers a forgotten poetry anthology in a rooftop garden. The scene must include vivid sensory description, a twist at the end, show rather than tell, and must avoid the clichés: “the wind whispered”, “the pages fluttered”, “a secret message”.
 
@@ -600,7 +497,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 35. creative · geography · `05c2f2ca70a4`
+## 29. creative · geography · `05c2f2ca70a4`
 
 **Q:** Write a short radio news script (3–8 sentences) announcing the discovery of a floating island in the middle of the Great Lakes. Include the island’s geographic location, a vivid description of its appearance, and one surprising ecological feature.
 
@@ -621,7 +518,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 36. creative · everyday life · `7cb37a949c50`
+## 30. creative · everyday life · `7cb37a949c50`
 
 **Q:** Write a brief scene of 3–6 sentences describing a person cooking dinner alone, focusing on the protagonist’s internal thoughts, include at least one auditory detail of the kitchen, and end with a subtle hint of an upcoming surprise.
 
@@ -643,7 +540,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 37. creative · history · `b687bcd90776`
+## 31. creative · history · `b687bcd90776`
 
 **Q:** Write a short speech (3–8 sentences) that a women’s suffrage activist might deliver at a 1910 rally in London. The speech must (a) call for women’s right to vote, (b) reference the recent 1910 women’s suffrage march, and (c) convey the speaker’s personal conviction. Do not use the cliché phrase “the time is now.” Ensure the speech shows the speaker’s emotions rather than simply stating them.
 
@@ -665,7 +562,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 38. creative · science · `13360f60b1fe`
+## 32. creative · science · `13360f60b1fe`
 
 **Q:** Write a short sci‑fi scene (3‑8 sentences) set aboard a generation starship where an artificial intelligence caretaker discovers a concealed garden of Earth plants. The scene should introduce the setting, describe the discovery, and include a development that creates a moral dilemma among the crew.
 
@@ -688,7 +585,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 39. creative · technology · `6878445611ca`
+## 33. creative · technology · `6878445611ca`
 
 **Q:** In a short scene of 3‑8 sentences, imagine a product launch at a future technology conference where a new AI‑powered personal assistant called "EchoMate" is unveiled. Write the scene using present‑tense narration. The scene must (1) name the product, (2) describe one unique capability of the assistant, (3) include a reaction from an audience member, and (4) end with a tagline of exactly six words.
 
