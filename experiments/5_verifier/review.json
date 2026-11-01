@@ -1,0 +1,42 @@
+{
+ "d757eca4528c-invalid_reasoning": {
+  "kind": "restatement",
+  "why": "Devices sending personal data is a sound reason under P1, not invalid reasoning."
+ },
+ "7d174cce75df-invalid_reasoning": {
+  "kind": "restatement",
+  "why": "A weakly evidenced version of P2 rather than a distinct invalid argument."
+ },
+ "082591e7ec4e-holed": {
+  "kind": "restatement",
+  "why": "Same criteria as P1; no hole."
+ },
+ "7d174cce75df-holed": {
+  "kind": "restatement",
+  "why": "Albedo loss from reduced vegetation is P1 with a narrower mechanism."
+ },
+ "78d7767e5351-holed": {
+  "kind": "restatement",
+  "why": "Two reasons for the same position as P1; the claimed hole is not one."
+ },
+ "17c1b10632b5-holed": {
+  "kind": "restatement",
+  "why": "A P1 argument naming its mechanism; the claimed hole is not one."
+ },
+ "3f8052a62a58-holed": {
+  "kind": "restatement",
+  "why": "Moisture loss on ascent and warming on descent is P1."
+ },
+ "b850a615f22e-holed": {
+  "kind": "valid_unlisted",
+  "why": "Monoamines are a real mechanism separate from endorphins, BDNF and self-efficacy. The claimed hole (exercise frequency) is not asked for."
+ },
+ "1e9d95d9130f-holed": {
+  "drop": true,
+  "why": "Same route as the valid plant-inputs item; the claimed hole is not one."
+ },
+ "a5cd0a155f64-holed": {
+  "drop": true,
+  "why": "Ultra-lean design is about energy and interference, and the note's hole is not one. No clean label."
+ }
+}

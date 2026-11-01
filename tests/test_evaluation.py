@@ -174,6 +174,7 @@ def judge_reply(
                 {"path_id": "P1", "confidence": conf},
                 {"path_id": "P2", "confidence": 0.1},
             ],
+            "addresses_question": True,
             "verdicts": [
                 {
                     "criterion_id": k,
@@ -226,8 +227,8 @@ def test_pipeline_scores_and_stores(env: Any, providers: dict[str, FakeProvider]
 def test_low_confidence_flagged_for_amendment(env: Any, providers: dict[str, FakeProvider]) -> None:
     client, rubrics, questions, evals = env
     providers["alpha"].push(judge_reply({"P1.C1": False, "P1.C2": False}, conf=0.2))
-    t = evaluate(client, rubrics, questions, evals, "q1", ANSWER)
-    assert t.low_confidence
+    t = evaluate(client, rubrics, questions, evals, "q1", ANSWER, amend=False)
+    assert t.low_confidence and t.amendment_due
 
 
 def test_unknown_path_and_missing_verdicts_are_repaired(
@@ -331,7 +332,7 @@ def test_bands_object_used(env: Any, providers: dict[str, FakeProvider]) -> None
     client, rubrics, questions, evals = env
     providers["alpha"].push(judge_reply({"P1.C1": True, "P1.C2": True}))
     strict = Bands([("Low", 0.0), ("High", 1.01)], amendment_confidence_threshold=0.95)
-    t = evaluate(client, rubrics, questions, evals, "q1", ANSWER, bands=strict)
+    t = evaluate(client, rubrics, questions, evals, "q1", ANSWER, bands=strict, amend=False)
     assert set(t.bands.values()) == {"Low"} and t.low_confidence
 
 

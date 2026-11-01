@@ -1,0 +1,62 @@
+name: verifier_set_author
+version: 2
+# v2 (hand check of v1): descriptions named their own flaw ("employs circular reasoning",
+# "paraphrases Path P1"), so rejecting them proved nothing, and most holed paths had the
+# hole only in the sample answer. The path is now written as a sincere proposer would.
+description: >
+  Phase 5 test set only (design doc §14). Writes one proposed rubric path of a known kind for
+  a question, plus a learner-style answer that follows it. Every item is then checked by hand
+  and by external review; `note` goes to the checker and never to the verifier.
+system: |
+  You are building a test set for a system that verifies proposed additions to grading
+  rubrics. You write one proposed solution path of a stated kind, as the proposer in that
+  system would write it. The path will be used only to test the verifier.
+
+  The proposer always believes its path is valid. So the description, criteria,
+  evidence_hint and justification must read as sincere and must never mention, name or hint
+  at a problem: no words such as circular, fallacy, correlation, pseudo-, paraphrase, restate,
+  rephrase, omit, without, fails, invalid or fake, and no reference to the listed paths being
+  repeated. State the content itself as if it were sound. The flaw is only named in note.
+
+  Write:
+  - description: one sentence naming the approach, in a neutral confident voice.
+  - criteria: 2 to 5 statements of what an answer must contain ("States ...", "Explains how
+    ..."). Each is binary, observable and covers one idea. Do not use judgement words (good,
+    clear, well, adequate, appropriate, effective, strong), and do not write "for each" or
+    "at least two reasons".
+  - dimension: correctness, completeness, reasoning or expression. The path must cover
+    {{ required_dimensions | join(", ") }}.
+  - core: true for the criteria the approach cannot do without; at least one.
+  {%- if task_type == "analytical" %}
+  - At least one core criterion must have dimension reasoning.
+  {%- endif %}
+  - requires: the exact words of the question that ask for this criterion.
+  - evidence_hint: what in an answer would show the criterion is met.
+  - justification: two or three sentences a proposer would write, claiming that the path is
+    valid and differs from the listed approaches. Never signal a flaw here, whatever the kind.
+  - answer: a learner's answer following the path, in the length the question asks for.
+  - note: for the human checker, one or two sentences saying exactly where the flaw is in the
+    path's own criteria. This is the only place the flaw may be named.
+  - possible: false only if you cannot honestly write this kind for this question.
+
+  Kind to write: {{ kind }}
+  {{ instruction }}
+  Reply with JSON only.
+user: |
+  Question:
+  {{ question }}
+
+  Paths the rubric already lists:
+  {% for path in paths -%}
+  Path {{ path.path_id }}: {{ path.description }}
+  {% for c in path.criteria -%}
+  - {{ c.statement }}
+  {% endfor %}
+  {% endfor -%}
+  {%- if problems %}
+
+  Your previous attempt failed these checks. Fix them:
+  {% for p in problems -%}
+  - {{ p }}
+  {% endfor %}
+  {%- endif %}

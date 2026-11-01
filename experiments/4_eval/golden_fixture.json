@@ -641,289 +641,379 @@
  },
  "items": {
   "cell-good": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names G1 as a cell cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell grows and produces the proteins and organelles it will need\",\n      \"justification\": \"The answer provides a correct key event for G1 phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names S phase as a second valid phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"the entire genome is replicated\",\n      \"justification\": \"The answer provides a correct key event for S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"M phase\",\n      \"justification\": \"The answer names M phase as a third valid phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": true,\n      \"evidence\": \"the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells\",\n      \"justification\": \"The answer provides a correct key event for M phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"G1, S phase and M phase\",\n      \"justification\": \"The three named phases are all distinct with no repeats.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names G1 as the first cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"In G1 the cell grows and produces the proteins and organelles it will need.\",\n      \"justification\": \"Cell growth and organelle production are correctly associated with G1.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names S phase as a second distinct cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"During S phase the entire genome is replicated\",\n      \"justification\": \"Genome replication is correctly associated with S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"M phase\",\n      \"justification\": \"The answer names M phase as a third distinct cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": true,\n      \"evidence\": \"In M phase (mitosis) the sister chromatids are pulled to opposite poles and the cell divides\",\n      \"justification\": \"Chromosome separation and cell division are correctly associated with M phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"G1, S phase and M phase\",\n      \"justification\": \"All three named phases are completely distinct with no repeats.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "completeness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "cell-paraphrase": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"growth gap\",\n      \"justification\": \"The answer names the G1 phase using the descriptive term 'growth gap'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell simply gets bigger and builds up supplies\",\n      \"justification\": \"The answer provides a correct key event for G1 phase, cell growth.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"synthesis stage\",\n      \"justification\": \"The answer names a second distinct phase, the S phase, referred to as the 'synthesis stage'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"makes a full copy of its genetic material\",\n      \"justification\": \"The answer provides a correct key event for the synthesis phase, DNA replication.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"division stage\",\n      \"justification\": \"The answer names a third distinct phase, the M phase, referred to as the 'division stage'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": true,\n      \"evidence\": \"the copies are split up and the cell pinches into two new cells\",\n      \"justification\": \"The answer provides a correct key event for the M phase, cell division/cytokinesis.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"growth gap, where the cell simply gets bigger and builds up supplies. Next is the synthesis stage, when it makes a full copy of its genetic material. Last is the division stage\",\n      \"justification\": \"The three named phases (growth gap/G1, synthesis stage/S, division stage/M) are all distinct from one another.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"growth gap\",\n      \"justification\": \"The answer names the G1 phase using the descriptive term 'growth gap'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell simply gets bigger and builds up supplies\",\n      \"justification\": \"The answer provides a correct key event of cell growth for this phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"synthesis stage\",\n      \"justification\": \"The answer names a second distinct phase, the synthesis stage.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"it makes a full copy of its genetic material\",\n      \"justification\": \"The answer provides a correct key event of DNA replication for the synthesis stage.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"division stage\",\n      \"justification\": \"The answer names a third distinct phase, the division stage.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": true,\n      \"evidence\": \"the copies are split up and the cell pinches into two new cells\",\n      \"justification\": \"The answer provides a correct key event for the division stage.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"First comes the growth gap... Next is the synthesis stage... Last is the division stage\",\n      \"justification\": \"The three phases named are all different from each other.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "completeness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "cell-partial": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names G1 as a cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell grows and makes proteins.\",\n      \"justification\": \"The answer provides a correct key event for G1 phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names S phase as a second distinct cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"the DNA is copied\",\n      \"justification\": \"The answer provides a correct key event for S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not explicitly name a third distinct phase by standard designation, as it only refers vaguely to 'After that the cell gets ready to divide' rather than naming G2 or M.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Since a third phase was not clearly named, a corresponding key event for a third named phase is not provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Only two distinct phases (G1 and S) are explicitly named.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names G1 as the first cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the cell grows and makes proteins.\",\n      \"justification\": \"The answer provides a correct key event for G1 phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names S phase as a second valid cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"the DNA is copied so there are two complete sets.\",\n      \"justification\": \"The answer provides a correct key event for S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not name a third distinct phase (G2 or M), instead referring vaguely to 'After that'.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No third phase was named, so no event is paired with it.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Only two phases (G1 and S) are explicitly named.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 0.7142857142857143,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "cell-wrong": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names the G1 phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event given for G1 (copies all of its DNA) is actually what happens in S phase, not G1.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names the S phase as a second phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event given for S phase (splits into two daughter cells) describes cytokinesis/M phase, not S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"M phase\",\n      \"justification\": \"The answer names M phase as a third phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event given for M phase (rests and grows larger) describes G1/interphase, not M phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"G1 ... S phase ... M phase\",\n      \"justification\": \"The three named phases (G1, S phase, M phase) are all distinct.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"In G1 the cell copies all of its DNA.\",\n      \"explanation\": \"DNA replication occurs during S phase, not G1.\"\n    },\n    {\n      \"quote\": \"In S phase the cell splits into two daughter cells.\",\n      \"explanation\": \"Cell division occurs during M phase, not S phase.\"\n    },\n    {\n      \"quote\": \"In M phase the cell rests and grows larger before the next round.\",\n      \"explanation\": \"Resting and growing larger describes interphase or G1/G2 phases, not M phase.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"G1\",\n      \"justification\": \"The answer names G1 as a phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event provided for G1 (copies all of its DNA) is incorrect for G1.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"S phase\",\n      \"justification\": \"The answer names S phase as a second phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event provided for S phase (splits into two daughter cells) is incorrect for S phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"M phase\",\n      \"justification\": \"The answer names M phase as a third phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The key event provided for M phase (rests and grows larger) is incorrect for M phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": true,\n      \"evidence\": \"G1, S phase, M phase\",\n      \"justification\": \"The three phases named are all different from each other.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"In G1 the cell copies all of its DNA.\",\n      \"explanation\": \"DNA replication occurs in S phase, not G1.\"\n    },\n    {\n      \"quote\": \"In S phase the cell splits into two daughter cells.\",\n      \"explanation\": \"Cell division occurs in M phase, not S phase.\"\n    },\n    {\n      \"quote\": \"In M phase the cell rests and grows larger before the next round.\",\n      \"explanation\": \"Cell growth and rest occur during G phases, whereas M phase involves mitosis/cytokinesis.\"\n    }\n  ],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 0.42857142857142855,
     "completeness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "cell-off": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses photosynthesis instead of the cell cycle and does not name a cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No phase was named, so no corresponding event for a cell-cycle phase is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not name a second cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No second phase was named, so no corresponding event is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not name a third cell-cycle phase.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No third phase was named, so no corresponding event is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not list three different cell-cycle phases.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Photosynthesis has two stages. In the light-dependent reactions, light energy splits water and makes ATP. In the Calvin cycle, carbon dioxide is fixed into sugar.\",\n      \"explanation\": \"The answer describes photosynthesis stages instead of cell cycle phases as requested by the question.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses photosynthesis instead of the cell cycle.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No cell cycle phase was named.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No second cell cycle phase was named.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No second event was provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No third cell cycle phase was named.\"\n    },\n    {\n      \"criterion_id\": \"P1.C6\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No third event was provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C7\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Three distinct cell cycle phases were not listed.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Photosynthesis has two stages.\",\n      \"explanation\": \"The answer is about photosynthesis instead of the cell cycle.\"\n    }\n  ],\n  \"addresses_question\": false\n}",
    "scores": {
     "correctness": 0.0,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.1,
+   "addresses_question": false,
+   "amendment_due": false
   },
   "macro-good": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"carbohydrates, proteins and fats\",\n      \"justification\": \"The answer correctly lists the three main macronutrients: carbohydrates, proteins, and fats.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates are the body's main source of quick energy\",\n      \"justification\": \"A correct primary function of carbohydrates is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins supply amino acids used to build and repair tissues\",\n      \"justification\": \"A correct primary function of proteins is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Fats store energy long term\",\n      \"justification\": \"A correct primary function of fats is provided.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"carbohydrates, proteins and fats\",\n      \"justification\": \"The student correctly names carbohydrates, proteins, and fats as the three main macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates are the body's main source of quick energy\",\n      \"justification\": \"The student provides a correct primary function for carbohydrates.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins supply amino acids used to build and repair tissues\",\n      \"justification\": \"The student provides a correct primary function for proteins.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Fats store energy long term\",\n      \"justification\": \"The student provides a correct primary function for fats.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 1.0,
     "correctness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "macro-paraphrase": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Sugars and starches ... protein ... Fats\",\n      \"justification\": \"The answer names carbohydrates (as sugars and starches), protein, and fats as the three macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"fuel you through the day\",\n      \"justification\": \"The answer correctly states that carbohydrates (sugars and starches) provide energy.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"build and fix muscle\",\n      \"justification\": \"The answer correctly states a primary function of protein for building and fixing tissue.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"energy reserve\",\n      \"justification\": \"The answer correctly states that fats serve as an energy reserve.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Sugars and starches... protein... Fats\",\n      \"justification\": \"The student correctly identifies carbohydrates (sugars and starches), proteins, and fats as the three macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"what fuel you through the day\",\n      \"justification\": \"The student provides a correct primary function for carbohydrates as providing energy.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"what your body uses to build and fix muscle\",\n      \"justification\": \"The student provides a correct primary function for proteins in building and repairing tissue.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"your body's energy reserve and help keep you warm\",\n      \"justification\": \"The student provides a correct primary function for fats as energy storage and insulation.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 1.0,
     "correctness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "macro-partial": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates, Proteins, Vitamins\",\n      \"justification\": \"The student names three substances, though vitamins are micronutrients rather than macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates give the body energy.\",\n      \"justification\": \"Provides a correct primary function for carbohydrates.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins build and repair muscle.\",\n      \"justification\": \"Provides a correct primary function for proteins.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The third item listed is vitamins, which are not a macronutrient, so a valid third macronutrient function is not stated.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Vitamins are the third macronutrient\",\n      \"explanation\": \"Vitamins are micronutrients, not macronutrients.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.8\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The student lists carbohydrates and proteins, but incorrectly lists vitamins as the third macronutrient instead of fats.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates give the body energy.\",\n      \"justification\": \"The student provides a correct function for carbohydrates.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins build and repair muscle.\",\n      \"justification\": \"The student provides a correct function for proteins.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The third item listed is vitamins, which is a micronutrient rather than a macronutrient, so a valid third macronutrient function is not given.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Vitamins are the third macronutrient\",\n      \"explanation\": \"Vitamins are micronutrients, not macronutrients.\"\n    }\n  ],\n  \"addresses_question\": true\n}",
    "scores": {
-    "completeness": 1.0,
+    "completeness": 0.0,
     "correctness": 0.5
    },
    "path": "P1",
-   "passed": false
+   "passed": true,
+   "confidence": 0.8,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "macro-wrong": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"carbohydrates, proteins and fats\",\n      \"justification\": \"The answer lists carbohydrates, proteins, and fats, which are the three main macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates are mainly used to build bones.\",\n      \"justification\": \"The answer states a function for carbohydrates (even though factually incorrect).\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins are the body's fastest source of energy.\",\n      \"justification\": \"The answer states a function for proteins.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Fats carry oxygen around in the blood.\",\n      \"justification\": \"The answer states a function for fats.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Carbohydrates are mainly used to build bones.\",\n      \"explanation\": \"Carbohydrates do not build bones; minerals like calcium and structural proteins like collagen do.\"\n    },\n    {\n      \"quote\": \"Proteins are the body's fastest source of energy.\",\n      \"explanation\": \"Carbohydrates are the body's fastest source of energy, not proteins.\"\n    },\n    {\n      \"quote\": \"Fats carry oxygen around in the blood.\",\n      \"explanation\": \"Hemoglobin in red blood cells carries oxygen around in the blood, not fats.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"carbohydrates, proteins and fats\",\n      \"justification\": \"The learner correctly names the three main macronutrients required by the human body.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Carbohydrates are mainly used to build bones.\",\n      \"justification\": \"The learner states a function for the first macronutrient (carbohydrates), even though it is factually incorrect.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Proteins are the body's fastest source of energy.\",\n      \"justification\": \"The learner states a function for the second macronutrient (proteins), even though it is factually incorrect.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Fats carry oxygen around in the blood.\",\n      \"justification\": \"The learner states a function for the third macronutrient (fats), even though it is factually incorrect.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Carbohydrates are mainly used to build bones.\",\n      \"explanation\": \"Carbohydrates do not build bones; calcium and other minerals do.\"\n    },\n    {\n      \"quote\": \"Proteins are the body's fastest source of energy.\",\n      \"explanation\": \"Carbohydrates are the body's fastest source of energy, not proteins.\"\n    },\n    {\n      \"quote\": \"Fats carry oxygen around in the blood.\",\n      \"explanation\": \"Red blood cells and hemoglobin carry oxygen, not fats.\"\n    }\n  ],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 1.0,
     "correctness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "macro-off": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.2\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The learner lists micronutrients and minerals (calcium, iron, potassium) rather than the three main macronutrients (carbohydrates, proteins, fats).\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Calcium is not a macronutrient.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Iron is not a macronutrient.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Potassium is not a macronutrient.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Calcium keeps bones strong, iron helps carry oxygen in the blood, and potassium helps the heart and muscles work properly.\",\n      \"explanation\": \"Calcium, iron, and potassium are minerals/micronutrients, not macronutrients.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer lists micronutrients/minerals (calcium, iron, potassium) instead of macronutrients.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No macronutrient was named, so no function for a first macronutrient can be credited.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No second macronutrient was named.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No third macronutrient was named.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Calcium keeps bones strong, iron helps carry oxygen in the blood, and potassium helps the heart and muscles work properly.\",\n      \"explanation\": \"These are minerals, which are micronutrients, not macronutrients.\"\n    }\n  ],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 0.0,
     "correctness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "balloon-good": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"the hot air is less dense than the cooler air surrounding the balloon\",\n      \"justification\": \"The student correctly states that the heated air inside is less dense than the cooler surrounding air.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the surrounding air pushes up on it with a buoyant force\",\n      \"justification\": \"The student references a buoyant force causing the upward lift.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"cooler air surrounding the balloon\",\n      \"justification\": \"The student notes the presence of cooler surrounding air to provide the contrast.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"the hot air is less dense than the cooler air surrounding the balloon\",\n      \"justification\": \"The answer correctly states that heating the air makes it less dense than the cooler surrounding air.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"surrounding air pushes up on it with a buoyant force\",\n      \"justification\": \"The answer references a buoyant upward force lifting the balloon.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"cooler air surrounding the balloon\",\n      \"justification\": \"The answer explicitly contrasts the hot air with the cooler surrounding air.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 1.0,
     "completeness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "balloon-paraphrase": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Warm air weighs less than the same amount of cold air.\",\n      \"justification\": \"The answer states that warm air weighs less than cold air for the same volume, which is equivalent to lower density.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"The heavier outside air pushes it upward, the same way water pushes a cork up to the surface.\",\n      \"justification\": \"The answer explains the upward lift using the concept of buoyant force akin to a cork in water.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The air outside the balloon stays cold\",\n      \"justification\": \"The answer notes the contrast with the colder outside air.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Warm air weighs less than the same amount of cold air.\",\n      \"justification\": \"The answer states that warm air weighs less than the same amount of cold air, which conveys lower density.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"The heavier outside air pushes it upward, the same way water pushes a cork up to the surface.\",\n      \"justification\": \"It explains the upward force using the buoyancy analogy of water pushing a cork up.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The air outside the balloon stays cold\",\n      \"justification\": \"It explicitly notes that the outside air is cold, establishing the contrast.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 1.0,
     "completeness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "balloon-partial": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.3\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention that heating the air reduces its density.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not reference buoyancy or Archimedes' principle.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention the surrounding cooler air or temperature difference.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention that heating the air reduces its density compared to the surrounding air.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention buoyancy or Archimedes' principle causing upward lift.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention the temperature difference or contrast between the inside and outside air.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 0.5,
     "reasoning": 0.0,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.5,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "balloon-wrong": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer incorrectly states that heating air makes it denser and heavier.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention buoyancy or Archimedes' principle.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention that the surrounding air is cooler or provide a temperature contrast.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Heating air makes it denser and heavier\",\n      \"explanation\": \"Heating air actually makes it less dense, not denser.\"\n    },\n    {\n      \"quote\": \"Heat itself is a gas lighter than air\",\n      \"explanation\": \"Heat is a form of energy, not a gas.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer claims that heating air makes it denser, which is factually incorrect regarding the physics of hot-air balloons.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer attributes the lift to expanding gas pushing down on the basket like a rocket rather than buoyancy.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention the cooler surrounding air to provide a contrast.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Heating air makes it denser and heavier\",\n      \"explanation\": \"Heating air actually decreases its density rather than increasing it.\"\n    },\n    {\n      \"quote\": \"the expanding gas pushes down hard on the basket like a rocket\",\n      \"explanation\": \"Hot air balloons do not rise due to rocket-like exhaust pushing on the basket.\"\n    },\n    {\n      \"quote\": \"Heat itself is a gas lighter than air\",\n      \"explanation\": \"Heat is energy, not a gas.\"\n    }\n  ],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 0.0,
     "reasoning": 0.0,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.5,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "balloon-off": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses airplane wings and does not mention the density of air inside a hot-air balloon.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer mentions lift for an airplane wing, but does not reference buoyancy or Archimedes' principle for a balloon.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer contains no mention of the temperature difference between inside and outside air.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"An airplane flies because its wings are shaped so that air moves faster over the top than the bottom.\",\n      \"explanation\": \"The question asked about a hot-air balloon, but the student answered about an airplane.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses airplane wings and does not mention the density of air inside a hot-air balloon.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses lift on airplane wings instead of buoyant force on a hot-air balloon.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention the temperature difference between the inside and outside air of a balloon.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"An airplane flies because its wings are shaped so that air moves faster over the top than the bottom.\",\n      \"explanation\": \"The question asks about a hot-air balloon, but the answer describes how an airplane flies.\"\n    }\n  ],\n  \"addresses_question\": false\n}",
    "scores": {
     "correctness": 0.0,
     "reasoning": 0.0,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.1,
+   "addresses_question": false,
+   "amendment_due": false
   },
   "rain-good": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"moist air blown against a mountain range is forced upward, cools as it rises, and its water vapour condenses and falls as rain or snow on the windward slopes. After crossing the crest, the now-drier air descends the leeward side\",\n      \"justification\": \"The answer correctly identifies orographic lift, the windward precipitation, and the descending air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"descends the leeward side and warms by compression, which lowers its relative humidity so clouds evaporate and little precipitation falls.\",\n      \"justification\": \"The answer explains that the descending air warms, reducing relative humidity and inhibiting precipitation.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"the western Cascades receive over 2,000 mm of rain a year while parts of eastern Washington get under 250 mm.\",\n      \"justification\": \"The answer provides a real-world rain-shadow example (the Cascades).\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"moist air blown against a mountain range is forced upward, cools as it rises, and its water vapour condenses and falls as rain or snow on the windward slopes. After crossing the crest, the now-drier air descends the leeward side\",\n      \"justification\": \"The answer correctly states that orographic lift forces air upward where it cools and condenses on the windward side, followed by descending air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"descends the leeward side and warms by compression, which lowers its relative humidity so clouds evaporate and little precipitation falls.\",\n      \"justification\": \"The answer explains that descending air warms (by compression), its relative humidity drops (clouds evaporate), and precipitation decreases.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"the western Cascades receive over 2,000 mm of rain a year while parts of eastern Washington get under 250 mm.\",\n      \"justification\": \"The answer cites a real-world rain-shadow example using the Cascades.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 1.0,
     "completeness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "rain-paraphrase": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Wet wind from the sea hits the mountains and has to climb over them. As it climbs it gets colder and can't hold its water, so it dumps it as rain on the side facing the wind. When the air comes down the far side it heats up again and is now very dry\",\n      \"justification\": \"The answer correctly describes orographic lift, cooling and raining on the windward side, and descending dry air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"When the air comes down the far side it heats up again and is now very dry, so it soaks up moisture instead of dropping any.\",\n      \"justification\": \"It explains that the descending air warms up and decreases in relative humidity/moisture-holding capacity, inhibiting precipitation.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Death Valley, just east of the Sierra Nevada\",\n      \"justification\": \"It cites a well-known real-world rain-shadow region as an example.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Wet wind from the sea hits the mountains and has to climb over them. As it climbs it gets colder and can't hold its water, so it dumps it as rain on the side facing the wind. When the air comes down the far side it heats up again\",\n      \"justification\": \"The student successfully describes orographic lift, cooling and precipitation on the windward side, and descending air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"When the air comes down the far side it heats up again and is now very dry, so it soaks up moisture instead of dropping any.\",\n      \"justification\": \"The answer explains that the descending air warms up and decreases its ability to drop precipitation while soaking up moisture.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"That's why Death Valley, just east of the Sierra Nevada, is one of the driest places in North America.\",\n      \"justification\": \"The student cites a real-world rain-shadow example (Death Valley east of the Sierra Nevada).\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 1.0,
     "completeness": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "rain-partial": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.8\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Moist air is pushed up the windward side of the mountains, where it cools and drops most of its moisture as rain.\",\n      \"justification\": \"The answer mentions orographic lift, air rising, and cooling on the windward side, although it omits the descending air on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not describe the descending air warming or its relative humidity dropping on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a quantitative lapse-rate fact or name a real-world rain-shadow example.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Rain shadows are caused by orographic lift. Moist air is pushed up the windward side of the mountains, where it cools and drops most of its moisture as rain.\",\n      \"justification\": \"The student states that orographic lift pushes moist air up the windward side where it cools and drops moisture.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The student does not describe the descending air warming and losing relative humidity on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The student does not provide a quantitative lapse-rate fact or name a real-world example.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 0.0,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "rain-wrong": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer attributes the dryness to the mountains blocking sunlight rather than orographic lift and descending dry air.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not describe descending air warming and losing relative humidity.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer names the Himalayas, but misidentifies which side is dry in a rain-shadow context and gets the geography/fact wrong.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"The leeward side is dry because the mountains block the sunlight, so less water evaporates there and fewer clouds can form.\",\n      \"explanation\": \"Rain shadows are caused by atmospheric moisture loss and adiabatic warming of descending air, not by mountains blocking sunlight.\"\n    },\n    {\n      \"quote\": \"The Himalayas are dry on their southern side for this reason.\",\n      \"explanation\": \"The southern side of the Himalayas is the windward side and receives very high precipitation from the monsoon, whereas the northern side (leeward) is the dry region.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.3\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer attributes the dryness to mountains blocking sunlight rather than orographic lift and descending air.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"It does not describe descending air warming and losing relative humidity.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"It names a real-world region (the Himalayas), but misidentifies which side is dry due to a rain shadow and gives an incorrect physical mechanism.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"The leeward side is dry because the mountains block the sunlight, so less water evaporates there and fewer clouds can form.\",\n      \"explanation\": \"Rain shadows are caused by atmospheric uplift, cooling, and descending warming air, not by mountains blocking sunlight.\"\n    },\n    {\n      \"quote\": \"The Himalayas are dry on their southern side for this reason.\",\n      \"explanation\": \"The southern side of the Himalayas is actually the windward side, which receives very high precipitation (monsoon rains), whereas the northern side (Tibetan Plateau) is the dry leeward rain shadow.\"\n    }\n  ],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 0.0,
     "reasoning": 0.0,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.3,
+   "addresses_question": true,
+   "amendment_due": true
   },
   "rain-off": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses monsoons instead of mountain rain shadows and orographic lift.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not describe descending air warming and losing relative humidity on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a supporting fact like a lapse rate or a rain-shadow region.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Monsoons happen because land heats up faster than the ocean in summer.\",\n      \"explanation\": \"The question asks about mountain rain shadows, not monsoons.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses monsoons instead of mountain ranges and rain shadows.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not mention descending air or rain shadows on the leeward side.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer provides no supporting fact about lapse rates or specific rain-shadow regions.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"Monsoons happen because land heats up faster than the ocean in summer.\",\n      \"explanation\": \"This statement is entirely about monsoons and is off-topic regarding mountain rain shadows.\"\n    }\n  ],\n  \"addresses_question\": false\n}",
    "scores": {
     "correctness": 0.0,
     "reasoning": 0.0,
     "completeness": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.1,
+   "addresses_question": false,
+   "amendment_due": false
   },
   "wfh-good": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Working from home does increase overall work-life balance for most people.\",\n      \"justification\": \"The text explicitly states that working from home increases overall work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"First, it removes the daily commute, giving many workers an extra hour or more each day for family, exercise or rest.\",\n      \"justification\": \"It provides the removal of the daily commute as the first distinct supporting reason.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Second, flexible hours let people fit work around school runs and appointments instead of choosing between them.\",\n      \"justification\": \"It provides flexible hours allowing integration of personal tasks as a second distinct supporting reason.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Working from home does increase overall work-life balance for most people.\",\n      \"justification\": \"The student explicitly states that working from home increases work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"First, it removes the daily commute, giving many workers an extra hour or more each day for family, exercise or rest.\",\n      \"justification\": \"The student provides the removal of the daily commute as a distinct supporting reason.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Second, flexible hours let people fit work around school runs and appointments instead of choosing between them.\",\n      \"justification\": \"The student provides flexible hours as a second distinct supporting reason.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wfh-paraphrase": {
-   "judge_reply": "{\n  \"identified_path\": \"P2\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.0\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P2.C1\",\n      \"met\": true,\n      \"evidence\": \"I don't think it does.\",\n      \"justification\": \"The answer explicitly states the position that working from home does not increase work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P2.C2\",\n      \"met\": true,\n      \"evidence\": \"there's no moment when the working day clearly ends, so many people end up answering emails late into the evening.\",\n      \"justification\": \"Provides the first distinct reason that blurred boundaries and difficulty disconnecting worsen work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P2.C3\",\n      \"met\": true,\n      \"evidence\": \"losing the office means losing casual contact with colleagues, and that loneliness spills over into how people feel outside work too.\",\n      \"justification\": \"Provides a second distinct reason regarding increased isolation/loneliness from colleagues.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P2\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.0\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P2.C1\",\n      \"met\": true,\n      \"evidence\": \"I don't think it does.\",\n      \"justification\": \"The learner explicitly states their position that working from home does not increase work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P2.C2\",\n      \"met\": true,\n      \"evidence\": \"there's no moment when the working day clearly ends, so many people end up answering emails late into the evening.\",\n      \"justification\": \"The learner provides a first distinct reason regarding blurred boundaries and difficulty disconnecting.\"\n    },\n    {\n      \"criterion_id\": \"P2.C3\",\n      \"met\": true,\n      \"evidence\": \"losing the office means losing casual contact with colleagues, and that loneliness spills over into how people feel outside work too.\",\n      \"justification\": \"The learner provides a second distinct reason regarding increased isolation/loneliness from lack of colleague contact.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 1.0
    },
    "path": "P2",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wfh-partial": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Working from home improves work-life balance\",\n      \"justification\": \"The answer explicitly states that working from home improves work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"people no longer waste time commuting\",\n      \"justification\": \"The answer provides a first distinct reason, which is reduced commuting time.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a second distinct reason supporting the position.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.95\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.05\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Working from home improves work-life balance\",\n      \"justification\": \"The answer explicitly states that working from home improves work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"people no longer waste time commuting\",\n      \"justification\": \"The answer provides reduced commuting time as a first distinct supporting reason.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer only provides one distinct reason and does not include a second reason.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 1.0,
     "reasoning": 0.5
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.95,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wfh-wrong": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.2\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.2\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not state a definitive position that working from home increases work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer mentions skipping the commute as an advantage, but does not use it to support a position that work-life balance increases.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No second distinct supporting reason is provided.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.5\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.5\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not state a position that working from home increases overall work-life balance, instead stating that it depends on the person.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a supporting reason for an increase in work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a second supporting reason.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "correctness": 0.5,
     "reasoning": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.5,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wfh-off": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.2\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not state that working from home increases overall work-life balance, focusing instead on company productivity and cost savings.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Employees face fewer interruptions from co-workers\",\n      \"justification\": \"The answer mentions fewer interruptions from co-workers as a reason related to the working from home context.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The second reason provided is about firms saving money on office space, which is not a personal work-life balance support reason.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.2\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses company productivity and savings rather than work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a reason supporting increased work-life balance.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer does not provide a second reason supporting increased work-life balance.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": false\n}",
    "scores": {
     "correctness": 0.5,
-    "reasoning": 0.5
+    "reasoning": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.2,
+   "addresses_question": false,
+   "amendment_due": false
   },
   "wwi-alliances": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The alliance system was the primary cause of the war.\",\n      \"justification\": \"The answer begins with a clear statement that the alliance system was the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"After Austria-Hungary declared war on Serbia in July 1914, Russia mobilised to protect Serbia, Germany declared war on Russia and on Russia's ally France, and Germany's invasion of Belgium brought in Britain under the 1839 Treaty of London.\",\n      \"justification\": \"The answer provides specific historical examples of how countries mobilized due to treaty and alliance obligations.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"A local Balkan crisis became a continental war within a week only because each power was bound to join its partners; without those commitments the conflict would likely have stayed between Austria-Hungary and Serbia.\",\n      \"justification\": \"The answer explains that the alliance commitments transformed a local crisis into a broader war.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The alliance system was the primary cause of the war.\",\n      \"justification\": \"The answer clearly states that the system of alliances was the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"After Austria-Hungary declared war on Serbia in July 1914, Russia mobilised to protect Serbia, Germany declared war on Russia and on Russia's ally France, and Germany's invasion of Belgium brought in Britain under the 1839 Treaty of London.\",\n      \"justification\": \"It provides specific historical events like mobilization and treaty obligations during the July crisis.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"A local Balkan crisis became a continental war within a week only because each power was bound to join its partners; without those commitments the conflict would likely have stayed between Austria-Hungary and Serbia.\",\n      \"justification\": \"It explains how the treaty commitments and alliance obligations transformed a local conflict into a world war.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 1.0,
     "correctness": 1.0,
     "reasoning": 1.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wwi-nationalism": {
-   "judge_reply": "{\n  \"identified_path\": \"P2\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P2.C1\",\n      \"met\": true,\n      \"evidence\": \"Nationalist rivalry, not the treaties, was what really started the war.\",\n      \"justification\": \"The answer clearly states an initial position that nationalist rivalries were the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P2.C2\",\n      \"met\": true,\n      \"evidence\": \"Gavrilo Princip, a Bosnian Serb tied to the Black Hand group that wanted South Slavs freed from Habsburg rule, shot Archduke Franz Ferdinand in Sarajevo on 28 June 1914.\",\n      \"justification\": \"The student provides the specific historical example of the assassination of Archduke Franz Ferdinand by a nationalist.\"\n    },\n    {\n      \"criterion_id\": \"P2.C3\",\n      \"met\": true,\n      \"evidence\": \"The alliances only spread a fire that national hatreds had lit.\",\n      \"justification\": \"The student explains how nationalist hatreds created the conflict, with alliances merely fueling it.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P2\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P2.C1\",\n      \"met\": true,\n      \"evidence\": \"Nationalist rivalry, not the treaties, was what really started the war.\",\n      \"justification\": \"The student clearly states a position that nationalist rivalries were the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P2.C2\",\n      \"met\": true,\n      \"evidence\": \"Gavrilo Princip, a Bosnian Serb tied to the Black Hand group that wanted South Slavs freed from Habsburg rule, shot Archduke Franz Ferdinand in Sarajevo on 28 June 1914.\",\n      \"justification\": \"The student provides the specific historical example of the assassination of Archduke Franz Ferdinand by a Serbian nationalist.\"\n    },\n    {\n      \"criterion_id\": \"P2.C3\",\n      \"met\": true,\n      \"evidence\": \"Austria-Hungary was determined to crush Serbian nationalism, which it saw as a threat to its multi-ethnic empire, and Russia backed Serbia out of Pan-Slav feeling.\",\n      \"justification\": \"The student explains how national hatreds and nationalist dynamics led to the conflict's escalation.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 1.0,
     "correctness": 1.0,
     "reasoning": 1.0
    },
    "path": "P2",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wwi-partial": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"I think the alliances were the main cause.\",\n      \"justification\": \"The learner explicitly states that the alliances were the primary cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The learner gives a general description of how alliances work rather than a specific historical event or example like the July Crisis.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Without a specific historical example, the reasoning is general and does not explain how a specific event demonstrates the alliance system's effect.\"\n    }\n  ],\n  \"errors\": []\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 1.0\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.0\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"I think the alliances were the main cause.\",\n      \"justification\": \"The student explicitly states the position that the alliances were the main cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The student does not provide a specific historical example such as the Triple Alliance or the July Crisis.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"Without a specific historical example, the student cannot explain how an example demonstrates that the alliance system caused the war.\"\n    }\n  ],\n  \"errors\": [],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 1.0,
     "correctness": 0.5,
     "reasoning": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 1.0,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wwi-wrong": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.9\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The alliance system was the main cause.\",\n      \"justification\": \"The student explicitly states that the alliance system was the main cause.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"because Italy and Germany were allied they immediately invaded France together.\",\n      \"justification\": \"The student provides a historical event involving alliance obligations.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"because Italy and Germany were allied they immediately invaded France together. Britain then joined to defend its ally Russia.\",\n      \"justification\": \"The student explains how the alliance obligations supposedly caused the broader expansion of the war.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"a Russian student assassinated Archduke Franz Ferdinand in Vienna\",\n      \"explanation\": \"Gavrilo Princip was a Serbian nationalist, not a Russian student, and the assassination took place in Sarajevo, not Vienna.\"\n    },\n    {\n      \"quote\": \"because Italy and Germany were allied they immediately invaded France together. Britain then joined to defend its ally Russia.\",\n      \"explanation\": \"This heavily misrepresents the actual historical details of how the alliance system and the July Crisis unfolded.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.95\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.3\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The alliance system was the main cause.\",\n      \"justification\": \"The answer clearly states that the alliance system was the primary cause of the war.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"because Italy and Germany were allied they immediately invaded France together.\",\n      \"justification\": \"It provides a specific historical example involving alliance obligations.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Britain then joined to defend its ally Russia.\",\n      \"justification\": \"It explains the chain reaction caused by the alliances to show how the system expanded the war.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"In 1914 a Russian student assassinated Archduke Franz Ferdinand in Vienna, and because Italy and Germany were allied they immediately invaded France together. Britain then joined to defend its ally Russia.\",\n      \"explanation\": \"The specific historical details regarding who did the assassinating, where it happened, and how the alliances mobilized are factually incorrect.\"\n    }\n  ],\n  \"addresses_question\": true\n}",
    "scores": {
     "completeness": 1.0,
     "correctness": 0.0,
     "reasoning": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.95,
+   "addresses_question": true,
+   "amendment_due": false
   },
   "wwi-off": {
-   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The learner argues about the Second World War rather than the system of alliances causing World War I.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No historical example related to the alliance system is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There is no explanation linking the alliance system to the outbreak of the war.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"The Second World War was caused mainly by the harsh Treaty of Versailles and the Great Depression, which let Hitler rise to power and invade Poland in 1939.\",\n      \"explanation\": \"The question asks about the causes of World War I, but the answer discusses the causes of World War II.\"\n    }\n  ]\n}",
+   "judge_reply": "{\n  \"identified_path\": \"P1\",\n  \"path_confidences\": [\n    {\n      \"path_id\": \"P1\",\n      \"confidence\": 0.1\n    },\n    {\n      \"path_id\": \"P2\",\n      \"confidence\": 0.1\n    }\n  ],\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The answer discusses World War II instead of World War I or alliances.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No historical example related to the alliance system of World War I is provided.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"No reasoning linking alliances to the outbreak of the war is present.\"\n    }\n  ],\n  \"errors\": [\n    {\n      \"quote\": \"The Second World War was caused mainly by the harsh Treaty of Versailles and the Great Depression, which let Hitler rise to power and invade Poland in 1939.\",\n      \"explanation\": \"The answer addresses World War II instead of World War I as asked by the question.\"\n    }\n  ],\n  \"addresses_question\": false\n}",
    "scores": {
     "completeness": 0.0,
     "correctness": 0.0,
     "reasoning": 0.0
    },
    "path": "P1",
-   "passed": true
+   "passed": true,
+   "confidence": 0.1,
+   "addresses_question": false,
+   "amendment_due": false
   },
   "coffee-good": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Maya counted the tiles between her shoes and the counter, eleven, and decided that if the man ahead ordered something complicated it was a sign.\",\n      \"justification\": \"The piece clearly depicts a person waiting in line at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"She rehearsed the line again in her head: I'm sorry, I can't sign it.\",\n      \"justification\": \"The narrative explicitly includes the internal thoughts and rehearsals of the protagonist.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The paper cup sleeve she had been twisting had gone soft and fibrous under her thumb.\",\n      \"justification\": \"The tactile sensation of the soft and fibrous cup sleeve under her thumb provides the required physical detail.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"When the barista called \\\"next,\\\" she folded the contract in her bag one more time, as if it might fit in a smaller pocket.\",\n      \"justification\": \"The ending subtly hints at the looming decision regarding the contract she is about to face.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
@@ -932,7 +1022,10 @@
     "expression": 1.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "coffee-obvious": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"She watched the steam curl above the espresso machine while the queue crept forward.\",\n      \"justification\": \"The piece clearly describes a person waiting in line at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"she thought about the barista she had a crush on.\",\n      \"justification\": \"The text explicitly incorporates the internal thoughts of the protagonist.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The warm mug of the woman in front brushed her hand\",\n      \"justification\": \"A tactile detail is provided through the sensation of the warm mug brushing her hand.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"She smiled to herself and decided she would speak to him later.\",\n      \"justification\": \"The ending subtly hints at an upcoming decision regarding speaking to her crush.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    2\n  ]\n}",
@@ -941,7 +1034,10 @@
     "expression": 1.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "coffee-partial": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Tom stood in the long line at the coffee shop.\",\n      \"justification\": \"The piece clearly describes a person waiting in line at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"He wondered whether they still had blueberry muffins and thought about how late he would be for work.\",\n      \"justification\": \"The protagonist's internal thoughts are explicitly included.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There are no tactile details such as feeling textures, temperatures, or physical sensations included in the piece.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The piece ends with a direct action rather than a subtle hint of an upcoming decision.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
@@ -950,7 +1046,10 @@
     "expression": 0.5
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "coffee-wrong": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The scene describes waiting at a bus stop rather than at a coffee shop.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"she wondered if the interview had gone as badly as she feared\",\n      \"justification\": \"The protagonist's internal thoughts regarding the interview are included.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"The cold metal bench pressed through her coat\",\n      \"justification\": \"A tactile detail is provided by feeling the cold metal bench.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"she hesitated, her phone already open to the recruiter's number\",\n      \"justification\": \"The ending subtly hints at a decision regarding whether to contact the recruiter.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
@@ -959,7 +1058,10 @@
     "expression": 1.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "coffee-off": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The piece provides historical facts about coffee rather than a narrative scene of a person waiting in line.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There are no internal thoughts of a protagonist included in the historical text.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The piece lacks any tactile detail.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The text does not end with a subtle hint of an upcoming decision.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
@@ -968,7 +1070,10 @@
     "expression": 0.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "fire-good": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Ines knelt where the old cedar had stood, and the ash gave under her knee like cold flour. The air still smelled of wet charcoal, but under it was something sharp and green. Between two blackened roots, a fern no taller than her thumb had uncurled its first frond. A beetle ticked across the bark beside it, the only sound in the clearing. She took out her notebook and wrote the date, then sat back to count the others.\",\n      \"justification\": \"The text contains exactly five sentences, which is within the required range of three to eight.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"the ash gave under her knee like cold flour. The air still smelled of wet charcoal, but under it was something sharp and green.\",\n      \"justification\": \"The piece uses vivid sensory details involving touch (cold flour), smell (wet charcoal), and sight (sharp and green).\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Ines knelt where the old cedar had stood... She took out her notebook and wrote the date...\",\n      \"justification\": \"Ines is clearly presented as a character who observes the environmental changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Between two blackened roots, a fern no taller than her thumb had uncurled its first frond.\",\n      \"justification\": \"The text explicitly shows the emergence of new plant growth as a sign of ecological recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"Neither 'phoenix rising' nor 'silver lining' appears anywhere in the text.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    1\n  ]\n}",
@@ -977,7 +1082,10 @@
     "expression": 1.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "fire-cliche": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Old Tomas walked into the clearing where the pines had burned. Black stumps poked from the grey ash, and the smell of smoke still hung in the cool morning air. Then he saw it: a green shoot pushing through the cinders, like a phoenix rising from the flames. He crouched and touched its soft tip, amazed.\",\n      \"justification\": \"The piece contains exactly four sentences, which falls within the required range of three to eight sentences.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"Black stumps poked from the grey ash, and the smell of smoke still hung in the cool morning air... touched its soft tip\",\n      \"justification\": \"The text includes vivid sensory details like the smell of smoke, the grey ash, and the soft texture of the shoot.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Old Tomas walked into the clearing... He crouched and touched its soft tip, amazed.\",\n      \"justification\": \"A character named Tomas is featured observing the changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"a green shoot pushing through the cinders\",\n      \"justification\": \"The text depicts the first signs of ecological recovery with the emergence of a new green shoot.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": false,\n      \"evidence\": \"like a phoenix rising from the flames.\",\n      \"justification\": \"The piece explicitly uses the banned phrase 'phoenix rising'.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    1\n  ]\n}",
@@ -986,7 +1094,10 @@
     "expression": 0.5
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "fire-too-long": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"Ana stepped into the clearing at dawn. The ground was black. Ash drifted in the breeze. It smelled of smoke and rain. A crow called from a dead pine. She walked to the centre. The soil crunched under her boots. Then she saw a green shoot. It was no bigger than a match. She smiled and knelt beside it.\",\n      \"justification\": \"Counting the sentences yields a total of ten, wait let me recount: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Ah, let me re-evaluate. The text has ten sentences. Wait, let me list them: 1. Ana stepped into the clearing at dawn. 2. The ground was black. 3. Ash drifted in the breeze. 4. It smelled of smoke and rain. 5. A crow called from a dead pine. 6. She walked to the centre. 7. The soil crunched under her boots. 8. Then she saw a green shoot. 9. It was no bigger than a match. 10. She smiled and knelt beside it. That is 10 sentences. Therefore P1.C1 is false.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"It smelled of smoke and rain. The soil crunched under her boots.\",\n      \"justification\": \"The text includes vivid sensory details of smell and sound.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": true,\n      \"evidence\": \"Ana stepped into the clearing at dawn.\",\n      \"justification\": \"Ana is a character who observes the changes in the forest.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"Then she saw a green shoot.\",\n      \"justification\": \"The text clearly shows the emergence of a new shoot as a sign of recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"Neither of the banned phrases appears anywhere in the text.\"\n    }\n  ],\n  \"obvious_overlap\": [\n    1\n  ]\n}",
@@ -995,7 +1106,10 @@
     "expression": 1.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "fire-no-character": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The clearing is a field of grey ash and charcoal stumps, still faintly warm. Rain has left a smell of wet smoke in the air. Here and there, thin green blades of fireweed are pushing through the crust, and a woodpecker drums on a scorched trunk.\",\n      \"justification\": \"The piece consists of exactly three sentences, which fits the three to eight sentence requirement.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"grey ash and charcoal stumps, still faintly warm. Rain has left a smell of wet smoke\",\n      \"justification\": \"The text includes vivid sensory details of sight, touch, smell, and sound.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There is no character present in the scene observing the changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": true,\n      \"evidence\": \"thin green blades of fireweed are pushing through the crust\",\n      \"justification\": \"The text shows new shoots emerging as a sign of ecological recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"Neither 'phoenix rising' nor 'silver lining' appears in the text.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
@@ -1004,7 +1118,10 @@
     "expression": 1.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   },
   "fire-off": {
    "judge_reply": "{\n  \"verdicts\": [\n    {\n      \"criterion_id\": \"P1.C1\",\n      \"met\": true,\n      \"evidence\": \"The fire roared through the forest, crackling as it leapt from tree to tree. Smoke turned the sky orange, and the heat drove every animal toward the river. By nightfall the whole valley was burning.\",\n      \"justification\": \"The piece contains exactly three sentences, which fits the three to eight sentence requirement.\"\n    },\n    {\n      \"criterion_id\": \"P1.C2\",\n      \"met\": true,\n      \"evidence\": \"crackling as it leapt from tree to tree. Smoke turned the sky orange, and the heat drove\",\n      \"justification\": \"The piece includes vivid sensory details of sound, sight, and heat.\"\n    },\n    {\n      \"criterion_id\": \"P1.C3\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"There is no character present in the scene observing the changes.\"\n    },\n    {\n      \"criterion_id\": \"P1.C4\",\n      \"met\": false,\n      \"evidence\": \"\",\n      \"justification\": \"The scene depicts an active fire rather than the aftermath and recovery.\"\n    },\n    {\n      \"criterion_id\": \"P1.C5\",\n      \"met\": true,\n      \"evidence\": \"\",\n      \"justification\": \"The banned phrases do not appear in the text.\"\n    }\n  ],\n  \"obvious_overlap\": []\n}",
@@ -1013,7 +1130,10 @@
     "expression": 1.0
    },
    "path": null,
-   "passed": true
+   "passed": true,
+   "confidence": null,
+   "addresses_question": null,
+   "amendment_due": false
   }
  }
 }

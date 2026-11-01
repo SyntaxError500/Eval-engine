@@ -8,3 +8,6 @@ bands:
 
 # Max path confidence below this triggers the amendment stage (calibrated in Phase 5).
 amendment_confidence_threshold: 0.5
+
+# Verifier prompt framing: adversarial | neutral (the Phase 5 experiment compares them).
+verifier_framing: adversarial

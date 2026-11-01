@@ -34,6 +34,10 @@ The paths below use Git Bash syntax. In **cmd or PowerShell**, activate the venv
 .venv/Scripts/ruff check src tests && .venv/Scripts/mypy
 ```
 
+Each phase's experiments have their own commands: `eval-engine pilot --help` (Phase 2),
+`eval-engine gen --help` (Phase 3), `eval-engine golden` (Phase 4, rerun after any pipeline change)
+and `eval-engine verifier --help` (Phase 5). All of them resume from the cache.
+
 ## Swapping a model
 
 Edit the role in [config/roles.yaml](config/roles.yaml). Nothing else changes. Replace the

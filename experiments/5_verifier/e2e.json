@@ -1,0 +1,194 @@
+[
+ {
+  "item_id": "91798e725180-valid_heuristics",
+  "kind": "valid_unlisted",
+  "outcome": "failed checks",
+  "failure_type": null,
+  "overall": 0.17647058823529413,
+  "reason": "proposal failed the rubric checks: path P3 has no criterion for dimension(s) ['correctness']: set dimension \"correctness\" on the criterion that checks a fact the answer must state accurately"
+ },
+ {
+  "item_id": "b850a615f22e-valid_hpa",
+  "kind": "valid_unlisted",
+  "outcome": "accepted",
+  "failure_type": null,
+  "overall": 1.0,
+  "reason": "The proposed path describes a distinct endocrine mechanism (HPA-axis downregulation and cortisol reduction) that is factually accurate and not covered by the existing neurochemical, neurobiological, or psychosocial paths."
+ },
+ {
+  "item_id": "4cb875e3c8cc-no_choice",
+  "kind": "holed",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.23529411764705882,
+  "reason": "The answer does not fulfill the prompt’s requirement to argue which hypothesis is more convincing; instead it proposes an integrated cyclical model that treats both hypotheses as linked stages. Because it fails to directly answer the question as asked, it is not a valid new approach under the rubric."
+ },
+ {
+  "item_id": "7ef66d20c834-no_choice",
+  "kind": "holed",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.09411764705882354,
+  "reason": "The answer proposes a third interpretation—confession as the central theme—rather than choosing between the two options the question explicitly asks for. Therefore it does not fulfill the requirement to argue whether the novel should be read primarily as a critique of Puritan hypocrisy or as an exploration of psychological trauma."
+ },
+ {
+  "item_id": "17c1b10632b5-no_choice",
+  "kind": "holed",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.11764705882352941,
+  "reason": "The answer proposes imperial economic competition as the primary cause, which is a distinct approach, but it does not answer the question's binary choice between alliances and nationalist rivalries. Since it fails to do what the question asks, it is not a valid new approach under the rubric."
+ },
+ {
+  "item_id": "91798e725180-valid_informational",
+  "kind": "valid_unlisted",
+  "outcome": "accepted",
+  "failure_type": null,
+  "overall": 1.0,
+  "reason": "The proposed path relies on the well-established psychological mechanism of informational social influence, which is distinct from the normative (approval) and internalized identity mechanisms in existing paths. It provides a valid causal explanation for why individuals might override personal convictions by doubting their own judgment in favor of majority consensus."
+ },
+ {
+  "item_id": "91798e725180-valid_authority",
+  "kind": "valid_unlisted",
+  "outcome": "verifier rejected",
+  "failure_type": "factual_error",
+  "overall": 0.17647058823529413,
+  "reason": "The path relies on a false premise that social norms are generally perceived as emanating from a 'legitimate authority' in the way required for the obedience mechanism (e.g., Milgram's experimenter) to apply. Social norms are typically diffuse social expectations, not commands from a specific legitimate authority figure, so the causal mechanism of shifting responsibility to an authority does not explain why individuals follow general social norms."
+ },
+ {
+  "item_id": "b850a615f22e-valid_sleep",
+  "kind": "valid_unlisted",
+  "outcome": "failed checks",
+  "failure_type": null,
+  "overall": 0.17647058823529413,
+  "reason": "proposal failed the rubric checks: P4.C3 grades length or sentence count; criteria must be about content"
+ },
+ {
+  "item_id": "b850a615f22e-valid_inflammation",
+  "kind": "valid_unlisted",
+  "outcome": "accepted",
+  "failure_type": null,
+  "overall": 1.0,
+  "reason": "The proposed path describes a valid and distinct mechanism (anti-inflammatory effects) that is factually accurate and not covered by the existing neurochemical, neurobiological, or psychosocial paths. It correctly identifies the causal link between reduced inflammation and improved mental health outcomes."
+ },
+ {
+  "item_id": "b850a615f22e-valid_distraction",
+  "kind": "valid_unlisted",
+  "outcome": "accepted",
+  "failure_type": null,
+  "overall": 1.0,
+  "reason": "The proposed path describes a valid cognitive mechanism (attentional distraction reducing rumination) that is distinct from the existing neurochemical, neurobiological, and psychosocial paths. The reasoning is factually accurate and logically sound."
+ },
+ {
+  "item_id": "610c46d48e48-valid_context",
+  "kind": "valid_unlisted",
+  "outcome": "accepted",
+  "failure_type": null,
+  "overall": 1.0,
+  "reason": "The proposed path relies on the well-established psychological concept of context-dependent memory, which is a distinct and valid mechanism for forgetting object locations. It is not a duplicate of the existing paths, which focus on lack of routine, cognitive load/stress, or physical size/clutter."
+ },
+ {
+  "item_id": "23575fb39cfd-misconception_burner_thrust",
+  "kind": "misconception",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer attributes the balloon's rise to a reaction force from a downward jet of hot gas, which is scientifically inaccurate; the correct mechanism is buoyancy due to reduced density. Since the explanation is factually wrong and does not meet the question's requirement, it is not a valid new approach."
+ },
+ {
+  "item_id": "b850a615f22e-misconception_sweat_toxins",
+  "kind": "misconception",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer proposes that sweating removes cortisol and toxins, which is not a scientifically supported mechanism for mental health benefits; the claim is factually inaccurate. Therefore it does not constitute a valid new approach."
+ },
+ {
+  "item_id": "91798e725180-misconception_mirror_neurons",
+  "kind": "misconception",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.17647058823529413,
+  "reason": "The answer proposes a neurological explanation using mirror neurons, which differs from the rubric’s social conformity and internalized identity approaches. However, the claim that mirror neuron activity shuts down moral judgment is not factually accurate and the reasoning does not hold, so it does not meet the correctness requirement for a valid new approach."
+ },
+ {
+  "item_id": "7d174cce75df-nonsense",
+  "kind": "nonsense",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer does not choose either reduced vegetation cover or increased anthropogenic heat emissions as required, and it proposes a scientifically inaccurate cause unrelated to the question. Therefore it does not constitute a valid new approach."
+ },
+ {
+  "item_id": "91798e725180-invalid_reasoning",
+  "kind": "invalid_reasoning",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.17647058823529413,
+  "reason": "The answer attempts a distinct explanation based on temporal precedence of norms, but the claim that earlier existence of norms logically forces compliance is not factually substantiated and lacks sound reasoning. Since it does not meet correctness and reasoning criteria, it is not a valid new approach."
+ },
+ {
+  "item_id": "91798e725180-holed",
+  "kind": "holed",
+  "outcome": "accepted",
+  "failure_type": null,
+  "overall": 1.0,
+  "reason": "The proposed path relies on institutional enforcement and cost-benefit analysis, which is a distinct mechanism from social conformity (P1) or internalized identity (P2). It provides a valid, factually accurate explanation for why individuals might suppress personal moral convictions in favor of compliance with enforced norms."
+ },
+ {
+  "item_id": "669bce9c85fb-nonsense",
+  "kind": "nonsense",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.29411764705882354,
+  "reason": "The answer does not correctly explain how a currency depreciation affects export competitiveness; it offers a physically implausible atmospheric mechanism that is factually inaccurate. Since the central argument is incorrect, it does not constitute a valid new approach."
+ },
+ {
+  "item_id": "b850a615f22e-nonsense",
+  "kind": "nonsense",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer attempts to present a mechanism (atmospheric ion absorption) that is not covered by the rubric, but the claim that negative ions neutralize cortisol is not factually accurate and lacks scientific support, so it fails the correctness criterion. Therefore it does not constitute a valid new approach."
+ },
+ {
+  "item_id": "b850a615f22e-invalid_reasoning",
+  "kind": "invalid_reasoning",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer does not provide a scientifically valid mechanism; it merely asserts that stretching causes calmness because it occurs first, without factual support or a distinct explanation beyond the listed approaches. Therefore it is not a new valid approach."
+ },
+ {
+  "item_id": "c08ec38ec72f-nonsense",
+  "kind": "nonsense",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer does not provide a factually accurate literary analysis; its thermodynamic metaphor is not a valid explanation of how an unreliable narrator influences the reader’s understanding of the American Dream. Because the reasoning is inaccurate, it fails the correctness criterion and therefore is not a new valid approach."
+ },
+ {
+  "item_id": "c08ec38ec72f-invalid_reasoning",
+  "kind": "invalid_reasoning",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.17647058823529413,
+  "reason": "The answer does not address how the narrator's unreliability influences the reader's understanding of the American Dream, which is the core of the question. Instead it focuses on Nick's background and economic details, failing to meet the question's requirement and not presenting a distinct valid approach."
+ },
+ {
+  "item_id": "610c46d48e48-nonsense",
+  "kind": "nonsense",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer proposes a magnetic phenomenon causing misplacement, which is not factually accurate and lacks scientific support, failing the correctness criterion. Since it does not present a valid, accurate explanation, it is not a new valid approach."
+ },
+ {
+  "item_id": "rain-wrong",
+  "kind": "golden_wrong",
+  "outcome": "proposer declined",
+  "failure_type": null,
+  "overall": 0.0,
+  "reason": "The answer does not correctly explain the atmospheric mechanism that creates rain shadows; it incorrectly attributes dryness to blocked sunlight and reduced evaporation, which is factually inaccurate. This does not constitute a new valid approach distinct from the rubric’s orographic precipitation explanation."
+ }
+]

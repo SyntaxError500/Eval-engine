@@ -42,11 +42,20 @@ class EvaluationTrace(BaseModel):
     creative_route: bool
     path_confidences: list[PathConfidence] = Field(default_factory=list)
     identified_path: str | None = None
+    # The judge said the answer tries to answer the question (None on the creative route).
+    addresses_question: bool | None = None
+    # The conditions for amendment held (it can be skipped, as in the golden run).
+    amendment_due: bool = False
     amendment_fired: bool = False
     amendment_proposal: str | None = None
     verifier_verdict: bool | None = None
     verifier_reasoning: str | None = None
+    verifier_failure_type: str | None = None
     verifier_framing: str | None = None
+    # Why the answer stayed on the original rubric; feedback reports it (design doc §15).
+    divergence_reason: str | None = None
+    # The stage couldn't finish (provider down, quota); the original rubric stands.
+    amendment_error: str | None = None
     final_rubric_source: str
     verdicts: list[Verdict] = Field(default_factory=list)
     errors: list[ClaimError] = Field(default_factory=list)
@@ -56,7 +65,7 @@ class EvaluationTrace(BaseModel):
     contradiction_downgrades: list[str] = Field(default_factory=list)
     # Sentence-count criteria decided in code, overriding the judge (LLMs miscount).
     count_overrides: list[str] = Field(default_factory=list)
-    # Max path confidence below the threshold (non-creative); Phase 5 runs amendment on it.
+    # First judge call's max path confidence was below the threshold (non-creative).
     low_confidence: bool = False
     # Creative only: obvious answers the response substantially reuses. Feedback signal,
     # never scored, because briefs don't state originality as a requirement (Phase 3 rule).

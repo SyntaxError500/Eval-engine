@@ -1,0 +1,692 @@
+[
+ {
+  "kind": "valid_unlisted",
+  "item_id": "78d7767e5351-valid_mixed",
+  "confidence": 0.5,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "91798e725180-valid_heuristics",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "b850a615f22e-valid_hpa",
+  "confidence": 0.4,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "c08ec38ec72f-valid_class",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "610c46d48e48-valid_automaticity",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "d757eca4528c-subcase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "d92e0ad73cb8-subcase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "5d564b58c11c-subcase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "632df277470d-subcase",
+  "confidence": 0.95,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "3f8052a62a58-subcase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "23575fb39cfd-subcase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "a5cd0a155f64-subcase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "4cb875e3c8cc-no_choice",
+  "confidence": 0.4,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "7ef66d20c834-no_choice",
+  "confidence": 0.4,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "17c1b10632b5-no_choice",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "91798e725180-valid_informational",
+  "confidence": 0.3,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "91798e725180-valid_authority",
+  "confidence": 0.1,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "669bce9c85fb-valid_margin",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "1e9d95d9130f-valid_plant_inputs",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "b850a615f22e-valid_sleep",
+  "confidence": 0.1,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "b850a615f22e-valid_inflammation",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "b850a615f22e-valid_distraction",
+  "confidence": 0.3,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "c08ec38ec72f-valid_complicity",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "610c46d48e48-valid_interference",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "610c46d48e48-valid_context",
+  "confidence": 0.3,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "a5cd0a155f64-misconception_wave_speed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "23575fb39cfd-misconception_burner_thrust",
+  "confidence": 0.1,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "3f8052a62a58-misconception_wall_block",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "669bce9c85fb-misconception_wrong_direction",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "b850a615f22e-misconception_sweat_toxins",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "1e9d95d9130f-misconception_air_sponge",
+  "confidence": 0.5,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "91798e725180-misconception_mirror_neurons",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "misconception",
+  "item_id": "c08ec38ec72f-misconception_wrong_narrator",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "4cb875e3c8cc-nonsense",
+  "confidence": 0.95,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "4cb875e3c8cc-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "4cb875e3c8cc-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "4cb875e3c8cc-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "d757eca4528c-nonsense",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "d757eca4528c-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "d757eca4528c-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "082591e7ec4e-nonsense",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "082591e7ec4e-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "082591e7ec4e-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "d92e0ad73cb8-nonsense",
+  "confidence": 0.7,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "d92e0ad73cb8-invalid_reasoning",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "d92e0ad73cb8-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "d92e0ad73cb8-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "5d564b58c11c-nonsense",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "5d564b58c11c-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "5d564b58c11c-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "7ef66d20c834-nonsense",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "7ef66d20c834-invalid_reasoning",
+  "confidence": 0.95,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "7ef66d20c834-holed",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "7d174cce75df-nonsense",
+  "confidence": 0.1,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "7d174cce75df-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "7d174cce75df-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "7d174cce75df-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "78d7767e5351-nonsense",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "78d7767e5351-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "78d7767e5351-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "78d7767e5351-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "17c1b10632b5-nonsense",
+  "confidence": 0.1,
+  "addresses": false
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "17c1b10632b5-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "17c1b10632b5-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "17c1b10632b5-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "91798e725180-nonsense",
+  "confidence": 0.2,
+  "addresses": false
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "91798e725180-invalid_reasoning",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "91798e725180-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "91798e725180-holed",
+  "confidence": 0.3,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "669bce9c85fb-nonsense",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "669bce9c85fb-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "1e9d95d9130f-nonsense",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "1e9d95d9130f-invalid_reasoning",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "1e9d95d9130f-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "b850a615f22e-nonsense",
+  "confidence": 0.1,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "b850a615f22e-invalid_reasoning",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "b850a615f22e-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "valid_unlisted",
+  "item_id": "b850a615f22e-holed",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "c08ec38ec72f-nonsense",
+  "confidence": 0.3,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "c08ec38ec72f-invalid_reasoning",
+  "confidence": 0.2,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "c08ec38ec72f-restatement",
+  "confidence": 0.99,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "c08ec38ec72f-holed",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "3f8052a62a58-nonsense",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "3f8052a62a58-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "3f8052a62a58-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "3f8052a62a58-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "610c46d48e48-nonsense",
+  "confidence": 0.1,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "610c46d48e48-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "23575fb39cfd-nonsense",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "restatement",
+  "item_id": "23575fb39cfd-restatement",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "23575fb39cfd-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "632df277470d-nonsense",
+  "confidence": 0.9,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
+  "item_id": "632df277470d-invalid_reasoning",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "holed",
+  "item_id": "632df277470d-holed",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "nonsense",
+  "item_id": "a5cd0a155f64-nonsense",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_good",
+  "item_id": "balloon-good",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_paraphrase",
+  "item_id": "balloon-paraphrase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_partial",
+  "item_id": "balloon-partial",
+  "confidence": 0.5,
+  "addresses": true
+ },
+ {
+  "kind": "golden_wrong",
+  "item_id": "balloon-wrong",
+  "confidence": 0.5,
+  "addresses": true
+ },
+ {
+  "kind": "golden_off_topic",
+  "item_id": "balloon-off",
+  "confidence": 0.1,
+  "addresses": false
+ },
+ {
+  "kind": "golden_good",
+  "item_id": "rain-good",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_paraphrase",
+  "item_id": "rain-paraphrase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_partial",
+  "item_id": "rain-partial",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_wrong",
+  "item_id": "rain-wrong",
+  "confidence": 0.3,
+  "addresses": true
+ },
+ {
+  "kind": "golden_off_topic",
+  "item_id": "rain-off",
+  "confidence": 0.1,
+  "addresses": false
+ },
+ {
+  "kind": "golden_good",
+  "item_id": "wfh-good",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_paraphrase",
+  "item_id": "wfh-paraphrase",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_partial",
+  "item_id": "wfh-partial",
+  "confidence": 0.95,
+  "addresses": true
+ },
+ {
+  "kind": "golden_wrong",
+  "item_id": "wfh-wrong",
+  "confidence": 0.5,
+  "addresses": true
+ },
+ {
+  "kind": "golden_off_topic",
+  "item_id": "wfh-off",
+  "confidence": 0.2,
+  "addresses": false
+ },
+ {
+  "kind": "golden_good",
+  "item_id": "wwi-alliances",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_paraphrase",
+  "item_id": "wwi-nationalism",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_partial",
+  "item_id": "wwi-partial",
+  "confidence": 1.0,
+  "addresses": true
+ },
+ {
+  "kind": "golden_wrong",
+  "item_id": "wwi-wrong",
+  "confidence": 0.95,
+  "addresses": true
+ },
+ {
+  "kind": "golden_off_topic",
+  "item_id": "wwi-off",
+  "confidence": 0.1,
+  "addresses": false
+ }
+]

@@ -50,6 +50,9 @@ class Outcome:
     contradictions: list[str]
     count_overrides: list[str]
     n_errors: int
+    confidence: float | None = None
+    addresses_question: bool | None = None
+    amendment_due: bool = False
     misses: list[str] = field(default_factory=list)
 
     @property
@@ -87,6 +90,9 @@ def check(item: GoldenItem, trace: EvaluationTrace) -> Outcome:
         trace.contradiction_downgrades,
         trace.count_overrides,
         len(trace.errors),
+        max((p.confidence for p in trace.path_confidences), default=None),
+        trace.addresses_question,
+        trace.amendment_due,
     )
     for dim, (lo, hi) in item.expect.items():
         got = scores.get(dim)
@@ -126,7 +132,7 @@ def run(
     outcomes: list[Outcome] = []
     recorded: dict[str, Any] = {"questions": {}, "items": {}}
     for item in items:
-        trace = evaluate(client, rubrics, questions, evals, item.question, item.answer)
+        trace = evaluate(client, rubrics, questions, evals, item.question, item.answer, amend=False)
         q = questions.get(item.question)
         recorded["questions"][q.question_id] = {
             "question": json.loads(q.model_dump_json()),
@@ -138,6 +144,9 @@ def run(
             "scores": o.scores,
             "path": o.path,
             "passed": o.passed,
+            "confidence": o.confidence,
+            "addresses_question": o.addresses_question,
+            "amendment_due": o.amendment_due,
         }
         outcomes.append(o)
     fixture.write_text(json.dumps(recorded, indent=1, ensure_ascii=False), encoding="utf-8")
@@ -171,12 +180,21 @@ def report(outcomes: list[Outcome]) -> str:
             notes += f" (count decided in code: {', '.join(o.count_overrides)})"
         if o.n_errors:
             notes += f" ({o.n_errors} error(s) listed)"
+        if o.confidence is not None:
+            notes += f" (path confidence {o.confidence:.2f})"
+        if o.addresses_question is False:
+            notes += " (not addressing the question)"
+        if o.amendment_due:
+            notes += " (AMENDMENT DUE)"
         lines.append(
             f"| {o.item.id} | {o.item.kind} | {'pass' if o.passed else 'MISS'} | {scores} "
             f"| {notes.strip()} |"
         )
     n = sum(o.passed for o in outcomes)
     lines.append(f"\n{n}/{len(outcomes)} items within their expected ranges.")
+    ordinary = [o for o in outcomes if o.confidence is not None]
+    due = sum(o.amendment_due for o in ordinary)
+    lines.append(f"Amendment due on {due}/{len(ordinary)} non-creative items.")
     return "\n".join(lines)
 
 
@@ -191,7 +209,9 @@ def vote_study(
     lines = ["| item | single | majority | scores single -> majority |", "|---|---|---|---|"]
     revoted = changed = fixed = broke = 0
     for item in items:
-        trace = evaluate(client, rubrics, questions, evals, item.question, item.answer, votes=votes)
+        trace = evaluate(
+            client, rubrics, questions, evals, item.question, item.answer, votes=votes, amend=False
+        )
         if trace.judge_votes == 1:
             continue
         revoted += 1

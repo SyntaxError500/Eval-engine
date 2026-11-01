@@ -1,0 +1,1130 @@
+# Hand-curated items for the Phase 5 verifier test set. Valid approaches come from here, not
+# from the author run: on hand check, 10 of the 17 it wrote were sub-cases of a listed path or
+# refused the question's forced choice. Those stay here under their true class.
+items:
+- item_id: 78d7767e5351-valid_mixed
+  question_id: 78d7767e5351
+  kind: valid_unlisted
+  description: This approach argues that working from home produces a neutral or conditional effect on
+    work-life balance by highlighting offsetting structural pressures.
+  criteria:
+  - dimension: reasoning
+    statement: States a position that working from home yields mixed effects on overall work-life balance.
+    evidence_hint: Explicitly claims work-life balance is neither purely improved nor ruined.
+    core: true
+    requires: argue whether working from home increases overall work‑life balance
+  - dimension: completeness
+    statement: Provides a first distinct reason involving boundary blurring.
+    evidence_hint: Mentions inability to disconnect from work tasks at home.
+    core: true
+    requires: support your argument with at least two distinct reasons
+  - dimension: completeness
+    statement: Provides a second distinct reason involving schedule autonomy.
+    evidence_hint: Mentions flexibility in managing personal appointments during the day.
+    core: true
+    requires: support your argument with at least two distinct reasons
+  justification: This path presents a nuanced conditional argument that does not simply affirm or deny
+    the prompt's premise of a unidirectional increase, thus differing from both binary paths in the rubric
+    while fully addressing the prompt's structural demands.
+  answer: Working from home does not uniformly increase overall work-life balance because it simultaneously
+    introduces liberating schedule autonomy and burdensome boundary blurring. On one hand, the elimination
+    of a daily commute provides valuable hours that employees can redirect toward personal care and family
+    engagement. On the other hand, the physical integration of office and home environments frequently
+    leads to extended evening hours and an inability to mentally detach from professional duties. Consequently,
+    the net impact on balance depends heavily on individual discipline rather than the remote arrangement
+    itself.
+  note: 'Hand check: a conditional verdict is a real answer to ''argue whether'', and neither listed path
+    takes it.'
+- item_id: 91798e725180-valid_heuristics
+  question_id: 91798e725180
+  kind: valid_unlisted
+  description: Explaining the phenomenon through the lens of bounded rationality and heuristic processing
+    where norms serve as cognitive shortcuts.
+  criteria:
+  - dimension: completeness
+    statement: States that individuals rely on cognitive heuristics to navigate complex social environments.
+    evidence_hint: Mentions mental shortcuts or cognitive heuristics used for decision making.
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: reasoning
+    statement: Explains how processing constraints make following established norms more efficient than
+      deliberating personal moral convictions.
+    evidence_hint: Describes how cognitive efficiency or reducing decision fatigue causes the override
+      of personal morals.
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: correctness
+    statement: Identifies the mechanism of automatic script activation in familiar social contexts.
+    evidence_hint: References automatic scripts, schema activation, or bounded rationality.
+    core: false
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  justification: This path utilizes a cognitive science and bounded rationality framework, focusing on
+    mental shortcuts and cognitive load rather than social approval or internalized identity. It establishes
+    a completely separate mechanism for the behavior while fully addressing the prompt.
+  answer: Individuals frequently follow social norms despite conflicting personal moral convictions because
+    human decision-making relies heavily on cognitive heuristics and mental shortcuts. In complex social
+    environments, calculating the moral implications of every action creates overwhelming cognitive load
+    and decision fatigue. To conserve mental energy, the brain automatically activates pre-existing behavioral
+    scripts associated with standard social situations. Consequently, people default to following these
+    norms effortlessly, bypassing deep moral deliberation and overriding personal convictions simply because
+    norm-compliance demands fewer cognitive resources.
+  note: 'Hand check: cognitive shortcuts differ from both approval-seeking and internalised identity.'
+- item_id: b850a615f22e-valid_hpa
+  question_id: b850a615f22e
+  kind: valid_unlisted
+  description: The approach explains mental health improvements through the mechanism of hypothalamic-pituitary-adrenal
+    (HPA) axis regulation and stress-hormone reduction.
+  criteria:
+  - dimension: correctness
+    statement: States that regular physical activity modulates the HPA axis to lower baseline cortisol
+      levels.
+    evidence_hint: Mentions cortisol reduction or HPA axis downregulation due to exercise.
+    core: true
+    requires: explain one mechanism by which regular physical activity improves mental health
+  - dimension: completeness
+    statement: Describes the physiological adaptation of the stress-response system during recurrent physical
+      exertion.
+    evidence_hint: Explains how the body habituates to physical stress, making it more resilient to psychological
+      stressors.
+    core: true
+    requires: explain one mechanism by which regular physical activity improves mental health
+  - dimension: reasoning
+    statement: Explains how lowered cortisol and HPA axis regulation decrease symptoms of anxiety and
+      chronic stress.
+    evidence_hint: Connects the dampened physiological stress response directly to reduced psychological
+      anxiety.
+    core: true
+    requires: explain one mechanism by which regular physical activity improves mental health
+  justification: This path presents a distinct endocrinological and systemic stress-regulation mechanism
+    centering on the HPA axis and cortisol downregulation, differing fundamentally from endorphins, neurogenesis
+    (BDNF), and psychosocial self-efficacy. It fully satisfies the prompt's requirements using accurate
+    physiological science.
+  answer: Regular physical activity improves mental health by downregulating the hypothalamic-pituitary-adrenal
+    (HPA) axis, which is responsible for the body's stress response. When a person engages in consistent
+    exercise, the body experiences controlled physical stress that trains the HPA axis to adapt and recover
+    more efficiently over time. Consequently, this physiological habituation leads to lower baseline circulating
+    levels of cortisol, the primary stress hormone. Because chronic elevation of cortisol is directly
+    linked to heightened anxiety and hypervigilance, reducing these hormone levels dampens the body's
+    reaction to everyday psychological stressors. Ultimately, this endocrine regulation promotes emotional
+    stability and significantly decreases symptoms of chronic anxiety.
+  note: 'Hand check: HPA-axis regulation is an established mechanism, separate from endorphins, BDNF and
+    self-efficacy.'
+- item_id: c08ec38ec72f-valid_class
+  question_id: c08ec38ec72f
+  kind: valid_unlisted
+  description: This path analyzes how the narrator's selective bias exposes the class-based exclusivity
+    underlying the American Dream.
+  criteria:
+  - dimension: correctness
+    statement: States that the narrator exhibits selective bias.
+    evidence_hint: Mentions Nick's social background or selective omission of facts.
+    core: true
+    requires: explain how the use of an unreliable narrator in F. Scott Fitzgerald’s The Great Gatsby
+      influences the reader’s understanding of the American Dream
+  - dimension: completeness
+    statement: States that the narrator’s unreliability influences the reader’s understanding of the American
+      Dream.
+    evidence_hint: Connects the narrator's perspective to the reader's perception of the dream.
+    core: true
+    requires: influences the reader’s understanding of the American Dream
+  - dimension: reasoning
+    statement: Explains that this influence exposes the class-based exclusivity inherent in the American
+      Dream.
+    evidence_hint: Argues that the narrative perspective masks or highlights social hierarchy and privilege.
+    core: true
+    requires: explain how the use of an unreliable narrator in F. Scott Fitzgerald’s The Great Gatsby
+      influences the reader’s understanding of the American Dream
+  justification: This path introduces a distinct mechanism focusing on class-based exclusivity and selective
+    bias rather than general ambiguity or illusion. It provides a novel valid route that meets all prompt
+    requirements.
+  answer: Nick Carraway functions as an unreliable narrator whose upper-class origins and moral blind
+    spots shape the entire narrative of Gatsby's life. Because Nick selectively romanticizes certain characters
+    while harshly judging others based on inherited social codes, the reader's understanding of the American
+    Dream is filtered through a lens of entrenched privilege. This narrative bias exposes how the dream
+    is not a universal meritocracy, but an exclusive club protected by those who already hold social power.
+    Consequently, the reader perceives the dream as structurally barred to those outside the established
+    elite.
+  note: 'Hand check: class exclusivity is a distinct reading from ambiguity about attainability or the
+    Dream as myth.'
+- item_id: 610c46d48e48-valid_automaticity
+  question_id: 610c46d48e48
+  kind: valid_unlisted
+  description: This approach explains key misplacement through the psychological phenomenon of habitual
+    automaticity.
+  criteria:
+  - dimension: correctness
+    statement: States that the explanation involves habitual automatic behavior during routine tasks.
+    evidence_hint: Mentions automaticity or rote habits.
+    core: true
+    requires: offering one plausible explanation
+  - dimension: completeness
+    statement: Provides an explanation that directly addresses why many people frequently misplace their
+      keys.
+    evidence_hint: Links the psychological mechanism directly to misplaced keys.
+    core: true
+    requires: Explain why many people frequently misplace their keys
+  - dimension: reasoning
+    statement: Explains that routine actions are executed without conscious encoding, preventing memory
+      formation of the placement.
+    evidence_hint: Describes the lack of conscious encoding due to mindless repetition.
+    core: true
+    requires: offering one plausible explanation
+  justification: This path presents a genuinely distinct psychological route based on procedural automaticity
+    rather than designated spots, stress, or visual clutter. It introduces a unique causal mechanism that
+    satisfies all prompt requirements while differing fundamentally from the listed approaches.
+  answer: Many people frequently misplace their keys because the act of putting them down is governed
+    by habitual automaticity. When individuals return home, the routine motions of entering and setting
+    down items are executed without conscious attention. Because the brain fails to encode this mundane
+    event into working memory due to mindless repetition, the person cannot recall where the object was
+    left. This absence of a conscious memory trace is a primary driver of lost items.
+  note: 'Hand check: habit without encoding needs no stress, clutter or missing key spot.'
+- item_id: d757eca4528c-subcase
+  question_id: d757eca4528c
+  kind: restatement
+  description: This approach argues against mandatory government standards by advocating for a decentralized,
+    industry-led certification ecosystem driven by competitive market forces.
+  criteria:
+  - dimension: completeness
+    statement: States the position that governments should not require mandatory data-privacy standards
+      for consumer IoT devices.
+    evidence_hint: Explicitly expresses opposition to government-mandated privacy standards for IoT devices.
+    core: true
+    requires: present one position on whether governments should require mandatory data‑privacy standards
+      for consumer IoT devices
+  - dimension: reasoning
+    statement: Explains how market-driven industry certifications provide better privacy protection than
+      rigid government mandates.
+    evidence_hint: Connects industry-led certification bodies to flexible adaptation and superior privacy
+      outcomes.
+    core: true
+    requires: support it with at least one specific reason or piece of evidence
+  justification: This path takes the opposing view to Path P1, but unlike Path P2 which relies on general
+    deregulation arguments, this path introduces a distinct economic mechanism based on competitive private
+    certification markets. It provides a unique reasoning route that satisfies all prompt requirements
+    while offering a novel substantive argument.
+  answer: Governments should avoid imposing mandatory data-privacy standards on consumer Internet-of-Things
+    devices because rigid regulations stifle rapid technological adaptation. Instead, a decentralized
+    ecosystem of competitive industry-led certification bodies allows manufacturers to voluntarily signal
+    superior security features to discerning consumers. This market-driven approach incentivizes continuous
+    privacy innovation much faster than slow legislative updates ever could, protecting users effectively
+    without government overreach.
+  note: 'Hand check: authored as valid, but a market-certification argument against mandates is one reason
+    under P2, not a new path.'
+- item_id: d92e0ad73cb8-subcase
+  question_id: d92e0ad73cb8
+  kind: restatement
+  description: This path argues that a progressive wealth tax will fail to reduce economic inequality
+    because it will trigger massive capital flight and depress overall economic investment.
+  criteria:
+  - dimension: correctness
+    statement: States a position against implementing a progressive wealth tax.
+    evidence_hint: The answer explicitly opposes the wealth tax.
+    core: true
+    requires: State a position (for or against)
+  - dimension: reasoning
+    statement: Explains how capital flight resulting from the tax reduces the domestic capital base available
+      for wage-generating investments.
+    evidence_hint: The answer traces capital mobility to reduced domestic investment.
+    core: true
+    requires: support it with at least two distinct arguments
+  - dimension: reasoning
+    statement: Explains how reduced tax compliance costs and administrative burdens undermine state revenue
+      collection.
+    evidence_hint: The answer links high administrative costs to lower net revenue.
+    core: true
+    requires: support it with at least two distinct arguments
+  - dimension: completeness
+    statement: Links the negative economic consequences to their ultimate effect on economic inequality.
+    evidence_hint: The answer explicitly concludes that these mechanisms worsen or fail to reduce inequality.
+    core: true
+    requires: argue whether implementing a progressive wealth tax... would reduce economic inequality
+  justification: This path presents a coherent anti-tax position grounded in specific economic mechanisms
+    like capital flight and administrative failure, rather than simply stating generic opposition. It
+    fulfills all prompt requirements while offering a distinct analytical framework from the existing
+    listed paths.
+  answer: Implementing a progressive wealth tax on the richest households is a counterproductive approach
+    that will fail to reduce economic inequality in a market economy. First, heavily taxing accumulated
+    capital drives international capital flight, which shrinks the domestic investment pool and depresses
+    future job and wage growth for lower-income earners. Second, the extreme administrative complexity
+    of valuing illiquid assets leads to immense enforcement costs and widespread avoidance, resulting
+    in lower net public revenues than anticipated. Ultimately, by crippling the productive capacity of
+    the economy and generating negligible fiscal returns, the tax exacerbates the very disparities it
+    aims to resolve.
+  note: 'Hand check: authored as valid, but capital flight is a reason under P2 (against the tax), not
+    a new path.'
+- item_id: 5d564b58c11c-subcase
+  question_id: 5d564b58c11c
+  kind: restatement
+  description: This path argues for promoting integrated pest management by analyzing its economic benefits
+    for smallholder farmers and its role in preserving beneficial predatory insect populations through
+    biological controls.
+  criteria:
+  - dimension: completeness
+    statement: States the chosen position that integrated pest management should be promoted.
+    evidence_hint: Explicitly mentions promoting integrated pest management as the primary agricultural
+      policy.
+    core: true
+    requires: promoting integrated pest management (IPM) as a sustainable alternative
+  - dimension: reasoning
+    statement: Explains how integrated pest management reduces input costs for farming operations.
+    evidence_hint: Connects reduced chemical purchases to increased profit margins for agricultural producers.
+    core: true
+    requires: two distinct supporting reasons
+  - dimension: correctness
+    statement: Provides a specific factual example, statistic, or case study for the economic reason.
+    evidence_hint: Cites a real-world figure or case study showing cost savings from IPM adoption.
+    core: false
+    requires: specific factual example, statistic, or case study for each reason
+  - dimension: reasoning
+    statement: Explains how integrated pest management preserves natural predator populations.
+    evidence_hint: Connects targeted biological controls to the survival of beneficial insects that suppress
+      secondary pests.
+    core: true
+    requires: two distinct supporting reasons
+  - dimension: correctness
+    statement: Provides a specific factual example, statistic, or case study for the ecological preservation
+      reason.
+    evidence_hint: Cites a specific study or statistical finding regarding predator insects and IPM.
+    core: false
+    requires: specific factual example, statistic, or case study for each reason
+  justification: This path successfully defends option (b) by focusing on economic viability and predatory
+    insect conservation rather than general environmental protection or broad chemical reduction arguments
+    found in other paths. It rigorously follows the structural requirements of the prompt while offering
+    a genuinely distinct argumentative mechanism.
+  answer: Policymakers should actively promote integrated pest management (IPM) as a sustainable alternative
+    to conventional pesticide regimes because it significantly lowers operational expenditures for agricultural
+    producers. By replacing routine chemical applications with scouting and economic injury thresholds,
+    farmers reduce costly pesticide purchases, as demonstrated by UN Food and Agriculture Organization
+    projects in Asia where rice farmers cut insecticide use by half while increasing net incomes by twenty
+    percent. Furthermore, IPM preserves populations of beneficial predatory insects that naturally suppress
+    pest outbreaks, preventing the secondary pest resurgences commonly triggered by broad-spectrum chemicals.
+    Research from the Xerces Society highlights that restoring natural predator habitats within IPM frameworks
+    successfully maintains pest control stability across diverse cropping systems without chemical dependency.
+  note: 'Hand check: authored as valid, but it argues option (b), which is P2.'
+- item_id: 632df277470d-subcase
+  question_id: 632df277470d
+  kind: restatement
+  description: This path argues against mandatory fortification by using an ethical bodily autonomy and
+    market pluralism framework rather than standard cost or safety objections.
+  criteria:
+  - dimension: correctness
+    statement: States a position that mandatory fortification of staple foods with vitamin D should not
+      be implemented
+    evidence_hint: Explicitly opposes mandatory vitamin D fortification.
+    core: true
+    requires: argue whether mandatory fortification of staple foods with vitamin D should be implemented
+      as a public‑health measure
+  - dimension: reasoning
+    statement: Explains how mandatory dietary intervention undermines individual consumer choice and bodily
+      autonomy
+    evidence_hint: Connects forced dietary intake to the removal of personal consent over ingested substances.
+    core: true
+    requires: present at least two supporting points
+  - dimension: reasoning
+    statement: Explains how blanket fortification prevents targeted supplementation for deficient subpopulations
+    evidence_hint: Discusses how one-size-fits-all policies fail to address specific demographic needs
+      effectively compared to precision medicine.
+    core: true
+    requires: present at least two supporting points
+  - dimension: completeness
+    statement: Acknowledges a counterargument from the opposite side
+    evidence_hint: Mentions the pro-fortification view that broad public health benefits outweigh individual
+      preferences.
+    core: true
+    requires: acknowledge a counterargument from the opposite side
+  justification: This path presents a valid anti-fortification stance grounded in bodily autonomy and
+    targeted care rather than economic costs or toxicity risks used in path P2. It successfully meets
+    all prompt requirements while offering a fundamentally distinct philosophical argument.
+  answer: Mandatory fortification of staple foods with vitamin D should not be implemented as a public
+    health measure. First, forced dietary additives violate bodily autonomy by removing individual choice
+    regarding what substances consumers ingest on a daily basis. Second, blanket mandates are inefficient
+    because they fail to address the specific needs of high-risk deficient demographics while imposing
+    unnecessary exposure on others. Proponents argue that systemic fortification efficiently prevents
+    widespread deficiencies without requiring behavioral changes from the public. However, preserving
+    personal agency and utilizing targeted supplementation remains a superior ethical and practical approach.
+  note: 'Hand check: authored as valid, but autonomy is a reason under P2 (against fortification), not
+    a new path.'
+- item_id: 3f8052a62a58-subcase
+  question_id: 3f8052a62a58
+  kind: restatement
+  description: This approach explains rain shadows through the thermodynamic phase changes of water vapor
+    and latent heat release during adiabatic cooling and warming over a mountain barrier.
+  criteria:
+  - dimension: correctness
+    statement: States the main atmospheric mechanism responsible
+    evidence_hint: Mentions adiabatic temperature changes and latent heat release during orographic lifting.
+    core: true
+    requires: state the main atmospheric mechanism responsible
+  - dimension: reasoning
+    statement: Describes how it leads to reduced precipitation on the leeward side
+    evidence_hint: Explains that condensation on the windward side releases latent heat, altering the
+      moisture and temperature profile of the air mass descending the leeward slope.
+    core: true
+    requires: describe how it leads to reduced precipitation on the leeward side
+  - dimension: completeness
+    statement: Gives one supporting fact that illustrates this process
+    evidence_hint: Includes a specific meteorological fact such as the dry adiabatic lapse rate of 9.8
+      degrees Celsius per kilometer versus the moist rate.
+    core: true
+    requires: give one supporting fact that illustrates this process
+  justification: This path is valid because it focuses specifically on thermodynamics, latent heat exchange,
+    and the contrast between the moist and dry adiabatic lapse rates, rather than just general air descent.
+    It differs from Path P1 by centering the mechanism on thermodynamic phase changes and latent heat
+    dynamics rather than basic relative humidity shifts.
+  answer: Mountain rain shadows form because of thermodynamic changes driven by latent heat release during
+    condensation on the windward slope. As moist air rises and cools, water vapor condenses into precipitation,
+    releasing latent heat that warms the surrounding air parcel and alters its buoyancy. When this air
+    passes the peak and descends on the leeward side, it compresses and warms at the dry adiabatic lapse
+    rate of approximately 9.8 degrees Celsius per kilometer. This heating significantly increases the
+    moisture-holding capacity of the air, creating a persistent atmospheric deficit that suppresses cloud
+    formation and precipitation.
+  note: 'Hand check: authored as valid, but adiabatic cooling, latent heat and warming descent are the
+    orographic mechanism of P1.'
+- item_id: 23575fb39cfd-subcase
+  question_id: 23575fb39cfd
+  kind: restatement
+  description: This approach explains the rise of a hot-air balloon through the kinetic molecular theory
+    of gases and pressure differentials.
+  criteria:
+  - dimension: reasoning
+    statement: States that heating increases the kinetic energy and speed of air molecules inside the
+      balloon
+    evidence_hint: Mentions molecular speed or kinetic energy rising due to heat.
+    core: true
+    requires: Explain why a hot‑air balloon rises when the air inside it is heated.
+  - dimension: correctness
+    statement: Explains that faster-moving molecules push against each other and expand the volume, forcing
+      excess air out of the bottom opening
+    evidence_hint: Describes thermal expansion leading to air escaping the envelope.
+    core: true
+    requires: Explain why a hot‑air balloon rises when the air inside it is heated.
+  - dimension: completeness
+    statement: Concludes that the remaining mass inside weighs less than the displaced cooler external
+      air, causing the balloon to ascend
+    evidence_hint: Compares the weight of the total enclosed mass to the displaced external air.
+    core: true
+    requires: Explain why a hot‑air balloon rises when the air inside it is heated.
+  justification: This path is valid because it relies on the fundamental gas laws and molecular kinetic
+    theory rather than simply stating macroscopic density changes as listed in P1. It differs from P1
+    by detailing the microscopic pressure equalization and mass expulsion process that causes the density
+    change.
+  answer: When the air inside a hot-air balloon is heated, its molecules gain kinetic energy and move
+    at higher speeds, colliding more forcefully with one another. This causes the air to expand and push
+    some of the excess air out through the open bottom of the envelope. Because fewer total air molecules
+    remain trapped inside the given volume, the total weight of the internal air becomes less than the
+    weight of the cooler surrounding air it displaces. This imbalance between the internal weight and
+    the external buoyant pressure causes the balloon to lift and rise into the atmosphere.
+  note: 'Hand check: authored as valid, but the molecular account ends in lower density and buoyancy,
+    which is P1.'
+- item_id: a5cd0a155f64-subcase
+  question_id: a5cd0a155f64
+  kind: restatement
+  description: This path explains 5G latency reduction by focusing on the reduction of the Transmission
+    Time Interval (TTI) within the physical radio frame structure.
+  criteria:
+  - dimension: correctness
+    statement: States the shorter Transmission Time Interval used in 5G radio frames.
+    evidence_hint: Mentions slot durations of 0.5 milliseconds or shorter compared to 4G subframes.
+    core: true
+    requires: describe one primary technical mechanism that enables this reduction
+  - dimension: completeness
+    statement: Identifies the physical layer slot structure as the specific domain of change.
+    evidence_hint: References radio frame or physical layer slot design.
+    core: true
+    requires: one primary technical mechanism
+  - dimension: reasoning
+    statement: Explains how a shortened transmission duration accelerates packet processing and transmission
+      times over the air interface.
+    evidence_hint: Connects shorter slot times directly to faster queuing and processing cycles at the
+      transceiver.
+    core: true
+    requires: Explain how 5G wireless networks achieve lower latency
+  justification: This path approaches the prompt by focusing on the physical air-interface framing structure
+    and Transmission Time Interval (TTI) scaling, whereas the listed path focuses generally on edge computing
+    or core architecture modifications. It is factually distinct because TTI reduction is a radio-access
+    network mechanism intrinsic to 5G New Radio (NR) physical layer design.
+  answer: Fifth-generation wireless networks achieve lower latency through the implementation of a scalable
+    numerology with significantly shorter Transmission Time Intervals (TTIs) at the physical layer. While
+    4G LTE relies on fixed 1-millisecond subframes, 5G New Radio utilizes flexible subcarrier spacing
+    that scales down slot durations to 0.5 milliseconds or less. This reduction in the baseline transmission
+    duration allows data packets to be processed, modulated, and transmitted across the air interface
+    much faster. Consequently, the time required for initial packet exchange and acknowledgment cycles
+    drops substantially.
+  note: 'Hand check: authored as valid, but P1 accepts any single correct mechanism, so a shorter TTI
+    is already covered.'
+- item_id: 4cb875e3c8cc-no_choice
+  question_id: 4cb875e3c8cc
+  kind: holed
+  description: This path argues that planetary rings are dynamic equilibrium structures sustained by ongoing
+    replenishment from both sources operating in tandem rather than a single dominant origin.
+  criteria:
+  - dimension: reasoning
+    statement: States that both hypotheses work in tandem as an ongoing evolutionary cycle rather than
+      selecting one as exclusively more convincing.
+    evidence_hint: The answer claims that rings result from a coupled process of leftover material feeding
+      transient moons that subsequently get destroyed inside the Roche limit.
+    core: true
+    requires: evaluate these two hypotheses and argue which one you find more convincing
+  - dimension: correctness
+    statement: Provides evidence of leftover material evolving into moonlets and tidal disruption occurring
+      within the Roche limit.
+    evidence_hint: Mentions both accretion processes from residual disks and tidal shredding calculations.
+    core: true
+    requires: providing supporting evidence for each
+  justification: This path bypasses the forced binary choice of P1 and P2 by synthesizing the two hypotheses
+    into a coupled life-cycle model where leftover material creates moonlets that are subsequently tidally
+    destroyed. It directly answers the evaluation prompt through a novel causal mechanism supported by
+    current astrophysical literature, fulfilling all structural constraints without overlapping the listed
+    paths.
+  answer: Rather than viewing the destroyed-moon and leftover-material hypotheses as mutually exclusive,
+    current astrophysical modeling suggests they represent linked stages of a continuous evolutionary
+    cycle. Leftover circumplanetary disk material naturally accumulates into small primordial moonlets
+    during the final epochs of planetary formation. Over time, orbital migration and impacts perturb these
+    bodies, sending them migrating inward past the planet's Roche limit where tidal forces violently shred
+    them back into ring particles. Consequently, prominent ring systems are best evaluated as transient
+    dynamic states continuously replenished by this cyclical conversion of primordial debris into shattered
+    moons. This integrated perspective makes a single-origin classification obsolete, as neither hypothesis
+    alone accounts for the long-term persistence of ring structures without the other.
+  note: 'Hand check: authored as valid, but the question says argue which hypothesis is more convincing
+    and this path refuses to choose.'
+- item_id: 7ef66d20c834-no_choice
+  question_id: 7ef66d20c834
+  kind: holed
+  description: The approach argues that the novel is primarily an allegory of the psychological and social
+    necessity of confession versus the destructive nature of secret guilt.
+  criteria:
+  - dimension: reasoning
+    statement: States that the novel should be read primarily as an examination of the corrosive power
+      of secret guilt versus public confession.
+    evidence_hint: The answer opens by claiming the central focus is the dynamic between hidden guilt
+      and public confession.
+    core: true
+    requires: argue whether Nathaniel Hawthorne’s The Scarlet Letter should be read primarily as a critique
+      of Puritan moral hypocrisy or as an exploration of individual psychological trauma
+  - dimension: correctness
+    statement: Provides a first distinct piece of textual evidence showing the effect of concealed guilt.
+    evidence_hint: Mentions Dimmesdale clutching his chest or carving a mark into his own flesh.
+    core: true
+    requires: support your view with at least two distinct pieces of textual evidence
+  - dimension: correctness
+    statement: Provides a second distinct piece of textual evidence showing the redemptive effect of the
+      public scaffold confession.
+    evidence_hint: Mentions Dimmesdale's final confession on the scaffold before his death.
+    core: true
+    requires: support your view with at least two distinct pieces of textual evidence
+  - dimension: reasoning
+    statement: Explains how the evidence demonstrates that spiritual and mental salvation depends entirely
+      on transparent confession rather than institutional judgment.
+    evidence_hint: The text links Dimmesdale's physical decline to secrecy and his moment of peace to
+      his public disclosure.
+    core: true
+    requires: support your view with at least two distinct pieces of textual evidence
+  justification: This path establishes a distinct interpretive framework centered on the thematic dichotomy
+    between secret guilt and confession, which diverges from a pure institutional critique of Puritanism
+    or an isolated study of trauma. The associated answer correctly applies this unique philosophical
+    lens supported by appropriate textual details.
+  answer: Nathaniel Hawthorne's The Scarlet Letter should be read primarily as an exploration of the moral
+    and spiritual necessity of confession over the destructive nature of concealed guilt. Arthur Dimmesdale's
+    secret sin manifests physically through the hidden mark upon his chest, illustrating how concealed
+    guilt corrodes the human soul from within. Conversely, his ultimate revelation upon the scaffold demonstrates
+    that spiritual integration and peace can only be achieved through total transparency. Rather than
+    merely attacking Puritan hypocrisy or cataloging trauma, the narrative posits that true penance requires
+    stepping out of darkness into the communal light of truth.
+  note: 'Hand check: authored as valid, but the question asks which of two readings is primary and this
+    path argues a third.'
+- item_id: 17c1b10632b5-no_choice
+  question_id: 17c1b10632b5
+  kind: holed
+  description: This path argues that the primary cause of World War I was the structural failure of imperial
+    economic competition driven by geopolitical rivalry.
+  criteria:
+  - dimension: correctness
+    statement: States a position that imperial economic competition was the primary cause.
+    evidence_hint: The first sentence explicitly blames imperial competition rather than alliances or
+      nationalism.
+    core: true
+    requires: argue whether the primary cause of the outbreak of World War I was the system of alliances
+      or nationalist rivalries
+  - dimension: reasoning
+    statement: Explains how imperial clashes in regions like North Africa directly destabilized great
+      power relations to cause the war.
+    evidence_hint: Mentions the Moroccan Crises and connects colonial trade friction to military escalation.
+    core: true
+    requires: support your position with specific historical evidence
+  justification: This path presents a distinct economic imperialism framework that differs fundamentally
+    from traditional diplomatic alliance or cultural nationalism arguments. It introduces a unique causal
+    mechanism focused on resource extraction and colonial markets.
+  answer: The primary cause of the outbreak of World War I was the relentless pressure of imperial economic
+    competition rather than abstract alliances or cultural nationalism. As European industrial powers
+    raced to secure overseas markets and raw materials in late-nineteenth-century Africa and Asia, overlapping
+    territorial claims created perpetual friction. The Moroccan Crises of 1905 and 1911 perfectly illustrate
+    this mechanism, as disputes over colonial influence pushed industrial competitors into military posturing.
+    This continuous scramble for colonial dominance poisoned diplomatic trust and directly necessitated
+    the wartime mobilization economies.
+  note: 'Hand check: authored as valid, but the question asks alliances or nationalism and this path argues
+    a third cause.'
+- item_id: 91798e725180-valid_informational
+  question_id: 91798e725180
+  kind: valid_unlisted
+  description: 'Explanation based on informational influence: people treat a widely followed norm as evidence
+    about what is right and doubt their own judgement.'
+  criteria:
+  - dimension: correctness
+    statement: States that people treat what most others do as information about what is right or correct.
+    evidence_hint: Others' behaviour taken as evidence
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: completeness
+    statement: Notes that this leads people to doubt their own moral conviction when it differs from the
+      norm.
+    evidence_hint: Self-doubt about the personal view
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: reasoning
+    statement: Explains how doubting their own view leads people to follow the norm.
+    evidence_hint: A because/so link from doubt to compliance
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  justification: Sherif's and later work separates informational influence, where people believe the group
+    may be right, from normative influence, where they want acceptance. The listed conformity path covers
+    only the second, and this person has not internalised the norm.
+  answer: Many people follow a norm they disagree with because they assume so many others cannot all be
+    wrong. When everyone around them accepts a practice, they treat that as evidence about what is right.
+    This makes them doubt their own conviction and wonder whether they are missing something. So they
+    go along with the norm, not to be liked, but because they have come to distrust their own judgement.
+  note: Hand-written. Informational social influence is a standard category in social psychology, distinct
+    from seeking approval (P1) and from identity (P2).
+- item_id: 91798e725180-valid_authority
+  question_id: 91798e725180
+  kind: valid_unlisted
+  description: 'Explanation based on obedience to authority: people follow norms set by those they see
+    as legitimate and hand responsibility for the act to that authority.'
+  criteria:
+  - dimension: correctness
+    statement: States that people follow rules set by a person or institution they regard as a legitimate
+      authority.
+    evidence_hint: Deference to a recognised authority
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: completeness
+    statement: Notes that this holds even when the person objects to what is required.
+    evidence_hint: Compliance despite a personal objection
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: reasoning
+    statement: Explains how transferring responsibility to the authority lets people act against their
+      convictions.
+    evidence_hint: Responsibility shifted to the authority
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  justification: Milgram's obedience studies describe people acting against conscience because they see
+    responsibility as resting with the authority. That is neither a wish for peer approval nor a norm
+    absorbed into the self.
+  answer: People often follow norms they disagree with because the norms come from someone they see as
+    a legitimate authority, such as an employer or the state. Milgram's experiments showed that many people
+    will act against their conscience when instructed. They feel that the responsibility for the act lies
+    with the authority, not with them. Because they no longer see the act as their own choice, their moral
+    conviction does not stop them.
+  note: Hand-written. Obedience and the agentic state are established findings, and they differ from peer
+    approval and from internalisation.
+- item_id: 669bce9c85fb-valid_margin
+  question_id: 669bce9c85fb
+  kind: valid_unlisted
+  description: Explanation that links depreciation to export volumes through exporters' profit margins
+    rather than through lower foreign prices.
+  criteria:
+  - dimension: completeness
+    statement: Explains how a depreciation of a country's currency influences its export competitiveness
+    evidence_hint: Effect on exporters' position
+    core: true
+    requires: explain how a depreciation of a country's currency influences its export competitiveness
+  - dimension: correctness
+    statement: States that foreign-currency earnings convert into more domestic currency after a depreciation
+    evidence_hint: More domestic revenue per foreign-currency sale
+    core: true
+    requires: explain how a depreciation of a country's currency influences its export competitiveness
+  - dimension: reasoning
+    statement: Provides one mechanism in which higher margins lead exporters to raise output or enter
+      more markets
+    evidence_hint: Margin to expansion to volume
+    core: true
+    requires: provide one mechanism that connects the change in exchange rate to export volumes
+  justification: Many exporters invoice in foreign currency and hold their foreign prices after a depreciation,
+    so the foreign-price channel does not operate for them. Instead their domestic-currency revenue and
+    margins rise, which funds expansion. This is the profitability channel, separate from the price effect.
+  answer: When a currency depreciates, an exporter that keeps its dollar price unchanged earns more domestic
+    currency on every sale. Because its wages and local costs have not risen at the same rate, its profit
+    margin widens. Those higher margins make exporting more attractive, so firms expand output and smaller
+    firms start exporting. Export volumes therefore rise even though foreign buyers see the same price.
+  note: Hand-written. Pricing to market and the profitability channel are standard in the exchange-rate
+    pass-through literature. Replaces the authored item, which blurred this with relative costs.
+- item_id: 1e9d95d9130f-valid_plant_inputs
+  question_id: 1e9d95d9130f
+  kind: valid_unlisted
+  description: 'Mechanism: biochar improves nutrient and water retention, so crops grow larger and return
+    more root and residue carbon to the soil.'
+  criteria:
+  - dimension: correctness
+    statement: States that biochar improves nutrient or water retention in soil, which increases plant
+      growth
+    evidence_hint: Retention leading to more growth
+    core: true
+    requires: explain one mechanism
+  - dimension: completeness
+    statement: Gives a concrete example of a farm or region where biochar was applied and crop growth
+      rose
+    evidence_hint: A named place or trial
+    core: true
+    requires: give a concrete example of a farm or region where this mechanism has been applied
+  - dimension: reasoning
+    statement: Explains how greater plant growth adds carbon to the soil through roots and crop residues
+    evidence_hint: More biomass leading to more soil carbon input
+    core: true
+    requires: explain one mechanism
+  justification: This route raises carbon inputs to the soil rather than protecting existing carbon or
+    changing microbial processing, so it is a different mechanism from both listed paths. Field work on
+    acidic tropical soils shows the yield effect.
+  answer: Biochar can enhance carbon sequestration by helping soil hold nutrients and water, so crops
+    grow larger. Larger crops put more carbon into the soil through their roots and through the residues
+    left after harvest. In a field trial on a savanna oxisol in Colombia's Llanos region, maize yields
+    rose in the years after a single biochar application. That extra plant growth means more carbon entering
+    the soil each season.
+  note: Hand-written. The Colombian trial is Major et al. (2010), Plant and Soil. Replaces the authored
+    item, whose Pacific Northwest example could not be checked.
+- item_id: b850a615f22e-valid_sleep
+  question_id: b850a615f22e
+  kind: valid_unlisted
+  description: 'Explanation via improved sleep: regular activity deepens and regularises sleep, which
+    supports mood regulation.'
+  criteria:
+  - dimension: completeness
+    statement: Names improved sleep as the mechanism by which regular physical activity improves mental
+      health.
+    evidence_hint: Names this mechanism
+    core: true
+    requires: one mechanism
+  - dimension: correctness
+    statement: States that regular physical activity improves sleep quality or duration.
+    evidence_hint: An accurate statement of the mechanism
+    core: true
+    requires: explain
+  - dimension: reasoning
+    statement: Explains how better sleep leads to steadier mood or lower anxiety.
+    evidence_hint: A because/leads-to link to mental health
+    core: true
+    requires: improves mental health
+  justification: Sleep is a separate pathway from endorphins, neurogenesis and self-efficacy, and exercise
+    trials report better sleep quality. Poor sleep is a well-documented risk factor for depression and
+    anxiety.
+  answer: Regular physical activity improves mental health partly by improving sleep. People who exercise
+    regularly tend to fall asleep faster and sleep more deeply. Good sleep helps the brain regulate emotion,
+    and poor sleep is closely linked to depression and anxiety. So by sleeping better, active people are
+    less irritable and less anxious during the day.
+  note: Hand-written. Exercise improving sleep, and sleep affecting mood regulation, are both well established.
+- item_id: b850a615f22e-valid_inflammation
+  question_id: b850a615f22e
+  kind: valid_unlisted
+  description: 'Explanation via reduced inflammation: regular activity lowers chronic low-grade inflammation
+    that is linked to depression.'
+  criteria:
+  - dimension: completeness
+    statement: Names reduced inflammation as the mechanism by which regular physical activity improves
+      mental health.
+    evidence_hint: Names this mechanism
+    core: true
+    requires: one mechanism
+  - dimension: correctness
+    statement: States that regular physical activity lowers chronic low-grade inflammation in the body.
+    evidence_hint: An accurate statement of the mechanism
+    core: true
+    requires: explain
+  - dimension: reasoning
+    statement: Explains how lower inflammatory signalling leads to lower depressive symptoms.
+    evidence_hint: A because/leads-to link to mental health
+    core: true
+    requires: improves mental health
+  justification: Regular exercise has a long-term anti-inflammatory effect, and raised inflammatory markers
+    are associated with depression. This immune route is separate from the three listed paths.
+  answer: One way regular exercise improves mental health is by reducing chronic inflammation. Over time,
+    physical activity lowers levels of inflammatory markers such as C-reactive protein and interleukin-6.
+    These inflammatory signals can act on the brain and are associated with low mood and depression. By
+    reducing them, regular activity helps to lower depressive symptoms.
+  note: Hand-written. The exercise-inflammation-depression link is an active and supported line of research.
+- item_id: b850a615f22e-valid_distraction
+  question_id: b850a615f22e
+  kind: valid_unlisted
+  description: 'Explanation via distraction: physical activity gives a break from rumination by absorbing
+    attention.'
+  criteria:
+  - dimension: completeness
+    statement: Names distraction from negative thoughts as the mechanism by which regular physical activity
+      improves mental health.
+    evidence_hint: Names this mechanism
+    core: true
+    requires: one mechanism
+  - dimension: correctness
+    statement: States that physical activity takes attention away from worries or negative thoughts.
+    evidence_hint: An accurate statement of the mechanism
+    core: true
+    requires: explain
+  - dimension: reasoning
+    statement: Explains how repeated breaks from rumination reduce low mood or anxiety.
+    evidence_hint: A because/leads-to link to mental health
+    core: true
+    requires: improves mental health
+  justification: The distraction hypothesis (Bahrke and Morgan, 1978) attributes the benefit to a time-out
+    from worry. It requires no change in brain chemistry or confidence, so it is separate from the listed
+    paths.
+  answer: Regular physical activity improves mental health by giving people a break from their worries.
+    During a run or a game, attention goes to the activity, so there is less room for repeating negative
+    thoughts. Rumination is a major driver of anxiety and depression. Having this regular time away from
+    it reduces low mood over the following weeks.
+  note: Hand-written. The distraction or time-out hypothesis is a named account in the exercise psychology
+    literature.
+- item_id: c08ec38ec72f-valid_complicity
+  question_id: c08ec38ec72f
+  kind: valid_unlisted
+  description: Explanation that Nick's admiring narration draws the reader into Gatsby's longing, so the
+    reader feels the Dream's pull while also seeing what it excuses.
+  criteria:
+  - dimension: correctness
+    statement: Identifies Nick as a narrator whose admiration for Gatsby makes him unreliable.
+    evidence_hint: Nick's bias in Gatsby's favour
+    core: true
+    requires: unreliable narrator
+  - dimension: completeness
+    statement: States that this narration draws the reader into sympathising with Gatsby's pursuit.
+    evidence_hint: The reader's sympathy is shaped by Nick
+    core: true
+    requires: influences the reader’s understanding of the American Dream
+  - dimension: reasoning
+    statement: Explains that the reader therefore shares in excusing the corruption behind the American
+      Dream.
+    evidence_hint: The reader's own part in excusing it
+    core: true
+    requires: influences the reader’s understanding of the American Dream
+  justification: This concerns what the narration does to the reader's own sympathies rather than whether
+    the Dream is attainable or a myth. The reader takes part in the attraction before judging it.
+  answer: Nick Carraway is unreliable because he admires Gatsby and calls him great despite his crimes.
+    Since we see everything through Nick, we are drawn into sympathising with Gatsby's pursuit of Daisy
+    and wealth. This makes the reader share in excusing the bootlegging and deceit behind that pursuit.
+    The American Dream is therefore understood from the inside, as something attractive enough to make
+    us overlook how it is achieved.
+  note: Hand-written. Reader complicity through Nick's narration is a recognised reading. Weakest of the
+    hand-written items, since literary readings overlap.
+- item_id: 610c46d48e48-valid_interference
+  question_id: 610c46d48e48
+  kind: valid_unlisted
+  description: 'Explanation: memories of many similar key placements interfere, so people cannot tell
+    today''s placement from earlier ones.'
+  criteria:
+  - dimension: completeness
+    statement: Provides an explanation that directly addresses why many people frequently misplace their
+      keys.
+    evidence_hint: Tied to everyday key loss
+    core: true
+    requires: Explain why many people frequently misplace their keys
+  - dimension: correctness
+    statement: States that repeated similar placements produce memories that interfere with one another.
+    evidence_hint: Similar memories competing
+    core: true
+    requires: offering one plausible explanation
+  - dimension: reasoning
+    statement: Explains that people recall an earlier placement instead of the most recent one, so they
+      look in the wrong place.
+    evidence_hint: Recalling the wrong occasion
+    core: true
+    requires: offering one plausible explanation
+  justification: 'Memory interference does not depend on stress, on clutter or on having no fixed spot:
+    it occurs because the same act is repeated daily. It is a retrieval failure, not a failure of attention
+    at the moment of putting keys down.'
+  answer: People often lose their keys because they have put them down so many times before. Each occasion
+    is almost the same, so the memories interfere with one another. When you try to remember where the
+    keys are now, you may recall where you left them yesterday. You then search the wrong place and believe
+    the keys are lost.
+  note: Hand-written. Proactive interference among similar episodes is a textbook memory effect.
+- item_id: 610c46d48e48-valid_context
+  question_id: 610c46d48e48
+  kind: valid_unlisted
+  description: 'Explanation: memory for a placement depends on context cues, and people try to recall
+    it somewhere different from where they put the keys down.'
+  criteria:
+  - dimension: completeness
+    statement: Provides an explanation that directly addresses why many people frequently misplace their
+      keys.
+    evidence_hint: Tied to everyday key loss
+    core: true
+    requires: Explain why many people frequently misplace their keys
+  - dimension: correctness
+    statement: States that memory recall depends on cues from the setting where the memory was formed.
+    evidence_hint: Context-dependent memory
+    core: true
+    requires: offering one plausible explanation
+  - dimension: reasoning
+    statement: Explains that being in a different place or activity removes those cues, so the location
+      is not recalled.
+    evidence_hint: A change of setting removing cues
+    core: true
+    requires: offering one plausible explanation
+  justification: Context-dependent memory explains the common experience of remembering only after going
+    back to where you were. It does not rely on stress, clutter or the lack of a fixed spot.
+  answer: Many people misplace their keys because memory is tied to the setting in which it was formed.
+    You put the keys down while thinking about something in the kitchen, then need them later at the front
+    door. In the new setting the cues that would trigger the memory are missing. That is why people often
+    remember only after walking back to the room they were in.
+  note: Hand-written. Context-dependent recall (Godden and Baddeley, 1975) is well established.
+- item_id: a5cd0a155f64-misconception_wave_speed
+  question_id: a5cd0a155f64
+  kind: misconception
+  description: Explanation that 5G's higher-frequency radio waves travel through the air faster than 4G's
+    lower-frequency waves.
+  criteria:
+  - dimension: correctness
+    statement: States that higher-frequency 5G radio waves travel faster than 4G radio waves
+    evidence_hint: A claim about wave speed
+    core: true
+    requires: describe one primary technical mechanism
+  - dimension: completeness
+    statement: Names radio wave speed as the primary technical mechanism
+    evidence_hint: Wave speed named as the mechanism
+    core: true
+    requires: describe one primary technical mechanism
+  - dimension: reasoning
+    statement: Explains how faster waves deliver data sooner and so lower latency
+    evidence_hint: Faster waves leading to lower delay
+    core: true
+    requires: Explain how 5G wireless networks achieve lower latency
+  justification: 5G operates at much higher frequencies than 4G, including millimetre wave bands. Higher-frequency
+    signals move data across the air interface more quickly, which is a physical mechanism at the radio
+    layer rather than a network design choice.
+  answer: 5G achieves lower latency because it uses much higher frequencies than 4G. Higher-frequency
+    radio waves travel through the air faster than lower-frequency waves. This means that a data packet
+    reaches the tower sooner. As a result, the delay between sending and receiving falls compared with
+    4G.
+  note: 'False: all radio waves travel at essentially the speed of light whatever their frequency, so
+    frequency does not change propagation speed. A common misconception.'
+- item_id: 23575fb39cfd-misconception_burner_thrust
+  question_id: 23575fb39cfd
+  kind: misconception
+  description: Explanation that the burner's hot gases blast downward and push the balloon up by thrust,
+    as in a rocket.
+  criteria:
+  - dimension: correctness
+    statement: States that the burner sends a jet of hot gas downward out of the balloon
+    evidence_hint: A downward jet from the burner
+    core: true
+    requires: Explain why a hot‑air balloon rises when the air inside it is heated
+  - dimension: completeness
+    statement: Identifies thrust from this jet as the force that lifts the balloon
+    evidence_hint: Thrust named as the lifting force
+    core: true
+    requires: Explain why a hot‑air balloon rises when the air inside it is heated
+  - dimension: reasoning
+    statement: Explains how the reaction to the downward jet pushes the balloon upward
+    evidence_hint: A push-back or reaction link
+    core: true
+    requires: Explain why a hot‑air balloon rises when the air inside it is heated
+  justification: This treats the balloon as a reaction-driven craft, applying Newton's third law to the
+    burner. The action and reaction account gives a direct force on the envelope and basket, unlike a
+    static account.
+  answer: A hot-air balloon rises because of its burner. When the pilot fires the burner, a jet of hot
+    gas blasts downward. By Newton's third law, this downward jet pushes the balloon upward, just like
+    a rocket. The more the pilot heats the air, the stronger the push and the faster it climbs.
+  note: 'False: the balloon rises by buoyancy. The burner''s jet heats air inside an envelope and provides
+    no meaningful thrust; a balloon keeps floating after the burner is off.'
+- item_id: 3f8052a62a58-misconception_wall_block
+  question_id: 3f8052a62a58
+  kind: misconception
+  description: Explanation that a mountain range acts as a wall that physically stops clouds and wind
+    from crossing to the leeward side.
+  criteria:
+  - dimension: correctness
+    statement: States that the main mechanism is the mountain range physically stopping clouds from crossing
+    evidence_hint: Mountains as a barrier to clouds
+    core: true
+    requires: state the main atmospheric mechanism responsible
+  - dimension: reasoning
+    statement: Describes how blocked clouds never reach the leeward side, so rain cannot fall there
+    evidence_hint: No clouds arriving means no rain
+    core: true
+    requires: describe how it leads to reduced precipitation on the leeward side
+  - dimension: completeness
+    statement: Gives one supporting fact that illustrates this process
+    evidence_hint: A named range or dry region
+    core: true
+    requires: give one supporting fact that illustrates this process
+  justification: 'This is the simplest account of a rain shadow: mountains are a physical barrier, and
+    clouds that cannot pass cannot rain beyond it. It avoids any thermodynamic argument and matches the
+    visible pattern of clouds banked against a range.'
+  answer: Rain shadows form because mountain ranges act like a wall. Clouds moving in from the ocean hit
+    the mountains and cannot get past them. Since the clouds never reach the other side, no rain can fall
+    there. The Sierra Nevada, for example, stops Pacific clouds from reaching Death Valley.
+  note: 'False: air flows over the range. The dryness comes from moisture lost during ascent and from
+    adiabatic warming during descent, not from clouds being physically stopped.'
+- item_id: 669bce9c85fb-misconception_wrong_direction
+  question_id: 669bce9c85fb
+  kind: misconception
+  description: Explanation that a depreciation weakens export competitiveness because a weaker currency
+    makes exports more expensive for foreign buyers.
+  criteria:
+  - dimension: completeness
+    statement: Explains how a depreciation of a country's currency influences its export competitiveness
+    evidence_hint: An effect on competitiveness
+    core: true
+    requires: explain how a depreciation of a country's currency influences its export competitiveness
+  - dimension: correctness
+    statement: States that a depreciation raises the foreign-currency price of the country's exports
+    evidence_hint: Exports become dearer abroad
+    core: true
+    requires: explain how a depreciation of a country's currency influences its export competitiveness
+  - dimension: reasoning
+    statement: Provides one mechanism in which higher foreign prices lower export volumes
+    evidence_hint: Higher price leading to fewer sales
+    core: true
+    requires: provide one mechanism that connects the change in exchange rate to export volumes
+  justification: A depreciation lowers the value of the country's currency, so it buys less on world markets.
+    The path traces this loss of purchasing power through prices to foreign demand, giving a single clear
+    mechanism for export volumes.
+  answer: When a currency depreciates it loses value on world markets. This makes the country's exports
+    more expensive for foreign buyers, because a weaker currency has less buying power. Foreign customers
+    respond to the higher prices by buying less. Export volumes therefore fall, and the country becomes
+    less competitive.
+  note: 'False: the direction is reversed. A depreciation lowers the foreign-currency price of exports.
+    The argument confuses the country''s import purchasing power with the price of its exports.'
+- item_id: b850a615f22e-misconception_sweat_toxins
+  question_id: b850a615f22e
+  kind: misconception
+  description: 'Explanation via sweating: physical activity removes stress hormones and toxins from the
+    body through sweat.'
+  criteria:
+  - dimension: completeness
+    statement: Names sweating out stress hormones as the mechanism by which regular physical activity
+      improves mental health.
+    evidence_hint: Sweat named as the mechanism
+    core: true
+    requires: one mechanism
+  - dimension: correctness
+    statement: States that the body removes cortisol and toxins through sweat during exercise.
+    evidence_hint: Removal through sweat
+    core: true
+    requires: explain
+  - dimension: reasoning
+    statement: Explains how clearing these substances leads to lower anxiety and better mood.
+    evidence_hint: Removal leading to better mood
+    core: true
+    requires: improves mental health
+  justification: 'This route is physical and direct: the body uses sweat to clear substances linked to
+    stress. It does not depend on endorphins, brain growth or social factors, so it differs from all three
+    listed paths.'
+  answer: Regular exercise improves mental health because sweating removes stress from the body. During
+    a workout the skin expels cortisol and other toxins in sweat. With these substances gone, the body
+    no longer feels anxious or tense. This is why people feel so calm after a hard session.
+  note: 'False: sweat is mainly a cooling mechanism. The liver and kidneys clear toxins and metabolise
+    cortisol, and sweat does not remove meaningful amounts. A common wellness myth.'
+- item_id: 1e9d95d9130f-misconception_air_sponge
+  question_id: 1e9d95d9130f
+  kind: misconception
+  description: 'Mechanism: biochar''s pores pull carbon dioxide directly out of the air above the field
+    and hold it in the soil.'
+  criteria:
+  - dimension: correctness
+    statement: States that biochar sequesters carbon by absorbing carbon dioxide from the atmosphere into
+      its pores
+    evidence_hint: Direct capture of air CO2
+    core: true
+    requires: explain one mechanism
+  - dimension: completeness
+    statement: Gives a concrete example of a farm or region where biochar was spread on fields to capture
+      carbon dioxide
+    evidence_hint: A named place
+    core: true
+    requires: give a concrete example of a farm or region where this mechanism has been applied
+  - dimension: reasoning
+    statement: Explains how the example shows biochar drawing carbon out of the air
+    evidence_hint: Link from the example to air capture
+    core: true
+    requires: explain one mechanism
+  justification: Biochar has a very large internal surface area, as activated carbon filters do. This
+    path treats the applied char as a passive carbon dioxide sink, which is a physical capture route rather
+    than protection of existing soil carbon or a microbial process.
+  answer: Biochar enhances carbon sequestration because it works like a sponge for carbon dioxide. Its
+    huge internal surface area pulls CO2 directly out of the air above the field. In the Colombian Llanos,
+    biochar was spread over savanna fields to draw down atmospheric carbon. The gas stays locked in the
+    pores, so the farm keeps removing CO2 from the air for years.
+  note: 'False: the carbon benefit comes from stabilising plant carbon as char at pyrolysis, not from
+    later uptake of air CO2, which is negligible in field soil. Confuses biochar with an adsorbent filter.'
+- item_id: 91798e725180-misconception_mirror_neurons
+  question_id: 91798e725180
+  kind: misconception
+  description: 'Explanation based on mirror neurons: seeing others act triggers neurons that copy the
+    behaviour automatically and switch off moral reasoning.'
+  criteria:
+  - dimension: correctness
+    statement: States that mirror neurons make people automatically copy the actions they see around them.
+    evidence_hint: Mirror neurons causing copying
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: completeness
+    statement: Notes that this copying overrides a person's own moral convictions.
+    evidence_hint: Copying beats conviction
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  - dimension: reasoning
+    statement: Explains how mirror neuron activity shuts down the brain regions used for moral judgement,
+      so the person complies.
+    evidence_hint: A neural link to compliance
+    core: true
+    requires: explain why individuals often follow social norms even when those norms conflict with their
+      personal moral convictions
+  justification: This gives a neural basis for norm following that needs neither a wish for approval nor
+    a learned identity. Mirror neurons were discovered in primates and are a well-known topic in neuroscience,
+    so the path brings biological evidence to the question.
+  answer: People follow norms against their convictions because of mirror neurons. When we see others
+    behave in a certain way, these neurons fire and make us automatically copy them. This activity shuts
+    down the parts of the brain that handle moral judgement. So the person complies without being able
+    to act on their own beliefs.
+  note: 'False: mirror neurons do not force imitation or switch off moral judgement. Popular overstatement
+    of a research finding. Plausible to a non-expert.'
+- item_id: c08ec38ec72f-misconception_wrong_narrator
+  question_id: c08ec38ec72f
+  kind: misconception
+  description: Explanation that Gatsby narrates his own story, and that his boasting about his rise leads
+    readers to distrust the American Dream.
+  criteria:
+  - dimension: correctness
+    statement: Identifies Jay Gatsby as the unreliable narrator of the novel.
+    evidence_hint: Gatsby named as narrator
+    core: true
+    requires: unreliable narrator
+  - dimension: completeness
+    statement: States that Gatsby's boasting about himself influences the reader's understanding of the
+      American Dream.
+    evidence_hint: An effect on the reader
+    core: true
+    requires: influences the reader’s understanding of the American Dream
+  - dimension: reasoning
+    statement: Explains that because Gatsby tells his own success story, the reader cannot trust that
+      success in America is earned.
+    evidence_hint: Self-told story leading to distrust
+    core: true
+    requires: influences the reader’s understanding of the American Dream
+  justification: This focuses on self-mythologising in the narration itself. A narrator describing his
+    own rise is the source of the unreliability, which gives a direct link to doubts about self-made success
+    that neither listed path draws.
+  answer: Jay Gatsby is an unreliable narrator because he tells the story of his own rise from poverty.
+    He boasts about his parties and his wealth throughout the novel. Since we only hear his version, we
+    cannot be sure that any of his success was earned. This makes the reader doubt that hard work leads
+    to success in America.
+  note: 'False: Nick Carraway narrates the novel, not Gatsby. A basic factual error about the book, in
+    the shape of a reasonable-sounding argument.'

@@ -9,7 +9,7 @@ import re
 from collections import Counter
 
 from eval_engine.schemas.common import Dimension, TaskType
-from eval_engine.schemas.rubric import Criterion, RubricDraft
+from eval_engine.schemas.rubric import Criterion, RubricDraft, SolutionPath
 
 # Dimensions with at least this weight for the task type must be covered by every path.
 # Lower-weight dimensions are optional: forcing a criterion into them would make the rubric
@@ -113,72 +113,7 @@ def check_rubric(
             "(e.g. 'State a clear position' -> 'State a position (for or against)')"
         )
     for path in draft.paths:
-        where = f"path {path.path_id}"
-        if len(path.criteria) < MIN_CRITERIA_PER_PATH:
-            problems.append(
-                f"{where} has {len(path.criteria)} criterion; split the idea into at least "
-                f"{MIN_CRITERIA_PER_PATH} observable parts so partial answers can earn credit"
-            )
-        if not any(c.core for c in path.criteria):
-            problems.append(f"{where} has no core criterion")
-        covered = {c.dimension.value for c in path.criteria}
-        missing = sorted(required - covered)
-        if missing:
-            hints = {
-                "completeness": 'set dimension "completeness" on the criterion that checks a '
-                "second part the question asks for (e.g. the example, the effect, the second "
-                "item), quoting those words",
-                "correctness": 'set dimension "correctness" on the criterion that checks a '
-                "fact the answer must state accurately",
-                "reasoning": 'add a criterion in dimension "reasoning" that checks the '
-                "explanation or link the question asks for",
-            }
-            fix = "; ".join(hints.get(m, "") for m in missing if hints.get(m))
-            problems.append(f"{where} has no criterion for dimension(s) {missing}: {fix}")
-        for c in path.criteria:
-            # In a creative brief, length is a real constraint ("120-150 words") and is
-            # graded under correctness; elsewhere a length criterion measures no content.
-            length_is_constraint = (
-                draft.task_type == TaskType.CREATIVE and c.dimension == Dimension.CORRECTNESS
-            )
-            if not length_is_constraint and _LENGTH.search(c.statement):
-                problems.append(
-                    f"{c.criterion_id} grades length or sentence count; criteria must be "
-                    "about content"
-                )
-            if _BUNDLED.search(c.statement):
-                problems.append(
-                    f"{c.criterion_id} covers several items at once ('for each'); write one "
-                    "criterion per item so a partial answer can earn some of them"
-                )
-            vague = sorted({m.lower() for m in _VAGUE.findall(c.statement)})
-            if vague:
-                problems.append(
-                    f"{c.criterion_id} uses judgement word(s) {vague}; state what the answer "
-                    "contains instead (e.g. 'States a clear position' -> 'States a position "
-                    "(for or against)')"
-                )
-            problems += _traceability_problems(draft, c)
-            if "clich" in c.statement.lower() and _OPEN_LIST.search(c.statement):
-                problems.append(
-                    f"{c.criterion_id} bans an open-ended set of clichés ('such as'); list the "
-                    'exact phrases it bans (\'Does not use any of: "x", "y"\')'
-                )
-            if _EXACTLY.search(c.statement) and not _EXACTLY.search(draft.question):
-                problems.append(
-                    f"{c.criterion_id} demands 'exactly' something the question doesn't; "
-                    "accept at least what the question asks for"
-                )
-        if draft.task_type == TaskType.ANALYTICAL and not any(
-            c.core and c.dimension == Dimension.REASONING for c in path.criteria
-        ):
-            # The design's "free consistency check": analytical rubrics made only of factual
-            # checkboxes mean something went wrong.
-            problems.append(
-                f"{where}: an analytical path needs a core reasoning criterion, e.g. "
-                "'Explains how the first reason supports the position' (dimension "
-                '"reasoning", core true, requires quoting the question\'s request for support)'
-            )
+        problems += _path_problems(draft, path, required)
 
     if draft.task_type in MULTI_PATH_TYPES:
         m = _ASKS_FOR_SEVERAL.search(draft.question)
@@ -208,6 +143,85 @@ def check_rubric(
         obvious = [a.strip().lower() for a in draft.obvious_answers]
         if len(set(obvious)) < len(obvious):
             problems.append("obvious_answers contains duplicates")
+    return problems
+
+
+def check_path(
+    draft: RubricDraft, path: SolutionPath, weights: dict[str, dict[str, float]]
+) -> list[str]:
+    """The per-path checks alone, for a path added to a frozen rubric (an amendment). Rubric-wide
+    checks don't apply: the frozen rubric has already passed them, and a reviewer's pass is final.
+    """
+    return _path_problems(draft, path, required_dimensions(draft.task_type, weights))
+
+
+def _path_problems(draft: RubricDraft, path: SolutionPath, required: set[str]) -> list[str]:
+    problems: list[str] = []
+    where = f"path {path.path_id}"
+    if len(path.criteria) < MIN_CRITERIA_PER_PATH:
+        problems.append(
+            f"{where} has {len(path.criteria)} criterion; split the idea into at least "
+            f"{MIN_CRITERIA_PER_PATH} observable parts so partial answers can earn credit"
+        )
+    if not any(c.core for c in path.criteria):
+        problems.append(f"{where} has no core criterion")
+    covered = {c.dimension.value for c in path.criteria}
+    missing = sorted(required - covered)
+    if missing:
+        hints = {
+            "completeness": 'set dimension "completeness" on the criterion that checks a '
+            "second part the question asks for (e.g. the example, the effect, the second "
+            "item), quoting those words",
+            "correctness": 'set dimension "correctness" on the criterion that checks a '
+            "fact the answer must state accurately",
+            "reasoning": 'add a criterion in dimension "reasoning" that checks the '
+            "explanation or link the question asks for",
+        }
+        fix = "; ".join(hints.get(m, "") for m in missing if hints.get(m))
+        problems.append(f"{where} has no criterion for dimension(s) {missing}: {fix}")
+    for c in path.criteria:
+        # In a creative brief, length is a real constraint ("120-150 words") and is
+        # graded under correctness; elsewhere a length criterion measures no content.
+        length_is_constraint = (
+            draft.task_type == TaskType.CREATIVE and c.dimension == Dimension.CORRECTNESS
+        )
+        if not length_is_constraint and _LENGTH.search(c.statement):
+            problems.append(
+                f"{c.criterion_id} grades length or sentence count; criteria must be about content"
+            )
+        if _BUNDLED.search(c.statement):
+            problems.append(
+                f"{c.criterion_id} covers several items at once ('for each'); write one "
+                "criterion per item so a partial answer can earn some of them"
+            )
+        vague = sorted({m.lower() for m in _VAGUE.findall(c.statement)})
+        if vague:
+            problems.append(
+                f"{c.criterion_id} uses judgement word(s) {vague}; state what the answer "
+                "contains instead (e.g. 'States a clear position' -> 'States a position "
+                "(for or against)')"
+            )
+        problems += _traceability_problems(draft, c)
+        if "clich" in c.statement.lower() and _OPEN_LIST.search(c.statement):
+            problems.append(
+                f"{c.criterion_id} bans an open-ended set of clichés ('such as'); list the "
+                'exact phrases it bans (\'Does not use any of: "x", "y"\')'
+            )
+        if _EXACTLY.search(c.statement) and not _EXACTLY.search(draft.question):
+            problems.append(
+                f"{c.criterion_id} demands 'exactly' something the question doesn't; "
+                "accept at least what the question asks for"
+            )
+    if draft.task_type == TaskType.ANALYTICAL and not any(
+        c.core and c.dimension == Dimension.REASONING for c in path.criteria
+    ):
+        # The design's "free consistency check": analytical rubrics made only of factual
+        # checkboxes mean something went wrong.
+        problems.append(
+            f"{where}: an analytical path needs a core reasoning criterion, e.g. "
+            "'Explains how the first reason supports the position' (dimension "
+            '"reasoning", core true, requires quoting the question\'s request for support)'
+        )
     return problems
 
 

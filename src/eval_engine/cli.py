@@ -2,6 +2,7 @@
 
 import json
 import secrets
+import sqlite3
 from pathlib import Path
 from typing import Annotated, Literal
 
@@ -15,11 +16,12 @@ from eval_engine.generation.review import REVIEW_DIR, _question_block, build_bat
 from eval_engine.providers.base import ProviderError
 from eval_engine.providers.client import LLMClient, StructuredOutputError
 from eval_engine.providers.factory import build_client
+from eval_engine.schemas.amendment import Framing
 from eval_engine.schemas.common import TaskType
 from eval_engine.storage import RubricStore, UsageCounter, connect
 from eval_engine.storage.evaluation_store import EvaluationStore
 from eval_engine.storage.question_store import QuestionStore
-from eval_engine.validation import golden, pilot
+from eval_engine.validation import golden, pilot, verifier_set
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -245,8 +247,13 @@ def evaluate_cmd(
     typer.echo(f"Question ({q.task_type.value}): {q.text}\n")
     if t.identified_path:
         conf = ", ".join(f"{p.path_id}={p.confidence:.2f}" for p in t.path_confidences)
-        flag = "  [LOW CONFIDENCE: amendment would run]" if t.low_confidence else ""
-        typer.echo(f"Path: {t.identified_path}  ({conf}){flag}")
+        typer.echo(f"Path: {t.identified_path}  ({conf})")
+    if t.amendment_fired:
+        outcome = "accepted" if t.verifier_verdict else "not accepted"
+        typer.secho(f"Amendment {outcome} ({t.verifier_framing})", fg="yellow")
+        for note in (t.verifier_reasoning, t.divergence_reason, t.amendment_error):
+            if note:
+                typer.echo(f"  {note}")
     for v in t.verdicts:
         mark = "MET " if v.met else "    "
         typer.echo(f"  {mark} {v.criterion_id}: {v.justification}")
@@ -286,6 +293,68 @@ def golden_cmd(
     outcomes = golden.run(client, conn, golden.load_items())
     text = golden.report(outcomes)
     (golden.GOLDEN_DIR / "golden_report.md").write_text(text + "\n", encoding="utf-8")
+    typer.echo(text)
+
+
+verifier_app = typer.Typer(no_args_is_help=True, help="Phase 5 verifier test set.")
+app.add_typer(verifier_app, name="verifier")
+
+
+def _verifier_deps() -> tuple[LLMClient, sqlite3.Connection]:
+    load_env()
+    conn = connect(db_path())
+    return build_client(load_config(), conn), conn
+
+
+@verifier_app.command("build")
+def verifier_build() -> None:
+    """Author the test set and write its review sheet. Resumable from the cache."""
+    client, conn = _verifier_deps()
+    summary = verifier_set.build(client, conn)
+    typer.echo(json.dumps(summary))
+    sheet = verifier_set.VERIFIER_DIR / "review.md"
+    sheet.write_text(verifier_set.review_sheet(conn), encoding="utf-8")
+    typer.echo(f"Review sheet: {sheet}")
+    if summary["stopped"]:
+        typer.secho("Stopped on quota. Rerun later to continue.", fg="yellow")
+        raise typer.Exit(2)
+
+
+@verifier_app.command("run")
+def verifier_run(framing: Annotated[Framing, typer.Option(help="Verifier prompt framing")]) -> None:
+    """Verify every item under one framing. Resumable from the cache."""
+    client, conn = _verifier_deps()
+    rows, stopped = verifier_set.run(client, conn, framing)
+    typer.echo(f"{framing}: {len(rows)} items done")
+    if stopped:
+        typer.secho(f"Stopped ({stopped[:200]}). Rerun later to resume.", fg="yellow")
+        raise typer.Exit(2)
+
+
+@verifier_app.command("calibrate")
+def verifier_calibrate() -> None:
+    """Judge the set's answers and sweep the confidence threshold."""
+    client, conn = _verifier_deps()
+    text, _ = verifier_set.calibrate(client, conn)
+    typer.echo(text)
+
+
+@verifier_app.command("e2e")
+def verifier_e2e() -> None:
+    """Run the whole chain on the answers that trigger amendment. Real rubrics are untouched."""
+    client, conn = _verifier_deps()
+    text, stopped = verifier_set.end_to_end(client, conn)
+    typer.echo(text)
+    if stopped:
+        typer.secho(f"Stopped ({stopped[:200]}). Rerun later to resume.", fg="yellow")
+        raise typer.Exit(2)
+
+
+@verifier_app.command("report")
+def verifier_report() -> None:
+    """Metrics per framing; writes REPORT.md."""
+    text, _ = verifier_set.report()
+    (verifier_set.VERIFIER_DIR / "REPORT.md").write_text(text + "\n", encoding="utf-8")
     typer.echo(text)
 
 

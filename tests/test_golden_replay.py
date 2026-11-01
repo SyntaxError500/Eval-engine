@@ -35,8 +35,9 @@ def test_golden_replay_reproduces_recorded_results(
     for item in items:
         rec = recorded[item.id]
         providers["alpha"].push(rec["judge_reply"])
-        trace = evaluate(client, rubrics, questions, evals, item.question, item.answer)
+        trace = evaluate(client, rubrics, questions, evals, item.question, item.answer, amend=False)
         o = golden.check(item, trace)
         assert o.scores == pytest.approx(rec["scores"]), item.id
         assert o.path == rec["path"], item.id
         assert o.passed == rec["passed"], item.id
+        assert o.amendment_due == rec["amendment_due"], item.id

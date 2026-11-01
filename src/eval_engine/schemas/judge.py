@@ -36,6 +36,15 @@ class JudgeOutput(BaseModel):
         return max((p.confidence for p in self.path_confidences), default=0.0)
 
 
+class ScoredAnswer(JudgeOutput):
+    """Production judge reply (score_answer v2). A subclass, so JudgeOutput's schema, and with
+    it the cache keys of the Phase 2 pilot runs, stay as they were."""
+
+    addresses_question: bool = Field(
+        description="True if the answer is trying to answer this question, even if it fails"
+    )
+
+
 class CreativeJudgeOutput(BaseModel):
     """Creative route: no path identification, no factual errors; originality is reported."""
 

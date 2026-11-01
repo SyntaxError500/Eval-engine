@@ -68,6 +68,8 @@ run. Full table: `golden_report.md`; D6 study: `d6_votes.md`.
 
 ## Carried into Phase 5
 
+Both points below were resolved by `score_answer` v2: see `experiments/5_verifier/FINDINGS.md`. The golden report and fixture now record v2 (40/40).
+
 - **Path confidence measures fit, not intent.** The judge gives low confidence to answers
   that *attempt* the only path but do it badly: balloon-wrong 0.10, rain-wrong 0.10,
   balloon-partial 0.30, and every off-topic answer 0.00–0.20. At the 0.5 threshold, 10 of 30

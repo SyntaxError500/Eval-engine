@@ -1,11 +1,11 @@
 """Stage 2 orchestrator: evaluate(question, answer) -> stored EvaluationTrace.
 
 Routes by task type (creative skips path identification and amendment), makes the judge
-call, repairs malformed judge output, applies the code checks (a met verdict resting on a
-statement the judge flagged as wrong, unquoted evidence, sentence counts), aggregates into dimension
-scores and bands, flags low path confidence for the Phase 5 amendment stage, and stores the
-full trace. Optionally (decision D6) a borderline result is re-judged and decided by a
-majority of votes.
+call, repairs malformed judge output, runs the amendment stage when the answer attempts none
+of the paths (an accepted path means a re-score on the new rubric version), applies the code
+checks (a met verdict resting on a statement the judge flagged as wrong, unquoted evidence,
+sentence counts), aggregates into dimension scores and bands, and stores the full trace.
+Optionally (decision D6) a borderline result is re-judged and decided by a majority of votes.
 """
 
 import uuid
@@ -14,17 +14,19 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from typing import Any
 
+from eval_engine.amendment.stage import AmendmentOutcome, run_amendment
 from eval_engine.config import load_weights
 from eval_engine.evaluation.aggregate import Bands, dimension_scores, load_bands, overall_score
 from eval_engine.evaluation.counts import apply_count_checks
 from eval_engine.evaluation.evidence import apply_error_contradictions, apply_evidence_check
 from eval_engine.providers.client import LLMClient
-from eval_engine.schemas.common import TaskType
+from eval_engine.schemas.common import SINGLE_PATH_SHAPES, TaskType
 from eval_engine.schemas.judge import (
     ClaimError,
     CreativeJudgeOutput,
     JudgeOutput,
     PathConfidence,
+    ScoredAnswer,
     Verdict,
 )
 from eval_engine.schemas.question import Question
@@ -43,6 +45,7 @@ class _Judged:
     errors: list[ClaimError]
     overlap: list[int]
     call_id: str
+    addresses_question: bool | None = None
 
 
 def evaluate(
@@ -56,7 +59,9 @@ def evaluate(
     votes: int = 1,
     bands: Bands | None = None,
     weights: dict[str, dict[str, float]] | None = None,
+    amend: bool = True,
 ) -> EvaluationTrace:
+    """`amend=False` records that amendment was due without running it (golden set)."""
     bands = bands or load_bands()
     weights = weights or load_weights()
     q = questions.get(question_id)
@@ -65,13 +70,32 @@ def evaluate(
     evaluation_id = uuid.uuid4().hex
     creative = q.task_type == TaskType.CREATIVE
 
-    judged = [_judge(client, q, rubric, answer, evaluation_id, fresh=False)]
-    if votes > 1 and _borderline(judged[0], creative, bands):
-        # Extra votes bypass the cache read and don't overwrite the first answer's cache.
-        judged += [
-            _judge(client, q, rubric, answer, evaluation_id, fresh=True) for _ in range(votes - 1)
-        ]
+    judged = _grade(client, q, rubric, answer, evaluation_id, votes, creative, bands)
     result = _majority(judged) if len(judged) > 1 else judged[0]
+    max_conf = max((p.confidence for p in result.confidences), default=0.0)
+    low_confidence = (not creative) and max_conf < bands.amendment_confidence_threshold
+    due = low_confidence and _amendment_applies(rubric, result)
+    call_ids = [j.call_id for j in judged]
+    n_votes = len(judged)
+
+    amendment: AmendmentOutcome | None = None
+    if due and amend:
+        amendment = run_amendment(
+            client,
+            rubrics,
+            rubric,
+            answer,
+            weights,
+            bands.verifier_framing,
+            evaluation_id=evaluation_id,
+        )
+        call_ids += amendment.call_ids
+        if amendment.rubric is not None:
+            rubric = amendment.rubric
+            judged = _grade(client, q, rubric, answer, evaluation_id, votes, creative, bands)
+            result = _majority(judged) if len(judged) > 1 else judged[0]
+            call_ids += [j.call_id for j in judged]
+            n_votes = len(judged)
 
     criteria = result.path.criteria
     verdicts, contradicted = apply_error_contradictions(result.verdicts, result.errors)
@@ -80,7 +104,6 @@ def evaluate(
     scores = dimension_scores(
         result.path.criteria, verdicts, n_errors=len(result.errors), task_type=q.task_type
     )
-    max_conf = max((p.confidence for p in result.confidences), default=0.0)
     trace = EvaluationTrace(
         evaluation_id=evaluation_id,
         timestamp=datetime.now(UTC),
@@ -91,26 +114,64 @@ def evaluate(
         creative_route=creative,
         path_confidences=result.confidences,
         identified_path=None if creative else result.path.path_id,
+        addresses_question=result.addresses_question,
+        amendment_due=due,
+        amendment_fired=amendment is not None,
+        amendment_proposal=amendment.proposal_json if amendment else None,
+        verifier_verdict=amendment.verdict.accepted if amendment and amendment.verdict else None,
+        verifier_reasoning=amendment.verdict.reasons if amendment and amendment.verdict else None,
+        verifier_failure_type=(
+            amendment.verdict.failure_type if amendment and amendment.verdict else None
+        ),
+        verifier_framing=amendment.framing if amendment and amendment.verdict else None,
+        divergence_reason=amendment.divergence_reason if amendment else None,
+        amendment_error=amendment.error if amendment else None,
         final_rubric_source=rubric.source,
         verdicts=verdicts,
         errors=result.errors,
         evidence_downgrades=downgraded,
         contradiction_downgrades=contradicted,
         count_overrides=counted,
-        low_confidence=(not creative) and max_conf < bands.amendment_confidence_threshold,
+        low_confidence=low_confidence,
         obvious_overlap=[
             rubric.obvious_answers[i - 1]
             for i in result.overlap
             if 1 <= i <= len(rubric.obvious_answers)
         ],
-        judge_votes=len(judged),
+        judge_votes=n_votes,
         dimension_scores=scores,
         overall_score=overall_score(scores, weights[q.task_type.value]),
         bands={d: bands.label(s) for d, s in scores.items()},
-        call_ids=[j.call_id for j in judged],
+        call_ids=call_ids,
     )
     evaluations.save(trace)
     return trace
+
+
+def _grade(
+    client: LLMClient,
+    q: Question,
+    rubric: Rubric,
+    answer: str,
+    evaluation_id: str,
+    votes: int,
+    creative: bool,
+    bands: Bands,
+) -> list[_Judged]:
+    judged = [_judge(client, q, rubric, answer, evaluation_id, fresh=False)]
+    if votes > 1 and _borderline(judged[0], creative, bands):
+        # Extra votes bypass the cache read and don't overwrite the first answer's cache.
+        judged += [
+            _judge(client, q, rubric, answer, evaluation_id, fresh=True) for _ in range(votes - 1)
+        ]
+    return judged
+
+
+def _amendment_applies(rubric: Rubric, result: _Judged) -> bool:
+    """A checklist has one right answer, so it has no other route to add (the schema allows a
+    single path). An answer about something else isn't a new approach; it also has low
+    confidence on every path, which is why the judge is asked separately."""
+    return rubric.shape not in SINGLE_PATH_SHAPES and result.addresses_question is True
 
 
 def _judge(
@@ -152,7 +213,7 @@ def _judge(
         "judge",
         "score_answer",
         variables,
-        JudgeOutput,
+        ScoredAnswer,
         evaluation_id=evaluation_id,
         fresh=fresh,
         write_cache=not fresh,
@@ -160,7 +221,13 @@ def _judge(
     out = res2.value
     path = _resolve_path(rubric, out)
     return _Judged(
-        path, out.path_confidences, _complete(path, out.verdicts), out.errors, [], res2.call.call_id
+        path,
+        out.path_confidences,
+        _complete(path, out.verdicts),
+        out.errors,
+        [],
+        res2.call.call_id,
+        out.addresses_question,
     )
 
 
@@ -220,4 +287,12 @@ def _majority(judged: list[_Judged]) -> _Judged:
     errors = with_errors[0].errors if len(with_errors) * 2 > len(on_path) else []
     overlap_votes = Counter(i for j in on_path for i in set(j.overlap))
     overlap = sorted(i for i, n in overlap_votes.items() if n * 2 > len(on_path))
-    return _Judged(first.path, first.confidences, verdicts, errors, overlap, first.call_id)
+    return _Judged(
+        first.path,
+        first.confidences,
+        verdicts,
+        errors,
+        overlap,
+        first.call_id,
+        first.addresses_question,
+    )

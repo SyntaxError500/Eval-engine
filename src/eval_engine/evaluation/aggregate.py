@@ -6,6 +6,7 @@ from pathlib import Path
 import yaml
 
 from eval_engine.config import REPO_ROOT
+from eval_engine.schemas.amendment import Framing
 from eval_engine.schemas.common import Dimension, TaskType
 from eval_engine.schemas.judge import Verdict
 from eval_engine.schemas.rubric import Criterion
@@ -20,6 +21,7 @@ NO_ERRORS_WEIGHT = 1.0
 class Bands:
     thresholds: list[tuple[str, float]]  # ascending by min
     amendment_confidence_threshold: float
+    verifier_framing: Framing = "adversarial"
 
     def label(self, score: float) -> str:
         label = self.thresholds[0][0]
@@ -33,7 +35,7 @@ def load_bands(path: Path | None = None) -> Bands:
     path = path or REPO_ROOT / "config" / "bands.yaml"
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     pairs = sorted(((b["label"], float(b["min"])) for b in data["bands"]), key=lambda p: p[1])
-    return Bands(pairs, float(data["amendment_confidence_threshold"]))
+    return Bands(pairs, float(data["amendment_confidence_threshold"]), data["verifier_framing"])
 
 
 def dimension_scores(

@@ -201,7 +201,7 @@ Factual rubrics have one path (a checklist). Creative rubrics have one path of b
 
 **Bands** (4 levels per dimension): `< 0.40` Not yet · `0.40–0.65` Developing · `0.65–0.85` Proficient · `≥ 0.85` Strong.
 
-**Path confidence threshold for amendment**: start at `0.5` (max over paths); calibrated in Phase 5.
+**Path confidence threshold for amendment**: `0.5` (max over paths); confirmed in Phase 5.
 
 **Temperatures**: judge and verifier 0; generator 0.7; proposer 0.3; feedback phrasing 0.3.
 
@@ -320,8 +320,10 @@ The goal is to confirm the judge before anything is built on it.
 
 ### Phase 5 — Amendment and verification (≈1.5 weeks)
 
+> **Built (2026-11-01); external review of the test set is pending.** On hand-checked labels: 0/27 false accepts on confident wrong proposals under both framings, amendment fires on 1/30 golden answers, and no wrong answer earned a path end to end. Qwen is confirmed as verifier and the threshold stays at 0.5. Of 11 under-scored valid answers, 5 are rescued. Results, decisions and limits: [`experiments/5_verifier/FINDINGS.md`](../experiments/5_verifier/FINDINGS.md).
+
 **Tasks**
-1. **Trigger**: max path confidence `< threshold` (§6) on a non-creative task.
+1. **Trigger**: max path confidence `< threshold` (§6) on a multi-path rubric, when the judge says the answer addresses the question. Confidence means the path the answer *attempts*, not how well it fits (`score_answer` v2). A factual checklist has one right answer, so it has no other route to add.
 2. **Proposer** (gpt-oss-120b on Groq): sees **only** the question and the answer, not the rubric scores. Narrow question: "Does this answer contain a valid approach not covered by these paths?" Returns `{is_new_valid_approach, proposed_path (criteria in rubric schema), justification}`. It does see the existing path descriptions, so it doesn't re-propose them.
 3. **Verifier** (Qwen on Groq; Phase 2 found it a weak *judge*, so its verifier role must pass the step 6 test on its own merits, otherwise swap the model before building on it), with adversarial framing: "Try to break this proposed path: find the factual error, the invalid inference, the missing step, or show it duplicates an existing path." Returns `{accept, reasons, failure_type}`. The framing is a config flag (`adversarial | neutral`) so the experiment in step 6 can isolate it.
 4. **Accept** → create rubric version n+1 (`parent_hash` set, `source: amendment`), re-score against the amended path, and log both hashes.
@@ -335,9 +337,9 @@ The goal is to confirm the judge before anything is built on it.
 7. **Calibrate the threshold**: sweep 0.3–0.7 on the Phase 4 golden set plus the verifier-set answers. Pick the value that triggers on off-path answers without firing on ordinary partial answers.
 
 **Exit gate**
-- [ ] Report precision and recall on the positive class, and the rejection rate per negative class, for both framings. **False-accept rate on class (a) ≤ 10%**, because a false accept is the costly error. Otherwise tighten the verifier prompt or require two-verifier agreement (Qwen on Groq + local Qwen 8B as a weaker second vote, or Gemini if it isn't also judging that item).
-- [ ] Amendment fires on < 15% of ordinary golden-set answers at the chosen threshold.
-- [ ] Results are written to `experiments/5_verifier/REPORT.md`.
+- [x] Report precision and recall on the positive class, and the rejection rate per negative class, for both framings. **0/27 on hand-checked labels, external review pending.** **False-accept rate on class (a) ≤ 10%**, because a false accept is the costly error. Otherwise tighten the verifier prompt or require two-verifier agreement (Qwen on Groq + local Qwen 8B as a weaker second vote, or Gemini if it isn't also judging that item).
+- [x] Amendment fires on < 15% of ordinary golden-set answers at the chosen threshold. **1/30 at 0.5.**
+- [x] Results are written to `experiments/5_verifier/REPORT.md`.
 
 ---
 

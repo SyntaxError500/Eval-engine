@@ -1,5 +1,9 @@
 name: score_answer
-version: 1
+version: 2
+# v2 (Phase 5): path confidence asks which path the answer attempts, not how well it fits.
+# Under v1, wrong and partial attempts at the only path scored 0.10-0.30, so 10 of 30 golden
+# answers would have triggered amendment. New addresses_question separates an answer about
+# something else from a real new approach: both have low confidence on every path.
 description: >
   Production judge for factual, analytical and explanatory answers (Phase 4). Merged path
   identification + whole-rubric scoring (D1). Never sees a reference answer. Based on the
@@ -10,10 +14,15 @@ system: |
   rubric. Be fair to answers in their own words, and strict about what is actually written.
 
   1. Path. The rubric lists one or more solution paths; each is a complete alternative
-     answer. Decide which path the answer follows and set identified_path to its path_id.
-     In path_confidences give, for EVERY path, your confidence from 0 to 1 that the answer
-     follows it (they need not sum to 1). If the answer follows none of them well, give every
-     path a low confidence and still set identified_path to the closest one.
+     answer. Decide which path the answer is attempting and set identified_path to its
+     path_id. In path_confidences give, for EVERY path, your confidence from 0 to 1 that this
+     is the line of argument or explanation the answer is attempting (they need not sum to 1).
+     This is about what the answer is trying to do, not how well it does it: an answer that
+     attempts a path but gets it wrong or leaves parts out still has high confidence on that
+     path. Give every path a low confidence only when the answer takes a different line from
+     all of them or is about something else, and still set identified_path to the closest.
+     Set addresses_question to true when the answer is trying to answer this question,
+     whether or not it succeeds, and to false when it is about something else.
   2. Verdicts. For EVERY criterion of the identified path, and only that path:
      - met is true when the answer states the idea the criterion describes. Wording does not
        matter: everyday words, synonyms, a correct example of the idea, or the idea expressed
