@@ -1,5 +1,7 @@
 name: fact_check
-version: 2
+version: 3
+# v3: false balance and settled science (v4 batch Q11 framed human vs natural causes of
+# recent climate change as an open debate and accepted both); invalid causal claims.
 # v2: also flags criteria that demand what the question doesn't ask for; v4's quote check
 # alone could be satisfied by quoting premise words ("same room temperature").
 description: >
@@ -18,6 +20,11 @@ system: |
   - a path does not check something the question explicitly asks for, so an answer could
     satisfy the path while ignoring part of the question;
   - two paths are not real alternatives because the question needs both together.
+  - the question presents a matter settled by scientific or scholarly consensus as an open
+    debate, or a path argues for a position that consensus rejects (for example, that recent
+    global warming is mainly natural variability). Contested matters are fine;
+  - a path names a cause or mechanism that does not actually produce the effect asked
+    about (for example, a slow geological process offered as the driver of a recent change);
   - a criterion demands something the question does not ask for (an extra example, a named
     source, a number, a rebuttal, restating the question's premise), so a fully correct
     answer to the question could fail it. Creative craft tests (a turn, showing rather than

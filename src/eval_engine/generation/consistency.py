@@ -64,7 +64,11 @@ _ANSWER_QUALITY = re.compile(
 
 # One criterion covering several items is all-or-nothing across them, so a partial answer
 # earns nothing (Phase 2 lesson). Still produced under v3 in ~5/28 questions.
-_BUNDLED = re.compile(r"\b(?:for each|each of the|each (?:listed|named))\b", re.IGNORECASE)
+_BUNDLED = re.compile(
+    r"\b(?:for each|each of the|each (?!other\b)[a-z]+)\b|at least (?:two|three|2|3) "
+    r"(?:distinct |different )?(?:reasons|arguments|pieces|points|examples)",
+    re.IGNORECASE,
+)
 
 # Questions that ask for several explanations/perspectives get each one turned into a
 # "path", but the judge grades a single identified path, so the rest go unchecked. Seen in

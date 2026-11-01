@@ -52,12 +52,16 @@ def build_batch(
     # Only questions made by the current generator prompt count; a prompt fix means the
     # batch is regenerated rather than mixing versions in one review.
     prompt_hash = client.prompts.get("generate").file_hash
+    # Questions a reviewer rejected for reasons no automatic check can see (false balance,
+    # an invalid path): listed by id in rejected.json, never reused, so their slot regenerates.
+    rejected = _rejected_ids(out_dir)
     # A reused question must also pass the CURRENT checks: checks added after it was made
     # (e.g. the several-alternatives rule) would otherwise let it through unexamined.
     existing = {
         (q.task_type, q.topic): q
         for q in questions.all()
         if q.generator_prompt_hash == prompt_hash
+        and q.question_id not in rejected
         and not check_rubric(rubrics.get(q.rubric_hash), weights, q.task_type)
     }
     built = skipped = 0
@@ -114,6 +118,13 @@ def build_batch(
         "retried": len(retried),
         "stopped": stopped,
     }
+
+
+def _rejected_ids(out_dir: Path) -> set[str]:
+    path = out_dir / "rejected.json"
+    if not path.exists():
+        return set()
+    return {r["question_id"] for r in json.loads(path.read_text(encoding="utf-8"))}
 
 
 def write_review(rubrics: RubricStore, batch: list[Question], path: Path) -> None:

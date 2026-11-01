@@ -1,5 +1,6 @@
 {
  "question_ids": [
+  "83e77d761714",
   "512f892a6afa",
   "647b3337f666",
   "5a492c637640",
@@ -9,6 +10,7 @@
   "2e67ba664d8f",
   "c555e910c2cb",
   "3d813378c122",
+  "56c2e4694628",
   "46b076f456cf",
   "082591e7ec4e",
   "e82fb3602421",
@@ -28,34 +30,24 @@
   "610c46d48e48",
   "3dadfd69ad7c",
   "23575fb39cfd",
-  "4881228365fa"
+  "4881228365fa",
+  "14f014e48366",
+  "2b28e1af770f",
+  "30cfecdb54df",
+  "05c2f2ca70a4",
+  "7cb37a949c50",
+  "b687bcd90776",
+  "13360f60b1fe",
+  "6878445611ca"
  ],
- "retried_after_checks": [
-  "476bdbe5578d",
-  "17b9d268178a",
-  "2e67ba664d8f",
-  "c555e910c2cb",
-  "e4a2b3b2341d",
-  "bb2a1833528d",
-  "669bce9c85fb",
-  "c08ec38ec72f",
-  "3f8052a62a58",
-  "3dadfd69ad7c",
-  "4881228365fa"
- ],
+ "retried_after_checks": [],
  "failed_checks_twice": [
   {
-   "task_type": "factual",
-   "topic": "history",
+   "task_type": "creative",
+   "topic": "health",
    "problems": [
-    "P1.C1 demands 'exactly' something the question doesn't; accept at least what the question asks for"
-   ]
-  },
-  {
-   "task_type": "analytical",
-   "topic": "science",
-   "problems": [
-    "the question asks for several alternatives (\"two scientific explanations\"). Ask for ONE argument or explanation; the different valid ways to answer belong in the rubric's paths, and a learner only needs one of them"
+    "the question uses judgement word(s) ['clear', 'good']; ask for what is observable (e.g. 'State a clear position' -> 'State a position (for or against)')",
+    "P1.C2 uses judgement word(s) ['good']; state what the answer contains instead (e.g. 'States a clear position' -> 'States a position (for or against)')"
    ]
   }
  ]

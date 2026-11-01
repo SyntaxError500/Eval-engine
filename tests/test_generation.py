@@ -449,3 +449,46 @@ def test_lightly_paraphrased_quote_accepted_but_invented_one_not() -> None:
     d["paths"][0]["criteria"][1]["requires"] = "cite a primary source for each battle"
     found = [p for p in problems_for(d) if "requires" in p]
     assert len(found) == 1 and "P1.C2" in found[0]
+
+
+@pytest.mark.parametrize(
+    "statement",
+    [
+        "Provides the year each poem was first published",
+        "Explains how each reason leads to the claimed effect",
+        "Provides at least two distinct reasons supporting the claim",
+    ],
+)
+def test_more_bundling_forms(statement: str) -> None:
+    d = draft("factual")
+    d["paths"][0]["criteria"][0]["statement"] = statement
+    assert any("several items" in p for p in problems_for(d))
+
+
+def test_each_other_is_not_bundling() -> None:
+    d = draft("factual")
+    d["paths"][0]["criteria"][0]["statement"] = (
+        "The three phases named are different from each other"
+    )
+    assert not [p for p in problems_for(d) if "several items" in p]
+
+
+def test_rejected_questions_are_regenerated(
+    gen_env: Any, providers: dict[str, FakeProvider], tmp_path: Path
+) -> None:
+    client, rubrics, questions = gen_env
+
+    def gen(req: CompletionRequest) -> str:
+        task_type = req.user.split("Task type:", 1)[1].split()[0]
+        n = len(providers["alpha"].requests)
+        return json.dumps(draft(task_type, question=f"Question number {n}?"))
+
+    providers["alpha"].push(*[gen, reference] * 8)
+    build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    victim = questions.all()[0].question_id
+    (tmp_path / "rejected.json").write_text(json.dumps([{"question_id": victim, "reason": "x"}]))
+    again = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    assert (
+        again["built"] == 1
+        and victim not in json.loads((tmp_path / "batch.json").read_text())["question_ids"]
+    )
