@@ -3,6 +3,7 @@
   "83e77d761714",
   "512f892a6afa",
   "647b3337f666",
+  "228bac849ab1",
   "886e0fcd1e3d",
   "476bdbe5578d",
   "17b9d268178a",
@@ -33,6 +34,7 @@
   "b687c2df5103",
   "a93e1782531b",
   "30cfecdb54df",
+  "b1db86bc69f9",
   "b54dae9759d1",
   "1a636015a193",
   "9e4b003116e1",
@@ -41,26 +43,256 @@
  "retried_after_checks": [],
  "failed_checks_twice": [
   {
-   "task_type": "factual",
-   "topic": "ethics",
-   "problems": [
-    "path P1 has no criterion for dimension(s) ['completeness']: set dimension \"completeness\" on the criterion that checks a second part the question asks for (e.g. the example, the effect, the second item), quoting those words"
-   ]
-  },
-  {
    "task_type": "explanatory",
    "topic": "history",
    "problems": [
-    "P1.C1 uses judgement word(s) ['clear']; state what the answer contains instead (e.g. 'States a clear position' -> 'States a position (for or against)')",
-    "P2.C1 uses judgement word(s) ['clear']; state what the answer contains instead (e.g. 'States a clear position' -> 'States a position (for or against)')"
+    "P1.C1 'requires' quote \"first distinct economic mechanism\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it",
+    "P1.C2 'requires' quote \"explains how the first mechanism contributed\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it",
+    "P1.C3 'requires' quote \"second distinct economic mechanism\" is not in the question; quote the question's own words, or drop the criterion if the question doesn't ask for it",
+    "the question asks for several alternatives (\"two distinct economic mechanisms\"). Ask for ONE argument or explanation; the different valid ways to answer belong in the rubric's paths, and a learner only needs one of them"
    ]
+  }
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "task_type": "factual",
+   "topic": "history",
+   "question_id": "83e77d761714"
   },
   {
+   "slot": 2,
+   "task_type": "factual",
+   "topic": "science",
+   "question_id": "512f892a6afa"
+  },
+  {
+   "slot": 3,
+   "task_type": "factual",
+   "topic": "technology",
+   "question_id": "647b3337f666"
+  },
+  {
+   "slot": 4,
+   "task_type": "factual",
+   "topic": "ethics",
+   "question_id": "228bac849ab1"
+  },
+  {
+   "slot": 5,
+   "task_type": "factual",
+   "topic": "economics",
+   "question_id": "886e0fcd1e3d"
+  },
+  {
+   "slot": 6,
+   "task_type": "factual",
+   "topic": "environment",
+   "question_id": "476bdbe5578d"
+  },
+  {
+   "slot": 7,
+   "task_type": "factual",
+   "topic": "health",
+   "question_id": "17b9d268178a"
+  },
+  {
+   "slot": 8,
+   "task_type": "factual",
+   "topic": "literature",
+   "question_id": "b0affe8aae1b"
+  },
+  {
+   "slot": 9,
+   "task_type": "factual",
+   "topic": "geography",
+   "question_id": "dae71517a495"
+  },
+  {
+   "slot": 10,
+   "task_type": "factual",
+   "topic": "everyday life",
+   "question_id": "3d813378c122"
+  },
+  {
+   "slot": 11,
+   "task_type": "analytical",
+   "topic": "science",
+   "question_id": "4cb875e3c8cc"
+  },
+  {
+   "slot": 12,
+   "task_type": "analytical",
+   "topic": "technology",
+   "question_id": "d757eca4528c"
+  },
+  {
+   "slot": 13,
+   "task_type": "analytical",
+   "topic": "ethics",
+   "question_id": "082591e7ec4e"
+  },
+  {
+   "slot": 14,
+   "task_type": "analytical",
+   "topic": "economics",
+   "question_id": "d92e0ad73cb8"
+  },
+  {
+   "slot": 15,
+   "task_type": "analytical",
+   "topic": "environment",
+   "question_id": "5d564b58c11c"
+  },
+  {
+   "slot": 16,
+   "task_type": "analytical",
+   "topic": "health",
+   "question_id": "632df277470d"
+  },
+  {
+   "slot": 17,
+   "task_type": "analytical",
+   "topic": "literature",
+   "question_id": "7ef66d20c834"
+  },
+  {
+   "slot": 18,
+   "task_type": "analytical",
+   "topic": "geography",
+   "question_id": "7d174cce75df"
+  },
+  {
+   "slot": 19,
+   "task_type": "analytical",
+   "topic": "everyday life",
+   "question_id": "78d7767e5351"
+  },
+  {
+   "slot": 20,
+   "task_type": "analytical",
+   "topic": "history",
+   "question_id": "17c1b10632b5"
+  },
+  {
+   "slot": 21,
+   "task_type": "explanatory",
+   "topic": "technology",
+   "question_id": "a5cd0a155f64"
+  },
+  {
+   "slot": 22,
+   "task_type": "explanatory",
+   "topic": "ethics",
+   "question_id": "91798e725180"
+  },
+  {
+   "slot": 23,
+   "task_type": "explanatory",
+   "topic": "economics",
+   "question_id": "669bce9c85fb"
+  },
+  {
+   "slot": 24,
+   "task_type": "explanatory",
+   "topic": "environment",
+   "question_id": "1e9d95d9130f"
+  },
+  {
+   "slot": 25,
+   "task_type": "explanatory",
+   "topic": "health",
+   "question_id": "b850a615f22e"
+  },
+  {
+   "slot": 26,
+   "task_type": "explanatory",
+   "topic": "literature",
+   "question_id": "c08ec38ec72f"
+  },
+  {
+   "slot": 27,
+   "task_type": "explanatory",
+   "topic": "geography",
+   "question_id": "3f8052a62a58"
+  },
+  {
+   "slot": 28,
+   "task_type": "explanatory",
+   "topic": "everyday life",
+   "question_id": "610c46d48e48"
+  },
+  {
+   "slot": 29,
+   "task_type": "explanatory",
+   "topic": "history",
+   "question_id": null
+  },
+  {
+   "slot": 30,
+   "task_type": "explanatory",
+   "topic": "science",
+   "question_id": "23575fb39cfd"
+  },
+  {
+   "slot": 31,
+   "task_type": "creative",
+   "topic": "ethics",
+   "question_id": "4881228365fa"
+  },
+  {
+   "slot": 32,
+   "task_type": "creative",
+   "topic": "economics",
+   "question_id": "33f285706f47"
+  },
+  {
+   "slot": 33,
+   "task_type": "creative",
+   "topic": "environment",
+   "question_id": "b687c2df5103"
+  },
+  {
+   "slot": 34,
+   "task_type": "creative",
+   "topic": "health",
+   "question_id": "a93e1782531b"
+  },
+  {
+   "slot": 35,
+   "task_type": "creative",
+   "topic": "literature",
+   "question_id": "30cfecdb54df"
+  },
+  {
+   "slot": 36,
    "task_type": "creative",
    "topic": "geography",
-   "problems": [
-    "P1.C4 has no 'requires' quote; quote the exact words of the question that ask for it, or drop the criterion if the question doesn't ask for it"
-   ]
+   "question_id": "b1db86bc69f9"
+  },
+  {
+   "slot": 37,
+   "task_type": "creative",
+   "topic": "everyday life",
+   "question_id": "b54dae9759d1"
+  },
+  {
+   "slot": 38,
+   "task_type": "creative",
+   "topic": "history",
+   "question_id": "1a636015a193"
+  },
+  {
+   "slot": 39,
+   "task_type": "creative",
+   "topic": "science",
+   "question_id": "9e4b003116e1"
+  },
+  {
+   "slot": 40,
+   "task_type": "creative",
+   "topic": "technology",
+   "question_id": "6878445611ca"
   }
  ]
 }

@@ -108,12 +108,25 @@ def build_batch(
     except QuotaExhausted as e:
         stopped = str(e)
 
-    batch = [existing[s] for s in slots(per_type, load_topics()) if s in existing]
+    # Fixed slot numbers (1..N in slot order): numbering by position among filled slots
+    # shifted whenever a slot was empty, so a question's number changed between reviews.
+    slot_list = slots(per_type, load_topics())
+    numbered = [(n, existing.get(sl), sl) for n, sl in enumerate(slot_list, 1)]
+    batch = [q for _, q, _ in numbered if q is not None]
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "batch.json").write_text(
         json.dumps(
             {
                 "question_ids": [q.question_id for q in batch],
+                "slots": [
+                    {
+                        "slot": n,
+                        "task_type": sl[0].value,
+                        "topic": sl[1],
+                        "question_id": q.question_id if q else None,
+                    }
+                    for n, q, sl in numbered
+                ],
                 "retried_after_checks": retried,
                 "failed_checks_twice": failed,
             },
@@ -121,7 +134,7 @@ def build_batch(
         ),
         encoding="utf-8",
     )
-    write_review(rubrics, batch, out_dir / "review.md")
+    write_review(rubrics, numbered, out_dir / "review.md")
     return {
         "in_batch": len(batch),
         "built": built,
@@ -139,11 +152,17 @@ def _id_list(path: Path) -> set[str]:
     return {r["question_id"] for r in json.loads(path.read_text(encoding="utf-8"))}
 
 
-def write_review(rubrics: RubricStore, batch: list[Question], path: Path) -> None:
+def write_review(
+    rubrics: RubricStore,
+    numbered: list[tuple[int, Question | None, tuple[TaskType, str]]],
+    path: Path,
+) -> None:
+    filled = sum(q is not None for _, q, _ in numbered)
     lines = [
         "# Phase 3: generated question review",
         "",
-        f"{len(batch)} questions. For each one, tick every item that holds. The gate passes "
+        f"{filled} questions in {len(numbered)} fixed slots (empty slots count as failures). "
+        "For each one, tick every item that holds. The gate passes "
         "when at least 85% of questions pass every item that applies to them.",
         "",
         "Checklist per question:",
@@ -151,9 +170,11 @@ def write_review(rubrics: RubricStore, batch: list[Question], path: Path) -> Non
         *[f"{i}. {c}" for i, c in enumerate(CHECKLIST, 1)],
         "",
     ]
-    for n, q in enumerate(batch, 1):
-        r = rubrics.get(q.rubric_hash)
-        lines += _question_block(n, q, r)
+    for n, q, (task_type, topic) in numbered:
+        if q is None:
+            lines += [f"## {n}. {task_type.value} · {topic} · (empty slot)", ""]
+            continue
+        lines += _question_block(n, q, rubrics.get(q.rubric_hash))
     path.write_text("\n".join(lines), encoding="utf-8")
 
 

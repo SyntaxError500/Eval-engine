@@ -1,6 +1,6 @@
 # Phase 3: generated question review
 
-37 questions. For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
+39 questions in 40 fixed slots (empty slots count as failures). For each one, tick every item that holds. The gate passes when at least 85% of questions pass every item that applies to them.
 
 Checklist per question:
 
@@ -60,7 +60,20 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 4. factual · economics · `886e0fcd1e3d`
+## 4. factual · ethics · `228bac849ab1`
+
+**Q:** In a short paragraph (3‑8 sentences), name three influential philosophers associated with deontological ethics and state one specific contribution each made to the development of deontological theory.
+
+**Path P1:** Correctly lists three philosophers and their contributions to deontological ethics
+
+- `P1.C1` completeness, core, w=1: Provides three distinct philosophers associated with deontological ethics ← asked by: "name three influential philosophers associated with deontological ethics and state one specific contribution each"
+- `P1.C2` correctness, core, w=1: Gives a correct specific contribution for the first philosopher named ← asked by: "name three influential philosophers associated with deontological ethics and state one specific contribution each"
+- `P1.C3` correctness, core, w=1: Gives a correct specific contribution for the second philosopher named ← asked by: "name three influential philosophers associated with deontological ethics and state one specific contribution each"
+- `P1.C4` correctness, core, w=1: Gives a correct specific contribution for the third philosopher named ← asked by: "name three influential philosophers associated with deontological ethics and state one specific contribution each"
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 5. factual · economics · `886e0fcd1e3d`
 
 **Q:** In a short paragraph of 3–6 sentences, list three distinct types of unemployment and give one concrete example for each type.
 
@@ -73,7 +86,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 5. factual · environment · `476bdbe5578d`
+## 6. factual · environment · `476bdbe5578d`
 
 **Q:** In a short paragraph (3 to 8 sentences), list three major sources of water pollution, give one pollutant each source typically releases, and name one ecological impact of that pollutant.
 
@@ -91,7 +104,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 6. factual · health · `17b9d268178a`
+## 7. factual · health · `17b9d268178a`
 
 **Q:** In a short paragraph (3-8 sentences), name the three main macronutrients required by the human body and state one primary function of each.
 
@@ -104,7 +117,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 7. factual · literature · `b0affe8aae1b`
+## 8. factual · literature · `b0affe8aae1b`
 
 **Q:** In a short paragraph (3–8 sentences), name three distinct literary movements of the 19th century and give one characteristic work (title and author) associated with each.
 
@@ -119,7 +132,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 8. factual · geography · `dae71517a495`
+## 9. factual · geography · `dae71517a495`
 
 **Q:** List the three primary types of plate boundaries—divergent, convergent, and transform—and state one key geological feature or process associated with each. Answer in a short paragraph of 3–8 sentences.
 
@@ -132,7 +145,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 9. factual · everyday life · `3d813378c122`
+## 10. factual · everyday life · `3d813378c122`
 
 **Q:** In a short paragraph (3–8 sentences), list three distinct bedtime routines that many adults follow and state the usual order of steps for each routine (e.g., brush teeth → change into pajamas → read a book).
 
@@ -147,7 +160,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 10. analytical · science · `4cb875e3c8cc`
+## 11. analytical · science · `4cb875e3c8cc`
 
 **Q:** Two main hypotheses explain why some planets possess prominent ring systems while others do not: (1) the remnants of a destroyed moon that was torn apart by tidal forces within the planet's Roche limit, and (2) the accumulation of leftover material from the planet's formation that never coalesced into a moon. In a short paragraph (3‑8 sentences), evaluate these two hypotheses and argue which one you find more convincing, providing supporting evidence for each.
 
@@ -167,7 +180,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 11. analytical · technology · `d757eca4528c`
+## 12. analytical · technology · `d757eca4528c`
 
 **Q:** In a short paragraph (3‑8 sentences), present one position on whether governments should require mandatory data‑privacy standards for consumer Internet‑of‑Things (IoT) devices, and support it with at least one specific reason or piece of evidence.
 
@@ -185,7 +198,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 12. analytical · ethics · `082591e7ec4e`
+## 13. analytical · ethics · `082591e7ec4e`
 
 **Q:** In a short paragraph (3‑8 sentences), argue whether utilitarianism provides a better foundation for public policy than deontological ethics. State your position, give one concrete policy area where your chosen approach offers an advantage, and explain how it supports your claim.
 
@@ -203,7 +216,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 13. analytical · economics · `d92e0ad73cb8`
+## 14. analytical · economics · `d92e0ad73cb8`
 
 **Q:** In a short paragraph of 3–6 sentences, argue whether implementing a progressive wealth tax on the richest households would reduce economic inequality in a market economy. State a position (for or against) and support it with at least two distinct arguments.
 
@@ -223,7 +236,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 14. analytical · environment · `5d564b58c11c`
+## 15. analytical · environment · `5d564b58c11c`
 
 **Q:** In a short paragraph (3 to 8 sentences), argue for either (a) implementing a nationwide ban on the use of chemical pesticides in agriculture, or (b) promoting integrated pest management (IPM) as a sustainable alternative. Choose one position, state at least two distinct supporting reasons, and provide a specific factual example, statistic, or case study for each reason.
 
@@ -245,7 +258,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 15. analytical · health · `632df277470d`
+## 16. analytical · health · `632df277470d`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether mandatory fortification of staple foods with vitamin D should be implemented as a public‑health measure. Choose one side, present at least two supporting points, and acknowledge a counterargument from the opposite side.
 
@@ -265,7 +278,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 16. analytical · literature · `7ef66d20c834`
+## 17. analytical · literature · `7ef66d20c834`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether Nathaniel Hawthorne’s *The Scarlet Letter* should be read primarily as a critique of Puritan moral hypocrisy or as an exploration of individual psychological trauma, and support your view with at least two distinct pieces of textual evidence.
 
@@ -285,7 +298,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 17. analytical · geography · `7d174cce75df`
+## 18. analytical · geography · `7d174cce75df`
 
 **Q:** In a short paragraph of 3–8 sentences, argue whether the primary cause of the recent intensification of urban heat islands in megacities is (1) reduced vegetation cover or (2) increased anthropogenic heat emissions. Choose one factor, state the claim, and provide at least one piece of supporting evidence that links the chosen factor to stronger urban heat islands.
 
@@ -301,7 +314,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 18. analytical · everyday life · `78d7767e5351`
+## 19. analytical · everyday life · `78d7767e5351`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether working from home increases overall work‑life balance, and support your argument with at least two distinct reasons.
 
@@ -319,7 +332,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 19. analytical · history · `17c1b10632b5`
+## 20. analytical · history · `17c1b10632b5`
 
 **Q:** In a short paragraph (3–8 sentences), argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries, and support your position with specific historical evidence.
 
@@ -337,7 +350,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 20. explanatory · technology · `a5cd0a155f64`
+## 21. explanatory · technology · `a5cd0a155f64`
 
 **Q:** Explain how 5G wireless networks achieve lower latency than previous 4G LTE networks. In a short paragraph (3‑8 sentences), describe one primary technical mechanism that enables this reduction.
 
@@ -349,7 +362,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 21. explanatory · ethics · `91798e725180`
+## 22. explanatory · ethics · `91798e725180`
 
 **Q:** In a short paragraph (3‑8 sentences), explain why individuals often follow social norms even when those norms conflict with their personal moral convictions.
 
@@ -367,7 +380,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 22. explanatory · economics · `669bce9c85fb`
+## 23. explanatory · economics · `669bce9c85fb`
 
 **Q:** In a short paragraph of 3–6 sentences, explain how a depreciation of a country's currency influences its export competitiveness. Provide one mechanism that connects the change in exchange rate to export volumes.
 
@@ -379,7 +392,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 23. explanatory · environment · `1e9d95d9130f`
+## 24. explanatory · environment · `1e9d95d9130f`
 
 **Q:** In a short paragraph (3 to 8 sentences), explain one mechanism by which adding biochar to agricultural soil enhances carbon sequestration, and give a concrete example of a farm or region where this mechanism has been applied.
 
@@ -397,7 +410,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 24. explanatory · health · `b850a615f22e`
+## 25. explanatory · health · `b850a615f22e`
 
 **Q:** In a short paragraph (3–8 sentences), explain one mechanism by which regular physical activity improves mental health.
 
@@ -421,7 +434,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 25. explanatory · literature · `c08ec38ec72f`
+## 26. explanatory · literature · `c08ec38ec72f`
 
 **Q:** In a short paragraph (3–8 sentences), explain how the use of an unreliable narrator in F. Scott Fitzgerald’s *The Great Gatsby* influences the reader’s understanding of the American Dream.
 
@@ -439,7 +452,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 26. explanatory · geography · `3f8052a62a58`
+## 27. explanatory · geography · `3f8052a62a58`
 
 **Q:** Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.
 
@@ -451,7 +464,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 27. explanatory · everyday life · `610c46d48e48`
+## 28. explanatory · everyday life · `610c46d48e48`
 
 **Q:** Explain why many people frequently misplace their keys, offering one plausible explanation in a short paragraph (3–8 sentences).
 
@@ -475,7 +488,9 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 28. explanatory · science · `23575fb39cfd`
+## 29. explanatory · history · (empty slot)
+
+## 30. explanatory · science · `23575fb39cfd`
 
 **Q:** Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).
 
@@ -487,7 +502,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 29. creative · ethics · `4881228365fa`
+## 31. creative · ethics · `4881228365fa`
 
 **Q:** Write a brief scene of 3‑8 sentences in which a journalist must choose whether to publish a leaked report about a corporation's harmful practices or keep it hidden to protect sources. The scene must include at least one line of dialogue that reveals the journalist's internal conflict, a turning point where the decision is made, must not contain the phrase “ethical dilemma”, and must avoid the clichés “the world will never be the same”, “the stakes are high”, and “moral crossroads”.
 
@@ -510,7 +525,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 30. creative · economics · `33f285706f47`
+## 32. creative · economics · `33f285706f47`
 
 **Q:** Write a short scene (3–5 sentences) in which a recent college graduate, Alex, discovers that the monthly rent for their first apartment has increased. The scene must (1) mention the new rent amount, (2) show Alex's internal thought about whether to stay or move, and (3) include a brief reference to a roommate offering to share a cheaper place. Write the scene using present‑tense narration and do not use any of the clichés: "money talks", "price is what you pay", "cost of living".
 
@@ -532,7 +547,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 31. creative · environment · `b687c2df5103`
+## 33. creative · environment · `b687c2df5103`
 
 **Q:** Write a short scene (3 to 8 sentences) that depicts a forest clearing after a wildfire, showing the first signs of ecological recovery as the first shoots emerge. Use vivid sensory details, include a character who observes the changes, and avoid the clichés 'phoenix rising' and 'silver lining'.
 
@@ -554,7 +569,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 32. creative · health · `a93e1782531b`
+## 34. creative · health · `a93e1782531b`
 
 **Q:** Write a short scene (3–8 sentences) in which a pharmacist explains to an elderly customer how to use a new inhaler for asthma. The scene must (1) describe the inhaler's key mechanism of delivering medication, (2) show the customer's reaction using a physical cue instead of naming the feeling, and (3) end with the pharmacist providing a follow‑up instruction.
 
@@ -574,7 +589,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 33. creative · literature · `30cfecdb54df`
+## 35. creative · literature · `30cfecdb54df`
 
 **Q:** In a short scene of three to eight sentences, write a narrative where a character discovers a forgotten poetry anthology in a rooftop garden. The scene must include vivid sensory description, a twist at the end, show rather than tell, and must avoid the clichés: “the wind whispered”, “the pages fluttered”, “a secret message”.
 
@@ -595,7 +610,29 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 34. creative · everyday life · `b54dae9759d1`
+## 36. creative · geography · `b1db86bc69f9`
+
+**Q:** Write a short podcast intro (3–8 sentences) for a geography show about a newly discovered underground river system beneath a desert. In your intro, mention the location, describe two striking physical features of the river system, and note one potential impact on local ecosystems. Avoid the clichés: "hidden treasure", "mysterious oasis", "secret underground world".
+
+**Path P1:** Podcast intro that satisfies all brief constraints
+
+- `P1.C1` expression, core, w=1: Provides a podcast‑style introduction that addresses listeners and mentions the show name or purpose ← asked by: "Write a short podcast intro"
+- `P1.C2` correctness, core, w=1: Mentions the geographic location of the underground river system ← asked by: "mention the location"
+- `P1.C3` correctness, core, w=1: Describes two distinct physical features of the river system ← asked by: "describe two striking physical features"
+- `P1.C4` correctness, core, w=1: Notes one potential impact of the river system on local ecosystems ← asked by: "note one potential impact on local ecosystems"
+- `P1.C5` expression, non-core, w=0.5: Does not contain any of the prohibited clichés: "hidden treasure", "mysterious oasis", "secret underground world" ← asked by: "Avoid the clichés: "hidden treasure", "mysterious oasis", "secret underground world""
+
+**Obvious answers (originality check):**
+
+- Welcome to GeoExplorers! Today we travel beneath the Sahara Desert to a newly uncovered underground river that winds through massive basalt tunnels and sparkling crystal pools, a discovery that could create fresh habitats for desert wildlife.
+- Hello listeners, this is Desert Deep Dive. In the Arabian Desert, scientists have mapped an underground river with towering limestone caverns and flowing aquifer channels, which may replenish scarce groundwater for nearby oases.
+- Greetings from Earth’s Hidden Depths. A subterranean river beneath the Australian Outback features glowing geothermal vents and towering stalactite curtains, potentially fostering unique microbial ecosystems.
+- Hi there, you’re tuned into Terrain Tales. Beneath the Namib Desert lies an underground river with deep sapphire‑colored lakes and intricate tunnel networks, offering a new water source that could reshape local plant communities.
+- Welcome back to Geographic Wonders. Researchers have found an underground river under the Kalahari, marked by expansive sand‑filled chambers and rapid underground streams, which might support previously unknown desert species.
+
+Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
+
+## 37. creative · everyday life · `b54dae9759d1`
 
 **Q:** Write a brief (3–6 sentences) scene describing a person waiting in line at a coffee shop, focusing on the protagonist’s internal thoughts, include at least one tactile detail, and end with a subtle hint of an upcoming decision.
 
@@ -616,7 +653,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 35. creative · history · `1a636015a193`
+## 38. creative · history · `1a636015a193`
 
 **Q:** Write a short diary entry (3–8 sentences) from the perspective of a merchant in Constantinople during the fall of the city in 1453. The entry should (a) describe the atmosphere of the siege, (b) mention one specific item the merchant hoped to protect, and (c) convey a personal feeling of loss without using the phrase “I feel sad.”
 
@@ -636,7 +673,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 36. creative · science · `9e4b003116e1`
+## 39. creative · science · `9e4b003116e1`
 
 **Q:** Write a short sci‑fi scene (3‑8 sentences) set on a basaltic moon orbiting a gas giant. The scene must (1) introduce the moon’s harsh, low‑gravity landscape, (2) describe the moment a lone astronaut discovers a glowing crystal that emits a low hum, and (3) include a development that forces the astronaut to reconsider the mission’s objective. Do not use any of the words: "dark", "silent", "mysterious", "unexpected".
 
@@ -657,7 +694,7 @@ Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
 Review: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5 [ ] 6 [ ] 7 [ ] 8
 
-## 37. creative · technology · `6878445611ca`
+## 40. creative · technology · `6878445611ca`
 
 **Q:** In a short scene of 3‑8 sentences, imagine a product launch at a future technology conference where a new AI‑powered personal assistant called "EchoMate" is unveiled. Write the scene using present‑tense narration. The scene must (1) name the product, (2) describe one unique capability of the assistant, (3) include a reaction from an audience member, and (4) end with a tagline of exactly six words.
 

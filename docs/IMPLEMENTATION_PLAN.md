@@ -275,6 +275,8 @@ The goal is to confirm the judge before anything is built on it.
 
 ### Phase 3 — Generation stage (≈1 week)
 
+> **Done (2026-11-01).** Gate passed on the third strict external review: 37/40 (92.5%). Generator prompt v5 plus code checks (traceability quotes, no unstated creative craft tests, no bundling or judgement words, alternatives-only paths) and a fact-check by a different model family. Reference answers are never shown to learners. Rounds, rules and decisions: [`experiments/3_generation/FINDINGS.md`](../experiments/3_generation/FINDINGS.md).
+
 **Tasks**
 1. **Topic list**: about 10 topics (history, technology, ethics, science, ...).
 2. **Generator prompt**: one structured call returns `question, task_type, rubric (paths + criteria), obvious_answers (creative only)`. Rubric shape is dictated by task type:

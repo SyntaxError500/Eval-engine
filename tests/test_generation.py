@@ -523,3 +523,27 @@ def test_failed_slot_gets_new_drafts_on_rerun_not_cached_ones(
     providers["alpha"].push(json.dumps(draft("factual")), reference)
     generate_question(client, rubrics, questions, "science", TaskType.FACTUAL)
     assert len(providers["alpha"].requests) == calls + 2  # live call, not a cache replay
+
+
+def test_review_sheet_uses_fixed_slot_numbers(
+    gen_env: Any, providers: dict[str, FakeProvider], tmp_path: Path
+) -> None:
+    client, rubrics, questions = gen_env
+
+    def respond(req: CompletionRequest) -> str:
+        if "Task type:" not in req.user:
+            return reference(req)
+        task_type = req.user.split("Task type:", 1)[1].split()[0]
+        if task_type == "analytical":  # always one path: fails checks, slot 2 stays empty
+            bad = draft("analytical")
+            bad["paths"] = bad["paths"][:1]
+            return json.dumps(bad)
+        n = len(providers["alpha"].requests)
+        return json.dumps(draft(task_type, question=f"Question number {n}?"))
+
+    providers["alpha"].push(*[respond] * 20)
+    build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    text = (tmp_path / "review.md").read_text(encoding="utf-8")
+    assert "## 2. analytical" in text and "(empty slot)" in text and "## 4. creative" in text
+    slots_json = json.loads((tmp_path / "batch.json").read_text())["slots"]
+    assert [s["slot"] for s in slots_json] == [1, 2, 3, 4] and slots_json[1]["question_id"] is None
