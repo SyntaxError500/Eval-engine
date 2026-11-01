@@ -1,5 +1,5 @@
 name: generate
-version: 4
+version: 5
 # v2: v1 wrote "list three causes" questions whose criteria demanded three particular
 # causes, failing answers that named other valid ones. Open-set rule added.
 # v3 (review of 27 v2 questions): questions asked for "two explanations" and the rubric made
@@ -11,6 +11,11 @@ version: 4
 # and arguments accept any valid one; every path covers everything the question asks;
 # explanatory may have one path when only one valid explanation exists; creative cliché
 # checks name a finite list; no unverifiable precise statistics.
+# v5 (external review 2, 28/40 passed): creative craft tests must be stated in the brief
+# and quoted like any criterion; criteria must not narrow or change the question's words
+# ("five of the longest" vs "the five longest", "effective" vs "should be implemented",
+# "convey conviction" vs "use first person"); no "the two/three X" unless the count is
+# standard; distinguish dates and stages in history questions.
 description: >
   Stage 1. One call produces the question, its declared task type and the rubric (and, for
   creative tasks, the five most obvious answers). Generated before any answer exists.
@@ -31,6 +36,10 @@ system: |
   - No judgement words in the question either (clear, good, well, effective, strong...):
     criteria quote the question, so "state a clear position" would make an unmeasurable
     criterion. Write "state a position (for or against)".
+  - Don't write "the two conditions" or "the three causes" unless that number is the
+    standard, uncontested count; otherwise ask for "two conditions" or "three causes".
+  - In history questions, keep distinct events and dates distinct (for example, an
+    emancipation decree, its national ratification and later independence are not one event).
   - Every fact stated or assumed in the question is correct. If you are not sure of a
     fact, don't build the question on it.
   - For analytical and explanatory tasks, ask for ONE argument or ONE explanation ("Argue
@@ -58,8 +67,10 @@ system: |
     have two.
   - creative: the answer is a short original piece (a scene, a description, a pitch). One
     path of binary tests: one criterion per constraint the brief states (each quoting it),
-    plus craft tests in the expression dimension (is there a turn or development, does it
-    show rather than tell, does it avoid cliché). A cliché test must name the exact banned
+    plus craft tests in the expression dimension. A craft test (a turn, showing rather than
+    telling, phrases to avoid) is allowed ONLY if the brief itself asks for it in words, and
+    its criterion quotes those words like any other. If the brief doesn't mention it, don't
+    test it. A cliché test must name the exact banned
     phrases ("Does not use any of: \"x\", \"y\", \"z\"") — never "clichés such as".
     Craft tests must not contradict the brief (if the brief asks for internal thoughts, don't
     penalise stating them). Also list the five most obvious ways to answer the prompt in
@@ -72,7 +83,17 @@ system: |
   a criterion for it. That rules out unrequested extras: a named theory, a citation, a
   numeric example, a rebuttal, a real-world case, a specific textual passage, a
   measurement. If you think such a thing is needed, ask for it in the question.
-  Only creative craft tests (expression dimension) may set "requires" to null.
+  No criterion may set "requires" to null, creative craft tests included.
+
+  SAME MEANING AS THE QUESTION
+  A criterion must ask for exactly what its quoted words ask, not a narrower or different
+  thing:
+  - "name five of the longest rivers" is not "name the five longest rivers";
+  - "argue whether the tax is effective" is not "say whether it should be implemented";
+  - "convey personal conviction" doesn't require first-person pronouns; "show emotion"
+    allows action, speech or description;
+  - "explain how X works" doesn't require explaining why X saves money.
+  If a criterion needs a stricter meaning, write the question that way.
 
   RULES FOR EVERY CRITERION
   - Binary and observable: a statement a grader can check in the text ("Names at least one

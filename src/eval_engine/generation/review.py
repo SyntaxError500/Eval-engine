@@ -54,16 +54,28 @@ def build_batch(
     prompt_hash = client.prompts.get("generate").file_hash
     # Questions a reviewer rejected for reasons no automatic check can see (false balance,
     # an invalid path): listed by id in rejected.json, never reused, so their slot regenerates.
-    rejected = _rejected_ids(out_dir)
-    # A reused question must also pass the CURRENT checks: checks added after it was made
-    # (e.g. the several-alternatives rule) would otherwise let it through unexamined.
+    rejected = _id_list(out_dir / "rejected.json")
+    # A human reviewer's pass is final: accepted questions are kept as reviewed, even when a
+    # newer prompt version or a stricter check would regenerate them.
+    accepted = _id_list(out_dir / "accepted.json")
+    # Any other reused question must come from the current prompt and pass the CURRENT checks:
+    # checks added after it was made would otherwise let it through unexamined.
     existing = {
         (q.task_type, q.topic): q
         for q in questions.all()
-        if q.generator_prompt_hash == prompt_hash
-        and q.question_id not in rejected
-        and not check_rubric(rubrics.get(q.rubric_hash), weights, q.task_type)
+        if q.question_id not in rejected
+        and (
+            q.question_id in accepted
+            or (
+                q.generator_prompt_hash == prompt_hash
+                and not check_rubric(rubrics.get(q.rubric_hash), weights, q.task_type)
+            )
+        )
     }
+    # An accepted question wins its slot over any other candidate.
+    for q in questions.all():
+        if q.question_id in accepted:
+            existing[(q.task_type, q.topic)] = q
     built = skipped = 0
     failed: list[dict[str, Any]] = []
     retried: list[str] = []
@@ -120,8 +132,8 @@ def build_batch(
     }
 
 
-def _rejected_ids(out_dir: Path) -> set[str]:
-    path = out_dir / "rejected.json"
+def _id_list(path: Path) -> set[str]:
+    """Question ids from a reviewer list (accepted.json / rejected.json)."""
     if not path.exists():
         return set()
     return {r["question_id"] for r in json.loads(path.read_text(encoding="utf-8"))}
@@ -157,7 +169,7 @@ def _question_block(n: int, q: Question, r: Rubric) -> list[str]:
         out.append("")
         for c in p.criteria:
             tag = "core" if c.core else "non-core"
-            asked = f' ← asked by: "{c.requires}"' if c.requires else " ← craft test (by design)"
+            asked = f' ← asked by: "{c.requires}"' if c.requires else " ← (no quote)"
             out.append(
                 f"- `{c.criterion_id}` {c.dimension.value}, {tag}, w={c.weight:g}: "
                 f"{c.statement}{asked}"

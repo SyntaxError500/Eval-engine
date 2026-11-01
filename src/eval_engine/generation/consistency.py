@@ -203,9 +203,10 @@ def check_rubric(
 
 # ---------------------------------------------------------------- traceability (review 1, A)
 
-# Creative craft tests (turn, show-don't-tell, clichés) are graded by design (design doc §9)
-# even though a brief rarely spells them out; they are the only criteria allowed no quote.
-_CRAFT_EXEMPT = frozenset({Dimension.EXPRESSION})
+# No exemptions (external review 2): craft tests the brief doesn't state (a turn, phrase
+# bans, show-don't-tell) failed answers that followed the brief exactly, in 7 of 9 creative
+# questions. A craft expectation must be written into the brief, and its criterion quotes it.
+_CRAFT_EXEMPT: frozenset[Dimension] = frozenset()
 _OPEN_LIST = re.compile(r"such as|e\.g\.|for example|common|overused|typical", re.IGNORECASE)
 _EXACTLY = re.compile(r"\bexactly\b", re.IGNORECASE)
 _NON_WORD = re.compile(r"[^a-z0-9]+")

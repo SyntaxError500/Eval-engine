@@ -16,5 +16,77 @@
   "sheet_number_v4": 25,
   "reason": "Question asks how clotting is initiated; criteria require downstream fibrin formation and the platelet plug.",
   "by": "pre-filter 2026-11-01"
+ },
+ {
+  "question_id": "5a492c637640",
+  "sheet_number_v4": 4,
+  "reason": "Assumes 'the two conditions' of double effect; the standard formulation has four.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "c555e910c2cb",
+  "sheet_number_v4": 9,
+  "reason": "C1 narrows 'five of the longest rivers' to 'among the five longest'.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "80b5228e62c0",
+  "sheet_number_v4": 16,
+  "reason": "Question asks whether the tax is effective; C1 demands a recommendation to implement.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "e9829aabdcd6",
+  "sheet_number_v4": 21,
+  "reason": "C3 demands an explanation of reduced upfront investment the question doesn't ask for.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "3dadfd69ad7c",
+  "sheet_number_v4": 29,
+  "reason": "Blurs 1793 emancipation, the 1794 French decree and 1804 independence; P3 overstates French policy.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "14f014e48366",
+  "sheet_number_v4": 32,
+  "reason": "Unrequested decision (C4) and phrase bans (C5).",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "2b28e1af770f",
+  "sheet_number_v4": 33,
+  "reason": "Unrequested phrase bans.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "337e07342987",
+  "sheet_number_v4": 34,
+  "reason": "Unrequested phrase bans (C4) and turn (C5).",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "05c2f2ca70a4",
+  "sheet_number_v4": 36,
+  "reason": "Unrequested phrase bans.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "7cb37a949c50",
+  "sheet_number_v4": 37,
+  "reason": "Unrequested showing rule and phrase bans.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "b687bcd90776",
+  "sheet_number_v4": 38,
+  "reason": "C3 forces first-person wording; C4 narrows how emotion may be shown.",
+  "by": "external review 2"
+ },
+ {
+  "question_id": "13360f60b1fe",
+  "sheet_number_v4": 39,
+  "reason": "Unrequested style requirements and phrase bans.",
+  "by": "external review 2"
  }
 ]

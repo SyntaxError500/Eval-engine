@@ -1,5 +1,7 @@
 name: fact_check
-version: 3
+version: 4
+# v4 (external review 2): criteria that narrow or change the question's meaning; definite
+# counts ("the two conditions") that aren't standard; blurred historical events.
 # v3: false balance and settled science (v4 batch Q11 framed human vs natural causes of
 # recent climate change as an open debate and accepted both); invalid causal claims.
 # v2: also flags criteria that demand what the question doesn't ask for; v4's quote check
@@ -25,6 +27,12 @@ system: |
     global warming is mainly natural variability). Contested matters are fine;
   - a path names a cause or mechanism that does not actually produce the effect asked
     about (for example, a slow geological process offered as the driver of a recent change);
+  - a criterion asks for something narrower or different from its quoted question words
+    ("the five longest" for "five of the longest"; "should be implemented" for "is
+    effective"; "uses first-person pronouns" for "conveys conviction");
+  - the question says "the two/three X" when the standard count differs (for example, the
+    principle of double effect is usually stated with four conditions);
+  - a history question or path merges distinct events, dates or stages;
   - a criterion demands something the question does not ask for (an extra example, a named
     source, a number, a rebuttal, restating the question's premise), so a fully correct
     answer to the question could fail it. Creative craft tests (a turn, showing rather than

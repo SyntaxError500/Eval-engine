@@ -374,17 +374,12 @@ def test_requires_quote_matches_despite_case_and_punctuation() -> None:
     assert not [p for p in problems_for(d) if "requires" in p]
 
 
-def test_creative_craft_tests_need_no_quote_but_constraints_do() -> None:
+def test_creative_criteria_all_need_a_quote_from_the_brief() -> None:
     d = draft("creative")
     for c in d["paths"][0]["criteria"]:
         c["requires"] = None
     found = [p for p in problems_for(d) if "requires" in p]
-    assert found and all("expression" not in p for p in found)
-    assert not any(
-        c["dimension"] == "expression" and c["criterion_id"] in p
-        for p in found
-        for c in d["paths"][0]["criteria"]
-    )
+    assert len(found) == len(d["paths"][0]["criteria"])  # craft tests included
 
 
 def test_open_ended_cliche_list_rejected() -> None:
@@ -492,3 +487,24 @@ def test_rejected_questions_are_regenerated(
         again["built"] == 1
         and victim not in json.loads((tmp_path / "batch.json").read_text())["question_ids"]
     )
+
+
+def test_accepted_questions_survive_stricter_checks_and_new_prompts(
+    gen_env: Any, providers: dict[str, FakeProvider], tmp_path: Path
+) -> None:
+    client, rubrics, questions = gen_env
+
+    def gen(req: CompletionRequest) -> str:
+        task_type = req.user.split("Task type:", 1)[1].split()[0]
+        n = len(providers["alpha"].requests)
+        return json.dumps(draft(task_type, question=f"Question number {n}?"))
+
+    providers["alpha"].push(*[gen, reference] * 8)
+    build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    keep = questions.all()[0]
+    (tmp_path / "accepted.json").write_text(json.dumps([{"question_id": keep.question_id}]))
+    for q in questions.all():  # every question now looks like an older prompt version
+        questions.save(q.model_copy(update={"generator_prompt_hash": "old"}))
+    again = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
+    assert again["built"] == 3 and again["skipped"] == 1
+    assert keep.question_id in json.loads((tmp_path / "batch.json").read_text())["question_ids"]
