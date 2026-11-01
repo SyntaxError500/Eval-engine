@@ -30,6 +30,6 @@ bundling are rejected, and analytical paths require reasoning.
 - #25 (exercise and mental health), path P1: the endorphin explanation is popular, but its evidence is weaker than the BDNF and psychosocial paths.
 - #10 (bedtime routines): "factual" is a stretch for an everyday-life routine.
 - #29 (Haitian Revolution): path P3, "the 1794 French decree forced abolition", is a contested causal framing.
-- Creative briefs with "3–8 sentences" as a core constraint (#31, #38): allowed by design. Decide whether you'd fail them.
+- Creative briefs with "3–8 sentences" as a core constraint (#31, #39): allowed by design. Decide whether you'd fail them.
 
 The checklist is unchanged from review 1 (8 items).
