@@ -508,3 +508,18 @@ def test_accepted_questions_survive_stricter_checks_and_new_prompts(
     again = build_batch(client, rubrics, questions, per_type=1, out_dir=tmp_path)
     assert again["built"] == 3 and again["skipped"] == 1
     assert keep.question_id in json.loads((tmp_path / "batch.json").read_text())["question_ids"]
+
+
+def test_failed_slot_gets_new_drafts_on_rerun_not_cached_ones(
+    gen_env: Any, providers: dict[str, FakeProvider]
+) -> None:
+    client, rubrics, questions = gen_env
+    bad = draft("factual")
+    bad["paths"][0]["criteria"] = [crit("P1.C1", "correctness")]
+    providers["alpha"].push(*[json.dumps(bad)] * 3)
+    with pytest.raises(GenerationError):
+        generate_question(client, rubrics, questions, "science", TaskType.FACTUAL)
+    calls = len(providers["alpha"].requests)
+    providers["alpha"].push(json.dumps(draft("factual")), reference)
+    generate_question(client, rubrics, questions, "science", TaskType.FACTUAL)
+    assert len(providers["alpha"].requests) == calls + 2  # live call, not a cache replay

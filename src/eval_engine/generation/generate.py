@@ -62,7 +62,10 @@ def generate_question(
     doubts: list[str] = []
     draft: RubricDraft | None = None
     for attempt in range(1, GENERATION_ATTEMPTS + 1):
-        draft = client.complete("generator", "generate", variables, RubricDraft).value
+        # fresh=True: a cached draft that failed the checks would otherwise be replayed on
+        # every rerun of the same slot, so retrying a failed slot could never succeed.
+        # Accepted questions are kept in the rubric store; caching drafts gains nothing.
+        draft = client.complete("generator", "generate", variables, RubricDraft, fresh=True).value
         problems = check_rubric(draft, weights, task_type)
         if not problems:
             # Only rubrics that pass the cheap code checks get the fact-check call.
