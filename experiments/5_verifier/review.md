@@ -4,101 +4,25 @@ Each item is a proposed new rubric path. The verifier is scored against the clas
 so a wrong label makes a wrong result. For every item, please say whether its class is right
 and give a corrected class or a reason to drop it if not. Results are left out on purpose.
 
+Classes, in order of precedence (external review 1):
+
+- **misconception**: a plausible domain misunderstanding, stated confidently.
+- **nonsense**: a demonstrably false literal mechanism. A fancy name or a metaphor alone
+  is not enough.
+- **invalid_reasoning**: the path requires an explicitly faulty inference.
+- **holed**: plausible checks that can all be met while a requirement of the question is
+  absent.
+- **restatement**: a listed path in other words, or a narrower case of it.
 - **valid_unlisted**: factually sound, does what the question asks, and is not a listed path
   or a narrower case of one.
-- **nonsense**: rests on an invented mechanism or false facts.
-- **misconception**: a common false belief, stated confidently.
-- **invalid_reasoning**: the reasoning does not establish the conclusion.
-- **restatement**: a listed path in other words, or a narrower case of it.
-- **holed**: real, but the path could be fully met while something needed is missing.
 
-Only the path and the justification reach the verifier. The learner answer is used to test
-the trigger, and the last field of each item is for you.
+When two defects are equally plausible, the item is rewritten or dropped.
 
-## Q1 (analytical, 78d7767e5351)
+The verifier sees the question, the listed paths with their criteria, the proposed path and
+the proposer's justification. It never sees item IDs, labels, notes or the learner answer.
+The learner answer only tests the trigger, and the last field of each item is for you.
 
-In a short paragraph (3–8 sentences), argue whether working from home increases overall work‑life balance, and support your argument with at least two distinct reasons.
-
-Listed paths:
-- **P1**: Argument that working from home increases overall work‑life balance
-- **P2**: Argument that working from home does not increase overall work‑life balance
-
-### 78d7767e5351-valid_mixed
-
-**Intended class:** valid_unlisted
-
-**Path:** This approach argues that working from home produces a neutral or conditional effect on work-life balance by highlighting offsetting structural pressures.
-- States a position that working from home yields mixed effects on overall work-life balance.
-- Provides a first distinct reason involving boundary blurring.
-- Provides a second distinct reason involving schedule autonomy.
-
-**Proposer's justification:** This path presents a nuanced conditional argument that does not simply affirm or deny the prompt's premise of a unidirectional increase, thus differing from both binary paths in the rubric while fully addressing the prompt's structural demands.
-
-**Learner answer:** Working from home does not uniformly increase overall work-life balance because it simultaneously introduces liberating schedule autonomy and burdensome boundary blurring. On one hand, the elimination of a daily commute provides valuable hours that employees can redirect toward personal care and family engagement. On the other hand, the physical integration of office and home environments frequently leads to extended evening hours and an inability to mentally detach from professional duties. Consequently, the net impact on balance depends heavily on individual discipline rather than the remote arrangement itself.
-
-**Why it is this class:** Hand check: a conditional verdict is a real answer to 'argue whether', and neither listed path takes it.
-
-### 78d7767e5351-nonsense
-
-**Intended class:** nonsense
-
-**Path:** The chronometric kinetic alignment approach establishes work-life balance through the harmonization of temporal biological frequencies with office architecture.
-- Explains how the synchronization of residential circadian oscillation with remote desktop pixel refresh rates reduces daily stress hormones.
-- States that remote furniture density absorbs ambient thermal friction to improve domestic tranquility.
-
-**Proposer's justification:** This path brings a profound physiological and physical perspective to remote work analysis by focusing on biological frequencies and thermal friction. It introduces entirely unique mechanisms not covered in the existing paths.
-
-**Learner answer:** Working from home significantly increases overall work-life balance by synchronizing residential circadian oscillations with remote desktop pixel refresh rates, which directly calms the nervous system. Additionally, the specific furniture density found in home environments absorbs ambient thermal friction to greatly improve domestic tranquility and daily peace.
-
-**Why it is this class:** The criteria rely on pseudoscientific nonsense regarding screen refresh rates synchronizing with biological frequencies and furniture density absorbing thermal friction, presenting these nonexistent mechanisms as valid facts of physics and biology.
-
-### 78d7767e5351-invalid_reasoning
-
-**Intended class:** invalid_reasoning
-
-**Path:** This path argues that working from home increases work-life balance by pointing out that morning sunlight enters the home office window before the employee begins typing.
-- States a position that working from home increases overall work-life balance
-- Explains that morning sunlight enters the home office window before work begins as the primary reason for increased work-life balance
-
-**Proposer's justification:** This path presents a clear argument supported by observable morning events that occur for remote workers. It explores a fresh angle on daily routines that differs from standard productivity metrics.
-
-**Learner answer:** Working from home significantly increases overall work-life balance. Specifically, morning sunlight streams directly through the home office window before the employee even begins typing. This natural illumination creates an environment that establishes the desired balance.
-
-**Why it is this class:** This path relies on a post hoc fallacy by treating the temporal sequence of morning sunlight preceding the workday as the cause of improved work-life balance, which the criteria demand as a sound argument step.
-
-### 78d7767e5351-restatement
-
-**Intended class:** restatement
-
-**Path:** This path utilizes the remote workplace equilibrium framework to argue that working from home increases overall work-life balance.
-- States a position that working from home increases overall work-life balance.
-- Provides a first distinct reason that supports the position using the remote workplace equilibrium framework.
-- Provides a second distinct reason that supports the position using the remote workplace equilibrium framework.
-
-**Proposer's justification:** This path introduces the remote workplace equilibrium framework to robustly argue for the benefits of working from home. It successfully offers two distinct supporting reasons while presenting a fresh and valid perspective.
-
-**Learner answer:** Working from home significantly increases overall work-life balance by transforming daily routines. First, eliminating the daily commute saves hours of wasted time that can instead be dedicated to personal well-being and family connection. Second, flexible scheduling empowers professionals to design their days around both peak productivity periods and personal commitments, creating a harmonious daily rhythm.
-
-**Why it is this class:** This path is a restatement of Path P1, offering the exact same central argument and two reasons under a newly invented name without adding new substance.
-
-### 78d7767e5351-holed
-
-**Intended class:** restatement
-
-**Changed on hand check:** Two reasons for the same position as P1; the claimed hole is not one.
-
-**Path:** This path presents an argument supporting remote work by detailing personal time gains and schedule flexibility.
-- States a position that working from home increases overall work-life balance.
-- Provides a first distinct reason that supports the position by mentioning the elimination of commuting time.
-- Provides a second distinct reason that supports the position by mentioning flexible schedule management.
-
-**Proposer's justification:** This path establishes a comprehensive defense of remote work using distinct structural reasons that directly fulfill the prompt requirements. It differs from existing paths by focusing specifically on commute elimination and schedule control rather than general productivity claims.
-
-**Learner answer:** Working from home significantly increases overall work-life balance by transforming how daily routines are managed. First, eliminating the daily commute saves hours each week that can be redirected toward family and rest. Second, having control over schedule flexibility allows individuals to seamlessly blend personal obligations with professional duties without added stress.
-
-**Why it is this class:** The criteria verify the presence of two reasons, but they do not mandate that those reasons be logically sound or properly connected to the claim, leaving a hole where a superficial or nonsensical reason could still pass.
-
-## Q2 (explanatory, 91798e725180)
+## Q1 (explanatory, 91798e725180)
 
 In a short paragraph (3‑8 sentences), explain why individuals often follow social norms even when those norms conflict with their personal moral convictions.
 
@@ -215,6 +139,8 @@ Listed paths:
 
 **Intended class:** holed
 
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
+
 **Path:** This path explains the behavior through perceived authority and systemic reinforcement mechanisms.
 - States that individuals follow social norms due to perceived authority.
 - Explains that systemic reinforcement mechanisms maintain norm adherence.
@@ -222,11 +148,11 @@ Listed paths:
 
 **Proposer's justification:** This path offers a distinct perspective by focusing on structural authority and reinforcement systems rather than internal identity or simple peer approval. The criteria clearly capture the required elements while ensuring the answer thoroughly addresses the core question.
 
-**Learner answer:** Individuals often follow social norms even when those norms conflict with personal moral convictions because established authority figures enforce compliance through structured systems. These groups maintain institutional reinforcement mechanisms that reward adherence and penalize deviance. Consequently, people calculate that the structural consequences of breaking a norm outweigh the personal cost of violating their own moral beliefs. This systemic pressure ensures that social norms persist reliably across communities despite individual reservations.
+**Learner answer:** Individuals often follow social norms because established authority figures enforce them. Institutions such as schools, workplaces and governments set expectations for how people behave. These institutions reward people who comply and penalise those who deviate. Over time, this systemic reinforcement keeps social norms in place across whole communities.
 
 **Why it is this class:** The criteria fail to require any mention of the actual conflict between personal moral convictions and the social norms, allowing an answer to satisfy every criterion while barely touching upon the moral conflict mentioned in the prompt.
 
-## Q3 (explanatory, b850a615f22e)
+## Q2 (explanatory, b850a615f22e)
 
 In a short paragraph (3–8 sentences), explain one mechanism by which regular physical activity improves mental health.
 
@@ -310,6 +236,21 @@ Listed paths:
 
 **Why it is this class:** False: sweat is mainly a cooling mechanism. The liver and kidneys clear toxins and metabolise cortisol, and sweat does not remove meaningful amounts. A common wellness myth.
 
+### b850a615f22e-valid_monoamine
+
+**Intended class:** valid_unlisted
+
+**Path:** Explaining mental health improvements through the mechanism of increased neurotransmitter availability such as serotonin and norepinephrine.
+- Names a valid mechanism by which regular physical activity improves mental health
+- Describes exercise-related changes in serotonin or noradrenaline signalling as a contribution to mood regulation.
+- Explains how elevated neurotransmitter levels modulate mood regulation pathways
+
+**Proposer's justification:** This path presents a distinct neurochemical pathway involving monoamine neurotransmitters rather than endorphins or BDNF. The criteria comprehensively track the identification and explanation of this specific mechanism as requested by the prompt.
+
+**Learner answer:** Regular physical activity improves mental health through the enhancement of monoamine neurotransmitter availability in the brain. Specifically, aerobic exercise stimulates the synthesis and release of serotonin and norepinephrine within critical neural circuits. These elevated neurotransmitter levels facilitate improved signal transmission in regions responsible for emotional processing. Consequently, this biochemical adjustment leads to better mood stability and a significant reduction in depressive symptoms.
+
+**Why it is this class:** Monoamine signalling is a route distinct from endorphins, BDNF and self-efficacy. External review 1: revised from b850a615f22e-holed; its mandatory claim of raised baseline synaptic serotonin and noradrenaline was more than the evidence supports.
+
 ### b850a615f22e-nonsense
 
 **Intended class:** nonsense
@@ -355,137 +296,7 @@ Listed paths:
 
 **Why it is this class:** This path is a restatement of Path P1, utilizing the exact same central argument and criteria under a newly coined name.
 
-### b850a615f22e-holed
-
-**Intended class:** valid_unlisted
-
-**Changed on hand check:** Monoamines are a real mechanism separate from endorphins, BDNF and self-efficacy. The claimed hole (exercise frequency) is not asked for.
-
-**Path:** Explaining mental health improvements through the mechanism of increased neurotransmitter availability such as serotonin and norepinephrine.
-- Names a valid mechanism by which regular physical activity improves mental health
-- States that aerobic exercise increases baseline levels of serotonin and norepinephrine in the synaptic cleft
-- Explains how elevated neurotransmitter levels modulate mood regulation pathways
-
-**Proposer's justification:** This path presents a distinct neurochemical pathway involving monoamine neurotransmitters rather than endorphins or BDNF. The criteria comprehensively track the identification and explanation of this specific mechanism as requested by the prompt.
-
-**Learner answer:** Regular physical activity improves mental health through the enhancement of monoamine neurotransmitter availability in the brain. Specifically, aerobic exercise stimulates the synthesis and release of serotonin and norepinephrine within critical neural circuits. These elevated neurotransmitter levels facilitate improved signal transmission in regions responsible for emotional processing. Consequently, this biochemical adjustment leads to better mood stability and a significant reduction in depressive symptoms.
-
-**Why it is this class:** The criteria verify the naming and neurochemical description of monoamine changes, but completely leave out any requirement to state how long-term consistency or specific exercise frequencies are needed to sustain these neurotransmitter changes, leaving a hole regarding the regularity aspect of the prompt.
-
-## Q4 (explanatory, c08ec38ec72f)
-
-In a short paragraph (3–8 sentences), explain how the use of an unreliable narrator in F. Scott Fitzgerald’s *The Great Gatsby* influences the reader’s understanding of the American Dream.
-
-Listed paths:
-- **P1**: Explanation that the narrator’s unreliability creates ambiguity about the attainability of the American Dream.
-- **P2**: Explanation that the narrator’s unreliability reveals the American Dream as a mythic illusion rather than a realistic goal.
-
-### c08ec38ec72f-valid_class
-
-**Intended class:** valid_unlisted
-
-**Path:** This path analyzes how the narrator's selective bias exposes the class-based exclusivity underlying the American Dream.
-- States that the narrator exhibits selective bias.
-- States that the narrator’s unreliability influences the reader’s understanding of the American Dream.
-- Explains that this influence exposes the class-based exclusivity inherent in the American Dream.
-
-**Proposer's justification:** This path introduces a distinct mechanism focusing on class-based exclusivity and selective bias rather than general ambiguity or illusion. It provides a novel valid route that meets all prompt requirements.
-
-**Learner answer:** Nick Carraway functions as an unreliable narrator whose upper-class origins and moral blind spots shape the entire narrative of Gatsby's life. Because Nick selectively romanticizes certain characters while harshly judging others based on inherited social codes, the reader's understanding of the American Dream is filtered through a lens of entrenched privilege. This narrative bias exposes how the dream is not a universal meritocracy, but an exclusive club protected by those who already hold social power. Consequently, the reader perceives the dream as structurally barred to those outside the established elite.
-
-**Why it is this class:** Hand check: class exclusivity is a distinct reading from ambiguity about attainability or the Dream as myth.
-
-### c08ec38ec72f-valid_complicity
-
-**Intended class:** valid_unlisted
-
-**Path:** Explanation that Nick's admiring narration draws the reader into Gatsby's longing, so the reader feels the Dream's pull while also seeing what it excuses.
-- Identifies Nick as a narrator whose admiration for Gatsby makes him unreliable.
-- States that this narration draws the reader into sympathising with Gatsby's pursuit.
-- Explains that the reader therefore shares in excusing the corruption behind the American Dream.
-
-**Proposer's justification:** This concerns what the narration does to the reader's own sympathies rather than whether the Dream is attainable or a myth. The reader takes part in the attraction before judging it.
-
-**Learner answer:** Nick Carraway is unreliable because he admires Gatsby and calls him great despite his crimes. Since we see everything through Nick, we are drawn into sympathising with Gatsby's pursuit of Daisy and wealth. This makes the reader share in excusing the bootlegging and deceit behind that pursuit. The American Dream is therefore understood from the inside, as something attractive enough to make us overlook how it is achieved.
-
-**Why it is this class:** Hand-written. Reader complicity through Nick's narration is a recognised reading. Weakest of the hand-written items, since literary readings overlap.
-
-### c08ec38ec72f-misconception_wrong_narrator
-
-**Intended class:** misconception
-
-**Path:** Explanation that Gatsby narrates his own story, and that his boasting about his rise leads readers to distrust the American Dream.
-- Identifies Jay Gatsby as the unreliable narrator of the novel.
-- States that Gatsby's boasting about himself influences the reader's understanding of the American Dream.
-- Explains that because Gatsby tells his own success story, the reader cannot trust that success in America is earned.
-
-**Proposer's justification:** This focuses on self-mythologising in the narration itself. A narrator describing his own rise is the source of the unreliability, which gives a direct link to doubts about self-made success that neither listed path draws.
-
-**Learner answer:** Jay Gatsby is an unreliable narrator because he tells the story of his own rise from poverty. He boasts about his parties and his wealth throughout the novel. Since we only hear his version, we cannot be sure that any of his success was earned. This makes the reader doubt that hard work leads to success in America.
-
-**Why it is this class:** False: Nick Carraway narrates the novel, not Gatsby. A basic factual error about the book, in the shape of a reasonable-sounding argument.
-
-### c08ec38ec72f-nonsense
-
-**Intended class:** nonsense
-
-**Path:** The thermal caloric mediation approach analyzes how the narrator absorbs and radiates moral temperature to quantify the decay of the American Dream.
-- States that the narrator operates as a thermal caloric sink for moral temperature.
-- Explains that radiating this thermal energy shifts the literal temperature of the American Dream.
-- Includes a measurement of thermodynamic loss in the narrative structure.
-
-**Proposer's justification:** This path provides a rigorous physical analysis of the narrative text by examining how thermal caloric properties govern literary interpretation. It uniquely introduces thermodynamics to distinguish itself from standard thematic approaches.
-
-**Learner answer:** Nick Carraway functions as a primary thermal caloric sink in the novel, absorbing the ambient moral temperature of West Egg. By radiating this stored heat back into the narrative atmosphere, he alters the physical state of the American Dream from a solid goal to a melted vapor. This thermodynamic transfer directly dictates how readers measure the literal cooling of ambition across the chapters. Ultimately, the narrator achieves a negative thirty degrees of moral heat loss, freezing the idealistic aspirations into a permanent state of illusion.
-
-**Why it is this class:** This path is nonsense because it introduces pseudoscientific thermodynamic concepts and thermal caloric physics into literary analysis, which do not exist in literary theory or the novel itself.
-
-### c08ec38ec72f-invalid_reasoning
-
-**Intended class:** invalid_reasoning
-
-**Path:** This path posits that Nick Carraway's Midwestern origins directly dictate his financial investments in the East, which in turn shape the reader's view of the American Dream.
-- States that Nick Carraway is from the American Midwest.
-- Explains that the narrator's Midwestern origins cause him to make specific financial investments in the East.
-- States that the narrator's financial investments influence the reader's understanding of the American Dream.
-
-**Proposer's justification:** This path offers a completely unique perspective by grounding the analysis in Nick Carraway's literal geographic origin and his career in bonds. It establishes a clear chain of logic connecting his background to financial choices and ultimately to the reader's view of the American Dream, distinguishing itself entirely from ambiguity or mythic illusion approaches.
-
-**Learner answer:** In F. Scott Fitzgerald's novel, the narrator Nick Carraway originates from the American Midwest. Because he grew up in this region, he enters the bond business upon moving east to New York. These specific financial investments and stock dealings shape the reader's understanding of the American Dream by demonstrating the practical economic realities of the 1920s.
-
-**Why it is this class:** The core flaw is that the reasoning treats Nick's geographic origin and his career choices as the causal mechanism for shaping the reader's thematic understanding of the American Dream, which represents a non-sequitur since career logistics do not logically establish literary theme interpretation.
-
-### c08ec38ec72f-restatement
-
-**Intended class:** restatement
-
-**Path:** This path presents the Dual Perspective Technique, demonstrating how the narrator's untrustworthy perspective reshapes the audience's perception of the American Dream.
-- Identifies the narrator as unreliable.
-- States that the narrator's unreliability influences the reader's understanding of the American Dream.
-- Explains that this influence creates ambiguity about whether the American Dream can be attained.
-
-**Proposer's justification:** This newly proposed path introduces the Dual Perspective Technique to capture a distinct analytical angle on the literary text. It uniquely articulates how the narrative voice shifts reader comprehension regarding the core thematic aspirations.
-
-**Learner answer:** In F. Scott Fitzgerald's The Great Gatsby, the use of an untrustworthy narrator shapes the audience's perception of the American Dream. Because Nick Carraway presents events through a heavily subjective lens, readers experience persistent uncertainty regarding the ultimate attainability of success and wealth. This slanted viewpoint generates profound ambiguity, preventing the audience from forming a stable conclusion about whether the dream is genuinely within reach.
-
-**Why it is this class:** This item is a restatement of Path P1, utilizing synonymous wording and a new label while maintaining the exact same underlying logic and criteria requirements as the original path.
-
-### c08ec38ec72f-holed
-
-**Intended class:** holed
-
-**Path:** This approach focuses on the narrator's social background to explain how class bias shapes the portrayal of wealth in the novel.
-- Identifies the narrator as coming from a specific social background.
-- Explains how the narrator's social background influences the perception of wealth.
-- Mentions the concept of wealth in the novel.
-
-**Proposer's justification:** This path presents a thorough examination of Nick Carraway's social origins and perspective, offering a fresh angle compared to existing criteria. It thoroughly satisfies the required dimensions by anchoring the analysis in observable textual elements.
-
-**Learner answer:** Nick Carraway originates from a respectable Midwestern family and maintains a conventional upper-middle-class moral perspective. Because of this specific social background, his narration filters the extravagant display of riches in the East through a lens of both fascination and judgment. This perspective directly shapes how the reader perceives the pursuit of success and prosperity in the narrative. Ultimately, the narrator's background guides the audience to view the characters' ambitions through a socially constrained viewpoint.
-
-**Why it is this class:** The criteria successfully check for social background, wealth, and reasoning, but completely omit any explicit criterion requiring the answer to connect these ideas directly to the American Dream as requested by the prompt, leaving a substantive hole in the grading rubric while all criteria statements remain true about the answer text itself.
-
-## Q5 (explanatory, 610c46d48e48)
+## Q3 (explanatory, 610c46d48e48)
 
 Explain why many people frequently misplace their keys, offering one plausible explanation in a short paragraph (3–8 sentences).
 
@@ -569,7 +380,7 @@ Listed paths:
 
 **Why it is this class:** This item is a restatement of Path P1, presenting the exact same central argument about lacking a designated spot using different vocabulary and naming it the absent-minded placement perspective.
 
-## Q6 (analytical, d757eca4528c)
+## Q4 (analytical, d757eca4528c)
 
 In a short paragraph (3‑8 sentences), present one position on whether governments should require mandatory data‑privacy standards for consumer Internet‑of‑Things (IoT) devices, and support it with at least one specific reason or piece of evidence.
 
@@ -619,11 +430,13 @@ Listed paths:
 
 **Learner answer:** Governments should definitely require mandatory data-privacy standards for consumer Internet-of-Things devices. Modern smart refrigerators and thermostats constantly connect to home Wi-Fi networks and transmit daily user activity logs to remote corporate servers. Because these connected appliances communicate over standard internet protocols to external servers, governments must establish mandatory privacy regulations.
 
-**Why it is this class:** The reasoning criterion relies on a true premise about network connectivity, but that technical fact does not actually establish the necessity of government mandates, making the reasoning invalid despite the true premise.
+**Why it is this class:** Personal-data transmission is relevant supporting evidence for a pro-standards argument already covered by P1.
 
 ### d757eca4528c-holed
 
 **Intended class:** holed
+
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
 
 **Path:** This approach focuses on detailing the economic growth implications for tech manufacturers under mandatory standards.
 - States the position that governments should require mandatory data-privacy standards for consumer IoT devices.
@@ -631,11 +444,11 @@ Listed paths:
 
 **Proposer's justification:** This path presents a rigorous examination of the economic mechanisms underlying IoT privacy regulation, providing a novel angle distinct from the broad support or opposition paths already listed. It successfully captures the mandatory stance while fulfilling the requirement for a specific supporting argument.
 
-**Learner answer:** Governments should definitely require mandatory data-privacy standards for consumer Internet-of-Things devices to protect public safety. When manufacturing firms face standardized compliance costs, they redirect capital toward developing secure hardware modules rather than rushing vulnerable products to market. This structural shift ultimately fosters a stable and secure digital ecosystem for all consumers.
+**Learner answer:** Governments should require mandatory data-privacy standards for consumer IoT devices. Meeting such standards would add testing and certification costs for manufacturers. These costs would fall hardest on small firms, which might delay or cancel new products. As a result, the pace of innovation in smart-home devices could slow.
 
 **Why it is this class:** The criteria test for stating the position and discussing manufacturing costs, but they completely omit the requirement to mention consumer Internet-of-Things devices in the supporting reason itself, creating a hole where an answer could discuss compliance costs abstractly without tying them directly to IoT devices in the reasoning step.
 
-## Q7 (analytical, d92e0ad73cb8)
+## Q5 (analytical, d92e0ad73cb8)
 
 In a short paragraph of 3–6 sentences, argue whether implementing a progressive wealth tax on the richest households would reduce economic inequality in a market economy. State a position (for or against) and support it with at least two distinct arguments.
 
@@ -650,28 +463,14 @@ Listed paths:
 **Path:** This path argues that a progressive wealth tax will fail to reduce economic inequality because it will trigger massive capital flight and depress overall economic investment.
 - States a position against implementing a progressive wealth tax.
 - Explains how capital flight resulting from the tax reduces the domestic capital base available for wage-generating investments.
-- Explains how reduced tax compliance costs and administrative burdens undermine state revenue collection.
+- Explains how high valuation and enforcement costs or tax avoidance can reduce the tax's net revenue, limiting redistributive spending.
 - Links the negative economic consequences to their ultimate effect on economic inequality.
 
 **Proposer's justification:** This path presents a coherent anti-tax position grounded in specific economic mechanisms like capital flight and administrative failure, rather than simply stating generic opposition. It fulfills all prompt requirements while offering a distinct analytical framework from the existing listed paths.
 
 **Learner answer:** Implementing a progressive wealth tax on the richest households is a counterproductive approach that will fail to reduce economic inequality in a market economy. First, heavily taxing accumulated capital drives international capital flight, which shrinks the domestic investment pool and depresses future job and wage growth for lower-income earners. Second, the extreme administrative complexity of valuing illiquid assets leads to immense enforcement costs and widespread avoidance, resulting in lower net public revenues than anticipated. Ultimately, by crippling the productive capacity of the economy and generating negligible fiscal returns, the tax exacerbates the very disparities it aims to resolve.
 
-**Why it is this class:** Hand check: authored as valid, but capital flight is a reason under P2 (against the tax), not a new path.
-
-### d92e0ad73cb8-nonsense
-
-**Intended class:** nonsense
-
-**Path:** The thermal fiscal calibration method, which argues that wealth taxation functions by stabilizing market temperatures and cooling high-asset velocity.
-- States a position for or against the wealth tax
-- Explains how asset velocity cools market temperatures to reduce inequality
-
-**Proposer's justification:** This path successfully introduces a rigorous economic argument based on asset velocity and thermal fiscal calibration. It offers a distinct perspective not covered by the existing paths by framing wealth distribution through thermodynamic market principles.
-
-**Learner answer:** Implementing a progressive wealth tax is an effective policy because it activates the thermal fiscal calibration of the market. By heavily taxing the richest households, the state directly cools down runaway asset velocity and stabilizes the economic temperature. This thermal regulation prevents capital from overheating in speculative sectors, thereby naturally reducing economic inequality.
-
-**Why it is this class:** The flaw in this path is that its core reasoning criterion relies on the false, pseudoscientific mechanism of thermal fiscal calibration and market temperatures, which do not exist in standard economics. This makes the path nonsense despite its confident tone.
+**Why it is this class:** Hand check: authored as valid, but capital flight is a reason under P2 (against the tax), not a new path. External review 1: the criterion said reduced costs undermine revenue, the wrong direction; fixed.
 
 ### d92e0ad73cb8-invalid_reasoning
 
@@ -707,17 +506,19 @@ Listed paths:
 
 **Intended class:** holed
 
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
+
 **Path:** The proposer uses a structural mechanics approach that defends a wealth tax by detailing how capital reallocation functions.
 - States a position for implementing a progressive wealth tax
 - Explains how capital reallocation reduces economic inequality
 
 **Proposer's justification:** This path establishes a clear pro position and uses structural capital reallocation to demonstrate inequality reduction. It differs from existing paths by focusing explicitly on the mechanical movement of funds rather than general economic growth metrics.
 
-**Learner answer:** Implementing a progressive wealth tax on the richest households is essential for reducing economic inequality in a market economy. By shifting idle accumulated capital into public infrastructure funds, the tax directly finances social programs that elevate lower-income households. Furthermore, this reallocation curbs the disproportionate concentration of market power at the very top, fostering a more balanced distribution of economic resources.
+**Learner answer:** I support a progressive wealth tax on the richest households. Its revenue can be redirected into public services used by lower-income households. This reallocation reduces inequality by increasing the resources available to those households.
 
 **Why it is this class:** The criteria leave a hole because they only require explaining one argument about capital reallocation, whereas the question asks for at least two distinct arguments, and the answer only provides one argument split into two sentences rather than two separate arguments like market power reduction versus revenue generation or capital flight risks balanced against social spending benefits, though the single argument is stated soundly and truthfully according to the path's focus on capital reallocation mechanics.
 
-## Q8 (analytical, 5d564b58c11c)
+## Q6 (analytical, 5d564b58c11c)
 
 In a short paragraph (3 to 8 sentences), argue for either (a) implementing a nationwide ban on the use of chemical pesticides in agriculture, or (b) promoting integrated pest management (IPM) as a sustainable alternative. Choose one position, state at least two distinct supporting reasons, and provide a specific factual example, statistic, or case study for each reason.
 
@@ -742,20 +543,6 @@ Listed paths:
 
 **Why it is this class:** Hand check: authored as valid, but it argues option (b), which is P2.
 
-### 5d564b58c11c-nonsense
-
-**Intended class:** nonsense
-
-**Path:** The thermal remediation index approach, which evaluates agricultural pest control by measuring the ambient heat signatures emitted by treated crop canopies.
-- Explains how thermal remediation index calculations determine the optimal temperature threshold for pest elimination.
-- States the chosen position regarding agricultural pest control.
-
-**Proposer's justification:** This path introduces a novel thermodynamic framework for evaluating agricultural decisions that differs distinctly from standard policy arguments. It rigorously structures the reasoning around thermal remediation indices to provide a robust method of assessment.
-
-**Learner answer:** Implementing a nationwide ban on chemical pesticides is essential because it aligns agricultural practices with the thermal remediation index. By measuring the ambient heat signatures of crop canopies, we can precisely calculate the optimal temperature thresholds required for natural pest elimination. This thermodynamic approach ensures that crops maintain a stable energetic balance without synthetic interference.
-
-**Why it is this class:** The path introduces the nonsense concept of a thermal remediation index based on canopy heat signatures to determine pest control thresholds, which does not exist in real agricultural science despite sounding technical and confident. This flaw is embedded in the first criterion's reasoning dimension and statement of false facts.
-
 ### 5d564b58c11c-invalid_reasoning
 
 **Intended class:** invalid_reasoning
@@ -775,6 +562,8 @@ Listed paths:
 
 **Intended class:** holed
 
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
+
 **Path:** This approach argues for integrated pest management by focusing heavily on biodiversity preservation and long-term financial savings.
 - States the chosen position that integrated pest management should be promoted as a sustainable alternative.
 - Explains how integrated pest management protects natural beneficial insect populations.
@@ -782,11 +571,11 @@ Listed paths:
 
 **Proposer's justification:** This path successfully defends integrated pest management by presenting clear environmental and financial reasons supported by factual evidence. It differs from existing paths by concentrating specifically on beneficial insect ecology and operational cost reductions.
 
-**Learner answer:** Promoting integrated pest management (IPM) as a sustainable alternative is essential for modern agriculture because it preserves natural beneficial insect populations. For instance, reducing synthetic inputs allows predatory beetle populations to thrive naturally, which successfully controls aphid numbers without chemical intervention. Furthermore, IPM lowers long-term operational expenses for farmers. A 2021 study by the University of California Cooperative Extension demonstrated that participating farms decreased their pesticide expenditures by thirty percent over four seasons.
+**Learner answer:** Governments should promote integrated pest management as a sustainable alternative to chemical pesticides. IPM relies on monitoring and on natural predators such as ladybirds and spiders, so beneficial insects survive instead of being killed by broad-spectrum sprays. It can also lower costs: after Indonesia adopted IPM for rice in 1986, it phased out its pesticide subsidies.
 
 **Why it is this class:** The criteria demand a position and supporting points with evidence, but fail to require a second distinct reason and its corresponding specific example, leaving the second half of the question unverified by the rubric checks while the learner's text is still fully true.
 
-## Q9 (analytical, 632df277470d)
+## Q7 (analytical, 632df277470d)
 
 In a short paragraph (3–8 sentences), argue whether mandatory fortification of staple foods with vitamin D should be implemented as a public‑health measure. Choose one side, present at least two supporting points, and acknowledge a counterargument from the opposite side.
 
@@ -801,14 +590,14 @@ Listed paths:
 **Path:** This path argues against mandatory fortification by using an ethical bodily autonomy and market pluralism framework rather than standard cost or safety objections.
 - States a position that mandatory fortification of staple foods with vitamin D should not be implemented
 - Explains how mandatory dietary intervention undermines individual consumer choice and bodily autonomy
-- Explains how blanket fortification prevents targeted supplementation for deficient subpopulations
+- Explains that uniform fortification levels may not meet the needs of all high-risk groups, so targeted supplementation may still be necessary.
 - Acknowledges a counterargument from the opposite side
 
 **Proposer's justification:** This path presents a valid anti-fortification stance grounded in bodily autonomy and targeted care rather than economic costs or toxicity risks used in path P2. It successfully meets all prompt requirements while offering a fundamentally distinct philosophical argument.
 
 **Learner answer:** Mandatory fortification of staple foods with vitamin D should not be implemented as a public health measure. First, forced dietary additives violate bodily autonomy by removing individual choice regarding what substances consumers ingest on a daily basis. Second, blanket mandates are inefficient because they fail to address the specific needs of high-risk deficient demographics while imposing unnecessary exposure on others. Proponents argue that systemic fortification efficiently prevents widespread deficiencies without requiring behavioral changes from the public. However, preserving personal agency and utilizing targeted supplementation remains a superior ethical and practical approach.
 
-**Why it is this class:** Hand check: authored as valid, but autonomy is a reason under P2 (against fortification), not a new path.
+**Why it is this class:** Hand check: authored as valid, but autonomy is a reason under P2 (against fortification), not a new path. External review 1: the criterion claimed fortification prevents targeted supplementation, which is false (WHO guidance plans for both); fixed.
 
 ### 632df277470d-nonsense
 
@@ -842,6 +631,8 @@ Listed paths:
 
 **Intended class:** holed
 
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
+
 **Path:** The public health benefit focus approach argues for mandatory vitamin D fortification by emphasizing population-wide deficiency reduction and cost-effectiveness.
 - States a position supporting mandatory fortification of staple foods with vitamin D
 - Explains how population-wide fortification reduces clinical deficiency rates
@@ -849,11 +640,11 @@ Listed paths:
 
 **Proposer's justification:** This approach correctly establishes a pro-fortification stance while offering a distinct public health mechanism and engaging with autonomy concerns. It differs from existing paths by narrowing the supporting evidence specifically to blood serum elevation and consumer choice dynamics.
 
-**Learner answer:** Mandatory fortification of staple foods with vitamin D should be implemented as a vital public health measure to combat widespread nutritional deficiencies. Adding this nutrient to common dietary staples efficiently elevates baseline blood serum levels across the entire population without requiring behavioral changes from individuals. Critics often argue that mandatory policies infringe upon personal dietary autonomy and consumer choice. However, the overwhelming collective health benefits of eradicating deficiency-related illnesses justify this standardized public health intervention.
+**Learner answer:** Mandatory vitamin D fortification of staple foods should be implemented. Adding vitamin D to foods such as flour or milk raises intake across the population and so reduces the number of people with clinical deficiency. Critics argue that it removes individual consumer choice, because people cannot easily avoid fortified staples.
 
 **Why it is this class:** The criteria require only one supporting point instead of the two demanded by the question, leaving a hole where the second supporting point is omitted by the criteria despite being present in the answer.
 
-## Q10 (explanatory, 3f8052a62a58)
+## Q8 (explanatory, 3f8052a62a58)
 
 Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.
 
@@ -950,9 +741,9 @@ Listed paths:
 
 **Learner answer:** As moist air travels toward a mountain range, it is forced upward where it cools and drops most of its moisture on the windward slopes. Once the air crosses the peak and begins to descend the leeward side, it undergoes continuous compression and adiabatic warming. This increase in temperature causes the relative humidity to drop significantly, which inhibits cloud development and results in arid conditions. A well-known example of this process is the Cascade Range, which creates the semi-arid rain shadow of eastern Washington.
 
-**Why it is this class:** The criteria fail to require mentioning the initial windward precipitation phase explicitly in the mechanism step, leaving a hole where an answer could start directly with the descent without explaining how the air was dried first.
+**Why it is this class:** Moisture removal during ascent and warming descent are already included; this is P1.
 
-## Q11 (explanatory, 23575fb39cfd)
+## Q9 (explanatory, 23575fb39cfd)
 
 Explain why a hot‑air balloon rises when the air inside it is heated. Answer in a short paragraph (3‑8 sentences).
 
@@ -1023,6 +814,8 @@ Listed paths:
 
 **Intended class:** holed
 
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
+
 **Path:** The thermal expansion path explains the balloon rise by detailing the volumetric expansion of the trapped gas.
 - States that heating air causes it to expand in volume
 - Mentions the envelope of the balloon containing the heated air
@@ -1030,11 +823,11 @@ Listed paths:
 
 **Proposer's justification:** This path uniquely focuses on the thermal expansion and volumetric changes of the gas inside the envelope as the primary driver. It meets all structural requirements while providing a fresh physical perspective distinct from the density-focused rubric items.
 
-**Learner answer:** When the burner heats the air inside the balloon, the thermal energy causes the gas molecules to move faster and push further apart. This results in an overall expansion of the air volume trapped within the fabric envelope. Because the expanded air occupies more space, the internal pressure adjusts as the warm air becomes less dense than the atmosphere outside. This volumetric change initiates the upward movement of the balloon.
+**Learner answer:** When the burner heats the air inside the balloon, the air molecules move faster. Faster-moving molecules push further apart, so the heated air expands. The balloon's fabric envelope holds this expanding air and fills out to its full shape.
 
 **Why it is this class:** The criteria test volume and expansion correctly, but completely omit any check for density or buoyant force, leaving a hole where the actual physics of the lift mechanism goes unverified by the rubric statements.
 
-## Q12 (explanatory, a5cd0a155f64)
+## Q10 (explanatory, a5cd0a155f64)
 
 Explain how 5G wireless networks achieve lower latency than previous 4G LTE networks. In a short paragraph (3‑8 sentences), describe one primary technical mechanism that enables this reduction.
 
@@ -1086,7 +879,7 @@ Listed paths:
 
 **Why it is this class:** The criteria and answer are nonsense because 5G latency reduction is achieved through digital frame structure improvements and smaller transmission time intervals, not by altering the moisture content of the troposphere.
 
-## Q13 (analytical, 4cb875e3c8cc)
+## Q11 (analytical, 4cb875e3c8cc)
 
 Two main hypotheses explain why some planets possess prominent ring systems while others do not: (1) the remnants of a destroyed moon that was torn apart by tidal forces within the planet's Roche limit, and (2) the accumulation of leftover material from the planet's formation that never coalesced into a moon. In a short paragraph (3‑8 sentences), evaluate these two hypotheses and argue which one you find more convincing, providing supporting evidence for each.
 
@@ -1110,7 +903,9 @@ Listed paths:
 
 ### 4cb875e3c8cc-nonsense
 
-**Intended class:** nonsense
+**Intended class:** invalid_reasoning
+
+**Changed on hand check:** External review 1: gravitational harmonics and ring resonances are real; the path's fault is treating a property that doesn't discriminate between origins as decisive.
 
 **Path:** This approach applies the planetary resonance stabilization method by analyzing gravitational tide harmonics to determine ring origins.
 - Explains how the gravitational tide harmonic frequency determines the planetary ring origin.
@@ -1120,7 +915,7 @@ Listed paths:
 
 **Learner answer:** Evaluating the two competing ideas requires examining the gravitational tide harmonics that govern planetary systems. The destroyed-moon hypothesis emerges as more convincing because its harmonic frequencies align perfectly with orbital resonance models. In contrast, leftover material lacks the necessary harmonic stabilization to maintain a structured ring over billions of years. Therefore, tidal disruption within the Roche limit remains the superior explanation.
 
-**Why it is this class:** The path introduces a fabricated scientific mechanism called gravitational tide harmonic frequency to evaluate ring origins, which does not exist in orbital mechanics, making this a nonsense path posing as a valid reasoning approach.
+**Why it is this class:** Resonance behaviour alone does not establish whether the material came from a destroyed moon or a primordial disk; the path treats a nondiscriminating property as decisive evidence.
 
 ### 4cb875e3c8cc-invalid_reasoning
 
@@ -1158,6 +953,8 @@ Listed paths:
 
 **Intended class:** holed
 
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
+
 **Path:** This path evaluates both hypotheses and argues for the destroyed-moon origin by citing tidal calculations and primordial accretion limits.
 - States which hypothesis is more convincing.
 - Provides evidence supporting the destroyed-moon hypothesis.
@@ -1165,79 +962,11 @@ Listed paths:
 
 **Proposer's justification:** This path successfully covers both hypotheses and presents a clear argument supported by valid planetary science evidence. It differs from the listed paths by integrating comparative mechanisms directly into the evaluation.
 
-**Learner answer:** Between the two main hypotheses for planetary ring systems, the destroyed-moon scenario is far more convincing because tidal forces within a planet's Roche limit reliably dismantle passing bodies into debris. Calculations of gravitational stress validate that moons venture too close and shatter into ring particles rather than remaining intact. Meanwhile, the leftover-material hypothesis suggests rings are primordial dust that failed to coalesce, supported by models of accretion disks. However, leftover material typically disperses or impacts planets quickly, making the dynamic destruction of a moon the more robust explanation for prominent rings.
+**Learner answer:** I find the destroyed-moon hypothesis more convincing. Saturn's main rings lie mostly inside its Roche limit, where tidal forces would tear a moon apart. Some other ring systems, such as Uranus's, are dark, which some scientists link to old material left over from the planet's formation. Both hypotheses therefore have some evidence behind them.
 
 **Why it is this class:** The criteria verify the choice and the presence of evidence for both sides, but they completely omit any requirement for an explanation of why the chosen hypothesis is more convincing than the alternative, leaving a hole where the comparative reasoning step is missing.
 
-## Q14 (analytical, 7ef66d20c834)
-
-In a short paragraph (3–8 sentences), argue whether Nathaniel Hawthorne’s *The Scarlet Letter* should be read primarily as a critique of Puritan moral hypocrisy or as an exploration of individual psychological trauma, and support your view with at least two distinct pieces of textual evidence.
-
-Listed paths:
-- **P1**: Argument that the novel critiques Puritan moral hypocrisy
-- **P2**: Argument that the novel explores individual psychological trauma
-
-### 7ef66d20c834-no_choice
-
-**Intended class:** holed
-
-**Path:** The approach argues that the novel is primarily an allegory of the psychological and social necessity of confession versus the destructive nature of secret guilt.
-- States that the novel should be read primarily as an examination of the corrosive power of secret guilt versus public confession.
-- Provides a first distinct piece of textual evidence showing the effect of concealed guilt.
-- Provides a second distinct piece of textual evidence showing the redemptive effect of the public scaffold confession.
-- Explains how the evidence demonstrates that spiritual and mental salvation depends entirely on transparent confession rather than institutional judgment.
-
-**Proposer's justification:** This path establishes a distinct interpretive framework centered on the thematic dichotomy between secret guilt and confession, which diverges from a pure institutional critique of Puritanism or an isolated study of trauma. The associated answer correctly applies this unique philosophical lens supported by appropriate textual details.
-
-**Learner answer:** Nathaniel Hawthorne's The Scarlet Letter should be read primarily as an exploration of the moral and spiritual necessity of confession over the destructive nature of concealed guilt. Arthur Dimmesdale's secret sin manifests physically through the hidden mark upon his chest, illustrating how concealed guilt corrodes the human soul from within. Conversely, his ultimate revelation upon the scaffold demonstrates that spiritual integration and peace can only be achieved through total transparency. Rather than merely attacking Puritan hypocrisy or cataloging trauma, the narrative posits that true penance requires stepping out of darkness into the communal light of truth.
-
-**Why it is this class:** Hand check: authored as valid, but the question asks which of two readings is primary and this path argues a third.
-
-### 7ef66d20c834-nonsense
-
-**Intended class:** nonsense
-
-**Path:** The lexical resonance mapping approach evaluates the argument by counting the frequency of archaic vowel shifts to determine thematic dominance.
-- Explains how vowel frequencies dictate the psychological trauma within the text.
-- States that vowel shifts prove the psychological trauma interpretation.
-
-**Proposer's justification:** This path utilizes an advanced linguistic mapping technique that evaluates literary themes through the objective measurement of historical vowel shifts. It thoroughly addresses the core prompt by offering a rigorous mechanical method that stands completely distinct from traditional interpretive paths.
-
-**Learner answer:** Nathaniel Hawthorne’s The Scarlet Letter must be read primarily as an exploration of individual psychological trauma because the heavy concentration of back vowels in Arthur Dimmesdale's speeches structurally mirrors internal guilt. Phonetic analysis reveals a distinct preponderance of closed sounds during moments of distress, which acts as a reliable gauge of mental fractures. This linguistic pattern proves that the narrative prioritizes psychological internal states over societal critique.
-
-**Why it is this class:** The criteria introduce a false mechanism by claiming that vowel shifts and phoneme counts determine literary themes or psychological trauma in the novel, which is entirely fictional and scientifically invalid in literary analysis.
-
-### 7ef66d20c834-invalid_reasoning
-
-**Intended class:** invalid_reasoning
-
-**Path:** This path argues for the psychological trauma interpretation by linking the chronological publication date of the novel directly to the emotional state of the protagonist as cause and effect.
-- States that the novel should be read primarily as an exploration of individual psychological trauma.
-- Explains that because the novel was published in 1850, it therefore directly caused the internal psychological trauma experienced by Arthur Dimmesdale.
-- Provides a second distinct piece of textual evidence regarding the scarlet letter itself.
-
-**Proposer's justification:** This path presents a unique temporal and causal mechanism by tying the book's publication year directly to the character's internal trauma. It stands completely distinct from the existing paths by introducing historical publication facts as the primary driver of internal character states.
-
-**Learner answer:** Nathaniel Hawthorne’s The Scarlet Letter should be read primarily as an exploration of individual psychological trauma. Because the novel was published in the year 1850, it directly caused the intense psychological trauma and guilt experienced by Arthur Dimmesdale throughout the narrative. Additionally, the physical scarlet letter worn upon Hester's chest serves as the second major textual anchor for this internal suffering.
-
-**Why it is this class:** This item uses a post hoc ergo propter hoc fallacy by treating the publication date of the book as the direct cause of the character's internal psychological trauma within the story.
-
-### 7ef66d20c834-holed
-
-**Intended class:** holed
-
-**Path:** The synthesis dual-lens approach argues that the novel functions simultaneously as both a critique of Puritan hypocrisy and an exploration of psychological trauma, supported by distinct textual evidence.
-- States that the novel should be read as both a critique of Puritan moral hypocrisy and an exploration of individual psychological trauma.
-- Explains how the first piece of textual evidence demonstrates the dual nature of the novel.
-- Provides a second distinct piece of textual evidence.
-
-**Proposer's justification:** This path offers a novel synthesis by arguing for both interpretations simultaneously rather than choosing just one, distinguishing it from the listed paths. The criteria strictly enforce the stated stance, the inclusion of multiple pieces of evidence, and the necessary reasoning connection.
-
-**Learner answer:** Nathaniel Hawthorne’s The Scarlet Letter should be read primarily as a dual exploration of Puritan moral hypocrisy and individual psychological trauma. The community's harsh judgment of Hester Prynne highlights the rigid and hypocritical nature of their societal laws. Simultaneously, Arthur Dimmesdale's secret guilt manifests as severe psychological trauma, showing the deep internal damage caused by concealed sin. These intertwined themes demonstrate that the author examines both public moral corruption and private mental anguish.
-
-**Why it is this class:** The criteria require stating both views and providing evidence with reasoning, but they fail to require an explanation of how the second piece of textual evidence supports the argument, leaving a logical gap in the analytical defense of the dual thesis.
-
-## Q15 (analytical, 17c1b10632b5)
+## Q12 (analytical, 17c1b10632b5)
 
 In a short paragraph (3–8 sentences), argue whether the primary cause of the outbreak of World War I was the system of alliances or nationalist rivalries, and support your position with specific historical evidence.
 
@@ -1273,20 +1002,6 @@ Listed paths:
 
 **Why it is this class:** This path is nonsense because it attributes World War I to tectonic plate movement rather than human historical factors. The reasoning criterion asserts a false physical mechanism that does not exist in history, making the entire premise absurd despite its confident tone.
 
-### 17c1b10632b5-invalid_reasoning
-
-**Intended class:** invalid_reasoning
-
-**Path:** This path argues that nationalist rivalries caused the outbreak of World War I by citing the assassination of Archduke Franz Ferdinand and concluding that the presence of extreme nationalism necessarily proves the overarching claim.
-- States a position that nationalist rivalries were the primary cause of World War I
-- Explains how the assassination of Archduke Franz Ferdinand by a nationalist proves that nationalist rivalries caused the outbreak of the war
-
-**Proposer's justification:** This path successfully supports the position on nationalist rivalries by bringing in historical evidence and connecting it directly to the thesis. It offers a distinct analytical angle compared to the existing paths by framing the specific event through the lens of identity and rivalry.
-
-**Learner answer:** The primary cause of the outbreak of World War I was nationalist rivalries rather than the system of alliances. Intense nationalist fervor swept across Europe in the late nineteenth and early twentieth centuries, creating deep-seated animosities among populations. This climate of competitive pride is best demonstrated by the assassination of Archduke Franz Ferdinand in Sarajevo by a Serbian nationalist. Because this historic event was driven by nationalist zeal, it proves that nationalist rivalries alone caused the entire war.
-
-**Why it is this class:** The second criterion employs invalid reasoning by treating a single historical event following nationalist motives as total proof of the causal mechanism, without establishing how broader structural conditions turned a regional crisis into a world war.
-
 ### 17c1b10632b5-restatement
 
 **Intended class:** restatement
@@ -1315,9 +1030,9 @@ Listed paths:
 
 **Learner answer:** The primary cause of the outbreak of World War I was the rigid system of European alliances. When the Archduke Franz Ferdinand was assassinated, treaties such as the Dual Alliance and the Triple Entente created a domino effect. These mutual defense obligations meant that a localized conflict between Austria-Hungary and Serbia inevitably dragged in Russia, Germany, France, and Great Britain. Therefore, diplomatic pacts transformed a regional crisis into a global war.
 
-**Why it is this class:** The criteria omit any requirement to discuss or evaluate the alternative factor of nationalist rivalries, leaving a completeness hole where the prompt asked to argue between the two choices but the rubric only checks for one side of the argument being stated and explained.
+**Why it is this class:** A historically supported alliance argument is P1. The question does not require a separate evaluation of nationalism.
 
-## Q16 (explanatory, 669bce9c85fb)
+## Q13 (explanatory, 669bce9c85fb)
 
 In a short paragraph of 3–6 sentences, explain how a depreciation of a country's currency influences its export competitiveness. Provide one mechanism that connects the change in exchange rate to export volumes.
 
@@ -1384,7 +1099,7 @@ Listed paths:
 
 **Why it is this class:** This is a restatement of Path P1, utilizing synonymous phrasing to re-describe the exact same price-effect mechanism under a new name with identical criteria elements.
 
-## Q17 (explanatory, 1e9d95d9130f)
+## Q14 (explanatory, 1e9d95d9130f)
 
 In a short paragraph (3 to 8 sentences), explain one mechanism by which adding biochar to agricultural soil enhances carbon sequestration, and give a concrete example of a farm or region where this mechanism has been applied.
 
@@ -1467,7 +1182,107 @@ Listed paths:
 
 **Why it is this class:** This path is a direct restatement of Path P1, utilizing a new label and slightly altered wording while retaining the identical underlying argument and criteria structure.
 
-## Q18 (analytical, 082591e7ec4e)
+## Q15 (explanatory, c08ec38ec72f)
+
+In a short paragraph (3–8 sentences), explain how the use of an unreliable narrator in F. Scott Fitzgerald’s *The Great Gatsby* influences the reader’s understanding of the American Dream.
+
+Listed paths:
+- **P1**: Explanation that the narrator’s unreliability creates ambiguity about the attainability of the American Dream.
+- **P2**: Explanation that the narrator’s unreliability reveals the American Dream as a mythic illusion rather than a realistic goal.
+
+### c08ec38ec72f-valid_complicity
+
+**Intended class:** valid_unlisted
+
+**Path:** Explanation that Nick's admiring narration draws the reader into Gatsby's longing, so the reader feels the Dream's pull while also seeing what it excuses.
+- Identifies Nick as a narrator whose admiration for Gatsby makes him unreliable.
+- States that this narration draws the reader into sympathising with Gatsby's pursuit.
+- Explains that the reader therefore shares in excusing the corruption behind the American Dream.
+
+**Proposer's justification:** This concerns what the narration does to the reader's own sympathies rather than whether the Dream is attainable or a myth. The reader takes part in the attraction before judging it.
+
+**Learner answer:** Nick Carraway is unreliable because he admires Gatsby and calls him great despite his crimes. Since we see everything through Nick, we are drawn into sympathising with Gatsby's pursuit of Daisy and wealth. This makes the reader share in excusing the bootlegging and deceit behind that pursuit. The American Dream is therefore understood from the inside, as something attractive enough to make us overlook how it is achieved.
+
+**Why it is this class:** Hand-written. Reader complicity through Nick's narration is a recognised reading. Weakest of the hand-written items, since literary readings overlap.
+
+### c08ec38ec72f-misconception_wrong_narrator
+
+**Intended class:** misconception
+
+**Path:** Explanation that Gatsby narrates his own story, and that his boasting about his rise leads readers to distrust the American Dream.
+- Identifies Jay Gatsby as the unreliable narrator of the novel.
+- States that Gatsby's boasting about himself influences the reader's understanding of the American Dream.
+- Explains that because Gatsby tells his own success story, the reader cannot trust that success in America is earned.
+
+**Proposer's justification:** This focuses on self-mythologising in the narration itself. A narrator describing his own rise is the source of the unreliability, which gives a direct link to doubts about self-made success that neither listed path draws.
+
+**Learner answer:** Jay Gatsby is an unreliable narrator because he tells the story of his own rise from poverty. He boasts about his parties and his wealth throughout the novel. Since we only hear his version, we cannot be sure that any of his success was earned. This makes the reader doubt that hard work leads to success in America.
+
+**Why it is this class:** False: Nick Carraway narrates the novel, not Gatsby. A basic factual error about the book, in the shape of a reasonable-sounding argument.
+
+### c08ec38ec72f-nonsense
+
+**Intended class:** nonsense
+
+**Path:** The thermal caloric mediation approach analyzes how the narrator absorbs and radiates moral temperature to quantify the decay of the American Dream.
+- States that the narrator operates as a thermal caloric sink for moral temperature.
+- Explains that radiating this thermal energy shifts the literal temperature of the American Dream.
+- Includes a measurement of thermodynamic loss in the narrative structure.
+
+**Proposer's justification:** This path provides a rigorous physical analysis of the narrative text by examining how thermal caloric properties govern literary interpretation. It uniquely introduces thermodynamics to distinguish itself from standard thematic approaches.
+
+**Learner answer:** Nick Carraway functions as a primary thermal caloric sink in the novel, absorbing the ambient moral temperature of West Egg. By radiating this stored heat back into the narrative atmosphere, he alters the physical state of the American Dream from a solid goal to a melted vapor. This thermodynamic transfer directly dictates how readers measure the literal cooling of ambition across the chapters. Ultimately, the narrator achieves a negative thirty degrees of moral heat loss, freezing the idealistic aspirations into a permanent state of illusion.
+
+**Why it is this class:** This path is nonsense because it introduces pseudoscientific thermodynamic concepts and thermal caloric physics into literary analysis, which do not exist in literary theory or the novel itself.
+
+### c08ec38ec72f-invalid_reasoning
+
+**Intended class:** invalid_reasoning
+
+**Path:** This path posits that Nick Carraway's Midwestern origins directly dictate his financial investments in the East, which in turn shape the reader's view of the American Dream.
+- States that Nick Carraway is from the American Midwest.
+- Explains that the narrator's Midwestern origins cause him to make specific financial investments in the East.
+- States that the narrator's financial investments influence the reader's understanding of the American Dream.
+
+**Proposer's justification:** This path offers a completely unique perspective by grounding the analysis in Nick Carraway's literal geographic origin and his career in bonds. It establishes a clear chain of logic connecting his background to financial choices and ultimately to the reader's view of the American Dream, distinguishing itself entirely from ambiguity or mythic illusion approaches.
+
+**Learner answer:** In F. Scott Fitzgerald's novel, the narrator Nick Carraway originates from the American Midwest. Because he grew up in this region, he enters the bond business upon moving east to New York. These specific financial investments and stock dealings shape the reader's understanding of the American Dream by demonstrating the practical economic realities of the 1920s.
+
+**Why it is this class:** The core flaw is that the reasoning treats Nick's geographic origin and his career choices as the causal mechanism for shaping the reader's thematic understanding of the American Dream, which represents a non-sequitur since career logistics do not logically establish literary theme interpretation.
+
+### c08ec38ec72f-restatement
+
+**Intended class:** restatement
+
+**Path:** This path presents the Dual Perspective Technique, demonstrating how the narrator's untrustworthy perspective reshapes the audience's perception of the American Dream.
+- Identifies the narrator as unreliable.
+- States that the narrator's unreliability influences the reader's understanding of the American Dream.
+- Explains that this influence creates ambiguity about whether the American Dream can be attained.
+
+**Proposer's justification:** This newly proposed path introduces the Dual Perspective Technique to capture a distinct analytical angle on the literary text. It uniquely articulates how the narrative voice shifts reader comprehension regarding the core thematic aspirations.
+
+**Learner answer:** In F. Scott Fitzgerald's The Great Gatsby, the use of an untrustworthy narrator shapes the audience's perception of the American Dream. Because Nick Carraway presents events through a heavily subjective lens, readers experience persistent uncertainty regarding the ultimate attainability of success and wealth. This slanted viewpoint generates profound ambiguity, preventing the audience from forming a stable conclusion about whether the dream is genuinely within reach.
+
+**Why it is this class:** This item is a restatement of Path P1, utilizing synonymous wording and a new label while maintaining the exact same underlying logic and criteria requirements as the original path.
+
+### c08ec38ec72f-holed
+
+**Intended class:** holed
+
+**Changed on hand check:** External review 1: learner answer replaced: the old one supplied the very step the path omits.
+
+**Path:** This approach focuses on the narrator's social background to explain how class bias shapes the portrayal of wealth in the novel.
+- Identifies the narrator as coming from a specific social background.
+- Explains how the narrator's social background influences the perception of wealth.
+- Mentions the concept of wealth in the novel.
+
+**Proposer's justification:** This path presents a thorough examination of Nick Carraway's social origins and perspective, offering a fresh angle compared to existing criteria. It thoroughly satisfies the required dimensions by anchoring the analysis in observable textual elements.
+
+**Learner answer:** Nick Carraway comes from a well-to-do Midwestern family and rents a house in West Egg. Because of this background, he describes the mansions around him with a mix of fascination and disapproval. His upbringing makes him notice the difference between old money in East Egg and new money in West Egg. As a result, wealth in the novel is described by someone who knows the codes of the upper class.
+
+**Why it is this class:** The criteria successfully check for social background, wealth, and reasoning, but completely omit any explicit criterion requiring the answer to connect these ideas directly to the American Dream as requested by the prompt, leaving a substantive hole in the grading rubric while all criteria statements remain true about the answer text itself.
+
+## Q16 (analytical, 082591e7ec4e)
 
 In a short paragraph (3‑8 sentences), argue whether utilitarianism provides a better foundation for public policy than deontological ethics. State your position, give one concrete policy area where your chosen approach offers an advantage, and explain how it supports your claim.
 
@@ -1520,9 +1335,63 @@ Listed paths:
 
 **Learner answer:** Utilitarianism provides a far superior foundation for public policy than deontological ethics because it prioritizes the greatest overall well-being for the greatest number of citizens. In the context of pandemic vaccine distribution, a utilitarian approach maximizes net societal benefit by allocating initial doses to high-transmission populations to curb spread rapidly. This maximizes aggregate health outcomes and reduces total community burden effectively. Deontological frameworks, by contrast, might become paralyzed by rigid categorical rules rather than adapting to save the maximum number of lives. Therefore, focusing policy on measurable utility outcomes creates the most defensible and beneficial results for society.
 
-**Why it is this class:** The criteria demand a policy area and an explanation of how it supports the claim, but they omit any requirement to explicitly mention or contrast against deontological ethics within the reasoning steps, leaving a hole where the comparative element is bypassed.
+**Why it is this class:** The criteria include a position, a policy area and an explanation, which meet the prompt under P1; a full critique of the opposing framework is not required.
 
-## Q19 (analytical, 7d174cce75df)
+## Q17 (analytical, 7ef66d20c834)
+
+In a short paragraph (3–8 sentences), argue whether Nathaniel Hawthorne’s *The Scarlet Letter* should be read primarily as a critique of Puritan moral hypocrisy or as an exploration of individual psychological trauma, and support your view with at least two distinct pieces of textual evidence.
+
+Listed paths:
+- **P1**: Argument that the novel critiques Puritan moral hypocrisy
+- **P2**: Argument that the novel explores individual psychological trauma
+
+### 7ef66d20c834-nonsense
+
+**Intended class:** invalid_reasoning
+
+**Changed on hand check:** External review 1: sound-pattern analysis is a legitimate method; the fault is the leap from vowel frequencies to proof of the primary theme.
+
+**Path:** The lexical resonance mapping approach evaluates the argument by counting the frequency of archaic vowel shifts to determine thematic dominance.
+- Explains how vowel frequencies dictate the psychological trauma within the text.
+- States that vowel shifts prove the psychological trauma interpretation.
+
+**Proposer's justification:** This path utilizes an advanced linguistic mapping technique that evaluates literary themes through the objective measurement of historical vowel shifts. It thoroughly addresses the core prompt by offering a rigorous mechanical method that stands completely distinct from traditional interpretive paths.
+
+**Learner answer:** Nathaniel Hawthorne’s The Scarlet Letter must be read primarily as an exploration of individual psychological trauma because the heavy concentration of back vowels in Arthur Dimmesdale's speeches structurally mirrors internal guilt. Phonetic analysis reveals a distinct preponderance of closed sounds during moments of distress, which acts as a reliable gauge of mental fractures. This linguistic pattern proves that the narrative prioritizes psychological internal states over societal critique.
+
+**Why it is this class:** Counting linguistic features can be legitimate, but nothing links vowel frequencies to which reading of the novel is primary; the path treats that leap as proof.
+
+### 7ef66d20c834-invalid_reasoning
+
+**Intended class:** invalid_reasoning
+
+**Path:** This path argues for the psychological trauma interpretation by linking the chronological publication date of the novel directly to the emotional state of the protagonist as cause and effect.
+- States that the novel should be read primarily as an exploration of individual psychological trauma.
+- Explains that because the novel was published in 1850, it therefore directly caused the internal psychological trauma experienced by Arthur Dimmesdale.
+- Provides a second distinct piece of textual evidence regarding the scarlet letter itself.
+
+**Proposer's justification:** This path presents a unique temporal and causal mechanism by tying the book's publication year directly to the character's internal trauma. It stands completely distinct from the existing paths by introducing historical publication facts as the primary driver of internal character states.
+
+**Learner answer:** Nathaniel Hawthorne’s The Scarlet Letter should be read primarily as an exploration of individual psychological trauma. Because the novel was published in the year 1850, it directly caused the intense psychological trauma and guilt experienced by Arthur Dimmesdale throughout the narrative. Additionally, the physical scarlet letter worn upon Hester's chest serves as the second major textual anchor for this internal suffering.
+
+**Why it is this class:** This item uses a post hoc ergo propter hoc fallacy by treating the publication date of the book as the direct cause of the character's internal psychological trauma within the story.
+
+### 7ef66d20c834-holed
+
+**Intended class:** holed
+
+**Path:** The synthesis dual-lens approach argues that the novel functions simultaneously as both a critique of Puritan hypocrisy and an exploration of psychological trauma, supported by distinct textual evidence.
+- States that the novel should be read as both a critique of Puritan moral hypocrisy and an exploration of individual psychological trauma.
+- Explains how the first piece of textual evidence demonstrates the dual nature of the novel.
+- Provides a second distinct piece of textual evidence.
+
+**Proposer's justification:** This path offers a novel synthesis by arguing for both interpretations simultaneously rather than choosing just one, distinguishing it from the listed paths. The criteria strictly enforce the stated stance, the inclusion of multiple pieces of evidence, and the necessary reasoning connection.
+
+**Learner answer:** Nathaniel Hawthorne’s The Scarlet Letter should be read primarily as a dual exploration of Puritan moral hypocrisy and individual psychological trauma. The community's harsh judgment of Hester Prynne highlights the rigid and hypocritical nature of their societal laws. Simultaneously, Arthur Dimmesdale's secret guilt manifests as severe psychological trauma, showing the deep internal damage caused by concealed sin. These intertwined themes demonstrate that the author examines both public moral corruption and private mental anguish.
+
+**Why it is this class:** The criteria require stating both views and providing evidence with reasoning, but they fail to require an explanation of how the second piece of textual evidence supports the argument, leaving a logical gap in the analytical defense of the dual thesis.
+
+## Q18 (analytical, 7d174cce75df)
 
 In a short paragraph of 3–8 sentences, argue whether the primary cause of the recent intensification of urban heat islands in megacities is (1) reduced vegetation cover or (2) increased anthropogenic heat emissions. Choose one factor, state the claim, and provide at least one piece of supporting evidence that links the chosen factor to stronger urban heat islands.
 
@@ -1558,7 +1427,7 @@ Listed paths:
 
 **Learner answer:** The primary cause of the recent intensification of urban heat islands in megacities is increased anthropogenic heat emissions. Modern metropolitan areas consume massive amounts of electrical power daily to run air conditioning units, industrial machinery, and transportation networks. This total energy consumption baseline proves that waste heat dissipation directly warms the surrounding urban air mass.
 
-**Why it is this class:** This path uses invalid reasoning because high total electricity consumption is cited as proof of heat emission dominance without establishing that it outpaces or causes the microclimate shifts associated with surface albedo and vegetation loss, presenting a true premise that does not logically substantiate the primary cause conclusion.
+**Why it is this class:** Energy use and waste heat are a supporting route under P2; claims of proof should be qualified, but exhaustive exclusion of other causes isn't required.
 
 ### 7d174cce75df-restatement
 
@@ -1588,9 +1457,84 @@ Listed paths:
 
 **Learner answer:** The primary cause of the recent intensification of urban heat islands in megacities is reduced vegetation cover. As cities expand and replace natural flora with dark roofs and pavement, the overall surface albedo decreases significantly. This change causes surfaces to absorb more incoming solar radiation during the day, which is subsequently released as thermal energy and intensifies the urban heat island effect.
 
-**Why it is this class:** The criteria leave a hole because they focus strictly on albedo mechanisms while omitting the core question requirement to provide evidence linking the factor to stronger urban heat islands through empirical data or broader climatic links beyond surface absorption alone, yet an answer can meet every listed criterion by discussing albedo changes instead of the requested evidence connection explicitly required by the prompt instructions on the full scope of proof. Wait, the prompt says the criteria must not ask for the missing thing: the criteria omit checking for transpiration or latent heat loss, which the physical argument requires to be complete, making the path holed because it accepts albedo alone as the evidence link without checking for the cooling mechanism of evapotranspiration.
+**Why it is this class:** Replacing vegetation with dark surfaces is a narrower P1 mechanism. Evapotranspiration is not compulsory.
+
+## Q19 (analytical, 78d7767e5351)
+
+In a short paragraph (3–8 sentences), argue whether working from home increases overall work‑life balance, and support your argument with at least two distinct reasons.
+
+Listed paths:
+- **P1**: Argument that working from home increases overall work‑life balance
+- **P2**: Argument that working from home does not increase overall work‑life balance
+
+### 78d7767e5351-nonsense
+
+**Intended class:** nonsense
+
+**Path:** The chronometric kinetic alignment approach establishes work-life balance through the harmonization of temporal biological frequencies with office architecture.
+- Explains how the synchronization of residential circadian oscillation with remote desktop pixel refresh rates reduces daily stress hormones.
+- States that remote furniture density absorbs ambient thermal friction to improve domestic tranquility.
+
+**Proposer's justification:** This path brings a profound physiological and physical perspective to remote work analysis by focusing on biological frequencies and thermal friction. It introduces entirely unique mechanisms not covered in the existing paths.
+
+**Learner answer:** Working from home significantly increases overall work-life balance by synchronizing residential circadian oscillations with remote desktop pixel refresh rates, which directly calms the nervous system. Additionally, the specific furniture density found in home environments absorbs ambient thermal friction to greatly improve domestic tranquility and daily peace.
+
+**Why it is this class:** The criteria rely on pseudoscientific nonsense regarding screen refresh rates synchronizing with biological frequencies and furniture density absorbing thermal friction, presenting these nonexistent mechanisms as valid facts of physics and biology.
+
+### 78d7767e5351-invalid_reasoning
+
+**Intended class:** invalid_reasoning
+
+**Path:** This path argues that working from home increases work-life balance by pointing out that morning sunlight enters the home office window before the employee begins typing.
+- States a position that working from home increases overall work-life balance
+- Explains that morning sunlight enters the home office window before work begins as the primary reason for increased work-life balance
+
+**Proposer's justification:** This path presents a clear argument supported by observable morning events that occur for remote workers. It explores a fresh angle on daily routines that differs from standard productivity metrics.
+
+**Learner answer:** Working from home significantly increases overall work-life balance. Specifically, morning sunlight streams directly through the home office window before the employee even begins typing. This natural illumination creates an environment that establishes the desired balance.
+
+**Why it is this class:** This path relies on a post hoc fallacy by treating the temporal sequence of morning sunlight preceding the workday as the cause of improved work-life balance, which the criteria demand as a sound argument step.
+
+### 78d7767e5351-restatement
+
+**Intended class:** restatement
+
+**Path:** This path utilizes the remote workplace equilibrium framework to argue that working from home increases overall work-life balance.
+- States a position that working from home increases overall work-life balance.
+- Provides a first distinct reason that supports the position using the remote workplace equilibrium framework.
+- Provides a second distinct reason that supports the position using the remote workplace equilibrium framework.
+
+**Proposer's justification:** This path introduces the remote workplace equilibrium framework to robustly argue for the benefits of working from home. It successfully offers two distinct supporting reasons while presenting a fresh and valid perspective.
+
+**Learner answer:** Working from home significantly increases overall work-life balance by transforming daily routines. First, eliminating the daily commute saves hours of wasted time that can instead be dedicated to personal well-being and family connection. Second, flexible scheduling empowers professionals to design their days around both peak productivity periods and personal commitments, creating a harmonious daily rhythm.
+
+**Why it is this class:** This path is a restatement of Path P1, offering the exact same central argument and two reasons under a newly invented name without adding new substance.
+
+### 78d7767e5351-holed
+
+**Intended class:** restatement
+
+**Changed on hand check:** Two reasons for the same position as P1; the claimed hole is not one.
+
+**Path:** This path presents an argument supporting remote work by detailing personal time gains and schedule flexibility.
+- States a position that working from home increases overall work-life balance.
+- Provides a first distinct reason that supports the position by mentioning the elimination of commuting time.
+- Provides a second distinct reason that supports the position by mentioning flexible schedule management.
+
+**Proposer's justification:** This path establishes a comprehensive defense of remote work using distinct structural reasons that directly fulfill the prompt requirements. It differs from existing paths by focusing specifically on commute elimination and schedule control rather than general productivity claims.
+
+**Learner answer:** Working from home significantly increases overall work-life balance by transforming how daily routines are managed. First, eliminating the daily commute saves hours each week that can be redirected toward family and rest. Second, having control over schedule flexibility allows individuals to seamlessly blend personal obligations with professional duties without added stress.
+
+**Why it is this class:** Two distinct relevant reasons support the same positive position as P1; the rubric need not repeat a generic requirement that every reason be sound.
 
 ## Dropped on hand check
 
+- b850a615f22e-holed: External review 1: Revised into b850a615f22e-valid_monoamine with a qualified criterion.
 - 1e9d95d9130f-holed: Same route as the valid plant-inputs item; the claimed hole is not one.
 - a5cd0a155f64-holed: Ultra-lean design is about energy and interference, and the note's hole is not one. No clean label.
+- 78d7767e5351-valid_mixed: External review 1: P2 ('does not increase') can absorb a neutral or conditional effect, so this is no clean novelty test.
+- c08ec38ec72f-valid_class: External review 1: Class exclusion can instantiate P2's meritocratic illusion or P1's attainability problem; novelty is not secure.
+- d92e0ad73cb8-nonsense: External review 1: Cooling and overheated markets can be ordinary economic metaphors; the path doesn't clearly require literal false physics.
+- 5d564b58c11c-nonsense: External review 1: Canopy thermography of pests is real research; an unfamiliar index name isn't proof of fiction, and the path also omits the two reasons.
+- 7ef66d20c834-no_choice: External review 1: Secret guilt and confession can be a narrower P2 reading; the Q14 holed item already tests a missing choice.
+- 17c1b10632b5-invalid_reasoning: External review 1: The visible path reads as an ordinary P2 argument; the overclaim is only in the learner answer, which the verifier never sees.

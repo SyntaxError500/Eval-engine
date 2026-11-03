@@ -1,5 +1,7 @@
 name: amendment_propose
-version: 1
+version: 2
+# v2 (Phase 5 end to end): 2 of 8 valid answers failed the code checks, one for tagging no
+# criterion as correctness, one for copying the question's sentence count into a criterion.
 description: >
   Stage 2, only when the judge finds the answer follows none of the rubric's paths. Sees the
   question, the answer and the existing path descriptions, never the judge's scores (design
@@ -27,14 +29,16 @@ system: |
     ..."). Each is binary, observable and covers one idea, so a partial answer can meet some.
     Do not use judgement words (good, clear, well, adequate, appropriate, effective, strong),
     and do not write "for each" or "at least two reasons".
-  - dimension: correctness, completeness, reasoning or expression. The path must cover
-    {{ required_dimensions | join(", ") }}.
+  - dimension: correctness, completeness, reasoning or expression. Give at least one
+    criterion in each of these dimensions: {{ required_dimensions | join(", ") }}.
   - core: true for the criteria the approach cannot do without; at least one.
   {%- if task_type == "analytical" %}
   - At least one core criterion must have dimension reasoning.
   {%- endif %}
   - requires: the exact words of the question that ask for this criterion. Drop any criterion
     the question does not ask for.
+  - Never write a criterion about the answer's length or number of sentences, even when the
+    question states one: criteria check content.
   - evidence_hint: what in an answer would show the criterion is met.
 
   justification: two or three sentences on why this is valid and how it differs from the

@@ -12,7 +12,8 @@ hand check, 10 of the 17 "valid" items the model wrote were sub-cases of a liste
 the question's forced choice. Those stay in the set under their true class.
 
 Labels start as the author's intent. `review.json` holds the decisions of the hand and external
-reviews, which override them: {"<item_id>": {"drop": true} | {"kind": "..."}, ...}.
+reviews, which override them: {"<item_id>": {"drop": true} | {"kind", "note", "answer": ...}}.
+A replaced answer changes only the trigger test; the verifier never sees the answer.
 """
 
 import json
@@ -120,16 +121,23 @@ REVIEW_INTRO = (
     "so a wrong label makes a wrong result. For every item, please say whether its class is right",
     "and give a corrected class or a reason to drop it if not. Results are left out on purpose.",
     "",
+    "Classes, in order of precedence (external review 1):",
+    "",
+    "- **misconception**: a plausible domain misunderstanding, stated confidently.",
+    "- **nonsense**: a demonstrably false literal mechanism. A fancy name or a metaphor alone",
+    "  is not enough.",
+    "- **invalid_reasoning**: the path requires an explicitly faulty inference.",
+    "- **holed**: plausible checks that can all be met while a requirement of the question is",
+    "  absent.",
+    "- **restatement**: a listed path in other words, or a narrower case of it.",
     "- **valid_unlisted**: factually sound, does what the question asks, and is not a listed path",
     "  or a narrower case of one.",
-    "- **nonsense**: rests on an invented mechanism or false facts.",
-    "- **misconception**: a common false belief, stated confidently.",
-    "- **invalid_reasoning**: the reasoning does not establish the conclusion.",
-    "- **restatement**: a listed path in other words, or a narrower case of it.",
-    "- **holed**: real, but the path could be fully met while something needed is missing.",
     "",
-    "Only the path and the justification reach the verifier. The learner answer is used to test",
-    "the trigger, and the last field of each item is for you.",
+    "When two defects are equally plausible, the item is rewritten or dropped.",
+    "",
+    "The verifier sees the question, the listed paths with their criteria, the proposed path and",
+    "the proposer's justification. It never sees item IDs, labels, notes or the learner answer.",
+    "The learner answer only tests the trigger, and the last field of each item is for you.",
 )
 
 
@@ -252,7 +260,7 @@ def build(
 
 
 def load_items(out_dir: Path = VERIFIER_DIR) -> list[Item]:
-    """The set after review: dropped items removed, relabelled items moved."""
+    """The set after review: dropped items removed; relabels, notes and answers applied."""
     raw = json.loads((out_dir / "items.json").read_text(encoding="utf-8"))["items"]
     review_file = out_dir / "review.json"
     review = json.loads(review_file.read_text(encoding="utf-8")) if review_file.exists() else {}
@@ -261,7 +269,8 @@ def load_items(out_dir: Path = VERIFIER_DIR) -> list[Item]:
         decision = review.get(entry["item_id"], {})
         if decision.get("drop"):
             continue
-        items.append(Item(**{**entry, "kind": decision.get("kind", entry["kind"])}))
+        overrides = {k: decision[k] for k in ("kind", "note", "answer") if k in decision}
+        items.append(Item(**{**entry, **overrides}))
     return items
 
 

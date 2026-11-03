@@ -266,8 +266,8 @@
      {
       "criterion_id": "P3.C3",
       "dimension": "reasoning",
-      "statement": "Explains how reduced tax compliance costs and administrative burdens undermine state revenue collection.",
-      "evidence_hint": "The answer links high administrative costs to lower net revenue.",
+      "statement": "Explains how high valuation and enforcement costs or tax avoidance can reduce the tax's net revenue, limiting redistributive spending.",
+      "evidence_hint": "Links collection costs or avoidance to less revenue for redistribution.",
       "core": true,
       "weight": 1.0,
       "requires": "support it with at least two distinct arguments"
@@ -285,7 +285,7 @@
    },
    "justification": "This path presents a coherent anti-tax position grounded in specific economic mechanisms like capital flight and administrative failure, rather than simply stating generic opposition. It fulfills all prompt requirements while offering a distinct analytical framework from the existing listed paths.",
    "answer": "Implementing a progressive wealth tax on the richest households is a counterproductive approach that will fail to reduce economic inequality in a market economy. First, heavily taxing accumulated capital drives international capital flight, which shrinks the domestic investment pool and depresses future job and wage growth for lower-income earners. Second, the extreme administrative complexity of valuing illiquid assets leads to immense enforcement costs and widespread avoidance, resulting in lower net public revenues than anticipated. Ultimately, by crippling the productive capacity of the economy and generating negligible fiscal returns, the tax exacerbates the very disparities it aims to resolve.",
-   "note": "Hand check: authored as valid, but capital flight is a reason under P2 (against the tax), not a new path."
+   "note": "Hand check: authored as valid, but capital flight is a reason under P2 (against the tax), not a new path. External review 1: the criterion said reduced costs undermine revenue, the wrong direction; fixed."
   },
   {
    "item_id": "5d564b58c11c-subcase",
@@ -375,8 +375,8 @@
      {
       "criterion_id": "P3.C3",
       "dimension": "reasoning",
-      "statement": "Explains how blanket fortification prevents targeted supplementation for deficient subpopulations",
-      "evidence_hint": "Discusses how one-size-fits-all policies fail to address specific demographic needs effectively compared to precision medicine.",
+      "statement": "Explains that uniform fortification levels may not meet the needs of all high-risk groups, so targeted supplementation may still be necessary.",
+      "evidence_hint": "Names a group whose needs a single fortification level misses.",
       "core": true,
       "weight": 1.0,
       "requires": "present at least two supporting points"
@@ -394,7 +394,7 @@
    },
    "justification": "This path presents a valid anti-fortification stance grounded in bodily autonomy and targeted care rather than economic costs or toxicity risks used in path P2. It successfully meets all prompt requirements while offering a fundamentally distinct philosophical argument.",
    "answer": "Mandatory fortification of staple foods with vitamin D should not be implemented as a public health measure. First, forced dietary additives violate bodily autonomy by removing individual choice regarding what substances consumers ingest on a daily basis. Second, blanket mandates are inefficient because they fail to address the specific needs of high-risk deficient demographics while imposing unnecessary exposure on others. Proponents argue that systemic fortification efficiently prevents widespread deficiencies without requiring behavioral changes from the public. However, preserving personal agency and utilizing targeted supplementation remains a superior ethical and practical approach.",
-   "note": "Hand check: authored as valid, but autonomy is a reason under P2 (against fortification), not a new path."
+   "note": "Hand check: authored as valid, but autonomy is a reason under P2 (against fortification), not a new path. External review 1: the criterion claimed fortification prevents targeted supplementation, which is false (WHO guidance plans for both); fixed."
   },
   {
    "item_id": "3f8052a62a58-subcase",
@@ -1370,6 +1370,47 @@
    "justification": "This focuses on self-mythologising in the narration itself. A narrator describing his own rise is the source of the unreliability, which gives a direct link to doubts about self-made success that neither listed path draws.",
    "answer": "Jay Gatsby is an unreliable narrator because he tells the story of his own rise from poverty. He boasts about his parties and his wealth throughout the novel. Since we only hear his version, we cannot be sure that any of his success was earned. This makes the reader doubt that hard work leads to success in America.",
    "note": "False: Nick Carraway narrates the novel, not Gatsby. A basic factual error about the book, in the shape of a reasonable-sounding argument."
+  },
+  {
+   "item_id": "b850a615f22e-valid_monoamine",
+   "question_id": "b850a615f22e",
+   "kind": "valid_unlisted",
+   "path": {
+    "path_id": "P4",
+    "description": "Explaining mental health improvements through the mechanism of increased neurotransmitter availability such as serotonin and norepinephrine.",
+    "criteria": [
+     {
+      "criterion_id": "P4.C1",
+      "dimension": "correctness",
+      "statement": "Names a valid mechanism by which regular physical activity improves mental health",
+      "evidence_hint": "Mentions neurotransmitter regulation or monoamine hypothesis",
+      "core": true,
+      "weight": 1.0,
+      "requires": "explain one mechanism by which regular physical activity improves mental health"
+     },
+     {
+      "criterion_id": "P4.C2",
+      "dimension": "completeness",
+      "statement": "Describes exercise-related changes in serotonin or noradrenaline signalling as a contribution to mood regulation.",
+      "evidence_hint": "Names serotonin or noradrenaline and links a change in its signalling to mood",
+      "core": true,
+      "weight": 1.0,
+      "requires": "explain one mechanism by which regular physical activity improves mental health"
+     },
+     {
+      "criterion_id": "P4.C3",
+      "dimension": "reasoning",
+      "statement": "Explains how elevated neurotransmitter levels modulate mood regulation pathways",
+      "evidence_hint": "Connects higher neurotransmitter availability to reduced depressive symptoms",
+      "core": false,
+      "weight": 1.0,
+      "requires": "explain one mechanism by which regular physical activity improves mental health"
+     }
+    ]
+   },
+   "justification": "This path presents a distinct neurochemical pathway involving monoamine neurotransmitters rather than endorphins or BDNF. The criteria comprehensively track the identification and explanation of this specific mechanism as requested by the prompt.",
+   "answer": "Regular physical activity improves mental health through the enhancement of monoamine neurotransmitter availability in the brain. Specifically, aerobic exercise stimulates the synthesis and release of serotonin and norepinephrine within critical neural circuits. These elevated neurotransmitter levels facilitate improved signal transmission in regions responsible for emotional processing. Consequently, this biochemical adjustment leads to better mood stability and a significant reduction in depressive symptoms.",
+   "note": "Monoamine signalling is a route distinct from endorphins, BDNF and self-efficacy. External review 1: revised from b850a615f22e-holed; its mandatory claim of raised baseline synaptic serotonin and noradrenaline was more than the evidence supports."
   },
   {
    "item_id": "4cb875e3c8cc-nonsense",

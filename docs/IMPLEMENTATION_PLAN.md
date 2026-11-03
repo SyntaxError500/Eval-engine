@@ -320,7 +320,7 @@ The goal is to confirm the judge before anything is built on it.
 
 ### Phase 5 — Amendment and verification (≈1.5 weeks)
 
-> **Built (2026-11-01); external review of the test set is pending.** On hand-checked labels: 0/27 false accepts on confident wrong proposals under both framings, amendment fires on 1/30 golden answers, and no wrong answer earned a path end to end. Qwen is confirmed as verifier and the threshold stays at 0.5. Of 11 under-scored valid answers, 5 are rescued. Results, decisions and limits: [`experiments/5_verifier/FINDINGS.md`](../experiments/5_verifier/FINDINGS.md).
+> **Done (2026-11-03).** Gate passed on externally reviewed labels (external review 1: 84 of 95 kept, the rest relabelled, repaired or dropped). 0/23 false accepts on confident wrong proposals under both framings; amendment fires on 1/30 golden answers; end to end, all 8 triggering valid answers were accepted and no wrong answer earned credit. Qwen is confirmed as verifier and the threshold stays at 0.5. 3 of 11 under-scored valid answers never trigger. Results, decisions and limits: [`experiments/5_verifier/FINDINGS.md`](../experiments/5_verifier/FINDINGS.md).
 
 **Tasks**
 1. **Trigger**: max path confidence `< threshold` (§6) on a multi-path rubric, when the judge says the answer addresses the question. Confidence means the path the answer *attempts*, not how well it fits (`score_answer` v2). A factual checklist has one right answer, so it has no other route to add.
@@ -337,7 +337,7 @@ The goal is to confirm the judge before anything is built on it.
 7. **Calibrate the threshold**: sweep 0.3–0.7 on the Phase 4 golden set plus the verifier-set answers. Pick the value that triggers on off-path answers without firing on ordinary partial answers.
 
 **Exit gate**
-- [x] Report precision and recall on the positive class, and the rejection rate per negative class, for both framings. **0/27 on hand-checked labels, external review pending.** **False-accept rate on class (a) ≤ 10%**, because a false accept is the costly error. Otherwise tighten the verifier prompt or require two-verifier agreement (Qwen on Groq + local Qwen 8B as a weaker second vote, or Gemini if it isn't also judging that item).
+- [x] Report precision and recall on the positive class, and the rejection rate per negative class, for both framings. **0/23 on externally reviewed labels.** **False-accept rate on class (a) ≤ 10%**, because a false accept is the costly error. Otherwise tighten the verifier prompt or require two-verifier agreement (Qwen on Groq + local Qwen 8B as a weaker second vote, or Gemini if it isn't also judging that item).
 - [x] Amendment fires on < 15% of ordinary golden-set answers at the chosen threshold. **1/30 at 0.5.**
 - [x] Results are written to `experiments/5_verifier/REPORT.md`.
 

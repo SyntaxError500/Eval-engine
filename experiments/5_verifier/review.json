@@ -1,35 +1,42 @@
 {
  "d757eca4528c-invalid_reasoning": {
   "kind": "restatement",
-  "why": "Devices sending personal data is a sound reason under P1, not invalid reasoning."
+  "why": "Devices sending personal data is a sound reason under P1, not invalid reasoning.",
+  "note": "Personal-data transmission is relevant supporting evidence for a pro-standards argument already covered by P1."
  },
  "7d174cce75df-invalid_reasoning": {
   "kind": "restatement",
-  "why": "A weakly evidenced version of P2 rather than a distinct invalid argument."
+  "why": "A weakly evidenced version of P2 rather than a distinct invalid argument.",
+  "note": "Energy use and waste heat are a supporting route under P2; claims of proof should be qualified, but exhaustive exclusion of other causes isn't required."
  },
  "082591e7ec4e-holed": {
   "kind": "restatement",
-  "why": "Same criteria as P1; no hole."
+  "why": "Same criteria as P1; no hole.",
+  "note": "The criteria include a position, a policy area and an explanation, which meet the prompt under P1; a full critique of the opposing framework is not required."
  },
  "7d174cce75df-holed": {
   "kind": "restatement",
-  "why": "Albedo loss from reduced vegetation is P1 with a narrower mechanism."
+  "why": "Albedo loss from reduced vegetation is P1 with a narrower mechanism.",
+  "note": "Replacing vegetation with dark surfaces is a narrower P1 mechanism. Evapotranspiration is not compulsory."
  },
  "78d7767e5351-holed": {
   "kind": "restatement",
-  "why": "Two reasons for the same position as P1; the claimed hole is not one."
+  "why": "Two reasons for the same position as P1; the claimed hole is not one.",
+  "note": "Two distinct relevant reasons support the same positive position as P1; the rubric need not repeat a generic requirement that every reason be sound."
  },
  "17c1b10632b5-holed": {
   "kind": "restatement",
-  "why": "A P1 argument naming its mechanism; the claimed hole is not one."
+  "why": "A P1 argument naming its mechanism; the claimed hole is not one.",
+  "note": "A historically supported alliance argument is P1. The question does not require a separate evaluation of nationalism."
  },
  "3f8052a62a58-holed": {
   "kind": "restatement",
-  "why": "Moisture loss on ascent and warming on descent is P1."
+  "why": "Moisture loss on ascent and warming on descent is P1.",
+  "note": "Moisture removal during ascent and warming descent are already included; this is P1."
  },
  "b850a615f22e-holed": {
-  "kind": "valid_unlisted",
-  "why": "Monoamines are a real mechanism separate from endorphins, BDNF and self-efficacy. The claimed hole (exercise frequency) is not asked for."
+  "drop": true,
+  "why": "External review 1: Revised into b850a615f22e-valid_monoamine with a qualified criterion."
  },
  "1e9d95d9130f-holed": {
   "drop": true,
@@ -38,5 +45,71 @@
  "a5cd0a155f64-holed": {
   "drop": true,
   "why": "Ultra-lean design is about energy and interference, and the note's hole is not one. No clean label."
+ },
+ "78d7767e5351-valid_mixed": {
+  "drop": true,
+  "why": "External review 1: P2 ('does not increase') can absorb a neutral or conditional effect, so this is no clean novelty test."
+ },
+ "c08ec38ec72f-valid_class": {
+  "drop": true,
+  "why": "External review 1: Class exclusion can instantiate P2's meritocratic illusion or P1's attainability problem; novelty is not secure."
+ },
+ "d92e0ad73cb8-nonsense": {
+  "drop": true,
+  "why": "External review 1: Cooling and overheated markets can be ordinary economic metaphors; the path doesn't clearly require literal false physics."
+ },
+ "5d564b58c11c-nonsense": {
+  "drop": true,
+  "why": "External review 1: Canopy thermography of pests is real research; an unfamiliar index name isn't proof of fiction, and the path also omits the two reasons."
+ },
+ "7ef66d20c834-no_choice": {
+  "drop": true,
+  "why": "External review 1: Secret guilt and confession can be a narrower P2 reading; the Q14 holed item already tests a missing choice."
+ },
+ "17c1b10632b5-invalid_reasoning": {
+  "drop": true,
+  "why": "External review 1: The visible path reads as an ordinary P2 argument; the overclaim is only in the learner answer, which the verifier never sees."
+ },
+ "4cb875e3c8cc-nonsense": {
+  "kind": "invalid_reasoning",
+  "why": "External review 1: gravitational harmonics and ring resonances are real; the path's fault is treating a property that doesn't discriminate between origins as decisive.",
+  "note": "Resonance behaviour alone does not establish whether the material came from a destroyed moon or a primordial disk; the path treats a nondiscriminating property as decisive evidence."
+ },
+ "7ef66d20c834-nonsense": {
+  "kind": "invalid_reasoning",
+  "why": "External review 1: sound-pattern analysis is a legitimate method; the fault is the leap from vowel frequencies to proof of the primary theme.",
+  "note": "Counting linguistic features can be legitimate, but nothing links vowel frequencies to which reading of the novel is primary; the path treats that leap as proof."
+ },
+ "91798e725180-holed": {
+  "answer": "Individuals often follow social norms because established authority figures enforce them. Institutions such as schools, workplaces and governments set expectations for how people behave. These institutions reward people who comply and penalise those who deviate. Over time, this systemic reinforcement keeps social norms in place across whole communities.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
+ },
+ "c08ec38ec72f-holed": {
+  "answer": "Nick Carraway comes from a well-to-do Midwestern family and rents a house in West Egg. Because of this background, he describes the mansions around him with a mix of fascination and disapproval. His upbringing makes him notice the difference between old money in East Egg and new money in West Egg. As a result, wealth in the novel is described by someone who knows the codes of the upper class.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
+ },
+ "d757eca4528c-holed": {
+  "answer": "Governments should require mandatory data-privacy standards for consumer IoT devices. Meeting such standards would add testing and certification costs for manufacturers. These costs would fall hardest on small firms, which might delay or cancel new products. As a result, the pace of innovation in smart-home devices could slow.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
+ },
+ "d92e0ad73cb8-holed": {
+  "answer": "I support a progressive wealth tax on the richest households. Its revenue can be redirected into public services used by lower-income households. This reallocation reduces inequality by increasing the resources available to those households.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
+ },
+ "5d564b58c11c-holed": {
+  "answer": "Governments should promote integrated pest management as a sustainable alternative to chemical pesticides. IPM relies on monitoring and on natural predators such as ladybirds and spiders, so beneficial insects survive instead of being killed by broad-spectrum sprays. It can also lower costs: after Indonesia adopted IPM for rice in 1986, it phased out its pesticide subsidies.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
+ },
+ "632df277470d-holed": {
+  "answer": "Mandatory vitamin D fortification of staple foods should be implemented. Adding vitamin D to foods such as flour or milk raises intake across the population and so reduces the number of people with clinical deficiency. Critics argue that it removes individual consumer choice, because people cannot easily avoid fortified staples.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
+ },
+ "23575fb39cfd-holed": {
+  "answer": "When the burner heats the air inside the balloon, the air molecules move faster. Faster-moving molecules push further apart, so the heated air expands. The balloon's fabric envelope holds this expanding air and fills out to its full shape.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
+ },
+ "4cb875e3c8cc-holed": {
+  "answer": "I find the destroyed-moon hypothesis more convincing. Saturn's main rings lie mostly inside its Roche limit, where tidal forces would tear a moon apart. Some other ring systems, such as Uranus's, are dark, which some scientists link to old material left over from the planet's formation. Both hypotheses therefore have some evidence behind them.",
+  "why": "External review 1: learner answer replaced: the old one supplied the very step the path omits."
  }
 }

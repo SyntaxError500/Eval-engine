@@ -1,12 +1,6 @@
 [
  {
   "kind": "valid_unlisted",
-  "item_id": "78d7767e5351-valid_mixed",
-  "confidence": 0.5,
-  "addresses": true
- },
- {
-  "kind": "valid_unlisted",
   "item_id": "91798e725180-valid_heuristics",
   "confidence": 0.2,
   "addresses": true
@@ -15,12 +9,6 @@
   "kind": "valid_unlisted",
   "item_id": "b850a615f22e-valid_hpa",
   "confidence": 0.4,
-  "addresses": true
- },
- {
-  "kind": "valid_unlisted",
-  "item_id": "c08ec38ec72f-valid_class",
-  "confidence": 0.9,
   "addresses": true
  },
  {
@@ -74,12 +62,6 @@
  {
   "kind": "holed",
   "item_id": "4cb875e3c8cc-no_choice",
-  "confidence": 0.4,
-  "addresses": true
- },
- {
-  "kind": "holed",
-  "item_id": "7ef66d20c834-no_choice",
   "confidence": 0.4,
   "addresses": true
  },
@@ -198,7 +180,13 @@
   "addresses": true
  },
  {
-  "kind": "nonsense",
+  "kind": "valid_unlisted",
+  "item_id": "b850a615f22e-valid_monoamine",
+  "confidence": 0.8,
+  "addresses": true
+ },
+ {
+  "kind": "invalid_reasoning",
   "item_id": "4cb875e3c8cc-nonsense",
   "confidence": 0.95,
   "addresses": true
@@ -236,7 +224,7 @@
  {
   "kind": "holed",
   "item_id": "d757eca4528c-holed",
-  "confidence": 1.0,
+  "confidence": 0.9,
   "addresses": true
  },
  {
@@ -258,12 +246,6 @@
   "addresses": true
  },
  {
-  "kind": "nonsense",
-  "item_id": "d92e0ad73cb8-nonsense",
-  "confidence": 0.7,
-  "addresses": true
- },
- {
   "kind": "invalid_reasoning",
   "item_id": "d92e0ad73cb8-invalid_reasoning",
   "confidence": 0.9,
@@ -282,12 +264,6 @@
   "addresses": true
  },
  {
-  "kind": "nonsense",
-  "item_id": "5d564b58c11c-nonsense",
-  "confidence": 0.9,
-  "addresses": true
- },
- {
   "kind": "invalid_reasoning",
   "item_id": "5d564b58c11c-invalid_reasoning",
   "confidence": 1.0,
@@ -300,7 +276,7 @@
   "addresses": true
  },
  {
-  "kind": "nonsense",
+  "kind": "invalid_reasoning",
   "item_id": "7ef66d20c834-nonsense",
   "confidence": 0.9,
   "addresses": true
@@ -372,12 +348,6 @@
   "addresses": false
  },
  {
-  "kind": "invalid_reasoning",
-  "item_id": "17c1b10632b5-invalid_reasoning",
-  "confidence": 1.0,
-  "addresses": true
- },
- {
   "kind": "restatement",
   "item_id": "17c1b10632b5-restatement",
   "confidence": 1.0,
@@ -410,7 +380,7 @@
  {
   "kind": "holed",
   "item_id": "91798e725180-holed",
-  "confidence": 0.3,
+  "confidence": 0.2,
   "addresses": true
  },
  {
@@ -462,12 +432,6 @@
   "addresses": true
  },
  {
-  "kind": "valid_unlisted",
-  "item_id": "b850a615f22e-holed",
-  "confidence": 0.8,
-  "addresses": true
- },
- {
   "kind": "nonsense",
   "item_id": "c08ec38ec72f-nonsense",
   "confidence": 0.3,
@@ -488,8 +452,8 @@
  {
   "kind": "holed",
   "item_id": "c08ec38ec72f-holed",
-  "confidence": 0.8,
-  "addresses": true
+  "confidence": 0.2,
+  "addresses": false
  },
  {
   "kind": "nonsense",
@@ -542,7 +506,7 @@
  {
   "kind": "holed",
   "item_id": "23575fb39cfd-holed",
-  "confidence": 1.0,
+  "confidence": 0.8,
   "addresses": true
  },
  {
