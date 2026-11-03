@@ -345,6 +345,8 @@ The goal is to confirm the judge before anything is built on it.
 
 ### Phase 6 — Feedback and output (≈1 week)
 
+> **Done (2026-11-03).** Gate passed on external review 1: 27/30 (90%), exactly the threshold. D5 confirmed: local qwen3:8b keeps phrasing (10% failures, rule is 20%). The three failures traced to code (generic off-topic note, two points for one missing example, a template restating the criterion) and are fixed. The six edited evaluations have not been reviewed again. Details: [`experiments/6_feedback/FINDINGS.md`](../experiments/6_feedback/FINDINGS.md).
+
 **Tasks**
 1. **Selection (code, deterministic)**:
    - Candidates are the failed criteria on the path used. Rank by `core` first, then by weight × dimension weight for the task type.
@@ -364,8 +366,8 @@ The goal is to confirm the judge before anything is built on it.
 5. **Trace logging** completed for the §5 fields.
 
 **Exit gate**
-- [ ] 30 evaluations reviewed by hand against a feedback checklist: specific, actionable, at most 3 problem points, includes what worked, no reference-answer leakage, correct amendment voice. Pass rate ≥ 90%.
-- [ ] D5 confirmed: if local Qwen fails more than 20% of the review, switch phrasing to Gemini Flash.
+- [x] 30 evaluations reviewed by hand against a feedback checklist: specific, actionable, at most 3 problem points, includes what worked, no reference-answer leakage, correct amendment voice. Pass rate ≥ 90%. **27/30 on external review 1.**
+- [x] D5 confirmed: if local Qwen fails more than 20% of the review, switch phrasing to Gemini Flash.
 
 ---
 

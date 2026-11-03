@@ -59,7 +59,7 @@ def needs_evidence(criterion: Criterion) -> bool:
     return not _ABSENCE_OR_COUNT.search(criterion.statement)
 
 
-def _same_statement(evidence: str, error_quote: str) -> bool:
+def same_statement(evidence: str, error_quote: str) -> bool:
     """One quote contains the other (the contained side at least 3 words, so a lone noun
     doesn't match every error mentioning it), or they are near-identical."""
     e, q = _norm(evidence), _norm(error_quote)
@@ -81,7 +81,7 @@ def apply_error_contradictions(
     checked: list[Verdict] = []
     downgraded: list[str] = []
     for v in verdicts:
-        if v.met and any(_same_statement(v.evidence, e.quote) for e in errors):
+        if v.met and any(same_statement(v.evidence, e.quote) for e in errors):
             downgraded.append(v.criterion_id)
             v = v.model_copy(
                 update={

@@ -5,6 +5,7 @@ from datetime import datetime
 from pydantic import BaseModel, Field
 
 from eval_engine.schemas.common import Dimension, TaskType
+from eval_engine.schemas.feedback import Feedback
 from eval_engine.schemas.judge import ClaimError, PathConfidence, Verdict
 
 
@@ -77,5 +78,6 @@ class EvaluationTrace(BaseModel):
     # never shown to a learner as a single score (design doc §12).
     overall_score: float | None = None
     bands: dict[Dimension, str] = Field(default_factory=dict)
-    feedback_items: list[str] = Field(default_factory=list)
+    # Learner-facing feedback (Phase 6); None when the caller didn't ask for it.
+    feedback: Feedback | None = None
     call_ids: list[str] = Field(default_factory=list)

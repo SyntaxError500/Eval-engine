@@ -4,7 +4,8 @@ Routes by task type (creative skips path identification and amendment), makes th
 call, repairs malformed judge output, runs the amendment stage when the answer attempts none
 of the paths (an accepted path means a re-score on the new rubric version), applies the code
 checks (a met verdict resting on a statement the judge flagged as wrong, unquoted evidence,
-sentence counts), aggregates into dimension scores and bands, and stores the full trace.
+sentence counts), aggregates into dimension scores and bands, optionally writes the
+learner's feedback, and stores the full trace.
 Optionally (decision D6) a borderline result is re-judged and decided by a majority of votes.
 """
 
@@ -19,6 +20,8 @@ from eval_engine.config import load_weights
 from eval_engine.evaluation.aggregate import Bands, dimension_scores, load_bands, overall_score
 from eval_engine.evaluation.counts import apply_count_checks
 from eval_engine.evaluation.evidence import apply_error_contradictions, apply_evidence_check
+from eval_engine.feedback.phrase import give_feedback
+from eval_engine.feedback.select import select
 from eval_engine.providers.client import LLMClient
 from eval_engine.schemas.common import SINGLE_PATH_SHAPES, TaskType
 from eval_engine.schemas.judge import (
@@ -60,8 +63,11 @@ def evaluate(
     bands: Bands | None = None,
     weights: dict[str, dict[str, float]] | None = None,
     amend: bool = True,
+    feedback: bool = False,
 ) -> EvaluationTrace:
-    """`amend=False` records that amendment was due without running it (golden set)."""
+    """`amend=False` records that amendment was due without running it (golden set).
+    `feedback=True` adds the learner's feedback, at the cost of one call to the feedback model;
+    experiments that only need scores leave it off."""
     bands = bands or load_bands()
     weights = weights or load_weights()
     q = questions.get(question_id)
@@ -144,6 +150,17 @@ def evaluate(
         bands={d: bands.label(s) for d, s in scores.items()},
         call_ids=call_ids,
     )
+    if feedback:
+        chosen = select(trace, criteria, weights[q.task_type.value], answer)
+        trace.feedback = give_feedback(
+            client,
+            chosen,
+            q.text,
+            answer,
+            q.reference_answer,
+            rubric_text=[c.statement for c in criteria],
+            evaluation_id=evaluation_id,
+        )
     evaluations.save(trace)
     return trace
 

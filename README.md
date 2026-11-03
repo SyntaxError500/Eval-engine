@@ -35,8 +35,10 @@ The paths below use Git Bash syntax. In **cmd or PowerShell**, activate the venv
 ```
 
 Each phase's experiments have their own commands: `eval-engine pilot --help` (Phase 2),
-`eval-engine gen --help` (Phase 3), `eval-engine golden` (Phase 4, rerun after any pipeline change)
-and `eval-engine verifier --help` (Phase 5). All of them resume from the cache.
+`eval-engine gen --help` (Phase 3), `eval-engine golden` (Phase 4, rerun after any pipeline change),
+`eval-engine verifier --help` (Phase 5) and `eval-engine feedback-review` (Phase 6).
+`eval-engine evaluate` shows the learner's feedback (local Ollama, about 11 s) unless
+`--no-feedback` is given. All of them resume from the cache.
 
 ## Swapping a model
 

@@ -11,6 +11,7 @@ from pydantic import BaseModel
 
 from eval_engine.config import ConfigError, db_path, load_config, load_env
 from eval_engine.evaluation.pipeline import evaluate
+from eval_engine.feedback.render import learner_view
 from eval_engine.generation.generate import GenerationError, generate_question
 from eval_engine.generation.review import REVIEW_DIR, _question_block, build_batch
 from eval_engine.providers.base import ProviderError
@@ -21,7 +22,7 @@ from eval_engine.schemas.common import TaskType
 from eval_engine.storage import RubricStore, UsageCounter, connect
 from eval_engine.storage.evaluation_store import EvaluationStore
 from eval_engine.storage.question_store import QuestionStore
-from eval_engine.validation import golden, pilot, verifier_set
+from eval_engine.validation import feedback_review, golden, pilot, verifier_set
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -233,8 +234,10 @@ def evaluate_cmd(
     answer_file: Annotated[Path | None, typer.Option(help="File with the answer")] = None,
     answer: Annotated[str | None, typer.Option(help="Answer text (instead of a file)")] = None,
     votes: Annotated[int, typer.Option(help="Judge votes on borderline answers (D6)")] = 1,
+    feedback: Annotated[bool, typer.Option(help="Write the learner's feedback")] = True,
 ) -> None:
-    """Grade one answer against its question's frozen rubric and print the result."""
+    """Grade one answer against its question's frozen rubric and print the result: what the
+    learner sees first, then the grading details."""
     if (answer_file is None) == (answer is None):
         raise typer.BadParameter("give exactly one of --answer-file or --answer")
     text = answer_file.read_text(encoding="utf-8") if answer_file else str(answer)
@@ -242,9 +245,22 @@ def evaluate_cmd(
     conn = connect(db_path())
     client = build_client(load_config(), conn)
     rubrics, questions = RubricStore(conn), QuestionStore(conn)
-    t = evaluate(client, rubrics, questions, EvaluationStore(conn), question, text, votes=votes)
+    t = evaluate(
+        client,
+        rubrics,
+        questions,
+        EvaluationStore(conn),
+        question,
+        text,
+        votes=votes,
+        feedback=feedback,
+    )
     q = questions.get(question)
     typer.echo(f"Question ({q.task_type.value}): {q.text}\n")
+    typer.echo("\n".join(learner_view(t)))
+    typer.secho("\nDetails (not shown to the learner)", bold=True)
+    if t.feedback and t.feedback.fallbacks:
+        typer.secho(f"  feedback templates used: {t.feedback.fallbacks}", fg="yellow")
     if t.identified_path:
         conf = ", ".join(f"{p.path_id}={p.confidence:.2f}" for p in t.path_confidences)
         typer.echo(f"Path: {t.identified_path}  ({conf})")
@@ -294,6 +310,19 @@ def golden_cmd(
     text = golden.report(outcomes)
     (golden.GOLDEN_DIR / "golden_report.md").write_text(text + "\n", encoding="utf-8")
     typer.echo(text)
+
+
+@app.command("feedback-review")
+def feedback_review_cmd() -> None:
+    """Phase 6: 30 evaluations with feedback, written to a review sheet. Grading replies come
+    from the cache; feedback calls go to the local model."""
+    load_env()
+    conn = connect(db_path())
+    rows = feedback_review.run(build_client(load_config(), conn), conn)
+    sheet = feedback_review.FEEDBACK_DIR / "review.md"
+    sheet.write_text(feedback_review.review_sheet(rows, QuestionStore(conn)), encoding="utf-8")
+    typer.echo(json.dumps(feedback_review.summary(rows)))
+    typer.echo(f"Review sheet: {sheet}")
 
 
 verifier_app = typer.Typer(no_args_is_help=True, help="Phase 5 verifier test set.")

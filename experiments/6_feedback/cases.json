@@ -1,0 +1,4157 @@
+[
+ {
+  "case": "cell-good",
+  "answer": "The cell cycle includes G1, S phase and M phase. In G1 the cell grows and produces the proteins and organelles it will need. During S phase the entire genome is replicated, so each chromosome ends up as two sister chromatids. In M phase (mitosis) the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells.",
+  "trace": {
+   "evaluation_id": "c9147b94cefa478dadf5980c84491cb7",
+   "timestamp": "2026-11-03T10:19:27.472861Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as the first cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "In G1 the cell grows and produces the proteins and organelles it will need.",
+     "justification": "Cell growth and organelle production are correctly associated with G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second distinct cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "During S phase the entire genome is replicated",
+     "justification": "Genome replication is correctly associated with S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "M phase",
+     "justification": "The answer names M phase as a third distinct cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "In M phase (mitosis) the sister chromatids are pulled to opposite poles and the cell divides",
+     "justification": "Chromosome separation and cell division are correctly associated with M phase."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1, S phase and M phase",
+     "justification": "All three named phases are completely distinct with no repeats."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "worked",
+      "text": "You correctly name G1 as a cell-cycle phase.",
+      "refs": [
+       "P1.C1",
+       "P1.C2",
+       "P1.C3",
+       "P1.C4",
+       "P1.C5",
+       "P1.C6"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You correctly name three distinct phases: G1, S phase, and M phase.",
+      "refs": [
+       "P1.C7"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "2c2cc044b7b7436babeede9b90efdccc"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "b0e377e2600e4fccbba201231c7f21e4"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Names a valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a correct key event that occurs in the phase named in C1.",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Names a second valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Provides a correct key event that occurs in the phase named in C3.",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C5",
+    "statement": "Names a third valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C6",
+    "statement": "Provides a correct key event that occurs in the phase named in C5.",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C7",
+    "statement": "The three phases named are all different from each other.",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "cell-partial",
+  "answer": "In G1 the cell grows and makes proteins. In S phase the DNA is copied so there are two complete sets. After that the cell gets ready to divide.",
+  "trace": {
+   "evaluation_id": "f3a494ce027f4db99d887d14e331fb01",
+   "timestamp": "2026-11-03T10:19:27.485209Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as the first cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the cell grows and makes proteins.",
+     "justification": "The answer provides a correct key event for G1 phase."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second valid cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "the DNA is copied so there are two complete sets.",
+     "justification": "The answer provides a correct key event for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not name a third distinct phase (G2 or M), instead referring vaguely to 'After that'."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "No third phase was named, so no event is paired with it."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": false,
+     "evidence": "",
+     "justification": "Only two phases (G1 and S) are explicitly named."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.7142857142857143,
+    "completeness": 0.0
+   },
+   "overall_score": 0.4464285714285714,
+   "bands": {
+    "correctness": "Proficient",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You don't name a third distinct phase (G2 or M), instead referring vaguely to 'After that'. Add a third phase and explain its key event.",
+      "refs": [
+       "P1.C5",
+       "P1.C6"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You only name two phases (G1 and S), not three distinct ones. Name a third phase and describe its key event.",
+      "refs": [
+       "P1.C7"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You name G1 and describe its key event of cell growth and protein production.",
+      "refs": [
+       "P1.C1",
+       "P1.C2",
+       "P1.C3",
+       "P1.C4"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "9e8870c36a414fd0988600ee025806c1"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "c05b22cf2fab415caa726825c1e913cf"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Names a valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a correct key event that occurs in the phase named in C1.",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Names a second valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Provides a correct key event that occurs in the phase named in C3.",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C5",
+    "statement": "Names a third valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C6",
+    "statement": "Provides a correct key event that occurs in the phase named in C5.",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C7",
+    "statement": "The three phases named are all different from each other.",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "cell-wrong",
+  "answer": "In G1 the cell copies all of its DNA. In S phase the cell splits into two daughter cells. In M phase the cell rests and grows larger before the next round.",
+  "trace": {
+   "evaluation_id": "4a9c24472f1b45b99a5201b8c8c0eab3",
+   "timestamp": "2026-11-03T10:19:27.498264Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as a phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The key event provided for G1 (copies all of its DNA) is incorrect for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "The key event provided for S phase (splits into two daughter cells) is incorrect for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "M phase",
+     "justification": "The answer names M phase as a third phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "The key event provided for M phase (rests and grows larger) is incorrect for M phase."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1, S phase, M phase",
+     "justification": "The three phases named are all different from each other."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "In G1 the cell copies all of its DNA.",
+     "explanation": "DNA replication occurs in S phase, not G1."
+    },
+    {
+     "quote": "In S phase the cell splits into two daughter cells.",
+     "explanation": "Cell division occurs in M phase, not S phase."
+    },
+    {
+     "quote": "In M phase the cell rests and grows larger before the next round.",
+     "explanation": "Cell growth and rest occur during G phases, whereas M phase involves mitosis/cytokinesis."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.42857142857142855,
+    "completeness": 1.0
+   },
+   "overall_score": 0.6428571428571428,
+   "bands": {
+    "correctness": "Developing",
+    "completeness": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You wrote: \"In G1 the cell copies all of its DNA.\" DNA replication occurs in S phase, not G1. Add DNA replication in S phase.",
+      "refs": [
+       "error:1",
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You wrote: \"In S phase the cell splits into two daughter cells.\" Cell division occurs in M phase, not S phase. Add cell division in M phase.",
+      "refs": [
+       "error:2",
+       "P1.C4"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You wrote: \"In M phase the cell rests and grows larger before the next round.\" Cell growth and rest occur during G phases, whereas M phase involves mitosis/cytokinesis. Add mitosis or cytokinesis in M phase.",
+      "refs": [
+       "error:3",
+       "P1.C6"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You named G1 as a phase.",
+      "refs": [
+       "P1.C1",
+       "P1.C3",
+       "P1.C5"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You named three different phases.",
+      "refs": [
+       "P1.C7"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "7386e1137d6644a88e408ea025669990"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "870fa6e620424466a748e4208f2353f9"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Names a valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a correct key event that occurs in the phase named in C1.",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Names a second valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Provides a correct key event that occurs in the phase named in C3.",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C5",
+    "statement": "Names a third valid cell‑cycle phase (e.g., G1, S, G2, or M).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C6",
+    "statement": "Provides a correct key event that occurs in the phase named in C5.",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C7",
+    "statement": "The three phases named are all different from each other.",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "macro-partial",
+  "answer": "Carbohydrates give the body energy. Proteins build and repair muscle. Vitamins are the third macronutrient and they keep the immune system strong.",
+  "trace": {
+   "evaluation_id": "321c0aa6dcba4fff916578d97dace543",
+   "timestamp": "2026-11-03T10:19:27.512941Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.8
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The student lists carbohydrates and proteins, but incorrectly lists vitamins as the third macronutrient instead of fats."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Carbohydrates give the body energy.",
+     "justification": "The student provides a correct function for carbohydrates."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Proteins build and repair muscle.",
+     "justification": "The student provides a correct function for proteins."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "The third item listed is vitamins, which is a micronutrient rather than a macronutrient, so a valid third macronutrient function is not given."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Vitamins are the third macronutrient",
+     "explanation": "Vitamins are micronutrients, not macronutrients."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 0.0,
+    "correctness": 0.5
+   },
+   "overall_score": 0.3125,
+   "bands": {
+    "completeness": "Not yet",
+    "correctness": "Developing"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You wrote: \"Vitamins are the third macronutrient\". Vitamins are micronutrients, not macronutrients. Add the correct third macronutrient and state its primary function.",
+      "refs": [
+       "error:1",
+       "P1.C1",
+       "P1.C4"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You stated a correct function for carbohydrates. \"Carbohydrates give the body energy.\"",
+      "refs": [
+       "P1.C2",
+       "P1.C3"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "c4d28021355f47d481c39294ee64f19f"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "e4a98c57b1644103943827fbdc26b934"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Names three distinct macronutrients required by the human body",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "States a primary function of the first macronutrient named",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "States a primary function of the second macronutrient named",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "States a primary function of the third macronutrient named",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "macro-wrong",
+  "answer": "The three macronutrients are carbohydrates, proteins and fats. Carbohydrates are mainly used to build bones. Proteins are the body's fastest source of energy. Fats carry oxygen around in the blood.",
+  "trace": {
+   "evaluation_id": "d8a39b5491ae4084a678844fe8307ea8",
+   "timestamp": "2026-11-03T10:19:27.526071Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "carbohydrates, proteins and fats",
+     "justification": "The learner correctly names the three main macronutrients required by the human body."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "Carbohydrates are mainly used to build bones.",
+     "justification": "[evidence listed as a factual error] The learner states a function for the first macronutrient (carbohydrates), even though it is factually incorrect."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "Proteins are the body's fastest source of energy.",
+     "justification": "[evidence listed as a factual error] The learner states a function for the second macronutrient (proteins), even though it is factually incorrect."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "Fats carry oxygen around in the blood.",
+     "justification": "[evidence listed as a factual error] The learner states a function for the third macronutrient (fats), even though it is factually incorrect."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Carbohydrates are mainly used to build bones.",
+     "explanation": "Carbohydrates do not build bones; calcium and other minerals do."
+    },
+    {
+     "quote": "Proteins are the body's fastest source of energy.",
+     "explanation": "Carbohydrates are the body's fastest source of energy, not proteins."
+    },
+    {
+     "quote": "Fats carry oxygen around in the blood.",
+     "explanation": "Red blood cells and hemoglobin carry oxygen, not fats."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [
+    "P1.C2",
+    "P1.C3",
+    "P1.C4"
+   ],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.0
+   },
+   "overall_score": 0.37499999999999994,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You wrote: \"Carbohydrates are mainly used to build bones.\" Carbohydrates do not build bones; calcium and other minerals do. Add the correct function of carbohydrates.",
+      "refs": [
+       "error:1",
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You wrote: \"Proteins are the body's fastest source of energy.\" Carbohydrates are the body's fastest source of energy, not proteins. Add the correct function of proteins.",
+      "refs": [
+       "error:2",
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You wrote: \"Fats carry oxygen around in the blood.\" Red blood cells and hemoglobin carry oxygen, not fats. Add the correct function of fats.",
+      "refs": [
+       "error:3",
+       "P1.C4"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You correctly name the three main macronutrients required by the human body.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "e747c338de9843b0887f2f79bf16b762"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "f474848c11b54a1eaeba8decefe3f1ab"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Names three distinct macronutrients required by the human body",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "States a primary function of the first macronutrient named",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "States a primary function of the second macronutrient named",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C4",
+    "statement": "States a primary function of the third macronutrient named",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "macro-off",
+  "answer": "Calcium keeps bones strong, iron helps carry oxygen in the blood, and potassium helps the heart and muscles work properly.",
+  "trace": {
+   "evaluation_id": "883f06cbeac14811b661b2a6ad39019b",
+   "timestamp": "2026-11-03T10:19:27.538562Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer lists micronutrients/minerals (calcium, iron, potassium) instead of macronutrients."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "No macronutrient was named, so no function for a first macronutrient can be credited."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "No second macronutrient was named."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "No third macronutrient was named."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Calcium keeps bones strong, iron helps carry oxygen in the blood, and potassium helps the heart and muscles work properly.",
+     "explanation": "These are minerals, which are micronutrients, not macronutrients."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 0.0,
+    "correctness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "completeness": "Not yet",
+    "correctness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You wrote: \"Calcium keeps bones strong, iron helps carry oxygen in the blood, and potassium helps the heart and muscles work properly.\" These are minerals, which are micronutrients, not macronutrients. Add the three main macronutrients: carbohydrates, proteins, and fats.",
+      "refs": [
+       "error:1",
+       "P1.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You did not name any macronutrient, so no function for a first macronutrient can be credited. Name the three main macronutrients required by the human body.",
+      "refs": [
+       "P1.C2",
+       "P1.C3",
+       "P1.C4"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "5bb2e6282bb843b7b4daa2e08a2ec2f9"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "333b06d38ca5477d83a27405589b9e80"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Names three distinct macronutrients required by the human body",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "States a primary function of the first macronutrient named",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "States a primary function of the second macronutrient named",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C4",
+    "statement": "States a primary function of the third macronutrient named",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "balloon-partial",
+  "answer": "Hot air rises, so when the burner heats the air inside the balloon, the balloon goes up with it. Turning the burner off makes it come back down.",
+  "trace": {
+   "evaluation_id": "a0a8b2e8aa074af791206b0d64cf1f59",
+   "timestamp": "2026-11-03T10:19:27.549773Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.5
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention that heating the air reduces its density compared to the surrounding air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention buoyancy or Archimedes' principle causing upward lift."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention the temperature difference or contrast between the inside and outside air."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.17647058823529413,
+   "bands": {
+    "correctness": "Developing",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You say heating makes the balloon go up, but you don't explain that the air inside becomes less dense than the surrounding air. Add how heating reduces air density compared to the cooler air outside.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You mention the balloon goes up when heated, but you don't explain why. Explain how the lower density causes a buoyant force that lifts the balloon.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You don't mention that the surrounding air is cooler, which is needed to create the lift. Mention the temperature difference between the inside and outside air.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "48fe95f0580f4de2bad33998eb84d595"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "102f9d021b13427988f0cb3f2a372c78"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States that heating the air inside the balloon reduces its density compared to the surrounding cooler air",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Links the lower density of the heated air to a net upward buoyant force that lifts the balloon",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Mentions that the surrounding air is cooler (or at ambient temperature) providing the contrast needed for lift",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "balloon-wrong",
+  "answer": "Heating air makes it denser and heavier, but the expanding gas pushes down hard on the basket like a rocket, which drives the balloon upward. Heat itself is a gas lighter than air, so it also carries the balloon up.",
+  "trace": {
+   "evaluation_id": "c521c14b9d8f4cd5878fb0879b7ea361",
+   "timestamp": "2026-11-03T10:19:27.563905Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.5
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer claims that heating air makes it denser, which is factually incorrect regarding the physics of hot-air balloons."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer attributes the lift to expanding gas pushing down on the basket like a rocket rather than buoyancy."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention the cooler surrounding air to provide a contrast."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Heating air makes it denser and heavier",
+     "explanation": "Heating air actually decreases its density rather than increasing it."
+    },
+    {
+     "quote": "the expanding gas pushes down hard on the basket like a rocket",
+     "explanation": "Hot air balloons do not rise due to rocket-like exhaust pushing on the basket."
+    },
+    {
+     "quote": "Heat itself is a gas lighter than air",
+     "explanation": "Heat is energy, not a gas."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You wrote: \"Heating air makes it denser and heavier\". Heating air actually decreases its density rather than increasing it. Add that heating the air inside the balloon reduces its density compared to the surrounding cooler air.",
+      "refs": [
+       "error:1",
+       "P1.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You wrote: \"the expanding gas pushes down hard on the basket like a rocket\". Hot air balloons do not rise due to rocket-like exhaust pushing on the basket. Link the lower density of the heated air to a net upward buoyant force that lifts the balloon.",
+      "refs": [
+       "error:2",
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You wrote: \"Heat itself is a gas lighter than air\". Heat is energy, not a gas. Correct this statement to explain that heated air becomes less dense than the surrounding air.",
+      "refs": [
+       "error:3"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "2c91815fbe8f4b27adca1250cd1c51cd"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "367298e78b1b410c84eb04f961946bd5"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States that heating the air inside the balloon reduces its density compared to the surrounding cooler air",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Links the lower density of the heated air to a net upward buoyant force that lifts the balloon",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Mentions that the surrounding air is cooler (or at ambient temperature) providing the contrast needed for lift",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "rain-partial",
+  "answer": "Rain shadows are caused by orographic lift. Moist air is pushed up the windward side of the mountains, where it cools and drops most of its moisture as rain.",
+  "trace": {
+   "evaluation_id": "e6e94757f5f64479a71c7469290ea55d",
+   "timestamp": "2026-11-03T10:19:27.575348Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Rain shadows are caused by orographic lift. Moist air is pushed up the windward side of the mountains, where it cools and drops most of its moisture as rain.",
+     "justification": "The student states that orographic lift pushes moist air up the windward side where it cools and drops moisture."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The student does not describe the descending air warming and losing relative humidity on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The student does not provide a quantitative lapse-rate fact or name a real-world example."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.35294117647058826,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You describe the mechanism but do not explain how descending air warms, loses relative humidity, and results in reduced precipitation on the leeward side. Add how the air warms and dries as it descends.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You do not provide a supporting fact like a temperature drop or a real-world example. Add a quantitative fact or name a known rain-shadow region.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You correctly state that orographic lift causes moist air to rise, cool, and release precipitation on the windward side.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "7369fbebbf4b412f93fb387947c74f70"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "aaa371e2ad37496dab0c85629b48bee7"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States the main atmospheric mechanism responsible for rain shadows (orographic lift causing precipitation on the windward side and descending dry air on the leeward side).",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Describes how the mechanism leads to reduced precipitation on the leeward side (descending air warms, its relative humidity drops, and precipitation decreases).",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Gives one supporting fact that illustrates the process (e.g., temperature drops ~6 °C per km of ascent, or cites a known rain‑shadow region such as the leeward side of the Cascades).",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "rain-wrong",
+  "answer": "The leeward side is dry because the mountains block the sunlight, so less water evaporates there and fewer clouds can form. The Himalayas are dry on their southern side for this reason.",
+  "trace": {
+   "evaluation_id": "e281012c16504d5fa54bed873d436d82",
+   "timestamp": "2026-11-03T10:19:27.591627Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.3
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": true,
+   "amendment_proposal": "{\"is_new_valid_approach\": false, \"proposed_path\": null, \"justification\": \"The answer does not correctly explain the atmospheric mechanism that creates rain shadows; it offers an inaccurate explanation about sunlight blockage and evaporation, which is not a valid approach and does not differ from the rubric's correct approach. Therefore it is not a new valid approach.\"}",
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": "The answer does not correctly explain the atmospheric mechanism that creates rain shadows; it offers an inaccurate explanation about sunlight blockage and evaporation, which is not a valid approach and does not differ from the rubric's correct approach. Therefore it is not a new valid approach.",
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer attributes the dryness to mountains blocking sunlight rather than orographic lift and descending air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "It does not describe descending air warming and losing relative humidity."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "It names a real-world region (the Himalayas), but misidentifies which side is dry due to a rain shadow and gives an incorrect physical mechanism."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "The leeward side is dry because the mountains block the sunlight, so less water evaporates there and fewer clouds can form.",
+     "explanation": "Rain shadows are caused by atmospheric uplift, cooling, and descending warming air, not by mountains blocking sunlight."
+    },
+    {
+     "quote": "The Himalayas are dry on their southern side for this reason.",
+     "explanation": "The southern side of the Himalayas is actually the windward side, which receives very high precipitation (monsoon rains), whereas the northern side (Tibetan Plateau) is the dry leeward rain shadow."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "divergence",
+      "text": "Your answer takes a different route from the usual ones for this question, so that route was checked separately. It didn't hold up: You didn't explain the atmospheric mechanism. Focus on how air rises, cools, and descends to create dry regions.",
+      "refs": [],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You said 'mountains block the sunlight' which is incorrect. Rain shadows are caused by air rising, cooling, and descending. Add how uplift causes precipitation on the windward side and dry air on the leeward side.",
+      "refs": [
+       "error:1",
+       "P1.C1",
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You mentioned the Himalayas' southern side being dry, but this is actually the windward side. Give a fact about a known rain shadow region, like the leeward side of the Cascades.",
+      "refs": [
+       "error:2",
+       "P1.C3"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "3434623a0ac4467f848a6b2ce3d3a8fb",
+     "19d6e7e06d334ab79485dc26bf1ba812"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "52a5cafe005b4247a06b1fe0a805bde8",
+    "5bd155cf734d457695e1692af5985c80"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States the main atmospheric mechanism responsible for rain shadows (orographic lift causing precipitation on the windward side and descending dry air on the leeward side).",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Describes how the mechanism leads to reduced precipitation on the leeward side (descending air warms, its relative humidity drops, and precipitation decreases).",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Gives one supporting fact that illustrates the process (e.g., temperature drops ~6 °C per km of ascent, or cites a known rain‑shadow region such as the leeward side of the Cascades).",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "rain-off",
+  "answer": "Monsoons happen because land heats up faster than the ocean in summer. The warm land draws in moist ocean air, which brings months of heavy rain to places like India.",
+  "trace": {
+   "evaluation_id": "1ee86ee7a1b945a1a1c56217ba57426a",
+   "timestamp": "2026-11-03T10:19:27.606308Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": false,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer discusses monsoons instead of mountain ranges and rain shadows."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention descending air or rain shadows on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer provides no supporting fact about lapse rates or specific rain-shadow regions."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Monsoons happen because land heats up faster than the ocean in summer.",
+     "explanation": "This statement is entirely about monsoons and is off-topic regarding mountain rain shadows."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "off_topic",
+      "text": "Your answer is about something else (\"Monsoons happen because land heats up faster than the ocean in summer\"). Reread the question and answer what it asks: Explain why mountain ranges often create dry regions on their leeward side (rain shadows). In a short paragraph of 3–8 sentences, state the main atmospheric mechanism responsible, describe how it leads to reduced precipitation on the leeward side, and give one supporting fact that illustrates this process.",
+      "refs": [],
+      "source": "template"
+     }
+    ],
+    "call_ids": [
+     "9f1e9cf24d3b48e5a92b3442ece9a708",
+     "d4f9c57917d14677a7deeb121f4bf827"
+    ],
+    "fallbacks": [
+     "off_topic: say what their answer is about instead, using a word or two from it"
+    ]
+   },
+   "call_ids": [
+    "f4aa8cbdc7b742efb4754f6e2145064d"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States the main atmospheric mechanism responsible for rain shadows (orographic lift causing precipitation on the windward side and descending dry air on the leeward side).",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Describes how the mechanism leads to reduced precipitation on the leeward side (descending air warms, its relative humidity drops, and precipitation decreases).",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Gives one supporting fact that illustrates the process (e.g., temperature drops ~6 °C per km of ascent, or cites a known rain‑shadow region such as the leeward side of the Cascades).",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "wfh-partial",
+  "answer": "Working from home improves work-life balance because people no longer waste time commuting. That time can be spent with family instead.",
+  "trace": {
+   "evaluation_id": "727c899cf3b54f49843dd4e07e9b737d",
+   "timestamp": "2026-11-03T10:19:27.621348Z",
+   "question_id": "78d7767e5351",
+   "task_type": "analytical",
+   "rubric_hash_original": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "rubric_hash_used": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.95
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.05
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Working from home improves work-life balance",
+     "justification": "The answer explicitly states that working from home improves work-life balance."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "people no longer waste time commuting",
+     "justification": "The answer provides reduced commuting time as a first distinct supporting reason."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer only provides one distinct reason and does not include a second reason."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 0.5
+   },
+   "overall_score": 0.6538461538461539,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Developing"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You only provide one reason. Add a second distinct reason that supports the idea that working from home improves work-life balance.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You correctly mention reduced commuting time as a reason for improved work-life balance.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You clearly state that working from home improves work-life balance.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "07bbc221c8f94cd79672bafb7a3331a9"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "d35bb18b06cd498f9b0477a26b620890"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States a position that working from home increases overall work‑life balance",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a first distinct reason that supports the position",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Provides a second distinct reason that supports the position",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "wfh-wrong",
+  "answer": "Working from home has advantages and disadvantages. Some people like skipping the commute, while others miss their colleagues. In the end it really depends on the person and their job.",
+  "trace": {
+   "evaluation_id": "391182ef79a243cfacf8835013a56a3c",
+   "timestamp": "2026-11-03T10:19:27.631920Z",
+   "question_id": "78d7767e5351",
+   "task_type": "analytical",
+   "rubric_hash_original": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "rubric_hash_used": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.5
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.5
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not state a position that working from home increases overall work-life balance, instead stating that it depends on the person."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not provide a supporting reason for an increase in work-life balance."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not provide a second supporting reason."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "reasoning": 0.0
+   },
+   "overall_score": 0.15384615384615385,
+   "bands": {
+    "correctness": "Developing",
+    "reasoning": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You don't provide a supporting reason for how working from home increases work-life balance. Add a reason, such as time saved on commuting or flexibility in scheduling.",
+      "refs": [
+       "P1.C2",
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You don't state a clear position that working from home increases work-life balance. Explain your stance clearly, such as how it reduces stress or improves time management.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "f12a97b1f5574c2289426df8bbf6d1e6"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "d49e9d9c96e8419082f63fd3a348608a"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States a position that working from home increases overall work‑life balance",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a first distinct reason that supports the position",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Provides a second distinct reason that supports the position",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "wfh-off",
+  "answer": "Working from home makes companies more productive. Employees face fewer interruptions from co-workers, and firms save money on office space, which they can invest elsewhere.",
+  "trace": {
+   "evaluation_id": "1c43be4f26a54de0ab941c7fb178127e",
+   "timestamp": "2026-11-03T10:19:27.642735Z",
+   "question_id": "78d7767e5351",
+   "task_type": "analytical",
+   "rubric_hash_original": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "rubric_hash_used": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.2
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.1
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": false,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer discusses company productivity and savings rather than work-life balance."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not provide a reason supporting increased work-life balance."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not provide a second reason supporting increased work-life balance."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "reasoning": 0.0
+   },
+   "overall_score": 0.15384615384615385,
+   "bands": {
+    "correctness": "Developing",
+    "reasoning": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "off_topic",
+      "text": "Your answer doesn't address the question, which asks you to argue whether working from home increases work-life balance. You should explain how it affects work-life balance, not just company productivity and costs.",
+      "refs": [],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "c427668ee9174446a4877344772a7369"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "d0dba4a8d07d460b9b8ba9de92ba1978"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States a position that working from home increases overall work‑life balance",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a first distinct reason that supports the position",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Provides a second distinct reason that supports the position",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "wwi-nationalism",
+  "answer": "Nationalist rivalry, not the treaties, was what really started the war. Gavrilo Princip, a Bosnian Serb tied to the Black Hand group that wanted South Slavs freed from Habsburg rule, shot Archduke Franz Ferdinand in Sarajevo on 28 June 1914. Austria-Hungary was determined to crush Serbian nationalism, which it saw as a threat to its multi-ethnic empire, and Russia backed Serbia out of Pan-Slav feeling. The alliances only spread a fire that national hatreds had lit.",
+  "trace": {
+   "evaluation_id": "1f01974e2f8845b185168acad0dd5f35",
+   "timestamp": "2026-11-03T10:19:27.652921Z",
+   "question_id": "17c1b10632b5",
+   "task_type": "analytical",
+   "rubric_hash_original": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "rubric_hash_used": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P2",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P2",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P2.C1",
+     "met": true,
+     "evidence": "Nationalist rivalry, not the treaties, was what really started the war.",
+     "justification": "The student clearly states a position that nationalist rivalries were the primary cause."
+    },
+    {
+     "criterion_id": "P2.C2",
+     "met": true,
+     "evidence": "Gavrilo Princip, a Bosnian Serb tied to the Black Hand group that wanted South Slavs freed from Habsburg rule, shot Archduke Franz Ferdinand in Sarajevo on 28 June 1914.",
+     "justification": "The student provides the specific historical example of the assassination of Archduke Franz Ferdinand by a Serbian nationalist."
+    },
+    {
+     "criterion_id": "P2.C3",
+     "met": true,
+     "evidence": "Austria-Hungary was determined to crush Serbian nationalism, which it saw as a threat to its multi-ethnic empire, and Russia backed Serbia out of Pan-Slav feeling.",
+     "justification": "The student explains how national hatreds and nationalist dynamics led to the conflict's escalation."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "worked",
+      "text": "You explain how national hatreds and nationalist dynamics led to the conflict's escalation.",
+      "refs": [
+       "P2.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You clearly state a position that nationalist rivalries were the primary cause.",
+      "refs": [
+       "P2.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "7a5a8429806f43e5aa20f50b992e31ac"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "253c319dab1a4bf3a4c978efb7a2fbef"
+   ]
+  },
+  "path": [
+   {
+    "id": "P2.C1",
+    "statement": "States a position that the primary cause was nationalist rivalries",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P2.C2",
+    "statement": "Provides a specific historical example that supports nationalist rivalries as the primary cause",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P2.C3",
+    "statement": "Explains how the example shows nationalist rivalries led to the war",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "wwi-partial",
+  "answer": "I think the alliances were the main cause. The countries had promised to help each other, so once one country went to war the others had to as well.",
+  "trace": {
+   "evaluation_id": "77ca5f1238384b71be8ec5090f9225ef",
+   "timestamp": "2026-11-03T10:19:27.664264Z",
+   "question_id": "17c1b10632b5",
+   "task_type": "analytical",
+   "rubric_hash_original": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "rubric_hash_used": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "I think the alliances were the main cause.",
+     "justification": "The student explicitly states the position that the alliances were the main cause."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The student does not provide a specific historical example such as the Triple Alliance or the July Crisis."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "Without a specific historical example, the student cannot explain how an example demonstrates that the alliance system caused the war."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.5,
+    "reasoning": 0.0
+   },
+   "overall_score": 0.35294117647058826,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Developing",
+    "reasoning": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You don't mention specific alliances like the Triple Alliance or events like the July Crisis. Add an example of an alliance and explain how it led to the war.",
+      "refs": [
+       "P1.C2",
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You state the position that alliances were the main cause. Make sure to clearly connect your example to this claim.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "1b5230a60dc244ecbec8e9d797002eb0"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "79754583c71542f794840bb1fc79ceba"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States a position that the primary cause was the system of alliances",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a specific historical example that supports the alliance system as the primary cause",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Explains how the example demonstrates that the alliance system caused the war",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "wwi-wrong",
+  "answer": "The alliance system was the main cause. In 1914 a Russian student assassinated Archduke Franz Ferdinand in Vienna, and because Italy and Germany were allied they immediately invaded France together. Britain then joined to defend its ally Russia.",
+  "trace": {
+   "evaluation_id": "736e91830083456b9a46a744202418e1",
+   "timestamp": "2026-11-03T10:19:27.677176Z",
+   "question_id": "17c1b10632b5",
+   "task_type": "analytical",
+   "rubric_hash_original": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "rubric_hash_used": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.95
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.3
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "The alliance system was the main cause.",
+     "justification": "The answer clearly states that the alliance system was the primary cause of the war."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "because Italy and Germany were allied they immediately invaded France together.",
+     "justification": "[evidence listed as a factual error] It provides a specific historical example involving alliance obligations."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "Britain then joined to defend its ally Russia.",
+     "justification": "[evidence listed as a factual error] It explains the chain reaction caused by the alliances to show how the system expanded the war."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "In 1914 a Russian student assassinated Archduke Franz Ferdinand in Vienna, and because Italy and Germany were allied they immediately invaded France together. Britain then joined to defend its ally Russia.",
+     "explanation": "The specific historical details regarding who did the assassinating, where it happened, and how the alliances mobilized are factually incorrect."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [
+    "P1.C2",
+    "P1.C3"
+   ],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.0,
+    "reasoning": 0.0
+   },
+   "overall_score": 0.23529411764705882,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Not yet",
+    "reasoning": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You wrote: \"In 1914 a Russian student assassinated Archduke Franz Ferdinand in Vienna...\" This is factually incorrect. The assassination was carried out by Serbian nationalists, not a Russian student, and it occurred in Sarajevo, not Vienna. You should correct these details.",
+      "refs": [
+       "error:1",
+       "P1.C2",
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You clearly stated that the alliance system was the main cause of the war, which meets the requirement.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "7ce1719799bd4ab2b72531713824cf8a",
+     "76013e6618eb416dbc1d2342988aa8f3"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "698a9bb2e7484f1695689dd3ae613dab"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States a position that the primary cause was the system of alliances",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Provides a specific historical example that supports the alliance system as the primary cause",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Explains how the example demonstrates that the alliance system caused the war",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "coffee-obvious",
+  "answer": "She watched the steam curl above the espresso machine while the queue crept forward. The warm mug of the woman in front brushed her hand, and she thought about the barista she had a crush on. Should she finally ask him out? She smiled to herself and decided she would speak to him later.",
+  "trace": {
+   "evaluation_id": "a565b0cadb544d0db7e8d1c539087e39",
+   "timestamp": "2026-11-03T10:19:27.692971Z",
+   "question_id": "b54dae9759d1",
+   "task_type": "creative",
+   "rubric_hash_original": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58",
+   "rubric_hash_used": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58",
+   "creative_route": true,
+   "path_confidences": [],
+   "identified_path": null,
+   "addresses_question": null,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "She watched the steam curl above the espresso machine while the queue crept forward.",
+     "justification": "The piece clearly describes a person waiting in line at a coffee shop."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "she thought about the barista she had a crush on.",
+     "justification": "The text explicitly incorporates the internal thoughts of the protagonist."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "The warm mug of the woman in front brushed her hand",
+     "justification": "A tactile detail is provided through the sensation of the warm mug brushing her hand."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "She smiled to herself and decided she would speak to him later.",
+     "justification": "The ending subtly hints at an upcoming decision regarding speaking to her crush."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [
+    "She watches steam rise, feels the warm mug in her hand, wonders if she should ask the barista out, ending with a quiet resolve to speak later."
+   ],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "expression": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "expression": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "originality",
+      "text": "Your main idea is close to one of the most predictable takes on this brief. For comparison, that take is: \"She watches steam rise, feels the warm mug in her hand, wonders if she should ask the barista out, ending with a quiet resolve to speak later.\" It wasn't marked down, but a less expected angle would stand out more.",
+      "refs": [],
+      "source": "fixed"
+     },
+     {
+      "kind": "worked",
+      "text": "You show the protagonist thinking about the barista.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You end with the protagonist deciding to speak to the barista.",
+      "refs": [
+       "P1.C4"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "4ed7256503354d8ab0d1767904e04da7"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "eb8cb3c7037e4dd8b6fc3b7918aa24eb"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Provides a narrative scene describing a person waiting in line at a coffee shop",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Includes internal thoughts of the protagonist",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Provides at least one tactile detail",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Ends with a subtle hint of an upcoming decision",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "coffee-partial",
+  "answer": "Tom stood in the long line at the coffee shop. He wondered whether they still had blueberry muffins and thought about how late he would be for work. The line moved slowly. Finally he reached the front and ordered a latte.",
+  "trace": {
+   "evaluation_id": "ee290379f8f84bcc82b62ef2ff5bc73d",
+   "timestamp": "2026-11-03T10:19:27.703996Z",
+   "question_id": "b54dae9759d1",
+   "task_type": "creative",
+   "rubric_hash_original": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58",
+   "rubric_hash_used": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58",
+   "creative_route": true,
+   "path_confidences": [],
+   "identified_path": null,
+   "addresses_question": null,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Tom stood in the long line at the coffee shop.",
+     "justification": "The piece clearly describes a person waiting in line at a coffee shop."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "He wondered whether they still had blueberry muffins and thought about how late he would be for work.",
+     "justification": "The protagonist's internal thoughts are explicitly included."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "There are no tactile details such as feeling textures, temperatures, or physical sensations included in the piece."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "The piece ends with a direct action rather than a subtle hint of an upcoming decision."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "expression": 0.5
+   },
+   "overall_score": 0.5,
+   "bands": {
+    "correctness": "Developing",
+    "expression": "Developing"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "Your answer ends with a direct action rather than a subtle hint of an upcoming decision. Add a thought or feeling that suggests a choice is about to be made.",
+      "refs": [
+       "P1.C4"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "Your answer doesn't include any tactile details such as feeling textures, temperatures, or physical sensations. Add a description of a physical sensation to make the scene more vivid.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You include the protagonist's internal thoughts about the muffins and being late for work.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You clearly describe Tom waiting in line at a coffee shop.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "b1c9b75b6fd243a8b86f5ca0949bdf90"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "05b8f5bc03394cc7aa7df3391d6d7455"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Provides a narrative scene describing a person waiting in line at a coffee shop",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Includes internal thoughts of the protagonist",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Provides at least one tactile detail",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Ends with a subtle hint of an upcoming decision",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "coffee-wrong",
+  "answer": "Rain dripped from the shelter roof as Priya waited for the number 12 bus. The cold metal bench pressed through her coat, and she wondered if the interview had gone as badly as she feared. When the bus finally appeared, she hesitated, her phone already open to the recruiter's number.",
+  "trace": {
+   "evaluation_id": "77660bf4278d485093c5829bd37fbedc",
+   "timestamp": "2026-11-03T10:19:27.714936Z",
+   "question_id": "b54dae9759d1",
+   "task_type": "creative",
+   "rubric_hash_original": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58",
+   "rubric_hash_used": "121687cd78faedc901eaa7cc117e0271adaf3af81eab97e260df58800fd75c58",
+   "creative_route": true,
+   "path_confidences": [],
+   "identified_path": null,
+   "addresses_question": null,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The scene describes waiting at a bus stop rather than at a coffee shop."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "she wondered if the interview had gone as badly as she feared",
+     "justification": "The protagonist's internal thoughts regarding the interview are included."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "The cold metal bench pressed through her coat",
+     "justification": "A tactile detail is provided by feeling the cold metal bench."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "she hesitated, her phone already open to the recruiter's number",
+     "justification": "The ending subtly hints at a decision regarding whether to contact the recruiter."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "expression": 1.0
+   },
+   "overall_score": 0.8333333333333334,
+   "bands": {
+    "correctness": "Developing",
+    "expression": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You describe waiting at a bus stop instead of a coffee shop. Add a detail about being in a coffee shop, such as the smell of coffee or the sound of a barista.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You include the protagonist's internal thoughts about the interview.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You end with a hint of a decision about contacting the recruiter.",
+      "refs": [
+       "P1.C4"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "447ac002ad764c75992b1b0d54909ff6"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "59ffd371c6f64d00a7544bfed8efc770"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Provides a narrative scene describing a person waiting in line at a coffee shop",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Includes internal thoughts of the protagonist",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Provides at least one tactile detail",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Ends with a subtle hint of an upcoming decision",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "fire-cliche",
+  "answer": "Old Tomas walked into the clearing where the pines had burned. Black stumps poked from the grey ash, and the smell of smoke still hung in the cool morning air. Then he saw it: a green shoot pushing through the cinders, like a phoenix rising from the flames. He crouched and touched its soft tip, amazed.",
+  "trace": {
+   "evaluation_id": "c79178428ed24bcda44bc79d46d4f031",
+   "timestamp": "2026-11-03T10:19:27.743120Z",
+   "question_id": "b687c2df5103",
+   "task_type": "creative",
+   "rubric_hash_original": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "rubric_hash_used": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "creative_route": true,
+   "path_confidences": [],
+   "identified_path": null,
+   "addresses_question": null,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Old Tomas walked into the clearing where the pines had burned. Black stumps poked from the grey ash, and the smell of smoke still hung in the cool morning air. Then he saw it: a green shoot pushing through the cinders, like a phoenix rising from the flames. He crouched and touched its soft tip, amazed.",
+     "justification": "The piece contains exactly four sentences, which falls within the required range of three to eight sentences."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Black stumps poked from the grey ash, and the smell of smoke still hung in the cool morning air... touched its soft tip",
+     "justification": "The text includes vivid sensory details like the smell of smoke, the grey ash, and the soft texture of the shoot."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Old Tomas walked into the clearing... He crouched and touched its soft tip, amazed.",
+     "justification": "A character named Tomas is featured observing the changes."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "a green shoot pushing through the cinders",
+     "justification": "The text depicts the first signs of ecological recovery with the emergence of a new green shoot."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": false,
+     "evidence": "like a phoenix rising from the flames.",
+     "justification": "The piece explicitly uses the banned phrase 'phoenix rising'."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [
+    "A ranger watches tiny green shoots push through blackened soil, hears the faint rustle of recovering birds, and notes the smell of wet earth."
+   ],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "expression": 0.5
+   },
+   "overall_score": 0.6666666666666666,
+   "bands": {
+    "correctness": "Strong",
+    "expression": "Developing"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "You used the phrase 'phoenix rising' which is not allowed. Avoid using this cliché in future. Try to describe the shoot in a new way.",
+      "refs": [
+       "P1.C5"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "originality",
+      "text": "Your main idea is close to one of the most predictable takes on this brief. For comparison, that take is: \"A ranger watches tiny green shoots push through blackened soil, hears the faint rustle of recovering birds, and notes the smell of wet earth.\" It wasn't marked down, but a less expected angle would stand out more.",
+      "refs": [],
+      "source": "fixed"
+     },
+     {
+      "kind": "worked",
+      "text": "You described the smell of smoke and the texture of the shoot, which adds to the sensory experience.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You included a character, Old Tomas, who observes the changes in the clearing.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "c0158bce4abc43b5a7a72a14c4c2fa12"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "5c5853c6dc2f4f458403b2f8b450f4ee"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Contains between three and eight sentences",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Includes vivid sensory details describing sights, sounds, smells, or textures",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Features a character who observes the environmental changes",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Shows the first signs of ecological recovery, such as the emergence of new shoots",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C5",
+    "statement": "Does not use any of: \"phoenix rising\", \"silver lining\"",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "fire-too-long",
+  "answer": "Ana stepped into the clearing at dawn. The ground was black. Ash drifted in the breeze. It smelled of smoke and rain. A crow called from a dead pine. She walked to the centre. The soil crunched under her boots. Then she saw a green shoot. It was no bigger than a match. She smiled and knelt beside it.",
+  "trace": {
+   "evaluation_id": "1fc81997840440f283150b2f6078adb8",
+   "timestamp": "2026-11-03T10:19:27.766375Z",
+   "question_id": "b687c2df5103",
+   "task_type": "creative",
+   "rubric_hash_original": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "rubric_hash_used": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "creative_route": true,
+   "path_confidences": [],
+   "identified_path": null,
+   "addresses_question": null,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "[counted in code: 10 sentences] Counting the sentences yields a total of ten, wait let me recount: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Ah, let me re-evaluate. The text has ten sentences. Wait, let me list them: 1. Ana stepped into the clearing at dawn. 2. The ground was black. 3. Ash drifted in the breeze. 4. It smelled of smoke and rain. 5. A crow called from a dead pine. 6. She walked to the centre. 7. The soil crunched under her boots. 8. Then she saw a green shoot. 9. It was no bigger than a match. 10. She smiled and knelt beside it. That is 10 sentences. Therefore P1.C1 is false."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "It smelled of smoke and rain. The soil crunched under her boots.",
+     "justification": "The text includes vivid sensory details of smell and sound."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Ana stepped into the clearing at dawn.",
+     "justification": "Ana is a character who observes the changes in the forest."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Then she saw a green shoot.",
+     "justification": "The text clearly shows the emergence of a new shoot as a sign of recovery."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "",
+     "justification": "Neither of the banned phrases appears anywhere in the text."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [
+    "P1.C1"
+   ],
+   "low_confidence": false,
+   "obvious_overlap": [
+    "A ranger watches tiny green shoots push through blackened soil, hears the faint rustle of recovering birds, and notes the smell of wet earth."
+   ],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.6666666666666666,
+    "expression": 1.0
+   },
+   "overall_score": 0.8888888888888888,
+   "bands": {
+    "correctness": "Proficient",
+    "expression": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "Your answer has more than eight sentences. Keep it between three and eight sentences next time.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "originality",
+      "text": "Your main idea is close to one of the most predictable takes on this brief. For comparison, that take is: \"A ranger watches tiny green shoots push through blackened soil, hears the faint rustle of recovering birds, and notes the smell of wet earth.\" It wasn't marked down, but a less expected angle would stand out more.",
+      "refs": [],
+      "source": "fixed"
+     },
+     {
+      "kind": "worked",
+      "text": "You included sensory details about smell and sound, which helps the reader imagine the scene.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You showed Ana observing the environmental changes.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "06615d985fc14cc4b62ece4598fb521e",
+     "5ec0cb0a17934c8990f653b83c515b79"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "6047ad39abcd4f18aa930ce82e3937c2"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Contains between three and eight sentences",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Includes vivid sensory details describing sights, sounds, smells, or textures",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Features a character who observes the environmental changes",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Shows the first signs of ecological recovery, such as the emergence of new shoots",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C5",
+    "statement": "Does not use any of: \"phoenix rising\", \"silver lining\"",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "fire-no-character",
+  "answer": "The clearing is a field of grey ash and charcoal stumps, still faintly warm. Rain has left a smell of wet smoke in the air. Here and there, thin green blades of fireweed are pushing through the crust, and a woodpecker drums on a scorched trunk.",
+  "trace": {
+   "evaluation_id": "e9ee0f94b23c4c1788b4898e53df350f",
+   "timestamp": "2026-11-03T10:19:27.782414Z",
+   "question_id": "b687c2df5103",
+   "task_type": "creative",
+   "rubric_hash_original": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "rubric_hash_used": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "creative_route": true,
+   "path_confidences": [],
+   "identified_path": null,
+   "addresses_question": null,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "The clearing is a field of grey ash and charcoal stumps, still faintly warm. Rain has left a smell of wet smoke in the air. Here and there, thin green blades of fireweed are pushing through the crust, and a woodpecker drums on a scorched trunk.",
+     "justification": "The piece consists of exactly three sentences, which fits the three to eight sentence requirement."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "grey ash and charcoal stumps, still faintly warm. Rain has left a smell of wet smoke",
+     "justification": "The text includes vivid sensory details of sight, touch, smell, and sound."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "There is no character present in the scene observing the changes."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "thin green blades of fireweed are pushing through the crust",
+     "justification": "The text shows new shoots emerging as a sign of ecological recovery."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "",
+     "justification": "Neither 'phoenix rising' nor 'silver lining' appears in the text."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.6666666666666666,
+    "expression": 1.0
+   },
+   "overall_score": 0.8888888888888888,
+   "bands": {
+    "correctness": "Proficient",
+    "expression": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "Your answer doesn't include a character observing the changes. Add a character who notices the signs of recovery in the clearing.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You describe the smell of wet smoke and the warmth of the ash, giving a clear sense of the environment.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You show new shoots emerging with 'thin green blades of fireweed pushing through the crust'.",
+      "refs": [
+       "P1.C4"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "b0622aa9421644a087e65f3780405f84"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "f58612fec0fd4c2da4637473b952a50a"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Contains between three and eight sentences",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Includes vivid sensory details describing sights, sounds, smells, or textures",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Features a character who observes the environmental changes",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Shows the first signs of ecological recovery, such as the emergence of new shoots",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C5",
+    "statement": "Does not use any of: \"phoenix rising\", \"silver lining\"",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "fire-off",
+  "answer": "The fire roared through the forest, crackling as it leapt from tree to tree. Smoke turned the sky orange, and the heat drove every animal toward the river. By nightfall the whole valley was burning.",
+  "trace": {
+   "evaluation_id": "379990203c004f7e831ba29f1715a9b2",
+   "timestamp": "2026-11-03T10:19:27.793762Z",
+   "question_id": "b687c2df5103",
+   "task_type": "creative",
+   "rubric_hash_original": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "rubric_hash_used": "e6da07e8dfb9f093891da74b7eebde90bc4999b9371b37f7714c83dac9ace39f",
+   "creative_route": true,
+   "path_confidences": [],
+   "identified_path": null,
+   "addresses_question": null,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "The fire roared through the forest, crackling as it leapt from tree to tree. Smoke turned the sky orange, and the heat drove every animal toward the river. By nightfall the whole valley was burning.",
+     "justification": "The piece contains exactly three sentences, which fits the three to eight sentence requirement."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "crackling as it leapt from tree to tree. Smoke turned the sky orange, and the heat drove",
+     "justification": "The piece includes vivid sensory details of sound, sight, and heat."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "There is no character present in the scene observing the changes."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "The scene depicts an active fire rather than the aftermath and recovery."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "",
+     "justification": "The banned phrases do not appear in the text."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.3333333333333333,
+    "expression": 1.0
+   },
+   "overall_score": 0.7777777777777778,
+   "bands": {
+    "correctness": "Not yet",
+    "expression": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "improve",
+      "text": "Your answer describes the fire but doesn't include a character observing the changes. Add a character who notices the environment's transformation.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You should show the first signs of ecological recovery, like new shoots emerging. Your answer focuses on the fire itself rather than the recovery process.",
+      "refs": [
+       "P1.C4"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You use sensory details like sound, sight, and heat to describe the fire.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You avoid the phrases 'phoenix rising' and 'silver lining'.",
+      "refs": [
+       "P1.C5"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "8b29badf18f042b2bfde7567f705bb77",
+     "b025dc513833464c891589c7d43afb53"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "cfef647e439c4ca2bc3b914ef6065eba"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Contains between three and eight sentences",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Includes vivid sensory details describing sights, sounds, smells, or textures",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Features a character who observes the environmental changes",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C4",
+    "statement": "Shows the first signs of ecological recovery, such as the emergence of new shoots",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C5",
+    "statement": "Does not use any of: \"phoenix rising\", \"silver lining\"",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "b850a615f22e-valid_hpa",
+  "answer": "Regular physical activity improves mental health by downregulating the hypothalamic-pituitary-adrenal (HPA) axis, which is responsible for the body's stress response. When a person engages in consistent exercise, the body experiences controlled physical stress that trains the HPA axis to adapt and recover more efficiently over time. Consequently, this physiological habituation leads to lower baseline circulating levels of cortisol, the primary stress hormone. Because chronic elevation of cortisol is directly linked to heightened anxiety and hypervigilance, reducing these hormone levels dampens the body's reaction to everyday psychological stressors. Ultimately, this endocrine regulation promotes emotional stability and significantly decreases symptoms of chronic anxiety.",
+  "trace": {
+   "evaluation_id": "dcda598255354e1ca7a85b1c6397ff96",
+   "timestamp": "2026-11-03T10:19:27.821995Z",
+   "question_id": "b850a615f22e",
+   "task_type": "explanatory",
+   "rubric_hash_original": "7413dd39e90d61aa4504f7620a77a87e32188fdd5d7c9dfe2b963341721abcbe",
+   "rubric_hash_used": "5d0e69db6424373b783e1e5c30b2abe7080007e2cdbb6352938cef7b4f655d3b",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    },
+    {
+     "path_id": "P3",
+     "confidence": 0.0
+    },
+    {
+     "path_id": "P4",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P4",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": true,
+   "amendment_proposal": "{\"is_new_valid_approach\": true, \"proposed_path\": {\"description\": \"Endocrine regulation via HPA\\u2011axis modulation\", \"criteria\": [{\"dimension\": \"correctness\", \"statement\": \"States that regular physical activity downregulates the hypothalamic\\u2011pituitary\\u2011adrenal (HPA) axis\", \"evidence_hint\": \"The answer includes a sentence describing exercise training the HPA axis to adapt and recover more efficiently.\", \"core\": true, \"requires\": \"explain one mechanism\"}, {\"dimension\": \"reasoning\", \"statement\": \"Explains how reduced cortisol levels resulting from HPA\\u2011axis modulation improve mental health\", \"evidence_hint\": \"The answer links lower baseline cortisol to dampened stress reactions and decreased anxiety symptoms.\", \"core\": true, \"requires\": \"regular physical activity improves mental health\"}, {\"dimension\": \"completeness\", \"statement\": \"Describes the relationship between chronic cortisol elevation and anxiety or stress symptoms\", \"evidence_hint\": \"The answer mentions that chronic high cortisol is directly linked to heightened anxiety and that reducing it promotes emotional stability.\", \"core\": false, \"requires\": \"explain one mechanism\"}]}, \"justification\": \"The answer explains a distinct endocrine mechanism\\u2014exercise\\u2011induced downregulation of the HPA axis and cortisol reduction\\u2014which is not covered by the rubric\\u2019s neurochemical, neurobiological, or psychosocial approaches. The explanation satisfies the question, is factually accurate, and its reasoning is coherent, making it a valid new approach.\"}",
+   "verifier_verdict": true,
+   "verifier_reasoning": "The proposed path describes a distinct endocrine mechanism (HPA-axis modulation) that is factually accurate and not covered by the existing neurochemical, neurobiological, or psychosocial paths. It correctly links reduced cortisol levels to improved mental health outcomes.",
+   "verifier_failure_type": null,
+   "verifier_framing": "adversarial",
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "amendment",
+   "verdicts": [
+    {
+     "criterion_id": "P4.C1",
+     "met": true,
+     "evidence": "downregulating the hypothalamic-pituitary-adrenal (HPA) axis",
+     "justification": "The answer correctly states that regular physical activity downregulates the HPA axis."
+    },
+    {
+     "criterion_id": "P4.C2",
+     "met": true,
+     "evidence": "reducing these hormone levels dampens the body's reaction to everyday psychological stressors",
+     "justification": "The answer explains how lower cortisol levels from HPA-axis modulation reduce stress reactions and anxiety."
+    },
+    {
+     "criterion_id": "P4.C3",
+     "met": true,
+     "evidence": "Because chronic elevation of cortisol is directly linked to heightened anxiety and hypervigilance",
+     "justification": "The answer describes the relationship between chronic cortisol elevation and anxiety symptoms."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "approach",
+      "text": "Your approach differs from the standard routes for this question and was evaluated on its own terms.",
+      "refs": [],
+      "source": "fixed"
+     },
+     {
+      "kind": "worked",
+      "text": "You correctly state that regular physical activity downregulates the HPA axis.",
+      "refs": [
+       "P4.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You explain how reduced cortisol levels from HPA-axis modulation reduce stress reactions and anxiety.",
+      "refs": [
+       "P4.C2"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "705b74cd42334a76ab187e789ac1706c"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "95b8666f512142aa837dd7e4563fb7d7",
+    "3eeeb5235f644aeda19c6e65658eddc8",
+    "c97389b3f33047b184c3afbea20c4e41",
+    "1d9120c5f3fa4a25a5a4a4cb21cc07bc"
+   ]
+  },
+  "path": [
+   {
+    "id": "P4.C1",
+    "statement": "States that regular physical activity downregulates the hypothalamic‑pituitary‑adrenal (HPA) axis",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P4.C2",
+    "statement": "Explains how reduced cortisol levels resulting from HPA‑axis modulation improve mental health",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P4.C3",
+    "statement": "Describes the relationship between chronic cortisol elevation and anxiety or stress symptoms",
+    "core": false,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "610c46d48e48-valid_context",
+  "answer": "Many people misplace their keys because memory is tied to the setting in which it was formed. You put the keys down while thinking about something in the kitchen, then need them later at the front door. In the new setting the cues that would trigger the memory are missing. That is why people often remember only after walking back to the room they were in.",
+  "trace": {
+   "evaluation_id": "dc2661fee4004144895960de931ad93e",
+   "timestamp": "2026-11-03T10:19:27.844847Z",
+   "question_id": "610c46d48e48",
+   "task_type": "explanatory",
+   "rubric_hash_original": "db300913c9be5f3fd44c9e2c74780eb4c505e2bbdce06569a9c35adf760476e7",
+   "rubric_hash_used": "90ee33afafa985f4549225abce971123f22db7bf8652d68faa4a66299840a6dc",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P3",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P4",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P4",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": true,
+   "amendment_proposal": "{\"is_new_valid_approach\": true, \"proposed_path\": {\"description\": \"Explanation: context-dependent memory and cue-dependent retrieval\", \"criteria\": [{\"dimension\": \"correctness\", \"statement\": \"States that memory retrieval for keys depends on environmental cues present at the time of placement.\", \"evidence_hint\": \"Mentions memory tied to the setting and missing cues when context changes.\", \"core\": true, \"requires\": \"Explain why many people frequently misplace their keys\"}, {\"dimension\": \"reasoning\", \"statement\": \"Explains that placing keys in a different context from where they are needed reduces the likelihood of recalling their location.\", \"evidence_hint\": \"Describes putting keys down while thinking in the kitchen and later needing them at the front door.\", \"core\": true, \"requires\": \"Explain why many people frequently misplace their keys\"}, {\"dimension\": \"completeness\", \"statement\": \"Shows that returning to the original setting can trigger recall of the key location.\", \"evidence_hint\": \"Notes that people often remember the keys after walking back to the room where they were placed.\", \"core\": true, \"requires\": \"Explain why many people frequently misplace their keys\"}]}, \"justification\": \"The answer offers a context-dependent memory explanation, which differs from the listed approaches of designated spot, cognitive load, and size/clutter. It accurately describes how environmental cues affect recall, providing a distinct and factually correct rationale.\"}",
+   "verifier_verdict": true,
+   "verifier_reasoning": "The proposed path relies on the well-established psychological principle of context-dependent memory, which is factually accurate. It provides a distinct mechanism (cue-dependent retrieval) that is not covered by the existing paths regarding designated spots, cognitive load, or physical size/clutter.",
+   "verifier_failure_type": null,
+   "verifier_framing": "adversarial",
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "amendment",
+   "verdicts": [
+    {
+     "criterion_id": "P4.C1",
+     "met": true,
+     "evidence": "memory is tied to the setting in which it was formed",
+     "justification": "The answer states that memory retrieval depends on the environmental setting."
+    },
+    {
+     "criterion_id": "P4.C2",
+     "met": true,
+     "evidence": "You put the keys down while thinking about something in the kitchen, then need them later at the front door. In the new setting the cues that would trigger the memory are missing.",
+     "justification": "The answer explains how needing them in a different context reduces recall."
+    },
+    {
+     "criterion_id": "P4.C3",
+     "met": true,
+     "evidence": "people often remember only after walking back to the room they were in",
+     "justification": "The answer shows that returning to the original setting triggers recall."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "approach",
+      "text": "Your approach differs from the standard routes for this question and was evaluated on its own terms.",
+      "refs": [],
+      "source": "fixed"
+     },
+     {
+      "kind": "worked",
+      "text": "You correctly state that memory retrieval for keys depends on environmental cues present at the time of placement.",
+      "refs": [
+       "P4.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You explain how needing keys in a different context reduces recall by describing the missing cues in a new setting.",
+      "refs": [
+       "P4.C2"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "550e5e00a9254082a4ab838fe970cfde"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "67410373a9444eb8ad6f05e7c5cb480d",
+    "633018c5da094ce7a8db9b88e62743bb",
+    "adefc9b284394966ade9797a0ce3d946",
+    "0f2626744b4b493487c6cadb0f146398"
+   ]
+  },
+  "path": [
+   {
+    "id": "P4.C1",
+    "statement": "States that memory retrieval for keys depends on environmental cues present at the time of placement.",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P4.C2",
+    "statement": "Explains that placing keys in a different context from where they are needed reduces the likelihood of recalling their location.",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P4.C3",
+    "statement": "Shows that returning to the original setting can trigger recall of the key location.",
+    "core": true,
+    "met": true
+   }
+  ]
+ },
+ {
+  "case": "91798e725180-holed",
+  "answer": "Individuals often follow social norms because established authority figures enforce them. Institutions such as schools, workplaces and governments set expectations for how people behave. These institutions reward people who comply and penalise those who deviate. Over time, this systemic reinforcement keeps social norms in place across whole communities.",
+  "trace": {
+   "evaluation_id": "034011c30b6945d283d7a9ad3dc58691",
+   "timestamp": "2026-11-03T10:19:27.866862Z",
+   "question_id": "91798e725180",
+   "task_type": "explanatory",
+   "rubric_hash_original": "ce35a9c0058cfc344146ff0ff5a6a0c295bf3042e9ef03febab4e6e3c3ee2b50",
+   "rubric_hash_used": "6d04dd07d2b6a907aabc1caa1ca52a350690196710c5ca9954fe7cafac1852ce",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P3",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P3",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": true,
+   "amendment_proposal": "{\"is_new_valid_approach\": true, \"proposed_path\": {\"description\": \"Authority enforcement explanation\", \"criteria\": [{\"dimension\": \"correctness\", \"statement\": \"States that individuals follow norms because authority figures or institutions enforce them through rewards and punishments\", \"evidence_hint\": \"Mentions authority, institutions, rewards, penalties\", \"core\": true, \"requires\": \"explain why individuals often follow social norms even when those norms conflict with their personal moral convictions\"}, {\"dimension\": \"reasoning\", \"statement\": \"Explains how systemic reinforcement by institutions maintains social norms across communities\", \"evidence_hint\": \"Describes systemic reinforcement, community-wide effect\", \"core\": true, \"requires\": \"explain why individuals often follow social norms even when those norms conflict with their personal moral convictions\"}, {\"dimension\": \"completeness\", \"statement\": \"Provides a complete account of why compliance occurs despite personal moral convictions by linking external enforcement to behavior\", \"evidence_hint\": \"Connects enforcement to individual behavior despite moral conflict\", \"core\": true, \"requires\": \"explain why individuals often follow social norms even when those norms conflict with their personal moral convictions\"}]}, \"justification\": \"The answer explains compliance through institutional authority and systematic reinforcement, which is not covered by the rubric\\u2019s conformity or internalized identity approaches. This argument is factually plausible and directly addresses why people follow norms despite moral conflict, meeting all conditions for a new valid approach.\"}",
+   "verifier_verdict": true,
+   "verifier_reasoning": "The proposed path relies on external enforcement by authority figures, which is a distinct causal mechanism from social peer pressure (P1) or internalized identity (P2). It provides a valid and independent explanation for compliance despite moral conflict.",
+   "verifier_failure_type": null,
+   "verifier_framing": "adversarial",
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "amendment",
+   "verdicts": [
+    {
+     "criterion_id": "P3.C1",
+     "met": true,
+     "evidence": "established authority figures enforce them",
+     "justification": "The answer states that authority figures and institutions enforce norms through rewards and penalties."
+    },
+    {
+     "criterion_id": "P3.C2",
+     "met": true,
+     "evidence": "this systemic reinforcement keeps social norms in place across whole communities",
+     "justification": "It explains how systemic reinforcement maintains norms across communities."
+    },
+    {
+     "criterion_id": "P3.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer fails to link the external enforcement specifically to compliance occurring despite personal moral convictions."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.7058823529411765,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "approach",
+      "text": "Your approach differs from the standard routes for this question and was evaluated on its own terms.",
+      "refs": [],
+      "source": "fixed"
+     },
+     {
+      "kind": "improve",
+      "text": "You explain compliance with norms through external enforcement but don't link it to personal moral convictions. Add how external pressure overrides personal beliefs.",
+      "refs": [
+       "P3.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You mention authority figures and institutions use rewards and penalties to enforce norms.",
+      "refs": [
+       "P3.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You explain how systemic reinforcement keeps norms in place across communities.",
+      "refs": [
+       "P3.C2"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "ba48f3cdc068444ab776b8cd1d40777a"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "ab009628083346da9f1c7acd99b87190",
+    "db0e178147d549dabafa04d8fed400c8",
+    "7da741c8f49e44bf99411f4aad51cf31",
+    "31244099593f4935adc96a021976bc56"
+   ]
+  },
+  "path": [
+   {
+    "id": "P3.C1",
+    "statement": "States that individuals follow norms because authority figures or institutions enforce them through rewards and punishments",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P3.C2",
+    "statement": "Explains how systemic reinforcement by institutions maintains social norms across communities",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P3.C3",
+    "statement": "Provides a complete account of why compliance occurs despite personal moral convictions by linking external enforcement to behavior",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "23575fb39cfd-misconception_burner_thrust",
+  "answer": "A hot-air balloon rises because of its burner. When the pilot fires the burner, a jet of hot gas blasts downward. By Newton's third law, this downward jet pushes the balloon upward, just like a rocket. The more the pilot heats the air, the stronger the push and the faster it climbs.",
+  "trace": {
+   "evaluation_id": "668aec6f776a4f6a9d822af997796c6d",
+   "timestamp": "2026-11-03T10:19:27.881229Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": true,
+   "amendment_proposal": "{\"is_new_valid_approach\": false, \"proposed_path\": null, \"justification\": \"The answer attributes the balloon's ascent to thrust from a downward jet of hot gas, which is factually incorrect; hot-air balloons rise due to buoyancy from reduced air density, not Newton's third law thrust. Since the explanation is inaccurate, it does not constitute a valid new approach.\"}",
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": "The answer attributes the balloon's ascent to thrust from a downward jet of hot gas, which is factually incorrect; hot-air balloons rise due to buoyancy from reduced air density, not Newton's third law thrust. Since the explanation is inaccurate, it does not constitute a valid new approach.",
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention that heating the air reduces its density."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer attributes the lift to Newton's third law and a downward jet rather than buoyancy."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention surrounding cooler air or temperature differences."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "When the pilot fires the burner, a jet of hot gas blasts downward. By Newton's third law, this downward jet pushes the balloon upward, just like a rocket.",
+     "explanation": "Hot-air balloons do not operate by rocket propulsion or downward gas jets, but by buoyancy."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "divergence",
+      "text": "Your answer takes a different route from the usual ones for this question, so that route was checked separately. It didn't hold up: Your explanation is incorrect. Hot-air balloons rise due to buoyancy from less dense heated air, not rocket-like thrust from a downward jet of gas.",
+      "refs": [],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "Check this statement: \"When the pilot fires the burner, a jet of hot gas blasts downward. By Newton's third law, this downward jet pushes the balloon upward, just like a rocket.\". Hot-air balloons do not operate by rocket propulsion or downward gas jets, but by buoyancy.",
+      "refs": [
+       "error:1",
+       "P1.C2"
+      ],
+      "source": "template"
+     },
+     {
+      "kind": "improve",
+      "text": "You did not explain that heating the air reduces its density. This is needed to show how the balloon lifts.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You did not mention that the surrounding air is cooler, which is essential for creating the density difference that causes the balloon to rise.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "11da02328dca4c61a4612ad1f8d9fadc",
+     "8f60835900cd4bebbf3a5fc0102bd7d1"
+    ],
+    "fallbacks": [
+     "I1: repeats wording from the model answer ('because the heated air is less')"
+    ]
+   },
+   "call_ids": [
+    "c9e8ca0eca2d4fb180ddbf08b7d3d552",
+    "4cd1088b39fa4d8c8b460da43f094385"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "States that heating the air inside the balloon reduces its density compared to the surrounding cooler air",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Links the lower density of the heated air to a net upward buoyant force that lifts the balloon",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Mentions that the surrounding air is cooler (or at ambient temperature) providing the contrast needed for lift",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "91798e725180-misconception_mirror_neurons",
+  "answer": "People follow norms against their convictions because of mirror neurons. When we see others behave in a certain way, these neurons fire and make us automatically copy them. This activity shuts down the parts of the brain that handle moral judgement. So the person complies without being able to act on their own beliefs.",
+  "trace": {
+   "evaluation_id": "7e28af3f9e1b43ab9a874c7a988fc550",
+   "timestamp": "2026-11-03T10:19:27.900167Z",
+   "question_id": "91798e725180",
+   "task_type": "explanatory",
+   "rubric_hash_original": "ce35a9c0058cfc344146ff0ff5a6a0c295bf3042e9ef03febab4e6e3c3ee2b50",
+   "rubric_hash_used": "ce35a9c0058cfc344146ff0ff5a6a0c295bf3042e9ef03febab4e6e3c3ee2b50",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.2
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.1
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": true,
+   "amendment_proposal": "{\"is_new_valid_approach\": false, \"proposed_path\": null, \"justification\": \"The answer attempts a neuroscientific explanation using mirror neurons, but the claim that this activity shuts down moral judgment is not factually supported and the reasoning does not hold together. Therefore it does not provide a valid new approach distinct from the rubric\\u2019s listed explanations.\"}",
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": "The answer attempts a neuroscientific explanation using mirror neurons, but the claim that this activity shuts down moral judgment is not factually supported and the reasoning does not hold together. Therefore it does not provide a valid new approach distinct from the rubric’s listed explanations.",
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer attributes the behavior to mirror neurons and automatic copying rather than a desire for social approval or fear of exclusion."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention that the desire for approval overrides personal moral conflict."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "No causal link between social pressure/approval and conformity is provided."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "completeness": 0.0,
+    "reasoning": 0.0
+   },
+   "overall_score": 0.17647058823529413,
+   "bands": {
+    "correctness": "Developing",
+    "completeness": "Not yet",
+    "reasoning": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "divergence",
+      "text": "Your answer takes a different route from the usual ones for this question, so that route was checked separately. It didn't hold up: Your explanation about mirror neurons and shutting down moral judgment isn't accurate. Focus on social factors instead.",
+      "refs": [],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You focus on mirror neurons and automatic copying instead of explaining why people follow norms due to a desire for approval or fear of exclusion. Add how the need for social acceptance drives conformity.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You don’t explain how the desire for approval leads to following norms. Link social pressure to conformity by showing how it influences decisions.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You don’t show how approval overrides personal morals. Explain how the need for acceptance takes priority over personal beliefs.",
+      "refs": [
+       "P1.C2"
+      ],
+      "source": "model"
+     }
+    ],
+    "call_ids": [
+     "a58eb1385a334df09e7f746d667468f8",
+     "b55ece2e50494c319bee3c5461cb0a42"
+    ],
+    "fallbacks": []
+   },
+   "call_ids": [
+    "b94de527d15a44948d74c2a0809ddc32",
+    "1cd52743d30941d292201e888b7c4713"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Identifies desire for social approval or fear of exclusion as the primary factor explaining the behavior.",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C2",
+    "statement": "Addresses the tension between personal moral convictions and the norm by noting that the desire for approval overrides the personal conflict.",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Links the desire for approval to the decision to follow the norm through a causal explanation (e.g., because they fear exclusion, they conform).",
+    "core": true,
+    "met": false
+   }
+  ]
+ },
+ {
+  "case": "669bce9c85fb-nonsense",
+  "answer": "When a country experiences currency depreciation, it triggers an immediate barometric pressure differential in the upper atmosphere above its ports. This atmospheric shift creates thermal-elastic expansion that physically pushes cargo containers outward across international shipping lanes. Consequently, the accelerated movement of these vessels directly increases the country's export volumes and overall global competitiveness.",
+  "trace": {
+   "evaluation_id": "5f965ff13f4f47b997ba2af0c85500fe",
+   "timestamp": "2026-11-03T10:19:27.919708Z",
+   "question_id": "669bce9c85fb",
+   "task_type": "explanatory",
+   "rubric_hash_original": "e9d42d74c84a403bf92c78beab91a83110da2020b9ad903e2d8b0cc1b6055a83",
+   "rubric_hash_used": "e9d42d74c84a403bf92c78beab91a83110da2020b9ad903e2d8b0cc1b6055a83",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.2
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": true,
+   "amendment_proposal": "{\"is_new_valid_approach\": false, \"proposed_path\": null, \"justification\": \"The answer does not correctly explain how currency depreciation affects export competitiveness; it offers a physically implausible atmospheric mechanism that is factually inaccurate. Since it fails the correctness criterion, it is not a valid new approach.\"}",
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": "The answer does not correctly explain how currency depreciation affects export competitiveness; it offers a physically implausible atmospheric mechanism that is factually inaccurate. Since it fails the correctness criterion, it is not a valid new approach.",
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "directly increases the country's export volumes and overall global competitiveness",
+     "justification": "The answer mentions that depreciation influences global competitiveness."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not state that depreciation lowers the foreign-currency price of exported goods."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The mechanism provided relies on atmospheric shifts rather than economic price effects."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "When a country experiences currency depreciation, it triggers an immediate barometric pressure differential in the upper atmosphere above its ports.",
+     "explanation": "Currency depreciation does not cause barometric pressure differentials in the atmosphere."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.0,
+    "reasoning": 0.0
+   },
+   "overall_score": 0.29411764705882354,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Not yet",
+    "reasoning": "Not yet"
+   },
+   "feedback": {
+    "items": [
+     {
+      "kind": "divergence",
+      "text": "Your answer takes a different route from the usual ones for this question, so that route was checked separately. It didn't hold up: Your approach does not correctly explain how currency depreciation affects export competitiveness. It offers a physically implausible mechanism that is factually inaccurate.",
+      "refs": [],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You wrote: \"When a country experiences currency depreciation, it triggers an immediate barometric pressure differential in the upper atmosphere above its ports.\" Currency depreciation does not cause barometric pressure differentials in the atmosphere. Add how depreciation lowers the foreign-currency price of the country's exported goods.",
+      "refs": [
+       "error:1",
+       "P1.C2"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "improve",
+      "text": "You provided a mechanism based on atmospheric shifts rather than economic price effects. Explain how lower prices increase foreign demand.",
+      "refs": [
+       "P1.C3"
+      ],
+      "source": "model"
+     },
+     {
+      "kind": "worked",
+      "text": "You wrote \"directly increases the country's export volumes and overall global competitiveness\", which explains how a depreciation of a country's currency influences its export competitiveness.",
+      "refs": [
+       "P1.C1"
+      ],
+      "source": "template"
+     }
+    ],
+    "call_ids": [
+     "3aefcfcd9c16435ea3085b3dce384b60",
+     "e4232db1a05b4447908f16644dba334a"
+    ],
+    "fallbacks": [
+     "W1: copies a label from the instructions (' Your words:'); use your own words"
+    ]
+   },
+   "call_ids": [
+    "10be099ad0de49d784c4182cacf6ff68",
+    "eea578b5e1674c7da5b9ef17baa160c9"
+   ]
+  },
+  "path": [
+   {
+    "id": "P1.C1",
+    "statement": "Explains how a depreciation of a country's currency influences its export competitiveness",
+    "core": true,
+    "met": true
+   },
+   {
+    "id": "P1.C2",
+    "statement": "States that depreciation lowers the foreign‑currency price of the country's exported goods",
+    "core": true,
+    "met": false
+   },
+   {
+    "id": "P1.C3",
+    "statement": "Provides one mechanism that links the exchange‑rate change to export volumes (e.g., lower prices increase foreign demand)",
+    "core": true,
+    "met": false
+   }
+  ]
+ }
+]
