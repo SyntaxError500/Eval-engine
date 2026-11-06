@@ -1,0 +1,841 @@
+{
+ "bases": {
+  "ref-83e77d761714": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-512f892a6afa": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-647b3337f666": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-886e0fcd1e3d": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-476bdbe5578d": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-17b9d268178a": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-b0affe8aae1b": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3d813378c122": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-4cb875e3c8cc": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-d757eca4528c": {
+   "scores": {
+    "completeness": 1.0,
+    "reasoning": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-082591e7ec4e": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-d92e0ad73cb8": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-5d564b58c11c": {
+   "scores": {
+    "completeness": 1.0,
+    "reasoning": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-7ef66d20c834": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-7d174cce75df": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-78d7767e5351": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-17c1b10632b5": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-91798e725180": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-669bce9c85fb": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-1e9d95d9130f": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-b850a615f22e": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-c08ec38ec72f": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3f8052a62a58": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-610c46d48e48": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-23575fb39cfd": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-dae71517a495": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-632df277470d": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-a5cd0a155f64": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "cell-good": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "balloon-good": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  }
+ },
+ "items": {
+  "ref-83e77d761714/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-83e77d761714/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-512f892a6afa/correctness": {
+   "scores": {
+    "correctness": 0.7142857142857143,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-512f892a6afa/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-647b3337f666/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-647b3337f666/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-886e0fcd1e3d/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-886e0fcd1e3d/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-476bdbe5578d/completeness": {
+   "scores": {
+    "completeness": 0.6666666666666666,
+    "correctness": 0.7142857142857143
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-476bdbe5578d/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.7142857142857143
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-476bdbe5578d/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-17b9d268178a/completeness": {
+   "scores": {
+    "completeness": 0.0,
+    "correctness": 0.25
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-17b9d268178a/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.5
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-17b9d268178a/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-b0affe8aae1b/completeness": {
+   "scores": {
+    "completeness": 0.3333333333333333,
+    "correctness": 0.5
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-b0affe8aae1b/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-b0affe8aae1b/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3d813378c122/completeness": {
+   "scores": {
+    "completeness": 0.6666666666666666,
+    "correctness": 0.75
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3d813378c122/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3d813378c122/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-4cb875e3c8cc/completeness": {
+   "scores": {
+    "completeness": 0.0,
+    "correctness": 1.0,
+    "reasoning": 0.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-4cb875e3c8cc/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-4cb875e3c8cc/reasoning": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.6666666666666666,
+    "reasoning": 0.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-4cb875e3c8cc/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-d757eca4528c/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "reasoning": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-082591e7ec4e/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.5,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-082591e7ec4e/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-d92e0ad73cb8/completeness": {
+   "scores": {
+    "correctness": 0.5,
+    "reasoning": 0.5,
+    "completeness": 0.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-d92e0ad73cb8/reasoning": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-d92e0ad73cb8/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-5d564b58c11c/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "reasoning": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-7ef66d20c834/reasoning": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.6,
+    "reasoning": 0.0
+   },
+   "votes": 3,
+   "errors": 3
+  },
+  "ref-7ef66d20c834/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-7d174cce75df/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-78d7767e5351/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-17c1b10632b5/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-17c1b10632b5/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-91798e725180/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-669bce9c85fb/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-669bce9c85fb/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-1e9d95d9130f/completeness": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 0.0,
+    "reasoning": 0.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-1e9d95d9130f/reasoning": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-1e9d95d9130f/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-b850a615f22e/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-c08ec38ec72f/correctness": {
+   "scores": {
+    "correctness": 0.5,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-c08ec38ec72f/reasoning": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 0.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-c08ec38ec72f/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3f8052a62a58/completeness": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 0.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3f8052a62a58/correctness": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-3f8052a62a58/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-610c46d48e48/reasoning": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 0.5,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-610c46d48e48/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-23575fb39cfd/completeness": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-23575fb39cfd/correctness": {
+   "scores": {
+    "correctness": 0.5,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-23575fb39cfd/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-dae71517a495/correctness": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-dae71517a495/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-632df277470d/completeness": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 0.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-632df277470d/correctness": {
+   "scores": {
+    "correctness": 0.5,
+    "reasoning": 0.5,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "ref-632df277470d/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "ref-a5cd0a155f64/expression": {
+   "scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "cell-good/correctness": {
+   "scores": {
+    "correctness": 0.8571428571428571,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "cell-good/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "balloon-good/completeness": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "balloon-good/correctness": {
+   "scores": {
+    "correctness": 0.0,
+    "reasoning": 1.0,
+    "completeness": 0.0
+   },
+   "votes": 3,
+   "errors": 1
+  },
+  "balloon-good/reasoning": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  },
+  "balloon-good/expression": {
+   "scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "votes": 3,
+   "errors": 0
+  }
+ }
+}

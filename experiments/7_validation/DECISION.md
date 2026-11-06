@@ -13,6 +13,26 @@ Made on the senior review's recommendation (Option 1), before any human grade wa
 **Updates:** the majority-of-3 rerun (step 3) updates the figures below the record, never the
 decision. Its numbers are in `perturb/REPORT_maj3.md`.
 
+## Update 2026-11-07: majority of 3 judge calls (step 3)
+
+```
+Perturbation gate: NOT MET.
+v3: 19/37 (51%) [36-67%] strict; secondary, labelled: 25/37 (68%) if ties count.
+v2: 18/37 (49%) [33-64%] strict; 22/37 (59%) if ties count.
+Decision unchanged.
+```
+
+With majority voting, the single-run tie-inclusive 70% for v3 does not hold: the gate is not met
+under either rule. v3 detects more than v2 (26/37 against 22/37) and attributes about the same.
+
+The one base below full marks under v3 (`ref-d757eca4528c`, one correctness criterion) has no
+content edit kept against it; only its expression edit, which is checked for not moving, remains.
+
+v2's single-run correctness count moved from 10/19 to 9/19 between runs because of a review text
+fix, not a rescoring. In `ref-669bce9c85fb/correctness`, "cheaper imports" became "cheaper goods".
+Before the fix only correctness dropped (attributed). After it the judge also failed the reasoning
+criterion, which made a tie.
+
 ## Frozen judge configuration
 
 | Setting | Value |
