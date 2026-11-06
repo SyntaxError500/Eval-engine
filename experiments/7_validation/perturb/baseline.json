@@ -1,0 +1,2508 @@
+[
+ {
+  "base_id": "ref-83e77d761714",
+  "question_id": "83e77d761714",
+  "task_type": "factual",
+  "answer": "One major outcome of the Congress of Vienna was the restoration of legitimate monarchies, exemplified by the return of the Bourbon dynasty to the French throne under Louis XVIII. A second outcome was the creation of a balance of power in Europe, illustrated by the establishment of the German Confederation, which grouped numerous German states under Austrian leadership to counteract French dominance. A third outcome involved territorial adjustments designed to contain France, such as the annexation of the Rhineland to Prussia, which placed a strong buffer state on France’s eastern border.",
+  "trace": {
+   "evaluation_id": "d58be099bd9c47548663b195dc047e4f",
+   "timestamp": "2026-11-06T20:28:19.314413Z",
+   "question_id": "83e77d761714",
+   "task_type": "factual",
+   "rubric_hash_original": "d5632f6961afb058632668eedf7698b15970f5d8e0b969d836dc259c3c64e9d4",
+   "rubric_hash_used": "d5632f6961afb058632668eedf7698b15970f5d8e0b969d836dc259c3c64e9d4",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "restoration of legitimate monarchies",
+     "justification": "The answer successfully names the restoration of monarchies as the first outcome."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the return of the Bourbon dynasty to the French throne under Louis XVIII",
+     "justification": "The answer provides the Bourbon restoration as a specific example for the first outcome."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "the creation of a balance of power in Europe",
+     "justification": "The answer names a second distinct outcome, the creation of a balance of power."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "the establishment of the German Confederation",
+     "justification": "The answer provides the German Confederation as an illustrative example for the second outcome."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "territorial adjustments designed to contain France",
+     "justification": "The answer names a third distinct outcome involving territorial adjustments to contain France."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "the annexation of the Rhineland to Prussia",
+     "justification": "The answer provides the annexation of the Rhineland to Prussia as a specific example for the third outcome."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "5683e8ab329f42369f779873c941b642"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-512f892a6afa",
+  "question_id": "512f892a6afa",
+  "task_type": "factual",
+  "answer": "During G1, the cell grows and synthesizes proteins needed for DNA replication, such as cyclins that prepare the cell for S phase. In S phase, each chromosome is duplicated so that sister chromatids are formed, ensuring that each daughter cell will receive a complete set of genetic material. G2 is a checkpoint period where the cell checks for DNA damage and accumulates the proteins required for mitosis, such as mitotic cyclins, before entering M phase.",
+  "trace": {
+   "evaluation_id": "4d8da03c5aef401ba1d0495e0e80625e",
+   "timestamp": "2026-11-06T20:28:22.023769Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as a phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the cell grows and synthesizes proteins needed for DNA replication",
+     "justification": "The answer provides a correct key event for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "each chromosome is duplicated so that sister chromatids are formed",
+     "justification": "The answer provides a correct key event for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "G2",
+     "justification": "The answer names G2 as a third phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "the cell checks for DNA damage and accumulates the proteins required for mitosis",
+     "justification": "The answer provides a correct key event for G2."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1, S phase, G2",
+     "justification": "The three named phases (G1, S, and G2) are all distinct."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "32b1afe95aa04ea2bc0d61fd7565161e"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-647b3337f666",
+  "question_id": "647b3337f666",
+  "task_type": "factual",
+  "answer": "Pumped hydro storage, which relies on gravitational potential energy by moving water between upper and lower reservoirs, is employed at the Bath County Pumped Storage Station in Virginia, USA. Compressed‑air energy storage uses the principle of storing energy as pressurized air in underground caverns, as demonstrated by the McIntosh Power Plant in Alabama. Finally, lithium‑ion battery systems store energy electrochemically through reversible redox reactions, exemplified by the Hornsdale Power Reserve (the Tesla big battery) in South Australia.",
+  "trace": {
+   "evaluation_id": "78ad45c378714be0a69fda4d66c070b8",
+   "timestamp": "2026-11-06T20:28:24.526110Z",
+   "question_id": "647b3337f666",
+   "task_type": "factual",
+   "rubric_hash_original": "2ce35366d1991f44ac975865a4aa0fa29cc263092e28ef4edfdd7e3d68b8a940",
+   "rubric_hash_used": "2ce35366d1991f44ac975865a4aa0fa29cc263092e28ef4edfdd7e3d68b8a940",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Pumped hydro storage... Compressed‑air energy storage... lithium‑ion battery systems",
+     "justification": "The answer names three distinct renewable-energy storage technologies."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "gravitational potential energy",
+     "justification": "It states the primary physical principle for pumped hydro."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Bath County Pumped Storage Station",
+     "justification": "It provides a real-world installation example for pumped hydro."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "storing energy as pressurized air in underground caverns",
+     "justification": "It states the physical principle for compressed-air energy storage."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "McIntosh Power Plant",
+     "justification": "It provides an installation for the compressed air technology."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "electrochemically through reversible redox reactions",
+     "justification": "It states the physical principle for lithium-ion batteries."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "Hornsdale Power Reserve (the Tesla big battery) in South Australia",
+     "justification": "It provides an installation example for lithium-ion batteries."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "517434d4ac744b3da5bda88c957f07e9"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-886e0fcd1e3d",
+  "question_id": "886e0fcd1e3d",
+  "task_type": "factual",
+  "answer": "The three main types of unemployment are frictional, structural, and cyclical. Frictional unemployment occurs when workers are temporarily between jobs, such as a recent college graduate searching for their first position. Structural unemployment arises when workers’ skills no longer match available jobs, like a factory worker displaced by automation who lacks training for the new technology. Cyclical unemployment is caused by downturns in the business cycle, exemplified by layoffs in the hospitality sector during an economic recession.",
+  "trace": {
+   "evaluation_id": "68a11c5856b14b76a318516673f7008f",
+   "timestamp": "2026-11-06T20:28:26.606568Z",
+   "question_id": "886e0fcd1e3d",
+   "task_type": "factual",
+   "rubric_hash_original": "0d79ff46984500901bb697b537278947c04e296a9c6156e9370ac0b7b9ee0e1c",
+   "rubric_hash_used": "0d79ff46984500901bb697b537278947c04e296a9c6156e9370ac0b7b9ee0e1c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "frictional, structural, and cyclical",
+     "justification": "The answer names three distinct types of unemployment."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "a recent college graduate searching for their first position",
+     "justification": "The answer provides a correct example for frictional unemployment."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "a factory worker displaced by automation who lacks training for the new technology",
+     "justification": "The answer provides a correct example for structural unemployment."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "layoffs in the hospitality sector during an economic recession",
+     "justification": "The answer provides a correct example for cyclical unemployment."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "19b6a4fc2c7e4f4bab567edcc263b91a"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-476bdbe5578d",
+  "question_id": "476bdbe5578d",
+  "task_type": "factual",
+  "answer": "Agricultural runoff is a major source of water pollution, typically releasing excess nitrogen and phosphorus from fertilizers, which can cause harmful algal blooms that deplete oxygen and kill fish. Industrial discharge is another key source, often introducing heavy metals such as mercury into waterways, leading to bioaccumulation in aquatic organisms and disrupting predator‑prey relationships. Finally, untreated sewage contributes pathogens like E. coli, which can spread disease among wildlife and reduce the health of aquatic ecosystems.",
+  "trace": {
+   "evaluation_id": "9662a1e0337e4d7f8a58174b903e97f5",
+   "timestamp": "2026-11-06T20:28:45.745352Z",
+   "question_id": "476bdbe5578d",
+   "task_type": "factual",
+   "rubric_hash_original": "d2631ebb9b60426b8f7a361744f02964939f79edeba4afd74911ebf37ef8c708",
+   "rubric_hash_used": "d2631ebb9b60426b8f7a361744f02964939f79edeba4afd74911ebf37ef8c708",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Agricultural runoff",
+     "justification": "The answer identifies agricultural runoff as the first source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "nitrogen and phosphorus",
+     "justification": "The answer names nitrogen and phosphorus as pollutants from agricultural runoff."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "harmful algal blooms that deplete oxygen and kill fish",
+     "justification": "The answer describes algal blooms and oxygen depletion as an ecological impact."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Industrial discharge",
+     "justification": "The answer provides industrial discharge as the second source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "heavy metals such as mercury",
+     "justification": "The answer names heavy metals like mercury as the pollutant from industrial discharge."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "bioaccumulation",
+     "justification": "The answer names bioaccumulation as the ecological impact of this pollutant."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "untreated sewage",
+     "justification": "The answer provides untreated sewage as the third source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C8",
+     "met": true,
+     "evidence": "pathogens like E. coli",
+     "justification": "The answer names pathogens like E. coli as the pollutant from untreated sewage."
+    },
+    {
+     "criterion_id": "P1.C9",
+     "met": true,
+     "evidence": "spread disease among wildlife",
+     "justification": "The answer names disease spread among wildlife as the ecological impact."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "6eca71f2f79b44b98d2c5abdc911c230"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-17b9d268178a",
+  "question_id": "17b9d268178a",
+  "task_type": "factual",
+  "answer": "The three main macronutrients needed by the human body are carbohydrates, proteins, and fats. Carbohydrates provide the primary source of energy for cells, especially the brain and muscles. Proteins supply the building blocks—amino acids—required for the growth, repair, and maintenance of tissues. Fats serve as a dense energy reserve, help absorb fat‑soluble vitamins, and are essential for constructing cell membranes.",
+  "trace": {
+   "evaluation_id": "1624caadb80f499e9949933711239024",
+   "timestamp": "2026-11-06T20:28:48.146421Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "carbohydrates, proteins, and fats",
+     "justification": "The answer successfully lists carbohydrates, proteins, and fats as the three main macronutrients."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Carbohydrates provide the primary source of energy for cells",
+     "justification": "The answer correctly states a primary function of carbohydrates."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Proteins supply the building blocks—amino acids—required for the growth, repair, and maintenance of tissues.",
+     "justification": "The answer correctly states a primary function of proteins."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Fats serve as a dense energy reserve, help absorb fat‑soluble vitamins, and are essential for constructing cell membranes.",
+     "justification": "The answer correctly states a primary function of fats."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "6dc8ce82584843f98adbf212faf41323"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-b0affe8aae1b",
+  "question_id": "b0affe8aae1b",
+  "task_type": "factual",
+  "answer": "Romanticism, which emphasized emotion and nature, is exemplified by Mary Shelley's novel *Frankenstein* (1818). Realism, focusing on everyday life and social issues, is represented by Gustave Flaubert's *Madame Bovary* (1856). Finally, Naturalism, an extension of realism that highlights scientific determinism and harsh environments, can be seen in Émile Zola's *Germinal* (1885).",
+  "trace": {
+   "evaluation_id": "b4719239b3ff4c4294e2705424731fd3",
+   "timestamp": "2026-11-06T20:28:50.408484Z",
+   "question_id": "b0affe8aae1b",
+   "task_type": "factual",
+   "rubric_hash_original": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "rubric_hash_used": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Romanticism",
+     "justification": "The answer names Romanticism as the first 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Mary Shelley's novel *Frankenstein* (1818)",
+     "justification": "The answer pairs Romanticism with a valid characteristic work and author."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Realism",
+     "justification": "The answer names Realism as the second 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Gustave Flaubert's *Madame Bovary* (1856)",
+     "justification": "The answer pairs Realism with a valid characteristic work and author."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "Naturalism",
+     "justification": "The answer names Naturalism as the third 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "Émile Zola's *Germinal* (1885)",
+     "justification": "The answer pairs Naturalism with a valid characteristic work and author."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "edcb229bd85b4fd0889b8e47f769403d"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-3d813378c122",
+  "question_id": "3d813378c122",
+  "task_type": "factual",
+  "answer": "Many adults start their night by brushing their teeth, then changing into pajamas, and finally reading a book before turning off the light. Another common routine begins with a warm shower, followed by applying skincare products, and ending with setting an alarm on their phone. A third routine often includes dimming the lights, doing a short meditation or breathing exercise, and then slipping into bed to listen to a calming podcast.",
+  "trace": {
+   "evaluation_id": "38c882ca44c4445887c1a2420774962b",
+   "timestamp": "2026-11-06T20:28:53.125028Z",
+   "question_id": "3d813378c122",
+   "task_type": "factual",
+   "rubric_hash_original": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "rubric_hash_used": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "brushing their teeth, then changing into pajamas, and finally reading a book",
+     "justification": "The answer includes the first distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "brushing their teeth, then changing into pajamas, and finally reading a book",
+     "justification": "The answer provides an ordered sequence for the first routine."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "warm shower, followed by applying skincare products, and ending with setting an alarm",
+     "justification": "The answer includes a second distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "warm shower, followed by applying skincare products, and ending with setting an alarm",
+     "justification": "The answer provides an ordered sequence for the second routine."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "dimming the lights, doing a short meditation or breathing exercise, and then slipping into bed to listen to a calming podcast",
+     "justification": "The answer includes a third distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "dimming the lights, doing a short meditation or breathing exercise, and then slipping into bed to listen to a calming podcast",
+     "justification": "The answer provides an ordered sequence for the third routine."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "2451bdfef27c4dcfacd0c980361584fe"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-4cb875e3c8cc",
+  "question_id": "4cb875e3c8cc",
+  "task_type": "analytical",
+  "answer": "I find the destroyed‑moon hypothesis more convincing for the origin of prominent planetary rings.  Observations of Saturn’s rings show that many of the icy particles have spectral signatures matching those of its inner moons, and dynamical models demonstrate that a moon entering the planet’s Roche limit would be torn apart, supplying the observed mass and narrow distribution of the rings.  At the same time, simulations of planet formation predict that leftover debris can persist in a circumplanetary disk, which explains why some planets—such as Jupiter—have only faint, dusty ringlets that may be remnants of primordial material.  The direct compositional link between ring particles and known moons, together with the quantitative feasibility of tidal disruption, makes the destroyed‑moon scenario a stronger explanation than the more generic leftover‑material picture.",
+  "trace": {
+   "evaluation_id": "8d043e79da5342758a98ad1b7c066169",
+   "timestamp": "2026-11-06T20:28:55.384010Z",
+   "question_id": "4cb875e3c8cc",
+   "task_type": "analytical",
+   "rubric_hash_original": "b26e677a2fc1dbf6679e522d6e634fdcaf4920a88929473bed767affcf68afc1",
+   "rubric_hash_used": "b26e677a2fc1dbf6679e522d6e634fdcaf4920a88929473bed767affcf68afc1",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "I find the destroyed‑moon hypothesis more convincing for the origin of prominent planetary rings.",
+     "justification": "The student explicitly states that the destroyed-moon hypothesis is more convincing."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Observations of Saturn’s rings show that many of the icy particles have spectral signatures matching those of its inner moons, and dynamical models demonstrate that a moon entering the planet’s Roche limit would be torn apart",
+     "justification": "The student provides both compositional matching evidence and tidal disruption calculations/models within the Roche limit."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "simulations of planet formation predict that leftover debris can persist in a circumplanetary disk",
+     "justification": "The student cites simulations showing primordial leftover material can persist as a disk."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "The direct compositional link between ring particles and known moons, together with the quantitative feasibility of tidal disruption, makes the destroyed‑moon scenario a stronger explanation than the more generic leftover‑material picture.",
+     "justification": "The student explains why the specific compositional and tidal evidence makes the destroyed-moon hypothesis stronger than the alternative."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "3479f3e00b8540c3bdd46028c434620d"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-d757eca4528c",
+  "question_id": "d757eca4528c",
+  "task_type": "analytical",
+  "answer": "Governments should require mandatory data‑privacy standards for consumer Internet‑of‑Things (IoT) devices. Without uniform regulations, manufacturers often embed vague or overly permissive data‑collection clauses that leave users unaware of how their personal information is being harvested and shared. A clear, enforceable baseline—such as requiring explicit consent before any data leaves the device and limiting storage duration—would protect consumers from invasive surveillance and reduce the risk of large‑scale breaches. Evidence from the 2023 Capital One breach, which exploited insecure IoT cameras, shows that weak privacy controls can lead to costly, widespread exposure of personal data. Mandatory standards would also level the playing field, ensuring that all companies, big or small, meet the same security expectations.",
+  "trace": {
+   "evaluation_id": "8b7f3aae6332425db1cef3e5a0b0d459",
+   "timestamp": "2026-11-06T20:28:57.551441Z",
+   "question_id": "d757eca4528c",
+   "task_type": "analytical",
+   "rubric_hash_original": "4d2cd3e469f40422e9c00d13bad2cb7e5da797721803e440935981c308327c69",
+   "rubric_hash_used": "4d2cd3e469f40422e9c00d13bad2cb7e5da797721803e440935981c308327c69",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Governments should require mandatory data‑privacy standards for consumer Internet‑of‑Things (IoT) devices.",
+     "justification": "The answer clearly states the position that governments should require mandatory data-privacy standards for consumer IoT devices."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Without uniform regulations, manufacturers often embed vague or overly permissive data‑collection clauses that leave users unaware of how their personal information is being harvested and shared.",
+     "justification": "The answer provides specific reasons and evidence explaining why the regulations are needed to protect consumer privacy and security."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "[evidence not found in answer] The entire paragraph consistently supports the position without any contradictory statements."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [
+    "P1.C3"
+   ],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "reasoning": 1.0,
+    "correctness": 0.5
+   },
+   "overall_score": 0.8823529411764705,
+   "bands": {
+    "completeness": "Strong",
+    "reasoning": "Strong",
+    "correctness": "Developing"
+   },
+   "feedback": null,
+   "call_ids": [
+    "e0ba6aadc4e64c32ae6cca2e412aba60"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-082591e7ec4e",
+  "question_id": "082591e7ec4e",
+  "task_type": "analytical",
+  "answer": "Utilitarianism offers a stronger foundation for public policy because it evaluates actions by their overall consequences, aiming to maximize societal well‑being. A clear example is environmental regulation, where cost‑benefit analyses can quantify the health and economic benefits of reducing emissions against the costs to industry. By focusing on the greatest net happiness, utilitarian policy can justify stringent standards that prevent climate‑related suffering for millions, demonstrating that a consequence‑oriented approach yields more effective and equitable outcomes than rule‑based deontology.",
+  "trace": {
+   "evaluation_id": "5b40b7ddf6844a9a8e11473887f651a4",
+   "timestamp": "2026-11-06T20:28:59.399220Z",
+   "question_id": "082591e7ec4e",
+   "task_type": "analytical",
+   "rubric_hash_original": "75702f8cb2d263c8b6b8f4edefe3b58f62e1ae20e3e3c42e412340edd4f63c17",
+   "rubric_hash_used": "75702f8cb2d263c8b6b8f4edefe3b58f62e1ae20e3e3c42e412340edd4f63c17",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Utilitarianism offers a stronger foundation for public policy",
+     "justification": "The answer clearly states the position that utilitarianism provides a better foundation for public policy than deontological ethics."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "environmental regulation, where cost‑benefit analyses can quantify the health and economic benefits of reducing emissions against the costs to industry",
+     "justification": "It provides a concrete policy area (environmental regulation) and links it to utilitarian reasoning."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "By focusing on the greatest net happiness, utilitarian policy can justify stringent standards that prevent climate‑related suffering for millions, demonstrating that a consequence‑oriented approach yields more effective and equitable outcomes",
+     "justification": "It explains how maximizing overall welfare in environmental policy supports the claim that utilitarianism is superior."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "1a182bff4bb6459c9bb71003c9d379eb"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-d92e0ad73cb8",
+  "question_id": "d92e0ad73cb8",
+  "task_type": "analytical",
+  "answer": "Implementing a progressive wealth tax on the richest households would help reduce economic inequality in a market economy. First, a wealth tax directly redistributes accumulated assets from the top 1% to fund public services and social programs that benefit lower‑income families, narrowing the wealth gap. Second, the tax creates a disincentive for excessive concentration of capital, encouraging the wealthy to invest in productive enterprises rather than hoarding assets, which can stimulate broader economic participation. By targeting the concentration of wealth, the policy directly addresses the root cause of economic inequality.",
+  "trace": {
+   "evaluation_id": "d9f21020ac9948999c5591834cd17ff1",
+   "timestamp": "2026-11-06T20:29:01.564864Z",
+   "question_id": "d92e0ad73cb8",
+   "task_type": "analytical",
+   "rubric_hash_original": "36087f51cd16d5162cb716b7109df148608c5c9cc197d69f93462749efe753b3",
+   "rubric_hash_used": "36087f51cd16d5162cb716b7109df148608c5c9cc197d69f93462749efe753b3",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Implementing a progressive wealth tax on the richest households would help reduce economic inequality in a market economy.",
+     "justification": "The answer clearly states a position in favor of implementing a wealth tax."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "a wealth tax directly redistributes accumulated assets from the top 1% to fund public services and social programs that benefit lower‑income families, narrowing the wealth gap.",
+     "justification": "It provides a first distinct argument regarding raising revenue for redistributive programs to narrow the gap."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "the tax creates a disincentive for excessive concentration of capital, encouraging the wealthy to invest in productive enterprises rather than hoarding assets, which can stimulate broader economic participation.",
+     "justification": "It provides a second distinct argument regarding reducing the concentration of capital and encouraging productive investment."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "By targeting the concentration of wealth, the policy directly addresses the root cause of economic inequality.",
+     "justification": "The answer explicitly mentions economic inequality and links it to the wealth tax."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "dfd90d2d8bb1422c8c6dd93ca261793c"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-5d564b58c11c",
+  "question_id": "5d564b58c11c",
+  "task_type": "analytical",
+  "answer": "Integrated pest management (IPM) should be promoted as a sustainable alternative to chemical pesticides because it reduces environmental contamination while maintaining crop yields. First, IPM employs biological control agents such as predatory insects, which lower pesticide runoff; for example, California’s almond orchards that introduced lady beetles saw a 40% drop in neonicotinoid residues in nearby waterways within two years. Second, IPM’s emphasis on monitoring and targeted interventions cuts farmer costs; a study by the University of Illinois found that corn growers using IPM saved an average of $120 per acre by applying chemicals only when pest thresholds were exceeded. These outcomes demonstrate that IPM protects ecosystems and improves economic efficiency, making it a superior strategy for modern agriculture.",
+  "trace": {
+   "evaluation_id": "4e216c0593a44296ab567f2d6e996023",
+   "timestamp": "2026-11-06T20:29:18.987126Z",
+   "question_id": "5d564b58c11c",
+   "task_type": "analytical",
+   "rubric_hash_original": "7a1a49bb60c43a05916f764d20e1e39c8fdd5ef6b51ee111cac49aa6d2afdb91",
+   "rubric_hash_used": "7a1a49bb60c43a05916f764d20e1e39c8fdd5ef6b51ee111cac49aa6d2afdb91",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P2",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P2.C1",
+     "met": true,
+     "evidence": "Integrated pest management (IPM) should be promoted as a sustainable alternative to chemical pesticides",
+     "justification": "The answer explicitly states support for promoting integrated pest management."
+    },
+    {
+     "criterion_id": "P2.C2",
+     "met": true,
+     "evidence": "it reduces environmental contamination while maintaining crop yields",
+     "justification": "The answer provides a first distinct reason relating to environmental contamination and crop yields."
+    },
+    {
+     "criterion_id": "P2.C3",
+     "met": true,
+     "evidence": "California’s almond orchards that introduced lady beetles saw a 40% drop in neonicotinoid residues in nearby waterways within two years",
+     "justification": "The answer provides a specific statistical example supporting the first reason."
+    },
+    {
+     "criterion_id": "P2.C4",
+     "met": true,
+     "evidence": "IPM’s emphasis on monitoring and targeted interventions cuts farmer costs",
+     "justification": "The answer provides a second distinct reason related to lowering production costs."
+    },
+    {
+     "criterion_id": "P2.C5",
+     "met": true,
+     "evidence": "a study by the University of Illinois found that corn growers using IPM saved an average of $120 per acre by applying chemicals only when pest thresholds were exceeded",
+     "justification": "The answer provides a specific study and statistic supporting the second reason."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "reasoning": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "reasoning": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "59009a4e3a644380a27786eb62d29172"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-7ef66d20c834",
+  "question_id": "7ef66d20c834",
+  "task_type": "analytical",
+  "answer": "Nathaniel Hawthorne’s *The Scarlet Letter* should be read primarily as an exploration of individual psychological trauma, especially in the characters of Hester Prynne and Reverend Dimmesdale. First, Hawthorne describes Hester’s nightly wandering on the scaffold, noting that \"the scarlet letter, which had once seemed a symbol of shame, now seemed to be a part of her very being, a wound that never healed\" (Chapter 13), illustrating how the public punishment becomes an internalized, lingering scar that shapes her identity and emotional life. Second, Dimmesdale’s secret guilt is manifested in his physical decline and hallucinations, such as the vivid vision of the scarlet letter appearing on his chest in the forest, which reveals his inner torment and self‑inflicted suffering (Chapter 12). These passages show that the novel delves into how the characters internalize societal condemnation, leading to profound psychological distress, rather than merely condemning the Puritan community’s outward hypocrisy.",
+  "trace": {
+   "evaluation_id": "e62d559818554688a5456a0ddf7d22db",
+   "timestamp": "2026-11-06T20:29:21.718880Z",
+   "question_id": "7ef66d20c834",
+   "task_type": "analytical",
+   "rubric_hash_original": "504bb5b515c75dd5750a8067434d5a658519cbba73ba201e42b8ac47ec84269a",
+   "rubric_hash_used": "504bb5b515c75dd5750a8067434d5a658519cbba73ba201e42b8ac47ec84269a",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.95
+    }
+   ],
+   "identified_path": "P2",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P2.C1",
+     "met": true,
+     "evidence": "Nathaniel Hawthorne’s *The Scarlet Letter* should be read primarily as an exploration of individual psychological trauma",
+     "justification": "The answer clearly states that the novel should be read primarily as an exploration of individual psychological trauma."
+    },
+    {
+     "criterion_id": "P2.C2",
+     "met": true,
+     "evidence": "\"the scarlet letter, which had once seemed a symbol of shame, now seemed to be a part of her very being, a wound that never healed\"",
+     "justification": "Provides a distinct piece of textual evidence regarding Hester's internal reflections and psychological trauma."
+    },
+    {
+     "criterion_id": "P2.C3",
+     "met": true,
+     "evidence": "Dimmesdale’s secret guilt is manifested in his physical decline and hallucinations, such as the vivid vision of the scarlet letter appearing on his chest in the forest, which reveals his inner torment and self‑inflicted suffering",
+     "justification": "Provides a second distinct piece of evidence regarding Dimmesdale's self-torment and decline."
+    },
+    {
+     "criterion_id": "P2.C4",
+     "met": true,
+     "evidence": "These passages show that the novel delves into how the characters internalize societal condemnation, leading to profound psychological distress",
+     "justification": "Explains how the provided evidence demonstrates the exploration of psychological trauma."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "70312f83085240ad83487f7dffa7ac3e"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-7d174cce75df",
+  "question_id": "7d174cce75df",
+  "task_type": "analytical",
+  "answer": "The primary driver of the recent intensification of urban heat islands in megacities is the surge in anthropogenic heat emissions. As cities expand, the combined output from air‑conditioning units, traffic, industrial processes, and dense building energy use releases large quantities of waste heat directly into the urban atmosphere. Satellite observations of cities such as Tokyo and Delhi show that nighttime temperature spikes correlate more strongly with energy consumption patterns than with changes in surface greenness. Moreover, studies using urban climate models demonstrate that removing the anthropogenic heat term reduces simulated heat‑island magnitude by up to 30 %, highlighting its pivotal role. Consequently, the growing heat output from human activities, rather than vegetation loss, is the dominant factor behind the strengthening of urban heat islands.",
+  "trace": {
+   "evaluation_id": "d51d812564894219ae30669a281f613c",
+   "timestamp": "2026-11-06T20:29:23.633712Z",
+   "question_id": "7d174cce75df",
+   "task_type": "analytical",
+   "rubric_hash_original": "85ef1b46c69790d9372b80f6e4598ff85b17699032b97a9c62d1dfc3769aec7a",
+   "rubric_hash_used": "85ef1b46c69790d9372b80f6e4598ff85b17699032b97a9c62d1dfc3769aec7a",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P2",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P2.C1",
+     "met": true,
+     "evidence": "The primary driver of the recent intensification of urban heat islands in megacities is the surge in anthropogenic heat emissions.",
+     "justification": "The answer explicitly states that increased anthropogenic heat emissions are the primary cause of urban heat island intensification."
+    },
+    {
+     "criterion_id": "P2.C2",
+     "met": true,
+     "evidence": "studies using urban climate models demonstrate that removing the anthropogenic heat term reduces simulated heat‑island magnitude by up to 30 %",
+     "justification": "The answer provides evidence from urban climate models showing waste heat raises city temperatures."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "885e56baff2046afa880aaef46d61b7c"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-78d7767e5351",
+  "question_id": "78d7767e5351",
+  "task_type": "analytical",
+  "answer": "Working from home generally improves overall work‑life balance because it eliminates the time and stress associated with commuting, allowing employees to allocate that saved time to personal activities or family. Additionally, the flexibility of setting one's own schedule enables better alignment of work tasks with peak productivity periods and personal responsibilities, reducing the need to sacrifice one for the other. These factors together create a more harmonious integration of professional and personal life.",
+  "trace": {
+   "evaluation_id": "7326781f73bf45d8b18216b634ce75b2",
+   "timestamp": "2026-11-06T20:29:26.248734Z",
+   "question_id": "78d7767e5351",
+   "task_type": "analytical",
+   "rubric_hash_original": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "rubric_hash_used": "6721e72780a65ec4d95ac62c0e3701940553c3eb8359e883c252d373eba27c2e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Working from home generally improves overall work‑life balance",
+     "justification": "The answer explicitly states that working from home improves overall work-life balance."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "it eliminates the time and stress associated with commuting",
+     "justification": "It provides the first distinct reason of eliminating commuting time and stress."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "the flexibility of setting one's own schedule enables better alignment of work tasks with peak productivity periods and personal responsibilities",
+     "justification": "It provides a second distinct reason regarding schedule flexibility and balancing personal responsibilities."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "76207717d316492eb6737477455da23e"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-17c1b10632b5",
+  "question_id": "17c1b10632b5",
+  "task_type": "analytical",
+  "answer": "The primary cause of World War I was the rigid system of alliances that bound the great powers to each other. When Archduke Franz Ferdinand was assassinated in June 1914, Austria‑Hungary's declaration of war on Serbia triggered Russia's mobilization to protect its Slavic ally, which in turn forced Germany to honor its alliance with Austria‑Hungary and declare war on Russia. France, bound by the Franco‑Russian alliance, was then compelled to support Russia, while Britain entered the conflict due to its entente with France and its agreement to protect Belgian neutrality, which Germany violated. This cascade of obligations turned a regional dispute into a continental war, illustrating how the alliance network transformed a localized crisis into a full‑scale global conflict.",
+  "trace": {
+   "evaluation_id": "0efb4c84444d41bda84f5bf385773277",
+   "timestamp": "2026-11-06T20:29:28.508051Z",
+   "question_id": "17c1b10632b5",
+   "task_type": "analytical",
+   "rubric_hash_original": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "rubric_hash_used": "cfc12441512f783cd4d3262b3067163294ed4747c5db1e895a2308bbc2ffc74d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "The primary cause of World War I was the rigid system of alliances that bound the great powers to each other.",
+     "justification": "The answer clearly states that the primary cause was the system of alliances."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Austria‑Hungary's declaration of war on Serbia triggered Russia's mobilization to protect its Slavic ally, which in turn forced Germany to honor its alliance with Austria‑Hungary and declare war on Russia.",
+     "justification": "The answer provides a specific historical example showing the activation of alliance obligations leading to mobilization."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "This cascade of obligations turned a regional dispute into a continental war, illustrating how the alliance network transformed a localized crisis into a full‑scale global conflict.",
+     "justification": "The answer explicitly explains how the cascade of alliance obligations caused the localized dispute to escalate into a broader war."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "2f055df6b37344f69f9c6e724f11bc4c"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-91798e725180",
+  "question_id": "91798e725180",
+  "task_type": "explanatory",
+  "answer": "People often obey social norms because they crave the approval of others and dread being excluded from their group. Even when a norm clashes with their own moral beliefs, the fear of social rejection can outweigh personal convictions. The desire to be accepted creates a pressure to conform, leading individuals to suppress their inner disagreement and follow the prevailing behavior. In this way, the need for social acceptance becomes the decisive factor that drives compliance despite internal moral conflict.",
+  "trace": {
+   "evaluation_id": "947fdf47c63648789b4b66d560a29f6e",
+   "timestamp": "2026-11-06T20:29:32.779207Z",
+   "question_id": "91798e725180",
+   "task_type": "explanatory",
+   "rubric_hash_original": "ce35a9c0058cfc344146ff0ff5a6a0c295bf3042e9ef03febab4e6e3c3ee2b50",
+   "rubric_hash_used": "ce35a9c0058cfc344146ff0ff5a6a0c295bf3042e9ef03febab4e6e3c3ee2b50",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "they crave the approval of others and dread being excluded from their group",
+     "justification": "The answer correctly identifies the desire for social approval and fear of exclusion as the primary factor."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Even when a norm clashes with their own moral beliefs, the fear of social rejection can outweigh personal convictions.",
+     "justification": "The answer addresses the tension by stating that the desire to avoid social costs overrides personal moral convictions."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "The desire to be accepted creates a pressure to conform, leading individuals to suppress their inner disagreement and follow the prevailing behavior.",
+     "justification": "The answer links social pressure to conformity using clear causal language."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "426351721bdf406a996342d13db1f163"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-669bce9c85fb",
+  "question_id": "669bce9c85fb",
+  "task_type": "explanatory",
+  "answer": "When a country’s currency depreciates, its goods become cheaper for foreign buyers because the same amount of foreign currency now buys more of the domestic currency. This lower foreign‑currency price makes the country’s exports more competitive relative to those from nations with stronger currencies. As a result, foreign consumers are more likely to purchase the cheaper imports, increasing the volume of exports. The price effect—lower export prices stimulating higher foreign demand—is the primary mechanism linking the exchange‑rate change to export growth.",
+  "trace": {
+   "evaluation_id": "a8f7bae75c4a4034b6fbe1555bda7b90",
+   "timestamp": "2026-11-06T20:29:38.313140Z",
+   "question_id": "669bce9c85fb",
+   "task_type": "explanatory",
+   "rubric_hash_original": "e9d42d74c84a403bf92c78beab91a83110da2020b9ad903e2d8b0cc1b6055a83",
+   "rubric_hash_used": "e9d42d74c84a403bf92c78beab91a83110da2020b9ad903e2d8b0cc1b6055a83",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "This lower foreign‑currency price makes the country’s exports more competitive",
+     "justification": "The answer explicitly states that depreciation makes exports more competitive."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "its goods become cheaper for foreign buyers because the same amount of foreign currency now buys more of the domestic currency",
+     "justification": "The answer states that depreciation lowers the foreign-currency price of exported goods."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "foreign consumers are more likely to purchase the cheaper imports, increasing the volume of exports",
+     "justification": "The answer provides the causal mechanism linking the lower price to increased export volume via higher foreign demand."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "e8fee48bb8514736aae0e448b20f34cb"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-1e9d95d9130f",
+  "question_id": "1e9d95d9130f",
+  "task_type": "explanatory",
+  "answer": "When biochar is mixed into agricultural soil, its porous structure adsorbs organic molecules and physically isolates them from microbial enzymes, making the carbon much more recalcitrant and slowing decomposition. In the Loess Plateau of China, thousands of hectares of wheat fields have been amended with locally produced rice‑straw biochar. Soil analyses from these fields show a 20‑30% increase in stable carbon fractions compared with untreated plots, indicating that the biochar’s protective matrix has reduced the loss of native organic carbon. This demonstrates how the physical shielding provided by biochar can enhance long‑term carbon sequestration in real‑world farming systems.",
+  "trace": {
+   "evaluation_id": "e969822659eb437d937a9323d681980c",
+   "timestamp": "2026-11-06T20:29:45.264782Z",
+   "question_id": "1e9d95d9130f",
+   "task_type": "explanatory",
+   "rubric_hash_original": "3c66af6e3de7f08da4bb779fe00823f7e08a68079a3e4f64510a3d0afe8842ea",
+   "rubric_hash_used": "3c66af6e3de7f08da4bb779fe00823f7e08a68079a3e4f64510a3d0afe8842ea",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "its porous structure adsorbs organic molecules and physically isolates them from microbial enzymes, making the carbon much more recalcitrant and slowing decomposition",
+     "justification": "The answer clearly states that biochar physically protects organic carbon through adsorption and increased recalcitrance, slowing decomposition."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "In the Loess Plateau of China, thousands of hectares of wheat fields have been amended with locally produced rice‑straw biochar.",
+     "justification": "A specific region (the Loess Plateau of China) is named along with its use of biochar."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Soil analyses from these fields show a 20‑30% increase in stable carbon fractions compared with untreated plots, indicating that the biochar’s protective matrix has reduced the loss of native organic carbon.",
+     "justification": "It explains how the example demonstrates the mechanism by citing measured increases in stable carbon fractions resulting from reduced decomposition."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "38ed301dbe3747b784c09cd9473dffd0"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-b850a615f22e",
+  "question_id": "b850a615f22e",
+  "task_type": "explanatory",
+  "answer": "Regular physical activity boosts mental health by stimulating the release of endorphins, the brain's natural pain‑relieving and mood‑enhancing chemicals. When you exercise, the pituitary gland and hypothalamus increase endorphin secretion into the bloodstream and central nervous system. These endorphins bind to opioid receptors, producing feelings of euphoria and reducing the perception of stress and discomfort. As a result, individuals often experience an elevated mood and a calmer mental state after workouts. Over time, the repeated endorphin surge can help buffer against anxiety and depressive symptoms, contributing to overall better mental well‑being.",
+  "trace": {
+   "evaluation_id": "dc657cc935834997b1619b4d6d6564bc",
+   "timestamp": "2026-11-06T20:29:47.847166Z",
+   "question_id": "b850a615f22e",
+   "task_type": "explanatory",
+   "rubric_hash_original": "7413dd39e90d61aa4504f7620a77a87e32188fdd5d7c9dfe2b963341721abcbe",
+   "rubric_hash_used": "7413dd39e90d61aa4504f7620a77a87e32188fdd5d7c9dfe2b963341721abcbe",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P3",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "stimulating the release of endorphins",
+     "justification": "The answer names endorphin release as the mechanism."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the pituitary gland and hypothalamus increase endorphin secretion into the bloodstream and central nervous system. These endorphins bind to opioid receptors",
+     "justification": "The answer accurately describes the process of endorphin secretion and binding to opioid receptors."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "the repeated endorphin surge can help buffer against anxiety and depressive symptoms",
+     "justification": "The answer connects endorphin release to reduced anxiety and depressive symptoms."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "122a6fec38ed48438d87d38e39f24868"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-c08ec38ec72f",
+  "question_id": "c08ec38ec72f",
+  "task_type": "explanatory",
+  "answer": "Nick Carraway, the story’s narrator, is widely recognized as unreliable because his judgments are colored by personal bias and selective memory. His unreliability shapes the way readers perceive the American Dream, as the dream is filtered through his subjective lens. Because Nick often doubts or glosses over crucial details—such as Gatsby’s true motives or the moral emptiness of the wealthy elite—readers are left uncertain about whether the Dream is genuinely attainable. This ambiguity forces the audience to question whether the promise of success and happiness is a realistic possibility or merely an illusion that slips away depending on whose perspective is presented.",
+  "trace": {
+   "evaluation_id": "85b6fac6c547491bb432ae17b4dc6bf3",
+   "timestamp": "2026-11-06T20:29:50.132770Z",
+   "question_id": "c08ec38ec72f",
+   "task_type": "explanatory",
+   "rubric_hash_original": "5dca8c7ff97cf5314e64b5693d0e087f00d5015858bd28de05df4093d911543d",
+   "rubric_hash_used": "5dca8c7ff97cf5314e64b5693d0e087f00d5015858bd28de05df4093d911543d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.8
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Nick Carraway, the story’s narrator, is widely recognized as unreliable",
+     "justification": "The answer explicitly identifies Nick Carraway as unreliable."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "His unreliability shapes the way readers perceive the American Dream",
+     "justification": "The answer states that the narrator's unreliability influences the reader's perception of the American Dream."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "readers are left uncertain about whether the Dream is genuinely attainable. This ambiguity",
+     "justification": "The answer connects the unreliability and subjectivity to ambiguity regarding the attainability of the dream."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "fc0220864f7e47cab37a5ac139abf5c4"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-3f8052a62a58",
+  "question_id": "3f8052a62a58",
+  "task_type": "explanatory",
+  "answer": "When moist air is forced up a mountain range, it undergoes orographic lift: the ascent causes the air to expand and cool, reaching its dew point and releasing precipitation on the windward side. After shedding much of its moisture, the air then descends on the leeward side, where compression warms it and lowers its relative humidity, inhibiting further cloud formation and rain. This descending, now drier and warmer air creates a rain‑shadow region with markedly reduced precipitation. A classic example is the dry interior of Washington State east of the Cascade Range, which receives only about one‑quarter of the rainfall that falls on the western slopes.",
+  "trace": {
+   "evaluation_id": "50aed1c3bd3e4c198d2ed712f23fd4bd",
+   "timestamp": "2026-11-06T20:29:52.849203Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "When moist air is forced up a mountain range, it undergoes orographic lift: the ascent causes the air to expand and cool, reaching its dew point and releasing precipitation on the windward side. After shedding much of its moisture, the air then descends on the leeward side",
+     "justification": "The answer clearly states orographic lift, rising/cooling air, precipitation on the windward side, and descending air on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "where compression warms it and lowers its relative humidity, inhibiting further cloud formation and rain.",
+     "justification": "It explains that descending air warms and its relative humidity drops, which reduces precipitation."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "A classic example is the dry interior of Washington State east of the Cascade Range, which receives only about one‑quarter of the rainfall that falls on the western slopes.",
+     "justification": "It gives a real-world rain-shadow example by citing the leeward side of the Cascades."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "e9b28953be4a429a905d2b08f0356bc5"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-610c46d48e48",
+  "question_id": "610c46d48e48",
+  "task_type": "explanatory",
+  "answer": "Many people frequently misplace their keys because high cognitive load or stress reduces their attention to where they put them. When individuals are juggling multiple tasks or feeling pressured, their mental resources are occupied, making it harder to encode the location of small objects. As a result, they place the keys absent‑mindedly and later fail to recall the exact spot. This diminished focus during key placement leads to frequent forgetfulness and misplaced keys.",
+  "trace": {
+   "evaluation_id": "436184d4f28c4dbb850394b0ee70fb7b",
+   "timestamp": "2026-11-06T20:29:55.333206Z",
+   "question_id": "610c46d48e48",
+   "task_type": "explanatory",
+   "rubric_hash_original": "db300913c9be5f3fd44c9e2c74780eb4c505e2bbdce06569a9c35adf760476e7",
+   "rubric_hash_used": "db300913c9be5f3fd44c9e2c74780eb4c505e2bbdce06569a9c35adf760476e7",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    },
+    {
+     "path_id": "P2",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P3",
+     "confidence": 0.2
+    }
+   ],
+   "identified_path": "P2",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P2.C1",
+     "met": true,
+     "evidence": "Many people frequently misplace their keys because high cognitive load or stress reduces their attention to where they put them.",
+     "justification": "The answer provides a clear direct explanation for why people misplace keys right at the start."
+    },
+    {
+     "criterion_id": "P2.C2",
+     "met": true,
+     "evidence": "high cognitive load or stress reduces their attention",
+     "justification": "The text explicitly states that high cognitive load or stress is the explanation for the issue."
+    },
+    {
+     "criterion_id": "P2.C3",
+     "met": true,
+     "evidence": "When individuals are juggling multiple tasks or feeling pressured, their mental resources are occupied, making it harder to encode the location of small objects. As a result, they place the keys absent‑mindedly and later fail to recall the exact spot.",
+     "justification": "The answer links reduced attention/mental resource occupation during multitasking and stress directly to failing to recall where the keys were placed."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "7bf5f96ef5a34660bb0447124beb905f"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-23575fb39cfd",
+  "question_id": "23575fb39cfd",
+  "task_type": "explanatory",
+  "answer": "When the air inside a hot‑air balloon is heated, its temperature rises and the air expands, which lowers its density compared to the cooler surrounding atmosphere. Because the heated air is less dense, the weight of the air displaced by the balloon is greater than the weight of the air inside it. This difference creates a net upward buoyant force, as described by Archimedes' principle. The surrounding air, being at ambient temperature, remains denser and thus exerts a greater downward pressure on the balloon than the lighter air inside can counteract, causing the balloon to rise.",
+  "trace": {
+   "evaluation_id": "83b46bb518e04092a859c2e43757fa7e",
+   "timestamp": "2026-11-06T20:29:57.598675Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "lowers its density compared to the cooler surrounding atmosphere",
+     "justification": "The answer explicitly states that heating the air lowers its density compared to the surrounding atmosphere."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "This difference creates a net upward buoyant force, as described by Archimedes' principle.",
+     "justification": "The answer links the density difference to a net upward buoyant force using Archimedes' principle."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "cooler surrounding atmosphere",
+     "justification": "The answer notes that the surrounding atmosphere is cooler, providing the necessary temperature contrast."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "6d16b7a441d9463a844619735b47f506"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-dae71517a495",
+  "question_id": "dae71517a495",
+  "task_type": "factual",
+  "answer": "The three primary plate‑boundary types are divergent, convergent, and transform. At divergent boundaries, tectonic plates pull apart, creating mid‑ocean ridges where new oceanic crust is generated by seafloor spreading. Convergent boundaries involve plates moving toward one another, often producing subduction zones that generate deep‑sea trenches and volcanic arcs, or causing the uplift of mountain ranges when continental plates collide. Transform boundaries are characterized by horizontal, strike‑slip motion of plates sliding past each other, which commonly results in frequent earthquakes along faults such as the San Andreas.",
+  "trace": {
+   "evaluation_id": "0a660114b6f942d1b63730c7e06968a7",
+   "timestamp": "2026-11-06T20:29:59.641937Z",
+   "question_id": "dae71517a495",
+   "task_type": "factual",
+   "rubric_hash_original": "8fd088d4ba77f4618ae07850808aad4c187a4c2414a0506c2ec637c0286d0cff",
+   "rubric_hash_used": "8fd088d4ba77f4618ae07850808aad4c187a4c2414a0506c2ec637c0286d0cff",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "divergent, convergent, and transform",
+     "justification": "The answer names all three required plate boundaries."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "mid‑ocean ridges where new oceanic crust is generated by seafloor spreading",
+     "justification": "The answer correctly links divergent boundaries to mid-ocean ridges and seafloor spreading."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "subduction zones that generate deep‑sea trenches and volcanic arcs, or causing the uplift of mountain ranges",
+     "justification": "The answer correctly links convergent boundaries to subduction zones and mountain building."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "horizontal, strike‑slip motion of plates sliding past each other, which commonly results in frequent earthquakes",
+     "justification": "The answer correctly links transform boundaries to strike-slip motion and earthquakes."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "e254bc206d934b28aa839ac797cc4a50"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-632df277470d",
+  "question_id": "632df277470d",
+  "task_type": "analytical",
+  "answer": "Mandatory fortification of staple foods with vitamin D should be implemented as a public‑health measure. First, it would ensure that vulnerable populations—such as the elderly, people with limited sun exposure, and low‑income groups—receive a reliable source of this essential nutrient, reducing the prevalence of deficiency‑related conditions like osteoporosis and certain autoimmune diseases. Second, fortification is a cost‑effective strategy that reaches the entire population without requiring individual behavior change, thereby maximizing health benefits while minimizing administrative costs. Critics argue that mandatory fortification infringes on personal choice and could lead to excessive intake for some individuals; however, the risk of toxicity is low at the levels used in food programs, and the public‑health gains from preventing widespread deficiency outweigh these concerns.",
+  "trace": {
+   "evaluation_id": "d1b5ba5f7f4f463daa127f726608aea9",
+   "timestamp": "2026-11-06T20:30:02.105996Z",
+   "question_id": "632df277470d",
+   "task_type": "analytical",
+   "rubric_hash_original": "0f051054c49230e52227823fa06580c325e2de311a1a2f70b115cfc0c6018f63",
+   "rubric_hash_used": "0f051054c49230e52227823fa06580c325e2de311a1a2f70b115cfc0c6018f63",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    },
+    {
+     "path_id": "P2",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Mandatory fortification of staple foods with vitamin D should be implemented as a public‑health measure.",
+     "justification": "The answer clearly states that mandatory fortification should be implemented."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "First, it would ensure that vulnerable populations—such as the elderly, people with limited sun exposure, and low‑income groups—receive a reliable source of this essential nutrient, reducing the prevalence of deficiency‑related conditions like osteoporosis and certain autoimmune diseases.",
+     "justification": "It provides a first supporting point focusing on reaching vulnerable populations and reducing deficiency-related conditions."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Second, fortification is a cost‑effective strategy that reaches the entire population without requiring individual behavior change, thereby maximizing health benefits while minimizing administrative costs.",
+     "justification": "It provides a second supporting point regarding cost-effectiveness and ease of reaching the population without behavioral changes."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Critics argue that mandatory fortification infringes on personal choice and could lead to excessive intake for some individuals",
+     "justification": "It acknowledges the counterargument concerning personal choice and excessive intake."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "c0c72761936749a598c12824de48ec30"
+   ]
+  }
+ },
+ {
+  "base_id": "ref-a5cd0a155f64",
+  "question_id": "a5cd0a155f64",
+  "task_type": "explanatory",
+  "answer": "One key mechanism that reduces latency in 5G is the use of a shorter Transmission Time Interval (TTI), often called a mini‑slot or sub‑frame. In 4G LTE the TTI is typically 1 ms, meaning data can only be scheduled for transmission at that granularity. 5G can shrink the TTI to as little as 0.125 ms (or even less with flexible numerology), allowing the network to schedule and acknowledge packets much more quickly. This finer time granularity reduces the waiting time before a packet is sent and before acknowledgments are returned, directly cutting end‑to‑end latency. Consequently, applications that require near‑real‑time response, such as autonomous driving or remote surgery, benefit from the much lower latency that 5G provides.",
+  "trace": {
+   "evaluation_id": "7715a39ff9154d25b4114c39a45012a5",
+   "timestamp": "2026-11-06T20:30:18.857255Z",
+   "question_id": "a5cd0a155f64",
+   "task_type": "explanatory",
+   "rubric_hash_original": "9ad98646ae7e0460652227a0aeaa58fe28e779e909dbc9612289d03d2b45cd7a",
+   "rubric_hash_used": "9ad98646ae7e0460652227a0aeaa58fe28e779e909dbc9612289d03d2b45cd7a",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "shorter Transmission Time Interval (TTI), often called a mini‑slot or sub‑frame",
+     "justification": "The answer correctly identifies the shorter TTI / mini-slots as a primary mechanism reducing latency."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "5G can shrink the TTI to as little as 0.125 ms (or even less with flexible numerology), allowing the network to schedule and acknowledge packets much more quickly.",
+     "justification": "The technical details regarding the reduced scheduling interval are accurately described."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "This finer time granularity reduces the waiting time before a packet is sent and before acknowledgments are returned, directly cutting end‑to‑end latency.",
+     "justification": "The answer establishes a clear causal link showing how the shorter TTI leads to a reduction in latency."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "cc6b62dbc59442148817f2965cef1f4c"
+   ]
+  }
+ },
+ {
+  "base_id": "cell-good",
+  "question_id": "512f892a6afa",
+  "task_type": "factual",
+  "answer": "The cell cycle includes G1, S phase and M phase. In G1 the cell grows and produces the proteins and organelles it will need. During S phase the entire genome is replicated, so each chromosome ends up as two sister chromatids. In M phase (mitosis) the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells.",
+  "trace": {
+   "evaluation_id": "1c66fae0a5c2468eafc25f7b156db8b6",
+   "timestamp": "2026-11-06T20:30:22.573463Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as the first cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the cell grows and produces the proteins and organelles it will need",
+     "justification": "The answer provides cell growth and protein/organelle production as the key event for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second valid cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "the entire genome is replicated",
+     "justification": "The answer provides genome replication as the key event for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "M phase",
+     "justification": "The answer names M phase as a third valid cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells",
+     "justification": "The answer provides cell division and chromatid separation as a key event for M phase."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1, S phase and M phase",
+     "justification": "The three phases listed (G1, S phase, and M phase) are all distinct."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "714ec4215d424a60b09517c7c7e9c58e"
+   ]
+  }
+ },
+ {
+  "base_id": "balloon-good",
+  "question_id": "23575fb39cfd",
+  "task_type": "explanatory",
+  "answer": "Heating the air inside the envelope makes its molecules move faster and spread out, so the hot air is less dense than the cooler air surrounding the balloon. Because the balloon displaces outside air that is heavier than the air it contains, the surrounding air pushes up on it with a buoyant force. When that upward force exceeds the weight of the balloon, basket and hot air, the balloon rises.",
+  "trace": {
+   "evaluation_id": "4affc0a61e9f435d8296d8e309e31180",
+   "timestamp": "2026-11-06T20:30:24.792720Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "the hot air is less dense than the cooler air surrounding the balloon.",
+     "justification": "The answer clearly states that heating the air makes it less dense than the surrounding air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the surrounding air pushes up on it with a buoyant force.",
+     "justification": "The answer explains that the displacement of heavier outside air results in an upward buoyant force lifting the balloon."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "cooler air surrounding the balloon.",
+     "justification": "The answer explicitly notes the contrast with the cooler surrounding air."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 1,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "e1dd8b110ccd47bb815022b8b8cc97da"
+   ]
+  }
+ }
+]

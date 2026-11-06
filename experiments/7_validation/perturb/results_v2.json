@@ -1,0 +1,646 @@
+[
+ {
+  "item_id": "ref-83e77d761714/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-83e77d761714/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-512f892a6afa/correctness",
+  "kind": "correctness",
+  "drops": {
+   "correctness": 0.285714,
+   "completeness": 0.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-512f892a6afa/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-647b3337f666/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.272727
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-647b3337f666/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-886e0fcd1e3d/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-886e0fcd1e3d/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-476bdbe5578d/completeness",
+  "kind": "completeness",
+  "drops": {
+   "completeness": 0.333333,
+   "correctness": 0.285714
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-476bdbe5578d/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.285714
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-476bdbe5578d/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-17b9d268178a/completeness",
+  "kind": "completeness",
+  "drops": {
+   "completeness": 1.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-17b9d268178a/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.5
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-17b9d268178a/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-b0affe8aae1b/completeness",
+  "kind": "completeness",
+  "drops": {
+   "completeness": 0.333333,
+   "correctness": 0.25
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-b0affe8aae1b/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-b0affe8aae1b/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-3d813378c122/completeness",
+  "kind": "completeness",
+  "drops": {
+   "completeness": 0.333333,
+   "correctness": 0.25
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-3d813378c122/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-3d813378c122/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-4cb875e3c8cc/completeness",
+  "kind": "completeness",
+  "drops": {
+   "completeness": 1.0,
+   "correctness": 0.0,
+   "reasoning": 1.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-4cb875e3c8cc/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-4cb875e3c8cc/reasoning",
+  "kind": "reasoning",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 1.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-4cb875e3c8cc/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-d757eca4528c/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "reasoning": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-082591e7ec4e/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.5,
+   "reasoning": 0.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-082591e7ec4e/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-d92e0ad73cb8/completeness",
+  "kind": "completeness",
+  "drops": {
+   "correctness": 0.5,
+   "reasoning": 0.5,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-d92e0ad73cb8/reasoning",
+  "kind": "reasoning",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-d92e0ad73cb8/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-5d564b58c11c/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "reasoning": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-7ef66d20c834/reasoning",
+  "kind": "reasoning",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-7ef66d20c834/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-7d174cce75df/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-78d7767e5351/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-17c1b10632b5/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-17c1b10632b5/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-91798e725180/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-669bce9c85fb/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 1.0,
+   "reasoning": 1.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-669bce9c85fb/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-1e9d95d9130f/completeness",
+  "kind": "completeness",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 1.0,
+   "reasoning": 1.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-1e9d95d9130f/reasoning",
+  "kind": "reasoning",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-1e9d95d9130f/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-b850a615f22e/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-c08ec38ec72f/correctness",
+  "kind": "correctness",
+  "drops": {
+   "correctness": 0.5,
+   "completeness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-c08ec38ec72f/reasoning",
+  "kind": "reasoning",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 0.0,
+   "reasoning": 1.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-c08ec38ec72f/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-3f8052a62a58/completeness",
+  "kind": "completeness",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 1.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-3f8052a62a58/correctness",
+  "kind": "correctness",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-3f8052a62a58/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-610c46d48e48/reasoning",
+  "kind": "reasoning",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.5,
+   "reasoning": 1.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-610c46d48e48/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-23575fb39cfd/completeness",
+  "kind": "completeness",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-23575fb39cfd/correctness",
+  "kind": "correctness",
+  "drops": {
+   "correctness": 0.5,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-23575fb39cfd/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-dae71517a495/correctness",
+  "kind": "correctness",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.5
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-dae71517a495/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-632df277470d/completeness",
+  "kind": "completeness",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 1.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-632df277470d/correctness",
+  "kind": "correctness",
+  "drops": {
+   "correctness": 0.5,
+   "reasoning": 0.5,
+   "completeness": 0.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "ref-632df277470d/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "ref-a5cd0a155f64/expression",
+  "kind": "expression",
+  "drops": {
+   "completeness": 0.0,
+   "correctness": 0.0,
+   "reasoning": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "cell-good/correctness",
+  "kind": "correctness",
+  "drops": {
+   "correctness": 0.142857,
+   "completeness": 0.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "cell-good/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "balloon-good/completeness",
+  "kind": "completeness",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "balloon-good/correctness",
+  "kind": "correctness",
+  "drops": {
+   "correctness": 1.0,
+   "reasoning": 0.0,
+   "completeness": 1.0
+  },
+  "errors": 1
+ },
+ {
+  "item_id": "balloon-good/reasoning",
+  "kind": "reasoning",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ },
+ {
+  "item_id": "balloon-good/expression",
+  "kind": "expression",
+  "drops": {
+   "correctness": 0.0,
+   "reasoning": 0.0,
+   "completeness": 0.0
+  },
+  "errors": 0
+ }
+]

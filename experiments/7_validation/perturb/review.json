@@ -1,0 +1,205 @@
+{
+ "ref-d757eca4528c/correctness": {
+  "drop": true,
+  "why": "The base's own fact is false (the Capital One breach was 2019 and not via IoT cameras), so 2023 -> 2022 tests nothing."
+ },
+ "ref-d92e0ad73cb8/correctness": {
+  "drop": true,
+  "why": "Top 1% -> top 10% isn't clearly false for a wealth tax."
+ },
+ "ref-5d564b58c11c/correctness": {
+  "drop": true,
+  "why": "An invented statistic changed to another; neither is verifiable."
+ },
+ "ref-7ef66d20c834/correctness": {
+  "drop": true,
+  "why": "Chapter 13 -> 2: chapter 2 is also a scaffold scene, so not clearly false."
+ },
+ "ref-7d174cce75df/correctness": {
+  "drop": true,
+  "why": "An unverifiable city in an unsourced observation."
+ },
+ "ref-78d7767e5351/correctness": {
+  "drop": true,
+  "why": "The edit is marked in bold (**increases**), which gives it away."
+ },
+ "ref-91798e725180/correctness": {
+  "drop": true,
+  "why": "Financial reward is a different explanation, not a factual error."
+ },
+ "ref-1e9d95d9130f/correctness": {
+  "drop": true,
+  "why": "An invented statistic changed to another; neither is verifiable."
+ },
+ "ref-b850a615f22e/correctness": {
+  "drop": true,
+  "why": "The adrenal medulla also releases endorphins, so not clearly false."
+ },
+ "ref-610c46d48e48/correctness": {
+  "drop": true,
+  "why": "Contradicts the answer's own explanation rather than stating a false fact."
+ },
+ "ref-a5cd0a155f64/correctness": {
+  "drop": true,
+  "why": "0.5 ms is a real 5G slot length; the minimum claim is only arguably false."
+ },
+ "ref-082591e7ec4e/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: 'utilitarian policy can justify stringent standards that prevent ... suffering'."
+ },
+ "ref-b850a615f22e/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: 'the repeated endorphin surge can help buffer against anxiety'."
+ },
+ "ref-886e0fcd1e3d/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): each sentence still names its type."
+ },
+ "ref-d757eca4528c/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): 'Mandatory standards would also ...' restates the position."
+ },
+ "ref-082591e7ec4e/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): the last clause still says the consequence-oriented approach is better."
+ },
+ "ref-5d564b58c11c/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): 'making it a superior strategy' restates the position."
+ },
+ "ref-7ef66d20c834/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): 'rather than merely condemning ... hypocrisy' keeps the thesis."
+ },
+ "ref-17c1b10632b5/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): the last sentence still credits the alliance network."
+ },
+ "ref-91798e725180/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): 'compliance despite internal moral conflict' keeps the tension."
+ },
+ "ref-c08ec38ec72f/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): the ambiguity sentence still links narration to the Dream."
+ },
+ "ref-dae71517a495/completeness": {
+  "drop": true,
+  "why": "Content still stated after the edit (round 2): each sentence still names its boundary type."
+ },
+ "ref-d757eca4528c/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: other sentences still give reasons, and the criterion needs only one."
+ },
+ "ref-5d564b58c11c/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: the first sentence still gives the first reason ('because it reduces contamination')."
+ },
+ "ref-7d174cce75df/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: the climate-model evidence still supports the claim, and one piece is enough."
+ },
+ "ref-78d7767e5351/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: 'enjoy the comfort of their own home' is still a reason that bears on balance."
+ },
+ "ref-17c1b10632b5/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: 'France, bound by the alliance, was compelled ...' still shows the mechanism."
+ },
+ "ref-91798e725180/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: 'The desire to be accepted creates a pressure to conform'."
+ },
+ "ref-669bce9c85fb/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: 'As a result, foreign consumers ... increasing the volume of exports'."
+ },
+ "ref-3f8052a62a58/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: 'This descending, now drier and warmer air creates a rain-shadow region'."
+ },
+ "ref-23575fb39cfd/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: the last sentence still says the denser air causes the rise, and it adds a false ballast claim."
+ },
+ "ref-632df277470d/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: ensuring the nutrient still supports the position."
+ },
+ "ref-a5cd0a155f64/reasoning": {
+  "drop": true,
+  "why": "Round 2 reasoning edit: the link still survives: the first sentence still says the shorter TTI reduces latency."
+ },
+ "ref-23575fb39cfd/expression": {
+  "replace": [
+   [
+    "exerts a greater downward pressure on the balloon than the lighter air inside can counteract",
+    "pushes up on the balloon harder than the balloon's weight pulls it down"
+   ]
+  ],
+  "why": "External review of the human set: the base's sentence had wrong physics (buoyancy is a net upward force)."
+ },
+ "ref-23575fb39cfd/correctness": {
+  "replace": [
+   [
+    "exerts a greater downward pressure on the balloon than the lighter air inside can counteract",
+    "pushes up on the balloon harder than the balloon's weight pulls it down"
+   ]
+  ],
+  "why": "External review of the human set: the base's sentence had wrong physics (buoyancy is a net upward force)."
+ },
+ "ref-669bce9c85fb/expression": {
+  "replace": [
+   [
+    "purchase the cheaper imports",
+    "purchase the cheaper goods"
+   ]
+  ],
+  "why": "External review of the human set: 'imports' read as a false statement."
+ },
+ "ref-669bce9c85fb/correctness": {
+  "replace": [
+   [
+    "purchase the cheaper imports",
+    "purchase the cheaper goods"
+   ]
+  ],
+  "why": "External review of the human set: 'imports' read as a false statement."
+ },
+ "ref-3d813378c122/completeness": {
+  "replace": [
+   [
+    "Another common routine begins",
+    "One common routine begins"
+   ],
+   [
+    "A third routine often",
+    "Another routine often"
+   ]
+  ],
+  "why": "External review of the human set: orphan openers gave the deletion away."
+ },
+ "ref-476bdbe5578d/completeness": {
+  "replace": [
+   [
+    "Industrial discharge is another key source",
+    "Industrial discharge is a key source of water pollution"
+   ],
+   [
+    "Finally, untreated sewage",
+    "Untreated sewage also"
+   ]
+  ],
+  "why": "External review of the human set: orphan openers gave the deletion away."
+ },
+ "ref-83e77d761714/correctness": {
+  "replace": [
+   [
+    ", which placed a strong buffer state on France’s eastern border",
+    ", which strengthened the defences on France’s eastern border"
+   ]
+  ],
+  "why": "External review of the human set: 'buffer state' was a second, unplanted error."
+ }
+}

@@ -1,0 +1,33 @@
+name: perturb
+version: 1
+description: >
+  Phase 7 synthetic perturbation. Degrades a good answer in exactly one controlled way, so
+  the change in the engine's scores can be checked against the dimension it should hit
+  (design doc §13). Every perturbation is then read by hand.
+system: |
+  You edit a good answer to a question so that it gets worse in exactly one way, for a test
+  of a grading system. Make only the change asked for below and keep everything else as it
+  is: the same sentences, wording and length wherever possible.
+
+  Change to make: {{ instruction }}
+
+  Write the edited answer in "perturbed", and in "change" one sentence saying exactly what you
+  changed. Do not comment inside the answer, and do not mark the change in it.
+  Reply with JSON only.
+user: |
+  Question:
+  {{ question }}
+
+  Good answer:
+  {{ answer }}
+  {%- if target %}
+
+  Part to change: the part of the answer that does this: {{ target }}
+  {%- endif %}
+  {%- if problems %}
+
+  Your previous edit failed these checks. Fix them:
+  {% for p in problems -%}
+  - {{ p }}
+  {% endfor %}
+  {%- endif %}

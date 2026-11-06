@@ -128,12 +128,16 @@ roles:
     max_output_tokens: 1024
     reasoning_effort: none          # Ollama: disables Qwen3 "thinking" (slow on a 6 GB GPU)
   perturber:
-    provider: ollama
-    model: qwen3:8b
-    family: qwen
+    # Phase 7. Local qwen3:8b returned 61 of 108 edits unchanged (all 20 reasoning ones), often
+    # while saying it had changed something. gpt-oss is not the judge's family, so the judge
+    # isn't grading its own model's writing.
+    provider: groq
+    model: openai/gpt-oss-120b
+    family: openai-oss
     temperature: 0.7
-    max_output_tokens: 2048
-    reasoning_effort: none
+    max_output_tokens: 3000
+    reasoning_effort: low
+    json_mode: strict
 
 retry:
   max_attempts: 4          # total attempts for retryable errors (429, 5xx, timeouts)

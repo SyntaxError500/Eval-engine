@@ -64,10 +64,12 @@ def evaluate(
     weights: dict[str, dict[str, float]] | None = None,
     amend: bool = True,
     feedback: bool = False,
+    vote_all: bool = False,
 ) -> EvaluationTrace:
     """`amend=False` records that amendment was due without running it (golden set).
     `feedback=True` adds the learner's feedback, at the cost of one call to the feedback model;
-    experiments that only need scores leave it off."""
+    experiments that only need scores leave it off. `vote_all=True` takes the majority of
+    `votes` judge calls on every answer, not only borderline ones (Phase 7 validation)."""
     bands = bands or load_bands()
     weights = weights or load_weights()
     q = questions.get(question_id)
@@ -76,7 +78,7 @@ def evaluate(
     evaluation_id = uuid.uuid4().hex
     creative = q.task_type == TaskType.CREATIVE
 
-    judged = _grade(client, q, rubric, answer, evaluation_id, votes, creative, bands)
+    judged = _grade(client, q, rubric, answer, evaluation_id, votes, creative, bands, vote_all)
     result = _majority(judged) if len(judged) > 1 else judged[0]
     max_conf = max((p.confidence for p in result.confidences), default=0.0)
     low_confidence = (not creative) and max_conf < bands.amendment_confidence_threshold
@@ -98,7 +100,9 @@ def evaluate(
         call_ids += amendment.call_ids
         if amendment.rubric is not None:
             rubric = amendment.rubric
-            judged = _grade(client, q, rubric, answer, evaluation_id, votes, creative, bands)
+            judged = _grade(
+                client, q, rubric, answer, evaluation_id, votes, creative, bands, vote_all
+            )
             result = _majority(judged) if len(judged) > 1 else judged[0]
             call_ids += [j.call_id for j in judged]
             n_votes = len(judged)
@@ -174,9 +178,10 @@ def _grade(
     votes: int,
     creative: bool,
     bands: Bands,
+    vote_all: bool = False,
 ) -> list[_Judged]:
     judged = [_judge(client, q, rubric, answer, evaluation_id, fresh=False)]
-    if votes > 1 and _borderline(judged[0], creative, bands):
+    if votes > 1 and (vote_all or _borderline(judged[0], creative, bands)):
         # Extra votes bypass the cache read and don't overwrite the first answer's cache.
         judged += [
             _judge(client, q, rubric, answer, evaluation_id, fresh=True) for _ in range(votes - 1)

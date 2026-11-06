@@ -22,7 +22,16 @@ from eval_engine.schemas.common import TaskType
 from eval_engine.storage import RubricStore, UsageCounter, connect
 from eval_engine.storage.evaluation_store import EvaluationStore
 from eval_engine.storage.question_store import QuestionStore
-from eval_engine.validation import feedback_review, golden, pilot, verifier_set
+from eval_engine.validation import (
+    corpus,
+    feedback_review,
+    golden,
+    human_analysis,
+    human_set,
+    perturb,
+    pilot,
+    verifier_set,
+)
 
 app = typer.Typer(no_args_is_help=True, add_completion=False)
 
@@ -323,6 +332,71 @@ def feedback_review_cmd() -> None:
     sheet.write_text(feedback_review.review_sheet(rows, QuestionStore(conn)), encoding="utf-8")
     typer.echo(json.dumps(feedback_review.summary(rows)))
     typer.echo(f"Review sheet: {sheet}")
+
+
+validate_app = typer.Typer(no_args_is_help=True, help="Phase 7 full validation.")
+app.add_typer(validate_app, name="validate")
+
+
+@validate_app.command("corpus")
+def validate_corpus() -> None:
+    """The Phase 2 held-out sample through the full engine. Resumable from the cache."""
+    load_env()
+    conn = connect(db_path())
+    runs, stopped = corpus.run(build_client(load_config(), conn), conn)
+    text = corpus.report(runs)
+    (corpus.CORPUS_DIR / "REPORT.md").write_text(text + "\n", encoding="utf-8")
+    typer.echo(text)
+    if stopped:
+        typer.secho(f"Stopped ({stopped[:200]}). Rerun later to resume.", fg="yellow")
+        raise typer.Exit(2)
+
+
+@validate_app.command("perturb")
+def validate_perturb(
+    step: Annotated[str, typer.Argument(help="baseline | build | run | report, in that order")],
+) -> None:
+    """Synthetic perturbation. `build` uses the local model; `baseline` and `run` the judge.
+    Read items.json by hand between `build` and `run`; drops go in review.json."""
+    load_env()
+    conn = connect(db_path())
+    client = build_client(load_config(), conn)
+    stopped = None
+    if step == "baseline":
+        rows, stopped = perturb.baseline(client, conn)
+        typer.echo(f"{len(rows)} bases graded")
+    elif step == "build":
+        typer.echo(json.dumps(perturb.build(client, conn)))
+    elif step == "run":
+        rows, stopped = perturb.run(client, conn)
+        typer.echo(f"{len(rows)} perturbations graded")
+    elif step == "report":
+        rows = json.loads((perturb.PERTURB_DIR / "results.json").read_text(encoding="utf-8"))
+        text, _ = perturb.report(rows)
+        (perturb.PERTURB_DIR / "REPORT.md").write_text(text + "\n", encoding="utf-8")
+        typer.echo(text)
+    else:
+        raise typer.BadParameter("step must be baseline, build, run or report")
+    if stopped:
+        typer.secho(f"Stopped ({stopped[:200]}). Rerun later to resume.", fg="yellow")
+        raise typer.Exit(2)
+
+
+@validate_app.command("human")
+def validate_human() -> None:
+    """Pre-registered analysis of the human-graded set. Needs both graders' CSVs in
+    experiments/7_validation/human/grades/ (grader1.csv, grader2.csv)."""
+    load_env()
+    conn = connect(db_path())
+    expected = human_analysis.expected_items(conn)
+    g1 = human_analysis.load_grades(human_analysis.GRADES_DIR / "grader1.csv", expected)
+    g2 = human_analysis.load_grades(human_analysis.GRADES_DIR / "grader2.csv", expected)
+    key = json.loads((human_set.HUMAN_DIR / "key.json").read_text(encoding="utf-8"))
+    engine = human_analysis.engine_scores(build_client(load_config(), conn), conn)
+    criteria = human_analysis.criteria_by_hash(conn, engine)
+    text, _ = human_analysis.analyse(key, g1, g2, expected, engine, criteria)
+    (human_set.HUMAN_DIR / "REPORT.md").write_text(text + "\n", encoding="utf-8")
+    typer.echo(text)
 
 
 verifier_app = typer.Typer(no_args_is_help=True, help="Phase 5 verifier test set.")
