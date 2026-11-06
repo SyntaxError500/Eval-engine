@@ -373,6 +373,8 @@ The goal is to confirm the judge before anything is built on it.
 
 ### Phase 7 — Full validation (≈1.5 weeks)
 
+> **Run (2026-11-07); gate partly met.** Borrowed corpus PASS (leniency −0.035) and human set PASS (−0.010, QWK 0.82, Spearman 0.84). Perturbation attribution NOT MET: 19/37 (51%) by the rule fixed before any run. The judge is frozen at v3 and bands are kept. Report: [`docs/VALIDATION_REPORT.md`](VALIDATION_REPORT.md); decision: [`experiments/7_validation/DECISION.md`](../experiments/7_validation/DECISION.md).
+
 **Tasks**
 1. **Borrowed corpus, end-to-end**: rerun the Phase 2 sample through the *full* engine (merged path ID, evidence check, aggregation). Report leniency and correlation against Phase 2, so we know whether the pipeline added or lost accuracy.
 2. **Synthetic perturbation** (`validation/perturb.py`; generated locally or with Gemini):
@@ -384,9 +386,9 @@ The goal is to confirm the judge before anything is built on it.
 5. **Calibrate band cut-offs** against the human-graded set. Keep 4 bands unless adjacent bands are indistinguishable.
 
 **Exit gate**
-- [ ] `|leniency| ≤ 0.1` on both the borrowed corpus and the human set (or a documented reason why not).
-- [ ] Perturbation attribution accuracy ≥ 70% overall, reported per dimension.
-- [ ] `docs/VALIDATION_REPORT.md` reports correlation **and** leniency together, and states creative evaluation's weakness honestly (design §9).
+- [x] `|leniency| ≤ 0.1` on both the borrowed corpus and the human set (or a documented reason why not). **−0.035 and −0.010.**
+- [ ] Perturbation attribution accuracy ≥ 70% overall, reported per dimension. **Not met: 19/37 (51%), reported per dimension.**
+- [x] `docs/VALIDATION_REPORT.md` reports correlation **and** leniency together, and states creative evaluation's weakness honestly (design §9).
 
 ---
 

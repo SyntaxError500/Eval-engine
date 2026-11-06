@@ -10,9 +10,9 @@ graders. Under judge v3, the corpus passes on all 302 answers.
 | Gate item | Target | Result |
 |---|---|---|
 | Borrowed-corpus leniency | absolute value at most 0.1 | **PASS.** v2: −0.020 [−0.065, +0.026]; v3: −0.035 [−0.081, +0.013], both on all 302 |
-| Human-set leniency | absolute value at most 0.1 | Waiting for two graders (`human/`) |
+| Human-set leniency | absolute value at most 0.1 | **PASS: −0.010 [−0.096, +0.070]** (`human/REPORT.md`) |
 | Perturbation attribution | at least 70% overall, reported per dimension | **NOT MET.** v3, majority of 3: 19/37 (51%) [36–67%]; 25/37 (68%) if ties count (labelled secondary). See `DECISION.md` |
-| `docs/VALIDATION_REPORT.md` | — | After the decision and the human set |
+| `docs/VALIDATION_REPORT.md` | — | Written |
 
 ## 1. Borrowed corpus through the full engine (`corpus/`)
 
@@ -173,3 +173,20 @@ When the grades return:
    answers are uneven across questions, 12 of them on the hot-air balloon.
 3. **Then band calibration.** Given the 12% flip rate, the engine side is scored as the majority of
    3 judge runs.
+
+## 5. Human-set results (`human/REPORT.md`)
+
+These come from the pre-registered script, run unchanged.
+
+- **Agreement:** κ is 1.00 on requirements and on the overall label, and 0.95 on the
+  false-statement flag. The two graders' files differ in 1 of 332 marks. They graded independently
+  (confirmed), but agreement this high is unusual, so it is reported as a limit.
+- **Engine, majority of 3 under v3:**
+  - leniency −0.010 [−0.096, +0.070], **gate PASS**;
+  - Spearman 0.843;
+  - QWK 0.821 against each grader.
+- **Bands:** 109/121 dimension scores in the same band (90%); the cut-offs are kept.
+- **Disagreements:** the engine gave full marks to 5 answers both graders called partially correct.
+  Three are planted false facts it missed (the Prussian-led Confederation, three-quarters of the
+  rainfall, *Madame Bovary* 1860). The partial cell-cycle answer (A18) is credited with naming a
+  third phase that both graders say it doesn't name, though its overall label agrees.

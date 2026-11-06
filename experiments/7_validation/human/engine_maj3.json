@@ -1,0 +1,4236 @@
+{
+ "A01": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "a41e65b267e24dce8288b18bfa86a6d3",
+   "timestamp": "2026-11-06T22:48:00.318149Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "lowers its density compared to the cooler surrounding atmosphere",
+     "justification": "The answer states that heating the air lowers its density compared to the surrounding air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "This difference creates a net upward buoyant force",
+     "justification": "The answer references a net upward buoyant force causing the lift."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "cooler surrounding atmosphere",
+     "justification": "The answer mentions that the surrounding atmosphere/air is cooler."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "as described by Newton's third law",
+     "explanation": "Buoyancy is a consequence of Archimedes' principle and pressure differences in a fluid gravity field, not Newton's third law."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 0.8235294117647058,
+   "bands": {
+    "correctness": "Developing",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "43004f7499904fa68d821ee14b45da31",
+    "89300e14e83a450b9d1007ae929da070",
+    "80aeaeae3c6b4efa976b5111839ec1ee"
+   ]
+  }
+ },
+ "A02": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "a0133a743a3c4980ac594808b3ee4629",
+   "timestamp": "2026-11-06T22:48:04.399072Z",
+   "question_id": "669bce9c85fb",
+   "task_type": "explanatory",
+   "rubric_hash_original": "e9d42d74c84a403bf92c78beab91a83110da2020b9ad903e2d8b0cc1b6055a83",
+   "rubric_hash_used": "e9d42d74c84a403bf92c78beab91a83110da2020b9ad903e2d8b0cc1b6055a83",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "makes the country\u2019s exports more competitive relative to those from nations with stronger currencies",
+     "justification": "The answer clearly mentions how depreciation affects export competitiveness."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "its goods become cheaper for foreign buyers because the same amount of foreign money now buys more of the domestic money",
+     "justification": "The answer correctly states that depreciation lowers the foreign-currency price of exported goods."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "lower export prices stimulating higher foreign demand\u2014is the primary mechanism linking the exchange\u2011rate change to export growth",
+     "justification": "The answer provides a mechanism explaining how lower prices increase foreign demand and export volume."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "1bb95076381f4d4eb4538a25b6e7f9ff",
+    "7e65405729ab47be837a617cd693ba08",
+    "1180f36cdb8144c0b4b17b0789f56951"
+   ]
+  }
+ },
+ "A03": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "f49192c71c0d44f1a30e0847d7861b0d",
+   "timestamp": "2026-11-06T22:48:08.597053Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as the first cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the cell grows and produces the proteins and organelles it will need",
+     "justification": "The answer provides cell growth and protein/organelle production as the key event for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second valid cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "the entire genome is replicated",
+     "justification": "The answer provides genome replication as the key event for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "M phase",
+     "justification": "The answer names M phase as a third valid cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells",
+     "justification": "The answer provides cell division and chromatid separation as a key event for M phase."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1, S phase and M phase",
+     "justification": "The three phases listed (G1, S phase, and M phase) are all distinct."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "971a6af01858499c8801bd08aa557083",
+    "a53c87686a5c459799ec67a952c5ce90",
+    "4a26549133ee45979bfd627715d3864a"
+   ]
+  }
+ },
+ "A04": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "57faddee859f4a6aaa054dff8870eb5a",
+   "timestamp": "2026-11-06T22:48:12.201696Z",
+   "question_id": "a5cd0a155f64",
+   "task_type": "explanatory",
+   "rubric_hash_original": "9ad98646ae7e0460652227a0aeaa58fe28e779e909dbc9612289d03d2b45cd7a",
+   "rubric_hash_used": "9ad98646ae7e0460652227a0aeaa58fe28e779e909dbc9612289d03d2b45cd7a",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "shorter Transmission Time Interval (TTI), often called a mini\u2011slot",
+     "justification": "The answer correctly identifies shorter TTIs and mini-slots as the mechanism."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "5G can shrink the TTI to as little as 0.125\u202fms (or even less with flexible numerology) allowing the network to schedule and acknowledge packets much more quickly",
+     "justification": "It accurately describes how mini-slots/shorter TTIs work in comparison to 4G."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "This finer time granularity reduces the waiting time before a packet is sent and before acknowledgments are returned, directly cutting end\u2011to\u2011end latency",
+     "justification": "It explicitly links the mechanism to a reduction in latency through causal reasoning."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0,
+    "reasoning": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong",
+    "reasoning": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "bef03a03a44e46ebbfdcc95499bea81f",
+    "3a2a3991f0b3473d9fbd32df917a34d0",
+    "d9109e5c864d4af182496b76ff815452"
+   ]
+  }
+ },
+ "A05": {
+  "graded": 0.5,
+  "trace": {
+   "evaluation_id": "72855ebd172b4dd68c24c08860fce5dd",
+   "timestamp": "2026-11-06T22:48:16.271967Z",
+   "question_id": "3d813378c122",
+   "task_type": "factual",
+   "rubric_hash_original": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "rubric_hash_used": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.9
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "warm shower",
+     "justification": "The answer identifies the first routine involving a warm shower and skincare."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "warm shower, followed by applying skincare products, and ending with setting an alarm",
+     "justification": "The answer outlines the order of steps for the first routine."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "dimming the lights",
+     "justification": "The answer provides a second distinct bedtime routine involving lights and meditation."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "dimming the lights, doing a short meditation or breathing exercise, and then slipping into bed to listen to a calming podcast",
+     "justification": "The answer provides the ordered sequence of steps for the second routine."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer only provides two routines instead of three."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "There is no third routine provided, so its order of steps is missing."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 0.6666666666666666,
+    "correctness": 0.75
+   },
+   "overall_score": 0.7187499999999999,
+   "bands": {
+    "completeness": "Proficient",
+    "correctness": "Proficient"
+   },
+   "feedback": null,
+   "call_ids": [
+    "5e5adc3c1cf3426296183e25a24d0e09",
+    "6afa36cc8e7c43d4a0682637d6f72455",
+    "83a4a60b14f2486e9f8669343c269c93"
+   ]
+  }
+ },
+ "A06": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "d821317d026c4e9d821f13fbba95e664",
+   "timestamp": "2026-11-06T22:48:20.906885Z",
+   "question_id": "476bdbe5578d",
+   "task_type": "factual",
+   "rubric_hash_original": "d2631ebb9b60426b8f7a361744f02964939f79edeba4afd74911ebf37ef8c708",
+   "rubric_hash_used": "d2631ebb9b60426b8f7a361744f02964939f79edeba4afd74911ebf37ef8c708",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Agricultural runoff",
+     "justification": "The answer provides agricultural runoff as the first source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "excess nitrogen and phosphorus",
+     "justification": "It states that nitrogen and phosphorus are pollutants typically released by agricultural runoff."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "harmful algal blooms that deplete oxygen and kill fish",
+     "justification": "It describes algal blooms and oxygen depletion as the ecological impact."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Industrial discharge",
+     "justification": "Industrial discharge is provided as the second source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "heavy metals such as mercury",
+     "justification": "It names heavy metals (mercury) as the pollutant released by industrial discharge."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "bioaccumulation",
+     "justification": "Bioaccumulation is named as the ecological impact of the heavy metals."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "untreated sewage",
+     "justification": "Untreated sewage is provided as the third source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C8",
+     "met": true,
+     "evidence": "pathogens like E. coli",
+     "justification": "It names pathogens like E. coli as the pollutant associated with untreated sewage."
+    },
+    {
+     "criterion_id": "P1.C9",
+     "met": true,
+     "evidence": "reduce the health of aquatic ecosystems",
+     "justification": "It describes a reduction in the health of aquatic ecosystems as the ecological impact."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "10e7b5efdc6041faa4d61c2fca2134ea",
+    "a9bcdc370e204f51a7d2fb45b52bbd32",
+    "73c3ba58de7c41db8e288854b9dc7fae"
+   ]
+  }
+ },
+ "A07": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "e92cdae0dd0f4ffa96d7b5d2f3a559a2",
+   "timestamp": "2026-11-06T22:48:23.969445Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "lowers its density compared to the cooler surrounding atmosphere",
+     "justification": "The answer states that heating the air lowers its density compared to the surrounding air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "creates a net upward buoyant force as described by Archimedes' principle",
+     "justification": "The answer explicitly references a net upward buoyant force and Archimedes' principle."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "cooler surrounding atmosphere",
+     "justification": "The answer notes the contrast with the cooler surrounding atmosphere."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "59b18e3ca8fb4e96a3b1a33a74b88633",
+    "371fd715d0674f90a2693e53cfa9bf21",
+    "132077d145d849a6b1eb1d3af723d176"
+   ]
+  }
+ },
+ "A08": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "a788dc72390b42ae9ed9b53fb66c8560",
+   "timestamp": "2026-11-06T22:48:58.456890Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "carbohydrates, proteins and fats",
+     "justification": "The answer correctly lists the three main macronutrients: carbohydrates, proteins, and fats."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "Carbohydrates are mainly used to build bones.",
+     "justification": "[evidence listed as a factual error] The answer states a function for the first macronutrient named (carbohydrates), even though it is biologically incorrect."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "Proteins are the body's fastest source of energy.",
+     "justification": "[evidence listed as a factual error] The answer states a function for the second macronutrient named (proteins)."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "Fats carry oxygen around in the blood.",
+     "justification": "[evidence listed as a factual error] The answer states a function for the third macronutrient named (fats)."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Carbohydrates are mainly used to build bones.",
+     "explanation": "Carbohydrates do not build bones; calcium and other minerals do."
+    },
+    {
+     "quote": "Proteins are the body's fastest source of energy.",
+     "explanation": "Carbohydrates are the body's fastest source of energy, not proteins."
+    },
+    {
+     "quote": "Fats carry oxygen around in the blood.",
+     "explanation": "Hemoglobin in red blood cells carries oxygen, not fats."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [
+    "P1.C2",
+    "P1.C3",
+    "P1.C4"
+   ],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.0
+   },
+   "overall_score": 0.37499999999999994,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "77874ef217d7485f98531762a89e4a95",
+    "392bcef818bd47558b1681fd4b98420b",
+    "87671f55f002420daef02d13d03bad79"
+   ]
+  }
+ },
+ "A09": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "bdd5cdafe57e4af292afcde9fa598c22",
+   "timestamp": "2026-11-06T22:49:04.011804Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "growth gap",
+     "justification": "The answer identifies the G1 phase using the descriptive term growth gap."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "gets bigger and builds up supplies",
+     "justification": "It provides cell growth as the key event for the first phase."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "synthesis stage",
+     "justification": "The answer names the S phase as the synthesis stage."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "makes a full copy of its genetic material",
+     "justification": "It correctly identifies DNA replication for the synthesis stage."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "division stage",
+     "justification": "The answer names the M phase as the division stage."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "copies are split up and the cell pinches into two new cells",
+     "justification": "It provides cell division/cytokinesis as the event for the division stage."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "growth gap... synthesis stage... division stage",
+     "justification": "The three named phases (G1, S, M) are all distinct."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "03a895f1b71c4aa89a3ab5d94304d0a4",
+    "d6ea210e67e8445888fd36d13046f4b5",
+    "119b74f77efa4bc194266d1b252abb9f"
+   ]
+  }
+ },
+ "A10": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "0d123d8a2ba64ff6a9f5e99b47f0d796",
+   "timestamp": "2026-11-06T22:49:07.604705Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Wet wind from the sea hits the mountains and has to climb over them. As it climbs it gets colder and can't hold its water, so it dumps it as rain on the side facing the wind. When the air comes down the far side it heats up again",
+     "justification": "The answer correctly describes orographic lift, air rising and cooling with precipitation on the windward side, and descending air on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "When the air comes down the far side it heats up again and is now very dry, so it soaks up moisture instead of dropping any.",
+     "justification": "It explains that the descending air warms up and its moisture-holding capacity increases (or relative humidity drops), leading to reduced precipitation."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Death Valley, just east of the Sierra Nevada, is one of the driest places in North America.",
+     "justification": "The answer cites a real-world rain-shadow example to illustrate the process."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "57257199eacb423bb58c05db574ff6ce",
+    "b3fdf254e8634e4486f87c7511aa187b",
+    "3989c6ce3f4c450a99a6e8f10c9fc458"
+   ]
+  }
+ },
+ "A11": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "ffbfcd8b99a4420dba14ca6be45d08c6",
+   "timestamp": "2026-11-06T22:49:11.507255Z",
+   "question_id": "83e77d761714",
+   "task_type": "factual",
+   "rubric_hash_original": "d5632f6961afb058632668eedf7698b15970f5d8e0b969d836dc259c3c64e9d4",
+   "rubric_hash_used": "d5632f6961afb058632668eedf7698b15970f5d8e0b969d836dc259c3c64e9d4",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "restoration of legitmate monarchies",
+     "justification": "The answer names the restoration of monarchies as an outcome."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "return of the Bourbon dynasty back to the French throne under Louis XVIII",
+     "justification": "The answer provides the return of the Bourbon dynasty under Louis XVIII as an example for the first outcome."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "creation of a balance of power in Europe",
+     "justification": "The answer names the creation of a balance of power as a second distinct outcome."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "establisment of the German Confederation",
+     "justification": "The answer gives the establishment of the German Confederation as an example illustrating the balance of power."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "territorial adjustments designed to contain France",
+     "justification": "The answer names territorial adjustments to contain France as a third distinct outcome."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "annexation of the Rhineland to Prussia",
+     "justification": "The answer provides the annexation of the Rhineland to Prussia as an example for the territorial adjustments."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "a92bc49b372f4711b0b6c5fd20273c8e",
+    "fa8fd0b9cc054937a6fe39790b662140",
+    "7386a8ced0fb48a9b4295d1fb4c8e1b0"
+   ]
+  }
+ },
+ "A12": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "862143885cbc43e384d375a0049b679f",
+   "timestamp": "2026-11-06T22:49:15.272152Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "carbohydrates, proteins, and fats",
+     "justification": "The answer lists three distinct macronutrients: carbohydrates, proteins, and fats."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer attributes the function of providing energy to proteins instead of carbohydrates."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "supply the building blocks\u2014amino acids\u2014required for the growth, repair, and maintenance of tissues",
+     "justification": "The answer provides a correct function for proteins."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "serve as a dense energy reserve, help absorb fat\u2011soluble vitamins, and are essential for constructing cell membranes",
+     "justification": "The answer provides correct functions for fats."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Proteins provide the primary source of energy for cells, especially the brain and muscles.",
+     "explanation": "Carbohydrates, not proteins, are the primary source of energy for the body and brain."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.5
+   },
+   "overall_score": 0.6875,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Developing"
+   },
+   "feedback": null,
+   "call_ids": [
+    "1831f2808e2c413c91d0e4e461e93d33",
+    "eacb4f3cb963498b91e1244508038117",
+    "ac29746095324f8fb015271d29a1c20a"
+   ]
+  }
+ },
+ "A13": {
+  "graded": 0.5,
+  "trace": {
+   "evaluation_id": "c3cb01a98bb443f0af0e5ce9a2580887",
+   "timestamp": "2026-11-06T22:49:18.915804Z",
+   "question_id": "b0affe8aae1b",
+   "task_type": "factual",
+   "rubric_hash_original": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "rubric_hash_used": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Realism",
+     "justification": "The answer names Realism as the first literary movement."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Gustave Flaubert's Madame Bovary",
+     "justification": "The answer provides Madame Bovary by Gustave Flaubert for Realism."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "Only two movements are mentioned in the answer."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "Since only two movements are named, there is no second movement to be evaluated here (Naturalism is the second movement mentioned)."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": false,
+     "evidence": "",
+     "justification": "A third movement is not named."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "A third movement and work are not provided."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 0.3333333333333333,
+    "correctness": 0.5
+   },
+   "overall_score": 0.43749999999999994,
+   "bands": {
+    "completeness": "Not yet",
+    "correctness": "Developing"
+   },
+   "feedback": null,
+   "call_ids": [
+    "00f51559346843da8f6e6e66e117d2d9",
+    "8f91fadeb0b04f5c8b465526ef09703c",
+    "bfaa5ee7f9f54a6f88cb2af1d5f8228e"
+   ]
+  }
+ },
+ "A14": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "6127ca965af14585bc7b887505b8fe7a",
+   "timestamp": "2026-11-06T22:49:22.740202Z",
+   "question_id": "dae71517a495",
+   "task_type": "factual",
+   "rubric_hash_original": "8fd088d4ba77f4618ae07850808aad4c187a4c2414a0506c2ec637c0286d0cff",
+   "rubric_hash_used": "8fd088d4ba77f4618ae07850808aad4c187a4c2414a0506c2ec637c0286d0cff",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "divergent, convergent, and transform",
+     "justification": "The answer names all three required types of plate boundaries."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "mid-ocean ridges",
+     "justification": "The answer identifies mid-ocean ridges as a feature of divergent boundaries."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "subduction zones",
+     "justification": "The answer identifies subduction zones as a feature of convergent boundaries."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "strike-slip motion",
+     "justification": "The answer identifies strike-slip motion and faults for transform boundaries."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "new continental crust is generated by seafloor spreading",
+     "explanation": "Seafloor spreading generates new oceanic crust, not continental crust."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.75
+   },
+   "overall_score": 0.84375,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Proficient"
+   },
+   "feedback": null,
+   "call_ids": [
+    "8ba439f5548240368e6e3c9dee353d8a",
+    "2362a4ade3c4447cb1c1cc8c77e72a88",
+    "5274189c82034542bdb989924f6e04fb"
+   ]
+  }
+ },
+ "A15": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "bafd6928bed0465a99d882f4609bd791",
+   "timestamp": "2026-11-06T22:49:26.220849Z",
+   "question_id": "886e0fcd1e3d",
+   "task_type": "factual",
+   "rubric_hash_original": "0d79ff46984500901bb697b537278947c04e296a9c6156e9370ac0b7b9ee0e1c",
+   "rubric_hash_used": "0d79ff46984500901bb697b537278947c04e296a9c6156e9370ac0b7b9ee0e1c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "frictional, structural, and cyclical",
+     "justification": "The answer successfully names three distinct types of unemployment."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "a recent college graduate who is searching for their first position and looking for a job",
+     "justification": "The answer provides a valid and correct example for frictional unemployment."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "a factory worker displaced by automation who lacks training for the new technology and can't get a new job",
+     "justification": "The answer provides a valid and correct example for structural unemployment."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "layoffs in the hospitality sector during an economic recession",
+     "justification": "The answer provides a valid and correct example for cyclical unemployment."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "85d58608990147ec9b4442605a40afd3",
+    "fd901d44515049bf980f30e581ee2e1d",
+    "dfe52bb7d46a47498890e233e02f6f6d"
+   ]
+  }
+ },
+ "A16": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "9c3a071430e6456e822da3a7c3cd3c54",
+   "timestamp": "2026-11-06T22:50:01.028066Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "moist air blown against a mountain range is forced upward, cools as it rises, and its water vapour condenses and falls as rain or snow on the windward slopes. After crossing the crest, the now-drier air descends the leeward side",
+     "justification": "The answer clearly states orographic lift, air rising, cooling, condensing on the windward side, and descending air on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "descends the leeward side and warms by compression, which lowers its relative humidity so clouds evaporate and little precipitation falls",
+     "justification": "It explains that descending air warms, its relative humidity drops, and precipitation decreases."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "the western Cascades receive over 2,000 mm of rain a year while parts of eastern Washington get under 250 mm.",
+     "justification": "It provides a real-world rain-shadow example by citing the Cascades."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "05ff42e317814035841a960ea4107277",
+    "13b55bb906a641b9bf5db9576235165b",
+    "cb68347e3df048fc84e697ac5997c9d0"
+   ]
+  }
+ },
+ "A17": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "b7f831e4681a452b858d2d26cc07e98d",
+   "timestamp": "2026-11-06T22:50:06.182812Z",
+   "question_id": "83e77d761714",
+   "task_type": "factual",
+   "rubric_hash_original": "d5632f6961afb058632668eedf7698b15970f5d8e0b969d836dc259c3c64e9d4",
+   "rubric_hash_used": "d5632f6961afb058632668eedf7698b15970f5d8e0b969d836dc259c3c64e9d4",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "the restoration of legitimate monarchies",
+     "justification": "The answer successfully names the restoration of monarchies as a first outcome."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the return of the Bourbon dynasty to the French throne under Louis XVIII",
+     "justification": "The answer provides the Bourbon restoration in France as a specific example for the first outcome."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "the creation of a balance of power in Europe",
+     "justification": "The answer names a second distinct outcome, the balance of power."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "the establishment of the German Confederation",
+     "justification": "The answer provides the German Confederation as an example illustrating the balance of power outcome."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "territorial adjustments designed to contain France",
+     "justification": "The answer names a third distinct outcome concerning territorial adjustments."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "the annexation of the Rhineland to Prussia",
+     "justification": "The answer gives the annexation of the Rhineland to Prussia as a specific example for the third outcome."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "84c662892e67431696407375019b38d9",
+    "881eb7756faf4e8a88d9c82d8ca8b2ab",
+    "308086337528479aa468df0f29c6e49a"
+   ]
+  }
+ },
+ "A18": {
+  "graded": 0.5,
+  "trace": {
+   "evaluation_id": "1755dae540d848ffa31434b99d4fed8b",
+   "timestamp": "2026-11-06T22:50:11.077684Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as the first phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the cell grows and makes proteins",
+     "justification": "The answer provides cell growth and protein production as a key event for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second valid cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "the DNA is copied",
+     "justification": "The answer correctly identifies DNA replication as an event in S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "the cell gets ready to divide",
+     "justification": "While not naming G2 explicitly, it refers to the phase after S phase (G2) where the cell prepares to divide."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "Since no third phase was named, this criterion is not met."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": false,
+     "evidence": "",
+     "justification": "Only two phases (G1 and S phase) are explicitly named."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.8571428571428571,
+    "completeness": 0.0
+   },
+   "overall_score": 0.5357142857142857,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "d7cc08c5a7234963a51b93b2a789d603",
+    "39e58981ef1f4085ba024ffc5364451b",
+    "3bc091488db943f2950ef35d380f91b4"
+   ]
+  }
+ },
+ "A19": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "41b40864085942d2a5092b98147ee054",
+   "timestamp": "2026-11-06T22:50:15.299947Z",
+   "question_id": "647b3337f666",
+   "task_type": "factual",
+   "rubric_hash_original": "2ce35366d1991f44ac975865a4aa0fa29cc263092e28ef4edfdd7e3d68b8a940",
+   "rubric_hash_used": "2ce35366d1991f44ac975865a4aa0fa29cc263092e28ef4edfdd7e3d68b8a940",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Pumped hydro storage... Compressed\u2011air energy storage... lithium\u2011ion battery systems",
+     "justification": "The answer lists pumped hydro storage, compressed-air energy storage, and lithium-ion battery systems."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "gravitational potential energy",
+     "justification": "It correctly identifies gravitational potential energy as the principle for pumped hydro."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Bath County Pumped Storage Station",
+     "justification": "It provides the Bath County Pumped Storage Station as the real-world example."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "reversible redox reactions",
+     "justification": "It correctly identifies electrochemical reversible redox reactions for lithium-ion batteries (listed as the third technology)."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "Hornsdale Power Reserve (the Tesla big battery) in South Australia",
+     "justification": "It cites the Hornsdale Power Reserve / Tesla big battery as the installation for lithium-ion batteries."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "storing energy as pressurized air in underground caverns",
+     "justification": "It states the principle of compressed-air energy storage as storing energy as pressurized air in underground caverns."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "McIntosh Power Plant",
+     "justification": "It references the McIntosh Power Plant as the real-world example for compressed-air energy storage."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "e0944853f7e14450986808171997e7a8",
+    "90a75a08d6474891b669e8843cde2199",
+    "98dcd605f5ee4b83a96abea2b4176bbb"
+   ]
+  }
+ },
+ "A20": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "03ca2f504ca24713887e3f592b29720b",
+   "timestamp": "2026-11-06T23:02:17.935544Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "carbohydrates, proteins and fats",
+     "justification": "The answer successfully lists carbohydrates, proteins, and fats as the three main macronutrients."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Carbohydrates are the body's main source of quick energy",
+     "justification": "It states a correct primary function for carbohydrates."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Proteins supply amino acids used to build and repair tissues",
+     "justification": "It states a correct primary function for proteins."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Fats store energy long term",
+     "justification": "It states a correct primary function for fats."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "fcb4f856158a4390bad2dc26c207711d",
+    "0c5b533a92a94904b926ac2f5c99ddc0",
+    "1153e3092b2542808612d1f1846a758e"
+   ]
+  }
+ },
+ "A21": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "5eac348550db4126aff0e119c13ab45b",
+   "timestamp": "2026-11-06T23:02:21.604598Z",
+   "question_id": "b0affe8aae1b",
+   "task_type": "factual",
+   "rubric_hash_original": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "rubric_hash_used": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Romanticism",
+     "justification": "The answer names Romanticism as the first 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Mary Shelley's novel Frankenstein",
+     "justification": "The answer provides Frankenstein by Mary Shelley as a characteristic work for Romanticism."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Realism",
+     "justification": "The answer names Realism as the second 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Gustave Flaubert's Madame Bovary",
+     "justification": "The answer provides Madame Bovary by Gustave Flaubert as a characteristic work for Realism."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "Naturalism",
+     "justification": "The answer names Naturalism as the third 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "Emile Zola's Germinal",
+     "justification": "The answer provides Germinal by Emile Zola as a characteristic work for Naturalism."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "a11397686e1a4727a0e504e2baabea92",
+    "a0d394620af64a11b5b1d9bad193c033",
+    "e10a7fb3ff424b67af32800553138817"
+   ]
+  }
+ },
+ "A22": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "212be5ccca1f450c82c759b042e8e1df",
+   "timestamp": "2026-11-06T23:02:25.518996Z",
+   "question_id": "3d813378c122",
+   "task_type": "factual",
+   "rubric_hash_original": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "rubric_hash_used": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "brushing their teeth, then changing into pajamas, and finally reading a book",
+     "justification": "The answer names a first distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "brushing their teeth, then changing into pajamas, and finally reading a book",
+     "justification": "The answer provides an ordered sequence of steps for the first routine."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "warm shower, followed by applying skincare products, and ending with setting an alarm",
+     "justification": "The answer names a second distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "warm shower, followed by applying skincare products, and ending with setting an alarm",
+     "justification": "The answer provides an ordered sequence of steps for the second routine."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "dimming the lights, doing a short meditation or breathing exercise, and then slipping into bed to listen to a calming podcast",
+     "justification": "The answer names a third distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "dimming the lights, doing a short meditation or breathing exercise, and then slipping into bed to listen to a calming podcast",
+     "justification": "The answer provides an ordered sequence of steps for the third routine."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "setting an alarm on their toaster",
+     "explanation": "People typically set alarms on phones, clocks, or other devices rather than toasters."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 0.75
+   },
+   "overall_score": 0.84375,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Proficient"
+   },
+   "feedback": null,
+   "call_ids": [
+    "94ae104ee0654061b91778c0726cb63f",
+    "5cb2022e9f8b4fa2b69cb91b9f595154",
+    "bb61a1d8c7c846039a5e4cdda4caa100"
+   ]
+  }
+ },
+ "A23": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "edf82321f6cf4f1e913f48e1fe5f36dc",
+   "timestamp": "2026-11-06T23:02:28.997798Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "When moist air is forced up a mountain range, it undergoes orographic lift: the ascent causes the air to expand and cool, reaching its dew point and releasing precipitation on the windward side. After shedding much of its moisture, the air then descends on the leeward side",
+     "justification": "The answer clearly states orographic lift, rising and cooling air on the windward side, and descending air on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "where compression warms it and lowers its relative humidity, inhibiting further cloud formation and rain",
+     "justification": "The answer explains that descending air warms and its relative humidity drops, leading to reduced precipitation."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "A classic example is the dry interior of Washington State east of the Cascade Range",
+     "justification": "The answer cites a real-world rain-shadow example by naming the Cascade Range."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "2dcc1109d77f4e5eb501348c2c06e8fb",
+    "c5c456e3ee204ba488aa13f728c90850",
+    "dbd00a92d5e346089a841371984787e3"
+   ]
+  }
+ },
+ "A24": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "1062822e1b7a40a08a87d62900ad7ccc",
+   "timestamp": "2026-11-06T23:02:32.594666Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "the hot air becomes less dense than the cooler air that is around the balloon",
+     "justification": "The answer clearly states that heating the air makes it less dense than the surrounding cooler air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the surrounding air pushes up on it with a buoyant force, and that buoyant force is what lifts the balloon up",
+     "justification": "The answer references a buoyant force from the surrounding air causing the lift."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "than the cooler air that is around the balloon",
+     "justification": "The answer explicitly notes the contrast with the cooler surrounding air."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "06adee50fd2a4cc09ac152f197986459",
+    "eb76e158580e47b4a1daf8a6a067326e",
+    "7eaeb29d743c47a984e5c9baafb372be"
+   ]
+  }
+ },
+ "A25": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "93168688264e48b3935b7e7a8ec2b6e8",
+   "timestamp": "2026-11-06T23:02:36.230491Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer attributes the dryness to mountains blocking sunlight rather than orographic lift and descending air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention descending air warming or dropping in relative humidity."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The fact provided is factually incorrect and not an example of a rain shadow."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "The leeward side is dry because the mountains block the sunlight, so less water evaporates there and fewer clouds can form.",
+     "explanation": "Rain shadows are caused by atmospheric moisture loss over mountains and descending warm dry air, not by mountains blocking sunlight."
+    },
+    {
+     "quote": "The Himalayas are dry on their southern side for this reason.",
+     "explanation": "The southern side of the Himalayas receives heavy monsoon precipitation; the northern side (Tibetan Plateau) is the rain shadow."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "abf7705defdc4f6f81513c7c88465946",
+    "1cd15f9f1f1c4047b69111961a004cf6",
+    "e79c4494d3ed4319a74c8c5430fc1277"
+   ]
+  }
+ },
+ "A26": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "40132bb56a4244fdb71c109a0923fccf",
+   "timestamp": "2026-11-06T23:02:39.525969Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": false,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer discusses airplane wings, not the density of heated air inside a hot-air balloon."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention buoyant force or Archimedes' principle relating to a hot-air balloon."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention surrounding cooler air or temperature differences relevant to a hot-air balloon."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "An airplane flies because its wings are shaped so that air moves faster over the top than the bottom.",
+     "explanation": "The question asked about hot-air balloons, not airplanes."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "b2e75817c0cd40619719f20820c10b2d",
+    "118c1ba72e66496b9e40640e991f2354",
+    "c932c7a8f2b5455ea714f6453717c029"
+   ]
+  }
+ },
+ "A27": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "6ef3377f4eab48868b7187eee7d85b1d",
+   "timestamp": "2026-11-06T23:03:16.132428Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "the hot air is less dense than the cooler air surrounding the balloon.",
+     "justification": "The answer clearly states that heating the air makes it less dense than the surrounding air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the surrounding air pushes up on it with a buoyant force.",
+     "justification": "The answer explains that the displacement of heavier outside air results in an upward buoyant force lifting the balloon."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "cooler air surrounding the balloon.",
+     "justification": "The answer explicitly notes the contrast with the cooler surrounding air."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "d489c3734b0040c98f923032ce6b42c4",
+    "8076783ceb054d03848be5a4e582d428",
+    "1193b51f47b644db8a14bd6965859b4d"
+   ]
+  }
+ },
+ "A28": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "ca84be205d6542408996eb28b3299dd2",
+   "timestamp": "2026-11-06T23:03:20.642671Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as a phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the cell grows and it produces the proteins and organelles it will need",
+     "justification": "The answer provides a correct key event for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "the entire genome is replicated so each chromosome ends up as two sister chromatids",
+     "justification": "The answer provides a correct key event for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "M phase",
+     "justification": "The answer names M phase as a third phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells",
+     "justification": "The answer provides a correct key event for M phase."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1, S phase, and M phase",
+     "justification": "The three phases listed are distinct with no repeats."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "1c71e5c09b844482aa4231ad62535f95",
+    "d59c93971fc549b584c63d6e740afb87",
+    "b6bd8b65589145f4b371931d49e285ff"
+   ]
+  }
+ },
+ "A29": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "86800c879e144f52b09a98ebdafd1338",
+   "timestamp": "2026-11-06T23:03:24.681824Z",
+   "question_id": "dae71517a495",
+   "task_type": "factual",
+   "rubric_hash_original": "8fd088d4ba77f4618ae07850808aad4c187a4c2414a0506c2ec637c0286d0cff",
+   "rubric_hash_used": "8fd088d4ba77f4618ae07850808aad4c187a4c2414a0506c2ec637c0286d0cff",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "divergent, convergent, and transform",
+     "justification": "The answer names all three primary types of plate boundaries."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "mid-ocean ridges",
+     "justification": "The answer associates mid-ocean ridges and seafloor spreading with divergent boundaries."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "subduction zones",
+     "justification": "The answer associates subduction zones and mountain building with convergent boundaries."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "strike-slip motion",
+     "justification": "The answer associates strike-slip motion and earthquakes along the San Andreas fault with transform boundaries."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "1cb2f530e9734508a4b4e95f8a488399",
+    "a86da74158d84f9bbe903b5e3289b198",
+    "f702f7913a834884aa70b577d05831ea"
+   ]
+  }
+ },
+ "A30": {
+  "graded": 0.5,
+  "trace": {
+   "evaluation_id": "7c5cea5e4df34e3eb3e8fa918e82f87e",
+   "timestamp": "2026-11-06T23:03:28.172728Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Rain shadows are caused by orographic lift. Moist air is pushed up the windward side of the mountains, where it cools and drops most of its moisture as rain.",
+     "justification": "The answer mentions orographic lift, air rising, cooling, and dropping moisture on the windward side, as well as the windward/leeward context."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not describe the descending air warming and its humidity dropping on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not give a supporting quantitative lapse-rate fact or name a real-world rain-shadow example."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.35294117647058826,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "fe263426741846c9aff699d3114c6bc1",
+    "24d0d8a08aa34b26bba2ab19abba7ec8",
+    "1fed55bc519b4c59bcaf68f67f716dc9"
+   ]
+  }
+ },
+ "A31": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "ef9b68ecf0ce40c4b1d00495ffd3ef54",
+   "timestamp": "2026-11-06T23:03:32.192115Z",
+   "question_id": "3d813378c122",
+   "task_type": "factual",
+   "rubric_hash_original": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "rubric_hash_used": "138ab32e2d9e594a02d9b11130976738016751e948ddca3f0c1655a0ff714dc3",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "brushing their teeth then they change into pajamas and finally they read a book",
+     "justification": "The answer names the first bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "brushing their teeth then they change into pajamas and finally they read a book",
+     "justification": "The answer states an ordered sequence for the first routine."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "warm shower then after the shower they apply skincare products and then they end it with setting an alarm",
+     "justification": "The answer names a second distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "warm shower then after the shower they apply skincare products and then they end it with setting an alarm",
+     "justification": "The answer states an ordered sequence for the second routine."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "dimming the lights then doing a short meditation or breathing exercise and then slipping into bed to listen to a calming podcast",
+     "justification": "The answer names a third distinct bedtime routine."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "dimming the lights then doing a short meditation or breathing exercise and then slipping into bed to listen to a calming podcast",
+     "justification": "The answer states an ordered sequence for the third routine."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "ab0029fd33f64a03ab0fb053d3abdcb5",
+    "904ee674f8bf4a6284075d6c0ebb405b",
+    "8464b3a9c790448cb14b984e68bc9766"
+   ]
+  }
+ },
+ "A32": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "698a9cd1e76e4663a018ab8e902ef943",
+   "timestamp": "2026-11-06T23:03:35.288532Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "the hot air is less dense than the cooler air surrounding the balloon",
+     "justification": "The answer explicitly states that the heated air inside is less dense than the surrounding cooler air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the surrounding air pushes up on it with a buoyant force. When that upward force exceeds the weight of the balloon, basket and hot air, the balloon rises",
+     "justification": "The answer links the lower density and surrounding air to a buoyant upward force that lifts the balloon."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "than the cooler air surrounding the balloon",
+     "justification": "The answer notes the contrast with the cooler surrounding air."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "c99a4de89d0a49ebb763ea1ee6d5b1ad",
+    "88285b0036eb446a84416cba3ba37918",
+    "2bf926af17d64569844df4b085abb85b"
+   ]
+  }
+ },
+ "A33": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "e766c1ad87ca4e5db843f28f3a5b556e",
+   "timestamp": "2026-11-06T23:03:38.334616Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer incorrectly states that heating air makes it denser and heavier."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not reference buoyancy or Archimedes' principle, instead mentioning expanding gas pushing down on the basket."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention that the surrounding air is cooler or contrast it with the inside air."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Heating air makes it denser and heavier",
+     "explanation": "Heating air actually causes it to expand and become less dense, not denser and heavier."
+    },
+    {
+     "quote": "Heat itself is a gas lighter than air",
+     "explanation": "Heat is a form of energy, not a gas."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "cc4e9623d0894476a4e6734d55620eab",
+    "1431164695564b7faf1dda3676a1495f",
+    "d8169cdc2e36481982dce814322062aa"
+   ]
+  }
+ },
+ "A34": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "aa1e960bccce431ea0c969bc200a82b0",
+   "timestamp": "2026-11-06T23:03:43.346155Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as a phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The event given for G1 (copies DNA) is incorrect; DNA replication occurs in S phase."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "The event given for S phase (splits into two daughter cells) is incorrect; cytokinesis or M phase does this."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "M phase",
+     "justification": "The answer names M phase as a third phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "The event given for M phase (rests and grows larger) is incorrect; G1/G2 phases involve growth or rest."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1 ... S phase ... M phase",
+     "justification": "The three named phases are all distinct."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "In G1 the cell copies all of its DNA.",
+     "explanation": "DNA replication occurs during S phase, not G1."
+    },
+    {
+     "quote": "In S phase the cell splits into two daughter cells.",
+     "explanation": "Cell division occurs in the M phase, not S phase."
+    },
+    {
+     "quote": "In M phase the cell rests and grows larger before the next round.",
+     "explanation": "Resting and growing larger occur in interphase (like G1/G2), whereas M phase involves mitosis/cytokinesis."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.42857142857142855,
+    "completeness": 1.0
+   },
+   "overall_score": 0.6428571428571428,
+   "bands": {
+    "correctness": "Developing",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "fafde277cff642178466cc1a90c2e15b",
+    "4fed22e741f74c1090ae62416656995c",
+    "f975887e77bf4476baa3fdfe948febe3"
+   ]
+  }
+ },
+ "A35": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "990ac2cd408643dd97f2984d733e67f8",
+   "timestamp": "2026-11-06T23:04:17.990199Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.1
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": false,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer discusses photosynthesis instead of the cell cycle."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "No cell cycle phase was named."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "No second cell cycle phase was named."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "No second event was provided."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": false,
+     "evidence": "",
+     "justification": "No third cell cycle phase was named."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "No third event was provided."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": false,
+     "evidence": "",
+     "justification": "Three distinct phases were not listed."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Photosynthesis has two stages. In the light-dependent reactions, light energy splits water and makes ATP. In the Calvin cycle, carbon dioxide is fixed into sugar.",
+     "explanation": "The entire response describes photosynthesis instead of the cell cycle."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.0,
+   "bands": {
+    "correctness": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "2101b2d51bdb4acbaaef9716ff94cc00",
+    "aa60efd97319489cbcad45b3f5825e2d",
+    "d08ec1d6d4844f11b831ac90cde45612"
+   ]
+  }
+ },
+ "A36": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "35dac9c444d14670809266eddfa7613a",
+   "timestamp": "2026-11-06T23:04:23.260081Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as a cell-cycle phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the cell grows and synthesizes proteins needed for DNA replication",
+     "justification": "The answer provides a correct key event for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second distinct phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "each chromosome is duplicated so that sister chromatids are formed",
+     "justification": "The answer provides a correct key event for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "G2",
+     "justification": "The answer names G2 as a third distinct phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": false,
+     "evidence": "",
+     "justification": "The key event provided for G2 (that the cell divides its chromosomes) is scientifically incorrect, as chromosome division happens in M phase, not G2."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The three named phases (G1, S phase, and G2) are all distinct with no repeats."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "G2 is when the cell actually divides its chromosomes, not M phase.",
+     "explanation": "Cells actually divide their chromosomes during M phase (mitosis/meiosis), while G2 is a growth and preparation phase before M phase."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.7142857142857143,
+    "completeness": 1.0
+   },
+   "overall_score": 0.8214285714285714,
+   "bands": {
+    "correctness": "Proficient",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "657c54d3aab04e549f8a7300247511e8",
+    "fea9270289fb44549e31bec144e809fb",
+    "3b273bdffd294f71bfae0ddfee3e93a4"
+   ]
+  }
+ },
+ "A37": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "01d84178cb864a70a8dce3e06ebbc311",
+   "timestamp": "2026-11-06T23:04:27.033528Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "When moist air is forced up a mountain range it goes through orographic lift and the ascent makes the air expand and cool and it reaches its dew point and then it releases precipitation on the windward side, and after shedding much of its moisture the air then goes down and descends on the leeward side",
+     "justification": "The answer correctly states the mechanism of orographic lift causing rising, cooling, and condensation on the windward side followed by descending air on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "descends on the leeward side where compression warms it and lowers its relative humidity and this inhibits further cloud formation and rain",
+     "justification": "The answer describes how descending air warms (compression), lowers relative humidity, and inhibits precipitation on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "A classic example is the dry interior of Washington State east of the Cascade Range, which receives only about one\u2011quarter of the rainfall that falls on the western slopes.",
+     "justification": "The answer cites a well-known real-world rain-shadow example (the leeward side of the Cascades)."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "fbadf06f16b44d399a873f008979cae7",
+    "c44945c08ce249988e03df31f771b32f",
+    "6b681cff9b9341d8bd6c990c8d4c22e9"
+   ]
+  }
+ },
+ "A38": {
+  "graded": 0.5,
+  "trace": {
+   "evaluation_id": "04f23ce3f45147e09dacfacf8957d581",
+   "timestamp": "2026-11-06T23:04:31.441531Z",
+   "question_id": "476bdbe5578d",
+   "task_type": "factual",
+   "rubric_hash_original": "d2631ebb9b60426b8f7a361744f02964939f79edeba4afd74911ebf37ef8c708",
+   "rubric_hash_used": "d2631ebb9b60426b8f7a361744f02964939f79edeba4afd74911ebf37ef8c708",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Industrial discharge",
+     "justification": "The answer provides industrial discharge as the first source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "heavy metals such as mercury",
+     "justification": "It names heavy metals/mercury as the pollutant released by industrial discharge."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "bioaccumulation in aquatic organisms",
+     "justification": "It correctly identifies bioaccumulation as an ecological impact of that pollutant."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Untreated sewage",
+     "justification": "The answer provides untreated sewage as the second listed source of water pollution."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "pathogens like E. coli",
+     "justification": "It states pathogens/E. coli as the pollutant released by the second source."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "reduce the health of aquatic ecosystems",
+     "justification": "It describes an ecological impact caused by pathogens from sewage."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer only provides two sources instead of the required three."
+    },
+    {
+     "criterion_id": "P1.C8",
+     "met": false,
+     "evidence": "",
+     "justification": "There is no third source or pollutant provided."
+    },
+    {
+     "criterion_id": "P1.C9",
+     "met": false,
+     "evidence": "",
+     "justification": "There is no third impact provided."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 0.6666666666666666,
+    "correctness": 0.7142857142857143
+   },
+   "overall_score": 0.6964285714285714,
+   "bands": {
+    "completeness": "Proficient",
+    "correctness": "Proficient"
+   },
+   "feedback": null,
+   "call_ids": [
+    "16dfcab58b134b71a8468ae139caa568",
+    "f968022a122f41028ce98295427bedf1",
+    "87c9da1e28a24d359e7f1b9cafafef2c"
+   ]
+  }
+ },
+ "A39": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "1c396c12f12c4a269ee078ef517668c0",
+   "timestamp": "2026-11-06T23:04:34.446528Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.4
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": true,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention that heating the air reduces its density."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention a buoyant upward force or Archimedes' principle."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention that the surrounding air is cooler or note a temperature difference."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.17647058823529413,
+   "bands": {
+    "correctness": "Developing",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "a17ca9ed2bd84b5a9422b2199e325a6c",
+    "415da066f1e94da5b8f86294f075208f",
+    "e1319e0423314f1192c94f5f21f87294"
+   ]
+  }
+ },
+ "A40": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "eb622d12c96c4f6eba0781f7acec2805",
+   "timestamp": "2026-11-06T23:04:38.601871Z",
+   "question_id": "512f892a6afa",
+   "task_type": "factual",
+   "rubric_hash_original": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "rubric_hash_used": "aa28b0df7fd3bfee154e73eca0d7eda44109dcb2e634a24d94bcc461ecb9fc71",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "G1",
+     "justification": "The answer names G1 as a phase."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "In G1 the cell grows and produces the proteins and organelles it will need.",
+     "justification": "It provides cell growth and protein production as a key event for G1."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "S phase",
+     "justification": "The answer names S phase as a second distinct phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "During S phase the entire genome is replicated",
+     "justification": "It provides genome replication as a key event for S phase."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "M phase",
+     "justification": "The answer names M phase as a third distinct phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "In M phase (mitosis) the sister chromatids are pulled to opposite poles and the cell divides into two daughter cells.",
+     "justification": "It provides cell division and chromatid separation as a key event for M phase."
+    },
+    {
+     "criterion_id": "P1.C7",
+     "met": true,
+     "evidence": "G1, S phase and M phase",
+     "justification": "The three phases named (G1, S phase, M phase) are all different from one another."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "each chromosome ends up as three sister chromatids.",
+     "explanation": "Chromosomes replicate to form two sister chromatids, not three."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.8571428571428571,
+    "completeness": 1.0
+   },
+   "overall_score": 0.9107142857142856,
+   "bands": {
+    "correctness": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "238bc4fa492b4907ae48b4fec20db0ba",
+    "108abf4d3ef249d897d819e3914e575e",
+    "7e00d28fc853401280cd3b4882f89416"
+   ]
+  }
+ },
+ "A41": {
+  "graded": 0.5,
+  "trace": {
+   "evaluation_id": "6d9c1cb1f27749cda03701c2b8d82f30",
+   "timestamp": "2026-11-06T23:04:42.045715Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "When moist air is forced up a mountain range, it undergoes orographic lift: the ascent causes the air to expand and cool, reaching its dew point and releasing precipitation on the windward side. After shedding much of its moisture, the air then descends on the leeward side",
+     "justification": "The answer clearly states orographic lift, rising/cooling air, precipitation on the windward side, and descending air on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "where compression warms it and lowers its relative humidity, inhibiting further cloud formation and rain.",
+     "justification": "The answer explains that descending air warms via compression, lowering its relative humidity and inhibiting precipitation."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not provide a quantitative lapse-rate fact or name a real-world rain-shadow example."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.7058823529411765,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "148091efa65840cfa8e1c1d0b92c16bd",
+    "aaa543588e484f5ba70ff70d77eef89c",
+    "c616e888f7d044ab855a70bdabfa08cc"
+   ]
+  }
+ },
+ "A42": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "232de6a5628141ccb96ee7593b6f4f2d",
+   "timestamp": "2026-11-06T23:05:16.781722Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Sugars and starches... The protein... Fats",
+     "justification": "The answer names carbohydrates (sugars and starches), proteins, and fats as the three macronutrients."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Sugars and starches from bread or rice are what fuel you through the day.",
+     "justification": "It provides a correct primary function for carbohydrates as providing fuel or energy."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "The protein in meat, beans and eggs is what your body uses to build and fix muscle.",
+     "justification": "It provides a correct primary function for proteins as building and fixing muscle."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Fats like oil and butter are your body's energy reserve and help keep you warm.",
+     "justification": "It provides a correct primary function for fats as an energy reserve."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "805a2d8458584cfaa9e79be6793d7d7c",
+    "6b12aae591ef4c80a6fda60f2c7b9099",
+    "e2a39098766443efb9e365fe55f15ca0"
+   ]
+  }
+ },
+ "A43": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "6b65b82cf7734fdcb9e8f96fbbf728df",
+   "timestamp": "2026-11-06T23:05:20.335032Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Warm air weighs less than the same amount of cold air.",
+     "justification": "The answer states that warm air weighs less than the same amount of cold air, which conveys lower density."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "The heavier outside air pushes it upward, the same way water pushes a cork up to the surface.",
+     "justification": "It explains the upward lift using an analogy of buoyant force."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "The air outside the balloon stays cold",
+     "justification": "It explicitly notes the surrounding air is cold."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "43897002e9174a3d8a52cee50d4ec1f4",
+    "be7d4bbb09404979a5faf86f73f89534",
+    "bf3e66c079d04a5ca323009694855c12"
+   ]
+  }
+ },
+ "A44": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "c7903c1acf8d4564bbead20a339e41ce",
+   "timestamp": "2026-11-06T23:05:25.047244Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "carbohydrates, proteins, and fats",
+     "justification": "The answer successfully lists carbohydrates, proteins, and fats as the three main macronutrients."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "carbs provide the primary source of energy for cells",
+     "justification": "The answer states that carbohydrates provide energy for cells."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "proteins supply the building blocks\u2014amino acids\u2014required for the growth, repair, and maintenance of tissues",
+     "justification": "The answer states a correct primary function for proteins regarding tissue growth and repair."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "fats serve as a dense energy reserve",
+     "justification": "The answer correctly states a primary function for fats."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "ec6f8ebf10404480b116d05d4bae3b1e",
+    "bb6ac89bde1849dab44e884fb7e9841f",
+    "1ba695be347e4ab0a9952c97179853e2"
+   ]
+  }
+ },
+ "A45": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "29c930d3a02d40149fbfb62e1f02f1a5",
+   "timestamp": "2026-11-06T23:05:28.773993Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "the hot air is less dense than the air surrounding the balloon",
+     "justification": "The answer states that heating the air makes it less dense than the surrounding air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the surrounding air pushes up on it with a buoyant force",
+     "justification": "The answer explicitly references a buoyant force lifting the balloon."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "air surrounding the balloon",
+     "justification": "The answer mentions the surrounding air and contrasts its weight and properties with the air inside the balloon."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 1.0,
+    "reasoning": 1.0,
+    "completeness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "correctness": "Strong",
+    "reasoning": "Strong",
+    "completeness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "31d80759485b42a992966bdc38c2fd92",
+    "84d0db2b7735453a90fee3bd00d372ad",
+    "360640e62fb6438bba94240678a05f61"
+   ]
+  }
+ },
+ "A46": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "3f31bf15f5644ee4954f3e1edd7c841e",
+   "timestamp": "2026-11-06T23:05:33.158457Z",
+   "question_id": "3f8052a62a58",
+   "task_type": "explanatory",
+   "rubric_hash_original": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "rubric_hash_used": "fc80d6e79c4aca091b3f431df427c89d3fb06f48042229aefc268cc080e50ae9",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": false,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer discusses monsoons rather than orographic lift and rain shadows."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not mention descending air warming or dropping relative humidity on the leeward side."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer does not provide a lapse-rate fact or name a rain-shadow example."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.5,
+    "reasoning": 0.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.17647058823529413,
+   "bands": {
+    "correctness": "Developing",
+    "reasoning": "Not yet",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "4153a1d27b6d4c87a635539dc8799fad",
+    "80cb56ca875047a6a926894d1acd6433",
+    "82dbde94083a456dac6e108182f32804"
+   ]
+  }
+ },
+ "A47": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "38a9c78290f44618a594430051a9736e",
+   "timestamp": "2026-11-06T23:05:36.160713Z",
+   "question_id": "23575fb39cfd",
+   "task_type": "explanatory",
+   "rubric_hash_original": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "rubric_hash_used": "8bc10d98c48230eb0eaee62ae41a28879b3af0af3a5ba9edfd636e17a3a2996d",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer incorrectly states that the hot air is more dense than the cooler surrounding air."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "the surrounding air pushes up on it with a buoyant force",
+     "justification": "The answer successfully references a buoyant force causing upward lift."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "cooler air surrounding the balloon",
+     "justification": "[evidence listed as a factual error] The answer notes the cooler surrounding air, providing the contrast needed."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "so the hot air is more dense than the cooler air surrounding the balloon",
+     "explanation": "Heating air makes it less dense, not more dense."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [
+    "P1.C3"
+   ],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "correctness": 0.0,
+    "reasoning": 1.0,
+    "completeness": 0.0
+   },
+   "overall_score": 0.35294117647058826,
+   "bands": {
+    "correctness": "Not yet",
+    "reasoning": "Strong",
+    "completeness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "dc84c7be46e043f1ae7ea781a2ceea95",
+    "5bf8dfc8036149e48e3620ba738210a3",
+    "50524a7feb8d4a07b8d613aebe43c78b"
+   ]
+  }
+ },
+ "A48": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "ed21d51e62244b03850c462decc370fc",
+   "timestamp": "2026-11-06T23:05:40.280630Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer lists carbohydrates, proteins, and vitamins, but vitamins are micronutrients, not macronutrients."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Carbohydrates give the body energy.",
+     "justification": "It states a correct primary function for carbohydrates."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Proteins build and repair muscle.",
+     "justification": "It states a correct primary function for proteins."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "The third item listed is vitamins, which is not a macronutrient."
+    }
+   ],
+   "errors": [
+    {
+     "quote": "Vitamins are the third macronutrient",
+     "explanation": "Vitamins are micronutrients, not macronutrients."
+    }
+   ],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 0.0,
+    "correctness": 0.5
+   },
+   "overall_score": 0.3125,
+   "bands": {
+    "completeness": "Not yet",
+    "correctness": "Developing"
+   },
+   "feedback": null,
+   "call_ids": [
+    "a9afef215e4444928303994ed8eaaf13",
+    "1bdd6dd622e142fd998bbd960693024e",
+    "f250fc7b5f4d46068f19a1dda2956421"
+   ]
+  }
+ },
+ "A49": {
+  "graded": 1.0,
+  "trace": {
+   "evaluation_id": "d9ce8cc8196b44718dd4550f59ecb0da",
+   "timestamp": "2026-11-06T23:05:44.449598Z",
+   "question_id": "b0affe8aae1b",
+   "task_type": "factual",
+   "rubric_hash_original": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "rubric_hash_used": "8aa2a03c05b23411caee5e7a9e06d9d16bb5a3066097b2081d953396f107305e",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 1.0
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": true,
+     "evidence": "Romanticism",
+     "justification": "The answer names Romanticism as the first 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": true,
+     "evidence": "Mary Shelley's novel *Frankenstein* (1818)",
+     "justification": "The answer correctly pairs Romanticism with Frankenstein by Mary Shelley."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": true,
+     "evidence": "Realism",
+     "justification": "The answer names Realism as the second distinct 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": true,
+     "evidence": "Gustave Flaubert's *Madame Bovary* (1860)",
+     "justification": "The answer correctly pairs Realism with Madame Bovary by Gustave Flaubert."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "met": true,
+     "evidence": "Naturalism",
+     "justification": "The answer names Naturalism as the third distinct 19th-century literary movement."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "met": true,
+     "evidence": "\u00c9mile Zola's *Germinal* (1885)",
+     "justification": "The answer correctly pairs Naturalism with Germinal by \u00c9mile Zola."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": false,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 1.0,
+    "correctness": 1.0
+   },
+   "overall_score": 1.0,
+   "bands": {
+    "completeness": "Strong",
+    "correctness": "Strong"
+   },
+   "feedback": null,
+   "call_ids": [
+    "b6e42329c212434abfb16b79a3cd04fc",
+    "b9842edf79fe44aaa7d4a9ca336adf5e",
+    "f7408e76b65446dd8effc64bfe14721b"
+   ]
+  }
+ },
+ "A50": {
+  "graded": 0.0,
+  "trace": {
+   "evaluation_id": "9f88e2b0385d43c8809edd8000c2306f",
+   "timestamp": "2026-11-06T23:06:18.181810Z",
+   "question_id": "17b9d268178a",
+   "task_type": "factual",
+   "rubric_hash_original": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "rubric_hash_used": "29562abb16e4321bd24afe88046a8076a5c175584721a48a35ae6c0c4bfa210c",
+   "creative_route": false,
+   "path_confidences": [
+    {
+     "path_id": "P1",
+     "confidence": 0.2
+    }
+   ],
+   "identified_path": "P1",
+   "addresses_question": true,
+   "amendment_due": false,
+   "amendment_fired": false,
+   "amendment_proposal": null,
+   "verifier_verdict": null,
+   "verifier_reasoning": null,
+   "verifier_failure_type": null,
+   "verifier_framing": null,
+   "divergence_reason": null,
+   "amendment_error": null,
+   "final_rubric_source": "generated",
+   "verdicts": [
+    {
+     "criterion_id": "P1.C1",
+     "met": false,
+     "evidence": "",
+     "justification": "The answer lists minerals (calcium, iron, potassium), not the three main macronutrients (carbohydrates, proteins, fats)."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "met": false,
+     "evidence": "",
+     "justification": "Calcium is not a macronutrient."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "met": false,
+     "evidence": "",
+     "justification": "Iron is not a macronutrient."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "met": false,
+     "evidence": "",
+     "justification": "Potassium is not a macronutrient."
+    }
+   ],
+   "errors": [],
+   "evidence_downgrades": [],
+   "contradiction_downgrades": [],
+   "count_overrides": [],
+   "low_confidence": true,
+   "obvious_overlap": [],
+   "judge_votes": 3,
+   "dimension_scores": {
+    "completeness": 0.0,
+    "correctness": 0.25
+   },
+   "overall_score": 0.15625,
+   "bands": {
+    "completeness": "Not yet",
+    "correctness": "Not yet"
+   },
+   "feedback": null,
+   "call_ids": [
+    "310b59ca603646ebb95c9c477c544219",
+    "3398e8b2374f4bb88859f8452cd612f5",
+    "504e172e5b0241a5876b78f3f1e66617"
+   ]
+  }
+ }
+}
