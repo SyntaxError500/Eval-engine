@@ -442,6 +442,59 @@ def validate_discussion(
     typer.echo(text)
 
 
+snapshot_app = typer.Typer(
+    no_args_is_help=True, help="Phase 9: the committed copy of what a fresh clone needs."
+)
+app.add_typer(snapshot_app, name="snapshot")
+
+
+@snapshot_app.command("import")
+def snapshot_import() -> None:
+    """Fill data/ from snapshot/: rubrics, questions, evaluations, cached responses and the
+    borrowed corpora. Run once after cloning; rows already present are kept."""
+    from eval_engine.storage import snapshot
+
+    added = snapshot.load(db_path())
+    typer.echo(json.dumps(added, indent=1))
+
+
+@snapshot_app.command("export")
+def snapshot_export() -> None:
+    """Write snapshot/ from data/ (after new results; unchanged data gives no git diff)."""
+    from eval_engine.storage import snapshot
+
+    typer.echo(json.dumps(snapshot.export(db_path()), indent=1))
+
+
+@app.command("amendment-frequency")
+def amendment_frequency_cmd() -> None:
+    """Phase 9: how often amendment fires and is accepted, per task type, from the traces."""
+    from eval_engine.validation import amendment_freq
+
+    conn = connect(db_path())
+    text = amendment_freq.report(conn)
+    amendment_freq.OUT_DIR.mkdir(parents=True, exist_ok=True)
+    (amendment_freq.OUT_DIR / "AMENDMENT_FREQUENCY.md").write_text(text, encoding="utf-8")
+    typer.echo(text)
+
+
+@app.command("reproduce")
+def reproduce_cmd(
+    only: Annotated[
+        list[str] | None, typer.Option(help="Run only steps whose name contains this")
+    ] = None,
+) -> None:
+    """Phase 9 gate: regenerate every validation report from cached responses (no live calls,
+    on a copy of the database) and check each matches the committed report."""
+    from eval_engine.validation import reproduce
+
+    load_env()
+    results = reproduce.run(db_path(), load_config(), set(only) if only else None)
+    typer.echo(reproduce.report(results))
+    if not all(r.ok for r in results):
+        raise typer.Exit(1)
+
+
 verifier_app = typer.Typer(no_args_is_help=True, help="Phase 5 verifier test set.")
 app.add_typer(verifier_app, name="verifier")
 

@@ -478,3 +478,14 @@ def test_the_local_model_answers_when_the_tutor_provider_is_unavailable(
     providers["alpha"].push(tutor(REPLY_B))
     turn = with_backup.discuss(sid, "Why?")
     assert turn.text == REPLY_B and turn.meta["role"] == "tutor_fallback"
+
+
+def test_the_tutor_never_sees_the_reference_answer(
+    svc: EngineService, providers: dict[str, FakeProvider]
+) -> None:
+    """D2 as tightened in Phase 3: reference answers stay away from learners, so the tutor
+    can't pass one on (review found errors in about a third)."""
+    sid = graded(svc, providers)
+    providers["beta"].push(tutor(REPLY_B))
+    svc.discuss(sid, "What would a full answer say?")
+    assert "One possible answer." not in providers["beta"].requests[-1].user

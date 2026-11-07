@@ -1,72 +1,111 @@
 # Evaluation & Feedback Engine
 
-Grades a human answer against a per-question, frozen rubric and returns prioritised feedback.
-Design: [docs/Evaluation_Feedback_Engine_Design.pdf](docs/Evaluation_Feedback_Engine_Design.pdf).
-Build plan: [docs/IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md).
+Grades a human's answer against a per-question, frozen rubric (never against an LLM's own
+answer) and returns prioritised feedback. Free-tier models only.
 
-## Setup (Windows, Git Bash)
+- Design: [docs/Evaluation_Feedback_Engine_Design.pdf](docs/Evaluation_Feedback_Engine_Design.pdf)
+- Build plan and gates: [docs/IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md)
+- Results: [docs/FINAL_REPORT.md](docs/FINAL_REPORT.md), validation detail in
+  [docs/VALIDATION_REPORT.md](docs/VALIDATION_REPORT.md), decisions in
+  [docs/DECISIONS.md](docs/DECISIONS.md)
+
+## Setup from a fresh clone
+
+Windows, Git Bash, Python 3.12 or later (results were produced on 3.13.4). In cmd or
+PowerShell, activate the venv (`.venv\Scripts\activate`) and drop the `.venv/Scripts/` prefix.
 
 ```bash
 python -m venv .venv
-.venv/Scripts/python -m pip install -e ".[dev]"
-cp .env.example .env        # then fill in the API keys
+.venv/Scripts/python -m pip install -r requirements.lock      # the exact versions used
+.venv/Scripts/python -m pip install -e . --no-deps
+cp .env.example .env                                           # then add the API keys
+.venv/Scripts/eval-engine snapshot import                      # questions, rubrics, cache, corpora
 ```
 
-API keys (all free tiers):
+`snapshot import` fills `data/` (gitignored) from [snapshot/](snapshot/): the 37 reviewed
+questions the app serves, every rubric version, the evaluation traces, the cached model
+responses and the two borrowed corpora. Run it once; it only adds missing rows.
 
-| Provider | Role(s) | Get a key |
+API keys, all free tiers:
+
+| Provider | Roles | Key |
 |---|---|---|
-| Gemini | judge (path identification + scoring) | https://aistudio.google.com/apikey |
-| Groq | generator, reference answer, amendment proposer (gpt-oss-120b); verifier (Qwen) | https://console.groq.com/keys |
-| Ollama (local) | feedback phrasing, perturbations | install from https://ollama.com, then `ollama pull qwen3:8b` |
+| Gemini | judge, fact checker, re-check | https://aistudio.google.com/apikey |
+| Groq | generator, reference answer, amendment proposer, tutor (gpt-oss-120b); verifier (Qwen) | https://console.groq.com/keys |
+| Ollama (local) | feedback phrasing, tutor backup | install from https://ollama.com, then `ollama pull qwen3:8b` |
 
-Free tiers may use what you send for training. **Only send test or borrowed data.**
+Free tiers may use what you send for training. **Send only test or borrowed data**, never real
+learners' answers.
 
-## Commands
-
-The paths below use Git Bash syntax. In **cmd or PowerShell**, activate the venv first
-(`.venv\Scripts\activate`) and drop the prefix: `eval-engine smoke`, `pytest`, `ruff`, `mypy`.
+## Check that it works
 
 ```bash
-.venv/Scripts/eval-engine smoke     # one live call per provider; Phase 0 gate
-.venv/Scripts/eval-engine usage     # requests/tokens sent per provider/model/day
-.venv/Scripts/python -m pytest      # unit tests; never call real models
-.venv/Scripts/ruff check src tests && .venv/Scripts/mypy
+.venv/Scripts/eval-engine smoke                 # one live call per provider
+.venv/Scripts/python -m pytest                  # 300+ tests; never call a real model
+.venv/Scripts/eval-engine reproduce             # every validation report, from the cache
 ```
 
-Each phase's experiments have their own commands: `eval-engine pilot --help` (Phase 2),
-`eval-engine gen --help` (Phase 3), `eval-engine golden` (Phase 4, rerun after any pipeline change),
-`eval-engine verifier --help` (Phase 5) and `eval-engine feedback-review` (Phase 6).
-`eval-engine evaluate` shows the learner's feedback (local Ollama, about 11 s) unless
-`--no-feedback` is given. All of them resume from the cache.
+`reproduce` regenerates each validation report from cached responses only (a cache miss is an
+error, never a live call), on a temporary copy of the database, and checks each is identical to
+the committed one. It needs no API key and takes a few minutes.
 
-## The app (Phase 8)
+## The app
 
 ```bash
-.venv/Scripts/python -m pip install -e ".[app]"
-.venv/Scripts/streamlit run app/streamlit_app.py
+.venv/Scripts/streamlit run app/streamlit_app.py      # http://localhost:8501
 ```
 
-Learners pick a topic and get a reviewed question, or describe any topic and get a new question
-generated on the spot (Groq generator plus the Phase 3 code checks and fact check, about 10-20 s).
-A generated question is always marked as unreviewed. Either way they see feedback first and then
-one band per dimension. After the feedback they can discuss the answer with a tutor (gpt-oss-120b
-on Groq; local qwen3:8b answers when Groq is rate-limited or down). It sees how each band was
-reached but can't change it; code rejects replies that repeat earlier ones. A learner who thinks a decision is
-wrong can ask for one re-check, done by the judge's model: a decision is reversed only with a
-quote from the answer that isn't itself listed as wrong, and the original grade is kept beside
-it. Discussions and re-checks are saved for the Admin tab. `eval-engine validate discussion`
-replays fixed dispute scenarios live (`experiments/8_interface/discussion_check/`). "See one possible answer" opens only after the feedback. The Admin tab shows each
-submission's full trace and the question's rubric versions. If the judge is unavailable, an
-answer is queued ("evaluating…") and retried later; it is never graded by another model.
+- **Answer a question:** pick a topic for a reviewed question, or describe any topic for a
+  new one, generated and checked on the spot and marked as unreviewed. Feedback comes first,
+  then one band per dimension. No reference answer is shown (decision D2).
+- **Discuss your answer:** a tutor that knows how each band was reached. It can't change the
+  grade, and code rejects replies that repeat earlier ones.
+- **Ask for a re-check:** once per answer, by the judge's model. A decision is reversed only
+  with a quote from the answer that isn't itself listed as wrong. The original grade is kept.
+- **Admin:** each submission's full trace, discussion, re-check and rubric versions.
+- **When a model is down:** if the judge is unavailable, the answer waits ("evaluating…") and
+  is never graded by another model. If the verifier is down, the original rubric is used. If
+  the feedback model is down, template feedback is used. If Groq is down, the local model
+  takes the tutor's place.
+
+## Experiments, by phase
+
+Each command resumes from the cache, so a rerun after a quota stop only pays for what's missing.
+Results and findings are in `experiments/<phase>/`.
+
+| Phase | What | Commands |
+|---|---|---|
+| 2 | Judge pilot on SciEntsBank and Beetle | `eval-engine pilot prepare`, `pilot run --role judge`, `pilot report` |
+| 3 | Question and rubric generation | `eval-engine gen question --topic T --task-type explanatory`, `gen batch` |
+| 4 | Golden set (rerun after any pipeline change; re-records the replay fixture) | `eval-engine golden` |
+| 5 | Amendment verifier test set | `eval-engine verifier build`, `run --framing adversarial`, `calibrate`, `e2e`, `report` |
+| 6 | Feedback review sheet | `eval-engine feedback-review` |
+| 7 | Full validation | `eval-engine validate corpus`, `validate perturb baseline\|build\|run\|report`, `validate human` |
+| 8 | Degradation and dispute checks (live) | `eval-engine validate degrade`, `validate discussion` |
+| 9 | Amendment frequency | `eval-engine amendment-frequency` |
+
+Grade a single answer from the command line:
+`eval-engine evaluate --question QUESTION_ID --answer "..."` (or `--answer-file F`; add
+`--no-feedback` to skip the local model). `eval-engine usage` shows requests sent per
+provider and day.
 
 ## Swapping a model
 
-Edit the role in [config/roles.yaml](config/roles.yaml). Nothing else changes. Replace the
-placeholder rate limits there with the numbers shown in each provider's console.
+Edit the role in [config/roles.yaml](config/roles.yaml); nothing else changes. Set the rate
+limits there to the numbers in the provider's console. Responses are cached per request, model
+included, so a swapped role starts with an empty cache. Change the judge only with a new
+validation run (Phase 7).
 
 ## Data
 
-Everything lives in `data/eval_engine.db` (SQLite, gitignored): rubric versions, call log,
-response cache and usage counters. Re-running an experiment reads from the cache unless the
-call is made with `fresh=True`.
+Everything lives in `data/eval_engine.db` (SQLite, gitignored): rubric versions, questions,
+evaluation traces, the call log, the response cache, usage counters and app submissions. After
+new results, run `eval-engine snapshot export` to refresh `snapshot/`. Unchanged data exports
+byte-identical, so it makes no git diff.
+
+## Development
+
+```bash
+.venv/Scripts/python -m pip install -e ".[dev,app]"
+.venv/Scripts/ruff check src app tests && .venv/Scripts/mypy src app
+```

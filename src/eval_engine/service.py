@@ -270,7 +270,6 @@ class EngineService:
             "answer": sub.answer,
             "dimensions": tutor.grade_breakdown(trace, criteria),
             "feedback": [i.text for i in trace.feedback.items] if trace.feedback else [],
-            "reference": question.reference_answer,
             "recheck": recheck.for_tutor() if recheck else None,
             "settled": tutor.settled_points([t.meta for t in talk if t.role == "tutor"]),
             "earlier": earlier[-tutor.EARLIER_SHOWN :],

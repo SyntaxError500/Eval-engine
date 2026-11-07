@@ -247,12 +247,9 @@ with learner:
             else:
                 st.divider()
                 show_feedback(trace)
-                # D2: hidden by default, and only after the feedback, so feedback never
-                # becomes a comparison with it.
-                if q.reference_answer:
-                    with st.expander("See one possible answer"):
-                        st.caption("One possible answer, not the only right one.")
-                        st.write(q.reference_answer)
+                # No reference answer here (D2 as tightened in Phase 3, binding): Phase 3
+                # review found errors in about a third of them, and they play no part in
+                # grading, so showing one could teach a learner something wrong.
                 show_discussion(sub)
             if st.button("Try another question"):
                 state.question_id, state.submission_id = None, None

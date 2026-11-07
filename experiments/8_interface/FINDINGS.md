@@ -17,7 +17,7 @@ user. "A new user, without help" still needs a real first-time user.**
 
 - **Learner view:** pick a topic, get a question from the **reviewed bank** (the 37 accepted in
   Phase 3), write an answer, and see feedback first, then one band per dimension with no numbers.
-  "See one possible answer" opens only after the feedback, labelled as one possible answer (D2).
+  No reference answer is shown (see Phase 9 below).
 - **Generated questions (added at the user's request):** "Generate a new question" takes a
   topic the learner describes (3 to 200 characters) and a kind of question (explain, argue,
   recall, creative). It runs the Phase 3 generator with its code checks, fact check and
@@ -27,7 +27,7 @@ user. "A new user, without help" still needs a real first-time user.**
 - **Discuss your answer (added at the user's request):** after the feedback, a chat with a
   tutor on the local model (`tutor` role, Ollama qwen3:8b, prompt `tutor_chat`), so it has no
   quota. It sees the question, the answer, what the grader decided for each requirement (with
-  the grader's notes), the feedback and the reference answer. It is told the result is fixed,
+  the grader's notes) and the feedback, never the reference answer. It is told the result is fixed,
   and nothing it says goes back into grading. The last 12 turns go back to it as history.
 - **Report a grading problem:** a button that saves the learner's note next to the discussion.
   Admin can filter for reported answers. Code stores it; no model judges whether it is right.
@@ -194,3 +194,11 @@ learner would trip over. `.streamlit/config.toml` now hides the toolbar.
   see the admin tab.
 - **The queue is retried by hand** ("Try the waiting answers again" or "Check again"). There is no
   background worker, which is fine for a demo but not for many users.
+
+## Phase 9 correction: reference answers are not shown
+
+The app first showed "See one possible answer" after the feedback (the plan's original D2) and
+gave the reference answer to the tutor. Phase 3 had tightened D2 to "reference answers are never
+shown to learners", binding, because review found errors in about a third of them, and they play
+no part in grading. Both were removed in Phase 9 (`tutor_chat` v4). A test checks the tutor never
+receives it.

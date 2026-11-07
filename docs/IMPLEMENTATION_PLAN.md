@@ -422,8 +422,8 @@ The goal is to confirm the judge before anything is built on it.
 - Final report / presentation.
 
 **Exit gate**
-- [ ] Fresh clone + `.env` → the demo runs from the README alone.
-- [ ] All validation numbers in the final report can be regenerated from cached responses with one command.
+- [x] Fresh clone + `.env` → the demo runs from the README alone. (Phase 9: passed on a clone-equivalent copy with no API keys; `experiments/9_hardening/FINDINGS.md`.)
+- [x] All validation numbers in the final report can be regenerated from cached responses with one command. (`eval-engine reproduce`: 9/9 reports identical.)
 
 ---
 

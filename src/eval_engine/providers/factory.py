@@ -49,6 +49,7 @@ def build_client(
     prompts: PromptRegistry | None = None,
     *,
     use_cache: bool = True,
+    offline: bool = False,
 ) -> LLMClient:
     return LLMClient(
         config,
@@ -58,4 +59,5 @@ def build_client(
         call_log=CallLog(conn),
         usage=UsageCounter(conn),
         use_cache=use_cache,
+        offline=offline,
     )

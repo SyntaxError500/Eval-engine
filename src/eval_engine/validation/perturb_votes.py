@@ -27,7 +27,7 @@ from eval_engine.validation import perturb
 from eval_engine.validation.verifier_set import wilson
 
 VOTES = 3
-V2_COMMIT = "14dc756"  # the last commit with score_answer v2
+V2_COMMIT = "score-answer-v2"  # tag on the last commit with score_answer v2
 
 
 def v2_prompts(scratch: Path) -> PromptRegistry:

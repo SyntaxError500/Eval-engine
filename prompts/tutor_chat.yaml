@@ -1,5 +1,8 @@
 name: tutor_chat
-version: 3
+version: 4
+# v4 (Phase 9): no reference answer. D2 as tightened in Phase 3 (binding) keeps reference
+# answers from learners because review found errors in about a third; the tutor could have
+# passed one on as fact.
 # v3 (live Java session, 2026-11-07): across 7 objections v2 gave 3 identical replies, copied
 # word for word from its own earlier replies in the transcript, and never engaged with the
 # learner's argument (that one error zeroed correctness). Causes outside the prompt are fixed in
@@ -60,10 +63,6 @@ user: |
   {% for f in feedback -%}
   - {{ f }}
   {% endfor %}
-  {%- if reference %}
-  One possible good answer (not the only right one):
-  {{ reference }}
-  {% endif %}
   {%- if recheck %}
   Re-check already done (final): {{ recheck }}
   {% else %}

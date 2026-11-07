@@ -48,6 +48,12 @@ def usage_label(provider: str, api_key_env: str | None) -> str:
     return f"{provider}#{sha256_hex(key)[:8]}" if key else provider
 
 
+class CacheMiss(Exception):
+    """Offline client: the response isn't cached. Deliberately not a ProviderError, so no
+    degradation path (template feedback, original rubric) can quietly absorb it: a
+    reproduction that needs a live call fails instead of producing different numbers."""
+
+
 class StructuredOutputError(Exception):
     """The model's reply failed schema validation even after one repair attempt."""
 
@@ -69,6 +75,7 @@ class LLMClient:
         call_log: CallLog,
         usage: UsageCounter,
         use_cache: bool = True,
+        offline: bool = False,
         clock: Callable[[], float] = time.monotonic,
         sleep: Callable[[float], None] = time.sleep,
         rng: Callable[[], float] = random.random,
@@ -80,6 +87,7 @@ class LLMClient:
         self._log = call_log
         self._usage = usage
         self._use_cache = use_cache
+        self._offline = offline  # answer only from the cache; never call a provider
         self._clock = clock
         self._sleep = sleep
         self._rng = rng
@@ -146,6 +154,9 @@ class LLMClient:
                     record.cache_hit = True
                     record.input_tokens, record.output_tokens = hit.input_tokens, hit.output_tokens
                     return LLMResult(value, self._write(record))
+
+        if self._offline:
+            raise CacheMiss(f"{role}/{prompt}: not in the cache (offline; fresh={fresh})")
 
         t0 = self._clock()
         try:
