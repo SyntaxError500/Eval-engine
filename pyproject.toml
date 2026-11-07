@@ -26,6 +26,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=9.2", "ruff>=0.17", "mypy>=2.4", "types-PyYAML"]
+app = ["streamlit>=1.40,<2"]
 
 [project.scripts]
 eval-engine = "eval_engine.cli:app"

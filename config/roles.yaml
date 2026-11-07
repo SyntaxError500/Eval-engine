@@ -127,6 +127,38 @@ roles:
     temperature: 0.3
     max_output_tokens: 1024
     reasoning_effort: none          # Ollama: disables Qwen3 "thinking" (slow on a 6 GB GPU)
+  rechecker:
+    # Phase 8 app: a second look at the decisions a learner disputes. The judge's model, because
+    # a re-check is grading: the local model never decides a grade. One per submission.
+    provider: gemini
+    model: gemini-3.5-flash-lite
+    family: google
+    temperature: 0.0
+    max_output_tokens: 2048
+  tutor:
+    # Phase 8 app: discusses a graded answer with the learner. It never grades: the grade is
+    # fixed before the discussion starts, and the reply can't change it. gpt-oss rather than the
+    # local model (the user's choice, 2026-11-07): on the Java objections local qwen3:8b fell
+    # back to the fixed reply 4 times in 7 and said return types are part of the signature;
+    # gpt-oss engaged every objection with no factual error seen
+    # (experiments/8_interface/discussion_check/). Shares the 1,000/day Groq count with the
+    # generator and proposer; when it is unavailable, tutor_fallback answers.
+    provider: groq
+    model: openai/gpt-oss-120b
+    family: openai-oss
+    temperature: 0.4
+    max_output_tokens: 3000
+    reasoning_effort: low
+    json_mode: strict               # as for the other gpt-oss roles
+  tutor_fallback:
+    # Local, no quota: keeps the discussion going when Groq is rate-limited or down. Its replies
+    # are marked, since it argues less well (see tutor).
+    provider: ollama
+    model: qwen3:8b
+    family: qwen
+    temperature: 0.4
+    max_output_tokens: 700
+    reasoning_effort: none          # thinking off, as for feedback_phraser
   perturber:
     # Phase 7. Local qwen3:8b returned 61 of 108 edits unchanged (all 20 reasoning ones), often
     # while saying it had changed something. gpt-oss is not the judge's family, so the judge

@@ -37,3 +37,54 @@ class PhrasedFeedback(BaseModel):
     points: list[PhrasedPoint]
     divergence: str | None = Field(description="Only when a different route was asked for")
     off_topic: str | None = Field(description="Only when the answer is about something else")
+
+
+TutorKind = Literal["question", "challenge", "acknowledgement", "other"]
+
+
+class TutorReply(BaseModel):
+    """One reply in a discussion of a graded answer (Phase 8 app). Never changes the grade.
+
+    The model restates the learner's point and classifies it before replying: the 8B tutor
+    otherwise answered the original feedback instead of the message (seen live, 2026-11-07)."""
+
+    learner_point: str = Field(description="The learner's latest message in one sentence")
+    kind: TutorKind
+    accepts: list[str] = Field(
+        default_factory=list,
+        description="Corrections the learner now accepts, in a few words each; [] if none",
+    )
+    reply: str = Field(min_length=1)
+
+
+RecheckDecision = Literal["uphold", "revise"]
+
+
+class CriterionRecheck(BaseModel):
+    criterion_id: str
+    decision: RecheckDecision
+    evidence: str = Field(description="Exact words from the answer that meet it; '' if upheld")
+    reason: str
+
+
+class ErrorRecheck(BaseModel):
+    error: int = Field(description="1-based number of the listed wrong statement")
+    stands: bool
+    reason: str
+
+
+class RecheckOutput(BaseModel):
+    """A second look at the decisions a learner disputes, by the judge model (never the
+    local tutor). It can only reconsider what counted against the answer."""
+
+    criteria: list[CriterionRecheck]
+    errors: list[ErrorRecheck] = Field(default_factory=list)
+    correct_parts: list[str] = Field(description="What the answer gets right")
+    incorrect_statement: str | None = Field(
+        default=None, description="The exact wrong statement, quoted; null if none"
+    )
+    severity: Literal["none", "minor", "significant"]
+    rubric_concern: str | None = Field(
+        default=None, description="The learner argues a requirement shouldn't be asked for"
+    )
+    summary: str

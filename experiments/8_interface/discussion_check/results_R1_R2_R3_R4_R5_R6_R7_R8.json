@@ -1,0 +1,451 @@
+{
+ "R1": {
+  "argument": "I agree the parameter statement is wrong, but correctness should not be Not yet: my answer correctly says the child class provides its own implementation and that a parent reference calls the child's method at runtime. Return types and access modifiers are extra rules the question doesn't ask about, so completeness shouldn't fail on them.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C1",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer incorrectly states that the method can have different parameters, which violates the requirement for the same signature."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer completely fails to mention return types and access levels."
+    }
+   ],
+   "errors": [
+    {
+     "error": 1,
+     "stands": true,
+     "reason": "Overridden methods require the same parameters, not different ones, which describes overloading."
+    }
+   ],
+   "correct_parts": [
+    "Explains that a child class can provide its own implementation of a method",
+    "Notes that polymorphism allows the same method call to behave differently depending on the object"
+   ],
+   "incorrect_statement": "Method overriding in Java happens when a child class defines a method with the same name as the parent class but can have different parameters.",
+   "severity": "significant",
+   "rubric_concern": "The learner argues that return types and access modifiers are not asked for by the question.",
+   "summary": "You correctly identified some aspects of polymorphism and method implementation, but your answer contains a significant error by confusing overriding with overloading regarding parameters, and it omits necessary details about return types and access levels. Because your statement about parameters is factually incorrect for overriding, the first grader's decisions stand. No decisions are changed."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [],
+  "off_topic": false,
+  "errors_dropped": [],
+  "bands_before": {
+   "correctness": "Not yet",
+   "completeness": "Not yet",
+   "reasoning": "Strong"
+  },
+  "bands_after": {
+   "correctness": "Not yet",
+   "completeness": "Not yet",
+   "reasoning": "Strong"
+  },
+  "changed": false
+ },
+ "R2": {
+  "argument": "My statement about different parameters is correct: in Java a subclass method with different parameters still overrides the parent method, so it is not an error.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C1",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer incorrectly claims that an overriding method can have different parameters, which describes method overloading rather than overriding."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer completely omits any mention of return types or access modifier restrictions."
+    }
+   ],
+   "errors": [
+    {
+     "error": 1,
+     "stands": true,
+     "reason": "Overriding requires the same method signature including parameters; different parameters constitute overloading."
+    }
+   ],
+   "correct_parts": [
+    "Explains that method overriding allows a child class to provide its own implementation.",
+    "Notes that polymorphism allows the same method call to behave differently based on the object used."
+   ],
+   "incorrect_statement": "Method overriding in Java happens when a child class defines a method with the same name as the parent class but can have different parameters.",
+   "severity": "significant",
+   "rubric_concern": null,
+   "summary": "Your answer correctly identifies that method overriding allows a subclass to provide its own implementation and supports polymorphism. However, your claim that an overriding method can have different parameters is mistaken, as that defines method overloading rather than overriding. Additionally, the answer omits return types and access levels. Because your statement about parameters is factually incorrect, the original grading decisions stand."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [],
+  "off_topic": false,
+  "errors_dropped": [],
+  "bands_before": {
+   "correctness": "Not yet",
+   "completeness": "Not yet",
+   "reasoning": "Strong"
+  },
+  "bands_after": {
+   "correctness": "Not yet",
+   "completeness": "Not yet",
+   "reasoning": "Strong"
+  },
+  "changed": false
+ },
+ "R3": {
+  "argument": "I named two movements: Realism with Flaubert's Madame Bovary and Naturalism with Zola's Germinal. Naturalism is the second movement and it has a work and an author.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C3",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer only names two literary movements in total, so the second of three and third of three requirements cannot be met."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "Naturalism is actually the second movement mentioned in the answer, but the prompt requires three distinct literary movements in total."
+    },
+    {
+     "criterion_id": "P1.C5",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer fails to provide a third literary movement as requested by the prompt."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "Since no third movement is named, no corresponding work can be evaluated."
+    }
+   ],
+   "errors": [],
+   "correct_parts": [
+    "Named two 19th-century literary movements (Realism and Naturalism) and provided a valid characteristic work and author for each."
+   ],
+   "incorrect_statement": null,
+   "severity": "none",
+   "rubric_concern": null,
+   "summary": "You successfully named two literary movements along with their characteristic works and authors, but the question explicitly asked for three distinct movements. Because you only provided two, the original grading decisions stand and none of them will be changed."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [],
+  "off_topic": false,
+  "errors_dropped": [],
+  "bands_before": {
+   "completeness": "Not yet",
+   "correctness": "Developing"
+  },
+  "bands_after": {
+   "completeness": "Not yet",
+   "correctness": "Developing"
+  },
+  "changed": false
+ },
+ "R4": {
+  "argument": "My answer says the balloon displaces cooler surrounding air that is heavier, which is the contrast with the outside air that the requirement asks for.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C1",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer explicitly states the opposite of the requirement by claiming that the hot air is more dense than the cooler surrounding air."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "decision": "revise",
+     "evidence": "cooler air surrounding the balloon",
+     "reason": "The answer does mention that the surrounding air is cooler, providing the necessary contrast."
+    }
+   ],
+   "errors": [
+    {
+     "error": 1,
+     "stands": true,
+     "reason": "Heating air causes it to expand and become less dense, so stating it is more dense is factually incorrect."
+    }
+   ],
+   "correct_parts": [
+    "Explains that heating air makes molecules move faster and spread out",
+    "Mentions the buoyant force and compares the weight of the displaced air",
+    "Notes the cooler surrounding air"
+   ],
+   "incorrect_statement": "so the hot air is more dense than the cooler air surrounding the balloon",
+   "severity": "significant",
+   "rubric_concern": null,
+   "summary": "You successfully mentioned the cooler surrounding air and how it creates a contrast, so that decision has been revised in your favor. However, your answer contains a significant factual error by stating that hot air is more dense than cooler air, when in reality heating makes air less dense. Because of this incorrect physical principle, the first grader's decision regarding density must be upheld, and your grade remains affected by this core misconception."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [
+   "P1.C3"
+  ],
+  "off_topic": false,
+  "errors_dropped": [],
+  "bands_before": {
+   "correctness": "Not yet",
+   "reasoning": "Strong",
+   "completeness": "Not yet"
+  },
+  "bands_after": {
+   "correctness": "Not yet",
+   "reasoning": "Strong",
+   "completeness": "Not yet"
+  },
+  "changed": false
+ },
+ "R5": {
+  "argument": "Every fact in my answer is correct. Please check again and remove the errors.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C2",
+     "decision": "revise",
+     "evidence": "Carbohydrates are mainly used to build bones.",
+     "reason": "The answer does state a function for carbohydrates, even though the biological fact is wrong."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "decision": "revise",
+     "evidence": "Proteins are the body's fastest source of energy.",
+     "reason": "The answer provides a stated function for proteins."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "decision": "revise",
+     "evidence": "Fats carry oxygen around in the blood.",
+     "reason": "The answer provides a stated function for fats."
+    }
+   ],
+   "errors": [
+    {
+     "error": 1,
+     "stands": true,
+     "reason": "Carbohydrates do not build bones."
+    },
+    {
+     "error": 2,
+     "stands": true,
+     "reason": "Proteins are not the body's fastest source of energy."
+    },
+    {
+     "error": 3,
+     "stands": true,
+     "reason": "Fats do not carry oxygen around in the blood."
+    }
+   ],
+   "correct_parts": [
+    "Names three distinct macronutrients required by the human body: carbohydrates, proteins, and fats."
+   ],
+   "incorrect_statement": "Carbohydrates are mainly used to build bones.",
+   "severity": "significant",
+   "rubric_concern": null,
+   "summary": "You successfully named the three main macronutrients, which is why those parts of your answer were marked correct. However, the functions you provided for each of them are biologically incorrect. Because the criteria only require that you state a function rather than require the function to be scientifically accurate, your grade has been updated to reflect that functions were indeed provided, though the statements remain factually wrong."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [
+   "P1.C2",
+   "P1.C3",
+   "P1.C4"
+  ],
+  "off_topic": false,
+  "errors_dropped": [],
+  "bands_before": {
+   "completeness": "Strong",
+   "correctness": "Not yet"
+  },
+  "bands_after": {
+   "completeness": "Strong",
+   "correctness": "Not yet"
+  },
+  "changed": false
+ },
+ "R6": {
+  "argument": "My phases are right: the cell copies its DNA in G1, divides in S and grows in M. Please remove the errors.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C2",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer incorrectly states that DNA is copied in G1, which belongs to S phase."
+    },
+    {
+     "criterion_id": "P1.C4",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer incorrectly states that the cell splits into two daughter cells in S phase, which actually occurs in M phase."
+    },
+    {
+     "criterion_id": "P1.C6",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer incorrectly states that the cell rests and grows larger in M phase."
+    }
+   ],
+   "errors": [
+    {
+     "error": 1,
+     "stands": true,
+     "reason": "DNA replication occurs during S phase, not G1."
+    },
+    {
+     "error": 2,
+     "stands": true,
+     "reason": "Cell division occurs in the M phase, not S phase."
+    },
+    {
+     "error": 3,
+     "stands": true,
+     "reason": "Resting and growing larger occur in interphase phases like G1 or G2, whereas M phase involves division."
+    }
+   ],
+   "correct_parts": [
+    "Named three distinct cell cycle phases"
+   ],
+   "incorrect_statement": "In G1 the cell copies all of its DNA.",
+   "severity": "significant",
+   "rubric_concern": null,
+   "summary": "You successfully named three distinct cell-cycle phases, but the key events you assigned to each phase are incorrect. DNA replication occurs in S phase rather than G1, cell division occurs in M phase rather than S phase, and growth and rest happen outside of M phase. Because these statements contain significant misconceptions about cell cycle biology, all grading decisions stand and cannot be changed."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [],
+  "off_topic": false,
+  "errors_dropped": [],
+  "bands_before": {
+   "correctness": "Developing",
+   "completeness": "Strong"
+  },
+  "bands_after": {
+   "correctness": "Developing",
+   "completeness": "Strong"
+  },
+  "changed": false
+ },
+ "R7": {
+  "argument": "Mountains blocking the sunlight is a valid explanation for the dry leeward side, and the Himalayas are dry on one side, so my reasoning should be credited.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C1",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer attributes dryness to blocking sunlight rather than orographic lift."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer does not mention descending air warming or dropping in relative humidity."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The cited example of the Himalayas is factually incorrect regarding which side is dry."
+    }
+   ],
+   "errors": [
+    {
+     "error": 1,
+     "stands": true,
+     "reason": "Rain shadows are caused by atmospheric lift and descending dry air, not blocked sunlight."
+    },
+    {
+     "error": 2,
+     "stands": true,
+     "reason": "The southern side of the Himalayas is very wet, while the northern side is the rain shadow."
+    }
+   ],
+   "correct_parts": [],
+   "incorrect_statement": "The leeward side is dry because the mountains block the sunlight, so less water evaporates there and fewer clouds can form.",
+   "severity": "significant",
+   "rubric_concern": null,
+   "summary": "You attempted to explain the rain shadow effect, but your answer relies on incorrect physical mechanisms and facts. Blocking sunlight is not what causes rain shadows, and the southern side of the Himalayas is notoriously wet rather than dry. Because your core reasoning and examples are incorrect, none of the grading decisions change."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [],
+  "off_topic": false,
+  "errors_dropped": [],
+  "bands_before": {
+   "correctness": "Not yet",
+   "reasoning": "Not yet",
+   "completeness": "Not yet"
+  },
+  "bands_after": {
+   "correctness": "Not yet",
+   "reasoning": "Not yet",
+   "completeness": "Not yet"
+  },
+  "changed": false
+ },
+ "R8": {
+  "argument": "The statement you listed as wrong is true: faster air over the wing does lower the pressure and produce lift. It is not a factual error.",
+  "output": {
+   "criteria": [
+    {
+     "criterion_id": "P1.C1",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer discusses airplane wings and pressure, never mentioning the density of heated air inside a hot-air balloon."
+    },
+    {
+     "criterion_id": "P1.C2",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer describes aerodynamic lift on an airplane wing rather than a buoyant force lifting a hot-air balloon."
+    },
+    {
+     "criterion_id": "P1.C3",
+     "decision": "uphold",
+     "evidence": "",
+     "reason": "The answer does not mention the surrounding cooler air temperature or contrast it with the balloon."
+    }
+   ],
+   "errors": [
+    {
+     "error": 1,
+     "stands": true,
+     "reason": "While the statement about airplane wings is factually true in an aerodynamics context, it is entirely wrong for a question asking about hot-air balloons."
+    }
+   ],
+   "correct_parts": [
+    "The statement regarding airplane wings is factually accurate for aerodynamics."
+   ],
+   "incorrect_statement": "An airplane flies because its wings are shaped so that air moves faster over the top than the bottom.",
+   "severity": "significant",
+   "rubric_concern": null,
+   "summary": "You are correct that the statement about airplane wings is scientifically true on its own terms, but the question asked you to explain how a hot-air balloon rises. Because your answer describes airplane lift instead of hot-air balloon buoyancy and density, none of the requirements are met and the original grading decisions must be upheld."
+  },
+  "revised": [],
+  "refused": [],
+  "contradicted": [],
+  "off_topic": true,
+  "errors_dropped": [],
+  "bands_before": {
+   "correctness": "Not yet",
+   "reasoning": "Not yet",
+   "completeness": "Not yet"
+  },
+  "bands_after": {
+   "correctness": "Not yet",
+   "reasoning": "Not yet",
+   "completeness": "Not yet"
+  },
+  "changed": false
+ }
+}

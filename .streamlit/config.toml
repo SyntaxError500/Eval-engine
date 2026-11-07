@@ -1,0 +1,6 @@
+# Learner-facing demo: hide Streamlit's developer toolbar ("Deploy", rerun menu).
+[client]
+toolbarMode = "viewer"
+
+[browser]
+gatherUsageStats = false

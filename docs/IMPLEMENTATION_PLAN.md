@@ -394,6 +394,8 @@ The goal is to confirm the judge before anything is built on it.
 
 ### Phase 8 — Interface and demo (≈1 week)
 
+> **Built (2026-11-07).** Streamlit learner and admin views over a tested service layer; questions come from the reviewed bank. All 3 degradation paths were triggered on the real system and pass. Topic to feedback took 72 s in a timed walkthrough, but with me as a stand-in user; a real first-time user is still to come. Details: [`experiments/8_interface/FINDINGS.md`](../experiments/8_interface/FINDINGS.md).
+
 **Tasks**
 1. **Streamlit app**:
    - Learner view: pick a topic → generated question → write an answer → feedback first, then bands. Optional "see one possible answer" toggle (D2).
@@ -405,8 +407,8 @@ The goal is to confirm the judge before anything is built on it.
    - If an amendment can't be verified (verifier down), grade against the original rubric and mark the trace.
 
 **Exit gate**
-- [ ] A new user can go from topic to feedback in under 2 minutes without help.
-- [ ] Each of the 3 degradation paths has been triggered deliberately and behaves as specified.
+- [ ] A new user can go from topic to feedback in under 2 minutes without help. **72 s timed with me as a stand-in user; a real first-time user is still to come.**
+- [x] Each of the 3 degradation paths has been triggered deliberately and behaves as specified. **3/3 (`experiments/8_interface/DEGRADATION.md`).**
 
 ---
 

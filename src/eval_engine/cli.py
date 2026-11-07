@@ -24,6 +24,7 @@ from eval_engine.storage.evaluation_store import EvaluationStore
 from eval_engine.storage.question_store import QuestionStore
 from eval_engine.validation import (
     corpus,
+    degrade,
     feedback_review,
     golden,
     human_analysis,
@@ -396,6 +397,48 @@ def validate_human() -> None:
     criteria = human_analysis.criteria_by_hash(conn, engine)
     text, _ = human_analysis.analyse(key, g1, g2, expected, engine, criteria)
     (human_set.HUMAN_DIR / "REPORT.md").write_text(text + "\n", encoding="utf-8")
+    typer.echo(text)
+
+
+@validate_app.command("degrade")
+def validate_degrade() -> None:
+    """Phase 8 gate: break the judge, the verifier and the feedback model one at a time."""
+    import tempfile
+
+    load_env()
+    conn = connect(db_path())
+    with tempfile.TemporaryDirectory() as tmp:
+        results = degrade.run(conn, load_config(), Path(tmp))
+    text = degrade.report(results)
+    degrade.DEGRADE_DIR.mkdir(parents=True, exist_ok=True)
+    (degrade.DEGRADE_DIR / "DEGRADATION.md").write_text(text + "\n", encoding="utf-8")
+    typer.echo(text)
+
+
+@validate_app.command("discussion")
+def validate_discussion(
+    only: Annotated[
+        str, typer.Option(help="Comma-separated scenarios")
+    ] = "T1,T2,T3,R1,R2,R3,R4,R5,R6,R7,R8",
+) -> None:
+    """Phase 8: the tutor and re-check fixes, live, on scenarios fixed in advance."""
+    import tempfile
+
+    from eval_engine.validation import discussion_check as dc
+
+    load_env()
+    conn = connect(db_path())
+    with tempfile.TemporaryDirectory() as tmp:
+        results = dc.run(conn, load_config(), Path(tmp), set(only.split(",")))
+    dc.OUT_DIR.mkdir(parents=True, exist_ok=True)
+    # The tutor model is in the name, so a run with another tutor never overwrites a report.
+    tutor_model = load_config().roles["tutor"].model.split("/")[-1].replace(":", "-")
+    stamp = "_".join(sorted(results)) + "_" + tutor_model
+    (dc.OUT_DIR / f"results_{stamp}.json").write_text(
+        json.dumps(results, indent=1, ensure_ascii=False), encoding="utf-8"
+    )
+    text = dc.report(results)
+    (dc.OUT_DIR / f"REPORT_{stamp}.md").write_text(text, encoding="utf-8")
     typer.echo(text)
 
 

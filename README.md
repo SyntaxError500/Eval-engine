@@ -40,6 +40,26 @@ Each phase's experiments have their own commands: `eval-engine pilot --help` (Ph
 `eval-engine evaluate` shows the learner's feedback (local Ollama, about 11 s) unless
 `--no-feedback` is given. All of them resume from the cache.
 
+## The app (Phase 8)
+
+```bash
+.venv/Scripts/python -m pip install -e ".[app]"
+.venv/Scripts/streamlit run app/streamlit_app.py
+```
+
+Learners pick a topic and get a reviewed question, or describe any topic and get a new question
+generated on the spot (Groq generator plus the Phase 3 code checks and fact check, about 10-20 s).
+A generated question is always marked as unreviewed. Either way they see feedback first and then
+one band per dimension. After the feedback they can discuss the answer with a tutor (gpt-oss-120b
+on Groq; local qwen3:8b answers when Groq is rate-limited or down). It sees how each band was
+reached but can't change it; code rejects replies that repeat earlier ones. A learner who thinks a decision is
+wrong can ask for one re-check, done by the judge's model: a decision is reversed only with a
+quote from the answer that isn't itself listed as wrong, and the original grade is kept beside
+it. Discussions and re-checks are saved for the Admin tab. `eval-engine validate discussion`
+replays fixed dispute scenarios live (`experiments/8_interface/discussion_check/`). "See one possible answer" opens only after the feedback. The Admin tab shows each
+submission's full trace and the question's rubric versions. If the judge is unavailable, an
+answer is queued ("evaluating…") and retried later; it is never graded by another model.
+
 ## Swapping a model
 
 Edit the role in [config/roles.yaml](config/roles.yaml). Nothing else changes. Replace the

@@ -68,6 +68,43 @@ CREATE TABLE IF NOT EXISTS usage (
     tokens   INTEGER NOT NULL DEFAULT 0,
     PRIMARY KEY (provider, model, day)
 );
+-- Learner submissions from the app (Phase 8). A submission waits in 'queued' while the judge
+-- is unavailable and is retried later; it is never graded by another model.
+CREATE TABLE IF NOT EXISTS submissions (
+    submission_id TEXT PRIMARY KEY,
+    question_id   TEXT NOT NULL,
+    answer        TEXT NOT NULL,
+    status        TEXT NOT NULL,
+    evaluation_id TEXT,
+    attempts      INTEGER NOT NULL DEFAULT 0,
+    last_error    TEXT,
+    created_at    TEXT NOT NULL,
+    updated_at    TEXT NOT NULL
+);
+
+-- A learner's discussion of a graded submission with the tutor (local model). Kept so disputes
+-- of a grade can be read in the admin view; nothing here feeds back into grading.
+CREATE TABLE IF NOT EXISTS discussions (
+    submission_id TEXT NOT NULL,
+    turn          INTEGER NOT NULL,
+    role          TEXT NOT NULL,
+    text          TEXT NOT NULL,
+    call_id       TEXT,
+    created_at    TEXT NOT NULL,
+    meta          TEXT,
+    PRIMARY KEY (submission_id, turn)
+);
+
+-- At most one re-check per submission: the judge model takes a second look at the decisions
+-- the learner disputes. The original evaluation is never changed; the result sits beside it.
+CREATE TABLE IF NOT EXISTS rechecks (
+    submission_id TEXT PRIMARY KEY,
+    evaluation_id TEXT NOT NULL,
+    argument      TEXT NOT NULL,
+    result_json   TEXT NOT NULL,
+    call_id       TEXT,
+    created_at    TEXT NOT NULL
+);
 """
 
 
@@ -89,6 +126,9 @@ def _migrate(conn: sqlite3.Connection) -> None:
     cols = {r[1] for r in conn.execute("PRAGMA table_info(llm_calls)")}
     if "retry_errors" not in cols:
         conn.execute("ALTER TABLE llm_calls ADD COLUMN retry_errors TEXT NOT NULL DEFAULT '[]'")
+        conn.commit()
+    if "meta" not in {r[1] for r in conn.execute("PRAGMA table_info(discussions)")}:
+        conn.execute("ALTER TABLE discussions ADD COLUMN meta TEXT")
         conn.commit()
 
 
